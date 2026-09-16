@@ -8,7 +8,11 @@
     "status_at_measurement": "local unpublished implementation; exact source manifest supplied",
     "implementation_patch_sha256": "f6e501717884e08851250332e0a112c0d20e3203408a7321fc44e73b739a406a",
     "source_manifest_sha256": "775fcdcc1673a574e43656e33bf50815003e9bea256305c40aeba4742b8fad56",
-    "published_commit": null
+    "published_commit": "be0a8fe6ecb767c2d7d651f3c9b0d2fb8bd8a7f0",
+    "publication_mapping": {
+      "runtime_files_verified": 97,
+      "note": "Every Go/Python/module source hash matches the measured manifest. Documentation changed after measurement; VCS metadata can change rebuilt binary hashes."
+    }
   },
   "benchmarks": {
     "repository": "graydeon/mousa-benchmarks",
