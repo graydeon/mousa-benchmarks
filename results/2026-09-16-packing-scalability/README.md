@@ -15,6 +15,12 @@ The product baseline is
 `d1c01b1a76afcda6e644cb68ce18bd29dd3d6b64`; the benchmark repository baseline is
 `f1bd9d7d9c8358f9bbaff6844eeb35459787d957`.
 
+The measured candidate's 109 source-manifest files match published product
+commit [`462c5d1`](https://github.com/graydeon/mousa/commit/462c5d14f38f268aff932e21d5d4e03eb267a269),
+merged in [PR #27](https://github.com/graydeon/mousa/pull/27).
+`provenance.json` records this later publication separately from the uncommitted
+state at measurement time. Research documentation was added after measurement.
+
 The corpus bytes, passage segmentation, query strings, 100-candidate limit,
 original query-term policy, and byte budgets stay fixed. Documentation queries
 return 48 candidates; displacement returns three. No fixture was regenerated
