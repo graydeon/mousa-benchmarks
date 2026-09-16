@@ -1,0 +1,101 @@
+{
+  "schema": "mousa.benchmark_run.v1",
+  "outcome": "PASS",
+  "product": {
+    "repository": "graydeon/mousa",
+    "base_revision": "3c355a17b66a7f1c7505043d223687672858c726",
+    "measurement_local_commit": "1c90aa6faf55db0dd93ffa3a6448cba486bdf15d",
+    "status_at_measurement": "local unpublished implementation; exact source manifest supplied",
+    "implementation_patch_sha256": "f6e501717884e08851250332e0a112c0d20e3203408a7321fc44e73b739a406a",
+    "source_manifest_sha256": "775fcdcc1673a574e43656e33bf50815003e9bea256305c40aeba4742b8fad56",
+    "published_commit": null
+  },
+  "benchmarks": {
+    "repository": "graydeon/mousa-benchmarks",
+    "base_revision": "0d5b3c64194bc8dd2876687ad5ded3d85c625ad9",
+    "status_at_measurement": "new uncommitted harness with exact script hash",
+    "executed_script_sha256": "43b6d24a0e40c5d911a8fc96bb4caac311d3b38d1968b86035cc3eaa5b1f9bb6"
+  },
+  "baseline": {
+    "local_source_revision": "34381bb60b2146ef466d7a52bf42855b14ecda5a",
+    "public_runtime_equivalent_revision": "3c355a17b66a7f1c7505043d223687672858c726",
+    "binary_sha256": "ba1dee1a310e8e813caa4984ba01ea9f033514a5091aa2be15ab7ff3ac1b62cc"
+  },
+  "candidate_binary_sha256": "53cb1cbd4d6d2852aecc1adc0a3840826680c5953656faf7381399d25e54d372",
+  "dependencies": {
+    "go.mod": "2126ba6de681ca474f76d80357fbf41b4bc21ffbbb44d01cce588c170da78d48",
+    "go.sum": "9146e7666d70f22e7739e8735d90275a271753977bd21337caf82345fd8f3cd0"
+  },
+  "environment": {
+    "host_cpu_model": "AMD Ryzen 7 2700X Eight-Core Processor",
+    "cpu_mode": "libvirt host-model (EPYC-IBPB compatibility)",
+    "cpu_model": "AMD EPYC Processor (with IBPB)",
+    "vcpus": 6,
+    "vm_memory_mib": 12288,
+    "vm_cpu_quota_cores": 6,
+    "job_memory_mib": 8192,
+    "job_cpu_quota_cores": 5.5,
+    "network": "offline; externally restricted QEMU user network",
+    "go": "go version go1.27.1 linux/amd64",
+    "kernel": "6.12.107+deb13-cloud-amd64",
+    "platform": "linux/amd64",
+    "storage": "virtio disk on shared host NVMe; 32 GiB job volume",
+    "cache": "fresh per job; supplied Go module download cache",
+    "contention": "shared desktop host; not a dedicated benchmark host"
+  },
+  "measurement": {
+    "protocol_sha256": "ecb0dbb6e99913d9605bf406968ee536760cd6593898e59f916da7166d2fe38d",
+    "cases": 26,
+    "warmup_pairs_per_case": 1,
+    "measured_pairs_per_case": 6,
+    "measured_observations": 312,
+    "all_cli_observations": 526,
+    "commands_exit_code": 0,
+    "failed_attempt_completed_observations": 46,
+    "failed_attempt_measured_observations": 24,
+    "failed_attempt_reason": "unclosed Python SQLite inspection connections retained WAL state; timings invalid",
+    "source_manifest_canonical_map_sha256": "7c7c6142e213c8f6838a44a7a40155498a78dcff7ff61bfb6d62d5d49f144cdb"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 10328,
+      "sha256": "8be7ae9bd35a6a6e6b1dde8e33c9fcfc5577b5a51b539e95aa75b2180ba110e6"
+    },
+    "aborted-observations.jsonl": {
+      "bytes": 52566,
+      "sha256": "c75f275d75a6f01d045f707921ef5733f3812229560cae507894c50d473c9368"
+    },
+    "baseline-runtime-manifest.json": {
+      "bytes": 7137,
+      "sha256": "fefed765a7433a93c90e70626fb59a1474660b7c7565a1cbba7321117ba786fd"
+    },
+    "fixtures.tar.gz": {
+      "bytes": 13435,
+      "sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668"
+    },
+    "measure.py": {
+      "bytes": 6782,
+      "sha256": "43b6d24a0e40c5d911a8fc96bb4caac311d3b38d1968b86035cc3eaa5b1f9bb6"
+    },
+    "metrics.jsonl": {
+      "bytes": 182630,
+      "sha256": "ac6d3453db793c7d48a392469bd381f7662791df706466242d6638858759c176"
+    },
+    "observations.jsonl": {
+      "bytes": 1757931,
+      "sha256": "3460a5fe64015a9cea535e90667def50f29f5bd34328039b1db78d1d8d3b1bb7"
+    },
+    "protocol.json": {
+      "bytes": 23366,
+      "sha256": "ecb0dbb6e99913d9605bf406968ee536760cd6593898e59f916da7166d2fe38d"
+    },
+    "source-manifest.json": {
+      "bytes": 9856,
+      "sha256": "775fcdcc1673a574e43656e33bf50815003e9bea256305c40aeba4742b8fad56"
+    },
+    "summary.json": {
+      "bytes": 83811,
+      "sha256": "c171081d1c37a8da51b28f4c15f14f94f66101ba48aa27c227302c9607aa0622"
+    }
+  }
+}
