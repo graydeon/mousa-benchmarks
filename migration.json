@@ -1,0 +1,61 @@
+{
+  "source_repository": "https://github.com/graydeon/mousa",
+  "source_commit": "7f473ee34b3299251fea96769d72e0c05fd0cea9",
+  "description": "Byte-preserving relocation. Directory date is the migration date, not a measurement date. Original result metadata is unchanged.",
+  "files": [
+    {
+      "path": "results/2026-09-16/current-cli.json",
+      "source_path": "eval/local/results/current-cli.json",
+      "sha256": "0583544e3530b307a51d8791dd5d2427b21f457581b075c0d7c5a3dbb9616509",
+      "bytes": 218673
+    },
+    {
+      "path": "results/2026-09-16/current-items.json",
+      "source_path": "eval/local/results/current-items.json",
+      "sha256": "8bb87311f60affc5b4758a3d68b257b5cd0f17aea0db145e76c722a1879c91fc",
+      "bytes": 233343
+    },
+    {
+      "path": "results/2026-09-16/passage-policy.json",
+      "source_path": "eval/local/results/passage-policy.json",
+      "sha256": "aa89e7804e8c26155f99917fb90c5185aa4279384d70b58a2f531fdef556aa8c",
+      "bytes": 99891
+    },
+    {
+      "path": "results/2026-09-16/prepared-diagnosis.json",
+      "source_path": "eval/local/results/prepared-diagnosis.json",
+      "sha256": "e5d1283eb6de51398c5d1ac01113316cd900dca24d780c787d92b01ac11cf689",
+      "bytes": 642307
+    },
+    {
+      "path": "results/2026-09-16/prepared-statements.json",
+      "source_path": "eval/local/results/prepared-statements.json",
+      "sha256": "8810ad605201a7d0102b7512cbe9e7c103717d0a11a1d99337a0b2556b2c5a26",
+      "bytes": 262231
+    },
+    {
+      "path": "results/2026-09-16/workflow-24.json",
+      "source_path": "eval/local/results/workflow-24.json",
+      "sha256": "7e6a2ec70a5997cbc26e26150c38b950bf48f533e407ad1b5e04bb52d8de6279",
+      "bytes": 726451
+    },
+    {
+      "path": "results/2026-09-16/workflow-96.json",
+      "source_path": "eval/local/results/workflow-96.json",
+      "sha256": "07e0a132a5495f8e79228656782da19b74c8546aa3764fcdef2146ce2e390a0b",
+      "bytes": 2258207
+    },
+    {
+      "path": "comparisons/qmd/package-lock.json",
+      "source_path": "eval/local/qmd/package-lock.json",
+      "sha256": "7b9d53c6d2cb51e692991eef2db0e7bd3cf5bf6c00b37a6a91be4625727b7f4a",
+      "bytes": 82457
+    },
+    {
+      "path": "comparisons/qmd/package.json",
+      "source_path": "eval/local/qmd/package.json",
+      "sha256": "67ffe6547eddc0a49bd89cd4a3936a645f77f4337f8090bcb3d9aa9950e28d26",
+      "bytes": 171
+    }
+  ]
+}
