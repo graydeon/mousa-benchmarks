@@ -1,0 +1,16 @@
+{
+  "baseline": "e68be171b6dce5f4ee410aece1a655aa2009b78b",
+  "purpose": "Separate history, segment and representation costs without repeating the published study",
+  "fixtures": {"small": {"representations": 1, "segments": 1}, "shared": {"representations": 1, "segments": 32}, "diverse": {"representations": 32, "segments": 32}},
+  "text": "Each fixed-v1 4096-byte segment starts with amber followed by a unique decimal index and ASCII spaces; no equal segment bytes",
+  "histories": [0, 200],
+  "history_policy": "alternating original and exact-v1; warm supported EvaluateAndTraceLexical API creates history outside measurements",
+  "query": "amber",
+  "budget_bytes": 8192,
+  "diagnostic": "one stage-instrumented query per fixture/history/policy; CPU profile diverse200 exact; allocations separate later",
+  "smoke": "small and diverse with two histories; validate schemas, counts, canonical outputs, input hashes and worker receipt before diagnostic",
+  "limits": {"worker_seconds": 1200, "command_seconds": 120, "memory_mib": 8192, "output_mib": 256},
+  "stopping": "Stop on nonzero exit, timeout, wrong counts, output mismatch, resource limit; retain failed attempt. No timed retries for favorable results.",
+  "concurrency": "After selecting a candidate, deterministic reader snapshot plus independent writer progress, WAL checkpoint blocking/release and later-operation damage visibility; bounded 30 seconds",
+  "candidate_gate": "Select only after profile; no opening pass removal, historical-check removal, cross-operation cache or policy change"
+}
