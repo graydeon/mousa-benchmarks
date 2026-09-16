@@ -1,0 +1,434 @@
+[
+  {
+    "arm": "baseline",
+    "fixture": "small",
+    "history": 0,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 27.962008,
+      "queryItems": 10.375351,
+      "verifySourceTrailRecords": 0.195046,
+      "getSegment": 0.695544,
+      "lexicalEvidencePaths": 0.201429
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "small",
+    "history": 0,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 20.497516,
+      "queryItems": 12.011379,
+      "verifySourceTrailRecords": 0.219902,
+      "getSegment": 0.533533,
+      "lexicalEvidencePaths": 0.233518
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "small",
+    "history": 0,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 24.051493,
+      "queryItems": 10.597137,
+      "verifySourceTrailRecords": 0.19687000000000002,
+      "getSegment": 0.66088,
+      "lexicalEvidencePaths": 0.42613
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "small",
+    "history": 0,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 15.342578,
+      "queryItems": 10.656549,
+      "verifySourceTrailRecords": 0.13866,
+      "getSegment": 0.451597,
+      "lexicalEvidencePaths": 0.370936
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "small",
+    "history": 200,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 481.884569,
+      "queryItems": 13.76562,
+      "verifySourceTrailRecords": 249.825712,
+      "getSegment": 37.591291,
+      "lexicalEvidencePaths": 55.048043
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 600,
+      "lexicalEvidencePaths": 200
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "small",
+    "history": 200,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 399.190342,
+      "queryItems": 10.649565,
+      "verifySourceTrailRecords": 153.568915,
+      "getSegment": 0.707144,
+      "lexicalEvidencePaths": 0.909787
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 2,
+      "lexicalEvidencePaths": 2
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "small",
+    "history": 200,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 509.564046,
+      "queryItems": 14.205575,
+      "verifySourceTrailRecords": 243.03691800000001,
+      "getSegment": 36.600133,
+      "lexicalEvidencePaths": 54.715681
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 600,
+      "lexicalEvidencePaths": 200
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "small",
+    "history": 200,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 377.800511,
+      "queryItems": 11.272664,
+      "verifySourceTrailRecords": 153.67315100000002,
+      "getSegment": 0.69848,
+      "lexicalEvidencePaths": 1.28967
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 2,
+      "lexicalEvidencePaths": 2
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "shared",
+    "history": 0,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 34.090292,
+      "queryItems": 20.748587,
+      "verifySourceTrailRecords": 0.139752,
+      "getSegment": 11.394005,
+      "lexicalEvidencePaths": 0.192842
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "shared",
+    "history": 0,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 27.046961,
+      "queryItems": 25.599376,
+      "verifySourceTrailRecords": 0.131496,
+      "getSegment": 9.181795,
+      "lexicalEvidencePaths": 0.208762
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "shared",
+    "history": 0,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 38.576838,
+      "queryItems": 31.845392,
+      "verifySourceTrailRecords": 0.172744,
+      "getSegment": 15.110542,
+      "lexicalEvidencePaths": 0.576641
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "shared",
+    "history": 0,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 41.094008,
+      "queryItems": 35.486932,
+      "verifySourceTrailRecords": 0.275116,
+      "getSegment": 17.843806,
+      "lexicalEvidencePaths": 0.918492
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "shared",
+    "history": 200,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 2465.080641,
+      "queryItems": 24.608097,
+      "verifySourceTrailRecords": 2165.215181,
+      "getSegment": 1219.958274,
+      "lexicalEvidencePaths": 63.429396
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 19200,
+      "lexicalEvidencePaths": 200
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "shared",
+    "history": 200,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 1205.02709,
+      "queryItems": 22.245385,
+      "verifySourceTrailRecords": 881.0148280000001,
+      "getSegment": 15.092758,
+      "lexicalEvidencePaths": 1.180333
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 64,
+      "lexicalEvidencePaths": 2
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "shared",
+    "history": 200,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 2269.572892,
+      "queryItems": 28.809768,
+      "verifySourceTrailRecords": 1988.911552,
+      "getSegment": 1123.948439,
+      "lexicalEvidencePaths": 59.555445
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 19200,
+      "lexicalEvidencePaths": 200
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "shared",
+    "history": 200,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 1088.401869,
+      "queryItems": 26.905045,
+      "verifySourceTrailRecords": 809.251804,
+      "getSegment": 17.312027,
+      "lexicalEvidencePaths": 1.320057
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 64,
+      "lexicalEvidencePaths": 2
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "diverse",
+    "history": 0,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 96.039209,
+      "queryItems": 29.303874,
+      "verifySourceTrailRecords": 0.163096,
+      "getSegment": 10.615989,
+      "lexicalEvidencePaths": 6.153385
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "diverse",
+    "history": 0,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 131.932672,
+      "queryItems": 49.054711,
+      "verifySourceTrailRecords": 0.174707,
+      "getSegment": 13.355025,
+      "lexicalEvidencePaths": 12.201813
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "diverse",
+    "history": 0,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 101.860597,
+      "queryItems": 60.509176,
+      "verifySourceTrailRecords": 0.284724,
+      "getSegment": 14.925878,
+      "lexicalEvidencePaths": 19.766506999999997
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "diverse",
+    "history": 0,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 114.935982,
+      "queryItems": 66.073764,
+      "verifySourceTrailRecords": 0.16173300000000002,
+      "getSegment": 15.559082,
+      "lexicalEvidencePaths": 22.065189
+    },
+    "historical_calls": {
+      "getSourceTrail": 0,
+      "getSegment": 0,
+      "lexicalEvidencePaths": 0
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "diverse",
+    "history": 200,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 4112.013972,
+      "queryItems": 32.839196,
+      "verifySourceTrailRecords": 3713.964511,
+      "getSegment": 1175.377729,
+      "lexicalEvidencePaths": 1677.394204
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 19200,
+      "lexicalEvidencePaths": 6400
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "diverse",
+    "history": 200,
+    "policy": "original",
+    "inclusive_ms": {
+      "open": 1223.917792,
+      "queryItems": 41.703472,
+      "verifySourceTrailRecords": 890.756209,
+      "getSegment": 16.487097,
+      "lexicalEvidencePaths": 35.748155
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 64,
+      "lexicalEvidencePaths": 64
+    }
+  },
+  {
+    "arm": "baseline",
+    "fixture": "diverse",
+    "history": 200,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 4095.551204,
+      "queryItems": 42.530554,
+      "verifySourceTrailRecords": 3733.8334290000003,
+      "getSegment": 1190.65894,
+      "lexicalEvidencePaths": 1679.7668569999998
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 19200,
+      "lexicalEvidencePaths": 6400
+    }
+  },
+  {
+    "arm": "candidate",
+    "fixture": "diverse",
+    "history": 200,
+    "policy": "exact-v1",
+    "inclusive_ms": {
+      "open": 1213.615759,
+      "queryItems": 39.681279,
+      "verifySourceTrailRecords": 869.475353,
+      "getSegment": 16.979402,
+      "lexicalEvidencePaths": 35.623035
+    },
+    "historical_calls": {
+      "getSourceTrail": 400,
+      "getSegment": 64,
+      "lexicalEvidencePaths": 64
+    }
+  }
+]

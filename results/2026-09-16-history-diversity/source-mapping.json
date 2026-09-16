@@ -1,0 +1,8 @@
+{
+  "baseline": "e68be171b6dce5f4ee410aece1a655aa2009b78b",
+  "candidate": "baseline plus candidate.patch; uncommitted at measurement",
+  "patch_sha256": "0fdde913cff410c08ee2cd5b4b2eaa2216a101ef448c14a8a2194eb15e973e26",
+  "matched_source_files": 117,
+  "mismatches": [],
+  "status": "rejected; runtime source not adopted"
+}
