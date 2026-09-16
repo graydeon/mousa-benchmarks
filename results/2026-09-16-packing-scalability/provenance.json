@@ -1,0 +1,108 @@
+{
+  "product_baseline": "d1c01b1a76afcda6e644cb68ce18bd29dd3d6b64",
+  "benchmark_baseline": "f1bd9d7d9c8358f9bbaff6844eeb35459787d957",
+  "candidate_at_measurement": {
+    "base_commit": "d1c01b1a76afcda6e644cb68ce18bd29dd3d6b64",
+    "uncommitted_changes": true,
+    "source_manifest": "candidate-source-manifest.json",
+    "excluded_generated_files": [
+      "eval/local/__pycache__/lifecycle.cpython-313.pyc"
+    ]
+  },
+  "protocol_sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a",
+  "fixtures_sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668",
+  "binary_and_input_receipts": {
+    "baseline-diagnosis": {
+      "binaries": {
+        "baseline": "0b106d6b971df7a84671607d205c4ca3e87a5da8b85bcf055fea059984a7eb8d",
+        "diagnostic": "4e401da50a3fd77e2a57a4757950fcee84566f13bea32fdd3d3208a4bc869639"
+      },
+      "protocol_sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a",
+      "fixture_archive_sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668"
+    },
+    "comparison": {
+      "binaries": {
+        "baseline": "0b106d6b971df7a84671607d205c4ca3e87a5da8b85bcf055fea059984a7eb8d",
+        "candidate": "d9545feed40b8b09e564d77a51195e839fb5bb2d0fda062ae6e26fa9877d8116"
+      },
+      "protocol_sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a",
+      "fixture_archive_sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668"
+    },
+    "allocations-base": {
+      "binaries": {
+        "baseline": "0b106d6b971df7a84671607d205c4ca3e87a5da8b85bcf055fea059984a7eb8d",
+        "diagnostic": "ce111aa6066e8844d03db357abfaa4eb2221b3a9d75a638fa578a7479929dd5a"
+      },
+      "protocol_sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a",
+      "fixture_archive_sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668"
+    },
+    "allocations-candidate": {
+      "binaries": {
+        "baseline": "0b106d6b971df7a84671607d205c4ca3e87a5da8b85bcf055fea059984a7eb8d",
+        "diagnostic": "fbfa855160de80279b5a6d49c77f9a737a57a9d259c343649b7e0b2b38e33196"
+      },
+      "protocol_sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a",
+      "fixture_archive_sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668"
+    },
+    "diagnosis-candidate": {
+      "binaries": {
+        "baseline": "0b106d6b971df7a84671607d205c4ca3e87a5da8b85bcf055fea059984a7eb8d",
+        "diagnostic": "d6e06e6f81f169f96d331c1207438a5fad5afed78c17be251e97c94d36613d26"
+      },
+      "protocol_sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a",
+      "fixture_archive_sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668"
+    }
+  },
+  "instrumentation": {
+    "baseline_script_sha256": "be615e4ea190691039d654b253b07f9c2ac96fe443c25b69cce82a6ed50e3510",
+    "published_script_sha256": "1cdd8a4506c329e616630618da18ac1d2f33a8c77dd94a5a87be8181d02d77e6",
+    "difference": "The allocation-only option was added after baseline stage diagnosis; default stage instrumentation is unchanged."
+  },
+  "unsuccessful_attempts": [
+    {
+      "label": "aborted-smoke",
+      "exit_code": 1,
+      "reason": "ID-column inventory assumption failed on observation-keyed ingest receipts",
+      "timed_query_samples": 0
+    },
+    {
+      "label": "first-focused",
+      "exit_code": 1,
+      "reason": "damage fixture failed SQLite CHECK before canonical verification",
+      "timed_query_samples": 0
+    }
+  ],
+  "measurement_status": "completed once; all frozen adoption criteria passed",
+  "sample_counts": {
+    "measured": 960,
+    "warmups": 80,
+    "diagnostic_per_arm": 120,
+    "allocation_per_arm": 120
+  },
+  "environment": {
+    "go": "1.27.1",
+    "os": "Linux amd64",
+    "kernel": "6.12.107+deb13-cloud-amd64",
+    "host_cpu": "AMD Ryzen 7 2700X Eight-Core Processor",
+    "virtual_cpu": "AMD EPYC Processor (with IBPB)",
+    "vcpus": 6,
+    "job_cpu_quota_cores": 5.5,
+    "job_memory_mib": 8192,
+    "vm_memory_mib": 12288,
+    "GOAMD64": "v1",
+    "GOMAXPROCS": 6,
+    "CGO_ENABLED": "0 for measurement binaries; 1 for race checks",
+    "storage": "shared host NVMe, virtio job disk",
+    "network": "offline",
+    "cache": "no filesystem cache flush",
+    "contention": "shared desktop host"
+  },
+  "raw_archive": {
+    "file": "raw-results.tar.xz",
+    "members": 54,
+    "uncompressed_bytes": 62966435,
+    "sha256": "a75bd21202ec8b18c5541389ced7aa1bd4511ddcbc93111c3af8289e00a8eed6",
+    "excluded_artifacts": "Executables, local SQLite stores, caches and CPU profile files containing build paths are not published. CPU profile tables are retained. One smoke traceback has its execution-directory prefix removed; measurements are unchanged.",
+    "uncompressed_tar_sha256": "e86f26364e978a84e2e3039b9f94480f25147435a7216e813b28967164756864"
+  }
+}

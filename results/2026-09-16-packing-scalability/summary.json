@@ -1,0 +1,2991 @@
+{
+  "p90_method": "nearest rank, sample not population percentile",
+  "cells": [
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 270.97862299999997,
+          "wall_p90_ms": 286.363415,
+          "rss_median_kib": 20768.0,
+          "wall_samples_ms": [
+            249.323831,
+            270.157308,
+            277.117291,
+            274.452815,
+            250.681167,
+            271.799938,
+            286.363415,
+            260.544085,
+            257.773129,
+            280.433763,
+            267.608907,
+            290.674141
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 497.1071915,
+          "wall_p90_ms": 521.563003,
+          "rss_median_kib": 19870.0,
+          "wall_samples_ms": [
+            497.780103,
+            466.812719,
+            470.553977,
+            521.563003,
+            509.424816,
+            450.916162,
+            505.553133,
+            477.615071,
+            496.43428,
+            515.184088,
+            532.561963,
+            489.987097
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 45.48889502436418,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 262.504608,
+          "wall_p90_ms": 284.471156,
+          "rss_median_kib": 19864.0,
+          "wall_samples_ms": [
+            251.031223,
+            273.977993,
+            250.16637,
+            240.784203,
+            246.748391,
+            275.262123,
+            274.656066,
+            286.056589,
+            284.471156,
+            243.774692,
+            278.454821,
+            242.964493
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 468.7254615,
+          "wall_p90_ms": 519.512076,
+          "rss_median_kib": 19878.0,
+          "wall_samples_ms": [
+            519.512076,
+            431.823981,
+            446.046779,
+            448.183056,
+            438.633764,
+            450.050789,
+            519.111965,
+            434.980843,
+            506.249149,
+            488.585878,
+            487.400134,
+            525.03265
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 43.99608522226608,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 1640.6078025,
+          "wall_p90_ms": 1716.814136,
+          "rss_median_kib": 22684.0,
+          "wall_samples_ms": [
+            1567.180111,
+            1685.173087,
+            1716.814136,
+            1585.877642,
+            1791.809493,
+            1617.750494,
+            1640.825365,
+            1573.318886,
+            1683.29223,
+            1639.826462,
+            1640.39024,
+            1668.291203
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 3685.070761,
+          "wall_p90_ms": 3728.718075,
+          "rss_median_kib": 22774.0,
+          "wall_samples_ms": [
+            3640.541453,
+            3685.582957,
+            3728.718075,
+            3590.992686,
+            3722.793111,
+            3634.367133,
+            3684.558565,
+            3804.556413,
+            3727.774324,
+            3689.007961,
+            3573.03884,
+            3677.839152
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 55.47961195581503,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 1620.3360645,
+          "wall_p90_ms": 1765.793495,
+          "rss_median_kib": 22778.0,
+          "wall_samples_ms": [
+            1581.946478,
+            1740.94617,
+            1593.203622,
+            1550.338762,
+            1716.003846,
+            1613.951529,
+            1651.514715,
+            1611.849716,
+            1795.501558,
+            1601.728273,
+            1765.793495,
+            1626.7206
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 3726.2100145,
+          "wall_p90_ms": 3798.546189,
+          "rss_median_kib": 22766.0,
+          "wall_samples_ms": [
+            3796.747526,
+            3741.567615,
+            3765.747269,
+            3710.852414,
+            3559.561431,
+            3580.392514,
+            3810.513335,
+            3776.33028,
+            3590.492889,
+            3709.994906,
+            3798.546189,
+            3584.137898
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 56.51517069100507,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 93.0041255,
+          "wall_p90_ms": 109.00635,
+          "rss_median_kib": 18204.0,
+          "wall_samples_ms": [
+            89.247419,
+            109.00635,
+            108.016774,
+            87.650333,
+            92.761861,
+            86.814165,
+            76.187583,
+            101.679688,
+            91.758319,
+            114.458106,
+            97.055866,
+            93.24639
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 124.499381,
+          "wall_p90_ms": 135.01776,
+          "rss_median_kib": 18618.0,
+          "wall_samples_ms": [
+            133.425072,
+            144.600554,
+            115.445539,
+            98.404646,
+            135.01776,
+            126.783324,
+            126.463816,
+            122.534946,
+            108.264579,
+            102.438051,
+            131.044747,
+            121.378076
+          ]
+        }
+      },
+      "paired_wins": 11,
+      "improvement_percent": 25.297519752327126,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 89.77480349999999,
+          "wall_p90_ms": 98.606734,
+          "rss_median_kib": 18180.0,
+          "wall_samples_ms": [
+            98.026756,
+            89.157952,
+            102.744275,
+            85.001435,
+            86.654515,
+            87.727077,
+            94.81351,
+            98.606734,
+            98.564354,
+            90.391655,
+            76.257514,
+            78.656845
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 106.3800045,
+          "wall_p90_ms": 114.247051,
+          "rss_median_kib": 18520.0,
+          "wall_samples_ms": [
+            112.242541,
+            95.942527,
+            104.865524,
+            99.714572,
+            108.72907,
+            114.247051,
+            111.089969,
+            87.656234,
+            99.289204,
+            107.894485,
+            104.089628,
+            114.794257
+          ]
+        }
+      },
+      "paired_wins": 11,
+      "improvement_percent": 15.60932534083509,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 213.990251,
+          "wall_p90_ms": 231.568728,
+          "rss_median_kib": 20252.0,
+          "wall_samples_ms": [
+            195.223355,
+            216.655545,
+            224.011303,
+            202.596635,
+            188.429202,
+            237.824642,
+            231.568728,
+            226.624915,
+            179.356455,
+            210.856708,
+            222.675958,
+            211.324957
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 255.2318225,
+          "wall_p90_ms": 287.095838,
+          "rss_median_kib": 20070.0,
+          "wall_samples_ms": [
+            256.074443,
+            306.63074,
+            227.251109,
+            284.382489,
+            262.610262,
+            253.829642,
+            287.095838,
+            209.255836,
+            227.132487,
+            197.003945,
+            254.389202,
+            257.024925
+          ]
+        }
+      },
+      "paired_wins": 10,
+      "improvement_percent": 16.158475497309897,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 212.7235505,
+          "wall_p90_ms": 229.508283,
+          "rss_median_kib": 19962.0,
+          "wall_samples_ms": [
+            202.034942,
+            217.871266,
+            205.148242,
+            229.448881,
+            224.3615,
+            238.279625,
+            181.258683,
+            210.072618,
+            210.507233,
+            208.150693,
+            214.939868,
+            229.508283
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 234.165363,
+          "wall_p90_ms": 267.650085,
+          "rss_median_kib": 20010.0,
+          "wall_samples_ms": [
+            222.824426,
+            220.312796,
+            227.164707,
+            241.035544,
+            259.648546,
+            228.457341,
+            239.873385,
+            222.529844,
+            267.650085,
+            214.098789,
+            242.223953,
+            279.141869
+          ]
+        }
+      },
+      "paired_wins": 11,
+      "improvement_percent": 9.156696885183669,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 1093.436507,
+          "wall_p90_ms": 1116.188868,
+          "rss_median_kib": 22282.0,
+          "wall_samples_ms": [
+            1065.046171,
+            1077.951457,
+            1128.007336,
+            1102.057972,
+            1096.564509,
+            1049.27546,
+            1116.188868,
+            1112.927681,
+            1092.532036,
+            1042.660011,
+            1089.492143,
+            1094.340978
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 1409.273815,
+          "wall_p90_ms": 1437.372814,
+          "rss_median_kib": 22288.0,
+          "wall_samples_ms": [
+            1403.73419,
+            1426.165313,
+            1437.372814,
+            1266.015224,
+            1414.81344,
+            1332.055083,
+            1472.84523,
+            1429.853701,
+            1370.324434,
+            1366.675018,
+            1436.179516,
+            1382.935658
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 22.411351480336705,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 1110.7250749999998,
+          "wall_p90_ms": 1138.879538,
+          "rss_median_kib": 23330.0,
+          "wall_samples_ms": [
+            1098.627999,
+            1112.102193,
+            1116.913377,
+            1136.428571,
+            1053.036995,
+            1109.347957,
+            1138.879538,
+            1146.8243,
+            1099.664925,
+            1137.600068,
+            1103.243015,
+            1064.201917
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 1373.604371,
+          "wall_p90_ms": 1424.647245,
+          "rss_median_kib": 22456.0,
+          "wall_samples_ms": [
+            1371.620475,
+            1386.0711,
+            1325.750568,
+            1322.255442,
+            1418.323825,
+            1331.581725,
+            1517.803246,
+            1302.439473,
+            1424.647245,
+            1379.939108,
+            1375.588267,
+            1340.456672
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 19.137919298307192,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 501.6466615,
+          "wall_p90_ms": 541.566974,
+          "rss_median_kib": 19686.0,
+          "wall_samples_ms": [
+            520.53774,
+            500.651009,
+            552.448083,
+            524.311598,
+            408.605741,
+            502.642314,
+            500.09151,
+            471.323399,
+            541.566974,
+            529.487477,
+            463.264665,
+            447.02303
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 270.6681,
+          "wall_p90_ms": 292.98811,
+          "rss_median_kib": 19864.0,
+          "wall_samples_ms": [
+            268.713529,
+            259.924634,
+            292.98811,
+            254.737315,
+            250.558326,
+            262.633555,
+            281.884384,
+            272.622671,
+            276.720407,
+            277.289976,
+            253.209619,
+            294.98719
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 46.04407429112334,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 467.82619,
+          "wall_p90_ms": 533.41376,
+          "rss_median_kib": 20130.0,
+          "wall_samples_ms": [
+            410.768398,
+            539.901128,
+            458.303528,
+            517.763707,
+            446.791846,
+            477.348852,
+            448.565323,
+            453.030618,
+            533.41376,
+            480.378985,
+            430.540734,
+            520.515859
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 276.4773565,
+          "wall_p90_ms": 298.477046,
+          "rss_median_kib": 20092.0,
+          "wall_samples_ms": [
+            298.477046,
+            245.591129,
+            243.995746,
+            270.765478,
+            305.626356,
+            282.822714,
+            272.436512,
+            285.690302,
+            247.172606,
+            284.591511,
+            262.699649,
+            280.518201
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 40.90169331905082,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 3719.8791105,
+          "wall_p90_ms": 3920.637613,
+          "rss_median_kib": 22822.0,
+          "wall_samples_ms": [
+            3767.995496,
+            3592.938536,
+            3700.570199,
+            3907.406306,
+            3964.707905,
+            3823.51369,
+            3728.325588,
+            3920.637613,
+            3683.349007,
+            3672.542146,
+            3673.583791,
+            3711.432633
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1655.7782525,
+          "wall_p90_ms": 1738.176765,
+          "rss_median_kib": 23642.0,
+          "wall_samples_ms": [
+            1689.960246,
+            1666.589611,
+            1635.370384,
+            1644.966894,
+            1589.516878,
+            1638.027698,
+            1795.243113,
+            1738.176765,
+            1676.088478,
+            1621.076083,
+            1726.865128,
+            1577.001714
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 55.48838542020679,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 3734.6057725,
+          "wall_p90_ms": 3893.783052,
+          "rss_median_kib": 22986.0,
+          "wall_samples_ms": [
+            3862.243645,
+            3550.921165,
+            3467.49802,
+            3661.907289,
+            3614.902403,
+            3893.783052,
+            3826.012647,
+            3701.715967,
+            3767.495578,
+            3854.621709,
+            3527.057844,
+            3901.393367
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1655.817797,
+          "wall_p90_ms": 1678.574189,
+          "rss_median_kib": 22802.0,
+          "wall_samples_ms": [
+            1642.228808,
+            1672.78969,
+            1678.574189,
+            1662.901774,
+            1776.261098,
+            1666.305869,
+            1647.297124,
+            1666.056972,
+            1648.73382,
+            1600.432091,
+            1646.163989,
+            1621.031038
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 55.66284909661105,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 120.225449,
+          "wall_p90_ms": 135.626842,
+          "rss_median_kib": 18592.0,
+          "wall_samples_ms": [
+            137.612145,
+            124.544766,
+            135.626842,
+            111.139502,
+            95.066805,
+            135.133456,
+            135.499573,
+            112.530201,
+            120.279175,
+            119.743971,
+            120.171723,
+            113.303039
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 92.083965,
+          "wall_p90_ms": 116.411911,
+          "rss_median_kib": 18202.0,
+          "wall_samples_ms": [
+            100.756778,
+            116.411911,
+            120.334559,
+            93.069048,
+            77.171178,
+            98.820766,
+            91.098882,
+            77.883454,
+            90.583645,
+            90.80422,
+            103.43449,
+            89.078773
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 23.407260471117052,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 99.9537805,
+          "wall_p90_ms": 119.515413,
+          "rss_median_kib": 18314.0,
+          "wall_samples_ms": [
+            102.761948,
+            104.550183,
+            98.438519,
+            119.515413,
+            120.738917,
+            116.710551,
+            101.026763,
+            82.06636,
+            83.521169,
+            98.880798,
+            96.730586,
+            91.899804
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 88.3087985,
+          "wall_p90_ms": 102.404779,
+          "rss_median_kib": 18186.0,
+          "wall_samples_ms": [
+            73.289878,
+            94.558641,
+            85.721255,
+            102.404779,
+            113.940275,
+            86.208719,
+            85.152609,
+            90.408878,
+            98.146291,
+            82.31695,
+            75.871961,
+            97.803798
+          ]
+        }
+      },
+      "paired_wins": 9,
+      "improvement_percent": 11.65036674125598,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 259.02748099999997,
+          "wall_p90_ms": 278.799357,
+          "rss_median_kib": 19902.0,
+          "wall_samples_ms": [
+            278.799357,
+            268.681098,
+            260.169984,
+            243.380553,
+            270.410432,
+            257.884978,
+            230.066941,
+            241.160248,
+            218.803645,
+            283.685903,
+            245.670178,
+            263.871707
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 214.90445599999998,
+          "wall_p90_ms": 228.025992,
+          "rss_median_kib": 19978.0,
+          "wall_samples_ms": [
+            211.051213,
+            223.404664,
+            219.315766,
+            251.30124,
+            228.025992,
+            214.74419,
+            217.791185,
+            211.015386,
+            210.471577,
+            215.064722,
+            209.301662,
+            206.215713
+          ]
+        }
+      },
+      "paired_wins": 11,
+      "improvement_percent": 17.034109597043102,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 245.861877,
+          "wall_p90_ms": 268.050656,
+          "rss_median_kib": 19934.0,
+          "wall_samples_ms": [
+            265.55764,
+            243.41609,
+            249.807578,
+            228.375338,
+            214.665784,
+            257.892643,
+            268.050656,
+            248.307664,
+            225.312103,
+            236.979877,
+            237.666596,
+            457.298914
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 207.26676550000002,
+          "wall_p90_ms": 225.011658,
+          "rss_median_kib": 19834.0,
+          "wall_samples_ms": [
+            196.10523,
+            195.647781,
+            226.674578,
+            204.805268,
+            213.845094,
+            209.728263,
+            190.399568,
+            212.346484,
+            200.702272,
+            225.011658,
+            192.215465,
+            211.34253
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 15.697883694266256,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 1446.1595855,
+          "wall_p90_ms": 1478.951973,
+          "rss_median_kib": 22584.0,
+          "wall_samples_ms": [
+            1420.749294,
+            1443.419516,
+            1340.695439,
+            1442.172888,
+            1454.752353,
+            1448.899655,
+            1494.007472,
+            1478.951973,
+            1456.588847,
+            1412.463062,
+            1439.205783,
+            1456.510961
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1116.5402920000001,
+          "wall_p90_ms": 1155.567569,
+          "rss_median_kib": 22360.0,
+          "wall_samples_ms": [
+            1155.567569,
+            1115.353822,
+            1210.451373,
+            1121.70805,
+            1103.062988,
+            1133.340548,
+            1117.726762,
+            1057.700011,
+            1096.232075,
+            1144.419089,
+            1098.714742,
+            1079.333209
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 22.792733029255285,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 1374.0883235000001,
+          "wall_p90_ms": 1483.147954,
+          "rss_median_kib": 22468.0,
+          "wall_samples_ms": [
+            1340.396579,
+            1365.183361,
+            1377.64283,
+            1452.430648,
+            1363.782092,
+            1303.363958,
+            1391.618064,
+            1366.871036,
+            1370.533817,
+            1498.073329,
+            1483.147954,
+            1383.05376
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1114.832088,
+          "wall_p90_ms": 1153.162509,
+          "rss_median_kib": 22460.0,
+          "wall_samples_ms": [
+            1088.027797,
+            1129.167321,
+            1144.799171,
+            1111.11996,
+            1115.532657,
+            1102.900463,
+            1079.181755,
+            1159.029572,
+            1153.162509,
+            1114.131519,
+            1134.49786,
+            1035.769167
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 18.867508810469857,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 472.535633,
+          "wall_p90_ms": 492.550736,
+          "rss_median_kib": 19906.0,
+          "wall_samples_ms": [
+            478.866127,
+            526.440722,
+            487.629344,
+            478.153881,
+            466.917385,
+            427.961197,
+            492.550736,
+            460.467608,
+            454.870659,
+            456.669213,
+            464.809362,
+            482.98317
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 259.494828,
+          "wall_p90_ms": 278.182099,
+          "rss_median_kib": 19888.0,
+          "wall_samples_ms": [
+            257.58218,
+            247.860536,
+            278.182099,
+            261.407476,
+            283.584242,
+            277.747494,
+            240.994468,
+            268.409239,
+            256.460216,
+            271.82235,
+            252.265067,
+            253.012048
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 45.08460105906976,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 468.570822,
+          "wall_p90_ms": 493.375251,
+          "rss_median_kib": 19898.0,
+          "wall_samples_ms": [
+            442.30467,
+            470.269944,
+            466.8717,
+            472.369603,
+            513.977174,
+            447.883774,
+            488.511379,
+            485.335642,
+            415.174051,
+            493.375251,
+            420.128094,
+            421.215613
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 258.4454995,
+          "wall_p90_ms": 277.492476,
+          "rss_median_kib": 19856.0,
+          "wall_samples_ms": [
+            259.862778,
+            249.776109,
+            257.028221,
+            260.316429,
+            272.681012,
+            275.899859,
+            277.492476,
+            247.242446,
+            279.414701,
+            253.555788,
+            245.579517,
+            243.632986
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 44.84387687716501,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 3722.739956,
+          "wall_p90_ms": 3913.096849,
+          "rss_median_kib": 22722.0,
+          "wall_samples_ms": [
+            3720.958139,
+            3771.830649,
+            3673.936572,
+            3832.666107,
+            3590.127243,
+            3904.830173,
+            3913.096849,
+            3473.469942,
+            3720.786036,
+            3718.811443,
+            3956.955002,
+            3724.521773
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1682.2827555,
+          "wall_p90_ms": 1745.44048,
+          "rss_median_kib": 22760.0,
+          "wall_samples_ms": [
+            1638.344212,
+            1755.462427,
+            1682.29051,
+            1696.031364,
+            1661.112989,
+            1593.834576,
+            1682.275001,
+            1745.44048,
+            1635.745668,
+            1738.909088,
+            1626.668081,
+            1719.826115
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 54.810629391702804,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 3740.8119535,
+          "wall_p90_ms": 3842.457222,
+          "rss_median_kib": 22898.0,
+          "wall_samples_ms": [
+            3452.492054,
+            3772.373648,
+            3829.647575,
+            3738.237821,
+            3729.181594,
+            3784.772093,
+            3743.386086,
+            3737.011761,
+            3564.435703,
+            3842.457222,
+            3863.24874,
+            3645.231039
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1656.005138,
+          "wall_p90_ms": 1713.823086,
+          "rss_median_kib": 23064.0,
+          "wall_samples_ms": [
+            1732.645571,
+            1554.27201,
+            1673.137513,
+            1646.603844,
+            1649.226463,
+            1691.163463,
+            1626.430015,
+            1713.823086,
+            1677.864168,
+            1633.598761,
+            1646.500059,
+            1662.783813
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 55.73139846148645,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 131.28504850000002,
+          "wall_p90_ms": 144.888564,
+          "rss_median_kib": 18590.0,
+          "wall_samples_ms": [
+            121.020866,
+            124.223392,
+            127.720182,
+            144.888564,
+            129.775447,
+            121.880258,
+            146.081701,
+            140.324303,
+            133.730424,
+            123.429914,
+            142.698666,
+            132.79465
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 108.2242685,
+          "wall_p90_ms": 117.090494,
+          "rss_median_kib": 18212.0,
+          "wall_samples_ms": [
+            90.099748,
+            114.763249,
+            91.314306,
+            108.665901,
+            98.752949,
+            84.243223,
+            110.429079,
+            83.667203,
+            109.680686,
+            117.090494,
+            107.782636,
+            122.533032
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 17.56542749039699,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 97.427097,
+          "wall_p90_ms": 113.339889,
+          "rss_median_kib": 18364.0,
+          "wall_samples_ms": [
+            94.578329,
+            100.275865,
+            92.821292,
+            85.986633,
+            88.178674,
+            91.395479,
+            123.643315,
+            113.339889,
+            100.742019,
+            88.682279,
+            105.379327,
+            107.441215
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 95.891361,
+          "wall_p90_ms": 101.633972,
+          "rss_median_kib": 18052.0,
+          "wall_samples_ms": [
+            73.066158,
+            80.732869,
+            99.187303,
+            95.376946,
+            97.36757,
+            91.473665,
+            80.479363,
+            69.968308,
+            101.633972,
+            101.392459,
+            96.405776,
+            598.630417
+          ]
+        }
+      },
+      "paired_wins": 5,
+      "improvement_percent": 1.5762924764144426,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 256.269363,
+          "wall_p90_ms": 278.332101,
+          "rss_median_kib": 19796.0,
+          "wall_samples_ms": [
+            228.004272,
+            278.862135,
+            276.70566,
+            228.294366,
+            246.738521,
+            265.800205,
+            272.742707,
+            233.478139,
+            240.880333,
+            278.332101,
+            198.359799,
+            270.069693
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 222.763632,
+          "wall_p90_ms": 242.25425,
+          "rss_median_kib": 20066.0,
+          "wall_samples_ms": [
+            242.25425,
+            220.954038,
+            205.314693,
+            198.020843,
+            246.728332,
+            211.922869,
+            227.74226,
+            224.843984,
+            224.573226,
+            164.079199,
+            200.294107,
+            232.851374
+          ]
+        }
+      },
+      "paired_wins": 10,
+      "improvement_percent": 13.07441927812495,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 237.37027899999998,
+          "wall_p90_ms": 256.963961,
+          "rss_median_kib": 19768.0,
+          "wall_samples_ms": [
+            234.909004,
+            243.353683,
+            237.61075,
+            210.904127,
+            219.364907,
+            239.040273,
+            204.997739,
+            217.578156,
+            256.963961,
+            262.090867,
+            237.129808,
+            242.490173
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 208.968737,
+          "wall_p90_ms": 241.564527,
+          "rss_median_kib": 20176.0,
+          "wall_samples_ms": [
+            228.852452,
+            244.031655,
+            206.326812,
+            211.326569,
+            224.430008,
+            161.145788,
+            207.921393,
+            196.308681,
+            189.715084,
+            241.564527,
+            210.016081,
+            204.071973
+          ]
+        }
+      },
+      "paired_wins": 8,
+      "improvement_percent": 11.965079250717814,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 1382.657572,
+          "wall_p90_ms": 1442.06204,
+          "rss_median_kib": 22536.0,
+          "wall_samples_ms": [
+            1365.501849,
+            1399.096431,
+            1309.932678,
+            1349.811488,
+            1278.628342,
+            1481.484615,
+            1421.144476,
+            1366.218713,
+            1439.997148,
+            1348.199404,
+            1442.06204,
+            1414.91984
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1094.5677230000001,
+          "wall_p90_ms": 1123.032364,
+          "rss_median_kib": 22972.0,
+          "wall_samples_ms": [
+            1062.297606,
+            1122.556752,
+            1038.403327,
+            1123.032364,
+            1089.362259,
+            1120.319044,
+            1071.737462,
+            1142.82577,
+            1101.376846,
+            1099.773187,
+            1058.036914,
+            1081.056791
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 20.835950623933652,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "wall_median_ms": 1363.288221,
+          "wall_p90_ms": 1413.78436,
+          "rss_median_kib": 22646.0,
+          "wall_samples_ms": [
+            1356.582498,
+            1369.993944,
+            1324.359338,
+            1335.28431,
+            1408.139592,
+            1371.384502,
+            1370.312501,
+            1736.503005,
+            1299.505441,
+            1413.78436,
+            1310.528166,
+            1354.080185
+          ]
+        },
+        "candidate": {
+          "wall_median_ms": 1085.533574,
+          "wall_p90_ms": 1133.916038,
+          "rss_median_kib": 23922.0,
+          "wall_samples_ms": [
+            1120.434973,
+            1077.148732,
+            1029.140984,
+            1067.345543,
+            1178.329283,
+            1133.916038,
+            1093.918416,
+            1114.834808,
+            1061.044575,
+            1043.69373,
+            1098.934614,
+            1021.652599
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 20.37387565750852,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 93.3236095,
+          "wall_p90_ms": 101.664399,
+          "rss_median_kib": 18178.0,
+          "wall_samples_ms": [
+            101.664399,
+            107.333152,
+            90.535244,
+            88.675095,
+            98.751426,
+            80.753327,
+            80.063013,
+            97.034886,
+            99.787519,
+            86.562342,
+            85.911452,
+            96.111975
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 95.036868,
+          "wall_p90_ms": 102.010329,
+          "rss_median_kib": 18234.0,
+          "wall_samples_ms": [
+            78.854796,
+            82.656718,
+            84.056974,
+            98.054839,
+            97.956585,
+            108.743597,
+            90.46876,
+            100.807091,
+            102.010329,
+            96.971677,
+            87.204498,
+            93.102059
+          ]
+        }
+      },
+      "paired_wins": 7,
+      "improvement_percent": 1.8027303888002666,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 88.88836549999999,
+          "wall_p90_ms": 99.287842,
+          "rss_median_kib": 18230.0,
+          "wall_samples_ms": [
+            98.420765,
+            97.545944,
+            86.652773,
+            79.02767,
+            92.896593,
+            99.287842,
+            75.383114,
+            99.954252,
+            90.115858,
+            82.697033,
+            87.660873,
+            81.067587
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 92.69036249999999,
+          "wall_p90_ms": 104.31445,
+          "rss_median_kib": 18066.0,
+          "wall_samples_ms": [
+            94.546579,
+            85.058041,
+            91.560227,
+            99.579789,
+            93.369241,
+            92.011484,
+            74.911921,
+            108.261833,
+            84.492741,
+            104.31445,
+            96.39221,
+            91.542785
+          ]
+        }
+      },
+      "paired_wins": 7,
+      "improvement_percent": 4.101825580841812,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 387.515403,
+          "wall_p90_ms": 421.191549,
+          "rss_median_kib": 20436.0,
+          "wall_samples_ms": [
+            397.173699,
+            414.424606,
+            384.358952,
+            387.041615,
+            387.989191,
+            435.249777,
+            383.814331,
+            372.598775,
+            392.012287,
+            421.191549,
+            333.111779,
+            383.508297
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 472.3054065,
+          "wall_p90_ms": 484.890677,
+          "rss_median_kib": 20066.0,
+          "wall_samples_ms": [
+            477.64122,
+            484.890677,
+            479.76319,
+            470.928599,
+            447.174584,
+            469.328638,
+            442.728314,
+            467.398117,
+            481.542047,
+            460.880442,
+            491.04452,
+            473.682214
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 17.952367754655373,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 380.59752249999997,
+          "wall_p90_ms": 413.325564,
+          "rss_median_kib": 20176.0,
+          "wall_samples_ms": [
+            407.088807,
+            406.66404,
+            362.185492,
+            366.759832,
+            369.631479,
+            380.711391,
+            380.483654,
+            369.837105,
+            376.704876,
+            406.297412,
+            413.325564,
+            416.208181
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 460.7429045,
+          "wall_p90_ms": 510.422697,
+          "rss_median_kib": 19928.0,
+          "wall_samples_ms": [
+            419.659084,
+            409.704012,
+            455.21766,
+            459.262027,
+            462.223782,
+            510.422697,
+            455.332837,
+            489.922446,
+            528.16711,
+            448.708422,
+            468.090466,
+            494.457001
+          ]
+        }
+      },
+      "paired_wins": 12,
+      "improvement_percent": 17.394816331892105,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 55.866237,
+          "wall_p90_ms": 61.418421,
+          "rss_median_kib": 15258.0,
+          "wall_samples_ms": [
+            50.944285,
+            59.280561,
+            56.819415,
+            58.496911,
+            61.418421,
+            55.832824,
+            54.104052,
+            40.180025,
+            54.803624,
+            55.89965,
+            46.885041,
+            66.104811
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 53.901015,
+          "wall_p90_ms": 60.946636,
+          "rss_median_kib": 15262.0,
+          "wall_samples_ms": [
+            48.914839,
+            52.601272,
+            55.200758,
+            61.261376,
+            41.837554,
+            43.671113,
+            60.946636,
+            45.243141,
+            60.126979,
+            57.988227,
+            58.978103,
+            45.109842
+          ]
+        }
+      },
+      "paired_wins": 6,
+      "improvement_percent": -3.6459832899250477,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 54.2748165,
+          "wall_p90_ms": 64.385887,
+          "rss_median_kib": 15274.0,
+          "wall_samples_ms": [
+            61.829102,
+            43.483691,
+            62.508105,
+            53.479761,
+            51.692157,
+            64.713822,
+            49.441897,
+            64.385887,
+            46.663656,
+            54.925352,
+            55.186211,
+            53.624281
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 49.343252,
+          "wall_p90_ms": 61.462293,
+          "rss_median_kib": 15280.0,
+          "wall_samples_ms": [
+            57.430421,
+            43.528295,
+            50.985362,
+            56.723705,
+            44.504996,
+            50.168159,
+            48.518345,
+            45.507006,
+            61.462293,
+            44.643587,
+            62.203203,
+            43.940388
+          ]
+        }
+      },
+      "paired_wins": 4,
+      "improvement_percent": -9.994405111361537,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 81.744261,
+          "wall_p90_ms": 89.954696,
+          "rss_median_kib": 18060.0,
+          "wall_samples_ms": [
+            81.878177,
+            76.322917,
+            78.071968,
+            72.3633,
+            86.605274,
+            75.687325,
+            88.540734,
+            96.003251,
+            78.004371,
+            89.954696,
+            82.998418,
+            81.610345
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 84.956636,
+          "wall_p90_ms": 90.405681,
+          "rss_median_kib": 17962.0,
+          "wall_samples_ms": [
+            76.419919,
+            76.507263,
+            71.274258,
+            90.659788,
+            84.522096,
+            90.15379,
+            87.862572,
+            87.710948,
+            85.391176,
+            75.526443,
+            90.405681,
+            83.728307
+          ]
+        }
+      },
+      "paired_wins": 6,
+      "improvement_percent": 3.7811937374733207,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 80.24189799999999,
+          "wall_p90_ms": 87.406066,
+          "rss_median_kib": 18186.0,
+          "wall_samples_ms": [
+            81.134513,
+            85.939625,
+            87.406066,
+            88.313076,
+            84.878845,
+            79.349283,
+            74.273663,
+            75.259422,
+            62.877799,
+            84.034151,
+            72.418614,
+            69.640022
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 81.459021,
+          "wall_p90_ms": 89.35486,
+          "rss_median_kib": 18000.0,
+          "wall_samples_ms": [
+            81.910979,
+            89.35486,
+            81.007063,
+            64.425601,
+            85.602092,
+            79.25182,
+            83.189576,
+            74.694463,
+            71.566525,
+            84.185073,
+            64.235505,
+            89.400315
+          ]
+        }
+      },
+      "paired_wins": 7,
+      "improvement_percent": 1.4941537291493057,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 294.53280800000005,
+          "wall_p90_ms": 329.8122,
+          "rss_median_kib": 20080.0,
+          "wall_samples_ms": [
+            312.929995,
+            268.526628,
+            313.568172,
+            278.996407,
+            288.632661,
+            290.941762,
+            295.898589,
+            293.167027,
+            329.8122,
+            350.547142,
+            292.219439,
+            311.155767
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 332.019586,
+          "wall_p90_ms": 367.526541,
+          "rss_median_kib": 19640.0,
+          "wall_samples_ms": [
+            310.879128,
+            288.550727,
+            293.541217,
+            325.818309,
+            348.768636,
+            365.519155,
+            311.888923,
+            338.220863,
+            367.526541,
+            324.523601,
+            343.336828,
+            369.292312
+          ]
+        }
+      },
+      "paired_wins": 9,
+      "improvement_percent": 11.290532119391283,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "candidate": {
+          "wall_median_ms": 283.64266699999996,
+          "wall_p90_ms": 310.647754,
+          "rss_median_kib": 19760.0,
+          "wall_samples_ms": [
+            335.682411,
+            284.082387,
+            281.231719,
+            305.086704,
+            270.961887,
+            261.119756,
+            265.749479,
+            283.202947,
+            253.873203,
+            310.647754,
+            284.651814,
+            297.992698
+          ]
+        },
+        "baseline": {
+          "wall_median_ms": 321.93254049999996,
+          "wall_p90_ms": 336.922807,
+          "rss_median_kib": 19570.0,
+          "wall_samples_ms": [
+            290.244084,
+            293.348616,
+            329.179353,
+            321.806444,
+            303.594725,
+            297.88224,
+            356.821822,
+            331.403535,
+            309.732468,
+            336.922807,
+            322.058637,
+            335.690036
+          ]
+        }
+      },
+      "paired_wins": 11,
+      "improvement_percent": 11.893756822634716,
+      "gates": {
+        "median": true,
+        "p90": true,
+        "rss": true
+      }
+    }
+  ],
+  "primary": [
+    {
+      "history": "original",
+      "size": 0,
+      "wall_medians_ms": {
+        "baseline": 125.504291,
+        "candidate": 95.151128
+      },
+      "improvement_percent": 24.184960337332207,
+      "pass": true
+    },
+    {
+      "history": "mixed",
+      "size": 100,
+      "wall_medians_ms": {
+        "baseline": 3719.7987395,
+        "candidate": 1663.8513
+      },
+      "improvement_percent": 55.27039454226903,
+      "pass": true
+    }
+  ],
+  "allocations": [
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 40877688,
+          "allocations": 551862,
+          "gc_cycles": 13
+        },
+        "candidate": {
+          "allocated_bytes": 27630808,
+          "allocations": 364200,
+          "gc_cycles": 10
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 39103048,
+          "allocations": 527187,
+          "gc_cycles": 13
+        },
+        "candidate": {
+          "allocated_bytes": 26950168,
+          "allocations": 355474,
+          "gc_cycles": 10
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 336560960,
+          "allocations": 4548279,
+          "gc_cycles": 115
+        },
+        "candidate": {
+          "allocated_bytes": 223098080,
+          "allocations": 2957149,
+          "gc_cycles": 81
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 334724960,
+          "allocations": 4522637,
+          "gc_cycles": 115
+        },
+        "candidate": {
+          "allocated_bytes": 222581400,
+          "allocations": 2949529,
+          "gc_cycles": 81
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 8034656,
+          "allocations": 107879,
+          "gc_cycles": 2
+        },
+        "candidate": {
+          "allocated_bytes": 5751144,
+          "allocations": 75574,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 6269096,
+          "allocations": 83249,
+          "gc_cycles": 2
+        },
+        "candidate": {
+          "allocated_bytes": 5125776,
+          "allocations": 67110,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 23713792,
+          "allocations": 305645,
+          "gc_cycles": 7
+        },
+        "candidate": {
+          "allocated_bytes": 21792824,
+          "allocations": 277715,
+          "gc_cycles": 7
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 21921376,
+          "allocations": 280750,
+          "gc_cycles": 7
+        },
+        "candidate": {
+          "allocated_bytes": 21144560,
+          "allocations": 269215,
+          "gc_cycles": 7
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 165394768,
+          "allocations": 2084436,
+          "gc_cycles": 55
+        },
+        "candidate": {
+          "allocated_bytes": 165015648,
+          "allocations": 2093544,
+          "gc_cycles": 57
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "budget",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 163573392,
+          "allocations": 2059570,
+          "gc_cycles": 53
+        },
+        "candidate": {
+          "allocated_bytes": 164424624,
+          "allocations": 2085373,
+          "gc_cycles": 57
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 40805360,
+          "allocations": 551605,
+          "gc_cycles": 13
+        },
+        "candidate": {
+          "allocated_bytes": 27542352,
+          "allocations": 363815,
+          "gc_cycles": 9
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 39088824,
+          "allocations": 527369,
+          "gc_cycles": 13
+        },
+        "candidate": {
+          "allocated_bytes": 26906528,
+          "allocations": 355378,
+          "gc_cycles": 9
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 336463928,
+          "allocations": 4547670,
+          "gc_cycles": 115
+        },
+        "candidate": {
+          "allocated_bytes": 223070880,
+          "allocations": 2957069,
+          "gc_cycles": 80
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 334734760,
+          "allocations": 4522802,
+          "gc_cycles": 115
+        },
+        "candidate": {
+          "allocated_bytes": 222376656,
+          "allocations": 2948198,
+          "gc_cycles": 79
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 7980608,
+          "allocations": 107825,
+          "gc_cycles": 2
+        },
+        "candidate": {
+          "allocated_bytes": 5707232,
+          "allocations": 75553,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 6211648,
+          "allocations": 83114,
+          "gc_cycles": 2
+        },
+        "candidate": {
+          "allocated_bytes": 5066048,
+          "allocations": 66893,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 23693536,
+          "allocations": 305407,
+          "gc_cycles": 7
+        },
+        "candidate": {
+          "allocated_bytes": 21668864,
+          "allocations": 277651,
+          "gc_cycles": 7
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 21889272,
+          "allocations": 280760,
+          "gc_cycles": 7
+        },
+        "candidate": {
+          "allocated_bytes": 21102760,
+          "allocations": 269188,
+          "gc_cycles": 7
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 165271232,
+          "allocations": 2083903,
+          "gc_cycles": 54
+        },
+        "candidate": {
+          "allocated_bytes": 164996104,
+          "allocations": 2093472,
+          "gc_cycles": 57
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "install",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 163443576,
+          "allocations": 2058747,
+          "gc_cycles": 53
+        },
+        "candidate": {
+          "allocated_bytes": 164396016,
+          "allocations": 2085185,
+          "gc_cycles": 57
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 40823920,
+          "allocations": 551819,
+          "gc_cycles": 14
+        },
+        "candidate": {
+          "allocated_bytes": 27550504,
+          "allocations": 364090,
+          "gc_cycles": 10
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 39040552,
+          "allocations": 527036,
+          "gc_cycles": 13
+        },
+        "candidate": {
+          "allocated_bytes": 26908880,
+          "allocations": 355395,
+          "gc_cycles": 9
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 336453880,
+          "allocations": 4547570,
+          "gc_cycles": 115
+        },
+        "candidate": {
+          "allocated_bytes": 223101616,
+          "allocations": 2957792,
+          "gc_cycles": 80
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 334804680,
+          "allocations": 4523289,
+          "gc_cycles": 115
+        },
+        "candidate": {
+          "allocated_bytes": 222491920,
+          "allocations": 2949033,
+          "gc_cycles": 80
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 7963408,
+          "allocations": 107814,
+          "gc_cycles": 2
+        },
+        "candidate": {
+          "allocated_bytes": 5675544,
+          "allocations": 75495,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 6181560,
+          "allocations": 83007,
+          "gc_cycles": 2
+        },
+        "candidate": {
+          "allocated_bytes": 5058272,
+          "allocations": 66934,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 23683904,
+          "allocations": 305495,
+          "gc_cycles": 7
+        },
+        "candidate": {
+          "allocated_bytes": 21691216,
+          "allocations": 277538,
+          "gc_cycles": 7
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 21859800,
+          "allocations": 280728,
+          "gc_cycles": 7
+        },
+        "candidate": {
+          "allocated_bytes": 21110024,
+          "allocations": 269173,
+          "gc_cycles": 7
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 165217536,
+          "allocations": 2083540,
+          "gc_cycles": 54
+        },
+        "candidate": {
+          "allocated_bytes": 164957648,
+          "allocations": 2093419,
+          "gc_cycles": 57
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "documentation",
+      "question": "trail",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 163483376,
+          "allocations": 2059056,
+          "gc_cycles": 54
+        },
+        "candidate": {
+          "allocated_bytes": 164316920,
+          "allocations": 2084925,
+          "gc_cycles": 57
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 5355032,
+          "allocations": 78549,
+          "gc_cycles": 1
+        },
+        "candidate": {
+          "allocated_bytes": 5500792,
+          "allocations": 80206,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 5228072,
+          "allocations": 76963,
+          "gc_cycles": 1
+        },
+        "candidate": {
+          "allocated_bytes": 5386248,
+          "allocations": 78642,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 38568800,
+          "allocations": 567422,
+          "gc_cycles": 12
+        },
+        "candidate": {
+          "allocated_bytes": 39335368,
+          "allocations": 581834,
+          "gc_cycles": 13
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "mixed",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 38444984,
+          "allocations": 565782,
+          "gc_cycles": 12
+        },
+        "candidate": {
+          "allocated_bytes": 39168648,
+          "allocations": 579978,
+          "gc_cycles": 12
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 0,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 1640424,
+          "allocations": 24195,
+          "gc_cycles": 0
+        },
+        "candidate": {
+          "allocated_bytes": 1652968,
+          "allocations": 24271,
+          "gc_cycles": 0
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 0,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 1521576,
+          "allocations": 22618,
+          "gc_cycles": 0
+        },
+        "candidate": {
+          "allocated_bytes": 1537664,
+          "allocations": 22728,
+          "gc_cycles": 0
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 10,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 4285144,
+          "allocations": 62994,
+          "gc_cycles": 1
+        },
+        "candidate": {
+          "allocated_bytes": 4368328,
+          "allocations": 63691,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 10,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 4162256,
+          "allocations": 61386,
+          "gc_cycles": 1
+        },
+        "candidate": {
+          "allocated_bytes": 4250072,
+          "allocations": 62155,
+          "gc_cycles": 1
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 100,
+      "packing": "exact-v1",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 27855696,
+          "allocations": 411183,
+          "gc_cycles": 8
+        },
+        "candidate": {
+          "allocated_bytes": 28244624,
+          "allocations": 417192,
+          "gc_cycles": 8
+        }
+      },
+      "pass_gate": true
+    },
+    {
+      "corpus": "small",
+      "question": "displacement",
+      "history": "original",
+      "size": 100,
+      "packing": "original",
+      "stats": {
+        "baseline": {
+          "allocated_bytes": 27738736,
+          "allocations": 409715,
+          "gc_cycles": 8
+        },
+        "candidate": {
+          "allocated_bytes": 28153384,
+          "allocations": 415710,
+          "gc_cycles": 9
+        }
+      },
+      "pass_gate": true
+    }
+  ],
+  "adopt": true,
+  "samples": 960
+}

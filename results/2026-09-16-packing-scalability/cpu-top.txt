@@ -1,0 +1,303 @@
+File: diagnostic
+Build ID: abd29e9db092f2100ef189cb53825be3ba977096
+Type: cpu
+Time: 2026-09-16 07:18:10 UTC
+Duration: 4.15s, Total samples = 4.46s (107.46%)
+Showing nodes accounting for 2.97s, 66.59% of 4.46s total
+Dropped 363 nodes (cum <= 0.02s)
+      flat  flat%   sum%        cum   cum%
+     0.25s  5.61%  5.61%      0.25s  5.61%  internal/runtime/syscall/linux.Syscall6
+     0.15s  3.36%  8.97%      0.15s  3.36%  encoding/json/internal/jsonwire.ConsumeSimpleString (inline)
+     0.10s  2.24% 11.21%      0.10s  2.24%  modernc.org/libc.(*TLS).Alloc
+     0.10s  2.24% 13.45%      1.15s 25.78%  modernc.org/sqlite/lib._yy_reduce
+     0.09s  2.02% 15.47%      0.14s  3.14%  github.com/graydeon/mousa/internal/mousa.decodeLowerHex
+     0.08s  1.79% 17.26%      0.08s  1.79%  runtime.memmove
+     0.07s  1.57% 18.83%      0.70s 15.70%  modernc.org/sqlite/lib._sqlite3VdbeExec
+     0.05s  1.12% 19.96%      0.05s  1.12%  encoding/hex.Decode
+     0.05s  1.12% 21.08%      0.05s  1.12%  modernc.org/libc.(*TLS).Free
+     0.04s   0.9% 21.97%      0.04s   0.9%  encoding/json/internal/jsonopts.GetOption[go.shape.bool]
+     0.04s   0.9% 22.87%      0.05s  1.12%  encoding/json/internal/jsonwire.AppendQuote
+     0.04s   0.9% 23.77%      0.19s  4.26%  encoding/json/jsontext.(*decoderState).consumeObject
+     0.04s   0.9% 24.66%      0.17s  3.81%  encoding/json/v2.makeStructArshaler.func3
+     0.04s   0.9% 25.56%      0.04s   0.9%  modernc.org/libc.Xmemcpy
+     0.04s   0.9% 26.46%      0.04s   0.9%  modernc.org/sqlite/lib._sqlite3GetToken
+     0.03s  0.67% 27.13%      0.05s  1.12%  database/sql.driverArgsConnLocked
+     0.03s  0.67% 27.80%      0.03s  0.67%  encoding/json/internal/jsonwire.ConsumeStringResumable
+     0.03s  0.67% 28.48%      0.07s  1.57%  encoding/json/jsontext.(*encoderState).WriteToken
+     0.03s  0.67% 29.15%      0.30s  6.73%  encoding/json/v2.makeMethodArshaler.func3
+     0.03s  0.67% 29.82%      0.03s  0.67%  internal/abi.Name.IsExported (inline)
+     0.03s  0.67% 30.49%      0.03s  0.67%  internal/sync.(*HashTrieMap[go.shape.interface {},go.shape.interface {}]).Load
+     0.03s  0.67% 31.17%      0.03s  0.67%  modernc.org/libc.Xmemset
+     0.03s  0.67% 31.84%      0.04s   0.9%  modernc.org/libc.Xpthread_mutex_lock
+     0.03s  0.67% 32.51%      0.10s  2.24%  modernc.org/sqlite.(*conn).bind
+     0.03s  0.67% 33.18%      0.03s  0.67%  modernc.org/sqlite/lib.Xsqlite3_value_blob
+     0.03s  0.67% 33.86%      0.36s  8.07%  modernc.org/sqlite/lib._btreeBeginTrans
+     0.03s  0.67% 34.53%      0.09s  2.02%  modernc.org/sqlite/lib._selectExpander
+     0.03s  0.67% 35.20%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3DbMallocRawNN
+     0.03s  0.67% 35.87%      0.06s  1.35%  modernc.org/sqlite/lib._sqlite3LocateTable
+     0.03s  0.67% 36.55%      0.08s  1.79%  modernc.org/sqlite/lib._whereScanNext
+     0.03s  0.67% 37.22%      0.03s  0.67%  modernc.org/sqlite/lib._yy_find_shift_action
+     0.03s  0.67% 37.89%      0.03s  0.67%  runtime.(*_panic).nextDefer
+     0.03s  0.67% 38.57%      0.03s  0.67%  runtime.mallocgcSmallScanNoHeaderSC2
+     0.03s  0.67% 39.24%      0.03s  0.67%  runtime.memclrNoHeapPointers
+     0.03s  0.67% 39.91%      0.03s  0.67%  runtime.nextFreeFast (inline)
+     0.02s  0.45% 40.36%      0.05s  1.12%  crypto/internal/fips140/sha256.(*Digest).Write
+     0.02s  0.45% 40.81%      2.28s 51.12%  database/sql.(*DB).queryDC
+     0.02s  0.45% 41.26%      0.24s  5.38%  encoding/json/jsontext.(*decoderState).ReadValue
+     0.02s  0.45% 41.70%      0.26s  5.83%  encoding/json/jsontext.(*decoderState).consumeValue
+     0.02s  0.45% 42.15%      0.05s  1.12%  encoding/json/jsontext.(*encoderState).reformatValue
+     0.02s  0.45% 42.60%      0.08s  1.79%  encoding/json/v2.makeStringArshaler.func1
+     0.02s  0.45% 43.05%      0.42s  9.42%  encoding/json/v2.makeStructArshaler.func2
+     0.02s  0.45% 43.50%      0.07s  1.57%  modernc.org/libc.Xfstat
+     0.02s  0.45% 43.95%      0.03s  0.67%  modernc.org/libc.Xmemcmp
+     0.02s  0.45% 44.39%      0.03s  0.67%  modernc.org/sqlite/lib._lookupName
+     0.02s  0.45% 44.84%      0.23s  5.16%  modernc.org/sqlite/lib._pagerBeginReadTransaction
+     0.02s  0.45% 45.29%      0.09s  2.02%  modernc.org/sqlite/lib._pagerPagecount
+     0.02s  0.45% 45.74%      0.04s   0.9%  modernc.org/sqlite/lib._releaseMemArray
+     0.02s  0.45% 46.19%      0.10s  2.24%  modernc.org/sqlite/lib._selectInnerLoop
+     0.02s  0.45% 46.64%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3BtreeCursor
+     0.02s  0.45% 47.09%      0.08s  1.79%  modernc.org/sqlite/lib._sqlite3BtreeIndexMoveto
+     0.02s  0.45% 47.53%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3ExprCollSeq
+     0.02s  0.45% 47.98%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3ExprListAppend
+     0.02s  0.45% 48.43%      0.04s   0.9%  modernc.org/sqlite/lib._sqlite3FinishCoding
+     0.02s  0.45% 48.88%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3MemMalloc
+     0.02s  0.45% 49.33%      1.21s 27.13%  modernc.org/sqlite/lib._sqlite3Parser
+     0.02s  0.45% 49.78%      1.27s 28.48%  modernc.org/sqlite/lib._sqlite3RunParser
+     0.02s  0.45% 50.22%      0.88s 19.73%  modernc.org/sqlite/lib._sqlite3Select
+     0.02s  0.45% 50.67%      0.10s  2.24%  modernc.org/sqlite/lib._sqlite3VdbeMemSetText
+     0.02s  0.45% 51.12%      0.05s  1.12%  modernc.org/sqlite/lib._sqlite3VdbeRecordCompareWithSkip
+     0.02s  0.45% 51.57%      0.04s   0.9%  modernc.org/sqlite/lib._sqlite3WhereEnd
+     0.02s  0.45% 52.02%      0.07s  1.57%  modernc.org/sqlite/lib._whereShortCut
+     0.02s  0.45% 52.47%      0.03s  0.67%  modernc.org/sqlite/lib._yy_find_reduce_action
+     0.02s  0.45% 52.91%      0.10s  2.24%  runtime.makeslice
+     0.02s  0.45% 53.36%      0.03s  0.67%  runtime.mallocgcSmallNoScanSC6
+     0.02s  0.45% 53.81%      0.08s  1.79%  runtime.mallocgcSmallNoscan
+     0.02s  0.45% 54.26%      0.06s  1.35%  runtime.slicebytetostring
+     0.01s  0.22% 54.48%      0.03s  0.67%  bytes.(*Buffer).Write
+     0.01s  0.22% 54.71%      0.04s   0.9%  database/sql.(*DB).putConn
+     0.01s  0.22% 54.93%      0.40s  8.97%  database/sql.(*Row).Scan
+     0.01s  0.22% 55.16%      0.30s  6.73%  database/sql.(*Rows).Close
+     0.01s  0.22% 55.38%      0.03s  0.67%  database/sql.(*Rows).Scan
+     0.01s  0.22% 55.61%      0.12s  2.69%  database/sql.(*Rows).nextLocked
+     0.01s  0.22% 55.83%      0.08s  1.79%  encoding/json/jsontext.(*decoderState).consumeString
+     0.01s  0.22% 56.05%      0.06s  1.35%  encoding/json/jsontext.(*decoderState).fetch
+     0.01s  0.22% 56.28%      0.29s  6.50%  encoding/json/v2.Unmarshal
+     0.01s  0.22% 56.50%      0.04s   0.9%  encoding/json/v2.lookupArshaler
+     0.01s  0.22% 56.73%      0.26s  5.83%  encoding/json/v2.unmarshalDecode
+     0.01s  0.22% 56.95%      0.05s  1.12%  github.com/graydeon/mousa/internal/mousa.writeTuple
+     0.01s  0.22% 57.17%      0.03s  0.67%  github.com/graydeon/mousa/internal/packingdiag.Stage
+     0.01s  0.22% 57.40%      2.25s 50.45%  github.com/graydeon/mousa/internal/sqlite.lexicalRepresentationPaths
+     0.01s  0.22% 57.62%      0.22s  4.93%  modernc.org/libc.X__syscall3
+     0.01s  0.22% 57.85%      0.05s  1.12%  modernc.org/libc._fstatat_kstat
+     0.01s  0.22% 58.07%      0.07s  1.57%  modernc.org/sqlite.(*conn).bindBlob
+     0.01s  0.22% 58.30%      2.17s 48.65%  modernc.org/sqlite.(*conn).query
+     0.01s  0.22% 58.52%      0.71s 15.92%  modernc.org/sqlite/lib.Xsqlite3_step
+     0.01s  0.22% 58.74%      0.04s   0.9%  modernc.org/sqlite/lib._getPageNormal
+     0.01s  0.22% 58.97%      0.08s  1.79%  modernc.org/sqlite/lib._innerLoopLoadRow (inline)
+     0.01s  0.22% 59.19%      0.14s  3.14%  modernc.org/sqlite/lib._pager_unlock
+     0.01s  0.22% 59.42%      0.03s  0.67%  modernc.org/sqlite/lib._pcache1FetchNoMutex
+     0.01s  0.22% 59.64%      0.04s   0.9%  modernc.org/sqlite/lib._resolveExprStep
+     0.01s  0.22% 59.87%      0.07s  1.57%  modernc.org/sqlite/lib._resolveSelectStep
+     0.01s  0.22% 60.09%      0.07s  1.57%  modernc.org/sqlite/lib._sqlite3ExprCodeExprList
+     0.01s  0.22% 60.31%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3ExprCodeGetColumn
+     0.01s  0.22% 60.54%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3FindTable
+     0.01s  0.22% 60.76%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3GetVdbe
+     0.01s  0.22% 60.99%      1.32s 29.60%  modernc.org/sqlite/lib._sqlite3LockAndPrepare
+     0.01s  0.22% 61.21%      0.05s  1.12%  modernc.org/sqlite/lib._sqlite3ResolveExprListNames
+     0.01s  0.22% 61.43%      0.12s  2.69%  modernc.org/sqlite/lib._sqlite3SelectExpand
+     0.01s  0.22% 61.66%      0.22s  4.93%  modernc.org/sqlite/lib._sqlite3SelectPrep
+     0.01s  0.22% 61.88%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3VdbeClearObject
+     0.01s  0.22% 62.11%      0.23s  5.16%  modernc.org/sqlite/lib._sqlite3VdbeHalt
+     0.01s  0.22% 62.33%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3VdbeMemGrow
+     0.01s  0.22% 62.56%      0.11s  2.47%  modernc.org/sqlite/lib._sqlite3VdbeSetColName
+     0.01s  0.22% 62.78%      0.21s  4.71%  modernc.org/sqlite/lib._sqlite3WalBeginReadTransaction (inline)
+     0.01s  0.22% 63.00%      0.20s  4.48%  modernc.org/sqlite/lib._sqlite3WalkSelect
+     0.01s  0.22% 63.23%      0.04s   0.9%  modernc.org/sqlite/lib._sqlite3WhereExprAnalyze
+     0.01s  0.22% 63.45%      0.26s  5.83%  modernc.org/sqlite/lib._unixShmLock
+     0.01s  0.22% 63.68%      0.25s  5.61%  modernc.org/sqlite/lib._unixShmSystemLock
+     0.01s  0.22% 63.90%      0.16s  3.59%  modernc.org/sqlite/lib._unlockBtreeIfUnused
+     0.01s  0.22% 64.13%      0.16s  3.59%  modernc.org/sqlite/lib._vdbeCommit
+     0.01s  0.22% 64.35%      0.19s  4.26%  modernc.org/sqlite/lib._walTryBeginRead
+     0.01s  0.22% 64.57%      0.10s  2.24%  modernc.org/sqlite/lib._whereLoopAddAll
+     0.01s  0.22% 64.80%      0.08s  1.79%  modernc.org/sqlite/lib._whereLoopAddBtree
+     0.01s  0.22% 65.02%      0.04s   0.9%  reflect.Value.Field
+     0.01s  0.22% 65.25%      0.06s  1.35%  runtime.(*mcache).refill
+     0.01s  0.22% 65.47%      0.05s  1.12%  runtime.growslice
+     0.01s  0.22% 65.70%      0.24s  5.38%  runtime.mallocgc
+     0.01s  0.22% 65.92%      0.06s  1.35%  runtime.newobject
+     0.01s  0.22% 66.14%      0.04s   0.9%  runtime.scanObject
+     0.01s  0.22% 66.37%      0.03s  0.67%  sync.(*Mutex).Unlock (inline)
+     0.01s  0.22% 66.59%      0.26s  5.83%  syscall.RawSyscall6
+         0     0% 66.59%      2.30s 51.57%  database/sql.(*DB).QueryContext
+         0     0% 66.59%      2.30s 51.57%  database/sql.(*DB).QueryContext.func1
+         0     0% 66.59%      1.97s 44.17%  database/sql.(*DB).QueryRowContext (partial-inline)
+         0     0% 66.59%      2.30s 51.57%  database/sql.(*DB).query
+         0     0% 66.59%      2.22s 49.78%  database/sql.(*DB).queryDC.func1
+         0     0% 66.59%      2.30s 51.57%  database/sql.(*DB).retry
+         0     0% 66.59%      0.15s  3.36%  database/sql.(*Rows).Next
+         0     0% 66.59%      0.13s  2.91%  database/sql.(*Rows).Next.func1
+         0     0% 66.59%      0.29s  6.50%  database/sql.(*Rows).close
+         0     0% 66.59%      0.24s  5.38%  database/sql.(*Rows).close.func1
+         0     0% 66.59%      0.04s   0.9%  database/sql.(*driverConn).releaseConn
+         0     0% 66.59%      2.17s 48.65%  database/sql.ctxDriverQuery
+         0     0% 66.59%      2.46s 55.16%  database/sql.withLock
+         0     0% 66.59%      0.04s   0.9%  encoding/hex.EncodeToString (inline)
+         0     0% 66.59%      0.42s  9.42%  encoding/json.(*Decoder).Decode
+         0     0% 66.59%      0.06s  1.35%  encoding/json.(*Decoder).DisallowUnknownFields
+         0     0% 66.59%      0.08s  1.79%  encoding/json.(*Decoder).Token
+         0     0% 66.59%      0.44s  9.87%  encoding/json.(*Encoder).Encode
+         0     0% 66.59%      0.03s  0.67%  encoding/json.(*Encoder).SetEscapeHTML
+         0     0% 66.59%      0.18s  4.04%  encoding/json.Marshal (inline)
+         0     0% 66.59%      0.04s   0.9%  encoding/json.Unmarshal (inline)
+         0     0% 66.59%      0.04s   0.9%  encoding/json/jsontext.(*Decoder).ReadToken (partial-inline)
+         0     0% 66.59%      0.16s  3.59%  encoding/json/jsontext.(*Decoder).ReadValue (inline)
+         0     0% 66.59%      0.07s  1.57%  encoding/json/jsontext.(*Encoder).WriteToken
+         0     0% 66.59%      0.05s  1.12%  encoding/json/jsontext.(*Encoder).WriteValue (inline)
+         0     0% 66.59%      0.06s  1.35%  encoding/json/jsontext.(*decoderState).CheckNextValue
+         0     0% 66.59%      0.04s   0.9%  encoding/json/jsontext.(*decoderState).ReadToken
+         0     0% 66.59%      0.05s  1.12%  encoding/json/jsontext.(*encoderState).WriteValue
+         0     0% 66.59%      0.03s  0.67%  encoding/json/jsontext.Token.String (inline)
+         0     0% 66.59%      0.04s   0.9%  encoding/json/v2.GetOption[go.shape.bool] (inline)
+         0     0% 66.59%      0.05s  1.12%  encoding/json/v2.JoinOptions (inline)
+         0     0% 66.59%      0.18s  4.04%  encoding/json/v2.Marshal
+         0     0% 66.59%      0.41s  9.19%  encoding/json/v2.MarshalEncode
+         0     0% 66.59%      0.10s  2.24%  encoding/json/v2.makeSliceArshaler.func2
+         0     0% 66.59%      0.06s  1.35%  encoding/json/v2.makeStringArshaler.func2
+         0     0% 66.59%      0.46s 10.31%  encoding/json/v2.marshalEncode
+         0     0% 66.59%      0.10s  2.24%  github.com/graydeon/mousa/internal/mousa.DecodeArtifact
+         0     0% 66.59%      0.10s  2.24%  github.com/graydeon/mousa/internal/mousa.DecodeObservation
+         0     0% 66.59%      0.06s  1.35%  github.com/graydeon/mousa/internal/mousa.DecodePolicyDecision
+         0     0% 66.59%      0.17s  3.81%  github.com/graydeon/mousa/internal/mousa.DecodeRepresentation
+         0     0% 66.59%      0.23s  5.16%  github.com/graydeon/mousa/internal/mousa.DecodeSegment
+         0     0% 66.59%      0.03s  0.67%  github.com/graydeon/mousa/internal/mousa.DecodeSource
+         0     0% 66.59%      0.11s  2.47%  github.com/graydeon/mousa/internal/mousa.DecodeSourceTrail
+         0     0% 66.59%      0.03s  0.67%  github.com/graydeon/mousa/internal/mousa.DerivationInput.MarshalJSON
+         0     0% 66.59%      0.05s  1.12%  github.com/graydeon/mousa/internal/mousa.EncodeArtifact
+         0     0% 66.59%      0.09s  2.02%  github.com/graydeon/mousa/internal/mousa.EncodeObservation
+         0     0% 66.59%      0.08s  1.79%  github.com/graydeon/mousa/internal/mousa.EncodeRepresentation
+         0     0% 66.59%      0.19s  4.26%  github.com/graydeon/mousa/internal/mousa.EncodeSegment
+         0     0% 66.59%      0.09s  2.02%  github.com/graydeon/mousa/internal/mousa.EncodeSourceTrail
+         0     0% 66.59%      0.03s  0.67%  github.com/graydeon/mousa/internal/mousa.NewRepresentationID
+         0     0% 66.59%      0.04s   0.9%  github.com/graydeon/mousa/internal/mousa.NewSegmentID
+         0     0% 66.59%      0.03s  0.67%  github.com/graydeon/mousa/internal/mousa.ObservationID.MarshalJSON
+         0     0% 66.59%      0.03s  0.67%  github.com/graydeon/mousa/internal/mousa.ParseObservationID (inline)
+         0     0% 66.59%      0.03s  0.67%  github.com/graydeon/mousa/internal/mousa.ParseSHA256 (inline)
+         0     0% 66.59%      0.04s   0.9%  github.com/graydeon/mousa/internal/mousa.ParseSegmentID (inline)
+         0     0% 66.59%      0.04s   0.9%  github.com/graydeon/mousa/internal/mousa.Representation.Validate
+         0     0% 66.59%      0.05s  1.12%  github.com/graydeon/mousa/internal/mousa.SHA256.MarshalJSON
+         0     0% 66.59%      0.04s   0.9%  github.com/graydeon/mousa/internal/mousa.Segment.Validate
+         0     0% 66.59%      0.03s  0.67%  github.com/graydeon/mousa/internal/mousa.decodeDerivationInput
+         0     0% 66.59%      0.49s 10.99%  github.com/graydeon/mousa/internal/mousa.decodeJSONContract
+         0     0% 66.59%      0.07s  1.57%  github.com/graydeon/mousa/internal/mousa.decodeSegmentSelector
+         0     0% 66.59%      0.47s 10.54%  github.com/graydeon/mousa/internal/mousa.encodeJSONContract
+         0     0% 66.59%      0.10s  2.24%  github.com/graydeon/mousa/internal/mousa.rejectDuplicateJSONKeys
+         0     0% 66.59%      0.10s  2.24%  github.com/graydeon/mousa/internal/mousa.rejectDuplicateJSONKeys.func1
+         0     0% 66.59%      4.27s 95.74%  github.com/graydeon/mousa/internal/sqlite.Open (inline)
+         0     0% 66.59%      0.25s  5.61%  github.com/graydeon/mousa/internal/sqlite.decodeCanonical[go.shape.0dcd03afbde88ccecc209e5531ea1ad4736511c0737b39f41f5b23eeb333a528]
+         0     0% 66.59%      0.07s  1.57%  github.com/graydeon/mousa/internal/sqlite.decodeCanonical[go.shape.26d71ac27b713a37a9e53eacc7bfd28233f5cabc6f1b949914d56ebf7bd6df9b]
+         0     0% 66.59%      0.20s  4.48%  github.com/graydeon/mousa/internal/sqlite.decodeCanonical[go.shape.306a23f933d01715a5149d224e0aadf87151f63a1f21c3817e81e45011b6c367]
+         0     0% 66.59%      0.15s  3.36%  github.com/graydeon/mousa/internal/sqlite.decodeCanonical[go.shape.struct { Schema string "json:\"schema\""; ID github.com/graydeon/mousa/internal/mousa.ArtifactID "json:\"id\""; ObservationID github.com/graydeon/mousa/internal/mousa.ObservationID "json:\"observation_id\""; ArtifactKey string "json:\"artifact_key\""; MediaType string "json:\"media_type\""; ContentSHA256 github.com/graydeon/mousa/internal/mousa.SHA256 "json:\"content_sha256\""; ByteLength uint64 "json:\"byte_length\"" }]
+         0     0% 66.59%      0.19s  4.26%  github.com/graydeon/mousa/internal/sqlite.decodeCanonical[go.shape.struct { Schema string "json:\"schema\""; ID github.com/graydeon/mousa/internal/mousa.ObservationID "json:\"id\""; SourceID github.com/graydeon/mousa/internal/mousa.SourceID "json:\"source_id\""; ExternalObservationID string "json:\"external_observation_id\"" }]
+         0     0% 66.59%      0.42s  9.42%  github.com/graydeon/mousa/internal/sqlite.decodeCanonical[go.shape.struct { Schema string "json:\"schema\""; ID github.com/graydeon/mousa/internal/mousa.SegmentID "json:\"id\""; RepresentationID github.com/graydeon/mousa/internal/mousa.RepresentationID "json:\"representation_id\""; Selector github.com/graydeon/mousa/internal/mousa.SegmentSelector "json:\"selector\""; ContentSHA256 github.com/graydeon/mousa/internal/mousa.SHA256 "json:\"content_sha256\"" }]
+         0     0% 66.59%      0.05s  1.12%  github.com/graydeon/mousa/internal/sqlite.decodeCanonical[go.shape.struct { Schema string "json:\"schema\""; ID github.com/graydeon/mousa/internal/mousa.SourceID "json:\"id\""; Namespace string "json:\"namespace\""; ExternalSourceID string "json:\"external_source_id\"" }]
+         0     0% 66.59%      0.47s 10.54%  github.com/graydeon/mousa/internal/sqlite.getArtifact
+         0     0% 66.59%      0.55s 12.33%  github.com/graydeon/mousa/internal/sqlite.getObservation
+         0     0% 66.59%      0.14s  3.14%  github.com/graydeon/mousa/internal/sqlite.getPolicyDecision
+         0     0% 66.59%      0.90s 20.18%  github.com/graydeon/mousa/internal/sqlite.getRepresentation
+         0     0% 66.59%      1.14s 25.56%  github.com/graydeon/mousa/internal/sqlite.getSegment
+         0     0% 66.59%      0.28s  6.28%  github.com/graydeon/mousa/internal/sqlite.getSource
+         0     0% 66.59%      3.30s 73.99%  github.com/graydeon/mousa/internal/sqlite.getSourceTrail
+         0     0% 66.59%      2.26s 50.67%  github.com/graydeon/mousa/internal/sqlite.lexicalEvidencePaths
+         0     0% 66.59%      2.05s 45.96%  github.com/graydeon/mousa/internal/sqlite.migrate
+         0     0% 66.59%      4.27s 95.74%  github.com/graydeon/mousa/internal/sqlite.open
+         0     0% 66.59%      2.22s 49.78%  github.com/graydeon/mousa/internal/sqlite.preflightWritable
+         0     0% 66.59%      0.10s  2.24%  github.com/graydeon/mousa/internal/sqlite.projectedInputs
+         0     0% 66.59%      0.04s   0.9%  github.com/graydeon/mousa/internal/sqlite.readPolicyInputParents
+         0     0% 66.59%      2.94s 65.92%  github.com/graydeon/mousa/internal/sqlite.verifyExactTrailContent
+         0     0% 66.59%      0.41s  9.19%  github.com/graydeon/mousa/internal/sqlite.verifyInputProjection
+         0     0% 66.59%      0.09s  2.02%  github.com/graydeon/mousa/internal/sqlite.verifyPolicyDecisionRecords
+         0     0% 66.59%      4.10s 91.93%  github.com/graydeon/mousa/internal/sqlite.verifySourceTrailRecords
+         0     0% 66.59%      4.27s 95.74%  github.com/graydeon/mousa/internal/sqlite.verifyVersion
+         0     0% 66.59%      4.27s 95.74%  main.main
+         0     0% 66.59%      4.27s 95.74%  main.runStatus
+         0     0% 66.59%      4.27s 95.74%  main.statusCommand
+         0     0% 66.59%      0.05s  1.12%  modernc.org/libc.X__fstat
+         0     0% 66.59%      0.05s  1.12%  modernc.org/libc.X__fstatat
+         0     0% 66.59%      0.04s   0.9%  modernc.org/libc.X__syscall2
+         0     0% 66.59%      0.23s  5.16%  modernc.org/libc.Xfcntl
+         0     0% 66.59%      0.03s  0.67%  modernc.org/libc.Xpthread_mutex_unlock
+         0     0% 66.59%      2.17s 48.65%  modernc.org/sqlite.(*conn).QueryContext
+         0     0% 66.59%      0.08s  1.79%  modernc.org/sqlite.(*conn).columnBlob
+         0     0% 66.59%      0.24s  5.38%  modernc.org/sqlite.(*conn).finalize
+         0     0% 66.59%      1.32s 29.60%  modernc.org/sqlite.(*conn).prepareV2
+         0     0% 66.59%      0.71s 15.92%  modernc.org/sqlite.(*conn).step
+         0     0% 66.59%      0.24s  5.38%  modernc.org/sqlite.(*rows).Close
+         0     0% 66.59%      0.11s  2.47%  modernc.org/sqlite.(*rows).Next
+         0     0% 66.59%      0.84s 18.83%  modernc.org/sqlite.(*stmt).query
+         0     0% 66.59%      0.05s  1.12%  modernc.org/sqlite.newRows
+         0     0% 66.59%      1.32s 29.60%  modernc.org/sqlite.newStmt
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib.Xsqlite3_bind_blob (inline)
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib.Xsqlite3_column_blob
+         0     0% 66.59%      0.24s  5.38%  modernc.org/sqlite/lib.Xsqlite3_finalize
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib.Xsqlite3_mutex_enter (inline)
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib.Xsqlite3_mutex_leave (inline)
+         0     0% 66.59%      1.32s 29.60%  modernc.org/sqlite/lib.Xsqlite3_prepare_v2 (inline)
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._bindText
+         0     0% 66.59%      0.15s  3.36%  modernc.org/sqlite/lib._btreeEndTransaction
+         0     0% 66.59%      0.05s  1.12%  modernc.org/sqlite/lib._closeAllCursors
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._exprAnalyze
+         0     0% 66.59%      0.06s  1.35%  modernc.org/sqlite/lib._fts5FilterMethod
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib._fts5NextMethod
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib._generateColumnTypes
+         0     0% 66.59%      0.33s  7.40%  modernc.org/sqlite/lib._lockBtree
+         0     0% 66.59%      0.14s  3.14%  modernc.org/sqlite/lib._pagerUnlockAndRollback
+         0     0% 66.59%      0.14s  3.14%  modernc.org/sqlite/lib._pagerUnlockIfUnused (inline)
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._pcache1Fetch
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._pcache1FetchWithMutex
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib._pthreadMutexEnter
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._pthreadMutexLeave
+         0     0% 66.59%      0.15s  3.36%  modernc.org/sqlite/lib._releasePageOne (inline)
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3BinaryCompareCollSeq
+         0     0% 66.59%      0.36s  8.07%  modernc.org/sqlite/lib._sqlite3BtreeBeginTrans
+         0     0% 66.59%      0.15s  3.36%  modernc.org/sqlite/lib._sqlite3BtreeCommitPhaseTwo
+         0     0% 66.59%      0.07s  1.57%  modernc.org/sqlite/lib._sqlite3ExprCodeTarget
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3ExprCompareCollSeq
+         0     0% 66.59%      0.12s  2.69%  modernc.org/sqlite/lib._sqlite3GenerateColumnNames
+         0     0% 66.59%      0.06s  1.35%  modernc.org/sqlite/lib._sqlite3LocateTableItem
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3Malloc
+         0     0% 66.59%      0.07s  1.57%  modernc.org/sqlite/lib._sqlite3OsFileSize (inline)
+         0     0% 66.59%      0.26s  5.83%  modernc.org/sqlite/lib._sqlite3OsShmLock (inline)
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib._sqlite3PagerGet (inline)
+         0     0% 66.59%      0.32s  7.17%  modernc.org/sqlite/lib._sqlite3PagerSharedLock
+         0     0% 66.59%      0.15s  3.36%  modernc.org/sqlite/lib._sqlite3PagerUnrefPageOne
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3PcacheFetch
+         0     0% 66.59%      1.30s 29.15%  modernc.org/sqlite/lib._sqlite3Prepare
+         0     0% 66.59%      0.07s  1.57%  modernc.org/sqlite/lib._sqlite3ResolveSelectNames
+         0     0% 66.59%      0.70s 15.70%  modernc.org/sqlite/lib._sqlite3Step
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3VdbeDelete
+         0     0% 66.59%      0.03s  0.67%  modernc.org/sqlite/lib._sqlite3VdbeMemClearAndResize
+         0     0% 66.59%      0.05s  1.12%  modernc.org/sqlite/lib._sqlite3VdbeRecordCompare
+         0     0% 66.59%      0.21s  4.71%  modernc.org/sqlite/lib._sqlite3VdbeReset
+         0     0% 66.59%      0.13s  2.91%  modernc.org/sqlite/lib._sqlite3WalEndReadTransaction
+         0     0% 66.59%      0.05s  1.12%  modernc.org/sqlite/lib._sqlite3WalkExprNN
+         0     0% 66.59%      0.34s  7.62%  modernc.org/sqlite/lib._sqlite3WhereBegin
+         0     0% 66.59%      0.07s  1.57%  modernc.org/sqlite/lib._unixFileSize
+         0     0% 66.59%      0.20s  4.48%  modernc.org/sqlite/lib._walBeginReadTransaction
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib._walIndexReadHdr
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib._walIndexTryHdr
+         0     0% 66.59%      0.13s  2.91%  modernc.org/sqlite/lib._walLockShared
+         0     0% 66.59%      0.13s  2.91%  modernc.org/sqlite/lib._walUnlockShared
+         0     0% 66.59%      0.04s   0.9%  modernc.org/sqlite/lib._whereLoopAddBtreeIndex
+         0     0% 66.59%      0.08s  1.79%  modernc.org/sqlite/lib._whereScanInit
+         0     0% 66.59%      0.03s  0.67%  reflect.New
+         0     0% 66.59%      0.06s  1.35%  runtime.(*mcache).nextFree
+         0     0% 66.59%      0.13s  2.91%  runtime.gcBgMarkWorker
+         0     0% 66.59%      0.09s  2.02%  runtime.gcBgMarkWorker.func2
+         0     0% 66.59%      0.09s  2.02%  runtime.gcDrain
+         0     0% 66.59%      0.03s  0.67%  runtime.gcDrainMarkWorkerDedicated (inline)
+         0     0% 66.59%      0.04s   0.9%  runtime.gcDrainMarkWorkerIdle (inline)
+         0     0% 66.59%      4.27s 95.74%  runtime.main
+         0     0% 66.59%      0.06s  1.35%  runtime.mallocgcSmallScanNoHeader
+         0     0% 66.59%      0.14s  3.14%  runtime.systemstack
+         0     0% 66.59%      0.03s  0.67%  sync.(*Map).Load (inline)
+         0     0% 66.59%      0.26s  5.83%  syscall.Syscall

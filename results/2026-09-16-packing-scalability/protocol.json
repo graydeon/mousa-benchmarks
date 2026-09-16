@@ -1,0 +1,75 @@
+{
+  "product_revision": "d1c01b1a76afcda6e644cb68ce18bd29dd3d6b64",
+  "benchmark_revision": "f1bd9d7d9c8358f9bbaff6844eeb35459787d957",
+  "questions": [
+    {
+      "corpus": "small",
+      "policy": "passage-v1",
+      "id": "displacement",
+      "query": "amber",
+      "budget": 33,
+      "file": "repair.md",
+      "required": "amber repair code ZX17"
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "install",
+      "query": "What do I need to build Mousa and run its Python client example?",
+      "budget": 8192,
+      "file": "README.md",
+      "required": "Prerequisites: Go 1.25 or later to build Mousa, and Python 3.9 or later\nwith its standard-library `sqlite3` module on Linux. Process-group timeout\nhandling and executable test fixtures are Linux-supported; other operating\nsystems are not validated. GNU `time` is optional for peak-RSS measurements;\nif `time` is on `PATH`, it must support GNU `-f` and `-o` options.\nNo QMD, Node, models, network access, or third-party Python packages are needed\nto run the client example or acceptance suite. Building requires the Go module\ndependencies, downloaded beforehand for an offline build."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "budget",
+      "query": "Does the query size limit count JSON or tokens, and what happens when a passage is too large?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "The candidate limit is 100, not an exhaustive match count. Packing walks verified\nrank order, skips an accepted segment that exceeds the remaining budget, and\ncontinues. It releases whole segments without truncation, deduplication, or\nredundancy removal. `--budget-bytes` must be positive and defaults to 8,192.\nThe budget counts normalized UTF-8 evidence text only, not model tokens or JSON,\nidentifier, or provenance overhead."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "trail",
+      "query": "What does inspecting a past query prove about selected evidence and whether it is available now?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "Use the `trail_id` returned by a query. Inspection evaluates fresh source access\nbefore looking up history. A deny response contains authorization IDs/reasons but\nno historical payload, even for a nonexistent trail. An allowed request cannot\ninspect another source's trail.\n\nThe `historical` payload is a filtered view, not a complete canonical Source Trail\nrecord from which its ID can be recomputed. It contains the original decision\noutcome/reasons, effective expression, byte accounting, packet ID, and accepted\ncandidate metadata. Rejected candidates are counted but their identities, hashes,\nand other metadata are omitted. The trail stores the effective expression, not\nthe raw query or the name of its preparation policy; inspection cannot reconstruct\nthose missing fields.\n\n`selected` describes the historical packet. `indexed_now` describes index\nmembership in the inspection snapshot. Retired revisions can have historical\nmetadata without current index membership; neither property authorizes a new text\nrelease. Inspection never returns historical text."
+    }
+  ],
+  "manifest": {
+    "documentation/README.md": "d7171c3992cadfacc953958333ef5b0632fcc56668608faed59fa50a4b341aef",
+    "documentation/docs/CAPABILITIES.md": "1c5f774344d1202cade87c3ced1a3eacca01df44bcd2ad26201b149766750821",
+    "small/copy-a.md": "ac230dc638a16f96dd3492a00840e3e923b39731c115b0dc2c79344ea015636a",
+    "small/copy-b.md": "ac230dc638a16f96dd3492a00840e3e923b39731c115b0dc2c79344ea015636a",
+    "small/repair.md": "1b58e0b7a9b1ebf366542969c53b116f44e21bcb351f267d24e73e25627de6dc",
+    "varied/oversized.md": "106b7086cf236334e8308601e2e873cd43e12fd7fc0dea64d031b4fec8fc6215",
+    "varied/prose.txt": "c7240317dbaad5642badc012349ef974c2851fe5f1ee411bd851dfcfac1f6fcd",
+    "varied/reference.md": "5ca043c349090cbbe77f2fe5307eb41c1536e968aabdb197fec120ec2508633b",
+    "varied/runbook.md": "53de897664827d4d6dd266e82730b6593b9203fb2964f3939bebb49a91ed6f4e",
+    "varied/unicode.txt": "34b0dbb17f925508dcf97cf3c12f6dc7f77493445581a7a978dacb3c2704df98"
+  },
+  "history_sizes": [
+    0,
+    10,
+    100
+  ],
+  "histories": [
+    "original",
+    "mixed"
+  ],
+  "history_sequence": "cycle install,budget,trail for documentation; displacement for small; mixed alternates original/exact-v1",
+  "pairs": 12,
+  "warmups": 1,
+  "diagnostic_repeats": 3,
+  "max_cli_seconds": 90,
+  "max_job_seconds": 3600,
+  "adoption": {
+    "primary": "at least 15% median wall reduction for exact documentation query at history0 AND mixed100 pooled documentation; at least 10 of 12 paired wins per documentation case in those cells",
+    "guardrails": "no cell median regression greater than max(10%,2ms); no p90 regression greater than max(20%,5ms); RSS median increase <= max(10%,2048KiB); total allocation bytes increase <=10%; identical stable outputs and canonical integrity gates pass",
+    "scope": "one candidate comparison, no selective reruns; invalid attempts retained; diagnostic timing excluded from adoption"
+  },
+  "limits": "bounded repeated corpus, warm filesystem caches, shared host, not population tails or general retrieval quality; no histories above100"
+}
