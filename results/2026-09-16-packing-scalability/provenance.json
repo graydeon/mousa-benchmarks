@@ -9,6 +9,14 @@
       "eval/local/__pycache__/lifecycle.cpython-313.pyc"
     ]
   },
+  "candidate_publication": {
+    "pull_request": "https://github.com/graydeon/mousa/pull/27",
+    "head_sha": "462c5d14f38f268aff932e21d5d4e03eb267a269",
+    "tree_sha": "9381b59d98f188e451e36f806bb9df07505343ef",
+    "merge_sha": "e68be171b6dce5f4ee410aece1a655aa2009b78b",
+    "source_files_matched": 109,
+    "verification": "All files in candidate-source-manifest.json match the published tree. Measurement-time uncommitted state remains recorded above. Research documentation was added after measurement."
+  },
   "protocol_sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a",
   "fixtures_sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668",
   "binary_and_input_receipts": {
