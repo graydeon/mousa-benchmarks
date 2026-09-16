@@ -8,6 +8,7 @@ These are development measurements, including failed experiments and limitations
 
 - [results/2026-09-16](results/2026-09-16): seven unchanged historical JSON reports. The directory date records migration, not collection.
 - [results/2026-09-16-exact-packing](results/2026-09-16-exact-packing): matched opt-in exact-content packing measurements, frozen fixtures, individual observations and reproduction script.
+- [results/2026-09-16-packing-scalability](results/2026-09-16-packing-scalability): exact-packing stage costs, 0/10/100-trail histories, snapshot-scoped ancestry reuse, allocations and all paired observations.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

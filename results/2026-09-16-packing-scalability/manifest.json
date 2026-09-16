@@ -1,0 +1,66 @@
+{
+  "product_baseline": "d1c01b1a76afcda6e644cb68ce18bd29dd3d6b64",
+  "benchmark_baseline": "f1bd9d7d9c8358f9bbaff6844eeb35459787d957",
+  "files": {
+    "README.md": {
+      "bytes": 16147,
+      "sha256": "a88830c9242ee6bdaa1826f11ca41e7dcdb4d2cc8188e205f320b84567f6a085"
+    },
+    "analyze.py": {
+      "bytes": 4577,
+      "sha256": "a576ebefc801d495de7f88db5143d244c3533d6efa10dfb06d08ee5a14d9b9cf"
+    },
+    "baseline-diagnostic-summary.json": {
+      "bytes": 181058,
+      "sha256": "a8e312da59367150e0060c443a0536fe83a04b0e289c99ddfcaeaef98e2a313b"
+    },
+    "baseline-source-manifest.json": {
+      "bytes": 11284,
+      "sha256": "7ce997ba9093e95ae324a6d98b444318de0a63f071966299adcb5c6ee6d9ff67"
+    },
+    "candidate-diagnostic-summary.json": {
+      "bytes": 178168,
+      "sha256": "1c94eeef9c978cce180028994fb35236ea1b376aaed2b5e4df8df7e2c20ced14"
+    },
+    "candidate-source-manifest.json": {
+      "bytes": 11284,
+      "sha256": "e3c50208941f516383c27d158248806a8ae47fb0de8f06074de935a4ada97ca6"
+    },
+    "cpu-cumulative.txt": {
+      "bytes": 27355,
+      "sha256": "46ea914f833c2f1ea542c49769bba2849b0a9e2f887d110adfa538ed421297ea"
+    },
+    "cpu-top.txt": {
+      "bytes": 27355,
+      "sha256": "77278b153aca60bb9f17e96f1d796bb945b312d930f68fe7c0f2279ca134ad10"
+    },
+    "fixtures.tar.gz": {
+      "bytes": 13435,
+      "sha256": "9d16462280f1758ed5dee85d03f6e8179a52e945b4e7702bf09a1fb8bab8b668"
+    },
+    "instrument.py": {
+      "bytes": 3412,
+      "sha256": "1cdd8a4506c329e616630618da18ac1d2f33a8c77dd94a5a87be8181d02d77e6"
+    },
+    "measure.py": {
+      "bytes": 14566,
+      "sha256": "0b5f789010b1bc2fb853315ae3e3c51e0b615310727f2b8ee85124d88f4226c1"
+    },
+    "protocol.json": {
+      "bytes": 5376,
+      "sha256": "52dd143378ffb9a5a1528f56a87670e2d12fe836ae1977071d5b10a9cbdbfb0a"
+    },
+    "provenance.json": {
+      "bytes": 4918,
+      "sha256": "10280cae29522908caea5e947201ff9ac4ee7ba0e24f4384cb7731ab78bc4a9c"
+    },
+    "raw-results.tar.xz": {
+      "bytes": 733240,
+      "sha256": "a75bd21202ec8b18c5541389ced7aa1bd4511ddcbc93111c3af8289e00a8eed6"
+    },
+    "summary.json": {
+      "bytes": 70833,
+      "sha256": "84b3fe8e4ccfa22ade4bd689afa513a0ee370666455ddc90ae010c473b242866"
+    }
+  }
+}

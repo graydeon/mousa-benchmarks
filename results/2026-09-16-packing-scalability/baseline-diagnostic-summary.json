@@ -1,0 +1,6062 @@
+[
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "original",
+    "size": 0,
+    "packing": "original",
+    "wall_median_ms": 54.374239,
+    "process_allocated_median_bytes_instrumented": 1535696,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 127539,
+        "ExclusiveNS": 127539
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 33141332,
+        "ExclusiveNS": 4100901
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 16629241,
+        "ExclusiveNS": 4623743
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 12005498,
+        "ExclusiveNS": 11018205
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 797257,
+        "ExclusiveNS": 797257
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 91161,
+        "ExclusiveNS": 91161
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 75221,
+        "ExclusiveNS": 75221
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 12030445,
+        "ExclusiveNS": 11319893
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 545914,
+        "ExclusiveNS": 545914
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 61355,
+        "ExclusiveNS": 61355
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 46497,
+        "ExclusiveNS": 46497
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 10354101,
+        "ExclusiveNS": 733207
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 114994,
+        "ExclusiveNS": 114994
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 9603484,
+        "ExclusiveNS": 6148312
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 24927,
+        "ExclusiveNS": 24927
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1230859,
+        "ExclusiveNS": 1230859
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 309440,
+        "ExclusiveNS": 309440
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 263815,
+        "ExclusiveNS": 263815
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 1742027,
+        "ExclusiveNS": 1058884
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 140505,
+        "ExclusiveNS": 140505
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 542638,
+        "ExclusiveNS": 542638
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "original",
+    "size": 0,
+    "packing": "exact-v1",
+    "wall_median_ms": 58.762629,
+    "process_allocated_median_bytes_instrumented": 1650096,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 121939,
+        "ExclusiveNS": 121939
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 32422654,
+        "ExclusiveNS": 4189148
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 16581000,
+        "ExclusiveNS": 4382500
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 12198500,
+        "ExclusiveNS": 11330542
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 681659,
+        "ExclusiveNS": 681659
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 92924,
+        "ExclusiveNS": 92924
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 79649,
+        "ExclusiveNS": 79649
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 11652506,
+        "ExclusiveNS": 10968143
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 577112,
+        "ExclusiveNS": 577112
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 61325,
+        "ExclusiveNS": 61325
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 45926,
+        "ExclusiveNS": 45926
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 13685600,
+        "ExclusiveNS": 779623
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 101320,
+        "ExclusiveNS": 101320
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 12750425,
+        "ExclusiveNS": 6510362
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 32291,
+        "ExclusiveNS": 32291
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1473855,
+        "ExclusiveNS": 1473855
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1160406,
+        "ExclusiveNS": 363512
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 796894,
+        "ExclusiveNS": 127489
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 126036,
+        "ExclusiveNS": 126036
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 543369,
+        "ExclusiveNS": 543369
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 320331,
+        "ExclusiveNS": 320331
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 2556836,
+        "ExclusiveNS": 1683616
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 197011,
+        "ExclusiveNS": 197011
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 676209,
+        "ExclusiveNS": 676209
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 0,
+    "packing": "original",
+    "wall_median_ms": 96.058254,
+    "process_allocated_median_bytes_instrumented": 6275200,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 359535,
+        "ExclusiveNS": 359535
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 40768668,
+        "ExclusiveNS": 2632078
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 17090406,
+        "ExclusiveNS": 3263411
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 13826995,
+        "ExclusiveNS": 8296538
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5441079,
+        "ExclusiveNS": 5441079
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51346,
+        "ExclusiveNS": 51346
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 38032,
+        "ExclusiveNS": 38032
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 21363881,
+        "ExclusiveNS": 12929095
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6765142,
+        "ExclusiveNS": 6765142
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 62808,
+        "ExclusiveNS": 62808
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 47198,
+        "ExclusiveNS": 47198
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 42618668,
+        "ExclusiveNS": 1124268
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 130926,
+        "ExclusiveNS": 130926
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 41663747,
+        "ExclusiveNS": 6270683
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 108052,
+        "ExclusiveNS": 108052
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1388705,
+        "ExclusiveNS": 1388705
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 853180,
+        "ExclusiveNS": 853180
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4273275,
+        "ExclusiveNS": 4273275
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 29044658,
+        "ExclusiveNS": 12751247
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2575148,
+        "ExclusiveNS": 2575148
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13718263,
+        "ExclusiveNS": 13718263
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 0,
+    "packing": "exact-v1",
+    "wall_median_ms": 127.493696,
+    "process_allocated_median_bytes_instrumented": 8066184,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 348884,
+        "ExclusiveNS": 348884
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 43636247,
+        "ExclusiveNS": 3879388
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 23580790,
+        "ExclusiveNS": 3489114
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 20091676,
+        "ExclusiveNS": 12959478
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6961659,
+        "ExclusiveNS": 6961659
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 98134,
+        "ExclusiveNS": 98134
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 72405,
+        "ExclusiveNS": 72405
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 15655295,
+        "ExclusiveNS": 9782360
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5511837,
+        "ExclusiveNS": 5511837
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 49984,
+        "ExclusiveNS": 49984
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 37590,
+        "ExclusiveNS": 37590
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 71824339,
+        "ExclusiveNS": 1466361
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 208040,
+        "ExclusiveNS": 208040
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 70149938,
+        "ExclusiveNS": 9793449
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 270828,
+        "ExclusiveNS": 270828
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1002611,
+        "ExclusiveNS": 1002611
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 18525608,
+        "ExclusiveNS": 1776932
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 16748676,
+        "ExclusiveNS": 2504888
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2736686,
+        "ExclusiveNS": 2736686
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 11570078,
+        "ExclusiveNS": 11570078
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 7270106,
+        "ExclusiveNS": 7270106
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 33287366,
+        "ExclusiveNS": 14232916
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 1958776,
+        "ExclusiveNS": 1958776
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 16494950,
+        "ExclusiveNS": 16494950
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 0,
+    "packing": "original",
+    "wall_median_ms": 102.854271,
+    "process_allocated_median_bytes_instrumented": 6322200,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 631384,
+        "ExclusiveNS": 631384
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 52339732,
+        "ExclusiveNS": 4233610
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 27630506,
+        "ExclusiveNS": 4618553
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 23011953,
+        "ExclusiveNS": 13614577
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 9185479,
+        "ExclusiveNS": 9185479
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 94357,
+        "ExclusiveNS": 94357
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 80972,
+        "ExclusiveNS": 80972
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 20476097,
+        "ExclusiveNS": 13545945
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5918176,
+        "ExclusiveNS": 5918176
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 50314,
+        "ExclusiveNS": 50314
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 36809,
+        "ExclusiveNS": 36809
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 36932444,
+        "ExclusiveNS": 1137613
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 155011,
+        "ExclusiveNS": 155011
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 35328615,
+        "ExclusiveNS": 7374151
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 97102,
+        "ExclusiveNS": 97102
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1012219,
+        "ExclusiveNS": 1012219
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 860384,
+        "ExclusiveNS": 860384
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 3840614,
+        "ExclusiveNS": 3840614
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 20909971,
+        "ExclusiveNS": 9371695
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2082599,
+        "ExclusiveNS": 2082599
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9448689,
+        "ExclusiveNS": 9448689
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 0,
+    "packing": "exact-v1",
+    "wall_median_ms": 116.083465,
+    "process_allocated_median_bytes_instrumented": 8119376,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 376787,
+        "ExclusiveNS": 376787
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 42553156,
+        "ExclusiveNS": 2694614
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 24812280,
+        "ExclusiveNS": 4142891
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 20031733,
+        "ExclusiveNS": 12432443
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6912647,
+        "ExclusiveNS": 6912647
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 64471,
+        "ExclusiveNS": 64471
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 47420,
+        "ExclusiveNS": 47420
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 15525310,
+        "ExclusiveNS": 9914951
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5521923,
+        "ExclusiveNS": 5521923
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51006,
+        "ExclusiveNS": 51006
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 37480,
+        "ExclusiveNS": 37480
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 61243794,
+        "ExclusiveNS": 1521564
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 190368,
+        "ExclusiveNS": 190368
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 59503630,
+        "ExclusiveNS": 9675539
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 166322,
+        "ExclusiveNS": 166322
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1019543,
+        "ExclusiveNS": 1019543
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 20440019,
+        "ExclusiveNS": 1655435
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 18784584,
+        "ExclusiveNS": 2894979
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3215893,
+        "ExclusiveNS": 3215893
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12673712,
+        "ExclusiveNS": 12673712
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 3853999,
+        "ExclusiveNS": 3853999
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 28502672,
+        "ExclusiveNS": 12381046
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2055907,
+        "ExclusiveNS": 2055907
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 14171655,
+        "ExclusiveNS": 14171655
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 0,
+    "packing": "original",
+    "wall_median_ms": 108.878711,
+    "process_allocated_median_bytes_instrumented": 6260312,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 323478,
+        "ExclusiveNS": 323478
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 51306414,
+        "ExclusiveNS": 4280238
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 30225042,
+        "ExclusiveNS": 4795215
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 25291098,
+        "ExclusiveNS": 14714844
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10412798,
+        "ExclusiveNS": 10412798
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 92834,
+        "ExclusiveNS": 92834
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 70592,
+        "ExclusiveNS": 70592
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 16842602,
+        "ExclusiveNS": 11678522
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5271802,
+        "ExclusiveNS": 5271802
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 50023,
+        "ExclusiveNS": 50023
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 37080,
+        "ExclusiveNS": 37080
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 45060689,
+        "ExclusiveNS": 1460067
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 202500,
+        "ExclusiveNS": 202500
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 43208626,
+        "ExclusiveNS": 8711199
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 83977,
+        "ExclusiveNS": 83977
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 999805,
+        "ExclusiveNS": 999805
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 908814,
+        "ExclusiveNS": 908814
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 3778387,
+        "ExclusiveNS": 3778387
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 27863422,
+        "ExclusiveNS": 11556863
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2347984,
+        "ExclusiveNS": 2347984
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13958575,
+        "ExclusiveNS": 13958575
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 0,
+    "packing": "exact-v1",
+    "wall_median_ms": 138.865606,
+    "process_allocated_median_bytes_instrumented": 8054224,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 364613,
+        "ExclusiveNS": 364613
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 53614274,
+        "ExclusiveNS": 4775437
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 30303259,
+        "ExclusiveNS": 4795203
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 25377741,
+        "ExclusiveNS": 14941351
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10355266,
+        "ExclusiveNS": 10355266
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 92213,
+        "ExclusiveNS": 92213
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 73127,
+        "ExclusiveNS": 73127
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 17981848,
+        "ExclusiveNS": 12305351
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5563966,
+        "ExclusiveNS": 5563966
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 58971,
+        "ExclusiveNS": 58971
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 38092,
+        "ExclusiveNS": 38092
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 71663017,
+        "ExclusiveNS": 1610149
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 219442,
+        "ExclusiveNS": 219442
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 69786938,
+        "ExclusiveNS": 9816332
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 194986,
+        "ExclusiveNS": 194986
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1013271,
+        "ExclusiveNS": 1013271
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 23160482,
+        "ExclusiveNS": 921278
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 22242370,
+        "ExclusiveNS": 3476369
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3659704,
+        "ExclusiveNS": 3659704
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 15106297,
+        "ExclusiveNS": 15106297
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 5224039,
+        "ExclusiveNS": 5224039
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 30257313,
+        "ExclusiveNS": 13074042
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2262875,
+        "ExclusiveNS": 2262875
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 14685493,
+        "ExclusiveNS": 14685493
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "original",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 80.634725,
+    "process_allocated_median_bytes_instrumented": 4187984,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 141385,
+        "ExclusiveNS": 141385
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 54182209,
+        "ExclusiveNS": 3040383
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 28661069,
+        "ExclusiveNS": 4410222
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 24250847,
+        "ExclusiveNS": 11260120
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 748564,
+        "ExclusiveNS": 748564
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 6277986,
+        "ExclusiveNS": 6277986
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7362590,
+        "ExclusiveNS": 108325
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 2426861,
+        "ExclusiveNS": 2426861
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 4746705,
+        "ExclusiveNS": 4746705
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 20713482,
+        "ExclusiveNS": 8686825
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 320761,
+        "ExclusiveNS": 320761
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3941353,
+        "ExclusiveNS": 3941353
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7757831,
+        "ExclusiveNS": 103315
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 2889206,
+        "ExclusiveNS": 2889206
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 4717846,
+        "ExclusiveNS": 4717846
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 14387807,
+        "ExclusiveNS": 1081359
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 147898,
+        "ExclusiveNS": 147898
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 13284587,
+        "ExclusiveNS": 7178156
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 38733,
+        "ExclusiveNS": 38733
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1757065,
+        "ExclusiveNS": 1757065
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 510278,
+        "ExclusiveNS": 510278
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 366397,
+        "ExclusiveNS": 366397
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 3410857,
+        "ExclusiveNS": 2147338
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 260889,
+        "ExclusiveNS": 260889
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 1002630,
+        "ExclusiveNS": 1002630
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "original",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 86.911628,
+    "process_allocated_median_bytes_instrumented": 4307712,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 188283,
+        "ExclusiveNS": 188283
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 60854804,
+        "ExclusiveNS": 4402949
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 34139244,
+        "ExclusiveNS": 4673987
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 29465257,
+        "ExclusiveNS": 11938124
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 747691,
+        "ExclusiveNS": 747691
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7464932,
+        "ExclusiveNS": 7464932
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 9266280,
+        "ExclusiveNS": 131087
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 3443596,
+        "ExclusiveNS": 3443596
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 5679885,
+        "ExclusiveNS": 5679885
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 21788438,
+        "ExclusiveNS": 9714191
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 315591,
+        "ExclusiveNS": 315591
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3611966,
+        "ExclusiveNS": 3611966
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7851768,
+        "ExclusiveNS": 99535
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 2784023,
+        "ExclusiveNS": 2784023
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 4956508,
+        "ExclusiveNS": 4956508
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 14111679,
+        "ExclusiveNS": 1196073
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 194585,
+        "ExclusiveNS": 194585
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 12721021,
+        "ExclusiveNS": 6901114
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 47269,
+        "ExclusiveNS": 47269
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1305398,
+        "ExclusiveNS": 1305398
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1605592,
+        "ExclusiveNS": 442361
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 1163231,
+        "ExclusiveNS": 181159
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 211497,
+        "ExclusiveNS": 211497
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 782307,
+        "ExclusiveNS": 782307
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 313959,
+        "ExclusiveNS": 313959
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 2590409,
+        "ExclusiveNS": 1585224
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 204565,
+        "ExclusiveNS": 204565
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 819106,
+        "ExclusiveNS": 819106
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 208.513764,
+    "process_allocated_median_bytes_instrumented": 22224024,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 208972,
+        "ExclusiveNS": 208972
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 163267307,
+        "ExclusiveNS": 4629244
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 91393274,
+        "ExclusiveNS": 4997443
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 86690322,
+        "ExclusiveNS": 16757903
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10547059,
+        "ExclusiveNS": 10547059
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 5434293,
+        "ExclusiveNS": 5434293
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 52690571,
+        "ExclusiveNS": 316534
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 39969815,
+        "ExclusiveNS": 39969815
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 12427481,
+        "ExclusiveNS": 12427481
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 75298014,
+        "ExclusiveNS": 21749869
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10268116,
+        "ExclusiveNS": 10268116
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7078908,
+        "ExclusiveNS": 7078908
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 36059456,
+        "ExclusiveNS": 257946
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 26965856,
+        "ExclusiveNS": 26965856
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 8835654,
+        "ExclusiveNS": 8835654
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 37381896,
+        "ExclusiveNS": 707096
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 106309,
+        "ExclusiveNS": 106309
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 36568491,
+        "ExclusiveNS": 9194265
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 105157,
+        "ExclusiveNS": 105157
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 939934,
+        "ExclusiveNS": 939934
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 805201,
+        "ExclusiveNS": 805201
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 3092952,
+        "ExclusiveNS": 3092952
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 22803953,
+        "ExclusiveNS": 8996799
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3885022,
+        "ExclusiveNS": 3885022
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9917271,
+        "ExclusiveNS": 9917271
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 242.192234,
+    "process_allocated_median_bytes_instrumented": 24052936,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 266831,
+        "ExclusiveNS": 266831
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 171127930,
+        "ExclusiveNS": 3041795
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 94032073,
+        "ExclusiveNS": 4898269
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 89293145,
+        "ExclusiveNS": 14006970
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 9296450,
+        "ExclusiveNS": 9296450
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 5328254,
+        "ExclusiveNS": 5328254
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 56893594,
+        "ExclusiveNS": 339514
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 42635733,
+        "ExclusiveNS": 42635733
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 14407022,
+        "ExclusiveNS": 14407022
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 74068488,
+        "ExclusiveNS": 13865758
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5182096,
+        "ExclusiveNS": 5182096
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3727562,
+        "ExclusiveNS": 3727562
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51348333,
+        "ExclusiveNS": 350992
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 37676755,
+        "ExclusiveNS": 37676755
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 13360010,
+        "ExclusiveNS": 13360010
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 52191514,
+        "ExclusiveNS": 981249
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 135524,
+        "ExclusiveNS": 135524
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 51262251,
+        "ExclusiveNS": 9636485
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 158347,
+        "ExclusiveNS": 158347
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1679580,
+        "ExclusiveNS": 1679580
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 13475195,
+        "ExclusiveNS": 853320
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 12645749,
+        "ExclusiveNS": 2082491
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2153335,
+        "ExclusiveNS": 2153335
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 8409923,
+        "ExclusiveNS": 8409923
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 2508846,
+        "ExclusiveNS": 2508846
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 24769330,
+        "ExclusiveNS": 11409749
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3615590,
+        "ExclusiveNS": 3615590
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9743991,
+        "ExclusiveNS": 9743991
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 246.992669,
+    "process_allocated_median_bytes_instrumented": 22297792,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 360997,
+        "ExclusiveNS": 360997
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 183948558,
+        "ExclusiveNS": 4320513
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 88470282,
+        "ExclusiveNS": 3736378
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 84733904,
+        "ExclusiveNS": 13166136
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 9231978,
+        "ExclusiveNS": 9231978
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 4265991,
+        "ExclusiveNS": 4265991
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 60758012,
+        "ExclusiveNS": 335976
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 46418427,
+        "ExclusiveNS": 46418427
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 14768211,
+        "ExclusiveNS": 14768211
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 82488031,
+        "ExclusiveNS": 20264561
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 7583996,
+        "ExclusiveNS": 7583996
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 6128665,
+        "ExclusiveNS": 6128665
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51176341,
+        "ExclusiveNS": 333031
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 37952724,
+        "ExclusiveNS": 37952724
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 12865190,
+        "ExclusiveNS": 12865190
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 48776960,
+        "ExclusiveNS": 1372004
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 194354,
+        "ExclusiveNS": 194354
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 47109723,
+        "ExclusiveNS": 9749667
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 155462,
+        "ExclusiveNS": 155462
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1651898,
+        "ExclusiveNS": 1651898
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1526323,
+        "ExclusiveNS": 1526323
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4791027,
+        "ExclusiveNS": 4791027
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 28899296,
+        "ExclusiveNS": 14088280
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2577137,
+        "ExclusiveNS": 2577137
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12233879,
+        "ExclusiveNS": 12233879
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 240.454675,
+    "process_allocated_median_bytes_instrumented": 24042000,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 349675,
+        "ExclusiveNS": 349675
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 158701383,
+        "ExclusiveNS": 2784833
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 75198247,
+        "ExclusiveNS": 4615076
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 70583171,
+        "ExclusiveNS": 13607691
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 7937381,
+        "ExclusiveNS": 7937381
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 5403565,
+        "ExclusiveNS": 5403565
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 45415585,
+        "ExclusiveNS": 257041
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 33479005,
+        "ExclusiveNS": 33479005
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 11679539,
+        "ExclusiveNS": 11679539
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 76529384,
+        "ExclusiveNS": 12557078
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5066377,
+        "ExclusiveNS": 5066377
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3709868,
+        "ExclusiveNS": 3709868
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 47745485,
+        "ExclusiveNS": 294966
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 35568050,
+        "ExclusiveNS": 35568050
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 11882469,
+        "ExclusiveNS": 11882469
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 71526901,
+        "ExclusiveNS": 1247130
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 201018,
+        "ExclusiveNS": 201018
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 70147925,
+        "ExclusiveNS": 10036153
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 252343,
+        "ExclusiveNS": 252343
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1340344,
+        "ExclusiveNS": 1340344
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 22036824,
+        "ExclusiveNS": 1809533
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 20256144,
+        "ExclusiveNS": 3246790
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3300922,
+        "ExclusiveNS": 3300922
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13708432,
+        "ExclusiveNS": 13708432
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4852181,
+        "ExclusiveNS": 4852181
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 34706098,
+        "ExclusiveNS": 14998328
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 4155376,
+        "ExclusiveNS": 4155376
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 15552394,
+        "ExclusiveNS": 15552394
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 225.007771,
+    "process_allocated_median_bytes_instrumented": 22173760,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 316343,
+        "ExclusiveNS": 316343
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 176498704,
+        "ExclusiveNS": 3710008
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 91124600,
+        "ExclusiveNS": 4580442
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 86066532,
+        "ExclusiveNS": 15554877
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10203874,
+        "ExclusiveNS": 10203874
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7729006,
+        "ExclusiveNS": 7729006
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51903634,
+        "ExclusiveNS": 295507
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 38431491,
+        "ExclusiveNS": 38431491
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 13176636,
+        "ExclusiveNS": 13176636
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 79864530,
+        "ExclusiveNS": 22227289
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10051185,
+        "ExclusiveNS": 10051185
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7164979,
+        "ExclusiveNS": 7164979
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 40421077,
+        "ExclusiveNS": 284282
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 30450566,
+        "ExclusiveNS": 30450566
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 9686229,
+        "ExclusiveNS": 9686229
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 46657625,
+        "ExclusiveNS": 1433270
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 197401,
+        "ExclusiveNS": 197401
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 44979427,
+        "ExclusiveNS": 9437120
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 131858,
+        "ExclusiveNS": 131858
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1331307,
+        "ExclusiveNS": 1331307
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1165426,
+        "ExclusiveNS": 1165426
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4847031,
+        "ExclusiveNS": 4847031
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 27371670,
+        "ExclusiveNS": 12405517
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3877624,
+        "ExclusiveNS": 3877624
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 11088529,
+        "ExclusiveNS": 11088529
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 267.629335,
+    "process_allocated_median_bytes_instrumented": 23979448,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 342713,
+        "ExclusiveNS": 342713
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 181606805,
+        "ExclusiveNS": 4437373
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 98206593,
+        "ExclusiveNS": 4923664
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 94380767,
+        "ExclusiveNS": 16152738
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 9881843,
+        "ExclusiveNS": 9881843
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7417874,
+        "ExclusiveNS": 7417874
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 63465410,
+        "ExclusiveNS": 347011
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 46776678,
+        "ExclusiveNS": 46776678
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 16341721,
+        "ExclusiveNS": 16341721
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 80981415,
+        "ExclusiveNS": 13001130
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5141780,
+        "ExclusiveNS": 5141780
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3719226,
+        "ExclusiveNS": 3719226
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 53838944,
+        "ExclusiveNS": 333462
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 39411948,
+        "ExclusiveNS": 39411948
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 14093534,
+        "ExclusiveNS": 14093534
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 68823611,
+        "ExclusiveNS": 1419973
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 186019,
+        "ExclusiveNS": 186019
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 67204474,
+        "ExclusiveNS": 9079170
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 168176,
+        "ExclusiveNS": 168176
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1722741,
+        "ExclusiveNS": 1722741
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 25547749,
+        "ExclusiveNS": 1758077
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 23654317,
+        "ExclusiveNS": 3845058
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 4001745,
+        "ExclusiveNS": 4001745
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 15808383,
+        "ExclusiveNS": 15808383
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 5228988,
+        "ExclusiveNS": 5228988
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 27109769,
+        "ExclusiveNS": 12513825
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2251641,
+        "ExclusiveNS": 2251641
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12344303,
+        "ExclusiveNS": 12344303
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "original",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 285.279832,
+    "process_allocated_median_bytes_instrumented": 27949816,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 182994,
+        "ExclusiveNS": 182994
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 260226170,
+        "ExclusiveNS": 2976193
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 138700477,
+        "ExclusiveNS": 4549703
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 133935158,
+        "ExclusiveNS": 10345576
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 622097,
+        "ExclusiveNS": 622097
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 53033734,
+        "ExclusiveNS": 53033734
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 68188810,
+        "ExclusiveNS": 355788
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 23154160,
+        "ExclusiveNS": 23154160
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 44721333,
+        "ExclusiveNS": 44721333
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 114057214,
+        "ExclusiveNS": 10786400
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 309450,
+        "ExclusiveNS": 309450
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 50875016,
+        "ExclusiveNS": 50875016
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 56468788,
+        "ExclusiveNS": 293867
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 19247576,
+        "ExclusiveNS": 19247576
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 36638705,
+        "ExclusiveNS": 36638705
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 13547702,
+        "ExclusiveNS": 1051555
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 166531,
+        "ExclusiveNS": 166531
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 12454351,
+        "ExclusiveNS": 9169028
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 23895,
+        "ExclusiveNS": 23895
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 931508,
+        "ExclusiveNS": 931508
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 274605,
+        "ExclusiveNS": 274605
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 231344,
+        "ExclusiveNS": 231344
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 1826616,
+        "ExclusiveNS": 1146521
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 134292,
+        "ExclusiveNS": 134292
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 545803,
+        "ExclusiveNS": 545803
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "original",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 304.947783,
+    "process_allocated_median_bytes_instrumented": 28062096,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 189676,
+        "ExclusiveNS": 189676
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 273658885,
+        "ExclusiveNS": 3103792
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 133645456,
+        "ExclusiveNS": 4850227
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 130097481,
+        "ExclusiveNS": 12189844
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 627757,
+        "ExclusiveNS": 627757
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51586850,
+        "ExclusiveNS": 51586850
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 67327535,
+        "ExclusiveNS": 326583
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 22796865,
+        "ExclusiveNS": 22796865
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 44219501,
+        "ExclusiveNS": 44219501
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 142410516,
+        "ExclusiveNS": 10743921
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 329418,
+        "ExclusiveNS": 329418
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 57007558,
+        "ExclusiveNS": 57007558
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 72176249,
+        "ExclusiveNS": 393084
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 25045455,
+        "ExclusiveNS": 25045455
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 46715197,
+        "ExclusiveNS": 46715197
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 16707197,
+        "ExclusiveNS": 1195452
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 187111,
+        "ExclusiveNS": 187111
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 15324634,
+        "ExclusiveNS": 9717466
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 34135,
+        "ExclusiveNS": 34135
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1354440,
+        "ExclusiveNS": 1354440
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1500123,
+        "ExclusiveNS": 395080
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 1105043,
+        "ExclusiveNS": 172704
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 179646,
+        "ExclusiveNS": 179646
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 752693,
+        "ExclusiveNS": 752693
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 341721,
+        "ExclusiveNS": 341721
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 2516851,
+        "ExclusiveNS": 1549004
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 224311,
+        "ExclusiveNS": 224311
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 743536,
+        "ExclusiveNS": 743536
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 1349.965777,
+    "process_allocated_median_bytes_instrumented": 165743832,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 327514,
+        "ExclusiveNS": 327514
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 1280903459,
+        "ExclusiveNS": 2959811
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 615207650,
+        "ExclusiveNS": 5608309
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 609599341,
+        "ExclusiveNS": 25848269
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 7598887,
+        "ExclusiveNS": 7598887
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 60533651,
+        "ExclusiveNS": 60533651
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 513738647,
+        "ExclusiveNS": 2423382
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 378432154,
+        "ExclusiveNS": 378432154
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 140519755,
+        "ExclusiveNS": 140519755
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 650019716,
+        "ExclusiveNS": 34517528
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5415047,
+        "ExclusiveNS": 5415047
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51821460,
+        "ExclusiveNS": 51821460
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 567508171,
+        "ExclusiveNS": 2889526
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 422421125,
+        "ExclusiveNS": 422421125
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 142111015,
+        "ExclusiveNS": 142111015
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 51922320,
+        "ExclusiveNS": 1189061
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 191509,
+        "ExclusiveNS": 191509
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 50351713,
+        "ExclusiveNS": 9803258
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 157515,
+        "ExclusiveNS": 157515
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1943636,
+        "ExclusiveNS": 1943636
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1589441,
+        "ExclusiveNS": 1589441
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4413037,
+        "ExclusiveNS": 4413037
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 32109176,
+        "ExclusiveNS": 14461918
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 4174470,
+        "ExclusiveNS": 4174470
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13267454,
+        "ExclusiveNS": 13267454
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 1298.324946,
+    "process_allocated_median_bytes_instrumented": 167535416,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 340258,
+        "ExclusiveNS": 340258
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 1221959409,
+        "ExclusiveNS": 3018963
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 594497594,
+        "ExclusiveNS": 4990430
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 589507164,
+        "ExclusiveNS": 20074973
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5522706,
+        "ExclusiveNS": 5522706
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 44891090,
+        "ExclusiveNS": 44891090
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 519285711,
+        "ExclusiveNS": 2306262
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 384875616,
+        "ExclusiveNS": 384875616
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 132103833,
+        "ExclusiveNS": 132103833
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 612561717,
+        "ExclusiveNS": 34428137
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5958921,
+        "ExclusiveNS": 5958921
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51221155,
+        "ExclusiveNS": 51221155
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 528444150,
+        "ExclusiveNS": 2704991
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 391903707,
+        "ExclusiveNS": 391903707
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 133956009,
+        "ExclusiveNS": 133956009
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 61083493,
+        "ExclusiveNS": 1258001
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 192200,
+        "ExclusiveNS": 192200
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 59949005,
+        "ExclusiveNS": 9688903
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 212679,
+        "ExclusiveNS": 212679
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1764800,
+        "ExclusiveNS": 1764800
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 15866030,
+        "ExclusiveNS": 1303446
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 14562584,
+        "ExclusiveNS": 2332447
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2354921,
+        "ExclusiveNS": 2354921
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9875216,
+        "ExclusiveNS": 9875216
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 3216593,
+        "ExclusiveNS": 3216593
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 30859251,
+        "ExclusiveNS": 14085305
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2592104,
+        "ExclusiveNS": 2592104
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13916226,
+        "ExclusiveNS": 13916226
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 1316.842529,
+    "process_allocated_median_bytes_instrumented": 165791248,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 249347,
+        "ExclusiveNS": 249347
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 1245227051,
+        "ExclusiveNS": 2863941
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 635249041,
+        "ExclusiveNS": 5578954
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 630326538,
+        "ExclusiveNS": 25388749
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 9531119,
+        "ExclusiveNS": 9531119
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 39010451,
+        "ExclusiveNS": 39010451
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 554321467,
+        "ExclusiveNS": 2503417
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 414141067,
+        "ExclusiveNS": 414141067
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 137676983,
+        "ExclusiveNS": 137676983
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 607315466,
+        "ExclusiveNS": 28626294
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5722639,
+        "ExclusiveNS": 5722639
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 40446955,
+        "ExclusiveNS": 40446955
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 532505467,
+        "ExclusiveNS": 2714218
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 393244320,
+        "ExclusiveNS": 393244320
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 135550643,
+        "ExclusiveNS": 135550643
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 51483967,
+        "ExclusiveNS": 1142643
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 191549,
+        "ExclusiveNS": 191549
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 50149775,
+        "ExclusiveNS": 9770726
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 217287,
+        "ExclusiveNS": 217287
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1985785,
+        "ExclusiveNS": 1985785
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1492099,
+        "ExclusiveNS": 1492099
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4628712,
+        "ExclusiveNS": 4628712
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 32391897,
+        "ExclusiveNS": 15046910
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3215662,
+        "ExclusiveNS": 3215662
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 14129325,
+        "ExclusiveNS": 14129325
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 1337.446836,
+    "process_allocated_median_bytes_instrumented": 167621248,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 371036,
+        "ExclusiveNS": 371036
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 1274755427,
+        "ExclusiveNS": 3960127
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 643838963,
+        "ExclusiveNS": 5112731
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 638409389,
+        "ExclusiveNS": 20656635
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 7821787,
+        "ExclusiveNS": 7821787
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 45994511,
+        "ExclusiveNS": 45994511
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 563769859,
+        "ExclusiveNS": 2601808
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 418521756,
+        "ExclusiveNS": 418521756
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 142651093,
+        "ExclusiveNS": 142651093
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 611375482,
+        "ExclusiveNS": 29000749
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5292983,
+        "ExclusiveNS": 5292983
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 44126928,
+        "ExclusiveNS": 44126928
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 533414011,
+        "ExclusiveNS": 2604143
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 395286019,
+        "ExclusiveNS": 395286019
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 135614431,
+        "ExclusiveNS": 135614431
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 73830252,
+        "ExclusiveNS": 1277427
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 186399,
+        "ExclusiveNS": 186399
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 72037239,
+        "ExclusiveNS": 9735481
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 258845,
+        "ExclusiveNS": 258845
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1863295,
+        "ExclusiveNS": 1863295
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 25792659,
+        "ExclusiveNS": 1686534
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 24045893,
+        "ExclusiveNS": 3692728
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 4019464,
+        "ExclusiveNS": 4019464
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 16257873,
+        "ExclusiveNS": 16257873
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 5044952,
+        "ExclusiveNS": 5044952
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 28797214,
+        "ExclusiveNS": 13541785
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3818269,
+        "ExclusiveNS": 3818269
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 11187640,
+        "ExclusiveNS": 11187640
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 1321.180706,
+    "process_allocated_median_bytes_instrumented": 165702712,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 321132,
+        "ExclusiveNS": 321132
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 1262974721,
+        "ExclusiveNS": 3288849
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 621214356,
+        "ExclusiveNS": 5369201
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 615845155,
+        "ExclusiveNS": 31492110
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 8438686,
+        "ExclusiveNS": 8438686
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 48459034,
+        "ExclusiveNS": 48459034
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 522060626,
+        "ExclusiveNS": 2432382
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 384709083,
+        "ExclusiveNS": 384709083
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 132751815,
+        "ExclusiveNS": 132751815
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 645773511,
+        "ExclusiveNS": 30966420
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 7453390,
+        "ExclusiveNS": 7453390
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 52769097,
+        "ExclusiveNS": 52769097
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 555746309,
+        "ExclusiveNS": 2909833
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 416098514,
+        "ExclusiveNS": 416098514
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 138901383,
+        "ExclusiveNS": 138901383
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 42809126,
+        "ExclusiveNS": 1395757
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 190006,
+        "ExclusiveNS": 190006
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 40706662,
+        "ExclusiveNS": 9677884
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 82965,
+        "ExclusiveNS": 82965
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1814613,
+        "ExclusiveNS": 1814613
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1375159,
+        "ExclusiveNS": 1375159
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 2565562,
+        "ExclusiveNS": 2565562
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 25930638,
+        "ExclusiveNS": 11780999
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2889219,
+        "ExclusiveNS": 2889219
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 10342806,
+        "ExclusiveNS": 10342806
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "original",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 1410.8037,
+    "process_allocated_median_bytes_instrumented": 167522368,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 334657,
+        "ExclusiveNS": 334657
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 1317440190,
+        "ExclusiveNS": 4388872
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 650969798,
+        "ExclusiveNS": 5160901
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 646805508,
+        "ExclusiveNS": 24070747
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6197710,
+        "ExclusiveNS": 6197710
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 54456623,
+        "ExclusiveNS": 54456623
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 563811627,
+        "ExclusiveNS": 2562790
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 421122681,
+        "ExclusiveNS": 421122681
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 140187909,
+        "ExclusiveNS": 140187909
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 689889098,
+        "ExclusiveNS": 44345924
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5268946,
+        "ExclusiveNS": 5268946
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 57737096,
+        "ExclusiveNS": 57737096
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 578282129,
+        "ExclusiveNS": 3030135
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 428438499,
+        "ExclusiveNS": 428438499
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 146813495,
+        "ExclusiveNS": 146813495
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 79350556,
+        "ExclusiveNS": 1437125
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 196770,
+        "ExclusiveNS": 196770
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 77716661,
+        "ExclusiveNS": 9840166
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 267061,
+        "ExclusiveNS": 267061
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1851984,
+        "ExclusiveNS": 1851984
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 23370897,
+        "ExclusiveNS": 1612885
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 21651351,
+        "ExclusiveNS": 3474326
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3731191,
+        "ExclusiveNS": 3731191
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 14445834,
+        "ExclusiveNS": 14445834
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 5056484,
+        "ExclusiveNS": 5056484
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 36175584,
+        "ExclusiveNS": 16359518
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 4044306,
+        "ExclusiveNS": 4044306
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 16021488,
+        "ExclusiveNS": 16021488
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "mixed",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 102.704189,
+    "process_allocated_median_bytes_instrumented": 5277320,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 158818,
+        "ExclusiveNS": 158818
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 77973032,
+        "ExclusiveNS": 4684897
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 40315900,
+        "ExclusiveNS": 4354458
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 35961442,
+        "ExclusiveNS": 10855170
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 731623,
+        "ExclusiveNS": 731623
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 6620648,
+        "ExclusiveNS": 6620648
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 17754001,
+        "ExclusiveNS": 106605
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 2785117,
+        "ExclusiveNS": 2785117
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 14862279,
+        "ExclusiveNS": 5719551
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 9142728,
+        "ExclusiveNS": 1372300
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 15,
+        "InclusiveNS": 1317603,
+        "ExclusiveNS": 1317603
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 15,
+        "InclusiveNS": 6452825,
+        "ExclusiveNS": 6452825
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 35123180,
+        "ExclusiveNS": 8144927
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 313790,
+        "ExclusiveNS": 313790
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 5593342,
+        "ExclusiveNS": 5593342
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 18835730,
+        "ExclusiveNS": 121601
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 3062555,
+        "ExclusiveNS": 3062555
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 15459878,
+        "ExclusiveNS": 5871023
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 9588855,
+        "ExclusiveNS": 1402276
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 15,
+        "InclusiveNS": 1433210,
+        "ExclusiveNS": 1433210
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 15,
+        "InclusiveNS": 6753369,
+        "ExclusiveNS": 6753369
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 13021454,
+        "ExclusiveNS": 1141431
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 161983,
+        "ExclusiveNS": 161983
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 11818878,
+        "ExclusiveNS": 6749491
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 39805,
+        "ExclusiveNS": 39805
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1510373,
+        "ExclusiveNS": 1510373
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 386746,
+        "ExclusiveNS": 386746
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 333535,
+        "ExclusiveNS": 333535
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 2891834,
+        "ExclusiveNS": 1811237
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 270227,
+        "ExclusiveNS": 270227
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 810370,
+        "ExclusiveNS": 810370
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "mixed",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 95.321573,
+    "process_allocated_median_bytes_instrumented": 5396216,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 142307,
+        "ExclusiveNS": 142307
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 70486520,
+        "ExclusiveNS": 2678614
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 39288042,
+        "ExclusiveNS": 3890527
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 33512198,
+        "ExclusiveNS": 12378779
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 774032,
+        "ExclusiveNS": 774032
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 6747346,
+        "ExclusiveNS": 6747346
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 12834624,
+        "ExclusiveNS": 111158
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 1855192,
+        "ExclusiveNS": 1855192
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 10868274,
+        "ExclusiveNS": 4227761
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 6640513,
+        "ExclusiveNS": 1082327
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 15,
+        "InclusiveNS": 950933,
+        "ExclusiveNS": 950933
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 15,
+        "InclusiveNS": 4607253,
+        "ExclusiveNS": 4607253
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 30034595,
+        "ExclusiveNS": 8232262
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 342061,
+        "ExclusiveNS": 342061
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 5542786,
+        "ExclusiveNS": 5542786
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 15200861,
+        "ExclusiveNS": 127347
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 30,
+        "InclusiveNS": 2480965,
+        "ExclusiveNS": 2480965
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 12592549,
+        "ExclusiveNS": 5006499
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 7886934,
+        "ExclusiveNS": 1171467
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 15,
+        "InclusiveNS": 1184121,
+        "ExclusiveNS": 1184121
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 15,
+        "InclusiveNS": 5531346,
+        "ExclusiveNS": 5531346
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 14136736,
+        "ExclusiveNS": 1018692
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 140553,
+        "ExclusiveNS": 140553
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 12828151,
+        "ExclusiveNS": 6714723
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 32361,
+        "ExclusiveNS": 32361
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1396680,
+        "ExclusiveNS": 1396680
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1156961,
+        "ExclusiveNS": 302087
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 875162,
+        "ExclusiveNS": 131347
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 127419,
+        "ExclusiveNS": 127419
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 616396,
+        "ExclusiveNS": 616396
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 295444,
+        "ExclusiveNS": 295444
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 2789683,
+        "ExclusiveNS": 1704006
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 208160,
+        "ExclusiveNS": 208160
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 877517,
+        "ExclusiveNS": 877517
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 475.0553,
+    "process_allocated_median_bytes_instrumented": 39611848,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 359254,
+        "ExclusiveNS": 359254
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 423120727,
+        "ExclusiveNS": 2555843
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 210882367,
+        "ExclusiveNS": 3896048
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 207420955,
+        "ExclusiveNS": 12623314
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6912848,
+        "ExclusiveNS": 6912848
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3968033,
+        "ExclusiveNS": 3968033
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 181657161,
+        "ExclusiveNS": 285427
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 41495671,
+        "ExclusiveNS": 41495671
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 143568188,
+        "ExclusiveNS": 15505754
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 128062434,
+        "ExclusiveNS": 19637833
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 19704345,
+        "ExclusiveNS": 19704345
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 88720256,
+        "ExclusiveNS": 88720256
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 209807010,
+        "ExclusiveNS": 13007823
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5267440,
+        "ExclusiveNS": 5267440
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3745806,
+        "ExclusiveNS": 3745806
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 178534443,
+        "ExclusiveNS": 306682
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 36063506,
+        "ExclusiveNS": 36063506
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 142164255,
+        "ExclusiveNS": 12778568
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 129385687,
+        "ExclusiveNS": 20471270
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 20381719,
+        "ExclusiveNS": 20381719
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 88532698,
+        "ExclusiveNS": 88532698
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 40148205,
+        "ExclusiveNS": 1247219
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 200707,
+        "ExclusiveNS": 200707
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 38444560,
+        "ExclusiveNS": 9012805
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 90229,
+        "ExclusiveNS": 90229
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1639315,
+        "ExclusiveNS": 1639315
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 850485,
+        "ExclusiveNS": 850485
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 2397967,
+        "ExclusiveNS": 2397967
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 24576257,
+        "ExclusiveNS": 10925554
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3800327,
+        "ExclusiveNS": 3800327
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9331378,
+        "ExclusiveNS": 9331378
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 464.0733,
+    "process_allocated_median_bytes_instrumented": 41430880,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 392116,
+        "ExclusiveNS": 392116
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 397785185,
+        "ExclusiveNS": 4549835
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 194564970,
+        "ExclusiveNS": 5036737
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 189528233,
+        "ExclusiveNS": 15548879
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10136448,
+        "ExclusiveNS": 10136448
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7019606,
+        "ExclusiveNS": 7019606
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 156152010,
+        "ExclusiveNS": 294104
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 37145893,
+        "ExclusiveNS": 37145893
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 122069543,
+        "ExclusiveNS": 12704077
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 109365466,
+        "ExclusiveNS": 16866538
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 16752838,
+        "ExclusiveNS": 16752838
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 75409658,
+        "ExclusiveNS": 75409658
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 198243120,
+        "ExclusiveNS": 16664563
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6393617,
+        "ExclusiveNS": 6393617
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3647441,
+        "ExclusiveNS": 3647441
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 171548299,
+        "ExclusiveNS": 292745
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 38370001,
+        "ExclusiveNS": 38370001
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 135165083,
+        "ExclusiveNS": 13902406
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 121655927,
+        "ExclusiveNS": 19164436
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 18879157,
+        "ExclusiveNS": 18879157
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 83612334,
+        "ExclusiveNS": 83612334
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 62751892,
+        "ExclusiveNS": 1233904
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 187272,
+        "ExclusiveNS": 187272
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 61330716,
+        "ExclusiveNS": 6803992
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 181631,
+        "ExclusiveNS": 181631
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1283387,
+        "ExclusiveNS": 1283387
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 19708387,
+        "ExclusiveNS": 1577610
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 18130777,
+        "ExclusiveNS": 2755883
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3121038,
+        "ExclusiveNS": 3121038
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12253856,
+        "ExclusiveNS": 12253856
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 3041064,
+        "ExclusiveNS": 3041064
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 24702745,
+        "ExclusiveNS": 10444685
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2521577,
+        "ExclusiveNS": 2521577
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 11736483,
+        "ExclusiveNS": 11736483
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 449.675936,
+    "process_allocated_median_bytes_instrumented": 39679080,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 364233,
+        "ExclusiveNS": 364233
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 384520967,
+        "ExclusiveNS": 2463241
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 182642588,
+        "ExclusiveNS": 4870075
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 177910923,
+        "ExclusiveNS": 16442140
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10514093,
+        "ExclusiveNS": 10514093
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7628479,
+        "ExclusiveNS": 7628479
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 143722667,
+        "ExclusiveNS": 308800
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 33814505,
+        "ExclusiveNS": 33814505
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 109677879,
+        "ExclusiveNS": 14005581
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 95672298,
+        "ExclusiveNS": 15412379
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 14753575,
+        "ExclusiveNS": 14753575
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 65606904,
+        "ExclusiveNS": 65606904
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 201559000,
+        "ExclusiveNS": 12620157
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5533413,
+        "ExclusiveNS": 5533413
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3737521,
+        "ExclusiveNS": 3737521
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 163220979,
+        "ExclusiveNS": 248019
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 29401815,
+        "ExclusiveNS": 29401815
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 133571145,
+        "ExclusiveNS": 10565336
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 123005809,
+        "ExclusiveNS": 19025697
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 19103061,
+        "ExclusiveNS": 19103061
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 84877051,
+        "ExclusiveNS": 84877051
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 49408564,
+        "ExclusiveNS": 1446663
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 218951,
+        "ExclusiveNS": 218951
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 47795117,
+        "ExclusiveNS": 9675617
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 202470,
+        "ExclusiveNS": 202470
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1583009,
+        "ExclusiveNS": 1583009
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1540349,
+        "ExclusiveNS": 1540349
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4647858,
+        "ExclusiveNS": 4647858
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 29003260,
+        "ExclusiveNS": 14051524
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2972105,
+        "ExclusiveNS": 2972105
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 11301410,
+        "ExclusiveNS": 11301410
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 469.597272,
+    "process_allocated_median_bytes_instrumented": 41469784,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 408796,
+        "ExclusiveNS": 408796
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 392016024,
+        "ExclusiveNS": 3748141
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 218644516,
+        "ExclusiveNS": 4662174
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 213982342,
+        "ExclusiveNS": 15608279
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 9358749,
+        "ExclusiveNS": 9358749
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 6651396,
+        "ExclusiveNS": 6651396
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 180909428,
+        "ExclusiveNS": 290724
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 39067222,
+        "ExclusiveNS": 39067222
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 139139832,
+        "ExclusiveNS": 14098322
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 124538544,
+        "ExclusiveNS": 18950517
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 18961906,
+        "ExclusiveNS": 18961906
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 86626121,
+        "ExclusiveNS": 86626121
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 166584799,
+        "ExclusiveNS": 12289600
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5091861,
+        "ExclusiveNS": 5091861
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3674623,
+        "ExclusiveNS": 3674623
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 145547209,
+        "ExclusiveNS": 340875
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 36029880,
+        "ExclusiveNS": 36029880
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 113398740,
+        "ExclusiveNS": 12933990
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 100464750,
+        "ExclusiveNS": 15650247
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 16194809,
+        "ExclusiveNS": 16194809
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 68619694,
+        "ExclusiveNS": 68619694
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 62805353,
+        "ExclusiveNS": 1297164
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 194735,
+        "ExclusiveNS": 194735
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 61170516,
+        "ExclusiveNS": 10219830
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 260108,
+        "ExclusiveNS": 260108
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1529689,
+        "ExclusiveNS": 1529689
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 22099492,
+        "ExclusiveNS": 1444370
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 20655122,
+        "ExclusiveNS": 3206419
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3662583,
+        "ExclusiveNS": 3662583
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13786120,
+        "ExclusiveNS": 13786120
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4705526,
+        "ExclusiveNS": 4705526
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 22766823,
+        "ExclusiveNS": 11386318
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2126337,
+        "ExclusiveNS": 2126337
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9959312,
+        "ExclusiveNS": 9959312
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 10,
+    "packing": "original",
+    "wall_median_ms": 482.844399,
+    "process_allocated_median_bytes_instrumented": 39626712,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 344146,
+        "ExclusiveNS": 344146
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 393893596,
+        "ExclusiveNS": 2421383
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 203119115,
+        "ExclusiveNS": 5044021
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 198075094,
+        "ExclusiveNS": 16547465
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10349825,
+        "ExclusiveNS": 10349825
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7110447,
+        "ExclusiveNS": 7110447
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 162817773,
+        "ExclusiveNS": 288652
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 35075911,
+        "ExclusiveNS": 35075911
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 128503912,
+        "ExclusiveNS": 13983019
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 114520893,
+        "ExclusiveNS": 18272571
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 17837879,
+        "ExclusiveNS": 17837879
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 78410443,
+        "ExclusiveNS": 78410443
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 177930219,
+        "ExclusiveNS": 12576010
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5344912,
+        "ExclusiveNS": 5344912
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 3720128,
+        "ExclusiveNS": 3720128
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 150469873,
+        "ExclusiveNS": 320995
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 33867516,
+        "ExclusiveNS": 33867516
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 116304449,
+        "ExclusiveNS": 12112829
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 104191620,
+        "ExclusiveNS": 16301778
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 16279239,
+        "ExclusiveNS": 16279239
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 71610603,
+        "ExclusiveNS": 71610603
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 42817582,
+        "ExclusiveNS": 1371364
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 233517,
+        "ExclusiveNS": 233517
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 41031672,
+        "ExclusiveNS": 9868930
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 122039,
+        "ExclusiveNS": 122039
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1349240,
+        "ExclusiveNS": 1349240
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 983856,
+        "ExclusiveNS": 983856
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4880203,
+        "ExclusiveNS": 4880203
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 23325301,
+        "ExclusiveNS": 10756924
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2938916,
+        "ExclusiveNS": 2938916
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9629461,
+        "ExclusiveNS": 9629461
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 10,
+    "packing": "exact-v1",
+    "wall_median_ms": 490.845116,
+    "process_allocated_median_bytes_instrumented": 41368040,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 332213,
+        "ExclusiveNS": 332213
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 416396064,
+        "ExclusiveNS": 3640359
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 207663650,
+        "ExclusiveNS": 4892266
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 202771384,
+        "ExclusiveNS": 16264070
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10734662,
+        "ExclusiveNS": 10734662
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 5972703,
+        "ExclusiveNS": 5972703
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 167641401,
+        "ExclusiveNS": 307025
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 36363013,
+        "ExclusiveNS": 36363013
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 132304800,
+        "ExclusiveNS": 15381003
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 117890285,
+        "ExclusiveNS": 18276723
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 18551623,
+        "ExclusiveNS": 18551623
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 81061939,
+        "ExclusiveNS": 81061939
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 179652710,
+        "ExclusiveNS": 21974756
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10116937,
+        "ExclusiveNS": 10116937
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 7124504,
+        "ExclusiveNS": 7124504
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 139738555,
+        "ExclusiveNS": 290961
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 480,
+        "InclusiveNS": 31358016,
+        "ExclusiveNS": 31358016
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 10,
+        "InclusiveNS": 111095088,
+        "ExclusiveNS": 12135652
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 5,
+        "InclusiveNS": 98959436,
+        "ExclusiveNS": 15093246
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 240,
+        "InclusiveNS": 15344285,
+        "ExclusiveNS": 15344285
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 240,
+        "InclusiveNS": 68521905,
+        "ExclusiveNS": 68521905
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 69367241,
+        "ExclusiveNS": 1254234
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 193112,
+        "ExclusiveNS": 193112
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 67919895,
+        "ExclusiveNS": 9753854
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 203262,
+        "ExclusiveNS": 203262
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 997791,
+        "ExclusiveNS": 997791
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 25932251,
+        "ExclusiveNS": 1808943
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 23939723,
+        "ExclusiveNS": 3768047
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 4100219,
+        "ExclusiveNS": 4100219
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 16051113,
+        "ExclusiveNS": 16051113
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4617441,
+        "ExclusiveNS": 4617441
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 26276446,
+        "ExclusiveNS": 11569251
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2408227,
+        "ExclusiveNS": 2408227
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12718568,
+        "ExclusiveNS": 12718568
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "mixed",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 485.278555,
+    "process_allocated_median_bytes_instrumented": 38839680,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 201218,
+        "ExclusiveNS": 201218
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 455395914,
+        "ExclusiveNS": 3552984
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 193652168,
+        "ExclusiveNS": 5370964
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 188281204,
+        "ExclusiveNS": 11826714
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 615394,
+        "ExclusiveNS": 615394
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 54334433,
+        "ExclusiveNS": 54334433
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 120880223,
+        "ExclusiveNS": 344982
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 19726712,
+        "ExclusiveNS": 19726712
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 101057128,
+        "ExclusiveNS": 38526225
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 62917310,
+        "ExclusiveNS": 9506914
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 150,
+        "InclusiveNS": 9484052,
+        "ExclusiveNS": 9484052
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 150,
+        "InclusiveNS": 43926344,
+        "ExclusiveNS": 43926344
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 234701213,
+        "ExclusiveNS": 10607126
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 328446,
+        "ExclusiveNS": 328446
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 63671216,
+        "ExclusiveNS": 63671216
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 160113550,
+        "ExclusiveNS": 428492
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 25423601,
+        "ExclusiveNS": 25423601
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 134261457,
+        "ExclusiveNS": 50190942
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 84070515,
+        "ExclusiveNS": 12633006
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 150,
+        "InclusiveNS": 12800685,
+        "ExclusiveNS": 12800685
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 150,
+        "InclusiveNS": 58636824,
+        "ExclusiveNS": 58636824
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 15701822,
+        "ExclusiveNS": 1394245
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 206087,
+        "ExclusiveNS": 206087
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 14183353,
+        "ExclusiveNS": 7322284
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 37440,
+        "ExclusiveNS": 37440
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1785630,
+        "ExclusiveNS": 1785630
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 510598,
+        "ExclusiveNS": 510598
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 508373,
+        "ExclusiveNS": 508373
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 3554758,
+        "ExclusiveNS": 2211969
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 261191,
+        "ExclusiveNS": 261191
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 1041583,
+        "ExclusiveNS": 1041583
+      }
+    }
+  },
+  {
+    "question": "displacement",
+    "corpus": "small",
+    "history": "mixed",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 446.460615,
+    "process_allocated_median_bytes_instrumented": 38972872,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 120756,
+        "ExclusiveNS": 120756
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 418502034,
+        "ExclusiveNS": 4273586
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 211404416,
+        "ExclusiveNS": 3305851
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 208118272,
+        "ExclusiveNS": 10872100
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 554101,
+        "ExclusiveNS": 554101
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 55342354,
+        "ExclusiveNS": 55342354
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 134590308,
+        "ExclusiveNS": 361654
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 22067306,
+        "ExclusiveNS": 22067306
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 112161348,
+        "ExclusiveNS": 43366246
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 69908603,
+        "ExclusiveNS": 10816312
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 150,
+        "InclusiveNS": 10420773,
+        "ExclusiveNS": 10420773
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 150,
+        "InclusiveNS": 48671518,
+        "ExclusiveNS": 48671518
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 202614970,
+        "ExclusiveNS": 17624008
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 6,
+        "InclusiveNS": 592802,
+        "ExclusiveNS": 592802
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 48369506,
+        "ExclusiveNS": 48369506
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 135308295,
+        "ExclusiveNS": 313281
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 300,
+        "InclusiveNS": 22185726,
+        "ExclusiveNS": 22185726
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 112809834,
+        "ExclusiveNS": 43118890
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 69690944,
+        "ExclusiveNS": 10508096
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 150,
+        "InclusiveNS": 10764102,
+        "ExclusiveNS": 10764102
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 150,
+        "InclusiveNS": 48418746,
+        "ExclusiveNS": 48418746
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 17604731,
+        "ExclusiveNS": 788548
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 104126,
+        "ExclusiveNS": 104126
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 16622077,
+        "ExclusiveNS": 11404009
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 27502,
+        "ExclusiveNS": 27502
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1457334,
+        "ExclusiveNS": 1457334
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1042766,
+        "ExclusiveNS": 278492
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 764274,
+        "ExclusiveNS": 118432
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 123081,
+        "ExclusiveNS": 123081
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 523472,
+        "ExclusiveNS": 523472
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 271990,
+        "ExclusiveNS": 271990
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 2233870,
+        "ExclusiveNS": 1352317
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 3,
+        "InclusiveNS": 176220,
+        "ExclusiveNS": 176220
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 3,
+        "InclusiveNS": 700524,
+        "ExclusiveNS": 700524
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 3655.271894,
+    "process_allocated_median_bytes_instrumented": 339862440,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 324860,
+        "ExclusiveNS": 324860
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 3599428850,
+        "ExclusiveNS": 3041927
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 1815145353,
+        "ExclusiveNS": 5265455
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1811033451,
+        "ExclusiveNS": 20184532
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6971750,
+        "ExclusiveNS": 6971750
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 46555132,
+        "ExclusiveNS": 46555132
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1739121597,
+        "ExclusiveNS": 2325833
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 370578777,
+        "ExclusiveNS": 370578777
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1352509183,
+        "ExclusiveNS": 138086542
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1211809613,
+        "ExclusiveNS": 187698330
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 189586340,
+        "ExclusiveNS": 189586340
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 834524943,
+        "ExclusiveNS": 834524943
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1902713974,
+        "ExclusiveNS": 32086102
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 8404583,
+        "ExclusiveNS": 8404583
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 56847598,
+        "ExclusiveNS": 56847598
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1803334940,
+        "ExclusiveNS": 2781837
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 386177749,
+        "ExclusiveNS": 386177749
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1414375354,
+        "ExclusiveNS": 142967735
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1268215047,
+        "ExclusiveNS": 196337472
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 199025824,
+        "ExclusiveNS": 199025824
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 872753293,
+        "ExclusiveNS": 872753293
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 40712594,
+        "ExclusiveNS": 966152
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 135383,
+        "ExclusiveNS": 135383
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 39337946,
+        "ExclusiveNS": 9501802
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 83607,
+        "ExclusiveNS": 83607
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1363958,
+        "ExclusiveNS": 1363958
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 785143,
+        "ExclusiveNS": 785143
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 2553069,
+        "ExclusiveNS": 2553069
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 26023582,
+        "ExclusiveNS": 11549509
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3057453,
+        "ExclusiveNS": 3057453
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12533326,
+        "ExclusiveNS": 12533326
+      }
+    }
+  },
+  {
+    "question": "install",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 3715.011786,
+    "process_allocated_median_bytes_instrumented": 341675288,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 358262,
+        "ExclusiveNS": 358262
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 3630110568,
+        "ExclusiveNS": 2535355
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 1771254248,
+        "ExclusiveNS": 5415568
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1766202122,
+        "ExclusiveNS": 31362165
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10026766,
+        "ExclusiveNS": 10026766
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 48967787,
+        "ExclusiveNS": 48967787
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1697062999,
+        "ExclusiveNS": 2319256
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 375132708,
+        "ExclusiveNS": 375132708
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1319611035,
+        "ExclusiveNS": 138508787
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1179444857,
+        "ExclusiveNS": 182004513
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 184970543,
+        "ExclusiveNS": 184970543
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 812469801,
+        "ExclusiveNS": 812469801
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1797740938,
+        "ExclusiveNS": 28684582
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5137226,
+        "ExclusiveNS": 5137226
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 51282159,
+        "ExclusiveNS": 51282159
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1710364128,
+        "ExclusiveNS": 2685414
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 368993359,
+        "ExclusiveNS": 368993359
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1341150841,
+        "ExclusiveNS": 137410429
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1207420828,
+        "ExclusiveNS": 186676131
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 189930020,
+        "ExclusiveNS": 189930020
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 830814677,
+        "ExclusiveNS": 830814677
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 68929449,
+        "ExclusiveNS": 1243212
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 185498,
+        "ExclusiveNS": 185498
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 67345789,
+        "ExclusiveNS": 13438607
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 182833,
+        "ExclusiveNS": 182833
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 960752,
+        "ExclusiveNS": 960752
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 20971346,
+        "ExclusiveNS": 1637452
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 18509037,
+        "ExclusiveNS": 2868996
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3075796,
+        "ExclusiveNS": 3075796
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12551985,
+        "ExclusiveNS": 12551985
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 3830224,
+        "ExclusiveNS": 3830224
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 20356062,
+        "ExclusiveNS": 9271816
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 1951291,
+        "ExclusiveNS": 1951291
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 9153551,
+        "ExclusiveNS": 9153551
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 3637.215896,
+    "process_allocated_median_bytes_instrumented": 339880000,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 209854,
+        "ExclusiveNS": 209854
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 3569938495,
+        "ExclusiveNS": 2465094
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 1743958009,
+        "ExclusiveNS": 6395436
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1737562573,
+        "ExclusiveNS": 31332521
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 10383896,
+        "ExclusiveNS": 10383896
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 48218051,
+        "ExclusiveNS": 48218051
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1656846806,
+        "ExclusiveNS": 2422308
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 380623902,
+        "ExclusiveNS": 380623902
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1271451215,
+        "ExclusiveNS": 138008835
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1133442380,
+        "ExclusiveNS": 176224754
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 178231637,
+        "ExclusiveNS": 178231637
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 778985989,
+        "ExclusiveNS": 778985989
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1838913996,
+        "ExclusiveNS": 28108024
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5158988,
+        "ExclusiveNS": 5158988
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 50481727,
+        "ExclusiveNS": 50481727
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1755313509,
+        "ExclusiveNS": 2589200
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 378780591,
+        "ExclusiveNS": 378780591
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1371791677,
+        "ExclusiveNS": 134229722
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1230736359,
+        "ExclusiveNS": 190403459
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 193068385,
+        "ExclusiveNS": 193068385
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 844930042,
+        "ExclusiveNS": 844930042
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 42962744,
+        "ExclusiveNS": 793639
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 108433,
+        "ExclusiveNS": 108433
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 42060672,
+        "ExclusiveNS": 13013179
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 109656,
+        "ExclusiveNS": 109656
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 947257,
+        "ExclusiveNS": 947257
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 808878,
+        "ExclusiveNS": 808878
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 2952508,
+        "ExclusiveNS": 2952508
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 25709573,
+        "ExclusiveNS": 11483980
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2123948,
+        "ExclusiveNS": 2123948
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 12101645,
+        "ExclusiveNS": 12101645
+      }
+    }
+  },
+  {
+    "question": "budget",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 3623.146356,
+    "process_allocated_median_bytes_instrumented": 341740040,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 380543,
+        "ExclusiveNS": 380543
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 3531678572,
+        "ExclusiveNS": 3938617
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 1773379364,
+        "ExclusiveNS": 6217842
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1766981964,
+        "ExclusiveNS": 30304400
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 9132460,
+        "ExclusiveNS": 9132460
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 48594798,
+        "ExclusiveNS": 48594798
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1681202861,
+        "ExclusiveNS": 2492579
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 376987540,
+        "ExclusiveNS": 376987540
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1304269656,
+        "ExclusiveNS": 138099085
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1167404874,
+        "ExclusiveNS": 180986390
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 182666263,
+        "ExclusiveNS": 182666263
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 803752221,
+        "ExclusiveNS": 803752221
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1764027592,
+        "ExclusiveNS": 31859432
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5472747,
+        "ExclusiveNS": 5472747
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 45554395,
+        "ExclusiveNS": 45554395
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1679501490,
+        "ExclusiveNS": 2421371
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 362969903,
+        "ExclusiveNS": 362969903
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1308273483,
+        "ExclusiveNS": 134674158
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1170162353,
+        "ExclusiveNS": 181369854
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 183222691,
+        "ExclusiveNS": 183222691
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 805569808,
+        "ExclusiveNS": 805569808
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 69647937,
+        "ExclusiveNS": 1011787
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 166282,
+        "ExclusiveNS": 166282
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 67951936,
+        "ExclusiveNS": 8997335
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 271289,
+        "ExclusiveNS": 271289
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1022718,
+        "ExclusiveNS": 1022718
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 22722721,
+        "ExclusiveNS": 1595623
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 21551764,
+        "ExclusiveNS": 3280643
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 3621258,
+        "ExclusiveNS": 3621258
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 14649863,
+        "ExclusiveNS": 14649863
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4756351,
+        "ExclusiveNS": 4756351
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 28580467,
+        "ExclusiveNS": 12465274
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 1988849,
+        "ExclusiveNS": 1988849
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 14205913,
+        "ExclusiveNS": 14205913
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 100,
+    "packing": "original",
+    "wall_median_ms": 3614.439264,
+    "process_allocated_median_bytes_instrumented": 339811432,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 308529,
+        "ExclusiveNS": 308529
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 3566663954,
+        "ExclusiveNS": 2463682
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 1751146101,
+        "ExclusiveNS": 4655713
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1746490388,
+        "ExclusiveNS": 21773810
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 6451326,
+        "ExclusiveNS": 6451326
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 57470356,
+        "ExclusiveNS": 57470356
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1659157300,
+        "ExclusiveNS": 2446461
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 371661872,
+        "ExclusiveNS": 371661872
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1293334510,
+        "ExclusiveNS": 135863873
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1162339465,
+        "ExclusiveNS": 178613635
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 181841438,
+        "ExclusiveNS": 181841438
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 801884392,
+        "ExclusiveNS": 801884392
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1783158246,
+        "ExclusiveNS": 28559641
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5547370,
+        "ExclusiveNS": 5547370
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 61300380,
+        "ExclusiveNS": 61300380
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1688158046,
+        "ExclusiveNS": 2592345
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 375680531,
+        "ExclusiveNS": 375680531
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1319537165,
+        "ExclusiveNS": 139536100
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1189258390,
+        "ExclusiveNS": 184176433
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 186986834,
+        "ExclusiveNS": 186986834
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 817399344,
+        "ExclusiveNS": 817399344
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 50212212,
+        "ExclusiveNS": 1393433
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 205797,
+        "ExclusiveNS": 205797
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 48363714,
+        "ExclusiveNS": 9884578
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 128180,
+        "ExclusiveNS": 128180
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 951515,
+        "ExclusiveNS": 951515
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 1653191,
+        "ExclusiveNS": 1653191
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4445629,
+        "ExclusiveNS": 4445629
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 29977518,
+        "ExclusiveNS": 12622000
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2929719,
+        "ExclusiveNS": 2929719
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13187199,
+        "ExclusiveNS": 13187199
+      }
+    }
+  },
+  {
+    "question": "trail",
+    "corpus": "documentation",
+    "history": "mixed",
+    "size": 100,
+    "packing": "exact-v1",
+    "wall_median_ms": 3711.55358,
+    "process_allocated_median_bytes_instrumented": 341605528,
+    "stages": {
+      "emit": {
+        "Calls": 1,
+        "InclusiveNS": 324359,
+        "ExclusiveNS": 324359
+      },
+      "open": {
+        "Calls": 1,
+        "InclusiveNS": 3635283151,
+        "ExclusiveNS": 2388772
+      },
+      "open/preflightWritable": {
+        "Calls": 1,
+        "InclusiveNS": 1781435744,
+        "ExclusiveNS": 6226758
+      },
+      "open/preflightWritable/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1775208986,
+        "ExclusiveNS": 19816590
+      },
+      "open/preflightWritable/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5732449,
+        "ExclusiveNS": 5732449
+      },
+      "open/preflightWritable/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 45017469,
+        "ExclusiveNS": 45017469
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1710745112,
+        "ExclusiveNS": 2375747
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 383447243,
+        "ExclusiveNS": 383447243
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1324922122,
+        "ExclusiveNS": 134313784
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1186514804,
+        "ExclusiveNS": 184501239
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 186050927,
+        "ExclusiveNS": 186050927
+      },
+      "open/preflightWritable/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 815962638,
+        "ExclusiveNS": 815962638
+      },
+      "open/verifyVersion": {
+        "Calls": 1,
+        "InclusiveNS": 1822517851,
+        "ExclusiveNS": 28011936
+      },
+      "open/verifyVersion/getSegment": {
+        "Calls": 98,
+        "InclusiveNS": 5326432,
+        "ExclusiveNS": 5326432
+      },
+      "open/verifyVersion/verifyPolicyDecisionRecords": {
+        "Calls": 1,
+        "InclusiveNS": 48383782,
+        "ExclusiveNS": 48383782
+      },
+      "open/verifyVersion/verifySourceTrailRecords": {
+        "Calls": 1,
+        "InclusiveNS": 1739694412,
+        "ExclusiveNS": 2733830
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSegment": {
+        "Calls": 4800,
+        "InclusiveNS": 395917100,
+        "ExclusiveNS": 395917100
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail": {
+        "Calls": 100,
+        "InclusiveNS": 1340944419,
+        "ExclusiveNS": 143939610
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 50,
+        "InclusiveNS": 1197004809,
+        "ExclusiveNS": 185475151
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 2400,
+        "InclusiveNS": 187978713,
+        "ExclusiveNS": 187978713
+      },
+      "open/verifyVersion/verifySourceTrailRecords/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 2400,
+        "InclusiveNS": 823550945,
+        "ExclusiveNS": 823550945
+      },
+      "queryItems": {
+        "Calls": 1,
+        "InclusiveNS": 62390775,
+        "ExclusiveNS": 1230479
+      },
+      "queryItems/getSegment": {
+        "Calls": 2,
+        "InclusiveNS": 200084,
+        "ExclusiveNS": 200084
+      },
+      "queryItems/traceLexical": {
+        "Calls": 1,
+        "InclusiveNS": 61470699,
+        "ExclusiveNS": 9634575
+      },
+      "queryItems/traceLexical/NewSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 270778,
+        "ExclusiveNS": 270778
+      },
+      "queryItems/traceLexical/evaluateSourceRetrieval": {
+        "Calls": 1,
+        "InclusiveNS": 1002190,
+        "ExclusiveNS": 1002190
+      },
+      "queryItems/traceLexical/getSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 20690157,
+        "ExclusiveNS": 1731927
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent": {
+        "Calls": 1,
+        "InclusiveNS": 18958230,
+        "ExclusiveNS": 2906528
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2938644,
+        "ExclusiveNS": 2938644
+      },
+      "queryItems/traceLexical/getSourceTrail/verifyExactTrailContent/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 13113058,
+        "ExclusiveNS": 13113058
+      },
+      "queryItems/traceLexical/insertSourceTrail": {
+        "Calls": 1,
+        "InclusiveNS": 4963650,
+        "ExclusiveNS": 4963650
+      },
+      "queryItems/traceLexical/searchEnforcedLexical": {
+        "Calls": 1,
+        "InclusiveNS": 30509326,
+        "ExclusiveNS": 13554287
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/getSegment": {
+        "Calls": 48,
+        "InclusiveNS": 2026038,
+        "ExclusiveNS": 2026038
+      },
+      "queryItems/traceLexical/searchEnforcedLexical/lexicalEvidencePaths": {
+        "Calls": 48,
+        "InclusiveNS": 14929001,
+        "ExclusiveNS": 14929001
+      }
+    }
+  }
+]
