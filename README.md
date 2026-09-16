@@ -7,6 +7,7 @@ These are development measurements, including failed experiments and limitations
 ## Contents
 
 - [results/2026-09-16](results/2026-09-16): seven unchanged historical JSON reports. The directory date records migration, not collection.
+- [results/2026-09-16-exact-packing](results/2026-09-16-exact-packing): matched opt-in exact-content packing measurements, frozen fixtures, individual observations and reproduction script.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.
@@ -27,7 +28,7 @@ Mousa retains product tests, required CLI client acceptance, small compatibility
 
 The [Mousa research report](https://github.com/graydeon/mousa/blob/main/docs/RESEARCH.md) explains methods and limitations. Some historical entries refer to source hashes or experimental artifacts that are not public Git commits. Retaining a report does not imply every historical experiment can be rerun from this repository alone.
 
-Run `python3 tools/verify_results.py` with Python 3.9 or later to check archive membership, JSON parsing, sizes and hashes. This does not rerun experiments or validate conclusions.
+Run `python3 tools/verify_results.py` with Python 3.9 or later to check migrated archive membership and each new run's file sizes and hashes. This does not rerun experiments or validate conclusions.
 
 ## Adding measurements
 

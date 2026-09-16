@@ -1,0 +1,4214 @@
+[
+  {
+    "corpus": "small",
+    "policy": "fixed-v1",
+    "id": "displacement",
+    "budget": 33,
+    "original": {
+      "unique_selected_texts": 1,
+      "repeated_selected_bytes": 11,
+      "useful_required_bytes": 0,
+      "required_bytes": 22,
+      "complete_required_passage": false,
+      "released_bytes": 22,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 1,
+      "rejected": 0,
+      "store_bytes": 413696,
+      "wall_ms": {
+        "median": 58.878632499999995,
+        "min": 41.732136,
+        "max": 63.4866,
+        "observations": [
+          62.459044,
+          41.732136,
+          59.190973,
+          63.4866,
+          58.566292,
+          49.357399
+        ]
+      },
+      "rss_kib": {
+        "median": 15380.0,
+        "min": 13208,
+        "max": 15452,
+        "observations": [
+          15452,
+          15396,
+          15408,
+          13288,
+          13208,
+          15364
+        ]
+      },
+      "output_bytes": {
+        "median": 2054.0,
+        "min": 2054,
+        "max": 2054,
+        "observations": [
+          2054,
+          2054,
+          2054,
+          2054,
+          2054,
+          2054
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.02,
+        "max": 0.04,
+        "observations": [
+          0.04,
+          0.02,
+          0.03,
+          0.04,
+          0.04,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.005,
+        "min": 0.0,
+        "max": 0.01,
+        "observations": [
+          0.0,
+          0.0,
+          0.01,
+          0.01,
+          0.0,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 22,
+      "required_bytes": 22,
+      "complete_required_passage": true,
+      "released_bytes": 33,
+      "selected": 2,
+      "duplicate_omitted": 1,
+      "budget_omitted": 0,
+      "rejected": 0,
+      "store_bytes": 413696,
+      "wall_ms": {
+        "median": 47.193794999999994,
+        "min": 43.618815,
+        "max": 68.523107,
+        "observations": [
+          47.272858,
+          43.618815,
+          62.067628,
+          68.523107,
+          45.363127,
+          47.114732
+        ]
+      },
+      "rss_kib": {
+        "median": 15386.0,
+        "min": 15152,
+        "max": 15608,
+        "observations": [
+          15380,
+          15260,
+          15152,
+          15608,
+          15516,
+          15392
+        ]
+      },
+      "output_bytes": {
+        "median": 2119.0,
+        "min": 2119,
+        "max": 2119,
+        "observations": [
+          2119,
+          2119,
+          2119,
+          2119,
+          2119,
+          2119
+        ]
+      },
+      "user_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.05,
+        "observations": [
+          0.01,
+          0.02,
+          0.04,
+          0.05,
+          0.02,
+          0.02
+        ]
+      },
+      "system_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.01,
+        "observations": [
+          0.01,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "varied",
+    "policy": "fixed-v1",
+    "id": "reference.md",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 184,
+      "required_bytes": 184,
+      "complete_required_passage": true,
+      "released_bytes": 5970,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 2,
+      "rejected": 0,
+      "store_bytes": 434176,
+      "wall_ms": {
+        "median": 58.485875500000006,
+        "min": 50.602043,
+        "max": 67.949311,
+        "observations": [
+          64.665231,
+          56.271677,
+          60.016311,
+          67.949311,
+          56.95544,
+          50.602043
+        ]
+      },
+      "rss_kib": {
+        "median": 15482.0,
+        "min": 15324,
+        "max": 15560,
+        "observations": [
+          15416,
+          15480,
+          15324,
+          15484,
+          15544,
+          15560
+        ]
+      },
+      "output_bytes": {
+        "median": 8355.0,
+        "min": 8355,
+        "max": 8355,
+        "observations": [
+          8355,
+          8355,
+          8355,
+          8355,
+          8355,
+          8355
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.02,
+        "max": 0.04,
+        "observations": [
+          0.04,
+          0.03,
+          0.03,
+          0.03,
+          0.03,
+          0.02
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.0,
+          0.01,
+          0.01,
+          0.02,
+          0.0,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 184,
+      "required_bytes": 184,
+      "complete_required_passage": true,
+      "released_bytes": 5970,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 2,
+      "rejected": 0,
+      "store_bytes": 434176,
+      "wall_ms": {
+        "median": 54.781202,
+        "min": 51.303739,
+        "max": 73.3709,
+        "observations": [
+          52.261716,
+          51.303739,
+          67.070102,
+          52.55156,
+          57.010844,
+          73.3709
+        ]
+      },
+      "rss_kib": {
+        "median": 15490.0,
+        "min": 15336,
+        "max": 17532,
+        "observations": [
+          15336,
+          15384,
+          17516,
+          15512,
+          15468,
+          17532
+        ]
+      },
+      "output_bytes": {
+        "median": 8413.0,
+        "min": 8413,
+        "max": 8413,
+        "observations": [
+          8413,
+          8413,
+          8413,
+          8413,
+          8413,
+          8413
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.02,
+        "max": 0.04,
+        "observations": [
+          0.02,
+          0.03,
+          0.03,
+          0.02,
+          0.04,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.0,
+          0.02,
+          0.01,
+          0.0,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "varied",
+    "policy": "fixed-v1",
+    "id": "prose.txt",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 116,
+      "required_bytes": 116,
+      "complete_required_passage": true,
+      "released_bytes": 5884,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 2,
+      "rejected": 0,
+      "store_bytes": 434176,
+      "wall_ms": {
+        "median": 51.9333755,
+        "min": 47.807071,
+        "max": 73.134938,
+        "observations": [
+          48.371178,
+          54.687065,
+          49.179686,
+          47.807071,
+          66.5362,
+          73.134938
+        ]
+      },
+      "rss_kib": {
+        "median": 15402.0,
+        "min": 15336,
+        "max": 17544,
+        "observations": [
+          15344,
+          15336,
+          15456,
+          15348,
+          15548,
+          17544
+        ]
+      },
+      "output_bytes": {
+        "median": 8280.0,
+        "min": 8280,
+        "max": 8280,
+        "observations": [
+          8280,
+          8280,
+          8280,
+          8280,
+          8280,
+          8280
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.02,
+        "max": 0.03,
+        "observations": [
+          0.03,
+          0.03,
+          0.02,
+          0.02,
+          0.03,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.0,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.02
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 116,
+      "required_bytes": 116,
+      "complete_required_passage": true,
+      "released_bytes": 5884,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 2,
+      "rejected": 0,
+      "store_bytes": 434176,
+      "wall_ms": {
+        "median": 66.073583,
+        "min": 57.326265,
+        "max": 70.553004,
+        "observations": [
+          70.553004,
+          57.326265,
+          67.621927,
+          66.933025,
+          58.570068,
+          65.214141
+        ]
+      },
+      "rss_kib": {
+        "median": 15442.0,
+        "min": 15324,
+        "max": 15544,
+        "observations": [
+          15324,
+          15460,
+          15544,
+          15328,
+          15508,
+          15424
+        ]
+      },
+      "output_bytes": {
+        "median": 8338.0,
+        "min": 8338,
+        "max": 8338,
+        "observations": [
+          8338,
+          8338,
+          8338,
+          8338,
+          8338,
+          8338
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.03,
+        "max": 0.04,
+        "observations": [
+          0.04,
+          0.03,
+          0.03,
+          0.03,
+          0.04,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.0,
+          0.02,
+          0.02,
+          0.0,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "install",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 582,
+      "required_bytes": 582,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 67.1290025,
+        "min": 64.892908,
+        "max": 70.636581,
+        "observations": [
+          66.698916,
+          69.754807,
+          64.892908,
+          65.792225,
+          70.636581,
+          67.559089
+        ]
+      },
+      "rss_kib": {
+        "median": 15652.0,
+        "min": 15380,
+        "max": 17440,
+        "observations": [
+          15384,
+          15380,
+          15700,
+          15656,
+          15648,
+          17440
+        ]
+      },
+      "output_bytes": {
+        "median": 10617.0,
+        "min": 10617,
+        "max": 10617,
+        "observations": [
+          10617,
+          10617,
+          10617,
+          10617,
+          10617,
+          10617
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.03,
+        "max": 0.05,
+        "observations": [
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.05,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.01,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.0,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 582,
+      "required_bytes": 582,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 61.41677849999999,
+        "min": 51.986891,
+        "max": 78.27592,
+        "observations": [
+          65.691206,
+          53.001494,
+          51.986891,
+          78.27592,
+          57.142351,
+          69.346942
+        ]
+      },
+      "rss_kib": {
+        "median": 15596.0,
+        "min": 15400,
+        "max": 17560,
+        "observations": [
+          15552,
+          15400,
+          15632,
+          15768,
+          17560,
+          15560
+        ]
+      },
+      "output_bytes": {
+        "median": 10675.0,
+        "min": 10675,
+        "max": 10675,
+        "observations": [
+          10675,
+          10675,
+          10675,
+          10675,
+          10675,
+          10675
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.02,
+        "max": 0.06,
+        "observations": [
+          0.03,
+          0.02,
+          0.03,
+          0.06,
+          0.04,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.01,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.0,
+          0.0,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "jsonl",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 334,
+      "required_bytes": 1376,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 64.622611,
+        "min": 55.787889,
+        "max": 73.64812,
+        "observations": [
+          68.379147,
+          72.792635,
+          55.787889,
+          60.866075,
+          73.64812,
+          60.354766
+        ]
+      },
+      "rss_kib": {
+        "median": 15644.0,
+        "min": 15344,
+        "max": 15684,
+        "observations": [
+          15656,
+          15632,
+          15384,
+          15660,
+          15344,
+          15684
+        ]
+      },
+      "output_bytes": {
+        "median": 10741.0,
+        "min": 10741,
+        "max": 10741,
+        "observations": [
+          10741,
+          10741,
+          10741,
+          10741,
+          10741,
+          10741
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.02,
+        "max": 0.05,
+        "observations": [
+          0.04,
+          0.05,
+          0.02,
+          0.03,
+          0.04,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.01,
+        "max": 0.01,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 334,
+      "required_bytes": 1376,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 70.79409150000001,
+        "min": 54.288036,
+        "max": 73.739863,
+        "observations": [
+          60.524514,
+          71.57435,
+          54.288036,
+          73.721929,
+          70.013833,
+          73.739863
+        ]
+      },
+      "rss_kib": {
+        "median": 15682.0,
+        "min": 15408,
+        "max": 17624,
+        "observations": [
+          15696,
+          17468,
+          15668,
+          15536,
+          17624,
+          15408
+        ]
+      },
+      "output_bytes": {
+        "median": 10799.0,
+        "min": 10799,
+        "max": 10799,
+        "observations": [
+          10799,
+          10799,
+          10799,
+          10799,
+          10799,
+          10799
+        ]
+      },
+      "user_s": {
+        "median": 0.04,
+        "min": 0.03,
+        "max": 0.05,
+        "observations": [
+          0.03,
+          0.03,
+          0.03,
+          0.05,
+          0.05,
+          0.05
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.02,
+          0.01,
+          0.01,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "partial",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 0,
+      "required_bytes": 304,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 67.3605615,
+        "min": 50.517595,
+        "max": 72.711454,
+        "observations": [
+          50.517595,
+          69.532149,
+          71.721766,
+          65.188974,
+          54.02842,
+          72.711454
+        ]
+      },
+      "rss_kib": {
+        "median": 15688.0,
+        "min": 15520,
+        "max": 15804,
+        "observations": [
+          15544,
+          15668,
+          15804,
+          15796,
+          15520,
+          15708
+        ]
+      },
+      "output_bytes": {
+        "median": 10630.0,
+        "min": 10630,
+        "max": 10630,
+        "observations": [
+          10630,
+          10630,
+          10630,
+          10630,
+          10630,
+          10630
+        ]
+      },
+      "user_s": {
+        "median": 0.04,
+        "min": 0.02,
+        "max": 0.04,
+        "observations": [
+          0.03,
+          0.04,
+          0.04,
+          0.04,
+          0.02,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.0,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.02
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 0,
+      "required_bytes": 304,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 64.4078235,
+        "min": 51.782798,
+        "max": 75.611052,
+        "observations": [
+          57.545717,
+          74.429275,
+          55.002607,
+          75.611052,
+          71.26993,
+          51.782798
+        ]
+      },
+      "rss_kib": {
+        "median": 17620.0,
+        "min": 15380,
+        "max": 17748,
+        "observations": [
+          17628,
+          17640,
+          17612,
+          17748,
+          15380,
+          15512
+        ]
+      },
+      "output_bytes": {
+        "median": 10688.0,
+        "min": 10688,
+        "max": 10688,
+        "observations": [
+          10688,
+          10688,
+          10688,
+          10688,
+          10688,
+          10688
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.03,
+        "max": 0.05,
+        "observations": [
+          0.03,
+          0.05,
+          0.04,
+          0.04,
+          0.03,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.005,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.0,
+          0.0,
+          0.02,
+          0.02,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "restore",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 542,
+      "required_bytes": 542,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 65.0926925,
+        "min": 52.228534,
+        "max": 71.314863,
+        "observations": [
+          71.141429,
+          63.896298,
+          71.314863,
+          66.289087,
+          52.228534,
+          58.06419
+        ]
+      },
+      "rss_kib": {
+        "median": 15584.0,
+        "min": 15392,
+        "max": 15776,
+        "observations": [
+          15488,
+          15392,
+          15556,
+          15776,
+          15680,
+          15612
+        ]
+      },
+      "output_bytes": {
+        "median": 10564.0,
+        "min": 10564,
+        "max": 10564,
+        "observations": [
+          10564,
+          10564,
+          10564,
+          10564,
+          10564,
+          10564
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.03,
+        "max": 0.05,
+        "observations": [
+          0.04,
+          0.03,
+          0.05,
+          0.03,
+          0.03,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.005,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.01,
+          0.0,
+          0.02,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 542,
+      "required_bytes": 542,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 68.8207755,
+        "min": 53.631515,
+        "max": 82.201413,
+        "observations": [
+          82.201413,
+          58.567414,
+          75.142664,
+          53.631515,
+          65.173044,
+          72.468507
+        ]
+      },
+      "rss_kib": {
+        "median": 15608.0,
+        "min": 15364,
+        "max": 17496,
+        "observations": [
+          15688,
+          15528,
+          17496,
+          17448,
+          15504,
+          15364
+        ]
+      },
+      "output_bytes": {
+        "median": 10622.0,
+        "min": 10622,
+        "max": 10622,
+        "observations": [
+          10622,
+          10622,
+          10622,
+          10622,
+          10622,
+          10622
+        ]
+      },
+      "user_s": {
+        "median": 0.025,
+        "min": 0.02,
+        "max": 0.05,
+        "observations": [
+          0.05,
+          0.02,
+          0.05,
+          0.02,
+          0.02,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.02,
+          0.0,
+          0.02,
+          0.02,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "budget",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 428,
+      "required_bytes": 428,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 54.630829500000004,
+        "min": 51.872296,
+        "max": 72.587259,
+        "observations": [
+          72.587259,
+          55.116962,
+          51.872296,
+          71.343417,
+          53.309792,
+          54.144697
+        ]
+      },
+      "rss_kib": {
+        "median": 15664.0,
+        "min": 15404,
+        "max": 17588,
+        "observations": [
+          15404,
+          15648,
+          15680,
+          17588,
+          15820,
+          15536
+        ]
+      },
+      "output_bytes": {
+        "median": 10654.0,
+        "min": 10654,
+        "max": 10654,
+        "observations": [
+          10654,
+          10654,
+          10654,
+          10654,
+          10654,
+          10654
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.02,
+        "max": 0.05,
+        "observations": [
+          0.05,
+          0.02,
+          0.03,
+          0.04,
+          0.03,
+          0.02
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.01,
+        "max": 0.01,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 428,
+      "required_bytes": 428,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 71.64104549999999,
+        "min": 57.127182,
+        "max": 76.308921,
+        "observations": [
+          71.373984,
+          71.908107,
+          76.308921,
+          62.693082,
+          74.889638,
+          57.127182
+        ]
+      },
+      "rss_kib": {
+        "median": 15648.0,
+        "min": 15384,
+        "max": 15808,
+        "observations": [
+          15548,
+          15808,
+          15384,
+          15740,
+          15736,
+          15560
+        ]
+      },
+      "output_bytes": {
+        "median": 10712.0,
+        "min": 10712,
+        "max": 10712,
+        "observations": [
+          10712,
+          10712,
+          10712,
+          10712,
+          10712,
+          10712
+        ]
+      },
+      "user_s": {
+        "median": 0.04,
+        "min": 0.03,
+        "max": 0.05,
+        "observations": [
+          0.04,
+          0.04,
+          0.05,
+          0.03,
+          0.05,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.02,
+          0.01,
+          0.01,
+          0.01,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "withdraw",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 0,
+      "required_bytes": 624,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 62.1944515,
+        "min": 53.727425,
+        "max": 69.584598,
+        "observations": [
+          57.491125,
+          69.584598,
+          62.122291,
+          67.580899,
+          62.266612,
+          53.727425
+        ]
+      },
+      "rss_kib": {
+        "median": 15624.0,
+        "min": 15408,
+        "max": 15672,
+        "observations": [
+          15408,
+          15592,
+          15656,
+          15672,
+          15668,
+          15548
+        ]
+      },
+      "output_bytes": {
+        "median": 10555.0,
+        "min": 10555,
+        "max": 10555,
+        "observations": [
+          10555,
+          10555,
+          10555,
+          10555,
+          10555,
+          10555
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.03,
+        "max": 0.04,
+        "observations": [
+          0.03,
+          0.04,
+          0.04,
+          0.03,
+          0.03,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.01,
+          0.0,
+          0.02,
+          0.01,
+          0.0
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 0,
+      "required_bytes": 624,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 71.154753,
+        "min": 51.589535,
+        "max": 74.832832,
+        "observations": [
+          68.760091,
+          51.589535,
+          74.832832,
+          71.270871,
+          73.73382,
+          71.038635
+        ]
+      },
+      "rss_kib": {
+        "median": 17480.0,
+        "min": 15612,
+        "max": 18172,
+        "observations": [
+          18172,
+          15612,
+          17496,
+          17496,
+          17464,
+          15696
+        ]
+      },
+      "output_bytes": {
+        "median": 10613.0,
+        "min": 10613,
+        "max": 10613,
+        "observations": [
+          10613,
+          10613,
+          10613,
+          10613,
+          10613,
+          10613
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.03,
+        "max": 0.04,
+        "observations": [
+          0.03,
+          0.03,
+          0.04,
+          0.04,
+          0.03,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.015,
+        "min": 0.0,
+        "max": 0.03,
+        "observations": [
+          0.03,
+          0.0,
+          0.02,
+          0.01,
+          0.02,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "history",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 0,
+      "required_bytes": 249,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 59.9358855,
+        "min": 52.028879,
+        "max": 73.265653,
+        "observations": [
+          56.277057,
+          73.265653,
+          68.789978,
+          52.028879,
+          55.479642,
+          63.594714
+        ]
+      },
+      "rss_kib": {
+        "median": 15740.0,
+        "min": 15700,
+        "max": 15828,
+        "observations": [
+          15804,
+          15700,
+          15736,
+          15828,
+          15736,
+          15744
+        ]
+      },
+      "output_bytes": {
+        "median": 10645.0,
+        "min": 10645,
+        "max": 10645,
+        "observations": [
+          10645,
+          10645,
+          10645,
+          10645,
+          10645,
+          10645
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.02,
+        "max": 0.04,
+        "observations": [
+          0.02,
+          0.04,
+          0.04,
+          0.03,
+          0.02,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.01,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.0,
+          0.01,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 0,
+      "required_bytes": 249,
+      "complete_required_passage": false,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 60.638543,
+        "min": 52.356103,
+        "max": 75.703114,
+        "observations": [
+          75.703114,
+          68.490696,
+          57.408299,
+          52.356103,
+          63.868787,
+          55.210808
+        ]
+      },
+      "rss_kib": {
+        "median": 15674.0,
+        "min": 15384,
+        "max": 17468,
+        "observations": [
+          17440,
+          15416,
+          15816,
+          15384,
+          15532,
+          17468
+        ]
+      },
+      "output_bytes": {
+        "median": 10703.0,
+        "min": 10703,
+        "max": 10703,
+        "observations": [
+          10703,
+          10703,
+          10703,
+          10703,
+          10703,
+          10703
+        ]
+      },
+      "user_s": {
+        "median": 0.04,
+        "min": 0.03,
+        "max": 0.04,
+        "observations": [
+          0.04,
+          0.04,
+          0.04,
+          0.04,
+          0.03,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.01,
+          0.0,
+          0.0,
+          0.02,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "migration",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 1202,
+      "required_bytes": 1202,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 69.9355865,
+        "min": 53.385184,
+        "max": 316.544064,
+        "observations": [
+          53.385184,
+          70.64107,
+          71.998215,
+          58.53359,
+          316.544064,
+          69.230103
+        ]
+      },
+      "rss_kib": {
+        "median": 15564.0,
+        "min": 15348,
+        "max": 17616,
+        "observations": [
+          15516,
+          15520,
+          15348,
+          17616,
+          15608,
+          15680
+        ]
+      },
+      "output_bytes": {
+        "median": 10565.0,
+        "min": 10565,
+        "max": 10566,
+        "observations": [
+          10565,
+          10565,
+          10565,
+          10565,
+          10566,
+          10565
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.01,
+        "max": 0.05,
+        "observations": [
+          0.01,
+          0.04,
+          0.05,
+          0.02,
+          0.03,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.01,
+          0.01,
+          0.02,
+          0.0,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 1202,
+      "required_bytes": 1202,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 67.5392965,
+        "min": 54.482832,
+        "max": 81.990618,
+        "observations": [
+          54.482832,
+          63.105275,
+          74.715081,
+          71.973318,
+          61.088743,
+          81.990618
+        ]
+      },
+      "rss_kib": {
+        "median": 16730.0,
+        "min": 15508,
+        "max": 17964,
+        "observations": [
+          15508,
+          15540,
+          16100,
+          17504,
+          17964,
+          17360
+        ]
+      },
+      "output_bytes": {
+        "median": 10623.0,
+        "min": 10623,
+        "max": 10623,
+        "observations": [
+          10623,
+          10623,
+          10623,
+          10623,
+          10623,
+          10623
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.01,
+        "max": 0.04,
+        "observations": [
+          0.01,
+          0.04,
+          0.03,
+          0.04,
+          0.02,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.01,
+          0.02,
+          0.01,
+          0.02,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "trail",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 1066,
+      "required_bytes": 1066,
+      "complete_required_passage": true,
+      "released_bytes": 6532,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 63.581102,
+        "min": 52.298005,
+        "max": 71.858192,
+        "observations": [
+          71.305185,
+          56.815407,
+          58.861284,
+          52.298005,
+          68.30092,
+          71.858192
+        ]
+      },
+      "rss_kib": {
+        "median": 15482.0,
+        "min": 15364,
+        "max": 17412,
+        "observations": [
+          15680,
+          17412,
+          15380,
+          15420,
+          15364,
+          15544
+        ]
+      },
+      "output_bytes": {
+        "median": 8961.0,
+        "min": 8961,
+        "max": 8961,
+        "observations": [
+          8961,
+          8961,
+          8961,
+          8961,
+          8961,
+          8961
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.03,
+        "max": 0.04,
+        "observations": [
+          0.04,
+          0.03,
+          0.03,
+          0.03,
+          0.04,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.0,
+          0.01,
+          0.02
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 1066,
+      "required_bytes": 1066,
+      "complete_required_passage": true,
+      "released_bytes": 6532,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 59.8362635,
+        "min": 53.499398,
+        "max": 71.923234,
+        "observations": [
+          53.499398,
+          55.981463,
+          71.923234,
+          69.182815,
+          57.738579,
+          61.933948
+        ]
+      },
+      "rss_kib": {
+        "median": 16498.0,
+        "min": 15332,
+        "max": 17728,
+        "observations": [
+          17492,
+          17728,
+          17432,
+          15332,
+          15496,
+          15564
+        ]
+      },
+      "output_bytes": {
+        "median": 9019.0,
+        "min": 9019,
+        "max": 9019,
+        "observations": [
+          9019,
+          9019,
+          9019,
+          9019,
+          9019,
+          9019
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.03,
+        "max": 0.04,
+        "observations": [
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.04,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.005,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.0,
+          0.0,
+          0.02,
+          0.02,
+          0.0,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "fixed-v1",
+    "id": "scope",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 385,
+      "required_bytes": 385,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 70.8601505,
+        "min": 56.5613,
+        "max": 74.684765,
+        "observations": [
+          74.684765,
+          71.536789,
+          56.5613,
+          70.256989,
+          68.86585,
+          71.463312
+        ]
+      },
+      "rss_kib": {
+        "median": 15648.0,
+        "min": 15392,
+        "max": 17560,
+        "observations": [
+          15668,
+          15720,
+          15392,
+          17560,
+          15628,
+          15500
+        ]
+      },
+      "output_bytes": {
+        "median": 10671.0,
+        "min": 10671,
+        "max": 10671,
+        "observations": [
+          10671,
+          10671,
+          10671,
+          10671,
+          10671,
+          10671
+        ]
+      },
+      "user_s": {
+        "median": 0.04,
+        "min": 0.03,
+        "max": 0.04,
+        "observations": [
+          0.04,
+          0.03,
+          0.04,
+          0.03,
+          0.04,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.015,
+        "min": 0.0,
+        "max": 0.03,
+        "observations": [
+          0.02,
+          0.03,
+          0.0,
+          0.02,
+          0.01,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 385,
+      "required_bytes": 385,
+      "complete_required_passage": true,
+      "released_bytes": 8192,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 7,
+      "rejected": 0,
+      "store_bytes": 479232,
+      "wall_ms": {
+        "median": 73.0686935,
+        "min": 53.860295,
+        "max": 82.101586,
+        "observations": [
+          76.601229,
+          56.6888,
+          72.515356,
+          53.860295,
+          82.101586,
+          73.622031
+        ]
+      },
+      "rss_kib": {
+        "median": 16508.0,
+        "min": 15388,
+        "max": 17628,
+        "observations": [
+          15608,
+          15516,
+          17628,
+          15388,
+          17408,
+          17504
+        ]
+      },
+      "output_bytes": {
+        "median": 10729.0,
+        "min": 10729,
+        "max": 10729,
+        "observations": [
+          10729,
+          10729,
+          10729,
+          10729,
+          10729,
+          10729
+        ]
+      },
+      "user_s": {
+        "median": 0.04,
+        "min": 0.03,
+        "max": 0.05,
+        "observations": [
+          0.03,
+          0.03,
+          0.05,
+          0.03,
+          0.05,
+          0.05
+        ]
+      },
+      "system_s": {
+        "median": 0.005,
+        "min": 0.0,
+        "max": 0.03,
+        "observations": [
+          0.03,
+          0.01,
+          0.0,
+          0.0,
+          0.01,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "small",
+    "policy": "passage-v1",
+    "id": "displacement",
+    "budget": 33,
+    "original": {
+      "unique_selected_texts": 1,
+      "repeated_selected_bytes": 11,
+      "useful_required_bytes": 0,
+      "required_bytes": 22,
+      "complete_required_passage": false,
+      "released_bytes": 22,
+      "selected": 2,
+      "duplicate_omitted": 0,
+      "budget_omitted": 1,
+      "rejected": 0,
+      "store_bytes": 413696,
+      "wall_ms": {
+        "median": 56.0929115,
+        "min": 47.741127,
+        "max": 68.479345,
+        "observations": [
+          68.479345,
+          61.790458,
+          55.021693,
+          56.123719,
+          47.741127,
+          56.062104
+        ]
+      },
+      "rss_kib": {
+        "median": 15320.0,
+        "min": 13268,
+        "max": 15384,
+        "observations": [
+          15340,
+          15132,
+          15308,
+          15332,
+          13268,
+          15384
+        ]
+      },
+      "output_bytes": {
+        "median": 2058.0,
+        "min": 2058,
+        "max": 2058,
+        "observations": [
+          2058,
+          2058,
+          2058,
+          2058,
+          2058,
+          2058
+        ]
+      },
+      "user_s": {
+        "median": 0.03,
+        "min": 0.02,
+        "max": 0.04,
+        "observations": [
+          0.03,
+          0.04,
+          0.03,
+          0.03,
+          0.02,
+          0.03
+        ]
+      },
+      "system_s": {
+        "median": 0.005,
+        "min": 0.0,
+        "max": 0.01,
+        "observations": [
+          0.01,
+          0.0,
+          0.0,
+          0.0,
+          0.01,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 2,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 22,
+      "required_bytes": 22,
+      "complete_required_passage": true,
+      "released_bytes": 33,
+      "selected": 2,
+      "duplicate_omitted": 1,
+      "budget_omitted": 0,
+      "rejected": 0,
+      "store_bytes": 413696,
+      "wall_ms": {
+        "median": 48.7359175,
+        "min": 43.08839,
+        "max": 62.092866,
+        "observations": [
+          46.189767,
+          43.08839,
+          62.092866,
+          55.608423,
+          46.961524,
+          50.510311
+        ]
+      },
+      "rss_kib": {
+        "median": 15298.0,
+        "min": 13420,
+        "max": 15384,
+        "observations": [
+          15228,
+          13420,
+          15340,
+          15368,
+          15256,
+          15384
+        ]
+      },
+      "output_bytes": {
+        "median": 2123.0,
+        "min": 2123,
+        "max": 2123,
+        "observations": [
+          2123,
+          2123,
+          2123,
+          2123,
+          2123,
+          2123
+        ]
+      },
+      "user_s": {
+        "median": 0.02,
+        "min": 0.02,
+        "max": 0.03,
+        "observations": [
+          0.02,
+          0.02,
+          0.03,
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.0,
+          0.01,
+          0.02,
+          0.01,
+          0.0,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "varied",
+    "policy": "passage-v1",
+    "id": "reference.md",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 4,
+      "repeated_selected_bytes": 4860,
+      "useful_required_bytes": 184,
+      "required_bytes": 184,
+      "complete_required_passage": true,
+      "released_bytes": 7914,
+      "selected": 9,
+      "duplicate_omitted": 0,
+      "budget_omitted": 4,
+      "rejected": 0,
+      "store_bytes": 442368,
+      "wall_ms": {
+        "median": 72.125985,
+        "min": 60.731243,
+        "max": 207.559334,
+        "observations": [
+          207.559334,
+          77.933378,
+          60.731243,
+          66.318592,
+          64.11584,
+          81.705522
+        ]
+      },
+      "rss_kib": {
+        "median": 17938.0,
+        "min": 17712,
+        "max": 19968,
+        "observations": [
+          18152,
+          17712,
+          17912,
+          19968,
+          17784,
+          17964
+        ]
+      },
+      "output_bytes": {
+        "median": 14618.0,
+        "min": 14618,
+        "max": 14619,
+        "observations": [
+          14619,
+          14618,
+          14618,
+          14618,
+          14618,
+          14618
+        ]
+      },
+      "user_s": {
+        "median": 0.035,
+        "min": 0.02,
+        "max": 0.06,
+        "observations": [
+          0.05,
+          0.04,
+          0.02,
+          0.03,
+          0.02,
+          0.06
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.02,
+          0.02,
+          0.01,
+          0.02,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 6,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 184,
+      "required_bytes": 184,
+      "complete_required_passage": true,
+      "released_bytes": 5055,
+      "selected": 6,
+      "duplicate_omitted": 7,
+      "budget_omitted": 0,
+      "rejected": 0,
+      "store_bytes": 446464,
+      "wall_ms": {
+        "median": 78.363414,
+        "min": 71.694846,
+        "max": 89.686772,
+        "observations": [
+          85.870445,
+          75.068684,
+          74.50652,
+          81.658144,
+          71.694846,
+          89.686772
+        ]
+      },
+      "rss_kib": {
+        "median": 17782.0,
+        "min": 15856,
+        "max": 18028,
+        "observations": [
+          17796,
+          17908,
+          15856,
+          18028,
+          17768,
+          15888
+        ]
+      },
+      "output_bytes": {
+        "median": 9921.0,
+        "min": 9921,
+        "max": 9921,
+        "observations": [
+          9921,
+          9921,
+          9921,
+          9921,
+          9921,
+          9921
+        ]
+      },
+      "user_s": {
+        "median": 0.05,
+        "min": 0.04,
+        "max": 0.06,
+        "observations": [
+          0.06,
+          0.04,
+          0.04,
+          0.05,
+          0.05,
+          0.05
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.01,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.02,
+          0.01,
+          0.01,
+          0.01,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "varied",
+    "policy": "passage-v1",
+    "id": "prose.txt",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 3,
+      "repeated_selected_bytes": 5832,
+      "useful_required_bytes": 116,
+      "required_bytes": 116,
+      "complete_required_passage": true,
+      "released_bytes": 7892,
+      "selected": 9,
+      "duplicate_omitted": 0,
+      "budget_omitted": 4,
+      "rejected": 0,
+      "store_bytes": 442368,
+      "wall_ms": {
+        "median": 69.6316365,
+        "min": 64.591172,
+        "max": 76.600669,
+        "observations": [
+          68.971459,
+          76.600669,
+          70.291814,
+          64.591172,
+          72.509174,
+          66.164784
+        ]
+      },
+      "rss_kib": {
+        "median": 17972.0,
+        "min": 15716,
+        "max": 18288,
+        "observations": [
+          15716,
+          17928,
+          17980,
+          17972,
+          17972,
+          18288
+        ]
+      },
+      "output_bytes": {
+        "median": 14610.0,
+        "min": 14610,
+        "max": 14610,
+        "observations": [
+          14610,
+          14610,
+          14610,
+          14610,
+          14610,
+          14610
+        ]
+      },
+      "user_s": {
+        "median": 0.04,
+        "min": 0.03,
+        "max": 0.05,
+        "observations": [
+          0.03,
+          0.05,
+          0.04,
+          0.04,
+          0.05,
+          0.04
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.01,
+          0.01,
+          0.01,
+          0.0,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 6,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 116,
+      "required_bytes": 116,
+      "complete_required_passage": true,
+      "released_bytes": 5055,
+      "selected": 6,
+      "duplicate_omitted": 7,
+      "budget_omitted": 0,
+      "rejected": 0,
+      "store_bytes": 446464,
+      "wall_ms": {
+        "median": 78.40119,
+        "min": 67.185989,
+        "max": 89.532484,
+        "observations": [
+          71.301258,
+          67.185989,
+          74.158577,
+          88.627746,
+          82.643803,
+          89.532484
+        ]
+      },
+      "rss_kib": {
+        "median": 17866.0,
+        "min": 15716,
+        "max": 18408,
+        "observations": [
+          18172,
+          17840,
+          18408,
+          17892,
+          15716,
+          15888
+        ]
+      },
+      "output_bytes": {
+        "median": 9941.0,
+        "min": 9941,
+        "max": 9941,
+        "observations": [
+          9941,
+          9941,
+          9941,
+          9941,
+          9941,
+          9941
+        ]
+      },
+      "user_s": {
+        "median": 0.05,
+        "min": 0.04,
+        "max": 0.06,
+        "observations": [
+          0.04,
+          0.04,
+          0.04,
+          0.06,
+          0.06,
+          0.06
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.01,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.01,
+          0.02,
+          0.01,
+          0.01,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "install",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 12,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 582,
+      "required_bytes": 582,
+      "complete_required_passage": true,
+      "released_bytes": 8127,
+      "selected": 12,
+      "duplicate_omitted": 0,
+      "budget_omitted": 36,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 109.42188949999999,
+        "min": 83.898556,
+        "max": 118.937047,
+        "observations": [
+          109.594774,
+          109.249005,
+          87.668497,
+          118.781465,
+          83.898556,
+          118.937047
+        ]
+      },
+      "rss_kib": {
+        "median": 18404.0,
+        "min": 16512,
+        "max": 18584,
+        "observations": [
+          16512,
+          18548,
+          18584,
+          18336,
+          16560,
+          18472
+        ]
+      },
+      "output_bytes": {
+        "median": 16601.0,
+        "min": 16601,
+        "max": 16602,
+        "observations": [
+          16601,
+          16601,
+          16601,
+          16602,
+          16601,
+          16602
+        ]
+      },
+      "user_s": {
+        "median": 0.07,
+        "min": 0.06,
+        "max": 0.09,
+        "observations": [
+          0.07,
+          0.07,
+          0.06,
+          0.09,
+          0.06,
+          0.08
+        ]
+      },
+      "system_s": {
+        "median": 0.015,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.03,
+          0.02,
+          0.01,
+          0.01,
+          0.01,
+          0.03
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 12,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 582,
+      "required_bytes": 582,
+      "complete_required_passage": true,
+      "released_bytes": 8127,
+      "selected": 12,
+      "duplicate_omitted": 0,
+      "budget_omitted": 36,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 142.4481015,
+        "min": 119.740234,
+        "max": 150.061497,
+        "observations": [
+          119.740234,
+          143.581312,
+          146.326551,
+          141.314891,
+          150.061497,
+          128.813282
+        ]
+      },
+      "rss_kib": {
+        "median": 17554.0,
+        "min": 16244,
+        "max": 18568,
+        "observations": [
+          16260,
+          18468,
+          16640,
+          16244,
+          18568,
+          18552
+        ]
+      },
+      "output_bytes": {
+        "median": 16660.0,
+        "min": 16660,
+        "max": 16660,
+        "observations": [
+          16660,
+          16660,
+          16660,
+          16660,
+          16660,
+          16660
+        ]
+      },
+      "user_s": {
+        "median": 0.10500000000000001,
+        "min": 0.1,
+        "max": 0.12,
+        "observations": [
+          0.1,
+          0.1,
+          0.11,
+          0.11,
+          0.12,
+          0.1
+        ]
+      },
+      "system_s": {
+        "median": 0.015,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.01,
+          0.03,
+          0.02,
+          0.02,
+          0.01,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "jsonl",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 729,
+      "required_bytes": 1376,
+      "complete_required_passage": false,
+      "released_bytes": 8150,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 37,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 106.4172295,
+        "min": 97.203503,
+        "max": 121.112558,
+        "observations": [
+          121.112558,
+          106.210727,
+          107.787093,
+          106.623732,
+          100.414035,
+          97.203503
+        ]
+      },
+      "rss_kib": {
+        "median": 18536.0,
+        "min": 16520,
+        "max": 20496,
+        "observations": [
+          16520,
+          18564,
+          18508,
+          18964,
+          18480,
+          20496
+        ]
+      },
+      "output_bytes": {
+        "median": 16202.0,
+        "min": 16202,
+        "max": 16203,
+        "observations": [
+          16203,
+          16202,
+          16202,
+          16202,
+          16202,
+          16202
+        ]
+      },
+      "user_s": {
+        "median": 0.08,
+        "min": 0.05,
+        "max": 0.08,
+        "observations": [
+          0.08,
+          0.08,
+          0.08,
+          0.05,
+          0.07,
+          0.08
+        ]
+      },
+      "system_s": {
+        "median": 0.015,
+        "min": 0.0,
+        "max": 0.04,
+        "observations": [
+          0.02,
+          0.01,
+          0.02,
+          0.04,
+          0.01,
+          0.0
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 729,
+      "required_bytes": 1376,
+      "complete_required_passage": false,
+      "released_bytes": 8150,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 37,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 129.59185250000002,
+        "min": 107.995795,
+        "max": 149.147662,
+        "observations": [
+          136.270329,
+          130.180937,
+          127.347273,
+          107.995795,
+          149.147662,
+          129.002768
+        ]
+      },
+      "rss_kib": {
+        "median": 18628.0,
+        "min": 18560,
+        "max": 18888,
+        "observations": [
+          18584,
+          18724,
+          18672,
+          18568,
+          18888,
+          18560
+        ]
+      },
+      "output_bytes": {
+        "median": 16261.0,
+        "min": 16260,
+        "max": 16261,
+        "observations": [
+          16261,
+          16261,
+          16261,
+          16260,
+          16261,
+          16261
+        ]
+      },
+      "user_s": {
+        "median": 0.095,
+        "min": 0.07,
+        "max": 0.13,
+        "observations": [
+          0.11,
+          0.1,
+          0.09,
+          0.07,
+          0.13,
+          0.09
+        ]
+      },
+      "system_s": {
+        "median": 0.015,
+        "min": 0.0,
+        "max": 0.03,
+        "observations": [
+          0.01,
+          0.01,
+          0.02,
+          0.03,
+          0.0,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "partial",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 14,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 304,
+      "required_bytes": 304,
+      "complete_required_passage": true,
+      "released_bytes": 8189,
+      "selected": 14,
+      "duplicate_omitted": 0,
+      "budget_omitted": 34,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 118.9130925,
+        "min": 105.425313,
+        "max": 124.625747,
+        "observations": [
+          116.761046,
+          106.248367,
+          124.461149,
+          121.065139,
+          105.425313,
+          124.625747
+        ]
+      },
+      "rss_kib": {
+        "median": 18438.0,
+        "min": 16376,
+        "max": 18572,
+        "observations": [
+          18300,
+          18464,
+          18572,
+          16376,
+          18568,
+          18412
+        ]
+      },
+      "output_bytes": {
+        "median": 17976.0,
+        "min": 17975,
+        "max": 17976,
+        "observations": [
+          17976,
+          17975,
+          17976,
+          17976,
+          17975,
+          17976
+        ]
+      },
+      "user_s": {
+        "median": 0.08,
+        "min": 0.08,
+        "max": 0.09,
+        "observations": [
+          0.08,
+          0.08,
+          0.09,
+          0.08,
+          0.08,
+          0.08
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.02,
+          0.01,
+          0.02,
+          0.03,
+          0.01,
+          0.02
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 14,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 304,
+      "required_bytes": 304,
+      "complete_required_passage": true,
+      "released_bytes": 8189,
+      "selected": 14,
+      "duplicate_omitted": 0,
+      "budget_omitted": 34,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 127.56001599999999,
+        "min": 124.383724,
+        "max": 398.265437,
+        "observations": [
+          128.766023,
+          126.354009,
+          124.383724,
+          126.210279,
+          135.753409,
+          398.265437
+        ]
+      },
+      "rss_kib": {
+        "median": 18550.0,
+        "min": 16512,
+        "max": 18692,
+        "observations": [
+          18288,
+          18424,
+          16512,
+          18676,
+          18680,
+          18692
+        ]
+      },
+      "output_bytes": {
+        "median": 18034.0,
+        "min": 18034,
+        "max": 18034,
+        "observations": [
+          18034,
+          18034,
+          18034,
+          18034,
+          18034,
+          18034
+        ]
+      },
+      "user_s": {
+        "median": 0.09,
+        "min": 0.08,
+        "max": 0.1,
+        "observations": [
+          0.09,
+          0.09,
+          0.09,
+          0.08,
+          0.1,
+          0.1
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.03,
+          0.02,
+          0.02,
+          0.03,
+          0.02,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "restore",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 12,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 542,
+      "required_bytes": 542,
+      "complete_required_passage": true,
+      "released_bytes": 7986,
+      "selected": 12,
+      "duplicate_omitted": 0,
+      "budget_omitted": 29,
+      "rejected": 0,
+      "store_bytes": 516096,
+      "wall_ms": {
+        "median": 94.1126995,
+        "min": 83.518073,
+        "max": 108.570212,
+        "observations": [
+          93.000679,
+          92.930457,
+          97.466095,
+          95.22472,
+          108.570212,
+          83.518073
+        ]
+      },
+      "rss_kib": {
+        "median": 18306.0,
+        "min": 16388,
+        "max": 18708,
+        "observations": [
+          18304,
+          18708,
+          18308,
+          18228,
+          16388,
+          18316
+        ]
+      },
+      "output_bytes": {
+        "median": 16443.0,
+        "min": 16443,
+        "max": 16443,
+        "observations": [
+          16443,
+          16443,
+          16443,
+          16443,
+          16443,
+          16443
+        ]
+      },
+      "user_s": {
+        "median": 0.07,
+        "min": 0.06,
+        "max": 0.07,
+        "observations": [
+          0.06,
+          0.07,
+          0.07,
+          0.07,
+          0.07,
+          0.06
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.01,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.02,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 12,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 542,
+      "required_bytes": 542,
+      "complete_required_passage": true,
+      "released_bytes": 7986,
+      "selected": 12,
+      "duplicate_omitted": 0,
+      "budget_omitted": 29,
+      "rejected": 0,
+      "store_bytes": 516096,
+      "wall_ms": {
+        "median": 121.09430850000001,
+        "min": 109.297617,
+        "max": 128.620451,
+        "observations": [
+          127.371507,
+          126.017358,
+          109.297617,
+          128.620451,
+          113.823826,
+          116.171259
+        ]
+      },
+      "rss_kib": {
+        "median": 18642.0,
+        "min": 16484,
+        "max": 19100,
+        "observations": [
+          19100,
+          16624,
+          16484,
+          18700,
+          18584,
+          18812
+        ]
+      },
+      "output_bytes": {
+        "median": 16502.0,
+        "min": 16501,
+        "max": 16502,
+        "observations": [
+          16502,
+          16502,
+          16501,
+          16502,
+          16502,
+          16502
+        ]
+      },
+      "user_s": {
+        "median": 0.09,
+        "min": 0.09,
+        "max": 0.1,
+        "observations": [
+          0.1,
+          0.09,
+          0.09,
+          0.1,
+          0.09,
+          0.09
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.01,
+          0.02,
+          0.0,
+          0.01,
+          0.01,
+          0.01
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "budget",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 15,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 428,
+      "required_bytes": 428,
+      "complete_required_passage": true,
+      "released_bytes": 8182,
+      "selected": 15,
+      "duplicate_omitted": 0,
+      "budget_omitted": 33,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 110.405214,
+        "min": 104.896421,
+        "max": 131.966656,
+        "observations": [
+          115.580852,
+          104.896421,
+          111.692158,
+          131.966656,
+          106.952318,
+          109.11827
+        ]
+      },
+      "rss_kib": {
+        "median": 18368.0,
+        "min": 16364,
+        "max": 18560,
+        "observations": [
+          18440,
+          16364,
+          18432,
+          18560,
+          16568,
+          18304
+        ]
+      },
+      "output_bytes": {
+        "median": 18582.0,
+        "min": 18582,
+        "max": 18583,
+        "observations": [
+          18583,
+          18582,
+          18582,
+          18583,
+          18582,
+          18582
+        ]
+      },
+      "user_s": {
+        "median": 0.07500000000000001,
+        "min": 0.06,
+        "max": 0.09,
+        "observations": [
+          0.09,
+          0.06,
+          0.08,
+          0.09,
+          0.07,
+          0.07
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.01,
+          0.03,
+          0.02,
+          0.02,
+          0.02,
+          0.02
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 15,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 428,
+      "required_bytes": 428,
+      "complete_required_passage": true,
+      "released_bytes": 8182,
+      "selected": 15,
+      "duplicate_omitted": 0,
+      "budget_omitted": 33,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 126.98889499999999,
+        "min": 106.406123,
+        "max": 149.334323,
+        "observations": [
+          106.406123,
+          132.69346,
+          149.334323,
+          143.570672,
+          121.28433,
+          107.477874
+        ]
+      },
+      "rss_kib": {
+        "median": 18500.0,
+        "min": 16448,
+        "max": 18996,
+        "observations": [
+          18996,
+          16448,
+          16684,
+          18684,
+          18564,
+          18436
+        ]
+      },
+      "output_bytes": {
+        "median": 18641.0,
+        "min": 18640,
+        "max": 18641,
+        "observations": [
+          18640,
+          18641,
+          18641,
+          18641,
+          18641,
+          18640
+        ]
+      },
+      "user_s": {
+        "median": 0.095,
+        "min": 0.06,
+        "max": 0.12,
+        "observations": [
+          0.08,
+          0.11,
+          0.12,
+          0.1,
+          0.09,
+          0.06
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.02,
+          0.01,
+          0.02,
+          0.02,
+          0.02,
+          0.03
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "withdraw",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 624,
+      "required_bytes": 624,
+      "complete_required_passage": true,
+      "released_bytes": 7996,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 26,
+      "rejected": 0,
+      "store_bytes": 516096,
+      "wall_ms": {
+        "median": 101.46621250000001,
+        "min": 84.77492,
+        "max": 108.938954,
+        "observations": [
+          84.77492,
+          101.000414,
+          101.932011,
+          108.938954,
+          92.310414,
+          105.118198
+        ]
+      },
+      "rss_kib": {
+        "median": 18172.0,
+        "min": 16128,
+        "max": 18312,
+        "observations": [
+          18308,
+          18176,
+          18312,
+          16244,
+          16128,
+          18168
+        ]
+      },
+      "output_bytes": {
+        "median": 15842.0,
+        "min": 15842,
+        "max": 15842,
+        "observations": [
+          15842,
+          15842,
+          15842,
+          15842,
+          15842,
+          15842
+        ]
+      },
+      "user_s": {
+        "median": 0.07,
+        "min": 0.06,
+        "max": 0.08,
+        "observations": [
+          0.06,
+          0.06,
+          0.08,
+          0.08,
+          0.06,
+          0.08
+        ]
+      },
+      "system_s": {
+        "median": 0.015,
+        "min": 0.0,
+        "max": 0.02,
+        "observations": [
+          0.0,
+          0.02,
+          0.0,
+          0.02,
+          0.02,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 624,
+      "required_bytes": 624,
+      "complete_required_passage": true,
+      "released_bytes": 7996,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 26,
+      "rejected": 0,
+      "store_bytes": 516096,
+      "wall_ms": {
+        "median": 123.4553175,
+        "min": 96.207013,
+        "max": 127.941607,
+        "observations": [
+          96.207013,
+          100.298858,
+          127.582624,
+          123.922038,
+          122.988597,
+          127.941607
+        ]
+      },
+      "rss_kib": {
+        "median": 18650.0,
+        "min": 18356,
+        "max": 20752,
+        "observations": [
+          18612,
+          20752,
+          18356,
+          18688,
+          18552,
+          18732
+        ]
+      },
+      "output_bytes": {
+        "median": 15901.0,
+        "min": 15900,
+        "max": 15901,
+        "observations": [
+          15900,
+          15900,
+          15901,
+          15901,
+          15901,
+          15901
+        ]
+      },
+      "user_s": {
+        "median": 0.09,
+        "min": 0.06,
+        "max": 0.1,
+        "observations": [
+          0.06,
+          0.07,
+          0.1,
+          0.09,
+          0.09,
+          0.09
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.01,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "history",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 12,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 249,
+      "required_bytes": 249,
+      "complete_required_passage": true,
+      "released_bytes": 8167,
+      "selected": 12,
+      "duplicate_omitted": 0,
+      "budget_omitted": 36,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 107.10945799999999,
+        "min": 96.111925,
+        "max": 123.870852,
+        "observations": [
+          101.886727,
+          96.111925,
+          108.86703,
+          105.351886,
+          114.133347,
+          123.870852
+        ]
+      },
+      "rss_kib": {
+        "median": 17452.0,
+        "min": 16412,
+        "max": 18532,
+        "observations": [
+          16616,
+          16516,
+          16412,
+          18320,
+          18532,
+          18288
+        ]
+      },
+      "output_bytes": {
+        "median": 16690.0,
+        "min": 16690,
+        "max": 16691,
+        "observations": [
+          16690,
+          16690,
+          16690,
+          16690,
+          16691,
+          16691
+        ]
+      },
+      "user_s": {
+        "median": 0.07500000000000001,
+        "min": 0.06,
+        "max": 0.09,
+        "observations": [
+          0.06,
+          0.07,
+          0.09,
+          0.07,
+          0.08,
+          0.08
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.02,
+          0.01,
+          0.01,
+          0.02,
+          0.02,
+          0.03
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 12,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 249,
+      "required_bytes": 249,
+      "complete_required_passage": true,
+      "released_bytes": 8167,
+      "selected": 12,
+      "duplicate_omitted": 0,
+      "budget_omitted": 36,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 137.8034545,
+        "min": 105.740746,
+        "max": 150.15952,
+        "observations": [
+          123.184063,
+          150.15952,
+          136.530306,
+          139.076603,
+          105.740746,
+          139.48559
+        ]
+      },
+      "rss_kib": {
+        "median": 18650.0,
+        "min": 16820,
+        "max": 20784,
+        "observations": [
+          18576,
+          16820,
+          18568,
+          20784,
+          20756,
+          18724
+        ]
+      },
+      "output_bytes": {
+        "median": 16749.0,
+        "min": 16748,
+        "max": 16749,
+        "observations": [
+          16749,
+          16749,
+          16749,
+          16749,
+          16748,
+          16749
+        ]
+      },
+      "user_s": {
+        "median": 0.10500000000000001,
+        "min": 0.09,
+        "max": 0.13,
+        "observations": [
+          0.1,
+          0.13,
+          0.11,
+          0.09,
+          0.09,
+          0.11
+        ]
+      },
+      "system_s": {
+        "median": 0.01,
+        "min": 0.0,
+        "max": 0.03,
+        "observations": [
+          0.01,
+          0.01,
+          0.01,
+          0.03,
+          0.0,
+          0.02
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "migration",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 10,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 917,
+      "required_bytes": 1202,
+      "complete_required_passage": false,
+      "released_bytes": 8037,
+      "selected": 10,
+      "duplicate_omitted": 0,
+      "budget_omitted": 23,
+      "rejected": 0,
+      "store_bytes": 516096,
+      "wall_ms": {
+        "median": 100.8533835,
+        "min": 87.027275,
+        "max": 104.309972,
+        "observations": [
+          103.352525,
+          87.027275,
+          101.738359,
+          96.235567,
+          104.309972,
+          99.968408
+        ]
+      },
+      "rss_kib": {
+        "median": 18128.0,
+        "min": 16296,
+        "max": 18340,
+        "observations": [
+          16296,
+          18080,
+          18340,
+          18228,
+          18172,
+          18084
+        ]
+      },
+      "output_bytes": {
+        "median": 15291.0,
+        "min": 15291,
+        "max": 15291,
+        "observations": [
+          15291,
+          15291,
+          15291,
+          15291,
+          15291,
+          15291
+        ]
+      },
+      "user_s": {
+        "median": 0.07,
+        "min": 0.05,
+        "max": 0.07,
+        "observations": [
+          0.07,
+          0.07,
+          0.07,
+          0.05,
+          0.07,
+          0.07
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.0,
+        "max": 0.03,
+        "observations": [
+          0.02,
+          0.0,
+          0.02,
+          0.03,
+          0.02,
+          0.02
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 10,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 917,
+      "required_bytes": 1202,
+      "complete_required_passage": false,
+      "released_bytes": 8037,
+      "selected": 10,
+      "duplicate_omitted": 0,
+      "budget_omitted": 23,
+      "rejected": 0,
+      "store_bytes": 516096,
+      "wall_ms": {
+        "median": 122.994994,
+        "min": 107.119201,
+        "max": 135.655596,
+        "observations": [
+          119.17816,
+          135.655596,
+          129.800524,
+          126.811828,
+          111.295906,
+          107.119201
+        ]
+      },
+      "rss_kib": {
+        "median": 18462.0,
+        "min": 18228,
+        "max": 18564,
+        "observations": [
+          18564,
+          18436,
+          18484,
+          18228,
+          18440,
+          18488
+        ]
+      },
+      "output_bytes": {
+        "median": 15350.0,
+        "min": 15349,
+        "max": 15350,
+        "observations": [
+          15350,
+          15350,
+          15350,
+          15350,
+          15349,
+          15349
+        ]
+      },
+      "user_s": {
+        "median": 0.09,
+        "min": 0.06,
+        "max": 0.1,
+        "observations": [
+          0.07,
+          0.1,
+          0.09,
+          0.09,
+          0.09,
+          0.06
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.03,
+          0.02,
+          0.02,
+          0.02,
+          0.01,
+          0.03
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "trail",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 791,
+      "required_bytes": 1066,
+      "complete_required_passage": false,
+      "released_bytes": 8149,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 37,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 100.6330705,
+        "min": 88.547076,
+        "max": 131.324111,
+        "observations": [
+          118.147776,
+          88.547076,
+          131.324111,
+          96.045771,
+          105.22037,
+          91.856353
+        ]
+      },
+      "rss_kib": {
+        "median": 18546.0,
+        "min": 16604,
+        "max": 19136,
+        "observations": [
+          18584,
+          19136,
+          18508,
+          18456,
+          16604,
+          18708
+        ]
+      },
+      "output_bytes": {
+        "median": 16089.0,
+        "min": 16089,
+        "max": 16090,
+        "observations": [
+          16090,
+          16089,
+          16090,
+          16089,
+          16089,
+          16089
+        ]
+      },
+      "user_s": {
+        "median": 0.07,
+        "min": 0.05,
+        "max": 0.1,
+        "observations": [
+          0.08,
+          0.05,
+          0.1,
+          0.07,
+          0.07,
+          0.06
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.02,
+        "observations": [
+          0.02,
+          0.02,
+          0.02,
+          0.01,
+          0.02,
+          0.01
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 791,
+      "required_bytes": 1066,
+      "complete_required_passage": false,
+      "released_bytes": 8149,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 37,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 135.18523299999998,
+        "min": 127.104357,
+        "max": 156.666164,
+        "observations": [
+          132.839363,
+          156.666164,
+          128.116975,
+          137.531103,
+          127.104357,
+          144.569636
+        ]
+      },
+      "rss_kib": {
+        "median": 18580.0,
+        "min": 18444,
+        "max": 18972,
+        "observations": [
+          18604,
+          18556,
+          18972,
+          18444,
+          18556,
+          18604
+        ]
+      },
+      "output_bytes": {
+        "median": 16148.0,
+        "min": 16148,
+        "max": 16148,
+        "observations": [
+          16148,
+          16148,
+          16148,
+          16148,
+          16148,
+          16148
+        ]
+      },
+      "user_s": {
+        "median": 0.095,
+        "min": 0.09,
+        "max": 0.13,
+        "observations": [
+          0.1,
+          0.1,
+          0.09,
+          0.09,
+          0.09,
+          0.13
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.0,
+        "max": 0.04,
+        "observations": [
+          0.02,
+          0.04,
+          0.01,
+          0.03,
+          0.02,
+          0.0
+        ]
+      }
+    }
+  },
+  {
+    "corpus": "documentation",
+    "policy": "passage-v1",
+    "id": "scope",
+    "budget": 8192,
+    "original": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 385,
+      "required_bytes": 385,
+      "complete_required_passage": true,
+      "released_bytes": 8144,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 37,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 127.34991699999999,
+        "min": 112.812179,
+        "max": 137.466613,
+        "observations": [
+          113.668676,
+          125.149149,
+          137.466613,
+          130.277378,
+          112.812179,
+          129.550685
+        ]
+      },
+      "rss_kib": {
+        "median": 18494.0,
+        "min": 16284,
+        "max": 20540,
+        "observations": [
+          20540,
+          19048,
+          16408,
+          18500,
+          18488,
+          16284
+        ]
+      },
+      "output_bytes": {
+        "median": 16119.0,
+        "min": 16119,
+        "max": 16119,
+        "observations": [
+          16119,
+          16119,
+          16119,
+          16119,
+          16119,
+          16119
+        ]
+      },
+      "user_s": {
+        "median": 0.09,
+        "min": 0.08,
+        "max": 0.1,
+        "observations": [
+          0.09,
+          0.09,
+          0.1,
+          0.09,
+          0.09,
+          0.08
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.0,
+        "max": 0.03,
+        "observations": [
+          0.01,
+          0.02,
+          0.02,
+          0.02,
+          0.0,
+          0.03
+        ]
+      }
+    },
+    "exact-v1": {
+      "unique_selected_texts": 11,
+      "repeated_selected_bytes": 0,
+      "useful_required_bytes": 385,
+      "required_bytes": 385,
+      "complete_required_passage": true,
+      "released_bytes": 8144,
+      "selected": 11,
+      "duplicate_omitted": 0,
+      "budget_omitted": 37,
+      "rejected": 0,
+      "store_bytes": 520192,
+      "wall_ms": {
+        "median": 138.0599305,
+        "min": 116.988392,
+        "max": 147.634875,
+        "observations": [
+          139.599553,
+          147.634875,
+          136.520308,
+          116.988392,
+          140.59467,
+          118.489969
+        ]
+      },
+      "rss_kib": {
+        "median": 17622.0,
+        "min": 16356,
+        "max": 18688,
+        "observations": [
+          18440,
+          16356,
+          16508,
+          18688,
+          16804,
+          18564
+        ]
+      },
+      "output_bytes": {
+        "median": 16177.0,
+        "min": 16177,
+        "max": 16177,
+        "observations": [
+          16177,
+          16177,
+          16177,
+          16177,
+          16177,
+          16177
+        ]
+      },
+      "user_s": {
+        "median": 0.095,
+        "min": 0.08,
+        "max": 0.11,
+        "observations": [
+          0.1,
+          0.11,
+          0.1,
+          0.09,
+          0.09,
+          0.08
+        ]
+      },
+      "system_s": {
+        "median": 0.02,
+        "min": 0.01,
+        "max": 0.03,
+        "observations": [
+          0.02,
+          0.02,
+          0.02,
+          0.01,
+          0.03,
+          0.02
+        ]
+      }
+    }
+  }
+]

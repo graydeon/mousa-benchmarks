@@ -1,0 +1,262 @@
+{
+  "starting_revision": "34381bb60b2146ef466d7a52bf42855b14ecda5a",
+  "pairs": 6,
+  "warmup_pairs": 1,
+  "questions": [
+    {
+      "corpus": "small",
+      "policy": "fixed-v1",
+      "id": "displacement",
+      "query": "amber",
+      "budget": 33,
+      "file": "repair.md",
+      "required": "amber repair code ZX17"
+    },
+    {
+      "corpus": "varied",
+      "policy": "fixed-v1",
+      "id": "reference.md",
+      "query": "What are the Bronze and Silver retention and copy counts and uses?",
+      "budget": 8192,
+      "file": "reference.md",
+      "required": "# Storage classes\n\n| Class | Retention | Copies |\n|---|---|---|\n| Bronze | 7 days | 1 |\n| Silver | 30 days | 2 |\n\n- Bronze is for temporary staging.\n- Silver is for reviewed records.\n\n"
+    },
+    {
+      "corpus": "varied",
+      "policy": "fixed-v1",
+      "id": "prose.txt",
+      "query": "When does the orchard gate open and close, and what must visitors do?",
+      "budget": 8192,
+      "file": "prose.txt",
+      "required": "The orchard gate opens at sunrise and closes at sunset. Visitors must sign the ledger before entering the orchard.\n\n"
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "install",
+      "query": "What do I need to build Mousa and run its Python client example?",
+      "budget": 8192,
+      "file": "README.md",
+      "required": "Prerequisites: Go 1.25 or later to build Mousa, and Python 3.9 or later\nwith its standard-library `sqlite3` module on Linux. Process-group timeout\nhandling and executable test fixtures are Linux-supported; other operating\nsystems are not validated. GNU `time` is optional for peak-RSS measurements;\nif `time` is on `PATH`, it must support GNU `-f` and `-o` options.\nNo QMD, Node, models, network access, or third-party Python packages are needed\nto run the client example or acceptance suite. Building requires the Go module\ndependencies, downloaded beforehand for an offline build."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "jsonl",
+      "query": "If I leave an item out of the next JSONL upload, is it deleted, and how do I delete it explicitly?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "## JSONL input\n\nEach nonblank line contains one object with `id` and exactly one of `text` or\n`deleted`. For deletion, `deleted` must be `true`.\n\n```json\n{\"id\":\"notes/review@draft\",\"text\":\"The harbor inspection is scheduled for Friday.\"}\n{\"id\":\"notes/withdrawn\",\"deleted\":true}\n```\n\n```sh\n./mousa -store local.sqlite sync --source inspection-notes < items.jsonl\n./mousa -store local.sqlite query --source inspection-notes 'harbor inspection'\n```\n\nLimits per invocation:\n\n- 1 MiB per input line, excluding its line ending.\n- 64 MiB total input, including whitespace and line endings.\n- 10,000 nonblank records. Split larger inputs across invocations.\n- 4,096 UTF-8 bytes per item ID. IDs must be nonempty and cannot contain NUL.\n\nUnknown fields, duplicate JSON keys, null values, invalid UTF-8, unpaired Unicode\nsurrogates, trailing JSON values, and repeated item IDs within one invocation are\nerrors. Blank lines are ignored. Record order is not item identity or delivery\nsequence evidence. Omission from a JSONL stream never deletes an item; send an\nexplicit tombstone.\n\nOn malformed input or an exceeded limit, the command exits 1, identifies the failure\non stderr, and emits no success JSON on stdout. The successfully applied prefix\nremains committed. Correct the input and replay it: unchanged current content is a\nno-op, and repeated tombstones are reported as `absent`."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "partial",
+      "query": "What remains in the store when a JSONL upload fails halfway through, and how do I retry?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "On malformed input or an exceeded limit, the command exits 1, identifies the failure\non stderr, and emits no success JSON on stdout. The successfully applied prefix\nremains committed. Correct the input and replay it: unchanged current content is a\nno-op, and repeated tombstones are reported as `absent`."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "restore",
+      "query": "How do I make a deleted document searchable again?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "| Prior state | Input | Reported action | Searchable state after success |\n|---|---|---|---|\n| Unknown item | Text, including empty text | `added` | Input revision |\n| Active item | Identical raw content | `unchanged` | Unchanged |\n| Active item | Different content, including an older revision | `updated` | Input revision only |\n| Deleted item | Text | `restored` | Input revision only |\n| Active item | Deletion | `deleted` | No evidence for that item |\n| Unknown or already deleted item | Deletion | `absent` | No evidence for that item |"
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "budget",
+      "query": "Does the query size limit count JSON or tokens, and what happens when a passage is too large?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "The candidate limit is 100, not an exhaustive match count. Packing walks verified\nrank order, skips an accepted segment that exceeds the remaining budget, and\ncontinues. It releases whole segments without truncation, deduplication, or\nredundancy removal. `--budget-bytes` must be positive and defaults to 8,192.\nThe budget counts normalized UTF-8 evidence text only, not model tokens or JSON,\nidentifier, or provenance overhead."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "withdraw",
+      "query": "Can I undo source withdrawal by allowing access again?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "`access` manages a source-scoped allow/deny binding for the fixed CLI caller and\nretrieval purpose. Concurrent changes use the core compare-and-swap activation\ncontract; conflicts are errors, not silent overwrites. This is an operator control,\nnot caller authentication or protection against someone who can directly read or\nmodify the store.\n\n`withdraw` changes source lifecycle state without erasing index or canonical\nrecords. Policy allow does not resume a withdrawn source. The CLI has no resume\ncommand, and sync does not implicitly resume it. Item deletion/restoration is a\ndifferent operation from source withdrawal."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "history",
+      "query": "Can Mousa recover the old text of a document after I replace or delete it?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "Canonical history retains identities, digests, and provenance, not a complete text\narchive. After deindexing, Mousa cannot reconstruct an old revision's text from its\ndigest. Retain original source material separately if historical text is required."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "migration",
+      "query": "How do I recover search after upgrading an old directory store?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "## Upgrading an existing directory store\n\nSchema version 9 and earlier did not record a reliable current-item relationship.\nMigration 10 preserves canonical history, removes the ambiguous directory search\nprojection, and marks each existing directory source as requiring recovery. The CLI\nrefuses queries for that source until a complete directory sync succeeds:\n\n```sh\n./mousa -store local.sqlite sync ./documents\n./mousa -store local.sqlite status ./documents\n```\n\nUse the same absolute root identity and restore the desired source files before\nsyncing. Recovery reconstructs the current item set from those files; it does not\nguess chronology from stored hashes or modification times. If original source input\nis unavailable, current activation cannot be reconstructed automatically. Keep a\nbackup before upgrading. A failed recovery sync can be retried; the recovery flag\nremains set until a full sync finishes.\n\nPreview selection before recovery. The current defaults are narrower than older\nCLI versions that attempted every UTF-8 file. Use explicit include patterns or\n`--all-text` when the intended recovery set needs other file types or hidden files;\nreview the selection before committing it."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "trail",
+      "query": "What does inspecting a past query prove about selected evidence and whether it is available now?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "Use the `trail_id` returned by a query. Inspection evaluates fresh source access\nbefore looking up history. A deny response contains authorization IDs/reasons but\nno historical payload, even for a nonexistent trail. An allowed request cannot\ninspect another source's trail.\n\nThe `historical` payload is a filtered view, not a complete canonical Source Trail\nrecord from which its ID can be recomputed. It contains the original decision\noutcome/reasons, effective expression, byte accounting, packet ID, and accepted\ncandidate metadata. Rejected candidates are counted but their identities, hashes,\nand other metadata are omitted. The trail stores the effective expression, not\nthe raw query or the name of its preparation policy; inspection cannot reconstruct\nthose missing fields.\n\n`selected` describes the historical packet. `indexed_now` describes index\nmembership in the inspection snapshot. Retired revisions can have historical\nmetadata without current index membership; neither property authorizes a new text\nrelease. Inspection never returns historical text."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "fixed-v1",
+      "id": "scope",
+      "query": "Will my include and exclude patterns still apply when I sync the directory next time?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "Selection flags are invocation-local, not saved as source configuration. Use the\nsame flags on subsequent syncs to retain the same scope. A successful sync\ndeactivates previously indexed items outside its selected set, including items\nexcluded by a changed filter. `skipped` now contains `{item, reason}` objects with\nrelative paths rather than the older list of absolute path strings."
+    },
+    {
+      "corpus": "small",
+      "policy": "passage-v1",
+      "id": "displacement",
+      "query": "amber",
+      "budget": 33,
+      "file": "repair.md",
+      "required": "amber repair code ZX17"
+    },
+    {
+      "corpus": "varied",
+      "policy": "passage-v1",
+      "id": "reference.md",
+      "query": "What are the Bronze and Silver retention and copy counts and uses?",
+      "budget": 8192,
+      "file": "reference.md",
+      "required": "# Storage classes\n\n| Class | Retention | Copies |\n|---|---|---|\n| Bronze | 7 days | 1 |\n| Silver | 30 days | 2 |\n\n- Bronze is for temporary staging.\n- Silver is for reviewed records.\n\n"
+    },
+    {
+      "corpus": "varied",
+      "policy": "passage-v1",
+      "id": "prose.txt",
+      "query": "When does the orchard gate open and close, and what must visitors do?",
+      "budget": 8192,
+      "file": "prose.txt",
+      "required": "The orchard gate opens at sunrise and closes at sunset. Visitors must sign the ledger before entering the orchard.\n\n"
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "install",
+      "query": "What do I need to build Mousa and run its Python client example?",
+      "budget": 8192,
+      "file": "README.md",
+      "required": "Prerequisites: Go 1.25 or later to build Mousa, and Python 3.9 or later\nwith its standard-library `sqlite3` module on Linux. Process-group timeout\nhandling and executable test fixtures are Linux-supported; other operating\nsystems are not validated. GNU `time` is optional for peak-RSS measurements;\nif `time` is on `PATH`, it must support GNU `-f` and `-o` options.\nNo QMD, Node, models, network access, or third-party Python packages are needed\nto run the client example or acceptance suite. Building requires the Go module\ndependencies, downloaded beforehand for an offline build."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "jsonl",
+      "query": "If I leave an item out of the next JSONL upload, is it deleted, and how do I delete it explicitly?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "## JSONL input\n\nEach nonblank line contains one object with `id` and exactly one of `text` or\n`deleted`. For deletion, `deleted` must be `true`.\n\n```json\n{\"id\":\"notes/review@draft\",\"text\":\"The harbor inspection is scheduled for Friday.\"}\n{\"id\":\"notes/withdrawn\",\"deleted\":true}\n```\n\n```sh\n./mousa -store local.sqlite sync --source inspection-notes < items.jsonl\n./mousa -store local.sqlite query --source inspection-notes 'harbor inspection'\n```\n\nLimits per invocation:\n\n- 1 MiB per input line, excluding its line ending.\n- 64 MiB total input, including whitespace and line endings.\n- 10,000 nonblank records. Split larger inputs across invocations.\n- 4,096 UTF-8 bytes per item ID. IDs must be nonempty and cannot contain NUL.\n\nUnknown fields, duplicate JSON keys, null values, invalid UTF-8, unpaired Unicode\nsurrogates, trailing JSON values, and repeated item IDs within one invocation are\nerrors. Blank lines are ignored. Record order is not item identity or delivery\nsequence evidence. Omission from a JSONL stream never deletes an item; send an\nexplicit tombstone.\n\nOn malformed input or an exceeded limit, the command exits 1, identifies the failure\non stderr, and emits no success JSON on stdout. The successfully applied prefix\nremains committed. Correct the input and replay it: unchanged current content is a\nno-op, and repeated tombstones are reported as `absent`."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "partial",
+      "query": "What remains in the store when a JSONL upload fails halfway through, and how do I retry?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "On malformed input or an exceeded limit, the command exits 1, identifies the failure\non stderr, and emits no success JSON on stdout. The successfully applied prefix\nremains committed. Correct the input and replay it: unchanged current content is a\nno-op, and repeated tombstones are reported as `absent`."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "restore",
+      "query": "How do I make a deleted document searchable again?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "| Prior state | Input | Reported action | Searchable state after success |\n|---|---|---|---|\n| Unknown item | Text, including empty text | `added` | Input revision |\n| Active item | Identical raw content | `unchanged` | Unchanged |\n| Active item | Different content, including an older revision | `updated` | Input revision only |\n| Deleted item | Text | `restored` | Input revision only |\n| Active item | Deletion | `deleted` | No evidence for that item |\n| Unknown or already deleted item | Deletion | `absent` | No evidence for that item |"
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "budget",
+      "query": "Does the query size limit count JSON or tokens, and what happens when a passage is too large?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "The candidate limit is 100, not an exhaustive match count. Packing walks verified\nrank order, skips an accepted segment that exceeds the remaining budget, and\ncontinues. It releases whole segments without truncation, deduplication, or\nredundancy removal. `--budget-bytes` must be positive and defaults to 8,192.\nThe budget counts normalized UTF-8 evidence text only, not model tokens or JSON,\nidentifier, or provenance overhead."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "withdraw",
+      "query": "Can I undo source withdrawal by allowing access again?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "`access` manages a source-scoped allow/deny binding for the fixed CLI caller and\nretrieval purpose. Concurrent changes use the core compare-and-swap activation\ncontract; conflicts are errors, not silent overwrites. This is an operator control,\nnot caller authentication or protection against someone who can directly read or\nmodify the store.\n\n`withdraw` changes source lifecycle state without erasing index or canonical\nrecords. Policy allow does not resume a withdrawn source. The CLI has no resume\ncommand, and sync does not implicitly resume it. Item deletion/restoration is a\ndifferent operation from source withdrawal."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "history",
+      "query": "Can Mousa recover the old text of a document after I replace or delete it?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "Canonical history retains identities, digests, and provenance, not a complete text\narchive. After deindexing, Mousa cannot reconstruct an old revision's text from its\ndigest. Retain original source material separately if historical text is required."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "migration",
+      "query": "How do I recover search after upgrading an old directory store?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "## Upgrading an existing directory store\n\nSchema version 9 and earlier did not record a reliable current-item relationship.\nMigration 10 preserves canonical history, removes the ambiguous directory search\nprojection, and marks each existing directory source as requiring recovery. The CLI\nrefuses queries for that source until a complete directory sync succeeds:\n\n```sh\n./mousa -store local.sqlite sync ./documents\n./mousa -store local.sqlite status ./documents\n```\n\nUse the same absolute root identity and restore the desired source files before\nsyncing. Recovery reconstructs the current item set from those files; it does not\nguess chronology from stored hashes or modification times. If original source input\nis unavailable, current activation cannot be reconstructed automatically. Keep a\nbackup before upgrading. A failed recovery sync can be retried; the recovery flag\nremains set until a full sync finishes.\n\nPreview selection before recovery. The current defaults are narrower than older\nCLI versions that attempted every UTF-8 file. Use explicit include patterns or\n`--all-text` when the intended recovery set needs other file types or hidden files;\nreview the selection before committing it."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "trail",
+      "query": "What does inspecting a past query prove about selected evidence and whether it is available now?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "Use the `trail_id` returned by a query. Inspection evaluates fresh source access\nbefore looking up history. A deny response contains authorization IDs/reasons but\nno historical payload, even for a nonexistent trail. An allowed request cannot\ninspect another source's trail.\n\nThe `historical` payload is a filtered view, not a complete canonical Source Trail\nrecord from which its ID can be recomputed. It contains the original decision\noutcome/reasons, effective expression, byte accounting, packet ID, and accepted\ncandidate metadata. Rejected candidates are counted but their identities, hashes,\nand other metadata are omitted. The trail stores the effective expression, not\nthe raw query or the name of its preparation policy; inspection cannot reconstruct\nthose missing fields.\n\n`selected` describes the historical packet. `indexed_now` describes index\nmembership in the inspection snapshot. Retired revisions can have historical\nmetadata without current index membership; neither property authorizes a new text\nrelease. Inspection never returns historical text."
+    },
+    {
+      "corpus": "documentation",
+      "policy": "passage-v1",
+      "id": "scope",
+      "query": "Will my include and exclude patterns still apply when I sync the directory next time?",
+      "budget": 8192,
+      "file": "docs/CAPABILITIES.md",
+      "required": "Selection flags are invocation-local, not saved as source configuration. Use the\nsame flags on subsequent syncs to retain the same scope. A successful sync\ndeactivates previously indexed items outside its selected set, including items\nexcluded by a changed filter. `skipped` now contains `{item, reason}` objects with\nrelative paths rather than the older list of absolute path strings."
+    }
+  ],
+  "expectations": [
+    "Default evidence/packet/ranks/counts match historical executable for every case.",
+    "Exact selection equals first-fitting exact-byte oracle over the unchanged verified ranking, only selected text reserves.",
+    "Small case retains repair plus first copy: 33 bytes vs 22, unique texts 2 vs 1.",
+    "No repeated selected bytes in exact arm.",
+    "Documentation has no duplicates: same evidence and packet, no useful coverage improvement expected.",
+    "Repeated fixture may reduce repeated bytes without improving required passage coverage; report as such."
+  ],
+  "method": "Matched copies of historical seed stores, fresh CLI, alternate order, warm caches shared worker, no discarded measured observations. Query timing excludes verification inspection. Unique useful evidence = union of retained bytes in frozen required source passage, not semantic relevance; unique selected text count reported separately. Six observations do not estimate a population percentile.",
+  "manifest": {
+    "documentation/README.md": "d7171c3992cadfacc953958333ef5b0632fcc56668608faed59fa50a4b341aef",
+    "documentation/docs/CAPABILITIES.md": "1c5f774344d1202cade87c3ced1a3eacca01df44bcd2ad26201b149766750821",
+    "small/copy-a.md": "ac230dc638a16f96dd3492a00840e3e923b39731c115b0dc2c79344ea015636a",
+    "small/copy-b.md": "ac230dc638a16f96dd3492a00840e3e923b39731c115b0dc2c79344ea015636a",
+    "small/repair.md": "1b58e0b7a9b1ebf366542969c53b116f44e21bcb351f267d24e73e25627de6dc",
+    "varied/oversized.md": "106b7086cf236334e8308601e2e873cd43e12fd7fc0dea64d031b4fec8fc6215",
+    "varied/prose.txt": "c7240317dbaad5642badc012349ef974c2851fe5f1ee411bd851dfcfac1f6fcd",
+    "varied/reference.md": "5ca043c349090cbbe77f2fe5307eb41c1536e968aabdb197fec120ec2508633b",
+    "varied/runbook.md": "53de897664827d4d6dd266e82730b6593b9203fb2964f3939bebb49a91ed6f4e",
+    "varied/unicode.txt": "34b0dbb17f925508dcf97cf3c12f6dc7f77493445581a7a978dacb3c2704df98"
+  }
+}
