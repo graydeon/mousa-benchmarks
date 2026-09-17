@@ -1,0 +1,182 @@
+{
+  "query": "context manager neither closes connection",
+  "source": "/tmp/verify/docs",
+  "query_policy": "original",
+  "expression": "\"context\" OR \"manager\" OR \"neither\" OR \"closes\" OR \"connection\"",
+  "request_id": "1b348259dce5a44781d26c87d4876a4a82dd2487a8dd05b72622e583d5343dbe",
+  "decision_id": "f91c8ff99e04815422e5c56cae3f29e76702577f6aac617085ac3edc62c5904e",
+  "decision_outcome": "allow",
+  "decision_reasons": [
+    "allow"
+  ],
+  "evaluated_at_usec": 1789666319622190,
+  "trail_id": "d82fd5e09b09ae1105dbd60a746bc27b35128d56ed3fa6bb0c924df9ae075d35",
+  "packet_id": "50e29d0102dbf024804c29e3e66041121b7080e5e5fe190a3ad6dfb1a7d011e2",
+  "outcome": "evidence",
+  "matched_candidates": 4,
+  "candidate_limit": 100,
+  "lifecycle_excluded": 0,
+  "budget_omitted": 0,
+  "packing_policy": "original",
+  "used_bytes": 2731,
+  "budget_bytes": 4096,
+  "association_omissions": [
+    {
+      "from_item": "backup.rst",
+      "to_item": "context.rst",
+      "reason": "duplicate",
+      "segment_id": "fcfcf7db0a7bd9b8451904797e6ec8068220e62c86dcf7a73b1b259b42e3e35a"
+    },
+    {
+      "from_item": "backup.rst",
+      "to_item": "context.rst",
+      "reason": "duplicate",
+      "segment_id": "ac5dc97308490f6b7d1f594dacc75e8cdec57fd19a740ef7a82725d671514cf1"
+    },
+    {
+      "from_item": "backup.rst",
+      "to_item": "context.rst",
+      "reason": "duplicate",
+      "segment_id": "9eb8b830d41608edc10b8a79ccec8d71dea077c41f9a1ebac3798f4a07498242"
+    }
+  ],
+  "evidence": [
+    {
+      "item": "context.rst",
+      "segment_id": "fcfcf7db0a7bd9b8451904797e6ec8068220e62c86dcf7a73b1b259b42e3e35a",
+      "content_sha256": "c89f0a80057d0955cb8c5ff91b15728c7faf4b820ddc70e194816d3f1a948730",
+      "representation_id": "04b17abe23b036b8cb758914a87e5417ee2432ff3d1c74803eec1041d2c93692",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "byte_start": 0,
+      "byte_end": 1017,
+      "segment_policy": "passage-v1",
+      "rank": 1,
+      "bm25_score": -6.523205473765251,
+      "byte_length": 1017,
+      "text": ".. _sqlite3-connection-context-manager:\n\nHow to use the connection context manager\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nA :class:`Connection` object can be used as a context manager that\nautomatically commits or rolls back open transactions when leaving the body of\nthe context manager.\nIf the body of the :keyword:`with` statement finishes without exceptions,\nthe transaction is committed.\nIf this commit fails,\nor if the body of the ``with`` statement raises an uncaught exception,\nthe transaction is rolled back.\nIf :attr:`~Connection.autocommit` is ``False``,\na new transaction is implicitly opened after committing or rolling back.\n\nIf there is no open transaction upon leaving the body of the ``with`` statement,\nor if :attr:`~Connection.autocommit` is ``True``,\nthe context manager does nothing.\n\n.. note::\n   The context manager neither implicitly opens a new transaction\n   nor closes the connection. If you need a closing context manager, consider\n   using :meth:`contextlib.closing`.\n\n.. testcode::\n\n",
+      "origin": "lexical"
+    },
+    {
+      "item": "context.rst",
+      "segment_id": "ac5dc97308490f6b7d1f594dacc75e8cdec57fd19a740ef7a82725d671514cf1",
+      "content_sha256": "2b0295e6e3f2e6feb06c320f1cce2b27c5ff1046d2bb92d717ddad0c0eea9c5d",
+      "representation_id": "04b17abe23b036b8cb758914a87e5417ee2432ff3d1c74803eec1041d2c93692",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "byte_start": 1590,
+      "byte_end": 1677,
+      "segment_policy": "passage-v1",
+      "rank": 2,
+      "bm25_score": -4.151599000198898,
+      "byte_length": 87,
+      "text": "   # Connection object used as context manager only commits or rollbacks transactions,\n",
+      "origin": "lexical"
+    },
+    {
+      "item": "context.rst",
+      "segment_id": "9eb8b830d41608edc10b8a79ccec8d71dea077c41f9a1ebac3798f4a07498242",
+      "content_sha256": "129f7bd05d5445ed13a6fa1f6f8adac8b26acc5945f6320612d64665a36ea801",
+      "representation_id": "04b17abe23b036b8cb758914a87e5417ee2432ff3d1c74803eec1041d2c93692",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "byte_start": 1677,
+      "byte_end": 1807,
+      "segment_policy": "passage-v1",
+      "rank": 3,
+      "bm25_score": -0.5067263539672983,
+      "byte_length": 130,
+      "text": "   # so the connection object should be closed manually\n   con.close()\n\n.. testoutput::\n   :hide:\n\n   couldn't add Python twice\n\n\n",
+      "origin": "lexical"
+    },
+    {
+      "item": "backup.rst",
+      "segment_id": "6dca15d901c7b3cfa02323e2ae00f7b1d9202b90a72965b7c8eeff60a1cc3957",
+      "content_sha256": "ecad4bc94e29e1137d96909e45c1073795ca167fedea2d5f4ea3756984812378",
+      "representation_id": "9185cef89c29b83e2b20c4c5b4e4e3b2a5a8035b04a5f32b2c1861cf950cb215",
+      "representation_sha256": "084a47686403bd7a7b2b49f96e53ef30f554de9031adda2253fcb3e6ef643dd7",
+      "byte_start": 0,
+      "byte_end": 924,
+      "segment_policy": "passage-v1",
+      "rank": 4,
+      "bm25_score": -0.4400602681828592,
+      "byte_length": 924,
+      "text": "   .. method:: backup(target, *, pages=-1, progress=None, name=\"main\", sleep=0.250)\n\n      Create a backup of an SQLite database.\n\n      Works even if the database is being accessed by other clients\n      or concurrently by the same connection.\n\n      :param ~sqlite3.Connection target:\n          The database connection to save the backup to.\n\n      :param int pages:\n          The number of pages to copy at a time.\n          If equal to or less than ``0``,\n          the entire database is copied in a single step.\n          Defaults to ``-1``.\n\n      :param progress:\n          If set to a :term:`callable`,\n          it is invoked with three integer arguments for every backup iteration:\n          the *status* of the last iteration,\n          the *remaining* number of pages still to be copied,\n          and the *total* number of pages.\n          Defaults to ``None``.\n      :type progress: :term:`callback` | None\n\n",
+      "origin": "lexical"
+    },
+    {
+      "item": "context.rst",
+      "segment_id": "2702378fd46f3389209161992c308e1d8a25bc5b860f289d088a490c9c255ce6",
+      "content_sha256": "2f289b0eaa0c719f7dbf144a22b152e4d4d78502d040fb4836ce6633026f0abb",
+      "representation_id": "04b17abe23b036b8cb758914a87e5417ee2432ff3d1c74803eec1041d2c93692",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "byte_start": 1017,
+      "byte_end": 1136,
+      "segment_policy": "passage-v1",
+      "byte_length": 119,
+      "text": "   con = sqlite3.connect(\":memory:\")\n   con.execute(\"CREATE TABLE lang(id INTEGER PRIMARY KEY, name VARCHAR UNIQUE)\")\n\n",
+      "origin": "association",
+      "association": {
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "author": "examples/backup corpus maintainer"
+      }
+    },
+    {
+      "item": "context.rst",
+      "segment_id": "351bd331bec2c26fc1fd67a762d56160c82827f698e66296646c102734ae2800",
+      "content_sha256": "6580b7e92e2713d96b9d4249f3fd1d57b3456b6a208a02268c0429c957e63283",
+      "representation_id": "04b17abe23b036b8cb758914a87e5417ee2432ff3d1c74803eec1041d2c93692",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "byte_start": 1136,
+      "byte_end": 1283,
+      "segment_policy": "passage-v1",
+      "byte_length": 147,
+      "text": "   # Successful, con.commit() is called automatically afterwards\n   with con:\n       con.execute(\"INSERT INTO lang(name) VALUES(?)\", (\"Python\",))\n\n",
+      "origin": "association",
+      "association": {
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "author": "examples/backup corpus maintainer"
+      }
+    },
+    {
+      "item": "context.rst",
+      "segment_id": "da8060dc4affedb8df06b3651670fae9073c29a9c0b226ce472a63f5775a1632",
+      "content_sha256": "14c265aeb35b3b3f156556d9b3031934b3bdef08548e972e8daec2cc000f90dc",
+      "representation_id": "04b17abe23b036b8cb758914a87e5417ee2432ff3d1c74803eec1041d2c93692",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "byte_start": 1283,
+      "byte_end": 1362,
+      "segment_policy": "passage-v1",
+      "byte_length": 79,
+      "text": "   # con.rollback() is called after the with block finishes with an exception,\n",
+      "origin": "association",
+      "association": {
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "author": "examples/backup corpus maintainer"
+      }
+    },
+    {
+      "item": "context.rst",
+      "segment_id": "ea532538be01181880cdbd6dbfc2c60004701099b6731cfca86f8fd6dc6f4298",
+      "content_sha256": "7b6ce82b850be31edd7e9bc4bb32dee2acc15271c394f41e810391fd917752ca",
+      "representation_id": "04b17abe23b036b8cb758914a87e5417ee2432ff3d1c74803eec1041d2c93692",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "byte_start": 1362,
+      "byte_end": 1590,
+      "segment_policy": "passage-v1",
+      "byte_length": 228,
+      "text": "   # the exception is still raised and must be caught\n   try:\n       with con:\n           con.execute(\"INSERT INTO lang(name) VALUES(?)\", (\"Python\",))\n   except sqlite3.IntegrityError:\n       print(\"couldn't add Python twice\")\n\n",
+      "origin": "association",
+      "association": {
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "author": "examples/backup corpus maintainer"
+      }
+    }
+  ],
+  "latency_micros": 67124
+}

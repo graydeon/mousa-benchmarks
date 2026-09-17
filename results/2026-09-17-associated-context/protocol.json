@@ -1,0 +1,39 @@
+{
+  "label": "Fixed development comparison of unassociated retrieval against opt-in declared-association retrieval",
+  "product_base": "e2291752492824dfc19a1dfb0fa81fcbe61d3578",
+  "product_candidate": "13c9d625eabb966da791a09e4b8705eca81a5765 (published as PR32, merge e5f8fad9424cb759ffe258a004d1b970189d288d)",
+  "corpus_archive_sha256": "fa6eff0e02c00fe13bfc086f4f9bf574dff45402281e4abd76584504fff10502",
+  "declarations_sha256": "eb4a042e8409746af7745e800ce11b231871a3a14231b99271d16ba9f5a46062",
+  "runs": {
+    "baseline": "six frozen cases without --associations, fresh store per case",
+    "proposed": "the same six cases with the fixed declaration file, fresh stores",
+    "associated_followup": "the fixed follow-up query with the declaration file"
+  },
+  "expected_before_run": "association fires only for the followup case; partial and budget cases unchanged because no primary passage is selected; primary selection identical everywhere",
+  "categories": {
+    "complete": [],
+    "partial": [
+      "byte_budget_omission"
+    ],
+    "followup": [
+      "applicability_context_missing",
+      "present_not_retrieved_before_association"
+    ],
+    "absent": [
+      "absent_from_bounded_corpus"
+    ],
+    "absence_followup": [
+      "absent_from_bounded_corpus"
+    ],
+    "budget": [
+      "byte_budget_omission"
+    ]
+  },
+  "honesty": "Caller semantic support remains a caller judgment. The engine adds no semantic-support, completeness or held-out claim. The 180-byte miss is retained as a budget omission.",
+  "raw": {
+    "comparison.json": "per-case baseline vs proposed outcome, bytes, packet identity, released items",
+    "associated-packet.json": "the proposed followup-case packet with association provenance",
+    "declarations.json": "the fixed declaration file used for all proposed runs",
+    "followup-query-associated.json": "the fixed follow-up query under the proposed configuration"
+  }
+}

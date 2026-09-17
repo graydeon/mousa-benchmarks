@@ -1,0 +1,183 @@
+{
+  "complete": {
+    "baseline": {
+      "outcome": "evidence",
+      "used_bytes": 3397,
+      "matched_candidates": 6,
+      "packet_id": "379a76e0aec33986066406fcdc16b69d3af9388722ab76a14a540c9149d9c615",
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ]
+    },
+    "proposed": {
+      "outcome": "evidence",
+      "used_bytes": 3397,
+      "matched_candidates": 6,
+      "packet_id": "379a76e0aec33986066406fcdc16b69d3af9388722ab76a14a540c9149d9c615",
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ]
+    }
+  },
+  "partial": {
+    "baseline": {
+      "outcome": "budget_omitted",
+      "used_bytes": 0,
+      "matched_candidates": 3,
+      "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+      "items": []
+    },
+    "proposed": {
+      "outcome": "budget_omitted",
+      "used_bytes": 0,
+      "matched_candidates": 3,
+      "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+      "items": []
+    }
+  },
+  "followup": {
+    "baseline": {
+      "outcome": "evidence",
+      "used_bytes": 2163,
+      "matched_candidates": 3,
+      "packet_id": "7553c5fdddddb5a29906b4d5ab8f7df83dfea3165dd3852d5347f841852f5b15",
+      "items": [
+        "backup.rst"
+      ]
+    },
+    "proposed": {
+      "outcome": "evidence",
+      "used_bytes": 2163,
+      "matched_candidates": 3,
+      "packet_id": "7553c5fdddddb5a29906b4d5ab8f7df83dfea3165dd3852d5347f841852f5b15",
+      "items": [
+        "backup.rst"
+      ]
+    }
+  },
+  "absent": {
+    "baseline": {
+      "outcome": "evidence",
+      "used_bytes": 2163,
+      "matched_candidates": 3,
+      "packet_id": "7553c5fdddddb5a29906b4d5ab8f7df83dfea3165dd3852d5347f841852f5b15",
+      "items": [
+        "backup.rst"
+      ]
+    },
+    "proposed": {
+      "outcome": "evidence",
+      "used_bytes": 2163,
+      "matched_candidates": 3,
+      "packet_id": "7553c5fdddddb5a29906b4d5ab8f7df83dfea3165dd3852d5347f841852f5b15",
+      "items": [
+        "backup.rst"
+      ]
+    }
+  },
+  "absence_followup": {
+    "baseline": {
+      "outcome": "evidence",
+      "used_bytes": 2163,
+      "matched_candidates": 3,
+      "packet_id": "7553c5fdddddb5a29906b4d5ab8f7df83dfea3165dd3852d5347f841852f5b15",
+      "items": [
+        "backup.rst"
+      ]
+    },
+    "proposed": {
+      "outcome": "evidence",
+      "used_bytes": 2163,
+      "matched_candidates": 3,
+      "packet_id": "7553c5fdddddb5a29906b4d5ab8f7df83dfea3165dd3852d5347f841852f5b15",
+      "items": [
+        "backup.rst"
+      ]
+    }
+  },
+  "budget": {
+    "baseline": {
+      "outcome": "budget_omitted",
+      "used_bytes": 0,
+      "matched_candidates": 6,
+      "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+      "items": []
+    },
+    "proposed": {
+      "outcome": "budget_omitted",
+      "used_bytes": 0,
+      "matched_candidates": 6,
+      "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+      "items": []
+    }
+  },
+  "followup_associated": {
+    "outcome": "evidence",
+    "used_bytes": 3970,
+    "packet_id": "87af5ecda4106b8e0b088ea287a4c4214d32f1a6ec671b074ada682b91023c9b",
+    "items": [
+      "backup.rst",
+      "context.rst"
+    ],
+    "associated_hits": [
+      {
+        "item": "context.rst",
+        "byte_start": 0,
+        "byte_end": 1017,
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "author": "examples/backup corpus maintainer"
+      },
+      {
+        "item": "context.rst",
+        "byte_start": 1017,
+        "byte_end": 1136,
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "author": "examples/backup corpus maintainer"
+      },
+      {
+        "item": "context.rst",
+        "byte_start": 1136,
+        "byte_end": 1283,
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "author": "examples/backup corpus maintainer"
+      },
+      {
+        "item": "context.rst",
+        "byte_start": 1283,
+        "byte_end": 1362,
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "author": "examples/backup corpus maintainer"
+      },
+      {
+        "item": "context.rst",
+        "byte_start": 1362,
+        "byte_end": 1590,
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "author": "examples/backup corpus maintainer"
+      },
+      {
+        "item": "context.rst",
+        "byte_start": 1590,
+        "byte_end": 1677,
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "author": "examples/backup corpus maintainer"
+      },
+      {
+        "item": "context.rst",
+        "byte_start": 1677,
+        "byte_end": 1807,
+        "from_item": "backup.rst",
+        "to_item": "context.rst",
+        "author": "examples/backup corpus maintainer"
+      }
+    ]
+  }
+}
