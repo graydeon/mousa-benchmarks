@@ -1,0 +1,142 @@
+{
+  "close-only-smoke/attempts.jsonl": {
+    "bytes": 6505,
+    "sha256": "b6658afb306488570a2ecfb5bc86c717001541e86465812b0631e9401ea58708"
+  },
+  "close-only-smoke/cost.txt": {
+    "bytes": 16,
+    "sha256": "0951e5f0f77e88e9e23e7f7eccefa17c31d4f3f2ebaa967376340f628bc38771"
+  },
+  "close-only-smoke/observations.jsonl": {
+    "bytes": 6299,
+    "sha256": "0df2a5b27e7a43eef4fd0f22673eccb9c521483ffb69dc671a6fdb759be511a0"
+  },
+  "failed-study/attempts.jsonl": {
+    "bytes": 6505,
+    "sha256": "f06f94cb1dbd195c88ca6f79c22ba29238b32ecd973ef11ecf741b49b8278d95"
+  },
+  "failed-study/baseline-build.txt": {
+    "bytes": 1103,
+    "sha256": "4fe88573b5d8ca6561348a3a2ca281feaed029cc1d65cf790ce2ef74e433840b"
+  },
+  "failed-study/baseline-source.json": {
+    "bytes": 12034,
+    "sha256": "7e95625b705460b987b2d43228fdc4af6dc04ba34245ef1a9ca7aa888b0caa7e"
+  },
+  "failed-study/candidate-build.txt": {
+    "bytes": 1104,
+    "sha256": "be83cb02df0438726f01ebc16b0f6a5f2a35be1ecc119b027e78867aa41cdbc1"
+  },
+  "failed-study/candidate-source.json": {
+    "bytes": 12034,
+    "sha256": "872b135f17ccd5cabf2acfd56b471a72df6ea893c078adef148e41a4ee1d1d95"
+  },
+  "failed-study/cost.txt": {
+    "bytes": 16,
+    "sha256": "f102043bb03beb43cf1387231eb7ca24787cb7b4cfae59bbde20a6973bd6c5a1"
+  },
+  "failed-study/go-env.json": {
+    "bytes": 1557,
+    "sha256": "f44f785e00741ba1656e354dfa0a4e8a11476d137190aaa562cc7261adb564d1"
+  },
+  "failed-study/kernel.txt": {
+    "bytes": 123,
+    "sha256": "84084c99e0cdf31c6e9e7abe1049d7b6001a00a3dcfb7ca1746affa2cdd05278"
+  },
+  "failed-study/observations.jsonl": {
+    "bytes": 6299,
+    "sha256": "22311f377a76bb7b58de64a9cafafcc1f97407a851a16b883f40db07a71e4735"
+  },
+  "failed-study/toolchain.txt": {
+    "bytes": 32,
+    "sha256": "f554cfdb85411c2bb1d503df3f53dfbad1f753eb8271938833166a5d26a7547c"
+  },
+  "fixtures/small-0.sqlite": {
+    "bytes": 417792,
+    "sha256": "0c697debe9d226ce460c9074c719814108284575a0ea686c0f8b73ba0700083b"
+  },
+  "receipts/diagnostic-status.log": {
+    "bytes": 3035,
+    "sha256": "1faed040380996aeacee81420a41b11cc49106ac5d2d0e686cff22f76c9cb165"
+  },
+  "receipts/input-hashes.json": {
+    "bytes": 693,
+    "sha256": "b10d9601580cbd26f53a5e18020d574d5d2ca27807e0dfe667f5fe842b170126"
+  },
+  "receipts/smoke-status.log": {
+    "bytes": 1940,
+    "sha256": "a0cd26d1280fd5076b44166e75692c262ac4e81e925f1e8a1c421dd894c3eb96"
+  },
+  "receipts/smoke.log": {
+    "bytes": 514,
+    "sha256": "93d31b4736788252c767467b26098ba6b85a671b77cfc9e4a233eaf56fb9c23f"
+  },
+  "receipts/smoke.sh": {
+    "bytes": 341,
+    "sha256": "54cebcb4d4f86c660b67bb12b800f18a3528e8f01e29035b6376e00511a4cce0"
+  },
+  "receipts/smoke2-status.log": {
+    "bytes": 1943,
+    "sha256": "32b8477b1697e284cfc6e80b02d49baf15bea45d59308d2a03660713e6298737"
+  },
+  "receipts/smoke2.log": {
+    "bytes": 74,
+    "sha256": "7ac392ffb13723f86cbe07f96d08ce614040b6674e72948cb7ce3e3135f5127a"
+  },
+  "receipts/source-check.json": {
+    "bytes": 78,
+    "sha256": "3c77c2589a620e645c662e93cbbb7c6ce278000712b0d7208530d6f561e6bddc"
+  },
+  "receipts/worker.log": {
+    "bytes": 992,
+    "sha256": "6384524e4e188266eb8b93330dd76f916901c7b6e472f0d47cfcdfe8eb495eda"
+  },
+  "receipts/worker.sh": {
+    "bytes": 1362,
+    "sha256": "10c7d6af63c4dba570c14de28fa3ba10745789eeb5090e312fe6a009b1022ae6"
+  },
+  "scripts/instrument.py": {
+    "bytes": 3412,
+    "sha256": "1cdd8a4506c329e616630618da18ac1d2f33a8c77dd94a5a87be8181d02d77e6"
+  },
+  "scripts/run-close-only.py": {
+    "bytes": 5633,
+    "sha256": "02de2d35eaf95ae11aa3056c1a901404b5ffeb2df0fb3f397675c5ef21538812"
+  },
+  "scripts/run-frozen.py": {
+    "bytes": 5413,
+    "sha256": "97def167f78c11728550510ce5036f7d87755d0816ddcdf00aabdf0d3ba1ce29"
+  },
+  "scripts/run.py": {
+    "bytes": 5828,
+    "sha256": "ce30683a09cdc79fd0b2456a2a13be4eedf7942dc6bc1437bd9cfccb6c2d1531"
+  },
+  "sidecar-safe-smoke/attempts.jsonl": {
+    "bytes": 26015,
+    "sha256": "6e442401e594ede33606b69e1a7542046ed5bc8c2f8c664a4492c8e3e0689546"
+  },
+  "sidecar-safe-smoke/cost.txt": {
+    "bytes": 16,
+    "sha256": "88afd4f00a1475c1977dd83308200b61afee808977877ffb7b50b38e820b5c39"
+  },
+  "sidecar-safe-smoke/observations.jsonl": {
+    "bytes": 25191,
+    "sha256": "be105d99d449aeeaf19f34bcd92b3eda8121382536dc6442258c6a96e5cca7f0"
+  },
+  "sidecar-safe-smoke/smoke-context.json": {
+    "bytes": 2588,
+    "sha256": "2ade41e4f9d3d30f53a136755b5f5779e8b70c010ca4111919625c0bdc1a7899"
+  },
+  "sources/candidate.patch": {
+    "bytes": 13410,
+    "sha256": "0fdde913cff410c08ee2cd5b4b2eaa2216a101ef448c14a8a2194eb15e973e26"
+  },
+  "sources/old-baseline-build.txt": {
+    "bytes": 1033,
+    "sha256": "2fc71d6d7ae581e52bd3a89f5d8ae72873b055b9514d729e6164908d5540047d"
+  },
+  "sources/old-candidate-build.txt": {
+    "bytes": 1034,
+    "sha256": "6f3a2882246cc6d9fda7294f7d21519e70a5b33941f445626013044241d481c5"
+  }
+}
