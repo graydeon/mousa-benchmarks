@@ -1,0 +1,85 @@
+{
+  "source_base": "4d0ec962eae5e80c2d63069471ae509cef91cf3e",
+  "files": {
+    "measured/source-delta.tar.gz": {
+      "bytes": 23561,
+      "sha256": "35368412ada81abf35b98b4e150259b853558d727163c1f11cb7a43fa98f66f3"
+    },
+    "measured/questions.json": {
+      "bytes": 1620,
+      "sha256": "1bc999b2d9d9eddd99d152a18c848836545123ffe8e15dc68ae00e93aa87d844"
+    },
+    "measured/identity.json": {
+      "bytes": 1601,
+      "sha256": "644b2da0b94af496f6f3b990d10b84ce7a0c0d41c321c5ee6f38849cf59e03b3"
+    },
+    "measured/expanded-corpus.tar.xz": {
+      "bytes": 13388,
+      "sha256": "6b7cb47de2a083e15301b8bb94f903f00022a12284fd0ad8732f0e811ee68ce9"
+    },
+    "measured/cases.json": {
+      "bytes": 3378,
+      "sha256": "23d46ab513c84647354fec289da1536d13de346e05b8f808e33822bd92b8986f"
+    },
+    "measured/run.py": {
+      "bytes": 9492,
+      "sha256": "19dcf725218bbad06d4ba24e0cfe0ff2d240eebfaedd7b4372ad9dc66166e908"
+    },
+    "measured/analysis.json": {
+      "bytes": 17025,
+      "sha256": "92cafe7006e2f23e3a5b81aabbbb08f98c8f9bd4143641792fdd3c1d82b4fe93"
+    },
+    "measured/original-corpus.tar.xz": {
+      "bytes": 12188,
+      "sha256": "e5cd214d651de46dd1b573e9928b5b8b3a98fb35d34ca7d8bf3be20b30ed4bd5"
+    },
+    "measured/observations.jsonl": {
+      "bytes": 568763,
+      "sha256": "f57e71fb89e5bbac7fb27ddf2884131a3a4bd2314470cd7a14e6f4778206f671"
+    },
+    "measured/source-manifest.json": {
+      "bytes": 12630,
+      "sha256": "47ec193cdcbdae1e75b62e46ce8fe49bae5f46e9dffd23347a8c3a83c7b1947c"
+    },
+    "pilot/source-delta.tar.gz": {
+      "bytes": 23140,
+      "sha256": "1c6eccdefe292e6983031cea4a432a122d2414184945a0b868253b0ab7e10e0f"
+    },
+    "pilot/questions.json": {
+      "bytes": 1620,
+      "sha256": "1bc999b2d9d9eddd99d152a18c848836545123ffe8e15dc68ae00e93aa87d844"
+    },
+    "pilot/identity.json": {
+      "bytes": 1598,
+      "sha256": "e578a5acf817f86ef27881de560c065893cc8da0eaa434402c4b8df37a3deeaa"
+    },
+    "pilot/expanded-corpus.tar.xz": {
+      "bytes": 13388,
+      "sha256": "6b7cb47de2a083e15301b8bb94f903f00022a12284fd0ad8732f0e811ee68ce9"
+    },
+    "pilot/cases.json": {
+      "bytes": 3378,
+      "sha256": "23d46ab513c84647354fec289da1536d13de346e05b8f808e33822bd92b8986f"
+    },
+    "pilot/run.py": {
+      "bytes": 9492,
+      "sha256": "19dcf725218bbad06d4ba24e0cfe0ff2d240eebfaedd7b4372ad9dc66166e908"
+    },
+    "pilot/analysis.json": {
+      "bytes": 8535,
+      "sha256": "c45767592ee65c598d15d8ea93f598c6025d63ecf3fd3213a2b0b6bb3a249234"
+    },
+    "pilot/original-corpus.tar.xz": {
+      "bytes": 12188,
+      "sha256": "e5cd214d651de46dd1b573e9928b5b8b3a98fb35d34ca7d8bf3be20b30ed4bd5"
+    },
+    "pilot/observations.jsonl": {
+      "bytes": 284386,
+      "sha256": "1afa648f9737b34cbeaf7c60a68899e4fe9b73c0c6297c87eaa0c6375c544954"
+    },
+    "pilot/source-manifest.json": {
+      "bytes": 12630,
+      "sha256": "0205e30e0a833a195de00cff9281268b3b2a83d2237c4f9bacf04ba50edc39a3"
+    }
+  }
+}
