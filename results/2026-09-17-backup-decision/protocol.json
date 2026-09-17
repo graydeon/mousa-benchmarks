@@ -1,0 +1,35 @@
+{
+  "label": "Fixed development evidence; no held-out evaluation or assessor-accuracy claim",
+  "product_base": "32c31217b7dc0f699e4dbbb17d4020d960c5a288",
+  "benchmark_base": "bd9a63c6cb5ccbb4e1c3f91f22a1afd4ec420c97",
+  "corpus_archive_sha256": "fa6eff0e02c00fe13bfc086f4f9bf574dff45402281e4abd76584504fff10502",
+  "cases_sha256": "2a2bd9b778b5d1cf40f3c6eb823baf1bcd4c51b64140abaae3a339ba9c6afb77",
+  "reviews_sha256": "754b8341c3effc6bb2d73ebe7339c75130ae3715c53cc9bb6909e35b183d88dc",
+  "runs": {
+    "inspection": "six initial packets, no followups; retained separately",
+    "pilot": "six cases, two fixed followups, full run/analyze path",
+    "measured": "one repetition of six cases and two fixed followups; fresh store per case"
+  },
+  "expected_miss": "The predeclared partial case returned no evidence at180 bytes in inspection. Preserve it as budget omission; do not retune. The followup case demonstrates partial coverage with missing context.",
+  "categories": {
+    "complete": [],
+    "partial": [
+      "byte_budget_omission"
+    ],
+    "followup": [
+      "present_not_retrieved",
+      "applicability_context_missing"
+    ],
+    "absent": [
+      "absent_from_bounded_corpus"
+    ],
+    "absence_followup": [
+      "absent_from_bounded_corpus"
+    ],
+    "budget": [
+      "byte_budget_omission"
+    ]
+  },
+  "scope_review": "Both complete excerpts were read. Backup parameters and transaction context behavior are present. Neither excerpt guarantees completion time. Corpus absence applies only to these3970 document bytes, not all upstream documentation.",
+  "measurements": "Execution exit codes, citation consistency, declared fact coverage, outcome, unresolved facts, followup change, released bytes, wall latency from initial retrieve through final assess, corpus and store/history sizes. Setup and build excluded. Shared-host timings descriptive only."
+}

@@ -1,0 +1,234 @@
+{
+  "label": "Curated caller judgments after inspection; not an automatic semantic assessor. Coordinates bind fixture references only, never select or change retrieval.",
+  "cases": {
+    "complete": {
+      "initial": {
+        "concurrency": {
+          "judgment": "supported",
+          "reason": "The backup method explicitly permits access by other clients or the same connection.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "pages": {
+          "judgment": "supported",
+          "reason": "The pages parameter describes per-step copies and the zero-or-negative whole-database exception.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "progress": {
+          "judgment": "supported",
+          "reason": "The callback receives status, remaining and total integers per iteration.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "closure": {
+          "judgment": "supported",
+          "reason": "The context-manager note explicitly excludes closing; the backup example closes both connections.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "context.rst",
+              "byte_start": 0,
+              "byte_end": 1017
+            },
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 924,
+              "byte_end": 1918
+            }
+          ]
+        }
+      }
+    },
+    "partial": {
+      "initial": {
+        "pages": {
+          "judgment": "unassessed",
+          "reason": "The fixed byte budget returned no passage.",
+          "references": []
+        },
+        "closure": {
+          "judgment": "unassessed",
+          "reason": "The fixed byte budget returned no passage.",
+          "references": []
+        }
+      }
+    },
+    "followup": {
+      "initial": {
+        "concurrency": {
+          "judgment": "supported",
+          "reason": "The backup method explicitly permits access by other clients or the same connection.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "pages": {
+          "judgment": "supported",
+          "reason": "The pages parameter describes per-step copies and the zero-or-negative whole-database exception.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "progress": {
+          "judgment": "supported",
+          "reason": "The callback receives status, remaining and total integers per iteration.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "closure": {
+          "judgment": "partial",
+          "reason": "The backup example explicitly closes both connections, but the packet lacks the qualification that the context manager itself does not close them.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 924,
+              "byte_end": 1918
+            }
+          ]
+        }
+      },
+      "final": {
+        "concurrency": {
+          "judgment": "supported",
+          "reason": "The backup method explicitly permits access by other clients or the same connection.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "pages": {
+          "judgment": "supported",
+          "reason": "The pages parameter describes per-step copies and the zero-or-negative whole-database exception.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "progress": {
+          "judgment": "supported",
+          "reason": "The callback receives status, remaining and total integers per iteration.",
+          "references": [
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 0,
+              "byte_end": 924
+            }
+          ]
+        },
+        "closure": {
+          "judgment": "supported",
+          "reason": "The context-manager note explicitly excludes closing; the backup example closes both connections.",
+          "references": [
+            {
+              "packet": 1,
+              "item": "context.rst",
+              "byte_start": 0,
+              "byte_end": 1017
+            },
+            {
+              "packet": 0,
+              "item": "backup.rst",
+              "byte_start": 924,
+              "byte_end": 1918
+            }
+          ]
+        }
+      }
+    },
+    "absent": {
+      "initial": {
+        "deadline": {
+          "judgment": "unsupported",
+          "reason": "The bounded excerpts state no maximum completion time. The sleep parameter is an interval between attempts, not a completion guarantee.",
+          "references": []
+        }
+      }
+    },
+    "absence_followup": {
+      "initial": {
+        "deadline": {
+          "judgment": "unsupported",
+          "reason": "The bounded excerpts state no maximum completion time. The sleep parameter is an interval between attempts, not a completion guarantee.",
+          "references": []
+        }
+      },
+      "final": {
+        "deadline": {
+          "judgment": "unsupported",
+          "reason": "The bounded excerpts state no maximum completion time. The sleep parameter is an interval between attempts, not a completion guarantee.",
+          "references": []
+        }
+      }
+    },
+    "budget": {
+      "initial": {
+        "concurrency": {
+          "judgment": "unassessed",
+          "reason": "One byte cannot contain any selected passage.",
+          "references": []
+        },
+        "pages": {
+          "judgment": "unassessed",
+          "reason": "One byte cannot contain any selected passage.",
+          "references": []
+        },
+        "progress": {
+          "judgment": "unassessed",
+          "reason": "One byte cannot contain any selected passage.",
+          "references": []
+        },
+        "closure": {
+          "judgment": "unassessed",
+          "reason": "One byte cannot contain any selected passage.",
+          "references": []
+        }
+      }
+    }
+  }
+}
