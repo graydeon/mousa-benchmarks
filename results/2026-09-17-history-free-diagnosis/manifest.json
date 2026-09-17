@@ -1,0 +1,35 @@
+{
+  "mousa_revision": "2b379a3c6cc0059d6c05890b44e42fc6e748154a",
+  "benchmark_base": "38119a99bfc07bf6b49a9a6f71fbcf17d9e84fd0",
+  "outcome": "UNRESOLVED; frozen diagnostic terminated before performance blocks; previous candidate REJECTED",
+  "files": {
+    "README.md": {
+      "bytes": 12479,
+      "sha256": "075e3f050c6a58feac76582f4e9b3daf84ce71be0eefc22463e140c3c3c88864"
+    },
+    "archive-members.json": {
+      "bytes": 4867,
+      "sha256": "b5250b205bf5697e7630339bcb1e9ec8458b158591df74a92990ba53a99aec19"
+    },
+    "binary-hashes.json": {
+      "bytes": 518,
+      "sha256": "9cd9005f2fcc2cccf6c9fd5f0fdf694b0b2f1b29c3cc10a5058de7d0310fce06"
+    },
+    "existing-analysis.json": {
+      "bytes": 5589,
+      "sha256": "51d5378764707ba3225f7925f6e9bd1727f70d215480299fcf25807097c7ecde"
+    },
+    "protocol.json": {
+      "bytes": 3975,
+      "sha256": "3fbbfdc087d98dbcebbb0f42a1901d82035a200d6bc3f93b0e854a7da8fbd25a"
+    },
+    "raw-results.tar.xz": {
+      "bytes": 27812,
+      "sha256": "82b65cfaab0d36117197833b723b99ac7d18fd94f47de6dc7e45b44a84a310e1"
+    },
+    "verify.py": {
+      "bytes": 2298,
+      "sha256": "a0b354b853b6e06e84a35d632e330fa836adb4968bb0620c8c32dfb1bdfc274d"
+    }
+  }
+}

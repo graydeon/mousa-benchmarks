@@ -1,0 +1,235 @@
+{
+  "seed_counts": {
+    "source_trails": 0,
+    "source_trail_candidates": 0,
+    "policy_decisions": 0
+  },
+  "pairs": [
+    {
+      "pair": 0,
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "baseline_ms": 51.166141,
+      "candidate_ms": 49.783708,
+      "difference_ms": -1.382433000000006,
+      "baseline_cpu_s": 0.03,
+      "candidate_cpu_s": 0.03
+    },
+    {
+      "pair": 1,
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "baseline_ms": 39.823737,
+      "candidate_ms": 56.273762,
+      "difference_ms": 16.450024999999997,
+      "baseline_cpu_s": 0.02,
+      "candidate_cpu_s": 0.04
+    },
+    {
+      "pair": 2,
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "baseline_ms": 43.418278,
+      "candidate_ms": 50.089162,
+      "difference_ms": 6.670884000000001,
+      "baseline_cpu_s": 0.02,
+      "candidate_cpu_s": 0.03
+    },
+    {
+      "pair": 3,
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "baseline_ms": 53.523723,
+      "candidate_ms": 54.157803,
+      "difference_ms": 0.6340800000000044,
+      "baseline_cpu_s": 0.03,
+      "candidate_cpu_s": 0.03
+    },
+    {
+      "pair": 4,
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "baseline_ms": 53.797917,
+      "candidate_ms": 54.245356,
+      "difference_ms": 0.4474390000000028,
+      "baseline_cpu_s": 0.04,
+      "candidate_cpu_s": 0.04
+    },
+    {
+      "pair": 5,
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "baseline_ms": 35.500688,
+      "candidate_ms": 51.751037,
+      "difference_ms": 16.250349,
+      "baseline_cpu_s": 0.01,
+      "candidate_cpu_s": 0.03
+    },
+    {
+      "pair": 6,
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "baseline_ms": 51.666169,
+      "candidate_ms": 45.819923,
+      "difference_ms": -5.846245999999994,
+      "baseline_cpu_s": 0.03,
+      "candidate_cpu_s": 0.02
+    },
+    {
+      "pair": 7,
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "baseline_ms": 53.600577,
+      "candidate_ms": 55.25454,
+      "difference_ms": 1.6539629999999974,
+      "baseline_cpu_s": 0.03,
+      "candidate_cpu_s": 0.04
+    },
+    {
+      "pair": 8,
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "baseline_ms": 42.300091,
+      "candidate_ms": 52.625488,
+      "difference_ms": 10.325396999999995,
+      "baseline_cpu_s": 0.02,
+      "candidate_cpu_s": 0.03
+    },
+    {
+      "pair": 9,
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "baseline_ms": 43.692904,
+      "candidate_ms": 52.960847,
+      "difference_ms": 9.267943000000002,
+      "baseline_cpu_s": 0.02,
+      "candidate_cpu_s": 0.03
+    },
+    {
+      "pair": 10,
+      "order": [
+        "baseline",
+        "candidate"
+      ],
+      "baseline_ms": 41.451669,
+      "candidate_ms": 56.446295,
+      "difference_ms": 14.994625999999997,
+      "baseline_cpu_s": 0.02,
+      "candidate_cpu_s": 0.04
+    },
+    {
+      "pair": 11,
+      "order": [
+        "candidate",
+        "baseline"
+      ],
+      "baseline_ms": 34.918426,
+      "candidate_ms": 53.469121,
+      "difference_ms": 18.550695000000005,
+      "baseline_cpu_s": 0.02,
+      "candidate_cpu_s": 0.04
+    }
+  ],
+  "median_paired_difference_ms": 7.969413500000002,
+  "candidate_slower_pairs": 10,
+  "stage_small_zero": [
+    {
+      "arm": "baseline",
+      "fixture": "small",
+      "history": 0,
+      "policy": "original",
+      "inclusive_ms": {
+        "open": 27.962008,
+        "queryItems": 10.375351,
+        "verifySourceTrailRecords": 0.195046,
+        "getSegment": 0.695544,
+        "lexicalEvidencePaths": 0.201429
+      },
+      "historical_calls": {
+        "getSourceTrail": 0,
+        "getSegment": 0,
+        "lexicalEvidencePaths": 0
+      }
+    },
+    {
+      "arm": "candidate",
+      "fixture": "small",
+      "history": 0,
+      "policy": "original",
+      "inclusive_ms": {
+        "open": 20.497516,
+        "queryItems": 12.011379,
+        "verifySourceTrailRecords": 0.219902,
+        "getSegment": 0.533533,
+        "lexicalEvidencePaths": 0.233518
+      },
+      "historical_calls": {
+        "getSourceTrail": 0,
+        "getSegment": 0,
+        "lexicalEvidencePaths": 0
+      }
+    },
+    {
+      "arm": "baseline",
+      "fixture": "small",
+      "history": 0,
+      "policy": "exact-v1",
+      "inclusive_ms": {
+        "open": 24.051493,
+        "queryItems": 10.597137,
+        "verifySourceTrailRecords": 0.19687000000000002,
+        "getSegment": 0.66088,
+        "lexicalEvidencePaths": 0.42613
+      },
+      "historical_calls": {
+        "getSourceTrail": 0,
+        "getSegment": 0,
+        "lexicalEvidencePaths": 0
+      }
+    },
+    {
+      "arm": "candidate",
+      "fixture": "small",
+      "history": 0,
+      "policy": "exact-v1",
+      "inclusive_ms": {
+        "open": 15.342578,
+        "queryItems": 10.656549,
+        "verifySourceTrailRecords": 0.13866,
+        "getSegment": 0.451597,
+        "lexicalEvidencePaths": 0.370936
+      },
+      "historical_calls": {
+        "getSourceTrail": 0,
+        "getSegment": 0,
+        "lexicalEvidencePaths": 0
+      }
+    }
+  ],
+  "limits": [
+    "GNU time CPU values rounded to 0.01 seconds",
+    "No per-invocation timestamps, scheduler, pressure or cgroup records",
+    "Fixture copy and SHA verification precede wall timer; Python spawn, GNU time and output collection included",
+    "Stage timings exclude runtime startup, final MemStats and diagnostic serialization; nested stage overhead changes binaries"
+  ]
+}
