@@ -1,0 +1,41 @@
+{
+  "status": "frozen after complete separate pilot; diagnostic only",
+  "baseline_finding": "Historical reuse remains rejected. Small original zero-history wall median increased 22.18%; separate single instrumented opening probe decreased. Existing 10ms CPU measurements and missing per-call context cannot attribute this.",
+  "intended_change": "Measurement only: high-resolution child rusage, context counters, verified resets, identical-binary control and matched builds. No runtime correction without causal evidence.",
+  "validation": "python3 run.py on managed worker, smoke before timing; analyze.py after receipt validation",
+  "fixture": "Preserved small-0.sqlite SHA256 0c697debe9d226ce460c9074c719814108284575a0ea686c0f8b73ba0700083b; zero source_trails, source_trail_candidates and policy_decisions before every call; one allowed nonempty result and one projected candidate afterwards",
+  "command": "GNU time wrapper around mousa -store work.sqlite query --source scaling --packing-policy original --budget-bytes 8192 amber",
+  "hypotheses": [
+    "Persistent source-related effect: old and matched rebuilt B/C pairs show aligned wall and child CPU shifts outside the A/A control interval. This supports source association, not a compiler mechanism.",
+    "Old binary/build association: old B/C shift persists but matched rebuilds do not; metadata or further mechanism evidence is required before any correction.",
+    "Run variability or order: A/A shifts or wide intervals overlap the proposed 10% effect; context deltas may locate guest scheduling or I/O but cannot observe other host workloads.",
+    "Changed query/readback versus opening: separate repeated stage probes locate an association, without substituting instrumented times for wall measurements. Empty startup scans do not call cache methods. Original query readback calls modified getSourceTrail but not exact helpers."
+  ],
+  "builds": "Same preserved baseline tar and exact candidate patch; Go worker toolchain, CGO_ENABLED=0 GOAMD64=v1 GOMAXPROCS=6. Rebuild both with go build -trimpath -buildvcs=false; record versions, environment, hashes and source manifests. Preserve original binaries as a separate comparison.",
+  "design": "24 blocks. Each block contains A/A using the same old baseline executable, old B/C, rebuilt B/C. Each pair type has exactly 12 AB and 12 BA orders shuffled with seed 20260917; pair-type order shuffled per block. Two warmup pairs per type, retained but excluded. Then 8 balanced stage B/C pairs from separately instrumented matched builds. No exact/shared expansion in this budget.",
+  "sample_count": "144 uninstrumented measured invocations, 12 warmups, 16 stage invocations; 4 smoke invocations",
+  "analysis": "All observations retained. Report medians, paired differences, paired ratios, 95% seeded paired-bootstrap intervals (10000 resamples) for median ratio and median paired difference; A/A interval compared with +/-10% practical effect. Finite-sample descriptive intervals assume exchangeable blocks and cannot establish hardware independence. Observed maxima are not p99.",
+  "context": "Record monotonic and UTC start/end, child rusage CPU/faults/context switches/block I/O, loadavg, /proc/stat and available pressure and cgroup cpu.stat/io.stat/memory.current at pair boundaries. Shared host; no host configuration changes.",
+  "bounds": "One worker job maximum 1200 seconds including builds; each query timeout 30 seconds. Stop on assertion/build failure and retain partial evidence; no favorable retries or sample extension. If effect cannot be attributed, retain rejection, publish unresolved question and move to concrete consumer capability review.",
+  "acceptance": "No adoption gates in this diagnostic. A runtime correction requires demonstrated mechanism and a separately frozen adoption study with full/race/client and exact grant checks before publication. No cache variant or threshold is authorized by a noisy or favorable diagnostic.",
+  "id": "history-free-diagnostic-v2-20260917",
+  "pilot": {
+    "worker_id": "98a265a3046840c980291a6af94e15b8",
+    "exit": 0,
+    "excluded_from_measurements": true,
+    "coverage": "six binaries; two complete A/A+old+rebuilt blocks; two stage pairs; full analysis; exit/timeout/WAL/truncated-analysis failure paths"
+  },
+  "predecessor": "2026-09-17-history-free-diagnosis remains failed setup, unchanged",
+  "changes": "Sidecar-safe closed-file inspection from corrected smoke; timeout receipt preservation; pilot mode and complete analyzer. No runtime source change.",
+  "input_hashes": {
+    "analyze.py": "0ef7a2083b6318fe0a1a7ac62c8a2f46b34b346fa872d4e68296e69da7c66044",
+    "baseline.tar": "cd54da14e8303f7a66f1efde1e5dbb65e01743d0cee7c7c1a10ef0c819885358",
+    "candidate.patch": "0fdde913cff410c08ee2cd5b4b2eaa2216a101ef448c14a8a2194eb15e973e26",
+    "failures.py": "1ed56e7fb045fbdcf45d9dab693aed89c076168f4dc8f60e55ac14874676b3c5",
+    "instrument.py": "1cdd8a4506c329e616630618da18ac1d2f33a8c77dd94a5a87be8181d02d77e6",
+    "old-baseline": "1cfba5a4af16bab39e808bdc9142bb5788dc128730d7ded3e1c137b2da2d4225",
+    "old-candidate": "ae3a355de08dc4aed3146a795af4b77f03741a4d79608e5ec352bac9461f8ce8",
+    "run.py": "a08f573f013c58039b812eb44b4a5a49a1eda1a7bae6fd2b109137ab996cadc3",
+    "small-0.sqlite": "0c697debe9d226ce460c9074c719814108284575a0ea686c0f8b73ba0700083b"
+  }
+}

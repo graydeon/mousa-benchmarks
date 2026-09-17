@@ -1,0 +1,40 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 12526,
+      "sha256": "39a958078b0e802004fbdc39bfff3f82f03b3b232611da3458b8dc044dfe0937"
+    },
+    "analyze.py": {
+      "bytes": 4633,
+      "sha256": "0ef7a2083b6318fe0a1a7ac62c8a2f46b34b346fa872d4e68296e69da7c66044"
+    },
+    "archive-members.json": {
+      "bytes": 6659,
+      "sha256": "d2668e6302f1e3a6c774356b91e8e4579b7b4e961af7497501e50451dff1dfed"
+    },
+    "failures.py": {
+      "bytes": 1923,
+      "sha256": "1ed56e7fb045fbdcf45d9dab693aed89c076168f4dc8f60e55ac14874676b3c5"
+    },
+    "instrument.py": {
+      "bytes": 3412,
+      "sha256": "1cdd8a4506c329e616630618da18ac1d2f33a8c77dd94a5a87be8181d02d77e6"
+    },
+    "protocol.json": {
+      "bytes": 5367,
+      "sha256": "22bac31da13a3ae081979b80758ef7324be86ad10c5eb63b0d5ac720a0d9a9ec"
+    },
+    "raw-results.tar.xz": {
+      "bytes": 104936,
+      "sha256": "01c8a83fa86c84533b9c48a14a91c811ef70146d7abd22242bbca84526c69ba6"
+    },
+    "run.py": {
+      "bytes": 6388,
+      "sha256": "a08f573f013c58039b812eb44b4a5a49a1eda1a7bae6fd2b109137ab996cadc3"
+    },
+    "verify.py": {
+      "bytes": 4169,
+      "sha256": "ea2d8c9c2136a24f747e2a2dc538b1fb76a0e56b63f3849eb6449bdb5d997815"
+    }
+  }
+}
