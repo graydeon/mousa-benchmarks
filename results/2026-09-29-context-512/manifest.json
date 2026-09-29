@@ -1,0 +1,11 @@
+{
+  "product_base": "287d411e25c2db982db0625f05290fe82673be9f",
+  "benchmark_base": "9a60f5fa2985d629f058dbd0d7bc27b5ff69c5a4",
+  "files": {
+    "README.md": {"bytes": 5004, "sha256": "97fb6cae299f262b7171cc6b91418722f7c4d3b4b09d9473739ee696aae29083"},
+    "run.py": {"bytes": 6568, "sha256": "5b4ec467eddd6ef99cd89525b0321b94d299793994bfe2e974a2c2902908d784"},
+    "protocol.json": {"bytes": 3594, "sha256": "e8de9ecd2d5481feb22e03c3b7f847003413e9a68c01b26514e30f98cb4653cd"},
+    "raw/packet.json": {"bytes": 11206, "sha256": "eb9c2a069963d9f3e26a376b3c2c6a62b78d89ba581c827a3a0f2435528d4b9c"},
+    "raw/observation.json": {"bytes": 8236, "sha256": "0119a1d67198a37fc5fc9549830132d48b6ca5e3838b3b7b31ac87b0eb115dd6"}
+  }
+}

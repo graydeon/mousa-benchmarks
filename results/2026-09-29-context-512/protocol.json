@@ -1,0 +1,32 @@
+{
+  "question": "When interactively selecting hunks with git restore, how can I show the context between nearby hunks, and what is the default?",
+  "product_baseline": "287d411e25c2db982db0625f05290fe82673be9f",
+  "product_baseline_tree": "6b578f6bc41cb16782e396400ec57a684bc28d95",
+  "companion_baseline": "9a60f5fa2985d629f058dbd0d7bc27b5ff69c5a4",
+  "freeze_protocol_sha256_before_edit": "6b11003ce608164969df90058cd6c1760c3fb9a1e5e22f01f60556cea86ffbc3",
+  "git_version": "2.51.0",
+  "git_revision": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+  "archive_sha256": "6b7cb47de2a083e15301b8bb94f903f00022a12284fd0ad8732f0e811ee68ce9",
+  "corpus_manifest_sha256": "6b058ba6db48468c12592d38d1565b2211b36f00b657fb565bc744f073554ef2",
+  "verified_file_sha256": {
+    "Documentation/git-restore.adoc": "52ce5fdd6921705f570f4042163124764b5c7573596b33abcd569eefc2e196b6",
+    "Documentation/git-switch.adoc": "af2df19ed0b0c84e3f82210433e6912b0989dc9be271728de4c4ccc5e10701b8",
+    "Documentation/diff-context-options.adoc": "9f7c3d9361dea2b8d601a93b01791619e6848cef31c9f28ab4dadeb8720b67a5"
+  },
+  "byte_budget": 4096,
+  "content_token_limit": 512,
+  "tokenizer": "tiktoken==0.12.0/o200k_base",
+  "prompt_layout_before": "Use only the cited Git 2.51.0 passages. If evidence is insufficient, say so.\nQuestion: {question}\nEvidence:\n[{number}] {item} {url} lines {first}-{last}\n{text}\n",
+  "candidate_change": "Omit redundant item from citation header; pinned URL already ends with the same item. Preserve instruction, question, numbered citations, complete passage text, URL, line ranges and greedy whole-passage order.",
+  "expected_order": ["1662caa6dd7d40e24de14b7d4764a7862cdb74bf9fa8c4b4bd44c27e55efd422", "b1918cfab713121387e45f749f18ab27c166edf6f2cb3cbedf50e30887a85318", "2a0517b039098fe7bda9770c688aff93eb069424cb7667b9384cc4e6006f8c55", "ec783ec635f5b94534f1a17062bbfa88b4c4ff1c91948069c2849328573b844c", "cc3f11ed5c8e82f71bdaa7f71f989c53c44f259472dc984a3ba9dde0e0e1ea23"],
+  "expected_parent_directive": {"parent": "Documentation/git-restore.adoc", "child": "Documentation/diff-context-options.adoc", "text": "include::diff-context-options.adoc[]", "line": 53, "byte_start": 1833, "byte_end": 1869},
+  "acceptance": "On the same verified packet, baseline 512 excludes parent; revised 512 includes intact rank 1 and rank 2, excludes rank 3 switch and ranks 4-5, keeps source URL and normalized lines, verifies literal parent include and unchanged packet/trail IDs, enumerates all omissions and token counts. Fit alone does not establish semantic support. Raw JSON, caller/system/tool framing and output reservation are excluded.",
+  "historical_segment_id_note": "expected_order records the earlier single development observation at another source path. Segment IDs bind source identity and are not portable across fixture locations; the run asserts content, rank and coordinates, and uses the actual packet's segment IDs for within-run comparisons.",
+  "passage_content_order": [
+    ["Documentation/diff-context-options.adoc", 0, 372, "9f7c3d9361dea2b8d601a93b01791619e6848cef31c9f28ab4dadeb8720b67a5"],
+    ["Documentation/git-restore.adoc", 939, 1871, "d544404e366f77715c86489cdb1243bef0be30ed16d0fb8dd83e5cfdfd136494"],
+    ["Documentation/git-switch.adoc", 7272, 8280, "528d8e0b81b83937e545608e461d04f0e972dc608cf3eefd2f554d4796539eb6"],
+    ["Documentation/git-restore.adoc", 2877, 3901, "7ec055b37c867969ebb777d3d79d46215547b23192ba61715aa8952434ce0623"],
+    ["Documentation/git-switch.adoc", 4713, 5322, "eed1c3213756de28af072e9cfd65edd7a34c293f08bd1002090a13b6189ef5e3"]
+  ]
+}
