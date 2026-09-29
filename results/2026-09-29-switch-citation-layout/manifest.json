@@ -1,0 +1,16 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 6099,
+      "sha256": "1c843118cc1c272b6b34dfce7afbd00b2427b337107a47338690585a4aad249f"
+    },
+    "protocol.json": {
+      "bytes": 3865,
+      "sha256": "7d242a7db9a72286767f46e44eaab4e7a8c059ed810ded81afea627b1dcf2bce"
+    },
+    "observation.json": {
+      "bytes": 7998,
+      "sha256": "86664fdc432e3380f3a88e25bd44d54a5891379b0ffe1af4bd694a6950af2d98"
+    }
+  }
+}
