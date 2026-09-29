@@ -9,8 +9,13 @@ These are development measurements, including failed experiments and limitations
 - [results/2026-09-16](results/2026-09-16): seven unchanged historical JSON reports. The directory date records migration, not collection.
 - [results/2026-09-16-exact-packing](results/2026-09-16-exact-packing): matched opt-in exact-content packing measurements, frozen fixtures, individual observations and reproduction script.
 - [results/2026-09-16-packing-scalability](results/2026-09-16-packing-scalability): exact-packing stage costs, 0/10/100-trail histories, snapshot-scoped ancestry reuse, allocations and all paired observations.
+- [results/2026-09-16-history-diversity](results/2026-09-16-history-diversity): rejected historical-scan reuse candidate; large-history gains failed small-case latency and tail guards.
 - [results/2026-09-17-history-free-diagnosis](results/2026-09-17-history-free-diagnosis): source/build analysis of the rejected historical-verification candidate, a terminated diagnostic and fixture-inspection smoke corrections. No new performance comparison or adoption.
 - [results/2026-09-17-backup-decision](results/2026-09-17-backup-decision): caller-reviewed SQLite backup checklist, fixed supported/partial/unresolved cases, one-attempt follow-ups and whole-consumer costs.
+- [results/2026-09-17-diagnostic-consumer](results/2026-09-17-diagnostic-consumer): inconclusive controlled follow-up on the rejected candidate and separate Git documentation consumer observations.
+- [results/2026-09-17-corpus-boundaries](results/2026-09-17-corpus-boundaries): fixed Git documentation questions before and after adding separately attributed referenced fragments, including unsupported cases.
+- [results/2026-09-17-associated-context](results/2026-09-17-associated-context): corrected three-arm declared-association comparison; the superseded mislabelled record is retained.
+- [results/2026-09-17-associated-bounds](results/2026-09-17-associated-bounds): oversized-record failure and bounded target-passage enumeration; shared-host timings are descriptive.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.
