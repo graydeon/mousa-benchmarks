@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-29",
+  "original_question": "When git switch finds a branch on multiple remotes, how does checkout.defaultRemote=origin resolve it, and is that setting included in the git-switch manual?",
+  "followup_question": "In the git-switch manual CONFIGURATION section, which literal include::config/checkout.adoc[] directive includes the checkout.defaultRemote configuration fragment?",
+  "reason": "The original packet has the checkout.defaultRemote fragment but no passage containing the parent include directive. The follow-up is a separate authorized query, not a replacement for the original query or its Source Trail.",
+  "git_version": "2.51.0",
+  "git_revision": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+  "archive_sha256": "6b7cb47de2a083e15301b8bb94f903f00022a12284fd0ad8732f0e811ee68ce9",
+  "manifest_sha256": "6b058ba6db48468c12592d38d1565b2211b36f00b657fb565bc744f073554ef2",
+  "file_sha256": {
+    "Documentation/git-switch.adoc": "af2df19ed0b0c84e3f82210433e6912b0989dc9be271728de4c4ccc5e10701b8",
+    "Documentation/config/checkout.adoc": "4eed9ec7a0f79c558b8a7390349e62e327a7fa8b87d12c5aa7d277345af2c06c",
+    "Documentation/includes/cmd-config-section-all.adoc": "79fabba25c379b7d029dda0b1a9eae67b3697a375ae104f0594d16410d98c73b"
+  },
+  "original_protocol_sha256": "688cd14c37bfe62c57d994ee89d33321ecc29bf9b457b56701c8601272a30d6f",
+  "binary_sha256": "5c7236ffdbe340a276d61609b5aaeb873f28ef737fcd9682db9b49fe312014eb",
+  "followup_budget_bytes": 4096,
+  "query_policy": "original",
+  "expected_parent": {"path": "Documentation/git-switch.adoc", "line": 276, "directive": "include::config/checkout.adoc[]", "byte_start": 8762, "byte_end": 8793},
+  "expected_fragment": {"path": "Documentation/config/checkout.adoc", "line_start": 1, "line_end": 19, "byte_start": 0, "byte_end": 845},
+  "tokenizer": "tiktoken==0.12.0/o200k_base",
+  "rendered_content_limit": 512,
+  "prompt_layout": "Use only the cited Git 2.51.0 passages. If evidence is insufficient, say so.\nQuestion: {original_question}\nEvidence:\n[1] {revision-pinned-url} lines {first}-{last}\n{whole-passage}\n[2] {revision-pinned-url} lines {first}-{last}\n{whole-passage}\n",
+  "selection": "First measure the follow-up packet's unchanged greedy whole-passage projection in rank order at 512. Separately test caller-owned two-packet assembly using the original packet's rank-2 complete checkout fragment as citation 1 and the follow-up's complete parent-directive passage as citation 2. Never modify either canonical packet or Source Trail; do not silently replace an omitted passage. Cite no unrelated passage in the assembled content.",
+  "acceptance": "Follow-up packet independently retrieves a passage containing the verified literal directive at the expected normalized coordinates. Both the original packet's intact checkout.defaultRemote fragment and the follow-up parent passage can be cited by separate revision-pinned URLs and normalized line ranges together within 512 rendered-content tokens using the frozen layout, with no unrelated preface. Verify all retrieved evidence byte ranges, line ranges and source digests, enumerate every follow-up and original retrieved/selected/omitted passage and its token cost and lost evidence. A pair that does not fit or lacks either source fails. Token fit is not semantic support or a whole-model-window claim; JSON, message framing and output reservation are outside this bound."
+}

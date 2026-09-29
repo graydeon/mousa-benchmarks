@@ -1,0 +1,31 @@
+{
+  "result": "FAIL_REQUIRED_PAIR_513_OVER_512",
+  "protocol_sha256": "25d7972a38ceda5cc9a7118ec874fbb8ec4be6af1c376c0e0d6d8e5c53092913",
+  "original_private_root_packet_sha256": "98416e570a7e67ee559f19e530de198fadae9b647f9e9e19a9ac28cb376bc6ec",
+  "original_published_root_packet_sha256": "34a906e4fbc5ce73a30c38f24a30dce527d34ab219a771d6cdab5f999cb2b505",
+  "followup_packet_sha256": "4d41681a74b3fcca1134dc6b28ae380434742238378661b138a4bdf97bfe69c1",
+  "original_private_root_packet_id": "ba9306fcdd538883668d13b5fa6502f325a55182ca8c223c35de9f3e2ab9188a",
+  "original_private_root_trail_id": "7eb40dc24cbcb578f234f568e1cee8a7e449e0c60d69026705faf30687c96cfd",
+  "followup_packet_id": "80e2e5210e2cb8f94bfd252d0eb8d0df42a0f8c55201076e52828b5513a1c9d6",
+  "followup_trail_id": "939ce80ca9adcc1b33f18d5030756dff8f59103dffea9e403fdaedaf4260dba8",
+  "source_root_note": "Packet and trail IDs bind the local source root; reproductions at a different root generate different IDs. The original published-root packet has separate IDs, unchanged in its historical run.",
+  "verified_directive": {"path": "Documentation/git-switch.adoc", "line": 276, "byte_start": 8762, "byte_end": 8793, "text": "include::config/checkout.adoc[]", "parent_passage_lines": [256, 285], "parent_passage_bytes": [8280, 8902]},
+  "original": {"used_bytes": 3785, "budget_omitted": 18, "base_tokens": 57, "projected_tokens": 430, "rows": [
+    [1, "Documentation/git-switch.adoc", 90, 116, 2809, 3730, 921, 242, 346, true],
+    [2, "Documentation/config/checkout.adoc", 1, 19, 0, 845, 845, 209, 602, false],
+    [3, "Documentation/config/checkout.adoc", 20, 38, 845, 1774, 929, 211, 604, false],
+    [4, "Documentation/git-switch.adoc", 158, 179, 5322, 6252, 930, 255, 647, false],
+    [5, "Documentation/includes/cmd-config-section-all.adoc", 1, 3, 0, 160, 160, 34, 430, true]
+  ]},
+  "followup": {"used_bytes": 3985, "budget_omitted": 17, "base_tokens": 63, "projected_tokens": 492, "rows": [
+    [1, "Documentation/git-switch.adoc", 256, 285, 8280, 8902, 622, 154, 253, true],
+    [2, "Documentation/git-switch.adoc", 90, 116, 2809, 3730, 921, 242, 542, false],
+    [3, "Documentation/git-restore.adoc", 28, 54, 939, 1871, 932, 256, 557, false],
+    [4, "Documentation/git-restore.adoc", 129, 156, 4679, 5657, 978, 261, 561, false],
+    [5, "Documentation/includes/cmd-config-section-all.adoc", 1, 3, 0, 160, 160, 34, 337, true],
+    [11, "Documentation/diff-context-options.adoc", 1, 10, 0, 372, 372, 107, 492, true]
+  ]},
+  "row_columns": ["rank", "path", "line_start", "line_end", "byte_start", "byte_end", "passage_bytes", "text_tokens", "trial_prompt_tokens_after_previously_selected", "selected_by_greedy_projection"],
+  "assembled_pair": {"citation_1": "original rank 2 checkout.defaultRemote fragment", "citation_2": "follow-up rank 1 switch parent", "original_question_base_tokens": 57, "fragment_only_tokens": 313, "pair_tokens": 513, "limit": 512, "selected": false},
+  "lost_evidence": "The original projection loses the checkout.defaultRemote definition and cannot retrieve the parent. The follow-up retrieves and renders the parent but not the checkout fragment. Its ranks 2-4 are omitted, while a generic configuration preface and an unrelated diff fragment fit. The two required whole passages cost 513 in the frozen combined layout, so they cannot both be cited within 512. No token-fit inference establishes semantic support."
+}
