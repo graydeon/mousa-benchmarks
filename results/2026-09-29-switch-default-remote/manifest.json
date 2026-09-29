@@ -1,0 +1,22 @@
+{
+  "product_base": "adeca3c74f444aec5d4418e7ed781e099cd9c9a8",
+  "benchmark_base": "50096248056b36f0caab5624bc1c73eaed2601c8",
+  "files": {
+    "README.md": {
+      "bytes": 4228,
+      "sha256": "56db7f5f6f20f1df2902fc414d04e9530f9efe2e45bcb4c77198b089ebcb6c85"
+    },
+    "protocol.json": {
+      "bytes": 4630,
+      "sha256": "8afbd588987ecc81295f7a01644dd8f3749387604ac80d2bf145cea134438683"
+    },
+    "raw/observation.json": {
+      "bytes": 7921,
+      "sha256": "f89a068a24ce706961333f6685fbaf7f5c5ee6c100bddcf8c840bf7c6f734b7c"
+    },
+    "raw/packet.json": {
+      "bytes": 14020,
+      "sha256": "34a906e4fbc5ce73a30c38f24a30dce527d34ab219a771d6cdab5f999cb2b505"
+    }
+  }
+}
