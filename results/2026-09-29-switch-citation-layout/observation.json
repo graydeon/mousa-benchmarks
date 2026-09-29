@@ -1,0 +1,254 @@
+{
+  "original": {
+    "question": "When git switch finds a branch on multiple remotes, how does checkout.defaultRemote=origin resolve it, and is that setting included in the git-switch manual?",
+    "packet_id": "ba9306fcdd538883668d13b5fa6502f325a55182ca8c223c35de9f3e2ab9188a",
+    "trail_id": "7eb40dc24cbcb578f234f568e1cee8a7e449e0c60d69026705faf30687c96cfd",
+    "packet_sha256": "98416e570a7e67ee559f19e530de198fadae9b647f9e9e19a9ac28cb376bc6ec",
+    "used_bytes": 3785,
+    "budget_omitted": 18,
+    "base_tokens": 57,
+    "projected_tokens": 430,
+    "rows": [
+      {
+        "rank": 1,
+        "segment_id": "a07cf5cc76ccf81c7b8ff125d3acb6e67507be5021d43cd59337fd8db02bdc77",
+        "path": "Documentation/git-switch.adoc",
+        "lines": [
+          90,
+          116
+        ],
+        "bytes": [
+          2809,
+          3730
+        ],
+        "passage_bytes": 921,
+        "text_tokens": 242,
+        "trial_tokens": 346,
+        "selected": true
+      },
+      {
+        "rank": 2,
+        "segment_id": "707e525d12f48d81fee0359283d7e111d8b6034cb57b2cd0be53ccc1857140e8",
+        "path": "Documentation/config/checkout.adoc",
+        "lines": [
+          1,
+          19
+        ],
+        "bytes": [
+          0,
+          845
+        ],
+        "passage_bytes": 845,
+        "text_tokens": 209,
+        "trial_tokens": 602,
+        "selected": false
+      },
+      {
+        "rank": 3,
+        "segment_id": "5b1a8842d4dd724dba7cd7885b91020da23e6ac5bbc85b038ad8dba2904ec989",
+        "path": "Documentation/config/checkout.adoc",
+        "lines": [
+          20,
+          38
+        ],
+        "bytes": [
+          845,
+          1774
+        ],
+        "passage_bytes": 929,
+        "text_tokens": 211,
+        "trial_tokens": 604,
+        "selected": false
+      },
+      {
+        "rank": 4,
+        "segment_id": "bb79e6716854bba12720f6782e19d945799289521b2e937e36e3865b1a12b390",
+        "path": "Documentation/git-switch.adoc",
+        "lines": [
+          158,
+          179
+        ],
+        "bytes": [
+          5322,
+          6252
+        ],
+        "passage_bytes": 930,
+        "text_tokens": 255,
+        "trial_tokens": 647,
+        "selected": false
+      },
+      {
+        "rank": 5,
+        "segment_id": "96f134a6898ee30bcb49a27eaa04f1207c619d16bab19f601419587d27fe851b",
+        "path": "Documentation/includes/cmd-config-section-all.adoc",
+        "lines": [
+          1,
+          3
+        ],
+        "bytes": [
+          0,
+          160
+        ],
+        "passage_bytes": 160,
+        "text_tokens": 34,
+        "trial_tokens": 430,
+        "selected": true
+      }
+    ],
+    "selected_segment_ids": [
+      "a07cf5cc76ccf81c7b8ff125d3acb6e67507be5021d43cd59337fd8db02bdc77",
+      "96f134a6898ee30bcb49a27eaa04f1207c619d16bab19f601419587d27fe851b"
+    ],
+    "omitted_segment_ids": [
+      "707e525d12f48d81fee0359283d7e111d8b6034cb57b2cd0be53ccc1857140e8",
+      "5b1a8842d4dd724dba7cd7885b91020da23e6ac5bbc85b038ad8dba2904ec989",
+      "bb79e6716854bba12720f6782e19d945799289521b2e937e36e3865b1a12b390"
+    ]
+  },
+  "followup": {
+    "question": "In the git-switch manual CONFIGURATION section, which literal include::config/checkout.adoc[] directive includes the checkout.defaultRemote configuration fragment?",
+    "packet_id": "80e2e5210e2cb8f94bfd252d0eb8d0df42a0f8c55201076e52828b5513a1c9d6",
+    "trail_id": "939ce80ca9adcc1b33f18d5030756dff8f59103dffea9e403fdaedaf4260dba8",
+    "packet_sha256": "4d41681a74b3fcca1134dc6b28ae380434742238378661b138a4bdf97bfe69c1",
+    "used_bytes": 3985,
+    "budget_omitted": 17,
+    "base_tokens": 53,
+    "projected_tokens": 492,
+    "rows": [
+      {
+        "rank": 1,
+        "segment_id": "2b9e7aeb3bff02f719804871505dce23e15fda82c61742a1bab4875996e35562",
+        "path": "Documentation/git-switch.adoc",
+        "lines": [
+          256,
+          285
+        ],
+        "bytes": [
+          8280,
+          8902
+        ],
+        "passage_bytes": 622,
+        "text_tokens": 154,
+        "trial_tokens": 253,
+        "selected": true
+      },
+      {
+        "rank": 2,
+        "segment_id": "a07cf5cc76ccf81c7b8ff125d3acb6e67507be5021d43cd59337fd8db02bdc77",
+        "path": "Documentation/git-switch.adoc",
+        "lines": [
+          90,
+          116
+        ],
+        "bytes": [
+          2809,
+          3730
+        ],
+        "passage_bytes": 921,
+        "text_tokens": 242,
+        "trial_tokens": 542,
+        "selected": false
+      },
+      {
+        "rank": 3,
+        "segment_id": "9a70c35d743cb837c5de83cb760c79d20a6d89f782d9032ef752b38c4c8cd61f",
+        "path": "Documentation/git-restore.adoc",
+        "lines": [
+          28,
+          54
+        ],
+        "bytes": [
+          939,
+          1871
+        ],
+        "passage_bytes": 932,
+        "text_tokens": 256,
+        "trial_tokens": 557,
+        "selected": false
+      },
+      {
+        "rank": 4,
+        "segment_id": "3adb6b0322e3a04e36b8054c71288ec549ea854c645d604c197bc07e218a87d3",
+        "path": "Documentation/git-restore.adoc",
+        "lines": [
+          129,
+          156
+        ],
+        "bytes": [
+          4679,
+          5657
+        ],
+        "passage_bytes": 978,
+        "text_tokens": 261,
+        "trial_tokens": 561,
+        "selected": false
+      },
+      {
+        "rank": 5,
+        "segment_id": "96f134a6898ee30bcb49a27eaa04f1207c619d16bab19f601419587d27fe851b",
+        "path": "Documentation/includes/cmd-config-section-all.adoc",
+        "lines": [
+          1,
+          3
+        ],
+        "bytes": [
+          0,
+          160
+        ],
+        "passage_bytes": 160,
+        "text_tokens": 34,
+        "trial_tokens": 337,
+        "selected": true
+      },
+      {
+        "rank": 11,
+        "segment_id": "be32bb68763a3363fed54c2d198d2a47eef37943dcf0f01697f3de6e4c27cd54",
+        "path": "Documentation/diff-context-options.adoc",
+        "lines": [
+          1,
+          10
+        ],
+        "bytes": [
+          0,
+          372
+        ],
+        "passage_bytes": 372,
+        "text_tokens": 107,
+        "trial_tokens": 492,
+        "selected": true
+      }
+    ],
+    "selected_segment_ids": [
+      "2b9e7aeb3bff02f719804871505dce23e15fda82c61742a1bab4875996e35562",
+      "96f134a6898ee30bcb49a27eaa04f1207c619d16bab19f601419587d27fe851b",
+      "be32bb68763a3363fed54c2d198d2a47eef37943dcf0f01697f3de6e4c27cd54"
+    ],
+    "omitted_segment_ids": [
+      "a07cf5cc76ccf81c7b8ff125d3acb6e67507be5021d43cd59337fd8db02bdc77",
+      "9a70c35d743cb837c5de83cb760c79d20a6d89f782d9032ef752b38c4c8cd61f",
+      "3adb6b0322e3a04e36b8054c71288ec549ea854c645d604c197bc07e218a87d3"
+    ]
+  },
+  "pair": {
+    "tokens": 513,
+    "limit": 512,
+    "fits": false,
+    "sha256": "8a46388a7c90232fd15ece214b70772b0ad040ff2cc11314ba4c27e3c8e97e26",
+    "citations": [
+      {
+        "query": "When git switch finds a branch on multiple remotes, how does checkout.defaultRemote=origin resolve it, and is that setting included in the git-switch manual?",
+        "packet_id": "ba9306fcdd538883668d13b5fa6502f325a55182ca8c223c35de9f3e2ab9188a",
+        "trail_id": "7eb40dc24cbcb578f234f568e1cee8a7e449e0c60d69026705faf30687c96cfd",
+        "segment_id": "707e525d12f48d81fee0359283d7e111d8b6034cb57b2cd0be53ccc1857140e8",
+        "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/config/checkout.adoc#L1-L19"
+      },
+      {
+        "query": "In the git-switch manual CONFIGURATION section, which literal include::config/checkout.adoc[] directive includes the checkout.defaultRemote configuration fragment?",
+        "packet_id": "80e2e5210e2cb8f94bfd252d0eb8d0df42a0f8c55201076e52828b5513a1c9d6",
+        "trail_id": "939ce80ca9adcc1b33f18d5030756dff8f59103dffea9e403fdaedaf4260dba8",
+        "segment_id": "2b9e7aeb3bff02f719804871505dce23e15fda82c61742a1bab4875996e35562",
+        "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-switch.adoc#L256-L285"
+      }
+    ]
+  }
+}

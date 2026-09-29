@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-29",
+  "question": "When git switch finds a branch on multiple remotes, how does checkout.defaultRemote=origin resolve it, and is that setting included in the git-switch manual?",
+  "followup_question": "In the git-switch manual CONFIGURATION section, which literal include::config/checkout.adoc[] directive includes the checkout.defaultRemote configuration fragment?",
+  "question_identity": "Citation [1] is original packet ba9306fcdd538883668d13b5fa6502f325a55182ca8c223c35de9f3e2ab9188a, trail 7eb40dc24cbcb578f234f568e1cee8a7e449e0c60d69026705faf30687c96cfd, rank 2. Citation [2] is follow-up packet 80e2e5210e2cb8f94bfd252d0eb8d0df42a0f8c55201076e52828b5513a1c9d6, trail 939ce80ca9adcc1b33f18d5030756dff8f59103dffea9e403fdaedaf4260dba8, rank 1. Both questions, packet hashes, segment IDs and source-root-bound IDs are reported outside the rendered content; no packet or trail changes.",
+  "original_packet_sha256": "98416e570a7e67ee559f19e530de198fadae9b647f9e9e19a9ac28cb376bc6ec",
+  "followup_packet_sha256": "4d41681a74b3fcca1134dc6b28ae380434742238378661b138a4bdf97bfe69c1",
+  "original_failed_layout_pair_tokens": 513,
+  "git_version": "2.51.0",
+  "git_revision": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+  "archive_sha256": "6b7cb47de2a083e15301b8bb94f903f00022a12284fd0ad8732f0e811ee68ce9",
+  "manifest_sha256": "6b058ba6db48468c12592d38d1565b2211b36f00b657fb565bc744f073554ef2",
+  "file_sha256": {
+    "Documentation/git-switch.adoc": "af2df19ed0b0c84e3f82210433e6912b0989dc9be271728de4c4ccc5e10701b8",
+    "Documentation/config/checkout.adoc": "4eed9ec7a0f79c558b8a7390349e62e327a7fa8b87d12c5aa7d277345af2c06c",
+    "Documentation/includes/cmd-config-section-all.adoc": "79fabba25c379b7d029dda0b1a9eae67b3697a375ae104f0594d16410d98c73b"
+  },
+  "query_budget_bytes": 4096,
+  "query_policy": "original",
+  "tokenizer": "tiktoken==0.12.0/o200k_base",
+  "rendered_content_limit": 512,
+  "old_header": "[{index}] {revision-pinned-url} lines {first}-{last}\\n",
+  "proposed_header": "[{index}] {revision-pinned-url}#L{first}-L{last}\\n",
+  "rendered_layout": "Use only the cited Git 2.51.0 passages. If evidence is insufficient, say so.\\nQuestion: {original_question}\\nEvidence:\\n[1] {fragment-revision-pinned-url}#L1-L19\\n{whole-fragment}\\n[2] {parent-revision-pinned-url}#L256-L285\\n{whole-parent}\\n",
+  "selection": "Replay unchanged saved local-root original and follow-up packets independently with rank-ordered greedy whole-passage projection at 512 using the proposed header. Separately assemble exactly original rank-2 whole fragment then follow-up rank-1 whole parent in the fixed two-packet order; do not replace omitted passages implicitly or add unrelated preface. Compare against historical 513-token pair. Keep original packets, trails, historical reports and all passages unchanged.",
+  "coordinate_checks": "Verify all 11 retrieved passages against normalized pinned corpus bytes, full file and passage SHA-256, source URLs, byte-start/end and line-start/end. Verify parent literal include::config/checkout.adoc[] at normalized line 276 bytes 8762-8793; fragment lines 1-19 bytes 0-845. Enumerate each retrieved, selected and omitted passage, incremental trial tokens and lost evidence.",
+  "acceptance": "The two intact passages and their separate revision-pinned URLs and normalized line anchors fit 512 o200k_base rendered-content tokens with citation-to-query mapping, and parent includes literal directive at pinned coordinates. If not, record the miss; do not adjust limit after observing. Fit is neither semantic support nor a whole-model-window guarantee; JSON, model/API framing and output reservation are excluded. Only adopt caller-owned header change when verified pair fits and the preserved evidence justifies it. Publish new dated companion run before revision-pinned product documentation."
+}
