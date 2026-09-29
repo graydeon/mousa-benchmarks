@@ -17,16 +17,28 @@ for entry in manifest["files"]:
     json.loads(data)
     if len(data) != entry["bytes"] or hashlib.sha256(data).hexdigest() != entry["sha256"]:
         raise SystemExit("Archived content changed: " + relative)
-actual = {str(p.relative_to(root)) for directory in ("results/2026-09-16", "comparisons/qmd")
+# Migrated legacy directories are the only runs without a run manifest: migration.json
+# registers their JSON members individually.
+legacy = sorted({str(Path(entry["path"]).parent) for entry in manifest["files"]})
+actual = {str(p.relative_to(root)) for directory in legacy
           for p in (root / directory).glob("*.json")}
 if actual != expected:
     raise SystemExit("Archive files and migration manifest disagree")
 print("Verified", len(expected), "unchanged migrated JSON files")
 
+runs = sorted(path for path in (root / "results").iterdir() if path.is_dir())
+unregistered = [str(run.relative_to(root)) for run in runs
+                if not (run / "manifest.json").is_file()
+                and str(run.relative_to(root)) not in legacy]
+if unregistered:
+    raise SystemExit("Result directory without manifest: " + ", ".join(unregistered))
+
 for manifest_path in sorted((root / "results").glob("*/manifest.json")):
     run = manifest_path.parent
     report = json.loads(manifest_path.read_text())
     files = report["files"]
+    if not files:
+        raise SystemExit("Run manifest registers no files: " + run.name)
     for relative, expected in files.items():
         path = (run / relative).resolve()
         if run not in path.parents or not path.is_file():

@@ -11,6 +11,24 @@ frozen case set, same corpus, same budgets and same store configuration.
 This is development evidence from fixed cases, not held-out evaluation,
 assessor accuracy, or a general answerability or completeness claim.
 
+## Correction (2026-09-17)
+
+The first version of this directory described all six proposed cases as running
+with the declaration file. The stored record only ever held the default path for
+those six cases plus one declaration-enabled follow-up query, and the summary
+table presented the default-path numbers as the proposed outcome. The two
+misread rows were `complete` (3,397 bytes presented as the proposed result) and
+`absent` / `absence_followup` (2,163 bytes presented as the proposed result);
+with the declaration those cases release 3,970 bytes.
+
+`raw/comparison.json` is the superseded record, preserved unchanged with its
+original bytes. `raw/responses/`, `raw/commands.json` and
+`raw/comparison-arms.json` are the corrected record:
+`run.py` recorded three arms per case and `analyze.py` derived every number in
+this document from those responses, failing if an arm labelled
+declaration-enabled carries no association stage, if the default-path arms
+disagree, or if a declaration displaced primary evidence.
+
 ## Mechanism under comparison
 
 The caller supplies an author-declared relationship file
@@ -22,9 +40,10 @@ then packed into the remaining byte budget after primary evidence, one
 accounted row each, each hit carrying its own segment identity, byte
 coordinates, content digest and the declaration's `from_item`/`to_item`/
 `basis`/`author`. Depth is one, at most four distinct targets are applied per
-query, and non-deliveries (unknown or inactive target, fan-out cap, budget,
-duplicate) are recorded as omissions. The stored trail records the complete
-association stage under `mousa.source_trail.v3`.
+query, at most 256 target passages are considered, and non-deliveries (unknown
+or inactive target, fan-out cap, consideration bound, budget, duplicate) are
+recorded as omissions. The stored trail records the complete association stage
+under `mousa.source_trail.v3`.
 
 The declaration is an input, not discovery. Its author and basis stay attached
 to every released passage. A relationship is not an access grant: resolution
@@ -35,75 +54,88 @@ active revision of the target.
 
 - Product: same repository and corpus as
   [2026-09-17-backup-decision](../2026-09-17-backup-decision). Six frozen
-  cases and budgets from `cases.json` are unchanged.
-- Baseline: retrieval without `--associations`, captured before the association
-  change. Proposed: the same queries with the declaration file above.
-- Case set, budgets and declarations were fixed before any comparison run.
-- The demonstrated development case is `followup` (query `backup`, 4096 bytes).
-  The `partial` (180 bytes) and `budget` (1 byte) cases remain predeclared
-  budget-omission observations; the association mechanism does not fire when no
-  primary passage is selected, so they are unchanged by construction and by
-  measurement.
+  cases and budgets from `cases.json`, unchanged, with the declaration file
+  above.
+- Arms, each with its own fresh store over one prepared corpus directory:
+  `before-default` (the pre-change binary without declarations),
+  `after-default` (the post-change binary without declarations) and
+  `after-declared` (the post-change binary with the declaration file). The
+  declaration-enabled follow-up query is recorded as a fourth arm where the case
+  defines one.
+- `raw/commands.json` records every invocation, both binary hashes, the corpus,
+  case and declaration hashes, and the corpus paths used.
+- Packet identities bind the absolute corpus path. A rerun under a different
+  path produces the same bytes, evidence and outcomes under different
+  identities; the paths used here are recorded, while the superseded record's
+  paths were not, so its packet identities cannot be reproduced even though its
+  released bytes and passages can.
 
 ## Results
 
-| Case (budget) | Baseline outcome | Proposed outcome | Released bytes baseline → proposed | New items released |
-|---|---|---|---|---|
-| complete (8192) | evidence | evidence | 3,397 → 3,397 | none (selection identical) |
-| partial (180) | budget_omitted | budget_omitted | 0 → 0 | none |
-| followup (4096) | evidence, no qualification | evidence, 7 associated passages incl. the qualification | 2,163 → 3,970 | `context.rst` via declaration |
-| absent (4096) | evidence | evidence | 2,163 → 2,163 | none |
-| absence_followup (4096) | evidence | evidence | 2,163 → 2,163 | none |
-| budget (1) | budget_omitted | budget_omitted | 0 → 0 | none |
+| Case (budget) | default before | default after | declared after | added bytes | associated passages |
+|---|---|---|---|---|---|
+| complete (8192) | 3,397 | 3,397 | 3,970 | +573 | 4 released, 3 duplicates of lexical hits |
+| partial (180) | 0 | 0 | 0 | 0 | none (no primary passage selected) |
+| followup (4096) | 2,163 | 2,163 | 3,970 | +1,807 | 7 released |
+| absent (4096) | 2,163 | 2,163 | 3,970 | +1,807 | 7 released |
+| absence_followup (4096) | 2,163 | 2,163 | 3,970 | +1,807 | 7 released |
+| budget (1) | 0 | 0 | 0 | 0 | none (no primary passage selected) |
 
-`followup` with the declaration releases all seven `context.rst` passages
-(1,807 associated bytes) including the note that the connection context manager
-neither opens a transaction nor closes the connection. Each associated hit
-carries `origin: "association"` and the declaration provenance; the packet
-identity, trail identity and used-byte accounting bind the added bytes. The
-follow-up query `context manager neither closes connection` with the
-declaration returns `context.rst` content directly (`raw/followup-query-associated.json`).
+The two default-path arms agree on packet identity, released bytes, outcome and
+the identity, coordinates, digest, rank and score of every released passage for
+all six cases. The newer binary explicitly labels those hits `origin: "lexical"`;
+the older binary omits that additive field.
 
-The caller-authored judgment that the returned note supports the closure
-requirement remains a caller judgment, recorded as such; the engine adds no
-semantic-support claim.
+With the declaration, `followup` releases all seven `context.rst` passages
+(1,807 associated bytes), including the statement that the connection context
+manager neither opens a transaction nor closes the connection. Each associated hit
+carries `origin: "association"` and the declaration provenance. In `complete`
+the query itself names the connection context, so three of the seven passages
+were already released as lexical hits and are recorded as duplicate omissions
+rather than released twice.
+
+`absent` and `absence_followup` ask for a completion deadline that is absent
+from both excerpts. The declaration still fires, because `backup.rst`
+contributed selected primary evidence, and adds the same 1,807 closure bytes.
+Those bytes cannot answer the deadline question; they are accounted, attributable
+and inside the budget, and whether they are useful is the caller's judgment, not
+an engine claim. Item-granularity declarations apply to every query in which the
+declaring item contributes evidence, and this record shows that cost.
 
 ## Required-fact and qualification coverage
 
-- Qualification coverage without a caller-authored follow-up query: 0/1 before
-  (closure partial on the initial packet), 1/1 after the declaration is supplied
-  for the demonstrated case.
-- No caller-authored follow-up was needed in the proposed run; the baseline run
-  required the fixed follow-up to reach the same note.
-- Unrelated added context: the association releases the target item's passages
-  in document order. In this corpus, 1,807 associated bytes include the note
-  (about 300 bytes) plus the surrounding connection-context section. The rubric
-  records this as the declared cost of item-granularity association: the caller
-  reviews the whole declared target, and every associated byte is separately
-  attributable and accounted.
-- Displacement of previously useful evidence: none. Primary evidence is packed
-  first under the existing policy and keeps its exact selection; associated
-  passages only use the remaining budget. Measured: identical primary selection
-  and packet bytes for all four unchanged cases, and identical `backup.rst`
-  passages for the associated run.
-- Released bytes and omissions: 1,807 additional accounted bytes in the
-  demonstrated case; no budget omissions at 4,096 bytes. Small-budget cases
-  omit with explicit reasons and unchanged accounting.
+- Qualification coverage for the demonstrated `followup` case: 0/1 before,
+  1/1 after the declaration is supplied, without a caller-authored follow-up
+  query. The fixed follow-up query `context manager neither closes connection`
+  is recorded separately as the fourth arm.
+- `complete` already released the qualification note without the declaration,
+  because its query names the connection context.
+- Primary displacement: none. The default-path released passages appear in the
+  declaration-enabled arm with identical items, coordinates and digests;
+  `analyze.py` asserts this for every case.
+- Released bytes and omissions: added bytes equal the sum of the associated
+  passages' byte lengths; no associated passage was released outside the
+  remaining budget, and small budgets omit with explicit reasons.
 
 ## Costs
 
 Whole-consumer cost of the proposed path is the unassociated query plus
-declaration-file decode and at most four target-item reads inside the same
-transaction. No additional queries, stores, passes or network access are
-involved. The comparison run used fresh stores and one repetition per case;
-timings are not reported because the host is shared and the mechanism adds no
-separate execution step worth measuring in isolation.
+declaration decode and the declared target reads inside the same transaction.
+The comparison run used fresh stores and one repetition per case, and its
+timings are not reported here. The separately recorded
+[bounds study](../2026-09-17-associated-bounds) measures that path with
+repetitions on the same worker host: cost follows the number of target passages
+considered (which is bounded per query) rather than the bytes that fit the
+budget, and the earlier claim that the mechanism adds no additional queries is
+withdrawn.
 
 ## Limits
 
-- One development corpus, one declaration, fixed cases. No held-out claim.
+- One development corpus, one declaration, fixed cases. No held-out claim, no
+  assessor-accuracy claim.
 - The negative cases (irrelevant declaration never fires; stale/deleted target
   omitted with a reason; self-references and duplicates rejected) are covered by
   product regression tests in the Mousa repository, not re-measured here.
 - The 180-byte partial-context miss from the previous report remains a
   budget-omission result and is not evidence for or against association.
+- Shared worker host: latency is descriptive, not a dedicated-host benchmark.

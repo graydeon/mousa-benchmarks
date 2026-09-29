@@ -1,0 +1,42 @@
+{
+  "product_base": "e5f8fad9424cb759ffe258a004d1b970189d288d",
+  "benchmark_base": "9a055fe75b8a4b9c2b0edf01cda7522b0f96b786",
+  "files": {
+    "README.md": {
+      "bytes": 3828,
+      "sha256": "7d85ae7c50344318326a710ae590237f7d5e4c50a62b6dd885662418389efbdb"
+    },
+    "measure.py": {
+      "bytes": 13043,
+      "sha256": "acb5f3cfc4d1bf904bde5d5529eb88d3d717ed48d33560badfced0f6e9a9d19c"
+    },
+    "protocol.json": {
+      "bytes": 1705,
+      "sha256": "2196b491d64e1a60270014ececd07ce37777ae3c012558487a2c3c4bc5192a4c"
+    },
+    "raw/environment-before-bound.json": {
+      "bytes": 410,
+      "sha256": "91128558f0fc2f7e520af37dbbd831ad3536dc025909f1ade1f87d50b38a6c06"
+    },
+    "raw/environment.json": {
+      "bytes": 410,
+      "sha256": "9b7be42638905cb2751757cf81429dd214fd2faf8d637ec460de40d7d9d8ac8c"
+    },
+    "raw/observations-before-bound.jsonl": {
+      "bytes": 62954,
+      "sha256": "c0ed82017a99a686b0d963a9bc195a16aed70d9d217c10ee4fa801a37fa928d4"
+    },
+    "raw/observations.jsonl": {
+      "bytes": 64796,
+      "sha256": "c2d7520cdf5357627e5fa9df8216a7bdb9e52f515ac6c51d63e645a063001832"
+    },
+    "raw/summary-before-bound.json": {
+      "bytes": 7863,
+      "sha256": "f0a53a9a74ed8fe88f0b1f972a063472a993de3d11b2cd6e0b01b453188df44e"
+    },
+    "raw/summary.json": {
+      "bytes": 8419,
+      "sha256": "8f39a463167eb587067afb4558d2d26e80ac9841b27b4bb27418986dade82066"
+    }
+  }
+}

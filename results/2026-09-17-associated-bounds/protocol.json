@@ -1,0 +1,16 @@
+{
+  "label": "Declared-association per-query processing bound on generated legal CLI fixtures",
+  "product_base": "e5f8fad9424cb759ffe258a004d1b970189d288d",
+  "bounded_product_diff_sha256": "2b3723bc88b054b8d55c9aed2645ee313a12c9660dc5237ae1022c136559e67e",
+  "bounded_worker_bundle_sha256": "efdfed89c9c6e6985db46dbf13e7b81fc192ce1401dbe5ef72866a997640f193",
+  "pre_bound_binary_sha256": "1fa19fdfee4b77edcc475ab46745196c233b6554ccb001f3cb16a84d90efe69e",
+  "bounded_binary_sha256": "05978b23e58d34e6a39c25c8771addcb4d34cb3c3710571ede722908da62c14c",
+  "measurement_script_sha256": "acb5f3cfc4d1bf904bde5d5529eb88d3d717ed48d33560badfced0f6e9a9d19c",
+  "runner": "omp-worker on the same shared worker host, fresh per-observation SQLite store copied from each case's closed synced store",
+  "fixture": "measure.py generates eight case corpora and declaration files; passage-v1 sync; default 1 MiB per-file and 64 MiB total CLI limits; query alpha, 4096-byte budget except the no-budget control; 5 observations per ordinary case and 3 per large/many-tiny case",
+  "measurements": {
+    "pre_bound": "raw/{observations-before-bound.jsonl,summary-before-bound.json,environment-before-bound.json}",
+    "bounded": "raw/{observations.jsonl,summary.json,environment.json}"
+  },
+  "limitations": "The pre-bound uncommitted source snapshot is not archived with this result; its surviving binary hash and raw observations identify that measured run. The bounded snapshot is product_base plus the recorded uncommitted diff. Shared-host wall timings are descriptive, not an isolated latency comparison. Canonical record content is bounded per query; sync/indexing cost for a 65536-passage item is not eliminated."
+}

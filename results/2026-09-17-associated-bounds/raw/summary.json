@@ -1,0 +1,544 @@
+{
+  "control": {
+    "associated_hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24180,
+      24180,
+      24180,
+      24180,
+      24180
+    ],
+    "max_rss_kib_max": 24180,
+    "omission_reasons": [
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trail_inspection_bytes": [
+      1530,
+      1530,
+      1530,
+      1530,
+      1530
+    ],
+    "trail_inspection_bytes_max": 1530,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      73,
+      73,
+      73,
+      73,
+      73
+    ],
+    "wall_ms": [
+      144.76480200028163,
+      146.87110299928463,
+      159.96209399963845,
+      173.65267900095205,
+      153.3960999986448
+    ],
+    "wall_ms_max": 173.65267900095205,
+    "wall_ms_median": 153.3960999986448,
+    "wall_ms_min": 144.76480200028163
+  },
+  "duplicate": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24180,
+      24180,
+      24180,
+      24180,
+      24180
+    ],
+    "max_rss_kib_max": 24180,
+    "omission_reasons": [
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      }
+    ],
+    "trail_inspection_bytes": [
+      7517,
+      7517,
+      7517,
+      7517,
+      7517
+    ],
+    "trail_inspection_bytes_max": 7517,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      4054,
+      4054,
+      4054,
+      4054,
+      4054
+    ],
+    "wall_ms": [
+      59.336289999919245,
+      61.29933200281812,
+      63.573666997399414,
+      62.240786999609554,
+      52.31887999980245
+    ],
+    "wall_ms_max": 63.573666997399414,
+    "wall_ms_median": 61.29933200281812,
+    "wall_ms_min": 52.31887999980245
+  },
+  "fanout": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24180,
+      24712,
+      24180,
+      24264,
+      24180
+    ],
+    "max_rss_kib_max": 24712,
+    "omission_reasons": [
+      {
+        "budget": 252,
+        "fan_out": 4,
+        "target_truncated": 3
+      },
+      {
+        "budget": 252,
+        "fan_out": 4,
+        "target_truncated": 3
+      },
+      {
+        "budget": 252,
+        "fan_out": 4,
+        "target_truncated": 3
+      },
+      {
+        "budget": 252,
+        "fan_out": 4,
+        "target_truncated": 3
+      },
+      {
+        "budget": 252,
+        "fan_out": 4,
+        "target_truncated": 3
+      }
+    ],
+    "trail_inspection_bytes": [
+      136249,
+      136249,
+      136249,
+      136249,
+      136249
+    ],
+    "trail_inspection_bytes_max": 136249,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      968.8558169982571,
+      1060.2351410016126,
+      1096.450217999518,
+      1038.3962240011897,
+      996.0671699991508
+    ],
+    "wall_ms_max": 1096.450217999518,
+    "wall_ms_median": 1038.3962240011897,
+    "wall_ms_min": 968.8558169982571
+  },
+  "large": {
+    "associated_hits": [
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24180,
+      24180,
+      24180
+    ],
+    "max_rss_kib_max": 24180,
+    "omission_reasons": [
+      {
+        "budget": 252,
+        "target_truncated": 1
+      },
+      {
+        "budget": 252,
+        "target_truncated": 1
+      },
+      {
+        "budget": 252,
+        "target_truncated": 1
+      }
+    ],
+    "trail_inspection_bytes": [
+      135295,
+      135295,
+      135295
+    ],
+    "trail_inspection_bytes_max": 135295,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      506.55277199984994,
+      567.8846539994993,
+      604.0148229985789
+    ],
+    "wall_ms_max": 604.0148229985789,
+    "wall_ms_median": 567.8846539994993,
+    "wall_ms_min": 506.55277199984994
+  },
+  "many-tiny": {
+    "associated_hits": [
+      256,
+      256,
+      256
+    ],
+    "exits": [
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      43568,
+      43568,
+      43504
+    ],
+    "max_rss_kib_max": 43568,
+    "omission_reasons": [
+      {
+        "target_truncated": 1
+      },
+      {
+        "target_truncated": 1
+      },
+      {
+        "target_truncated": 1
+      }
+    ],
+    "trail_inspection_bytes": [
+      265471,
+      265471,
+      265471
+    ],
+    "trail_inspection_bytes_max": 265471,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      1353,
+      1353,
+      1353
+    ],
+    "wall_ms": [
+      22072.62360599998,
+      22215.441137002927,
+      21913.209701000596
+    ],
+    "wall_ms_max": 22215.441137002927,
+    "wall_ms_median": 22072.62360599998,
+    "wall_ms_min": 21913.209701000596
+  },
+  "medium": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24180,
+      24180,
+      24180,
+      24180,
+      24180
+    ],
+    "max_rss_kib_max": 24180,
+    "omission_reasons": [
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      }
+    ],
+    "trail_inspection_bytes": [
+      135138,
+      135138,
+      135138,
+      135138,
+      135138
+    ],
+    "trail_inspection_bytes_max": 135138,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      222.09228300198447,
+      262.38918600211036,
+      211.5587480002432,
+      226.7586140005733,
+      262.8683450020617
+    ],
+    "wall_ms_max": 262.8683450020617,
+    "wall_ms_median": 226.7586140005733,
+    "wall_ms_min": 211.5587480002432
+  },
+  "no-budget": {
+    "associated_hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24180,
+      24180,
+      24180,
+      24180,
+      24180
+    ],
+    "max_rss_kib_max": 24180,
+    "omission_reasons": [
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      }
+    ],
+    "trail_inspection_bytes": [
+      135261,
+      135261,
+      135261,
+      135261,
+      135261
+    ],
+    "trail_inspection_bytes_max": 135261,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      73,
+      73,
+      73,
+      73,
+      73
+    ],
+    "wall_ms": [
+      258.63005700011854,
+      220.45211699878564,
+      220.59211899977527,
+      214.00705999985803,
+      231.91484400012996
+    ],
+    "wall_ms_max": 258.63005700011854,
+    "wall_ms_median": 220.59211899977527,
+    "wall_ms_min": 214.00705999985803
+  },
+  "small": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24180,
+      24180,
+      24180,
+      24180,
+      24180
+    ],
+    "max_rss_kib_max": 24180,
+    "omission_reasons": [
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trail_inspection_bytes": [
+      3593,
+      3593,
+      3593,
+      3593,
+      3593
+    ],
+    "trail_inspection_bytes_max": 3593,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      63.39517200103728,
+      59.708007000153884,
+      59.874057998968055,
+      56.39359100314323,
+      59.59102799897664
+    ],
+    "wall_ms_max": 63.39517200103728,
+    "wall_ms_median": 59.708007000153884,
+    "wall_ms_min": 56.39359100314323
+  }
+}
