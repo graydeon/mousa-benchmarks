@@ -1,0 +1,85 @@
+{
+  "budget_bytes": 4096,
+  "budget_omitted": 0,
+  "candidate_limit": 100,
+  "decision_id": "bc219f36015e66496ec77c3536425db5658588fe42763b8bc3b7359a9439a63c",
+  "decision_outcome": "allow",
+  "decision_reasons": [
+    "allow"
+  ],
+  "evaluated_at_usec": 1790644967417980,
+  "evidence": [
+    {
+      "bm25_score": -2.1846708550618392,
+      "byte_end": 924,
+      "byte_length": 924,
+      "byte_start": 0,
+      "content_sha256": "ecad4bc94e29e1137d96909e45c1073795ca167fedea2d5f4ea3756984812378",
+      "item": "backup.rst",
+      "location": {
+        "line_end": 25,
+        "line_start": 1,
+        "path": "backup.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L1149-L1219"
+      },
+      "rank": 1,
+      "representation_id": "9969b546ca280235d9431917010e58f4920630ca6e91f6b1a5f2f96588b227ab",
+      "representation_sha256": "084a47686403bd7a7b2b49f96e53ef30f554de9031adda2253fcb3e6ef643dd7",
+      "segment_id": "9b3900d6ccb820b96953a4f7105786c58809afcfe47ed9c89eed88758cbeaf60",
+      "segment_policy": "passage-v1",
+      "text": "   .. method:: backup(target, *, pages=-1, progress=None, name=\"main\", sleep=0.250)\n\n      Create a backup of an SQLite database.\n\n      Works even if the database is being accessed by other clients\n      or concurrently by the same connection.\n\n      :param ~sqlite3.Connection target:\n          The database connection to save the backup to.\n\n      :param int pages:\n          The number of pages to copy at a time.\n          If equal to or less than ``0``,\n          the entire database is copied in a single step.\n          Defaults to ``-1``.\n\n      :param progress:\n          If set to a :term:`callable`,\n          it is invoked with three integer arguments for every backup iteration:\n          the *status* of the last iteration,\n          the *remaining* number of pages still to be copied,\n          and the *total* number of pages.\n          Defaults to ``None``.\n      :type progress: :term:`callback` |\u00a0None\n\n"
+    },
+    {
+      "bm25_score": -0.9756217716324281,
+      "byte_end": 2163,
+      "byte_length": 245,
+      "byte_start": 1918,
+      "content_sha256": "646ead1dcc216aeb2889ddc31e01fe5eed0203a79353c543eeb0213c9b982071",
+      "item": "backup.rst",
+      "location": {
+        "line_end": 71,
+        "line_start": 60,
+        "path": "backup.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L1149-L1219"
+      },
+      "rank": 2,
+      "representation_id": "9969b546ca280235d9431917010e58f4920630ca6e91f6b1a5f2f96588b227ab",
+      "representation_sha256": "084a47686403bd7a7b2b49f96e53ef30f554de9031adda2253fcb3e6ef643dd7",
+      "segment_id": "9fe036623ee4f9ccc95e7bf6c3f22235f2842ca879c5251109626e46709aa74e",
+      "segment_policy": "passage-v1",
+      "text": "         src = sqlite3.connect('example.db')\n         dst = sqlite3.connect(':memory:')\n         src.backup(dst)\n         dst.close()\n         src.close()\n\n      .. versionadded:: 3.7\n\n      .. seealso::\n\n         :ref:`sqlite3-howto-encoding`\n\n"
+    },
+    {
+      "bm25_score": -0.7663932917739723,
+      "byte_end": 1918,
+      "byte_length": 994,
+      "byte_start": 924,
+      "content_sha256": "7ac26307e2286906d7ce0ae5b9d82b680792610b77ee09a0a21acb38a644c43a",
+      "item": "backup.rst",
+      "location": {
+        "line_end": 59,
+        "line_start": 26,
+        "path": "backup.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L1149-L1219"
+      },
+      "rank": 3,
+      "representation_id": "9969b546ca280235d9431917010e58f4920630ca6e91f6b1a5f2f96588b227ab",
+      "representation_sha256": "084a47686403bd7a7b2b49f96e53ef30f554de9031adda2253fcb3e6ef643dd7",
+      "segment_id": "bbcb6e3793b95ff35d0175475cefb300e3b90bc438838fd86997ffccc7b7eb76",
+      "segment_policy": "passage-v1",
+      "text": "      :param str name:\n          The name of the database to back up.\n          Either ``\"main\"`` (the default) for the main database,\n          ``\"temp\"`` for the temporary database,\n          or the name of a custom database as attached using the\n          ``ATTACH DATABASE`` SQL statement.\n\n      :param float sleep:\n          The number of seconds to sleep between successive attempts\n          to back up remaining pages.\n\n      Example 1, copy an existing database into another:\n\n      .. testcode::\n\n         def progress(status, remaining, total):\n             print(f'Copied {total-remaining} of {total} pages...')\n\n         src = sqlite3.connect('example.db')\n         dst = sqlite3.connect('backup.db')\n         with dst:\n             src.backup(dst, pages=1, progress=progress)\n         dst.close()\n         src.close()\n\n      .. testoutput::\n         :hide:\n\n         Copied 0 of 0 pages...\n\n      Example 2, copy an existing database into a transient copy:\n\n      .. testcode::\n\n"
+    }
+  ],
+  "expression": "\"backup\" OR \"maximum\" OR \"completion\" OR \"time\" OR \"concurrent\" OR \"writes\"",
+  "latency_micros": 52241,
+  "lifecycle_excluded": 0,
+  "matched_candidates": 3,
+  "outcome": "evidence",
+  "packet_id": "8e7747084675135082d0a332f1dace3e542088ffe484c94c73343c96723bfc9e",
+  "query": "backup maximum completion time concurrent writes",
+  "query_policy": "original",
+  "request_id": "d0ab10fd90a8d6b67a2f1410be39c707a061049c337cbe7ff860c80e9ef8a201",
+  "source": "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+  "trail_id": "d07365ec63e1784e79a1687edc3e42da4769696b8065d6dca48f5c2b1ab1d8cf",
+  "used_bytes": 2163
+}

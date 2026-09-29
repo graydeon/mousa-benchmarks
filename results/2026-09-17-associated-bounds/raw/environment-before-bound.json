@@ -1,0 +1,13 @@
+{
+  "binary_sha256": "1fa19fdfee4b77edcc475ab46745196c233b6554ccb001f3cb16a84d90efe69e",
+  "fixture_passage_payload_bytes": 960,
+  "note": "Shared worker host; latency is descriptive, not a dedicated-host benchmark.",
+  "platform": "Linux-6.12.107+deb13-cloud-amd64-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "repetitions": {
+    "default": 5,
+    "large": 3
+  },
+  "runner": "omp-worker",
+  "vcpus": 6
+}

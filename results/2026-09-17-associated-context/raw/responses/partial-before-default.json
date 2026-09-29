@@ -1,0 +1,24 @@
+{
+  "budget_bytes": 180,
+  "budget_omitted": 3,
+  "candidate_limit": 100,
+  "decision_id": "979e1232b46586724766caaa2f74aa8374ba44f08880791868d877509e816392",
+  "decision_outcome": "allow",
+  "decision_reasons": [
+    "allow"
+  ],
+  "evaluated_at_usec": 1790644964547663,
+  "evidence": [],
+  "expression": "\"number\" OR \"pages\" OR \"copy\" OR \"at\" OR \"a\" OR \"time\"",
+  "latency_micros": 51028,
+  "lifecycle_excluded": 0,
+  "matched_candidates": 3,
+  "outcome": "budget_omitted",
+  "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+  "query": "number pages copy at a time",
+  "query_policy": "original",
+  "request_id": "6a0dfc7ee0c19b3e6bd7557fbe22ccaf307ac365bda62379d033356e55825547",
+  "source": "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+  "trail_id": "cc0552b988958e6e5f52b7864e5db4ae071803aeb5f7f33904b9fd7cc4daba46",
+  "used_bytes": 0
+}

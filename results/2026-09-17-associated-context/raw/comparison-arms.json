@@ -1,0 +1,690 @@
+{
+  "assertions": [
+    {
+      "assertion": "absence_followup: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: default-path response fields are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: default-path released passages are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: declaration displaced no primary passage",
+      "result": "pass"
+    },
+    {
+      "assertion": "absence_followup: declaration-enabled arm carries an association stage",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: default-path response fields are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: default-path released passages are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: declaration displaced no primary passage",
+      "result": "pass"
+    },
+    {
+      "assertion": "absent: declaration-enabled arm carries an association stage",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: default-path response fields are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: default-path released passages are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: declaration displaced no primary passage",
+      "result": "pass"
+    },
+    {
+      "assertion": "budget: declaration cannot fire without a selected primary passage",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: default-path response fields are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: default-path released passages are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: declaration displaced no primary passage",
+      "result": "pass"
+    },
+    {
+      "assertion": "complete: declaration-enabled arm carries an association stage",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: default-path response fields are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: default-path released passages are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: declaration displaced no primary passage",
+      "result": "pass"
+    },
+    {
+      "assertion": "followup: declaration-enabled arm carries an association stage",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: released bytes equal the released passages",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: released bytes stay inside the budget",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: default-path response fields are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: default-path released passages are unchanged",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: declaration displaced no primary passage",
+      "result": "pass"
+    },
+    {
+      "assertion": "partial: declaration cannot fire without a selected primary passage",
+      "result": "pass"
+    }
+  ],
+  "cases": {
+    "absence_followup": {
+      "added_bytes": 1807,
+      "added_hits": 7,
+      "after_declared": {
+        "associated_bytes": 1807,
+        "associated_hits": 7,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "be37d1884bbe0b2b4643dc60badad1323aeacb6036d0b5d7e9f66992ab147163",
+        "packing_policy": "original",
+        "qualification_note_released": true,
+        "query": "backup maximum completion time",
+        "released_hits": 10,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 3970
+      },
+      "after_declared_followup": {
+        "associated_bytes": 1807,
+        "associated_hits": 7,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "cc67a44b3ce763248a3acb88a590b6260b98e1b78e1b91d85d232e34bf40b693",
+        "packing_policy": "original",
+        "qualification_note_released": true,
+        "query": "sleep seconds backup remaining pages",
+        "released_hits": 10,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 3970
+      },
+      "after_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "f11da1b50b27d28121b2e6ea5ea148d6fd41d3d5ccc6d8541a2d03fb22f101b2",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup maximum completion time",
+        "released_hits": 3,
+        "released_items": [
+          "backup.rst"
+        ],
+        "used_bytes": 2163
+      },
+      "before_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "f11da1b50b27d28121b2e6ea5ea148d6fd41d3d5ccc6d8541a2d03fb22f101b2",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup maximum completion time",
+        "released_hits": 3,
+        "released_items": [
+          "backup.rst"
+        ],
+        "used_bytes": 2163
+      },
+      "default_path_identical": true
+    },
+    "absent": {
+      "added_bytes": 1807,
+      "added_hits": 7,
+      "after_declared": {
+        "associated_bytes": 1807,
+        "associated_hits": 7,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "db61cc28822135bd31fdac9167ed1ea6471abcf1e3af6d7c172242394e96430c",
+        "packing_policy": "original",
+        "qualification_note_released": true,
+        "query": "backup maximum completion time concurrent writes",
+        "released_hits": 10,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 3970
+      },
+      "after_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "8e7747084675135082d0a332f1dace3e542088ffe484c94c73343c96723bfc9e",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup maximum completion time concurrent writes",
+        "released_hits": 3,
+        "released_items": [
+          "backup.rst"
+        ],
+        "used_bytes": 2163
+      },
+      "before_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "8e7747084675135082d0a332f1dace3e542088ffe484c94c73343c96723bfc9e",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup maximum completion time concurrent writes",
+        "released_hits": 3,
+        "released_items": [
+          "backup.rst"
+        ],
+        "used_bytes": 2163
+      },
+      "default_path_identical": true
+    },
+    "budget": {
+      "added_bytes": 0,
+      "added_hits": 0,
+      "after_declared": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 1,
+        "budget_omitted": 6,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 6,
+        "outcome": "budget_omitted",
+        "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup pages progress context manager closes connection",
+        "released_hits": 0,
+        "released_items": [],
+        "used_bytes": 0
+      },
+      "after_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 1,
+        "budget_omitted": 6,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 6,
+        "outcome": "budget_omitted",
+        "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup pages progress context manager closes connection",
+        "released_hits": 0,
+        "released_items": [],
+        "used_bytes": 0
+      },
+      "before_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 1,
+        "budget_omitted": 6,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 6,
+        "outcome": "budget_omitted",
+        "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup pages progress context manager closes connection",
+        "released_hits": 0,
+        "released_items": [],
+        "used_bytes": 0
+      },
+      "default_path_identical": true
+    },
+    "complete": {
+      "added_bytes": 573,
+      "added_hits": 4,
+      "after_declared": {
+        "associated_bytes": 573,
+        "associated_hits": 4,
+        "association_omissions": [
+          {
+            "from_item": "backup.rst",
+            "reason": "duplicate",
+            "segment_id": "488031d57f01d855c965dd2f00e5c3649db4a5502344a08b3da1febc67aad3b9",
+            "to_item": "context.rst"
+          },
+          {
+            "from_item": "backup.rst",
+            "reason": "duplicate",
+            "segment_id": "718438461e1f5b42b77a19065ae385ae7ae2ba3f6d45fc64bbdeffc39a9eda45",
+            "to_item": "context.rst"
+          },
+          {
+            "from_item": "backup.rst",
+            "reason": "duplicate",
+            "segment_id": "5d6549770949a2e30162932f60c1c96a0136be9133f0929f9bc4fdfc1088987c",
+            "to_item": "context.rst"
+          }
+        ],
+        "budget_bytes": 8192,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 6,
+        "outcome": "evidence",
+        "packet_id": "93f48460a32f0763d09071a6a571ed953746987f6f846bdf5eed1e1c39cc5ee7",
+        "packing_policy": "original",
+        "qualification_note_released": true,
+        "query": "backup pages progress context manager closes connection",
+        "released_hits": 10,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 3970
+      },
+      "after_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 8192,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 6,
+        "outcome": "evidence",
+        "packet_id": "3238c6d086429652ac8619e95e9e121584503c6f68fd9a9bbd4eda0b6b92d4c0",
+        "packing_policy": null,
+        "qualification_note_released": true,
+        "query": "backup pages progress context manager closes connection",
+        "released_hits": 6,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 3397
+      },
+      "before_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 8192,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 6,
+        "outcome": "evidence",
+        "packet_id": "3238c6d086429652ac8619e95e9e121584503c6f68fd9a9bbd4eda0b6b92d4c0",
+        "packing_policy": null,
+        "qualification_note_released": true,
+        "query": "backup pages progress context manager closes connection",
+        "released_hits": 6,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 3397
+      },
+      "default_path_identical": true
+    },
+    "followup": {
+      "added_bytes": 1807,
+      "added_hits": 7,
+      "after_declared": {
+        "associated_bytes": 1807,
+        "associated_hits": 7,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "2b60542d67eefce916e041555661d8f38cd48bb21dfae97d0e62ea76dcad65de",
+        "packing_policy": "original",
+        "qualification_note_released": true,
+        "query": "backup",
+        "released_hits": 10,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 3970
+      },
+      "after_declared_followup": {
+        "associated_bytes": 573,
+        "associated_hits": 4,
+        "association_omissions": [
+          {
+            "from_item": "backup.rst",
+            "reason": "duplicate",
+            "segment_id": "d34b16be66269b6d3e1496e8436e27ca76a027bbcadb683bdf808c041eac4faf",
+            "to_item": "context.rst"
+          },
+          {
+            "from_item": "backup.rst",
+            "reason": "duplicate",
+            "segment_id": "a3b48a5a8dbfb50f1ae95b246eb32a7fc981b32da5750c019886fe94ba486ebf",
+            "to_item": "context.rst"
+          },
+          {
+            "from_item": "backup.rst",
+            "reason": "duplicate",
+            "segment_id": "acc459cabecfdedfd52390e0002e33ad2f9995459e40e7923351981ad7408331",
+            "to_item": "context.rst"
+          }
+        ],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 4,
+        "outcome": "evidence",
+        "packet_id": "7762006d3f938fb64cc5caa6fe68aa8b1f6d8b2fff8e549bc9347a8af7da0aba",
+        "packing_policy": "original",
+        "qualification_note_released": true,
+        "query": "context manager neither closes connection",
+        "released_hits": 8,
+        "released_items": [
+          "backup.rst",
+          "context.rst"
+        ],
+        "used_bytes": 2731
+      },
+      "after_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "3954c4995d922582e2a3b91dd8d5d03e5a5246ac8aa035c72e82bda0fa84324f",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup",
+        "released_hits": 3,
+        "released_items": [
+          "backup.rst"
+        ],
+        "used_bytes": 2163
+      },
+      "before_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 4096,
+        "budget_omitted": 0,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "evidence",
+        "packet_id": "3954c4995d922582e2a3b91dd8d5d03e5a5246ac8aa035c72e82bda0fa84324f",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "backup",
+        "released_hits": 3,
+        "released_items": [
+          "backup.rst"
+        ],
+        "used_bytes": 2163
+      },
+      "default_path_identical": true
+    },
+    "partial": {
+      "added_bytes": 0,
+      "added_hits": 0,
+      "after_declared": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 180,
+        "budget_omitted": 3,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "budget_omitted",
+        "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "number pages copy at a time",
+        "released_hits": 0,
+        "released_items": [],
+        "used_bytes": 0
+      },
+      "after_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 180,
+        "budget_omitted": 3,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "budget_omitted",
+        "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "number pages copy at a time",
+        "released_hits": 0,
+        "released_items": [],
+        "used_bytes": 0
+      },
+      "before_default": {
+        "associated_bytes": 0,
+        "associated_hits": 0,
+        "association_omissions": [],
+        "budget_bytes": 180,
+        "budget_omitted": 3,
+        "lifecycle_excluded": 0,
+        "matched_candidates": 3,
+        "outcome": "budget_omitted",
+        "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+        "packing_policy": null,
+        "qualification_note_released": false,
+        "query": "number pages copy at a time",
+        "released_hits": 0,
+        "released_items": [],
+        "used_bytes": 0
+      },
+      "default_path_identical": true
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "budget_bytes": 4096,
+  "budget_omitted": 0,
+  "candidate_limit": 100,
+  "decision_id": "57f841624b93a3a85b340706678dab6b5ce8083f45302b4e78cf38c232cebaa6",
+  "decision_outcome": "allow",
+  "decision_reasons": [
+    "allow"
+  ],
+  "evaluated_at_usec": 1790644966532993,
+  "evidence": [
+    {
+      "bm25_score": -1.0294263633572933,
+      "byte_end": 924,
+      "byte_length": 924,
+      "byte_start": 0,
+      "content_sha256": "ecad4bc94e29e1137d96909e45c1073795ca167fedea2d5f4ea3756984812378",
+      "item": "backup.rst",
+      "location": {
+        "line_end": 25,
+        "line_start": 1,
+        "path": "backup.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L1149-L1219"
+      },
+      "origin": "lexical",
+      "rank": 1,
+      "representation_id": "cb0f238bd2e3ac82b810d939a27587b22876128a78094a25497fdcb00d2095ac",
+      "representation_sha256": "084a47686403bd7a7b2b49f96e53ef30f554de9031adda2253fcb3e6ef643dd7",
+      "segment_id": "4212d7c6afe5d28db2a9455eeff0cf1ec5ad84360670b3b9969252b97c077d70",
+      "segment_policy": "passage-v1",
+      "text": "   .. method:: backup(target, *, pages=-1, progress=None, name=\"main\", sleep=0.250)\n\n      Create a backup of an SQLite database.\n\n      Works even if the database is being accessed by other clients\n      or concurrently by the same connection.\n\n      :param ~sqlite3.Connection target:\n          The database connection to save the backup to.\n\n      :param int pages:\n          The number of pages to copy at a time.\n          If equal to or less than ``0``,\n          the entire database is copied in a single step.\n          Defaults to ``-1``.\n\n      :param progress:\n          If set to a :term:`callable`,\n          it is invoked with three integer arguments for every backup iteration:\n          the *status* of the last iteration,\n          the *remaining* number of pages still to be copied,\n          and the *total* number of pages.\n          Defaults to ``None``.\n      :type progress: :term:`callback` |\u00a0None\n\n"
+    },
+    {
+      "bm25_score": -0.9756217716324281,
+      "byte_end": 2163,
+      "byte_length": 245,
+      "byte_start": 1918,
+      "content_sha256": "646ead1dcc216aeb2889ddc31e01fe5eed0203a79353c543eeb0213c9b982071",
+      "item": "backup.rst",
+      "location": {
+        "line_end": 71,
+        "line_start": 60,
+        "path": "backup.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L1149-L1219"
+      },
+      "origin": "lexical",
+      "rank": 2,
+      "representation_id": "cb0f238bd2e3ac82b810d939a27587b22876128a78094a25497fdcb00d2095ac",
+      "representation_sha256": "084a47686403bd7a7b2b49f96e53ef30f554de9031adda2253fcb3e6ef643dd7",
+      "segment_id": "200e68f4076f3d11084dbf00d39ee6e327a62b83930f61cfcc1c89150e784db7",
+      "segment_policy": "passage-v1",
+      "text": "         src = sqlite3.connect('example.db')\n         dst = sqlite3.connect(':memory:')\n         src.backup(dst)\n         dst.close()\n         src.close()\n\n      .. versionadded:: 3.7\n\n      .. seealso::\n\n         :ref:`sqlite3-howto-encoding`\n\n"
+    },
+    {
+      "bm25_score": -0.7663932917739723,
+      "byte_end": 1918,
+      "byte_length": 994,
+      "byte_start": 924,
+      "content_sha256": "7ac26307e2286906d7ce0ae5b9d82b680792610b77ee09a0a21acb38a644c43a",
+      "item": "backup.rst",
+      "location": {
+        "line_end": 59,
+        "line_start": 26,
+        "path": "backup.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L1149-L1219"
+      },
+      "origin": "lexical",
+      "rank": 3,
+      "representation_id": "cb0f238bd2e3ac82b810d939a27587b22876128a78094a25497fdcb00d2095ac",
+      "representation_sha256": "084a47686403bd7a7b2b49f96e53ef30f554de9031adda2253fcb3e6ef643dd7",
+      "segment_id": "175cf53fd2088c7a2dfa30397c2e10f902d7e01a49445e00155358cb4f8155c7",
+      "segment_policy": "passage-v1",
+      "text": "      :param str name:\n          The name of the database to back up.\n          Either ``\"main\"`` (the default) for the main database,\n          ``\"temp\"`` for the temporary database,\n          or the name of a custom database as attached using the\n          ``ATTACH DATABASE`` SQL statement.\n\n      :param float sleep:\n          The number of seconds to sleep between successive attempts\n          to back up remaining pages.\n\n      Example 1, copy an existing database into another:\n\n      .. testcode::\n\n         def progress(status, remaining, total):\n             print(f'Copied {total-remaining} of {total} pages...')\n\n         src = sqlite3.connect('example.db')\n         dst = sqlite3.connect('backup.db')\n         with dst:\n             src.backup(dst, pages=1, progress=progress)\n         dst.close()\n         src.close()\n\n      .. testoutput::\n         :hide:\n\n         Copied 0 of 0 pages...\n\n      Example 2, copy an existing database into a transient copy:\n\n      .. testcode::\n\n"
+    },
+    {
+      "association": {
+        "author": "examples/backup corpus maintainer",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "from_item": "backup.rst",
+        "to_item": "context.rst"
+      },
+      "byte_end": 1017,
+      "byte_length": 1017,
+      "byte_start": 0,
+      "content_sha256": "c89f0a80057d0955cb8c5ff91b15728c7faf4b820ddc70e194816d3f1a948730",
+      "item": "context.rst",
+      "location": {
+        "line_end": 27,
+        "line_start": 1,
+        "path": "context.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L2399-L2450"
+      },
+      "origin": "association",
+      "representation_id": "68a171946702e1211e4a805c7fa5060b1ed88a2bba56bb6701f01f133ddfaad8",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "segment_id": "d34b16be66269b6d3e1496e8436e27ca76a027bbcadb683bdf808c041eac4faf",
+      "segment_policy": "passage-v1",
+      "text": ".. _sqlite3-connection-context-manager:\n\nHow to use the connection context manager\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nA :class:`Connection` object can be used as a context manager that\nautomatically commits or rolls back open transactions when leaving the body of\nthe context manager.\nIf the body of the :keyword:`with` statement finishes without exceptions,\nthe transaction is committed.\nIf this commit fails,\nor if the body of the ``with`` statement raises an uncaught exception,\nthe transaction is rolled back.\nIf :attr:`~Connection.autocommit` is ``False``,\na new transaction is implicitly opened after committing or rolling back.\n\nIf there is no open transaction upon leaving the body of the ``with`` statement,\nor if :attr:`~Connection.autocommit` is ``True``,\nthe context manager does nothing.\n\n.. note::\n   The context manager neither implicitly opens a new transaction\n   nor closes the connection. If you need a closing context manager, consider\n   using :meth:`contextlib.closing`.\n\n.. testcode::\n\n"
+    },
+    {
+      "association": {
+        "author": "examples/backup corpus maintainer",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "from_item": "backup.rst",
+        "to_item": "context.rst"
+      },
+      "byte_end": 1136,
+      "byte_length": 119,
+      "byte_start": 1017,
+      "content_sha256": "2f289b0eaa0c719f7dbf144a22b152e4d4d78502d040fb4836ce6633026f0abb",
+      "item": "context.rst",
+      "location": {
+        "line_end": 30,
+        "line_start": 28,
+        "path": "context.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L2399-L2450"
+      },
+      "origin": "association",
+      "representation_id": "68a171946702e1211e4a805c7fa5060b1ed88a2bba56bb6701f01f133ddfaad8",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "segment_id": "89759549b2d28226f37ced4f9abd4d6eda6d5207b37b6278185de9aa5dbb02c4",
+      "segment_policy": "passage-v1",
+      "text": "   con = sqlite3.connect(\":memory:\")\n   con.execute(\"CREATE TABLE lang(id INTEGER PRIMARY KEY, name VARCHAR UNIQUE)\")\n\n"
+    },
+    {
+      "association": {
+        "author": "examples/backup corpus maintainer",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "from_item": "backup.rst",
+        "to_item": "context.rst"
+      },
+      "byte_end": 1283,
+      "byte_length": 147,
+      "byte_start": 1136,
+      "content_sha256": "6580b7e92e2713d96b9d4249f3fd1d57b3456b6a208a02268c0429c957e63283",
+      "item": "context.rst",
+      "location": {
+        "line_end": 34,
+        "line_start": 31,
+        "path": "context.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L2399-L2450"
+      },
+      "origin": "association",
+      "representation_id": "68a171946702e1211e4a805c7fa5060b1ed88a2bba56bb6701f01f133ddfaad8",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "segment_id": "7dcc0cde7fcb97e3076e07953ea9b53c50dc7f08cf2c5fa3dcdf85b1c86c0952",
+      "segment_policy": "passage-v1",
+      "text": "   # Successful, con.commit() is called automatically afterwards\n   with con:\n       con.execute(\"INSERT INTO lang(name) VALUES(?)\", (\"Python\",))\n\n"
+    },
+    {
+      "association": {
+        "author": "examples/backup corpus maintainer",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "from_item": "backup.rst",
+        "to_item": "context.rst"
+      },
+      "byte_end": 1362,
+      "byte_length": 79,
+      "byte_start": 1283,
+      "content_sha256": "14c265aeb35b3b3f156556d9b3031934b3bdef08548e972e8daec2cc000f90dc",
+      "item": "context.rst",
+      "location": {
+        "line_end": 35,
+        "line_start": 35,
+        "path": "context.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L2399-L2450"
+      },
+      "origin": "association",
+      "representation_id": "68a171946702e1211e4a805c7fa5060b1ed88a2bba56bb6701f01f133ddfaad8",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "segment_id": "25c67f45596cd221abbd2e5fe438108b710fd0a7a3ffb0fc0d0e6606c13cc0ca",
+      "segment_policy": "passage-v1",
+      "text": "   # con.rollback() is called after the with block finishes with an exception,\n"
+    },
+    {
+      "association": {
+        "author": "examples/backup corpus maintainer",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "from_item": "backup.rst",
+        "to_item": "context.rst"
+      },
+      "byte_end": 1590,
+      "byte_length": 228,
+      "byte_start": 1362,
+      "content_sha256": "7b6ce82b850be31edd7e9bc4bb32dee2acc15271c394f41e810391fd917752ca",
+      "item": "context.rst",
+      "location": {
+        "line_end": 42,
+        "line_start": 36,
+        "path": "context.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L2399-L2450"
+      },
+      "origin": "association",
+      "representation_id": "68a171946702e1211e4a805c7fa5060b1ed88a2bba56bb6701f01f133ddfaad8",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "segment_id": "49fc2e7ddcca55e2183ab1a3c3385a2669bf570a6e6baecd71cffa20455abbd1",
+      "segment_policy": "passage-v1",
+      "text": "   # the exception is still raised and must be caught\n   try:\n       with con:\n           con.execute(\"INSERT INTO lang(name) VALUES(?)\", (\"Python\",))\n   except sqlite3.IntegrityError:\n       print(\"couldn't add Python twice\")\n\n"
+    },
+    {
+      "association": {
+        "author": "examples/backup corpus maintainer",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "from_item": "backup.rst",
+        "to_item": "context.rst"
+      },
+      "byte_end": 1677,
+      "byte_length": 87,
+      "byte_start": 1590,
+      "content_sha256": "2b0295e6e3f2e6feb06c320f1cce2b27c5ff1046d2bb92d717ddad0c0eea9c5d",
+      "item": "context.rst",
+      "location": {
+        "line_end": 43,
+        "line_start": 43,
+        "path": "context.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L2399-L2450"
+      },
+      "origin": "association",
+      "representation_id": "68a171946702e1211e4a805c7fa5060b1ed88a2bba56bb6701f01f133ddfaad8",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "segment_id": "a3b48a5a8dbfb50f1ae95b246eb32a7fc981b32da5750c019886fe94ba486ebf",
+      "segment_policy": "passage-v1",
+      "text": "   # Connection object used as context manager only commits or rollbacks transactions,\n"
+    },
+    {
+      "association": {
+        "author": "examples/backup corpus maintainer",
+        "basis": "The backup examples use the connection as a transaction context manager; the note that this context manager does not close the connection is documented in the connection-context section.",
+        "from_item": "backup.rst",
+        "to_item": "context.rst"
+      },
+      "byte_end": 1807,
+      "byte_length": 130,
+      "byte_start": 1677,
+      "content_sha256": "129f7bd05d5445ed13a6fa1f6f8adac8b26acc5945f6320612d64665a36ea801",
+      "item": "context.rst",
+      "location": {
+        "line_end": 52,
+        "line_start": 44,
+        "path": "context.rst",
+        "url": "https://github.com/python/cpython/blob/bcee1c322115c581da27600f2ae55e5439c027eb/Doc/library/sqlite3.rst#L2399-L2450"
+      },
+      "origin": "association",
+      "representation_id": "68a171946702e1211e4a805c7fa5060b1ed88a2bba56bb6701f01f133ddfaad8",
+      "representation_sha256": "ac5fd1ffcfca7b1c1e3f2c6a4f957eff41cf3596ab8474710af1b92beeb995f8",
+      "segment_id": "acc459cabecfdedfd52390e0002e33ad2f9995459e40e7923351981ad7408331",
+      "segment_policy": "passage-v1",
+      "text": "   # so the connection object should be closed manually\n   con.close()\n\n.. testoutput::\n   :hide:\n\n   couldn't add Python twice\n\n\n"
+    }
+  ],
+  "expression": "\"backup\"",
+  "latency_micros": 53150,
+  "lifecycle_excluded": 0,
+  "matched_candidates": 3,
+  "outcome": "evidence",
+  "packet_id": "2b60542d67eefce916e041555661d8f38cd48bb21dfae97d0e62ea76dcad65de",
+  "packing_policy": "original",
+  "query": "backup",
+  "query_policy": "original",
+  "request_id": "c66d1988238e00a682b08c59518c50f64e0ce35453764f0abec54f2eb7de2806",
+  "source": "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+  "trail_id": "3a9d56c60c99b20bbb3772b2181699e26a35038bec9e2237b6e4b3ed95b08810",
+  "used_bytes": 3970
+}

@@ -1,0 +1,510 @@
+{
+  "control": {
+    "associated_hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24208,
+      24208,
+      24208,
+      24208,
+      24208
+    ],
+    "max_rss_kib_max": 24208,
+    "omission_reasons": [
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trail_inspection_bytes": [
+      1530,
+      1530,
+      1530,
+      1530,
+      1530
+    ],
+    "trail_inspection_bytes_max": 1530,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      73,
+      73,
+      73,
+      73,
+      73
+    ],
+    "wall_ms": [
+      168.6395070000799,
+      171.45428599997103,
+      190.74679699951957,
+      147.83280699975876,
+      154.89040200009185
+    ],
+    "wall_ms_max": 190.74679699951957,
+    "wall_ms_median": 168.6395070000799,
+    "wall_ms_min": 147.83280699975876
+  },
+  "duplicate": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      24208,
+      24208,
+      24208,
+      24208,
+      24208
+    ],
+    "max_rss_kib_max": 24208,
+    "omission_reasons": [
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      },
+      {
+        "budget": 4,
+        "duplicate": 2
+      }
+    ],
+    "trail_inspection_bytes": [
+      7517,
+      7517,
+      7517,
+      7517,
+      7517
+    ],
+    "trail_inspection_bytes_max": 7517,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      4054,
+      4054,
+      4054,
+      4054,
+      4054
+    ],
+    "wall_ms": [
+      42.63677099970664,
+      63.9347540000017,
+      61.3015760000053,
+      43.851549999999406,
+      60.77485799960414
+    ],
+    "wall_ms_max": 63.9347540000017,
+    "wall_ms_median": 60.77485799960414,
+    "wall_ms_min": 42.63677099970664
+  },
+  "fanout": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      26280,
+      25836,
+      24572,
+      25420,
+      25616
+    ],
+    "max_rss_kib_max": 26280,
+    "omission_reasons": [
+      {
+        "budget": 1020,
+        "fan_out": 4
+      },
+      {
+        "budget": 1020,
+        "fan_out": 4
+      },
+      {
+        "budget": 1020,
+        "fan_out": 4
+      },
+      {
+        "budget": 1020,
+        "fan_out": 4
+      },
+      {
+        "budget": 1020,
+        "fan_out": 4
+      }
+    ],
+    "trail_inspection_bytes": [
+      537547,
+      537547,
+      537547,
+      537547,
+      537547
+    ],
+    "trail_inspection_bytes_max": 537547,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      1307.4343500002215,
+      1227.6771229999213,
+      1223.9926120000746,
+      1221.6992220000975,
+      1313.5967060006806
+    ],
+    "wall_ms_max": 1313.5967060006806,
+    "wall_ms_median": 1227.6771229999213,
+    "wall_ms_min": 1221.6992220000975
+  },
+  "large": {
+    "associated_hits": [
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      26200,
+      25336,
+      25336
+    ],
+    "max_rss_kib_max": 26200,
+    "omission_reasons": [
+      {
+        "budget": 996
+      },
+      {
+        "budget": 996
+      },
+      {
+        "budget": 996
+      }
+    ],
+    "trail_inspection_bytes": [
+      523505,
+      523505,
+      523505
+    ],
+    "trail_inspection_bytes_max": 523505,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      748.0771279997498,
+      735.9378520004611,
+      729.7719389998747
+    ],
+    "wall_ms_max": 748.0771279997498,
+    "wall_ms_median": 735.9378520004611,
+    "wall_ms_min": 729.7719389998747
+  },
+  "many-tiny": {
+    "associated_hits": [],
+    "exits": [
+      1,
+      1,
+      1
+    ],
+    "max_rss_kib": [
+      352312,
+      364516,
+      346716
+    ],
+    "max_rss_kib_max": 364516,
+    "omission_reasons": [],
+    "trail_inspection_bytes": [],
+    "trail_inspection_bytes_max": 0,
+    "trail_inspection_exits": [],
+    "used_bytes": [],
+    "wall_ms": [
+      27560.896512,
+      28247.897457999898,
+      27638.127783000527
+    ],
+    "wall_ms_max": 28247.897457999898,
+    "wall_ms_median": 27638.127783000527,
+    "wall_ms_min": 27560.896512
+  },
+  "medium": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      25336,
+      25336,
+      25336,
+      25336,
+      25336
+    ],
+    "max_rss_kib_max": 25336,
+    "omission_reasons": [
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      },
+      {
+        "budget": 252
+      }
+    ],
+    "trail_inspection_bytes": [
+      135138,
+      135138,
+      135138,
+      135138,
+      135138
+    ],
+    "trail_inspection_bytes_max": 135138,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      245.90880800042214,
+      245.10510100026295,
+      241.55623499973444,
+      438.1688140001643,
+      243.22156899961556
+    ],
+    "wall_ms_max": 438.1688140001643,
+    "wall_ms_median": 245.10510100026295,
+    "wall_ms_min": 241.55623499973444
+  },
+  "no-budget": {
+    "associated_hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      25336,
+      25336,
+      25336,
+      25336,
+      25336
+    ],
+    "max_rss_kib_max": 25336,
+    "omission_reasons": [
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      },
+      {
+        "budget": 256
+      }
+    ],
+    "trail_inspection_bytes": [
+      135261,
+      135261,
+      135261,
+      135261,
+      135261
+    ],
+    "trail_inspection_bytes_max": 135261,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      73,
+      73,
+      73,
+      73,
+      73
+    ],
+    "wall_ms": [
+      235.87381900051696,
+      200.16775600015535,
+      210.3844859993842,
+      211.01494899994577,
+      260.78740200046013
+    ],
+    "wall_ms_max": 260.78740200046013,
+    "wall_ms_median": 211.01494899994577,
+    "wall_ms_min": 200.16775600015535
+  },
+  "small": {
+    "associated_hits": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "max_rss_kib": [
+      25336,
+      25336,
+      25336,
+      25336,
+      25336
+    ],
+    "max_rss_kib_max": 25336,
+    "omission_reasons": [
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
+    "trail_inspection_bytes": [
+      3593,
+      3593,
+      3593,
+      3593,
+      3593
+    ],
+    "trail_inspection_bytes_max": 3593,
+    "trail_inspection_exits": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "used_bytes": [
+      3981,
+      3981,
+      3981,
+      3981,
+      3981
+    ],
+    "wall_ms": [
+      56.28561799949239,
+      61.83067700021638,
+      58.92003900044074,
+      60.90115400002105,
+      62.09097499959171
+    ],
+    "wall_ms_max": 62.09097499959171,
+    "wall_ms_median": 60.90115400002105,
+    "wall_ms_min": 56.28561799949239
+  }
+}

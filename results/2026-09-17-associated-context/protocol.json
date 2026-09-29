@@ -35,5 +35,20 @@
     "associated-packet.json": "the proposed followup-case packet with association provenance",
     "declarations.json": "the fixed declaration file used for all proposed runs",
     "followup-query-associated.json": "the fixed follow-up query under the proposed configuration"
+  },
+  "correction": {
+    "supersedes": "The original comparison.json and expected_before_run describe the initial, mislabelled recording; both are retained without changing the original raw record.",
+    "product_base": "e5f8fad9424cb759ffe258a004d1b970189d288d",
+    "product_diff_sha256": "2b3723bc88b054b8d55c9aed2645ee313a12c9660dc5237ae1022c136559e67e",
+    "recording_worker_bundle_sha256": "5333cef749578cab6236a2155a908ac384cb96d4845836603a9d565b8ecdc92b",
+    "analysis_worker_bundle_sha256": "c0fd798e97f79db2d7bb5381904bdfac55336687dc2d9b14d8d6758acb5e01ae",
+    "product_before_binary_sha256": "1166408e6646608d45fe5f07c6ee08211199222af5e4e120fce65e078f6f8d94",
+    "product_after_binary_sha256": "f78987956d52aa4d7ab97dfbb6bb09e8c75fe1caaf7aae64064a341cf3405491",
+    "corpus_archive_sha256": "fa6eff0e02c00fe13bfc086f4f9bf574dff45402281e4abd76584504fff10502",
+    "cases_sha256": "2a2bd9b778b5d1cf40f3c6eb823baf1bcd4c51b64140abaae3a339ba9c6afb77",
+    "declarations_sha256": "eb4a042e8409746af7745e800ce11b231871a3a14231b99271d16ba9f5a46062",
+    "arms": "before-default, after-default and after-declared on each of six fixed cases; two cases also have after-declared-followup",
+    "record": "raw/commands.json contains actual commands, absolute paths, binary and input hashes and environment; raw/responses/ contains the full per-arm responses; raw/comparison-arms.json derives assertions and numbers from them.",
+    "method": "One fresh store per arm over the same prepared corpus directory for each case; no timing comparison. Missing origin on older lexical hits is equivalent to the newer explicit origin=lexical label when comparing the released passages."
   }
 }

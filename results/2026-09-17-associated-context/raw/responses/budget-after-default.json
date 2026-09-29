@@ -1,0 +1,24 @@
+{
+  "budget_bytes": 1,
+  "budget_omitted": 6,
+  "candidate_limit": 100,
+  "decision_id": "4b2e5eaa7c09291cf038fc1805520558380a895fddf85220989b1b599523458b",
+  "decision_outcome": "allow",
+  "decision_reasons": [
+    "allow"
+  ],
+  "evaluated_at_usec": 1790644970685809,
+  "evidence": [],
+  "expression": "\"backup\" OR \"pages\" OR \"progress\" OR \"context\" OR \"manager\" OR \"closes\" OR \"connection\"",
+  "latency_micros": 48839,
+  "lifecycle_excluded": 0,
+  "matched_candidates": 6,
+  "outcome": "budget_omitted",
+  "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+  "query": "backup pages progress context manager closes connection",
+  "query_policy": "original",
+  "request_id": "248a56c1cdb1c8ecb0e7b6dcfdedd3ba5ce163bd893bb4011ef5177b516cc51a",
+  "source": "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+  "trail_id": "3b2149cdaca957dabdb7f79e566e34c9a7af07846b389119e80c46ffc2c47e4d",
+  "used_bytes": 0
+}

@@ -1,0 +1,1193 @@
+{
+  "arms": [
+    {
+      "arm": "before-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 8192,
+      "budget_omitted": 0,
+      "case": "complete",
+      "file": "responses/complete-before-default.json",
+      "hits": 6,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "3238c6d086429652ac8619e95e9e121584503c6f68fd9a9bbd4eda0b6b92d4c0",
+      "packing_policy": null,
+      "query": "backup pages progress context manager closes connection",
+      "used_bytes": 3397
+    },
+    {
+      "arm": "after-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 8192,
+      "budget_omitted": 0,
+      "case": "complete",
+      "file": "responses/complete-after-default.json",
+      "hits": 6,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "3238c6d086429652ac8619e95e9e121584503c6f68fd9a9bbd4eda0b6b92d4c0",
+      "packing_policy": null,
+      "query": "backup pages progress context manager closes connection",
+      "used_bytes": 3397
+    },
+    {
+      "arm": "after-declared",
+      "associated_hits": 4,
+      "association_omissions": [
+        {
+          "from_item": "backup.rst",
+          "reason": "duplicate",
+          "segment_id": "488031d57f01d855c965dd2f00e5c3649db4a5502344a08b3da1febc67aad3b9",
+          "to_item": "context.rst"
+        },
+        {
+          "from_item": "backup.rst",
+          "reason": "duplicate",
+          "segment_id": "718438461e1f5b42b77a19065ae385ae7ae2ba3f6d45fc64bbdeffc39a9eda45",
+          "to_item": "context.rst"
+        },
+        {
+          "from_item": "backup.rst",
+          "reason": "duplicate",
+          "segment_id": "5d6549770949a2e30162932f60c1c96a0136be9133f0929f9bc4fdfc1088987c",
+          "to_item": "context.rst"
+        }
+      ],
+      "budget_bytes": 8192,
+      "budget_omitted": 0,
+      "case": "complete",
+      "file": "responses/complete-after-declared.json",
+      "hits": 10,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "93f48460a32f0763d09071a6a571ed953746987f6f846bdf5eed1e1c39cc5ee7",
+      "packing_policy": "original",
+      "query": "backup pages progress context manager closes connection",
+      "used_bytes": 3970
+    },
+    {
+      "arm": "before-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 180,
+      "budget_omitted": 3,
+      "case": "partial",
+      "file": "responses/partial-before-default.json",
+      "hits": 0,
+      "items": [],
+      "outcome": "budget_omitted",
+      "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+      "packing_policy": null,
+      "query": "number pages copy at a time",
+      "used_bytes": 0
+    },
+    {
+      "arm": "after-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 180,
+      "budget_omitted": 3,
+      "case": "partial",
+      "file": "responses/partial-after-default.json",
+      "hits": 0,
+      "items": [],
+      "outcome": "budget_omitted",
+      "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+      "packing_policy": null,
+      "query": "number pages copy at a time",
+      "used_bytes": 0
+    },
+    {
+      "arm": "after-declared",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 180,
+      "budget_omitted": 3,
+      "case": "partial",
+      "file": "responses/partial-after-declared.json",
+      "hits": 0,
+      "items": [],
+      "outcome": "budget_omitted",
+      "packet_id": "0fa3961d3459b955aa80387ea41a27750d0cfafa9c183df91c5081d1c93cca03",
+      "packing_policy": null,
+      "query": "number pages copy at a time",
+      "used_bytes": 0
+    },
+    {
+      "arm": "before-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "followup",
+      "file": "responses/followup-before-default.json",
+      "hits": 3,
+      "items": [
+        "backup.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "3954c4995d922582e2a3b91dd8d5d03e5a5246ac8aa035c72e82bda0fa84324f",
+      "packing_policy": null,
+      "query": "backup",
+      "used_bytes": 2163
+    },
+    {
+      "arm": "after-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "followup",
+      "file": "responses/followup-after-default.json",
+      "hits": 3,
+      "items": [
+        "backup.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "3954c4995d922582e2a3b91dd8d5d03e5a5246ac8aa035c72e82bda0fa84324f",
+      "packing_policy": null,
+      "query": "backup",
+      "used_bytes": 2163
+    },
+    {
+      "arm": "after-declared",
+      "associated_hits": 7,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "followup",
+      "file": "responses/followup-after-declared.json",
+      "hits": 10,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "2b60542d67eefce916e041555661d8f38cd48bb21dfae97d0e62ea76dcad65de",
+      "packing_policy": "original",
+      "query": "backup",
+      "used_bytes": 3970
+    },
+    {
+      "arm": "after-declared-followup",
+      "associated_hits": 4,
+      "association_omissions": [
+        {
+          "from_item": "backup.rst",
+          "reason": "duplicate",
+          "segment_id": "d34b16be66269b6d3e1496e8436e27ca76a027bbcadb683bdf808c041eac4faf",
+          "to_item": "context.rst"
+        },
+        {
+          "from_item": "backup.rst",
+          "reason": "duplicate",
+          "segment_id": "a3b48a5a8dbfb50f1ae95b246eb32a7fc981b32da5750c019886fe94ba486ebf",
+          "to_item": "context.rst"
+        },
+        {
+          "from_item": "backup.rst",
+          "reason": "duplicate",
+          "segment_id": "acc459cabecfdedfd52390e0002e33ad2f9995459e40e7923351981ad7408331",
+          "to_item": "context.rst"
+        }
+      ],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "followup",
+      "file": "responses/followup-after-declared-followup.json",
+      "hits": 8,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "7762006d3f938fb64cc5caa6fe68aa8b1f6d8b2fff8e549bc9347a8af7da0aba",
+      "packing_policy": "original",
+      "query": "context manager neither closes connection",
+      "used_bytes": 2731
+    },
+    {
+      "arm": "before-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "absent",
+      "file": "responses/absent-before-default.json",
+      "hits": 3,
+      "items": [
+        "backup.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "8e7747084675135082d0a332f1dace3e542088ffe484c94c73343c96723bfc9e",
+      "packing_policy": null,
+      "query": "backup maximum completion time concurrent writes",
+      "used_bytes": 2163
+    },
+    {
+      "arm": "after-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "absent",
+      "file": "responses/absent-after-default.json",
+      "hits": 3,
+      "items": [
+        "backup.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "8e7747084675135082d0a332f1dace3e542088ffe484c94c73343c96723bfc9e",
+      "packing_policy": null,
+      "query": "backup maximum completion time concurrent writes",
+      "used_bytes": 2163
+    },
+    {
+      "arm": "after-declared",
+      "associated_hits": 7,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "absent",
+      "file": "responses/absent-after-declared.json",
+      "hits": 10,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "db61cc28822135bd31fdac9167ed1ea6471abcf1e3af6d7c172242394e96430c",
+      "packing_policy": "original",
+      "query": "backup maximum completion time concurrent writes",
+      "used_bytes": 3970
+    },
+    {
+      "arm": "before-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "absence_followup",
+      "file": "responses/absence_followup-before-default.json",
+      "hits": 3,
+      "items": [
+        "backup.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "f11da1b50b27d28121b2e6ea5ea148d6fd41d3d5ccc6d8541a2d03fb22f101b2",
+      "packing_policy": null,
+      "query": "backup maximum completion time",
+      "used_bytes": 2163
+    },
+    {
+      "arm": "after-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "absence_followup",
+      "file": "responses/absence_followup-after-default.json",
+      "hits": 3,
+      "items": [
+        "backup.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "f11da1b50b27d28121b2e6ea5ea148d6fd41d3d5ccc6d8541a2d03fb22f101b2",
+      "packing_policy": null,
+      "query": "backup maximum completion time",
+      "used_bytes": 2163
+    },
+    {
+      "arm": "after-declared",
+      "associated_hits": 7,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "absence_followup",
+      "file": "responses/absence_followup-after-declared.json",
+      "hits": 10,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "be37d1884bbe0b2b4643dc60badad1323aeacb6036d0b5d7e9f66992ab147163",
+      "packing_policy": "original",
+      "query": "backup maximum completion time",
+      "used_bytes": 3970
+    },
+    {
+      "arm": "after-declared-followup",
+      "associated_hits": 7,
+      "association_omissions": [],
+      "budget_bytes": 4096,
+      "budget_omitted": 0,
+      "case": "absence_followup",
+      "file": "responses/absence_followup-after-declared-followup.json",
+      "hits": 10,
+      "items": [
+        "backup.rst",
+        "context.rst"
+      ],
+      "outcome": "evidence",
+      "packet_id": "cc67a44b3ce763248a3acb88a590b6260b98e1b78e1b91d85d232e34bf40b693",
+      "packing_policy": "original",
+      "query": "sleep seconds backup remaining pages",
+      "used_bytes": 3970
+    },
+    {
+      "arm": "before-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 1,
+      "budget_omitted": 6,
+      "case": "budget",
+      "file": "responses/budget-before-default.json",
+      "hits": 0,
+      "items": [],
+      "outcome": "budget_omitted",
+      "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+      "packing_policy": null,
+      "query": "backup pages progress context manager closes connection",
+      "used_bytes": 0
+    },
+    {
+      "arm": "after-default",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 1,
+      "budget_omitted": 6,
+      "case": "budget",
+      "file": "responses/budget-after-default.json",
+      "hits": 0,
+      "items": [],
+      "outcome": "budget_omitted",
+      "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+      "packing_policy": null,
+      "query": "backup pages progress context manager closes connection",
+      "used_bytes": 0
+    },
+    {
+      "arm": "after-declared",
+      "associated_hits": 0,
+      "association_omissions": [],
+      "budget_bytes": 1,
+      "budget_omitted": 6,
+      "case": "budget",
+      "file": "responses/budget-after-declared.json",
+      "hits": 0,
+      "items": [],
+      "outcome": "budget_omitted",
+      "packet_id": "700e9bbd067588b02901d5b87aa8c95792a0da5884abe6a32df98f3e3f22c010",
+      "packing_policy": null,
+      "query": "backup pages progress context manager closes connection",
+      "used_bytes": 0
+    }
+  ],
+  "cases_sha256": "2a2bd9b778b5d1cf40f3c6eb823baf1bcd4c51b64140abaae3a339ba9c6afb77",
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/complete/prepare.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/complete/docs",
+        "prepare"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/complete/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/complete/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/complete/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/complete/docs",
+        "retrieve",
+        "--case",
+        "complete",
+        "--question",
+        "backup pages progress context manager closes connection",
+        "--budget-bytes",
+        "8192"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/complete/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/complete/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/complete/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/complete/docs",
+        "retrieve",
+        "--case",
+        "complete",
+        "--question",
+        "backup pages progress context manager closes connection",
+        "--budget-bytes",
+        "8192"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/complete/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/complete/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/complete/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/complete/docs",
+        "retrieve",
+        "--case",
+        "complete",
+        "--question",
+        "backup pages progress context manager closes connection",
+        "--budget-bytes",
+        "8192",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/partial/prepare.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+        "prepare"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/partial/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/partial/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+        "retrieve",
+        "--case",
+        "partial",
+        "--question",
+        "number pages copy at a time",
+        "--budget-bytes",
+        "180"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/partial/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/partial/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+        "retrieve",
+        "--case",
+        "partial",
+        "--question",
+        "number pages copy at a time",
+        "--budget-bytes",
+        "180"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/partial/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/partial/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/partial/docs",
+        "retrieve",
+        "--case",
+        "partial",
+        "--question",
+        "number pages copy at a time",
+        "--budget-bytes",
+        "180",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/prepare.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "prepare"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "retrieve",
+        "--case",
+        "followup",
+        "--question",
+        "backup",
+        "--budget-bytes",
+        "4096"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "retrieve",
+        "--case",
+        "followup",
+        "--question",
+        "backup",
+        "--budget-bytes",
+        "4096"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "retrieve",
+        "--case",
+        "followup",
+        "--question",
+        "backup",
+        "--budget-bytes",
+        "4096",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/after-declared-followup.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/followup/after-declared-followup.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/followup/docs",
+        "retrieve",
+        "--case",
+        "followup",
+        "--question",
+        "context manager neither closes connection",
+        "--budget-bytes",
+        "4096",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absent/prepare.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+        "prepare"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absent/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absent/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+        "retrieve",
+        "--case",
+        "absent",
+        "--question",
+        "backup maximum completion time concurrent writes",
+        "--budget-bytes",
+        "4096"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absent/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absent/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+        "retrieve",
+        "--case",
+        "absent",
+        "--question",
+        "backup maximum completion time concurrent writes",
+        "--budget-bytes",
+        "4096"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absent/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absent/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absent/docs",
+        "retrieve",
+        "--case",
+        "absent",
+        "--question",
+        "backup maximum completion time concurrent writes",
+        "--budget-bytes",
+        "4096",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/prepare.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "prepare"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "retrieve",
+        "--case",
+        "absence_followup",
+        "--question",
+        "backup maximum completion time",
+        "--budget-bytes",
+        "4096"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "retrieve",
+        "--case",
+        "absence_followup",
+        "--question",
+        "backup maximum completion time",
+        "--budget-bytes",
+        "4096"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "retrieve",
+        "--case",
+        "absence_followup",
+        "--question",
+        "backup maximum completion time",
+        "--budget-bytes",
+        "4096",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/after-declared-followup.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/absence_followup/after-declared-followup.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/absence_followup/docs",
+        "retrieve",
+        "--case",
+        "absence_followup",
+        "--question",
+        "sleep seconds backup remaining pages",
+        "--budget-bytes",
+        "4096",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/budget/prepare.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+        "prepare"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/budget/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-before",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/budget/before-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+        "retrieve",
+        "--case",
+        "budget",
+        "--question",
+        "backup pages progress context manager closes connection",
+        "--budget-bytes",
+        "1"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/budget/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/budget/after-default.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+        "retrieve",
+        "--case",
+        "budget",
+        "--question",
+        "backup pages progress context manager closes connection",
+        "--budget-bytes",
+        "1"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/budget/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+        "sync"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/backup.py",
+        "--mousa",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/mousa-after",
+        "--store",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/stores/budget/after-declared.sqlite",
+        "--directory",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/out/arms-work/corpus/budget/docs",
+        "retrieve",
+        "--case",
+        "budget",
+        "--question",
+        "backup pages progress context manager closes connection",
+        "--budget-bytes",
+        "1",
+        "--associations",
+        "/work/jobs/983cbf8e5f9c4679a385d28393101a12/source/examples/backup/associations.json"
+      ],
+      "exit": 0
+    }
+  ],
+  "corpus_archive_sha256": "fa6eff0e02c00fe13bfc086f4f9bf574dff45402281e4abd76584504fff10502",
+  "declarations_sha256": "eb4a042e8409746af7745e800ce11b231871a3a14231b99271d16ba9f5a46062",
+  "environment": {
+    "platform": "Linux-6.12.107+deb13-cloud-amd64-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "product_after": {
+    "binary_sha256": "f78987956d52aa4d7ab97dfbb6bb09e8c75fe1caaf7aae64064a341cf3405491"
+  },
+  "product_before": {
+    "binary_sha256": "1166408e6646608d45fe5f07c6ee08211199222af5e4e120fce65e078f6f8d94"
+  }
+}
