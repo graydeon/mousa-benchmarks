@@ -1,0 +1,158 @@
+{
+  "outcome": "evidence_available",
+  "support": "not_assessed",
+  "answer": null,
+  "snapshot": "Authorized at query time; not proof of current access or current source state.",
+  "corpus": {
+    "name": "Git working-tree documentation",
+    "version": "2.51.0",
+    "revision": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+    "manifest_sha256": "6b058ba6db48468c12592d38d1565b2211b36f00b657fb565bc744f073554ef2",
+    "attribution": "Git contributors; verbatim AsciiDoc sources, GPL-2.0-only; see COPYING. Included fragments remain separate documents; no AsciiDoc rendering."
+  },
+  "include_relationships": [
+    {
+      "from_item": "Documentation/git-restore.adoc",
+      "to_item": "Documentation/diff-context-options.adoc",
+      "directive": {
+        "path": "Documentation/git-restore.adoc",
+        "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-restore.adoc",
+        "line_start": 53,
+        "line_end": 53,
+        "byte_start": 1833,
+        "byte_end": 1869,
+        "text": "include::diff-context-options.adoc[]"
+      }
+    }
+  ],
+  "response": {
+    "query": "When interactively selecting hunks with git restore, how can I show the context between nearby hunks, and what is the default?",
+    "source": "/tmp/mousa-context-512-tu2_3vto/corpus",
+    "query_policy": "original",
+    "expression": "\"when\" OR \"interactively\" OR \"selecting\" OR \"hunks\" OR \"with\" OR \"git\" OR \"restore\" OR \"how\" OR \"can\" OR \"i\" OR \"show\" OR \"the\" OR \"context\" OR \"between\" OR \"nearby\" OR \"hunks\" OR \"and\" OR \"what\" OR \"is\" OR \"the\" OR \"default\"",
+    "request_id": "ec0f218b5f067f51ab19ff3e129d8991c2d948698d7ed540f22913c888428f74",
+    "decision_id": "194d086710b11230cca6189b4c5f1dd50010cc50f301d0442a90a82d6187fd71",
+    "decision_outcome": "allow",
+    "decision_reasons": [
+      "allow"
+    ],
+    "evaluated_at_usec": 1790705993536215,
+    "trail_id": "03d09fa68636c502cedffad4058893e9d7c4f5fc47306fe559c72db83f878dac",
+    "packet_id": "f0827da20758072ca127c84e89e163ba434c9c74c0db9e6edccdf9eb9430d20f",
+    "outcome": "evidence",
+    "matched_candidates": 23,
+    "candidate_limit": 100,
+    "lifecycle_excluded": 0,
+    "budget_omitted": 18,
+    "used_bytes": 3945,
+    "budget_bytes": 4096,
+    "evidence": [
+      {
+        "item": "Documentation/diff-context-options.adoc",
+        "segment_id": "0e01a6c18b22857e8c41f0595617fa2acc0ea07edcfe812590b5bf4a26dd24a6",
+        "content_sha256": "9f7c3d9361dea2b8d601a93b01791619e6848cef31c9f28ab4dadeb8720b67a5",
+        "representation_id": "9e92159327ece66260e8b8fbac844f6d12bf25820c575c4b534900ea58c80116",
+        "representation_sha256": "9f7c3d9361dea2b8d601a93b01791619e6848cef31c9f28ab4dadeb8720b67a5",
+        "byte_start": 0,
+        "byte_end": 372,
+        "segment_policy": "passage-v1",
+        "rank": 1,
+        "bm25_score": -12.561285577464039,
+        "byte_length": 372,
+        "text": "`-U<n>`::\n`--unified=<n>`::\n\tGenerate diffs with _<n>_ lines of context. Defaults to `diff.context`\n\tor 3 if the config option is unset.\n\n`--inter-hunk-context=<n>`::\n\tShow the context between diff hunks, up to the specified _<number>_\n\tof lines, thereby fusing hunks that are close to each other.\n\tDefaults to `diff.interHunkContext` or 0 if the config option\n\tis unset.\n",
+        "origin": "lexical",
+        "location": {
+          "path": "Documentation/diff-context-options.adoc",
+          "line_start": 1,
+          "line_end": 10,
+          "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/diff-context-options.adoc"
+        }
+      },
+      {
+        "item": "Documentation/git-restore.adoc",
+        "segment_id": "5434d5ad437d66427520a058719df44edcf14be326e64be67dfffe17ac7b210e",
+        "content_sha256": "d544404e366f77715c86489cdb1243bef0be30ed16d0fb8dd83e5cfdfd136494",
+        "representation_id": "55e7d89d73f3c4bc93162f90dcbda7865faf5599abdd1ecca09f2e7707d2dc5f",
+        "representation_sha256": "52ce5fdd6921705f570f4042163124764b5c7573596b33abcd569eefc2e196b6",
+        "byte_start": 939,
+        "byte_end": 1871,
+        "segment_policy": "passage-v1",
+        "rank": 2,
+        "bm25_score": -12.163994033324135,
+        "byte_length": 932,
+        "text": "See \"Reset, restore and revert\" in linkgit:git[1] for the differences\nbetween the three commands.\n\nOPTIONS\n-------\n`-s <tree>`::\n`--source=<tree>`::\n\tRestore the working tree files with the content from the given\n\ttree. It is common to specify the source tree by naming a\n\tcommit, branch or tag associated with it.\n+\nIf not specified, the contents are restored from `HEAD` if `--staged` is\ngiven, otherwise from the index.\n+\nAs a special case, you may use `\"<rev-A>...<rev-B>\"` as a shortcut for the\nmerge base of _<rev-A>_ and _<rev-B>_ if there is exactly one merge base. You can\nleave out at most one of _<rev-A>__ and _<rev-B>_, in which case it defaults to `HEAD`.\n\n`-p`::\n`--patch`::\n\tInteractively select hunks in the difference between the\n\trestore source and the restore location. See the \"Interactive\n\tMode\" section of linkgit:git-add[1] to learn how to operate\n\tthe `--patch` mode.\n\ninclude::diff-context-options.adoc[]\n\n",
+        "origin": "lexical",
+        "location": {
+          "path": "Documentation/git-restore.adoc",
+          "line_start": 28,
+          "line_end": 54,
+          "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-restore.adoc"
+        }
+      },
+      {
+        "item": "Documentation/git-switch.adoc",
+        "segment_id": "17b1dcc80f2f5ef3a6b0eba93146197385d1541a99f5fd9f2f2aa00e844104b3",
+        "content_sha256": "528d8e0b81b83937e545608e461d04f0e972dc608cf3eefd2f554d4796539eb6",
+        "representation_id": "47e6165c4417c1cee6216d88e3574ba992fbc3d01f059e500b17aa2742a1ec49",
+        "representation_sha256": "af2df19ed0b0c84e3f82210433e6912b0989dc9be271728de4c4ccc5e10701b8",
+        "byte_start": 7272,
+        "byte_end": 8280,
+        "segment_policy": "passage-v1",
+        "rank": 3,
+        "bm25_score": -5.091498712282143,
+        "byte_length": 1008,
+        "text": "------------\n$ git switch mytopic\nerror: You have local changes to 'frotz'; not switching branches.\n------------\n\nYou can give the `-m` flag to the command, which would try a three-way\nmerge:\n\n------------\n$ git switch -m mytopic\nAuto-merging frotz\n------------\n\nAfter this three-way merge, the local modifications are _not_\nregistered in your index file, so `git diff` would show you what\nchanges you made since the tip of the new branch.\n\nTo switch back to the previous branch before we switched to mytopic\n(i.e. \"master\" branch):\n\n------------\n$ git switch -\n------------\n\nYou can grow a new branch from any commit. For example, switch to\n\"`HEAD~3`\" and create branch \"`fixup`\":\n\n------------\n$ git switch -c fixup HEAD~3\nSwitched to a new branch 'fixup'\n------------\n\nIf you want to start a new branch from a remote branch of the same\nname:\n\n------------\n$ git switch new-topic\nBranch `new-topic` set up to track remote branch `new-topic` from `origin`\nSwitched to a new branch `new-topic`\n------------\n\n",
+        "origin": "lexical",
+        "location": {
+          "path": "Documentation/git-switch.adoc",
+          "line_start": 215,
+          "line_end": 255,
+          "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-switch.adoc"
+        }
+      },
+      {
+        "item": "Documentation/git-restore.adoc",
+        "segment_id": "ed66e6e79b64150575048e12776a80fbd284f9a0484d996e5f8e73a0a1d36ca9",
+        "content_sha256": "7ec055b37c867969ebb777d3d79d46215547b23192ba61715aa8952434ce0623",
+        "representation_id": "55e7d89d73f3c4bc93162f90dcbda7865faf5599abdd1ecca09f2e7707d2dc5f",
+        "representation_sha256": "52ce5fdd6921705f570f4042163124764b5c7573596b33abcd569eefc2e196b6",
+        "byte_start": 2877,
+        "byte_end": 3901,
+        "segment_policy": "passage-v1",
+        "rank": 4,
+        "bm25_score": -4.7321366563492635,
+        "byte_length": 1024,
+        "text": "`-m`::\n`--merge`::\n\tWhen restoring files on the working tree from the index,\n\trecreate the conflicted merge in the unmerged paths.\n\tThis option cannot be used when checking out paths from a\n\ttree-ish (i.e. with the `--source` option).\n\n`--conflict=<style>`::\n\tThe same as `--merge` option above, but changes the way the\n\tconflicting hunks are presented, overriding the\n\t`merge.conflictStyle` configuration variable.  Possible values\n\tare `merge` (default), `diff3`, and `zdiff3`.\n\n`--ignore-unmerged`::\n\tWhen restoring files on the working tree from the index, do\n\tnot abort the operation if there are unmerged entries and\n\tneither `--ours`, `--theirs`, `--merge` or `--conflict` is\n\tspecified. Unmerged paths on the working tree are left alone.\n\n`--ignore-skip-worktree-bits`::\n\tIn sparse checkout mode, the default is to only update entries\n\tmatched by _<pathspec>_ and sparse patterns in\n\t`$GIT_DIR/info/sparse-checkout`. This option ignores the sparse\n\tpatterns and unconditionally restores any files in\n\t_<pathspec>_.\n\n",
+        "origin": "lexical",
+        "location": {
+          "path": "Documentation/git-restore.adoc",
+          "line_start": 85,
+          "line_end": 110,
+          "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-restore.adoc"
+        }
+      },
+      {
+        "item": "Documentation/git-switch.adoc",
+        "segment_id": "9a712c357c4aaebe95a7c12794d38a431f94f2f9a01fcf23eb56f7d0e0c523e5",
+        "content_sha256": "eed1c3213756de28af072e9cfd65edd7a34c293f08bd1002090a13b6189ef5e3",
+        "representation_id": "47e6165c4417c1cee6216d88e3574ba992fbc3d01f059e500b17aa2742a1ec49",
+        "representation_sha256": "af2df19ed0b0c84e3f82210433e6912b0989dc9be271728de4c4ccc5e10701b8",
+        "byte_start": 4713,
+        "byte_end": 5322,
+        "segment_policy": "passage-v1",
+        "rank": 5,
+        "bm25_score": -4.435368827158346,
+        "byte_length": 609,
+        "text": "`--conflict=<style>`::\n\tThe same as `--merge` option above, but changes the way the\n\tconflicting hunks are presented, overriding the\n\t`merge.conflictStyle` configuration variable.  Possible values are\n\t`merge` (default), `diff3`, and `zdiff3`.\n\n`-q`::\n`--quiet`::\n\tQuiet, suppress feedback messages.\n\n`--progress`::\n`--no-progress`::\n\tProgress status is reported on the standard error stream\n\tby default when it is attached to a terminal, unless `--quiet`\n\tis specified. This flag enables progress reporting even if not\n\tattached to a terminal, regardless of `--quiet`.\n\n`-t`::\n`--track[ (direct|inherit)]`::\n",
+        "origin": "lexical",
+        "location": {
+          "path": "Documentation/git-switch.adoc",
+          "line_start": 139,
+          "line_end": 157,
+          "url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-switch.adoc"
+        }
+      }
+    ],
+    "latency_micros": 108733
+  }
+}

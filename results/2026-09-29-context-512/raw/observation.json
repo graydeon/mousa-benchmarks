@@ -1,0 +1,106 @@
+{
+  "packet_id": "f0827da20758072ca127c84e89e163ba434c9c74c0db9e6edccdf9eb9430d20f",
+  "trail_id": "03d09fa68636c502cedffad4058893e9d7c4f5fc47306fe559c72db83f878dac",
+  "evidence_bytes": 3945,
+  "rows": [
+    {
+      "rank": 1,
+      "segment_id": "0e01a6c18b22857e8c41f0595617fa2acc0ea07edcfe812590b5bf4a26dd24a6",
+      "item": "Documentation/diff-context-options.adoc",
+      "source_url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/diff-context-options.adoc",
+      "line_start": 1,
+      "line_end": 10,
+      "byte_start": 0,
+      "byte_end": 372,
+      "text_sha256": "9f7c3d9361dea2b8d601a93b01791619e6848cef31c9f28ab4dadeb8720b67a5",
+      "old_selected": true,
+      "new_selected": true
+    },
+    {
+      "rank": 2,
+      "segment_id": "5434d5ad437d66427520a058719df44edcf14be326e64be67dfffe17ac7b210e",
+      "item": "Documentation/git-restore.adoc",
+      "source_url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-restore.adoc",
+      "line_start": 28,
+      "line_end": 54,
+      "byte_start": 939,
+      "byte_end": 1871,
+      "text_sha256": "d544404e366f77715c86489cdb1243bef0be30ed16d0fb8dd83e5cfdfd136494",
+      "old_selected": false,
+      "new_selected": true
+    },
+    {
+      "rank": 3,
+      "segment_id": "17b1dcc80f2f5ef3a6b0eba93146197385d1541a99f5fd9f2f2aa00e844104b3",
+      "item": "Documentation/git-switch.adoc",
+      "source_url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-switch.adoc",
+      "line_start": 215,
+      "line_end": 255,
+      "byte_start": 7272,
+      "byte_end": 8280,
+      "text_sha256": "528d8e0b81b83937e545608e461d04f0e972dc608cf3eefd2f554d4796539eb6",
+      "old_selected": true,
+      "new_selected": false
+    },
+    {
+      "rank": 4,
+      "segment_id": "ed66e6e79b64150575048e12776a80fbd284f9a0484d996e5f8e73a0a1d36ca9",
+      "item": "Documentation/git-restore.adoc",
+      "source_url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-restore.adoc",
+      "line_start": 85,
+      "line_end": 110,
+      "byte_start": 2877,
+      "byte_end": 3901,
+      "text_sha256": "7ec055b37c867969ebb777d3d79d46215547b23192ba61715aa8952434ce0623",
+      "old_selected": false,
+      "new_selected": false
+    },
+    {
+      "rank": 5,
+      "segment_id": "9a712c357c4aaebe95a7c12794d38a431f94f2f9a01fcf23eb56f7d0e0c523e5",
+      "item": "Documentation/git-switch.adoc",
+      "source_url": "https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-switch.adoc",
+      "line_start": 139,
+      "line_end": 157,
+      "byte_start": 4713,
+      "byte_end": 5322,
+      "text_sha256": "eed1c3213756de28af072e9cfd65edd7a34c293f08bd1002090a13b6189ef5e3",
+      "old_selected": false,
+      "new_selected": false
+    }
+  ],
+  "baseline": {
+    "selected_segment_ids": [
+      "0e01a6c18b22857e8c41f0595617fa2acc0ea07edcfe812590b5bf4a26dd24a6",
+      "17b1dcc80f2f5ef3a6b0eba93146197385d1541a99f5fd9f2f2aa00e844104b3"
+    ],
+    "omitted_segment_ids": [
+      "5434d5ad437d66427520a058719df44edcf14be326e64be67dfffe17ac7b210e",
+      "ed66e6e79b64150575048e12776a80fbd284f9a0484d996e5f8e73a0a1d36ca9",
+      "9a712c357c4aaebe95a7c12794d38a431f94f2f9a01fcf23eb56f7d0e0c523e5"
+    ],
+    "tokens": 507,
+    "sha256": "e321faa416d6edc613ef05a120133796c3ee02abc16b6027dc36a2eb0246dbf0",
+    "text": "Use only the cited Git 2.51.0 passages. If evidence is insufficient, say so.\nQuestion: When interactively selecting hunks with git restore, how can I show the context between nearby hunks, and what is the default?\nEvidence:\n[1] Documentation/diff-context-options.adoc https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/diff-context-options.adoc lines 1-10\n`-U<n>`::\n`--unified=<n>`::\n\tGenerate diffs with _<n>_ lines of context. Defaults to `diff.context`\n\tor 3 if the config option is unset.\n\n`--inter-hunk-context=<n>`::\n\tShow the context between diff hunks, up to the specified _<number>_\n\tof lines, thereby fusing hunks that are close to each other.\n\tDefaults to `diff.interHunkContext` or 0 if the config option\n\tis unset.\n\n[2] Documentation/git-switch.adoc https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-switch.adoc lines 215-255\n------------\n$ git switch mytopic\nerror: You have local changes to 'frotz'; not switching branches.\n------------\n\nYou can give the `-m` flag to the command, which would try a three-way\nmerge:\n\n------------\n$ git switch -m mytopic\nAuto-merging frotz\n------------\n\nAfter this three-way merge, the local modifications are _not_\nregistered in your index file, so `git diff` would show you what\nchanges you made since the tip of the new branch.\n\nTo switch back to the previous branch before we switched to mytopic\n(i.e. \"master\" branch):\n\n------------\n$ git switch -\n------------\n\nYou can grow a new branch from any commit. For example, switch to\n\"`HEAD~3`\" and create branch \"`fixup`\":\n\n------------\n$ git switch -c fixup HEAD~3\nSwitched to a new branch 'fixup'\n------------\n\nIf you want to start a new branch from a remote branch of the same\nname:\n\n------------\n$ git switch new-topic\nBranch `new-topic` set up to track remote branch `new-topic` from `origin`\nSwitched to a new branch `new-topic`\n------------\n\n\n"
+  },
+  "revised": {
+    "encoding": "o200k_base",
+    "limit": 512,
+    "tokens": 511,
+    "sha256": "4fb9cd571750a1a3bfcafda3ff05dea542dc67e9b166b15e617d6a0529cf69f4",
+    "text": "Use only the cited Git 2.51.0 passages. If evidence is insufficient, say so.\nQuestion: When interactively selecting hunks with git restore, how can I show the context between nearby hunks, and what is the default?\nEvidence:\n[1] https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/diff-context-options.adoc lines 1-10\n`-U<n>`::\n`--unified=<n>`::\n\tGenerate diffs with _<n>_ lines of context. Defaults to `diff.context`\n\tor 3 if the config option is unset.\n\n`--inter-hunk-context=<n>`::\n\tShow the context between diff hunks, up to the specified _<number>_\n\tof lines, thereby fusing hunks that are close to each other.\n\tDefaults to `diff.interHunkContext` or 0 if the config option\n\tis unset.\n\n[2] https://github.com/git/git/blob/c44beea485f0f2feaf460e2ac87fdd5608d63cf0/Documentation/git-restore.adoc lines 28-54\nSee \"Reset, restore and revert\" in linkgit:git[1] for the differences\nbetween the three commands.\n\nOPTIONS\n-------\n`-s <tree>`::\n`--source=<tree>`::\n\tRestore the working tree files with the content from the given\n\ttree. It is common to specify the source tree by naming a\n\tcommit, branch or tag associated with it.\n+\nIf not specified, the contents are restored from `HEAD` if `--staged` is\ngiven, otherwise from the index.\n+\nAs a special case, you may use `\"<rev-A>...<rev-B>\"` as a shortcut for the\nmerge base of _<rev-A>_ and _<rev-B>_ if there is exactly one merge base. You can\nleave out at most one of _<rev-A>__ and _<rev-B>_, in which case it defaults to `HEAD`.\n\n`-p`::\n`--patch`::\n\tInteractively select hunks in the difference between the\n\trestore source and the restore location. See the \"Interactive\n\tMode\" section of linkgit:git-add[1] to learn how to operate\n\tthe `--patch` mode.\n\ninclude::diff-context-options.adoc[]\n\n\n",
+    "selected_segment_ids": [
+      "0e01a6c18b22857e8c41f0595617fa2acc0ea07edcfe812590b5bf4a26dd24a6",
+      "5434d5ad437d66427520a058719df44edcf14be326e64be67dfffe17ac7b210e"
+    ],
+    "omitted_segment_ids": [
+      "17b1dcc80f2f5ef3a6b0eba93146197385d1541a99f5fd9f2f2aa00e844104b3",
+      "ed66e6e79b64150575048e12776a80fbd284f9a0484d996e5f8e73a0a1d36ca9",
+      "9a712c357c4aaebe95a7c12794d38a431f94f2f9a01fcf23eb56f7d0e0c523e5"
+    ],
+    "source_packet_id": "f0827da20758072ca127c84e89e163ba434c9c74c0db9e6edccdf9eb9430d20f"
+  },
+  "baseline_two_tokens": 524,
+  "full_revised_tokens": 1324,
+  "loss": "Revised rendering excludes ranks 3-5: both git-switch passages and a later git-restore passage. The byte packet still contains all five."
+}

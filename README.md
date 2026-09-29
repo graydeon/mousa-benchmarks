@@ -16,6 +16,7 @@ These are development measurements, including failed experiments and limitations
 - [results/2026-09-17-corpus-boundaries](results/2026-09-17-corpus-boundaries): fixed Git documentation questions before and after adding separately attributed referenced fragments, including unsupported cases.
 - [results/2026-09-17-associated-context](results/2026-09-17-associated-context): corrected three-arm declared-association comparison; the superseded mislabelled record is retained.
 - [results/2026-09-17-associated-bounds](results/2026-09-17-associated-bounds): oversized-record failure and bounded target-passage enumeration; shared-host timings are descriptive.
+- [results/2026-09-29-context-512](results/2026-09-29-context-512): one pinned Git interactive-hunk question comparing source-attributed prompt layouts under a 512-token rendered-content cap; no model answer or latency measurement.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.
