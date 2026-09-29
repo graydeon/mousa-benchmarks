@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-29",
+  "question": "When git switch finds a branch on multiple remotes, how does checkout.defaultRemote=origin resolve it, and is that setting included in the git-switch manual?",
+  "expected_relationship": "Documentation/git-switch.adoc directly includes Documentation/config/checkout.adoc at normalized line 276 via the literal include::config/checkout.adoc[]; the fragment describes checkout.defaultRemote and its use by git switch. A citation to the fragment alone does not prove that this fragment is included in the switch manual. The parent citation must contain the include directive; the switch --guess passage may add useful behavior but does not substitute for that edge.",
+  "git_version": "2.51.0",
+  "git_revision": "c44beea485f0f2feaf460e2ac87fdd5608d63cf0",
+  "archive_sha256": "6b7cb47de2a083e15301b8bb94f903f00022a12284fd0ad8732f0e811ee68ce9",
+  "manifest_sha256": "6b058ba6db48468c12592d38d1565b2211b36f00b657fb565bc744f073554ef2",
+  "file_sha256": {
+    "Documentation/git-switch.adoc": "af2df19ed0b0c84e3f82210433e6912b0989dc9be271728de4c4ccc5e10701b8",
+    "Documentation/config/checkout.adoc": "4eed9ec7a0f79c558b8a7390349e62e327a7fa8b87d12c5aa7d277345af2c06c",
+    "Documentation/includes/cmd-config-section-all.adoc": "79fabba25c379b7d029dda0b1a9eae67b3697a375ae104f0594d16410d98c73b"
+  },
+  "source_revision": "adeca3c74f444aec5d4418e7ed781e099cd9c9a8",
+  "source_tree": "346b6029ce6afaeafc098dd3517be1df418f833e",
+  "companion_revision": "50096248056b36f0caab5624bc1c73eaed2601c8",
+  "query_budget_bytes": 4096,
+  "query_arguments": [
+    "query",
+    "--budget-bytes",
+    "4096",
+    "/tmp/mousa-switch-default-remote-corpus",
+    "When git switch finds a branch on multiple remotes, how does checkout.defaultRemote=origin resolve it, and is that setting included in the git-switch manual?"
+  ],
+  "rendered_content_limit": 512,
+  "tokenizer": "tiktoken==0.12.0/o200k_base",
+  "prompt_layout": "Use only the cited Git 2.51.0 passages. If evidence is insufficient, say so.\\nQuestion: {question}\\nEvidence:\\n[1] {revision-pinned-url} lines {first}-{last}\\n{whole-passage}\\n",
+  "selection": "Try each whole passage in byte-packed rank order; retain when full rendered text with consecutively numbered citations fits 512 tokens; otherwise skip. Neither the canonical packet nor Source Trail changes.",
+  "citation_checks": "Match each hit's text and normalized byte/line coordinates to hashed source; verify manifest's switch-to-checkout edge and literal line 276 directive with normalized bytes; verify fragment content is cited intact.",
+  "acceptance": "The same fixed question and 4096-byte packet retain both an intact checkout.defaultRemote fragment and a git-switch parent passage with the line-276 directive at 512 rendered-content tokens, with revision-pinned URLs and normalized line ranges. Enumerate all ranked selected/omitted passages, token costs and lost evidence. If either required passage is absent, record the miss before any correction. Preserve packet/trail IDs relative to a projection over that same response. No generated-answer, semantic-support or full-model-window claim; raw JSON, caller/system/tool framing and output reservation are outside the cap.",
+  "frozen_before_first_query_sha256": "688cd14c37bfe62c57d994ee89d33321ecc29bf9b457b56701c8601272a30d6f",
+  "published_source_root": "/tmp/mousa-switch-default-remote-corpus",
+  "binary_sha256": "5c7236ffdbe340a276d61609b5aaeb873f28ef737fcd9682db9b49fe312014eb",
+  "observed_order_after_freeze": [
+    {
+      "rank": 1,
+      "item": "Documentation/git-switch.adoc",
+      "byte_start": 2809,
+      "byte_end": 3730,
+      "segment_id": "38a859725dd98903786bb9ff2f66d14ee61d4056d030864465102c46922ec29a"
+    },
+    {
+      "rank": 2,
+      "item": "Documentation/config/checkout.adoc",
+      "byte_start": 0,
+      "byte_end": 845,
+      "segment_id": "297f184d485c66acdf5fe44c3caea6e9d27dfcff4b57751b9f3d8b97052e734f"
+    },
+    {
+      "rank": 3,
+      "item": "Documentation/config/checkout.adoc",
+      "byte_start": 845,
+      "byte_end": 1774,
+      "segment_id": "a6e0dc3ce2d53a6f83e2bf5c776c5e62c741bdea58513dae70417b4313d9ff76"
+    },
+    {
+      "rank": 4,
+      "item": "Documentation/git-switch.adoc",
+      "byte_start": 5322,
+      "byte_end": 6252,
+      "segment_id": "c3a6e05bbb9ee0692878bf5906e2bb4ab33dce817cdf5100206650fd14920a73"
+    },
+    {
+      "rank": 5,
+      "item": "Documentation/includes/cmd-config-section-all.adoc",
+      "byte_start": 0,
+      "byte_end": 160,
+      "segment_id": "6408934903a872382de337f51c49306670b2120df01358ad9fbb0fb8d89c18c3"
+    }
+  ]
+}
