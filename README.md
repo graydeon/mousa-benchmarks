@@ -18,6 +18,8 @@ These are development measurements, including failed experiments and limitations
 - [results/2026-09-17-associated-bounds](results/2026-09-17-associated-bounds): oversized-record failure and bounded target-passage enumeration; shared-host timings are descriptive.
 - [results/2026-09-29-context-512](results/2026-09-29-context-512): one pinned Git interactive-hunk question comparing source-attributed prompt layouts under a 512-token rendered-content cap; no model answer or latency measurement.
 - [results/2026-09-29-switch-default-remote](results/2026-09-29-switch-default-remote): a distinct Git switch configuration question misses the required parent passage and omits the retrieved fragment at 512 rendered-content tokens.
+- [datasets/synthetic-fleet](datasets/synthetic-fleet): wholly generated corpora, labeled workloads, sample input and real CLI/database reproduction tools.
+- [results/2026-09-30-synthetic-fleet](results/2026-09-30-synthetic-fleet): first live Codex/OMP/Hermes observations, generated database sizes and retained failures.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

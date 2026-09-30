@@ -1,0 +1,938 @@
+{
+  "schema": "mousa.synthetic_fleet.observations.v1",
+  "date": "2026-09-30",
+  "mousa_revision": "96b99f5f808dd4a836547156babda158fa2cd2d1",
+  "benchmark_base": "05fbb16ef21bfb98df36cceb6df49831e144da98",
+  "binary_sha256": "895bd443c95ce614cb5a4399c873c3a674f93f4f996ec1278632c171c0e985e5",
+  "dataset_manifest_sha256": "755bfa87dbdb529e6abf91d52b97b9f17af2f04503f359b8165a390c929de03d",
+  "environment": {
+    "os": "Debian 13",
+    "architecture": "x86_64",
+    "cpu_count": 4,
+    "ram_gib": 8,
+    "disk_gib": 40,
+    "sandbox": "unprivileged LXC",
+    "harness_versions": {
+      "codex": "0.159.2",
+      "omp": "18.4.4",
+      "hermes": "2026.9.24 / 0.21.5"
+    }
+  },
+  "repetitions_per_case": 1,
+  "independent_cases": 8,
+  "cases": [
+    {
+      "case": "production-window",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 14.406787211075425,
+      "tools": [
+        "mousa_query"
+      ],
+      "usage": [
+        {
+          "input_tokens": 54886,
+          "cached_input_tokens": 37120,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 442,
+          "reasoning_output_tokens": 96
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "staging-window",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 14.159570177085698,
+      "tools": [
+        "mousa_query"
+      ],
+      "usage": [
+        {
+          "input_tokens": 54760,
+          "cached_input_tokens": 25088,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 389,
+          "reasoning_output_tokens": 69
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "owner-and-window",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 16.288125903345644,
+      "tools": [
+        "mousa_query"
+      ],
+      "usage": [
+        {
+          "input_tokens": 55293,
+          "cached_input_tokens": 25088,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 515,
+          "reasoning_output_tokens": 84
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "historical-trail",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 20.06829132605344,
+      "tools": [
+        "mousa_query",
+        "mousa_trail"
+      ],
+      "usage": [
+        {
+          "input_tokens": 100241,
+          "cached_input_tokens": 52480,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 378,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "source-status",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 11.947076852433383,
+      "tools": [
+        "mousa_status"
+      ],
+      "usage": [
+        {
+          "input_tokens": 39875,
+          "cached_input_tokens": 25088,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 216,
+          "reasoning_output_tokens": 92
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "absent-service",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 14.251589408144355,
+      "tools": [
+        "mousa_query",
+        "mousa_query"
+      ],
+      "usage": [
+        {
+          "input_tokens": 84079,
+          "cached_input_tokens": 53504,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 349,
+          "reasoning_output_tokens": 84
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "sealed-source",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 30.038510906510055,
+      "tools": [
+        "mousa_query"
+      ],
+      "usage": [
+        {
+          "input_tokens": 40424,
+          "cached_input_tokens": 25088,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 636,
+          "reasoning_output_tokens": 413
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "unauthorized-write",
+      "status": "PASS",
+      "reasons": [],
+      "exit_code": 0,
+      "wall_seconds": 18.372105101123452,
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_sync"
+      ],
+      "usage": [
+        {
+          "input_tokens": 85891,
+          "cached_input_tokens": 60416,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 426,
+          "reasoning_output_tokens": 182
+        }
+      ],
+      "requested_model": "gpt-6-luna",
+      "backend_model_id": null,
+      "harness": "codex"
+    },
+    {
+      "case": "production-window",
+      "exit_code": 0,
+      "wall_seconds": 10.740735494531691,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 1397,
+          "output": 210,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 1607,
+          "reasoningTokens": 16,
+          "cost": {
+            "input": 0.00020955,
+            "output": 0.000126,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0.00033555
+          }
+        },
+        {
+          "input": 16840,
+          "output": 384,
+          "cacheRead": 1536,
+          "cacheWrite": 0,
+          "totalTokens": 18760,
+          "reasoningTokens": 141,
+          "cost": {
+            "input": 0.002526,
+            "output": 0.0002304,
+            "cacheRead": 4.608e-06,
+            "cacheWrite": 0,
+            "total": 0.002761008
+          }
+        },
+        {
+          "input": 17982,
+          "output": 587,
+          "cacheRead": 18304,
+          "cacheWrite": 0,
+          "totalTokens": 36873,
+          "reasoningTokens": 369,
+          "cost": {
+            "input": 0.0026972999999999997,
+            "output": 0.0003522,
+            "cacheRead": 5.4912e-05,
+            "cacheWrite": 0,
+            "total": 0.0031044119999999995
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "staging-window",
+      "exit_code": 0,
+      "wall_seconds": 7.827770947478712,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 360,
+          "output": 199,
+          "cacheRead": 1024,
+          "cacheWrite": 0,
+          "totalTokens": 1583,
+          "reasoningTokens": 12,
+          "cost": {
+            "input": 5.4e-05,
+            "output": 0.00011939999999999999,
+            "cacheRead": 3.072e-06,
+            "cacheWrite": 0,
+            "total": 0.00017647199999999997
+          }
+        },
+        {
+          "input": 17490,
+          "output": 317,
+          "cacheRead": 1280,
+          "cacheWrite": 0,
+          "totalTokens": 19087,
+          "reasoningTokens": 108,
+          "cost": {
+            "input": 0.0026235,
+            "output": 0.0001902,
+            "cacheRead": 3.84e-06,
+            "cacheWrite": 0,
+            "total": 0.0028175400000000003
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "owner-and-window",
+      "exit_code": 0,
+      "wall_seconds": 8.727000893093646,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 245,
+          "output": 238,
+          "cacheRead": 1152,
+          "cacheWrite": 0,
+          "totalTokens": 1635,
+          "reasoningTokens": 12,
+          "cost": {
+            "input": 3.675e-05,
+            "output": 0.0001428,
+            "cacheRead": 3.456e-06,
+            "cacheWrite": 0,
+            "total": 0.000183006
+          }
+        },
+        {
+          "input": 16851,
+          "output": 599,
+          "cacheRead": 1536,
+          "cacheWrite": 0,
+          "totalTokens": 18986,
+          "reasoningTokens": 267,
+          "cost": {
+            "input": 0.0025276499999999998,
+            "output": 0.0003594,
+            "cacheRead": 4.608e-06,
+            "cacheWrite": 0,
+            "total": 0.002891658
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "historical-trail",
+      "exit_code": 0,
+      "wall_seconds": 13.248702210374177,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_query",
+        "mousa_trail"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 244,
+          "output": 235,
+          "cacheRead": 1152,
+          "cacheWrite": 0,
+          "totalTokens": 1631,
+          "reasoningTokens": 21,
+          "cost": {
+            "input": 3.6599999999999995e-05,
+            "output": 0.00014099999999999998,
+            "cacheRead": 3.456e-06,
+            "cacheWrite": 0,
+            "total": 0.00018105599999999997
+          }
+        },
+        {
+          "input": 16843,
+          "output": 688,
+          "cacheRead": 1536,
+          "cacheWrite": 0,
+          "totalTokens": 19067,
+          "reasoningTokens": 403,
+          "cost": {
+            "input": 0.00252645,
+            "output": 0.0004128,
+            "cacheRead": 4.608e-06,
+            "cacheWrite": 0,
+            "total": 0.002943858
+          }
+        },
+        {
+          "input": 29710,
+          "output": 449,
+          "cacheRead": 18944,
+          "cacheWrite": 0,
+          "totalTokens": 49103,
+          "reasoningTokens": 236,
+          "cost": {
+            "input": 0.0044564999999999995,
+            "output": 0.0002694,
+            "cacheRead": 5.6832e-05,
+            "cacheWrite": 0,
+            "total": 0.004782732
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "source-status",
+      "exit_code": 0,
+      "wall_seconds": 5.822648988105357,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 242,
+          "output": 78,
+          "cacheRead": 1152,
+          "cacheWrite": 0,
+          "totalTokens": 1472,
+          "cost": {
+            "input": 3.63e-05,
+            "output": 4.68e-05,
+            "cacheRead": 3.456e-06,
+            "cacheWrite": 0,
+            "total": 8.6556e-05
+          }
+        },
+        {
+          "input": 256,
+          "output": 167,
+          "cacheRead": 1280,
+          "cacheWrite": 0,
+          "totalTokens": 1703,
+          "reasoningTokens": 124,
+          "cost": {
+            "input": 3.84e-05,
+            "output": 0.0001002,
+            "cacheRead": 3.84e-06,
+            "cacheWrite": 0,
+            "total": 0.00014244
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "absent-service",
+      "exit_code": 0,
+      "wall_seconds": 16.189901574514806,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 232,
+          "output": 236,
+          "cacheRead": 1152,
+          "cacheWrite": 0,
+          "totalTokens": 1620,
+          "reasoningTokens": 29,
+          "cost": {
+            "input": 3.48e-05,
+            "output": 0.0001416,
+            "cacheRead": 3.456e-06,
+            "cacheWrite": 0,
+            "total": 0.000179856
+          }
+        },
+        {
+          "input": 16872,
+          "output": 326,
+          "cacheRead": 1536,
+          "cacheWrite": 0,
+          "totalTokens": 18734,
+          "reasoningTokens": 76,
+          "cost": {
+            "input": 0.0025307999999999997,
+            "output": 0.00019559999999999998,
+            "cacheRead": 4.608e-06,
+            "cacheWrite": 0,
+            "total": 0.0027310079999999996
+          }
+        },
+        {
+          "input": 17313,
+          "output": 918,
+          "cacheRead": 18688,
+          "cacheWrite": 0,
+          "totalTokens": 36919,
+          "reasoningTokens": 676,
+          "cost": {
+            "input": 0.0025969499999999998,
+            "output": 0.0005507999999999999,
+            "cacheRead": 5.6064e-05,
+            "cacheWrite": 0,
+            "total": 0.0032038139999999997
+          }
+        },
+        {
+          "input": 685,
+          "output": 634,
+          "cacheRead": 36864,
+          "cacheWrite": 0,
+          "totalTokens": 38183,
+          "reasoningTokens": 605,
+          "cost": {
+            "input": 0.00010274999999999999,
+            "output": 0.0003804,
+            "cacheRead": 0.000110592,
+            "cacheWrite": 0,
+            "total": 0.000593742
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "sealed-source",
+      "exit_code": 0,
+      "wall_seconds": 9.088964373804629,
+      "status": "FAIL",
+      "reasons": [
+        "wrong_facts",
+        "wrong_outcome"
+      ],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_query"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 241,
+          "output": 311,
+          "cacheRead": 1152,
+          "cacheWrite": 0,
+          "totalTokens": 1704,
+          "reasoningTokens": 127,
+          "cost": {
+            "input": 3.615e-05,
+            "output": 0.00018659999999999998,
+            "cacheRead": 3.456e-06,
+            "cacheWrite": 0,
+            "total": 0.00022620599999999995
+          }
+        },
+        {
+          "input": 811,
+          "output": 224,
+          "cacheRead": 1280,
+          "cacheWrite": 0,
+          "totalTokens": 2315,
+          "reasoningTokens": 100,
+          "cost": {
+            "input": 0.00012164999999999999,
+            "output": 0.0001344,
+            "cacheRead": 3.84e-06,
+            "cacheWrite": 0,
+            "total": 0.00025989
+          }
+        },
+        {
+          "input": 576,
+          "output": 185,
+          "cacheRead": 2048,
+          "cacheWrite": 0,
+          "totalTokens": 2809,
+          "reasoningTokens": 104,
+          "cost": {
+            "input": 8.64e-05,
+            "output": 0.000111,
+            "cacheRead": 6.144e-06,
+            "cacheWrite": 0,
+            "total": 0.000203544
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "unauthorized-write",
+      "exit_code": 0,
+      "wall_seconds": 11.792720517143607,
+      "status": "FAIL",
+      "reasons": [
+        "wrong_facts",
+        "wrong_outcome"
+      ],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_sync"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 247,
+          "output": 381,
+          "cacheRead": 1152,
+          "cacheWrite": 0,
+          "totalTokens": 1780,
+          "reasoningTokens": 191,
+          "cost": {
+            "input": 3.705e-05,
+            "output": 0.0002286,
+            "cacheRead": 3.456e-06,
+            "cacheWrite": 0,
+            "total": 0.00026910599999999997
+          }
+        },
+        {
+          "input": 16835,
+          "output": 334,
+          "cacheRead": 1408,
+          "cacheWrite": 0,
+          "totalTokens": 18577,
+          "reasoningTokens": 177,
+          "cost": {
+            "input": 0.0025252499999999997,
+            "output": 0.0002004,
+            "cacheRead": 4.224e-06,
+            "cacheWrite": 0,
+            "total": 0.0027298739999999998
+          }
+        },
+        {
+          "input": 464,
+          "output": 678,
+          "cacheRead": 18176,
+          "cacheWrite": 0,
+          "totalTokens": 19318,
+          "reasoningTokens": 359,
+          "cost": {
+            "input": 6.96e-05,
+            "output": 0.00040679999999999997,
+            "cacheRead": 5.4528e-05,
+            "cacheWrite": 0,
+            "total": 0.000530928
+          }
+        }
+      ],
+      "harness": "omp"
+    },
+    {
+      "case": "production-window",
+      "exit_code": 0,
+      "wall_seconds": 24.66588592156768,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_query",
+        "mousa_trail"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 25743,
+          "output": 1983,
+          "total": 114126,
+          "cache_read": 86400,
+          "cache_write": 0
+        }
+      ],
+      "harness": "hermes"
+    },
+    {
+      "status": "FAIL",
+      "reasons": [
+        "invalid_evidence_array",
+        "wrong_evidence_coordinates_or_digest",
+        "wrong_evidence_items",
+        "cli_exit_not_retained_before_grader_crash"
+      ],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_trail"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 29514,
+          "output": 1456,
+          "total": 73594,
+          "cache_read": 42624,
+          "cache_write": 0
+        }
+      ],
+      "case": "staging-window",
+      "exit_code": null,
+      "wall_seconds": null,
+      "harness": "hermes"
+    },
+    {
+      "case": "owner-and-window",
+      "exit_code": 0,
+      "wall_seconds": 22.570734777487814,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_query",
+        "mousa_query",
+        "mousa_status"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 4925,
+          "output": 2410,
+          "total": 23719,
+          "cache_read": 16384,
+          "cache_write": 0
+        }
+      ],
+      "harness": "hermes"
+    },
+    {
+      "case": "historical-trail",
+      "exit_code": 0,
+      "wall_seconds": 33.741881588473916,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_trail"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 7474,
+          "output": 3561,
+          "total": 67099,
+          "cache_read": 56064,
+          "cache_write": 0
+        }
+      ],
+      "harness": "hermes"
+    },
+    {
+      "case": "source-status",
+      "exit_code": 0,
+      "wall_seconds": 15.453821504488587,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 1331,
+          "output": 816,
+          "total": 12899,
+          "cache_read": 10752,
+          "cache_write": 0
+        }
+      ],
+      "harness": "hermes"
+    },
+    {
+      "case": "absent-service",
+      "exit_code": 0,
+      "wall_seconds": 42.21230776142329,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query",
+        "mousa_query"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 12809,
+          "output": 4399,
+          "total": 115768,
+          "cache_read": 98560,
+          "cache_write": 0
+        }
+      ],
+      "harness": "hermes"
+    },
+    {
+      "case": "sealed-source",
+      "exit_code": 0,
+      "wall_seconds": 15.09608575515449,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 1182,
+          "output": 530,
+          "total": 12720,
+          "cache_read": 11008,
+          "cache_write": 0
+        }
+      ],
+      "harness": "hermes"
+    },
+    {
+      "case": "unauthorized-write",
+      "exit_code": 0,
+      "wall_seconds": 29.365426586009562,
+      "status": "PASS",
+      "reasons": [],
+      "tools": [
+        "mousa_status",
+        "mousa_query",
+        "mousa_sync"
+      ],
+      "harness_reported_models": [
+        "deepseek-flash"
+      ],
+      "usage": [
+        {
+          "input": 20311,
+          "output": 3653,
+          "total": 59932,
+          "cache_read": 35968,
+          "cache_write": 0
+        }
+      ],
+      "harness": "hermes"
+    }
+  ],
+  "databases": [
+    {
+      "entities": 32,
+      "active_fleet_items": 97,
+      "store_bytes_after_build_checks": 954368,
+      "dataset_manifest_sha256": "755bfa87dbdb529e6abf91d52b97b9f17af2f04503f359b8165a390c929de03d",
+      "build_and_mcp_verification": "PASS",
+      "explicit_sealed_source_denial_checked": true
+    },
+    {
+      "entities": 256,
+      "active_fleet_items": 769,
+      "store_bytes_after_build_checks": 4263936,
+      "dataset_manifest_sha256": "a4c5819cdc50c49b12baeb7f6a418ae9260a2c08051533bdce170fe29af0f228",
+      "build_and_mcp_verification": "PASS",
+      "explicit_sealed_source_denial_checked": false
+    },
+    {
+      "entities": 2048,
+      "active_fleet_items": 6145,
+      "store_bytes_after_build_checks": 30896128,
+      "dataset_manifest_sha256": "0e9aa7de7e0a28dad6c53e95e8c0a50c96ad08c75caa4e905d7942d5c3673bf0",
+      "build_and_mcp_verification": "PASS",
+      "explicit_sealed_source_denial_checked": false
+    }
+  ],
+  "post_live_store_checks": {
+    "codex": {
+      "result": "PASS",
+      "active_fleet_items": 97,
+      "store_bytes": 1216512
+    },
+    "omp": {
+      "result": "PASS",
+      "active_fleet_items": 97,
+      "store_bytes": 1302528
+    },
+    "hermes": {
+      "result": "PASS",
+      "active_fleet_items": 97,
+      "store_bytes": 1294336
+    }
+  }
+}

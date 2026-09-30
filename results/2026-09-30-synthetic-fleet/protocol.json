@@ -1,0 +1,48 @@
+{
+  "dataset": "synthetic-fleet-v1",
+  "seed": 20260930,
+  "live_entities": 32,
+  "positive_cases": 5,
+  "negative_cases": 3,
+  "answer_contract": [
+    "outcome",
+    "facts",
+    "evidence",
+    "packet_id",
+    "trail_id"
+  ],
+  "source_binding": [
+    "fleet"
+  ],
+  "ingestion_enabled": false,
+  "codex_requested_model": "gpt-6-luna",
+  "codex_backend_identity": "not exposed by exec JSON",
+  "secondary_harness_reported_model": "deepseek-flash",
+  "provider_credentials": "preconfigured; not exported",
+  "codex_response_format": "provider-side JSON schema",
+  "secondary_response_format": "JSON contract in prompt, no provider-side schema",
+  "hermes_adapter": "process-local config overlay, native synchronous MCP discovery, native handler receipts",
+  "commands": [
+    "python3 datasets/synthetic-fleet/generate.py --out DATASET --entities N --seed 20260930",
+    "python3 datasets/synthetic-fleet/build.py --mousa MOUSA --dataset DATASET --store STORE --report REPORT",
+    "python3 datasets/synthetic-fleet/run_codex.py --codex CODEX --mousa MOUSA --dataset DATASET --store STORE --out OUTPUT --model gpt-6-luna",
+    "python3 datasets/synthetic-fleet/run_secondary.py --harness HARNESS --executable CLI --mousa MOUSA --dataset DATASET --store STORE --out OUTPUT",
+    "python3 datasets/synthetic-fleet/build.py --mousa MOUSA --dataset DATASET --store STORE --report REPORT --verify-only"
+  ],
+  "private_outputs_excluded": [
+    "model transcripts",
+    "prompts and reasoning",
+    "absolute account paths",
+    "SQLite databases",
+    "provider configuration"
+  ],
+  "script_sha256": {
+    "datasets/synthetic-fleet/build.py": "93f1d80c4011036db137ff8fee439f1aba8d3a1e21f63f9ac1db29b4ed22246f",
+    "datasets/synthetic-fleet/generate.py": "9f2fa9b27d7092fd261103042d627d88034048a5d1c0d4352959bcb383fd1297",
+    "datasets/synthetic-fleet/hermes_entry.py": "7dee0bb3fd40b3374879881718289be5330016a450a1fabb4276dd5808ee6214",
+    "datasets/synthetic-fleet/run_codex.py": "13498ad0bb84922851ce1f6b32ff64a437095f65601b9797c5cd19021c782986",
+    "datasets/synthetic-fleet/run_secondary.py": "2ac56d83e7630a6c95a7da3554a2fce7945c3d7dcd88a75230c65fb81fcc6afc",
+    "datasets/synthetic-fleet/score_native.py": "39475ba7d9172db1775844ec3018b213997c8dd8a95eb0d455e34cb1c4969fc4",
+    "datasets/synthetic-fleet/test_grading.py": "b3f58882f73ae9b21b599871b4d8adb8e146e601084a9347e6271431f8182665"
+  }
+}
