@@ -1,0 +1,217 @@
+{
+  "active_items": 63,
+  "cases": [
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "c0f9c1e89926362943c559f93aed0d52ffd28a312a7122eb4fefb0ab5521cb61",
+          "item": "memory-000000000"
+        }
+      ],
+      "id": "retention-0",
+      "intervening_documents": 63,
+      "introduced_epoch": 0,
+      "query": "MEMORY3E6BC891900B6E449F28EA39"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "f82ed7ca7fbf190cf678973d532682b53793ab87392ae106663e7b6f9c2501d4",
+          "item": "memory-000000002"
+        }
+      ],
+      "id": "retention-2",
+      "intervening_documents": 61,
+      "introduced_epoch": 0,
+      "query": "MEMORY146EC87819E9AAFA82D8A6DE"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "81f8ec5e7298ba9f732efa7bb3b0a67268d5e2219f04f869cd91b0bbf24ebf45",
+          "item": "memory-000000003"
+        }
+      ],
+      "id": "retention-3",
+      "intervening_documents": 60,
+      "introduced_epoch": 0,
+      "query": "MEMORY59ACEFF78308E83E6D3ED93C"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "4f1de00d9d316883f49d316faf11d7e64666b58d958932cefaaca50700633d80",
+          "item": "memory-000000004"
+        }
+      ],
+      "id": "retention-4",
+      "intervening_documents": 59,
+      "introduced_epoch": 0,
+      "query": "MEMORY82D04DBF451B4A39FCA07256"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "cfba7ccb0d8060af1ecf1c3473a10543efa3df6519cf697ec460f9b6b1d17c2e",
+          "item": "memory-000000005"
+        }
+      ],
+      "id": "retention-5",
+      "intervening_documents": 58,
+      "introduced_epoch": 0,
+      "query": "MEMORY2B395F9AB097E27DAF7D8C13"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "50ae72ca19fc16fa86d370ebab3762725773cabffbde4f9a27dd0e4e11497a6b",
+          "item": "memory-000000006"
+        }
+      ],
+      "id": "retention-6",
+      "intervening_documents": 57,
+      "introduced_epoch": 0,
+      "query": "MEMORYEBE19954D37EC3ED772B3AF0"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "da7364d6480712b90304958868c659664ab590e69c3f3a874424e3080c5e8466",
+          "item": "memory-000000007"
+        }
+      ],
+      "id": "retention-7",
+      "intervening_documents": 56,
+      "introduced_epoch": 0,
+      "query": "MEMORY32C12D905E4DDB13F43C2B0D"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "5fbb5ebb6fcda0056c9a410d86034865adae41d61e9053e5362887f3469635d3",
+          "item": "memory-000000008"
+        }
+      ],
+      "id": "retention-8",
+      "intervening_documents": 55,
+      "introduced_epoch": 1,
+      "query": "MEMORYC0D7084326C2C04206A0F632"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "2577d7e78e40b5a1e8a6a9be8c4d947f8600c86965a23619cbbebbd2d554b204",
+          "item": "memory-000000016"
+        }
+      ],
+      "id": "retention-16",
+      "intervening_documents": 47,
+      "introduced_epoch": 2,
+      "query": "MEMORYCA33E07C7BD8A9388791B7F7"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "c6e05659bdcd29eb7c617b96fd69ccca58c79ada2a5677fa4b4125a604e27581",
+          "item": "memory-000000032"
+        }
+      ],
+      "id": "retention-32",
+      "intervening_documents": 31,
+      "introduced_epoch": 4,
+      "query": "MEMORYB3DA3FD6FCB05F39246DDFF3"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "c20e9a957b04ab7d8affe78343958b63c3d1da391887bfa838bb071e5b8a0ab9",
+          "item": "memory-000000048"
+        }
+      ],
+      "id": "retention-48",
+      "intervening_documents": 15,
+      "introduced_epoch": 6,
+      "query": "MEMORY8E2276ADD18B45810E0BD80B"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "a34b3944311be475ed63aac3505a25c9676af64aba408c49333c026b26750aac",
+          "item": "memory-000000063"
+        }
+      ],
+      "id": "retention-63",
+      "intervening_documents": 0,
+      "introduced_epoch": 7,
+      "query": "MEMORYA99ED4C04D85EF4BE26A3E20"
+    },
+    {
+      "expected": [
+        {
+          "byte_end": 290,
+          "byte_start": 0,
+          "content_sha256": "9f108e1feb1d403ef9b5588b425c773f416d33f1f7c5bf32f1b0e5768c593d3d",
+          "item": "memory-000000009"
+        }
+      ],
+      "id": "latest-correction",
+      "introduced_epoch": 1,
+      "query": "MEMORY7AE1C4DA521C9F5F4200373A"
+    },
+    {
+      "expected": [],
+      "id": "withdrawn-memory",
+      "introduced_epoch": 7,
+      "query": "MEMORYBF6C2DF632F7ACA0EB4B508E"
+    },
+    {
+      "expected": [],
+      "id": "never-observed",
+      "introduced_epoch": null,
+      "query": "UNOBSERVEDZZMEMORY"
+    }
+  ],
+  "documents": 64,
+  "epochs": 8,
+  "ingest_events": 67,
+  "initial_snapshot": {
+    "expected": [
+      {
+        "byte_end": 290,
+        "byte_start": 0,
+        "content_sha256": "08c33c070ea7da74c672f97a5c832fa9e40670be7612e8d7b5a382b7100c1142",
+        "item": "memory-000000009"
+      }
+    ],
+    "query": "MEMORY7AE1C4DA521C9F5F4200373A"
+  },
+  "license": "AGPL-3.0-only",
+  "schema": "mousa.long_horizon.v1",
+  "seed": 20260930,
+  "source": "memory",
+  "synthetic_only": true
+}

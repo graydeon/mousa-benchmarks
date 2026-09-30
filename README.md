@@ -20,6 +20,8 @@ These are development measurements, including failed experiments and limitations
 - [results/2026-09-29-switch-default-remote](results/2026-09-29-switch-default-remote): a distinct Git switch configuration question misses the required parent passage and omits the retrieved fragment at 512 rendered-content tokens.
 - [datasets/synthetic-fleet](datasets/synthetic-fleet): wholly generated corpora, labeled workloads, sample input and real CLI/database reproduction tools.
 - [results/2026-09-30-synthetic-fleet](results/2026-09-30-synthetic-fleet): first live Codex/OMP/Hermes observations, generated database sizes and retained failures.
+- [datasets/long-horizon](datasets/long-horizon): chronological persistent-memory fixtures with larger corpus profiles, revisions, withdrawal and process-restart checks.
+- [results/2026-09-30-long-horizon](results/2026-09-30-long-horizon): known-key retention measurements; generated scale is distinct from tested database capacity.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

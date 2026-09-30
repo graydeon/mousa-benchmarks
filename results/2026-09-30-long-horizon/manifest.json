@@ -1,0 +1,26 @@
+{
+  "product_base": "96b99f5f808dd4a836547156babda158fa2cd2d1",
+  "benchmark_base": "6cdba1b935809e3d757bb990972bb0d0aefd8660",
+  "files": {
+    "README.md": {
+      "bytes": 5402,
+      "sha256": "d6f8a2ed14e8b4332d4c6f19fb3df47b24b563fa9c21ec16be0edb2b8ccb0610"
+    },
+    "dataset-manifests.json": {
+      "bytes": 1702,
+      "sha256": "4567d68ca5d1a01c05491ff33d223ce2ab7887eed8cf32c51f74667ec4f8e2fe"
+    },
+    "metrics.json": {
+      "bytes": 638,
+      "sha256": "22aceb7aabceeb13237a29fd6769bed11527fbe73e429e2ec9246c287a83de37"
+    },
+    "observations.json": {
+      "bytes": 16384,
+      "sha256": "fa1316d13c7b1964aae13a67f996a15b0d96f4108c92acaa587d280a88aa2dad"
+    },
+    "protocol.json": {
+      "bytes": 1466,
+      "sha256": "e936bda17b4dff3fbdfe87deb9286a45a01250953a93a286de0bf3197a5013cd"
+    }
+  }
+}
