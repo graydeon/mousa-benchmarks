@@ -1,0 +1,466 @@
+{
+  "schema": "mousa-memory-development-v1",
+  "cases": [
+    {
+      "id": "case-01",
+      "category": "recall",
+      "question": "How does saving an edit survive the computer losing power?",
+      "required": [
+        {
+          "item": "entry-01",
+          "representation_sha256": "90f9715d8ac5ee7764e8cc7fd7a20c8a0a4050b20df2706a7f74bcc0c1ea254d",
+          "byte_start": 0,
+          "byte_end": 141,
+          "text": "The desktop editor writes an unsent change to an on-disk outbox before acknowledging Save. A power failure cannot erase an acknowledged edit.",
+          "sha256": "c55d703a6bd9b5fac9e45fba4e6aee32dda69e52298244dd06d443e9b3233e31"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-02",
+      "category": "recall",
+      "question": "What keeps a repeated edit request from making duplicate changes?",
+      "required": [
+        {
+          "item": "entry-02",
+          "representation_sha256": "55a32a681560325bf1c294f2714a0d705cd8291998277afa30c3334feec0b197",
+          "byte_start": 0,
+          "byte_end": 123,
+          "text": "A second submission carrying the same request nonce returns the original receipt. The server does not apply the edit twice.",
+          "sha256": "189e852f17678dceccb17c9a9faa1f0e2193965be1cdaf512f3fefc45424f784"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-03",
+      "category": "recall",
+      "question": "What happens to the installed application if replacement verification fails?",
+      "required": [
+        {
+          "item": "entry-03",
+          "representation_sha256": "8054b74ba74d89130c3d353f8e38871a8dbb32bff828d8a35315a758d0939463",
+          "byte_start": 0,
+          "byte_end": 175,
+          "text": "The installer stages a replacement in a sibling directory, then renames the directory after checksum verification. A failed checksum leaves the running installation untouched.",
+          "sha256": "867ad0fdc35ccb560c2e0df708d102aa8532170d3a52a9113000f05cd959e561"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-04",
+      "category": "recall",
+      "question": "Which details identify who performed an audited action and when?",
+      "required": [
+        {
+          "item": "entry-04",
+          "representation_sha256": "99cdac93b0987a4ae5efd3b238069a1cb17e1ff5d90f9d51ae5d1d0e9aac1fc2",
+          "byte_start": 0,
+          "byte_end": 149,
+          "text": "Every audit record includes the initiating account and the UTC timestamp. Audit records omit the document body to avoid copying confidential content.",
+          "sha256": "6cfc0980ad2f8835f822ea55e1c6e73a7b7331f45aff5d2bc2ec5c83d6ae87a1"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-05",
+      "category": "recall",
+      "question": "Can someone still view drafts when their sign-in is no longer valid?",
+      "required": [
+        {
+          "item": "entry-05",
+          "representation_sha256": "e08f621b357c9dd388ae741df97f6f4d2784ab3737a5d29167700bfd607e2afc",
+          "byte_start": 0,
+          "byte_end": 130,
+          "text": "An expired login opens the editor in read-only mode. Local drafts remain visible, but publishing waits for renewed authentication.",
+          "sha256": "f972a8abb8a32eb1159a2bb58914694a9e93413dfb80a13cd85c3f6f26e5b519"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-06",
+      "category": "recall",
+      "question": "Can a file with broken character encoding leave some imported rows behind?",
+      "required": [
+        {
+          "item": "entry-06",
+          "representation_sha256": "f70d2ba3e101d7dd631b0a63b63c2f2f28fa5caca83b4fdddf9b90c23ed134d4",
+          "byte_start": 0,
+          "byte_end": 157,
+          "text": "The importer decodes the complete UTF-8 file before starting its transaction. Malformed encoding rejects the entire import, so no partial rows are committed.",
+          "sha256": "de29c03970c5a9842644e56a4883f8135083f6e10b48ccdc41af5b958fe3a5df"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-07",
+      "category": "decision",
+      "question": "Why did the desktop catalog use an embedded database instead of a remote one?",
+      "required": [
+        {
+          "item": "entry-07",
+          "representation_sha256": "82bd9a82268fd40fa10838182f47fbbf7adbe0fe964a5841fdc7af7b6472a4ff",
+          "byte_start": 0,
+          "byte_end": 152,
+          "text": "We chose SQLite for the desktop catalog rather than a remote database. Offline operation and a single backup file matter more than simultaneous writers.",
+          "sha256": "047d48e7ce4c059fe49a4311aa6cfe35fa6eabed21c64df1a499dd3b90bbd47e"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-08",
+      "category": "decision",
+      "question": "Why does the report viewer periodically fetch updates instead of receiving pushed notifications?",
+      "required": [
+        {
+          "item": "entry-08",
+          "representation_sha256": "aac3f22eb15c9c67385cb39ea6c45845d359ffa416c371c754ec146d7d3b5fcc",
+          "byte_start": 0,
+          "byte_end": 184,
+          "text": "We chose pull-based refresh instead of push notifications for the report viewer. Restricted office networks block persistent inbound connections; periodic outbound requests work there.",
+          "sha256": "26022676df60a0fb75d82d6b2eb6dc1dbb200430cf1e27e57bf85695a09893e0"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-09",
+      "category": "decision",
+      "question": "Why does the incident export keep an entire paragraph rather than shorten instructions?",
+      "required": [
+        {
+          "item": "entry-09",
+          "representation_sha256": "37639fe0c2bb257d8edd4e7c5a175778e814b501284863ae55a43f383dc361ed",
+          "byte_start": 0,
+          "byte_end": 184,
+          "text": "We retained whole paragraphs in the incident export instead of clipping sentences. Reviewers need the condition beside the instruction; a clipped instruction can reverse the procedure.",
+          "sha256": "e5489bd25c1627583c825115aca56ebfd439aec5cc27dc55bbc3bc0081af7092"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-10",
+      "category": "decision",
+      "question": "Why must someone approve portable reader schema upgrades after checking a backup?",
+      "required": [
+        {
+          "item": "entry-10",
+          "representation_sha256": "f9ae019d7beea911424240faafa0a4b71a8be3e13b9260b806085d28759ef7df",
+          "byte_start": 0,
+          "byte_end": 151,
+          "text": "We disabled unattended schema upgrades in the portable reader. An operator must first verify a backup because older readers cannot open the new format.",
+          "sha256": "c6f4ce5258587b68630d58e362000d5018928a6fdca472ade37411261062f23a"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-11",
+      "category": "multi",
+      "question": "What must happen before copying the catalog backup and before installing its restored file?",
+      "required": [
+        {
+          "item": "entry-11",
+          "representation_sha256": "0a23b0a612dec0a5e19364554962dc48a14bc3db7f305489a474bacb20b9fda2",
+          "byte_start": 0,
+          "byte_end": 168,
+          "text": "The catalog backup procedure closes the writer before copying the database file. This closure prevents a backup from omitting changes still held in the write-ahead log.",
+          "sha256": "a750b673c41a1ca60608debdaac5c093edcfb475ca6635507028b533f21227d4"
+        },
+        {
+          "item": "entry-12",
+          "representation_sha256": "254254177080c382f5cfec4f4cbbfe2c488e1f33882081725aa7a86e9853bb84",
+          "byte_start": 0,
+          "byte_end": 179,
+          "text": "The catalog restore procedure verifies the copied file checksum before replacing the live file. Restore never copies a file whose checksum differs from the recorded backup digest.",
+          "sha256": "fc38452c9d2e1753d462f424b969f8019e64f4a9b348595a2a7b8579c476d0d2"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "No dependency between the two separately retrieved procedures is asserted; report each requirement independently."
+    },
+    {
+      "id": "case-12",
+      "category": "multi",
+      "question": "How large can a report export request be and how should the client continue a longer export?",
+      "required": [
+        {
+          "item": "entry-13",
+          "representation_sha256": "1e11df82c503c64a73572bee43534a564414cff72ecdf81541c3fa015df59cdc",
+          "byte_start": 0,
+          "byte_end": 117,
+          "text": "The report export route accepts at most 200 records in a request. Larger jobs must be split into successive requests.",
+          "sha256": "7c7626044bea4ea845cd080c9f1a1402f8f7f73b36fe9c554e8c19ed0c86b918"
+        },
+        {
+          "item": "entry-14",
+          "representation_sha256": "31777aa76d47d8f44c9d70fcfb3e75c77f012f65a7001cf5e1d7777d0fb41dca",
+          "byte_start": 0,
+          "byte_end": 148,
+          "text": "The report export client continues from the returned cursor, not from a computed page number. The cursor preserves ordering when new reports arrive.",
+          "sha256": "9ef8d0ede1d8c9f064847bd1584efd5821e9e4a91a3a6aeffdcca5e2ec5c89d5"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "No dependency between the two separately retrieved procedures is asserted; report each requirement independently."
+    },
+    {
+      "id": "case-13",
+      "category": "multi",
+      "question": "When does the production queue skip a job and how does its dashboard present that outcome?",
+      "required": [
+        {
+          "item": "entry-15",
+          "representation_sha256": "015b41c7dc76e472529af981915a2237817d51c4768b22fac28af487445ce182",
+          "byte_start": 0,
+          "byte_end": 111,
+          "text": "The queue worker refuses a job older than six hours. Expired jobs are recorded as skipped rather than executed.",
+          "sha256": "474a399dfdea7907954ad202d0aaed2dca8fe5514941ebc40e08acdf936fa88b"
+        },
+        {
+          "item": "entry-16",
+          "representation_sha256": "010f9999a2dd840a4eb6ea31ded7abc439fc953d9155f10c351e40b510578036",
+          "byte_start": 0,
+          "byte_end": 154,
+          "text": "The queue dashboard displays skipped jobs in amber. This display rule applies to the expiration behavior defined for the queue worker, not to failed jobs.",
+          "sha256": "f053c6240b4b1ab5429a7a6a808d745c08fe910fd03940989a0f0b92799c69d7"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "Explicit source relationship in the second required passage; co-retrieval alone is insufficient.",
+      "relationship_span": {
+        "item": "entry-16",
+        "representation_sha256": "010f9999a2dd840a4eb6ea31ded7abc439fc953d9155f10c351e40b510578036",
+        "byte_start": 0,
+        "byte_end": 154,
+        "text": "The queue dashboard displays skipped jobs in amber. This display rule applies to the expiration behavior defined for the queue worker, not to failed jobs.",
+        "sha256": "f053c6240b4b1ab5429a7a6a808d745c08fe910fd03940989a0f0b92799c69d7"
+      }
+    },
+    {
+      "id": "case-14",
+      "category": "multi",
+      "question": "What blocks attachment publication and how long are rejected uploads kept for diagnosis?",
+      "required": [
+        {
+          "item": "entry-17",
+          "representation_sha256": "d32cf3b778ef7d3e0f2c4957a913632f1ce69e1b510e8eddba593e135767ba92",
+          "byte_start": 0,
+          "byte_end": 143,
+          "text": "The attachment uploader verifies the full content digest before publishing a link. Digest verification is the publication gate for attachments.",
+          "sha256": "543d7fb9d9a0cfd8abadf26ed79307f9729286245b0685ac7f4eaf0429f2905e"
+        },
+        {
+          "item": "entry-18",
+          "representation_sha256": "5a24ddc187938a9684f9c887eb6a53dfb8ea2422c9a164af5f1b128e755cb056",
+          "byte_start": 0,
+          "byte_end": 170,
+          "text": "The attachment uploader keeps a rejected payload for two days for local diagnosis. This retention rule covers payloads rejected by the attachment digest publication gate.",
+          "sha256": "51f356ea0b5db16f13fd28e50350667adb4581e5173a9d2615cf729fa89bf6c3"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "Explicit source relationship in the second required passage; co-retrieval alone is insufficient.",
+      "relationship_span": {
+        "item": "entry-18",
+        "representation_sha256": "5a24ddc187938a9684f9c887eb6a53dfb8ea2422c9a164af5f1b128e755cb056",
+        "byte_start": 0,
+        "byte_end": 170,
+        "text": "The attachment uploader keeps a rejected payload for two days for local diagnosis. This retention rule covers payloads rejected by the attachment digest publication gate.",
+        "sha256": "51f356ea0b5db16f13fd28e50350667adb4581e5173a9d2615cf729fa89bf6c3"
+      }
+    },
+    {
+      "id": "case-15",
+      "category": "lifecycle",
+      "question": "How long may delivery attempts continue after the first failure?",
+      "required": [
+        {
+          "item": "entry-19",
+          "representation_sha256": "7e607c776bc7c26e6ba15dd3a038d8520243d546cc9348f6797fa4d8fcd312df",
+          "byte_start": 0,
+          "byte_end": 104,
+          "text": "The delivery retry window is 30 minutes after the first failure. Attempts stop when that window expires.",
+          "sha256": "5822c1f82a27ed3e52dd59c795d2a5b20c878175cbc599da5187b98162b0e5b1"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested",
+      "after": {
+        "required": [
+          {
+            "item": "entry-19",
+            "representation_sha256": "bffcf6a03b21ee0230bfbd873ac0805b04d7e0c9ee0552e118b9108554e4ce66",
+            "byte_start": 0,
+            "byte_end": 157,
+            "text": "Correction: the delivery retry window is 10 minutes after the first failure, replacing the earlier 30-minute setting. Attempts stop when that window expires.",
+            "sha256": "fbc7ba4ea5b3c850bfb590f90cb50ff53f06a2ffd6f6213f108342a30e264808"
+          }
+        ],
+        "forbidden": [
+          {
+            "item": "entry-19",
+            "representation_sha256": "7e607c776bc7c26e6ba15dd3a038d8520243d546cc9348f6797fa4d8fcd312df",
+            "byte_start": 0,
+            "byte_end": 104,
+            "text": "The delivery retry window is 30 minutes after the first failure. Attempts stop when that window expires.",
+            "sha256": "5822c1f82a27ed3e52dd59c795d2a5b20c878175cbc599da5187b98162b0e5b1"
+          }
+        ],
+        "lifecycle": "Same item revised; old representation cannot be released in current query."
+      }
+    },
+    {
+      "id": "case-16",
+      "category": "lifecycle",
+      "question": "On which day does the release crew attend the deployment rehearsal?",
+      "required": [
+        {
+          "item": "entry-19",
+          "representation_sha256": "7e607c776bc7c26e6ba15dd3a038d8520243d546cc9348f6797fa4d8fcd312df",
+          "byte_start": 106,
+          "byte_end": 215,
+          "text": "The deployment rehearsal is scheduled for Tuesday. The release crew must attend before the production change.",
+          "sha256": "353d86b86244463843d46a7f2dc9a37d90d76f23beac33bbb1319292c1ac2cdd"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested",
+      "after": {
+        "required": [
+          {
+            "item": "entry-19",
+            "representation_sha256": "bffcf6a03b21ee0230bfbd873ac0805b04d7e0c9ee0552e118b9108554e4ce66",
+            "byte_start": 159,
+            "byte_end": 321,
+            "text": "Correction: the deployment rehearsal is scheduled for Thursday, replacing the earlier Tuesday schedule. The release crew must attend before the production change.",
+            "sha256": "e094efb5163f1d55f6b87ea4dc12ea70734f24492f5281253208e04a96591652"
+          }
+        ],
+        "forbidden": [
+          {
+            "item": "entry-19",
+            "representation_sha256": "7e607c776bc7c26e6ba15dd3a038d8520243d546cc9348f6797fa4d8fcd312df",
+            "byte_start": 106,
+            "byte_end": 215,
+            "text": "The deployment rehearsal is scheduled for Tuesday. The release crew must attend before the production change.",
+            "sha256": "353d86b86244463843d46a7f2dc9a37d90d76f23beac33bbb1319292c1ac2cdd"
+          }
+        ],
+        "lifecycle": "Same item revised; old representation cannot be released in current query."
+      }
+    },
+    {
+      "id": "case-17",
+      "category": "lifecycle",
+      "question": "What does the mobile preview experiment propose for use without a network?",
+      "required": [
+        {
+          "item": "entry-20",
+          "representation_sha256": "371ef6c55f5086712a0fb2202bc8e1ac330bb3ed81e4c99e3148965af653782c",
+          "byte_start": 0,
+          "byte_end": 119,
+          "text": "The mobile preview experiment offers offline map downloads. This is an experimental proposal, not a shipped capability.",
+          "sha256": "86d95502fdb244b2314e0c6b61e69cdf1adba535c09e1ff882602b4061113001"
+        }
+      ],
+      "forbidden": [],
+      "relationship": "not_requested",
+      "after": {
+        "required": [],
+        "forbidden": [
+          {
+            "item": "entry-20",
+            "representation_sha256": "371ef6c55f5086712a0fb2202bc8e1ac330bb3ed81e4c99e3148965af653782c",
+            "byte_start": 0,
+            "byte_end": 119,
+            "text": "The mobile preview experiment offers offline map downloads. This is an experimental proposal, not a shipped capability.",
+            "sha256": "86d95502fdb244b2314e0c6b61e69cdf1adba535c09e1ff882602b4061113001"
+          }
+        ],
+        "lifecycle": "Explicit tombstone deactivates item; query may return unrelated evidence, never the deleted item."
+      }
+    },
+    {
+      "id": "case-18",
+      "category": "negative",
+      "question": "What jurisdiction governs the customer data residency guarantee?",
+      "required": [],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-19",
+      "category": "negative",
+      "question": "Who approved the emergency production rollback last month?",
+      "required": [],
+      "forbidden": [],
+      "relationship": "not_requested"
+    },
+    {
+      "id": "case-20",
+      "category": "negative",
+      "question": "What is the maximum attachment size in megabytes?",
+      "required": [],
+      "forbidden": [],
+      "relationship": "not_requested"
+    }
+  ],
+  "budget_bytes": 2048,
+  "controls": [
+    "case-01",
+    "case-07"
+  ],
+  "segment_policy": "passage-v1",
+  "query_policy": "original",
+  "packing_policy": "original",
+  "queries_per_case": 1,
+  "scoring": {
+    "coverage": "Required span must occur wholly within a released passage with matching item, representation digest and normalized coordinates; partial spans do not count. Count passages separately, all-required case coverage separately.",
+    "provenance": "Reuse normalized-source verifier for every released hit; capture complete source/item/representation/segment IDs and coordinates. Attribution is fixture metadata, not authenticated authorship.",
+    "current_state": "No current hit from old entry-19 representation or deleted entry-20 after changes. Correction text may explicitly describe the old value; this is current evidence, not stale representation.",
+    "irrelevant": "Any released passage not containing a required span is irrelevant to the frozen requirement; misleading if on the predeclared near-match item list. No generated semantic judgment.",
+    "negative": "No required support exists; count every released passage as unsupported for the question irrespective of evidence_available.",
+    "relationship": "For case-13/14, relationship is supported only if the explicit relationship_span is released; case-11/12 report independent facts, not an inferred edge.",
+    "budget": "Never increase 2048-byte canonical evidence budget after a miss. Whole passages only. Context framing is separately measured and not bounded by this evidence budget.",
+    "tokens": "Only count when a verified installed tokenizer is available; otherwise NOT RUN."
+  },
+  "near_matches": [
+    "entry-21",
+    "entry-22",
+    "entry-23",
+    "entry-24",
+    "entry-25",
+    "entry-26"
+  ],
+  "scope": "Development cases, not held-out relevance or model-answer acceptance. No query retries or reformulations.",
+  "inspection": "Inspect original trails for three lifecycle cases after mutation, compare historical packet and selected identities/bytes/digests. No text in trail response.",
+  "agent_acceptance": "NOT RUN without an operator-started authorized native-MCP agent session.",
+  "freeze_review": {
+    "identifiers_and_titles": "No synthetic identifiers or answer-bearing titles occur in questions. Documents have no titles.",
+    "ambiguity": "Production queue is explicitly separated from laboratory; delivery is separate from billing; deployment is separate from training; absent facts remain absent. Correction references old settings in current source deliberately; forbiddance targets obsolete representations, not words.",
+    "budget_feasibility": "All required whole paragraphs total fewer than 2048 bytes per case. Ranking may still consume the budget first.",
+    "smoke": "Fixture schema, discovered native input/output JSON Schemas, complete request/response receipts including initialization notification, coordinate verifier, correction/tombstone and analyzer passed on isolated smoke.sqlite before measurement. No frozen question retrieved."
+  },
+  "history_sha256": "dbbd50b9ab943842a7675d6d5ae82471cf76c1dd9eafc4dd8cdf15fd9154565d",
+  "consumer_sha256": "62a1bc551af5552b144e5188f5a947c921a0bffb70e6fe43e0ac7ba7eaf3c6c6",
+  "analyzer_sha256": "646f9e845f1fc5a35edd23c69089f7720bb010cc7c108290c5e204bc0a6a736f",
+  "frozen_at_utc": "2026-09-30T17:57:13Z"
+}

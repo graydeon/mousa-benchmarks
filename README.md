@@ -22,6 +22,7 @@ These are development measurements, including failed experiments and limitations
 - [results/2026-09-30-synthetic-fleet](results/2026-09-30-synthetic-fleet): first live Codex/OMP/Hermes observations, generated database sizes and retained failures.
 - [datasets/long-horizon](datasets/long-horizon): chronological persistent-memory fixtures with larger corpus profiles, revisions, withdrawal and process-restart checks.
 - [results/2026-09-30-long-horizon](results/2026-09-30-long-horizon): known-key retention measurements; generated scale is distinct from tested database capacity.
+- [results/2026-09-30-agent-memory](results/2026-09-30-agent-memory): native-MCP project-history passage coverage, correction/tombstone/restart checks, irrelevant evidence and exact measured receipts; no generated-answer or agent-acceptance result.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

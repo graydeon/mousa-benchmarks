@@ -1,0 +1,38 @@
+{
+  "schema": "mousa-benchmark-result-v1",
+  "description": "Twenty frozen native-MCP project-history development cases; deterministic retrieval only.",
+  "files": {
+    "README.md": {
+      "bytes": 11251,
+      "sha256": "369bc26a8912b90c8615420398682a29c095499fdb7916486bf513a06cff1730"
+    },
+    "history.json": {
+      "bytes": 12128,
+      "sha256": "dbbd50b9ab943842a7675d6d5ae82471cf76c1dd9eafc4dd8cdf15fd9154565d"
+    },
+    "observations.json": {
+      "bytes": 58710,
+      "sha256": "8a52e621ebb446ec85e3c660d339d39bf1ae5595c39f89127051ef9524980c50"
+    },
+    "protocol.json": {
+      "bytes": 22404,
+      "sha256": "82068cfd955014c5a1965393d58252cfdb098e607b8c33d38313ab12d8163f7e"
+    },
+    "raw/measured-consumer-source.tar.gz": {
+      "bytes": 18968,
+      "sha256": "00e00b1c7d4584160ddbe36634f0c86c0f73549076f11c2193f7b0e612517cd2"
+    },
+    "raw/measured-evidence.tar.gz": {
+      "bytes": 516812,
+      "sha256": "74711d2925e3fa6c095f029f352ee71ea560aa0fbd26db20da4aa9131e8fcf6d"
+    },
+    "raw/members.json": {
+      "bytes": 23625,
+      "sha256": "fb01e0197c977588beeb1d8e296158a97d70036b6b6f96a75186892e722ce927"
+    },
+    "run.py": {
+      "bytes": 10678,
+      "sha256": "646f9e845f1fc5a35edd23c69089f7720bb010cc7c108290c5e204bc0a6a736f"
+    }
+  }
+}
