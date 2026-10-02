@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "documents": 16384,
+  "epochs": 100,
+  "active_items": 16383,
+  "passed_queries": 30,
+  "failed_queries": 0,
+  "epoch_ingest_and_status_seconds": 698.0979889221489,
+  "restart_startup_seconds": 377.698710761033,
+  "store_bytes": 66584576,
+  "historical_snapshot": {
+    "seconds": 0.04001639690250158,
+    "packet_matches": true,
+    "selection_matches": true
+  },
+  "warm": {
+    "observations": 15,
+    "median_ms": 590.4372483491898,
+    "p95_nearest_rank_ms": 645.2772617340088
+  },
+  "restarted": {
+    "observations": 15,
+    "median_ms": 397.374140098691,
+    "p95_nearest_rank_ms": 702.7492495253682
+  }
+}

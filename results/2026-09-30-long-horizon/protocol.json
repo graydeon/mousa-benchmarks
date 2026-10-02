@@ -1,0 +1,46 @@
+{
+  "schema": "mousa.long_horizon.protocol.v1",
+  "seed": 20260930,
+  "measured_documents": 16384,
+  "epochs": 100,
+  "unique_cases": 15,
+  "observations_per_case": [
+    "warm",
+    "restarted"
+  ],
+  "query_budget_bytes": 4096,
+  "batch_limit": 128,
+  "source": "memory",
+  "model_calls": 0,
+  "benchmark_starting_revision": "6cdba1b935809e3d757bb990972bb0d0aefd8660",
+  "mousa_revision": "96b99f5f808dd4a836547156babda158fa2cd2d1",
+  "binary_sha256": "895bd443c95ce614cb5a4399c873c3a674f93f4f996ec1278632c171c0e985e5",
+  "generator_sha256": "06703147a6901a2f0989fb0abbd570d5b06cd959f360d4fafd577d709ec1fa82",
+  "runner_sha256": "526f144a1a1fb19ccfe3428102acc974d72c6e0e64503a8715972176dd25c8e7",
+  "environment": {
+    "os": "Debian13",
+    "architecture": "x86_64",
+    "cpu_count": 4,
+    "ram_gib": 8,
+    "container": "unprivileged LXC",
+    "contention": "shared test container; no isolation of other account workloads"
+  },
+  "commands": [
+    "python3 datasets/long-horizon/generate.py --out DATASET --documents 16384 --epochs 100",
+    "python3 datasets/long-horizon/run.py --mousa MOUSA --dataset DATASET --store NEW_STORE --out NEW_OUTPUT"
+  ],
+  "controls": [
+    "latest revision",
+    "withdrawal",
+    "never-observed key",
+    "historical packet selection",
+    "process restart"
+  ],
+  "not_measured": [
+    "model answers",
+    "semantic retrieval",
+    "OS-cold cache",
+    "elapsed years",
+    "100000/1000000-document database capacity"
+  ]
+}

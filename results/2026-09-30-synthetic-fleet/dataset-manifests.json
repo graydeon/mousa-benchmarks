@@ -1,0 +1,89 @@
+{
+  "32": {
+    "active_fleet_items": 97,
+    "entities": 32,
+    "files": {
+      "fleet.jsonl": {
+        "bytes": 20553,
+        "sha256": "0dbca8c89cdb6184a6bef19169d595b06a74b9577c1302a4678248877da88829"
+      },
+      "sealed.jsonl": {
+        "bytes": 138,
+        "sha256": "a591af2a96bbcb283ebaf339f4b7d335828ad242aaccc2a81bdffa7545c1732f"
+      },
+      "tasks.jsonl": {
+        "bytes": 3398,
+        "sha256": "ba2135b0fd162c75a88c6e6db288374a157bafb469edcb924a8ea60ac8778e83"
+      },
+      "withdrawals.jsonl": {
+        "bytes": 1664,
+        "sha256": "0c475e3bcf68f605a26a53a03b77f6ddf10fae8694e45ab8cf8e945e4fbd3f58"
+      }
+    },
+    "initial_fleet_items": 129,
+    "license": "AGPL-3.0-only",
+    "schema": "mousa.synthetic_fleet.v1",
+    "sealed_items": 1,
+    "seed": 20260930,
+    "synthetic_only": true,
+    "withdrawn_items": 32
+  },
+  "256": {
+    "active_fleet_items": 769,
+    "entities": 256,
+    "files": {
+      "fleet.jsonl": {
+        "bytes": 163086,
+        "sha256": "b9c56d43b3a90d487eeb039f7c3ea50ab16fdb8d516f7b2a8a888bd94e3a2fc9"
+      },
+      "sealed.jsonl": {
+        "bytes": 138,
+        "sha256": "a591af2a96bbcb283ebaf339f4b7d335828ad242aaccc2a81bdffa7545c1732f"
+      },
+      "tasks.jsonl": {
+        "bytes": 3399,
+        "sha256": "e39420f5de60208048eb82231fc62532a5d8a131f106018de007803e45aac81e"
+      },
+      "withdrawals.jsonl": {
+        "bytes": 13312,
+        "sha256": "2a0debffa768834b29227dfb0b8124ead5d3f69d9ba749c7cc6f73fd808c74da"
+      }
+    },
+    "initial_fleet_items": 1025,
+    "license": "AGPL-3.0-only",
+    "schema": "mousa.synthetic_fleet.v1",
+    "sealed_items": 1,
+    "seed": 20260930,
+    "synthetic_only": true,
+    "withdrawn_items": 256
+  },
+  "2048": {
+    "active_fleet_items": 6145,
+    "entities": 2048,
+    "files": {
+      "fleet.jsonl": {
+        "bytes": 1303333,
+        "sha256": "f51d07596fec9632851a8cc920c9383fa24bcc1cd803a026213eb5a4598940ca"
+      },
+      "sealed.jsonl": {
+        "bytes": 138,
+        "sha256": "a591af2a96bbcb283ebaf339f4b7d335828ad242aaccc2a81bdffa7545c1732f"
+      },
+      "tasks.jsonl": {
+        "bytes": 3400,
+        "sha256": "74ee81b27f63be22696c153d2ee621d58c050fc4e33a79636b17f88c32897079"
+      },
+      "withdrawals.jsonl": {
+        "bytes": 106496,
+        "sha256": "128550125b3bbbba72fa4d1496356fba78b0f65e67afc739f46183e112264d54"
+      }
+    },
+    "initial_fleet_items": 8193,
+    "license": "AGPL-3.0-only",
+    "schema": "mousa.synthetic_fleet.v1",
+    "sealed_items": 1,
+    "seed": 20260930,
+    "synthetic_only": true,
+    "withdrawn_items": 2048
+  }
+}

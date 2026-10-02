@@ -1,0 +1,16 @@
+{
+  "documents": 64,
+  "epochs": 8,
+  "files": {
+    "events.jsonl": {
+      "bytes": 22017,
+      "sha256": "657d004aa6633de88fd6586475af76f28f081b9a72c959b5c8b0ebc7319d80a3"
+    },
+    "tasks.json": {
+      "bytes": 5824,
+      "sha256": "5dffc04e38da60ad6b3a320c0b0b706cdf8558a23b27b91fa4d9757a63c0fe98"
+    }
+  },
+  "schema": "mousa.long_horizon.v1",
+  "seed": 20260930
+}
