@@ -1,0 +1,44 @@
+{
+  "schema": "mousa-project-history-v2",
+  "source": "chronicle-beta",
+  "revisions": [
+    {
+      "revision": "beta-original",
+      "id": "shared",
+      "text": "beacon beta uses linen.\n",
+      "sha256": "f53b5110f9b0c76e241bb62bdf3c93736b0876a314359d9170754c1202fff469",
+      "author": "Moe",
+      "date": "synthetic-beta-original",
+      "uri": "synthetic://chronology/beta-original"
+    },
+    {
+      "revision": "beta-corrected",
+      "id": "shared",
+      "text": "beacon beta uses cotton.\n",
+      "sha256": "3b89d60d4cc50f8c200199d954b6d33183963c4ab883b8cbfa0fbcabe088cc51",
+      "author": "Nia",
+      "date": "synthetic-beta-corrected",
+      "uri": "synthetic://chronology/beta-corrected"
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": "02-beta-create",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "beta-original"
+        }
+      ]
+    },
+    {
+      "epoch": "12-beta-correction",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "beta-corrected"
+        }
+      ]
+    }
+  ]
+}

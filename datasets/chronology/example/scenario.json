@@ -1,0 +1,513 @@
+{
+  "schema": "mousa.chronology_scenario.v1",
+  "synthetic_only": true,
+  "license": "AGPL-3.0-only",
+  "histories": {
+    "alpha": "alpha.json",
+    "beta": "beta.json"
+  },
+  "steps": [
+    {
+      "id": "01-create",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "01-create"
+      ],
+      "outcome": {
+        "added": [
+          "shared",
+          "keeper"
+        ]
+      },
+      "active_items": 2,
+      "query": "beacon",
+      "save_trail": true,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "22146ef3cb482e2da1f2bce84d99bfa4d84ced0bb641a0e8f4795c609df83fc8",
+          "byte_start": 0,
+          "byte_end": 26,
+          "author": "Ada",
+          "date": "synthetic-original",
+          "uri": "synthetic://chronology/original"
+        }
+      ]
+    },
+    {
+      "id": "02-beta-create",
+      "source": "beta",
+      "command": [
+        "apply",
+        "02-beta-create"
+      ],
+      "outcome": {
+        "added": [
+          "shared"
+        ]
+      },
+      "active_items": 1,
+      "query": "beacon",
+      "save_trail": true,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "f53b5110f9b0c76e241bb62bdf3c93736b0876a314359d9170754c1202fff469",
+          "byte_start": 0,
+          "byte_end": 24,
+          "author": "Moe",
+          "date": "synthetic-beta-original",
+          "uri": "synthetic://chronology/beta-original"
+        }
+      ]
+    },
+    {
+      "id": "03-exact-replay",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "03-exact-replay"
+      ],
+      "outcome": {
+        "unchanged": [
+          "shared",
+          "keeper"
+        ]
+      },
+      "active_items": 2,
+      "query": "beacon",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "22146ef3cb482e2da1f2bce84d99bfa4d84ced0bb641a0e8f4795c609df83fc8",
+          "byte_start": 0,
+          "byte_end": 26,
+          "author": "Ada",
+          "date": "synthetic-original",
+          "uri": "synthetic://chronology/original"
+        }
+      ]
+    },
+    {
+      "id": "04-first-correction",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "04-first-correction"
+      ],
+      "outcome": {
+        "updated": [
+          "shared"
+        ]
+      },
+      "active_items": 2,
+      "query": "beacon",
+      "save_trail": true,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "39f44986fd13c2d0bd91b89d5f4f91cd7397e9e4174f1620790c94971183a1bf",
+          "byte_start": 0,
+          "byte_end": 26,
+          "author": "Bea",
+          "date": "synthetic-correction-one",
+          "uri": "synthetic://chronology/correction-one"
+        }
+      ]
+    },
+    {
+      "id": "05-second-correction",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "05-second-correction"
+      ],
+      "outcome": {
+        "updated": [
+          "shared"
+        ]
+      },
+      "active_items": 2,
+      "query": "beacon",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "be0ef4b068fd19e2a007deedd56661bed4faac01285539d5be766aab0ed24ab7",
+          "byte_start": 0,
+          "byte_end": 26,
+          "author": "Cy",
+          "date": "synthetic-correction-two",
+          "uri": "synthetic://chronology/correction-two"
+        }
+      ]
+    },
+    {
+      "id": "06-omission",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "06-omission"
+      ],
+      "outcome": {
+        "added": [
+          "unicode"
+        ]
+      },
+      "active_items": 3,
+      "query": "anchor",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "keeper",
+          "representation_sha256": "9a9749096877b44017ee747c6375dbd8c6f0bd78de4a348064effc979836457b",
+          "byte_start": 0,
+          "byte_end": 36,
+          "author": "Eli",
+          "date": "synthetic-keeper",
+          "uri": "synthetic://chronology/keeper"
+        }
+      ]
+    },
+    {
+      "id": "07-delete",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "07-delete"
+      ],
+      "outcome": {
+        "deleted": [
+          "shared"
+        ]
+      },
+      "active_items": 2,
+      "query": "beacon",
+      "save_trail": false,
+      "required": []
+    },
+    {
+      "id": "08-repeat-delete",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "08-repeat-delete"
+      ],
+      "outcome": {
+        "absent": [
+          "shared"
+        ]
+      },
+      "active_items": 2,
+      "query": "beacon",
+      "save_trail": false,
+      "required": []
+    },
+    {
+      "id": "09-restore",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "09-restore"
+      ],
+      "outcome": {
+        "restored": [
+          "shared"
+        ]
+      },
+      "active_items": 3,
+      "query": "beacon",
+      "save_trail": true,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "ad5e99253ebdb9a59126ac74ff395f590947cda338bc1ffc19a3cd7cd1d31622",
+          "byte_start": 0,
+          "byte_end": 24,
+          "author": "Dee",
+          "date": "synthetic-restored",
+          "uri": "synthetic://chronology/restored"
+        }
+      ]
+    },
+    {
+      "id": "10-explicit-revert",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "10-explicit-revert"
+      ],
+      "outcome": {
+        "updated": [
+          "shared"
+        ]
+      },
+      "active_items": 3,
+      "query": "beacon",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "22146ef3cb482e2da1f2bce84d99bfa4d84ced0bb641a0e8f4795c609df83fc8",
+          "byte_start": 0,
+          "byte_end": 26,
+          "author": "Ada",
+          "date": "synthetic-original",
+          "uri": "synthetic://chronology/original"
+        }
+      ]
+    },
+    {
+      "id": "11-empty-content",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "11-empty-content"
+      ],
+      "outcome": {
+        "added": [
+          "empty"
+        ]
+      },
+      "active_items": 4,
+      "query": "rune",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "unicode",
+          "representation_sha256": "cb00be2292c143c601470da49bca5b0efe65f73b4d5816acaa6938b860547101",
+          "byte_start": 0,
+          "byte_end": 32,
+          "author": "Fay",
+          "date": "synthetic-unicode",
+          "uri": "synthetic://chronology/unicode"
+        }
+      ]
+    },
+    {
+      "id": "12-beta-correction",
+      "source": "beta",
+      "command": [
+        "apply",
+        "12-beta-correction"
+      ],
+      "outcome": {
+        "updated": [
+          "shared"
+        ]
+      },
+      "active_items": 1,
+      "query": "beacon",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "3b89d60d4cc50f8c200199d954b6d33183963c4ab883b8cbfa0fbcabe088cc51",
+          "byte_start": 0,
+          "byte_end": 25,
+          "author": "Nia",
+          "date": "synthetic-beta-corrected",
+          "uri": "synthetic://chronology/beta-corrected"
+        }
+      ]
+    },
+    {
+      "id": "13-native-prefix",
+      "source": "alpha",
+      "native_items": [
+        {
+          "id": "prefix",
+          "text": "prefix committed before invalid item.\n"
+        },
+        {
+          "id": "",
+          "text": "invalid"
+        }
+      ],
+      "native_error": {
+        "code": "invalid_item",
+        "completed_items": 1,
+        "failed_item": 2
+      },
+      "active_items": 5,
+      "query": "prefix",
+      "required": [
+        {
+          "item": "prefix",
+          "representation_sha256": "1bdb08954a4ada06852551bba5259946ec5f09f7098bed4c524958dfe41636cb",
+          "byte_start": 0,
+          "byte_end": 38,
+          "author": "Hal",
+          "date": "synthetic-prefix",
+          "uri": "synthetic://chronology/prefix"
+        }
+      ]
+    },
+    {
+      "id": "14-explicit-repair",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "14-explicit-repair"
+      ],
+      "outcome": {
+        "unchanged": [
+          "prefix"
+        ],
+        "added": [
+          "repair"
+        ]
+      },
+      "active_items": 6,
+      "query": "prefix",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "prefix",
+          "representation_sha256": "1bdb08954a4ada06852551bba5259946ec5f09f7098bed4c524958dfe41636cb",
+          "byte_start": 0,
+          "byte_end": 38,
+          "author": "Hal",
+          "date": "synthetic-prefix",
+          "uri": "synthetic://chronology/prefix"
+        }
+      ]
+    },
+    {
+      "id": "15-duplicate-packing",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "15-duplicate-packing"
+      ],
+      "outcome": {
+        "added": [
+          "copy-a",
+          "copy-b",
+          "required"
+        ]
+      },
+      "active_items": 9,
+      "query": "ZX17",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "required",
+          "representation_sha256": "1b58e0b7a9b1ebf366542969c53b116f44e21bcb351f267d24e73e25627de6dc",
+          "byte_start": 0,
+          "byte_end": 22,
+          "author": "Lou",
+          "date": "synthetic-required",
+          "uri": "synthetic://chronology/required"
+        }
+      ]
+    },
+    {
+      "id": "16-final-replay",
+      "source": "alpha",
+      "command": [
+        "apply",
+        "16-final-replay"
+      ],
+      "outcome": {
+        "unchanged": [
+          "shared"
+        ]
+      },
+      "active_items": 9,
+      "query": "beacon",
+      "save_trail": false,
+      "required": [
+        {
+          "item": "shared",
+          "representation_sha256": "22146ef3cb482e2da1f2bce84d99bfa4d84ced0bb641a0e8f4795c609df83fc8",
+          "byte_start": 0,
+          "byte_end": 26,
+          "author": "Ada",
+          "date": "synthetic-original",
+          "uri": "synthetic://chronology/original"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "packing",
+      "source": "alpha",
+      "query": "amber amber",
+      "budget_bytes": 33,
+      "required": [
+        {
+          "item": "required",
+          "representation_sha256": "1b58e0b7a9b1ebf366542969c53b116f44e21bcb351f267d24e73e25627de6dc",
+          "byte_start": 0,
+          "byte_end": 22,
+          "author": "Lou",
+          "date": "synthetic-required",
+          "uri": "synthetic://chronology/required"
+        }
+      ]
+    },
+    {
+      "id": "unicode",
+      "source": "alpha",
+      "query": "rune rune",
+      "budget_bytes": 64,
+      "required": [
+        {
+          "item": "unicode",
+          "representation_sha256": "cb00be2292c143c601470da49bca5b0efe65f73b4d5816acaa6938b860547101",
+          "byte_start": 0,
+          "byte_end": 32,
+          "author": "Fay",
+          "date": "synthetic-unicode",
+          "uri": "synthetic://chronology/unicode"
+        }
+      ]
+    },
+    {
+      "id": "small-budget",
+      "source": "alpha",
+      "query": "rune",
+      "budget_bytes": 1,
+      "required": [
+        {
+          "item": "unicode",
+          "representation_sha256": "cb00be2292c143c601470da49bca5b0efe65f73b4d5816acaa6938b860547101",
+          "byte_start": 0,
+          "byte_end": 32,
+          "author": "Fay",
+          "date": "synthetic-unicode",
+          "uri": "synthetic://chronology/unicode"
+        }
+      ]
+    },
+    {
+      "id": "near-match",
+      "source": "alpha",
+      "query": "beacon quantum schedule",
+      "budget_bytes": 64,
+      "required": []
+    }
+  ],
+  "modes": [
+    {
+      "policy": "original",
+      "packing_policy": "original"
+    },
+    {
+      "policy": "original",
+      "packing_policy": "exact-v1"
+    },
+    {
+      "policy": "dedup",
+      "packing_policy": "original"
+    },
+    {
+      "policy": "dedup",
+      "packing_policy": "exact-v1"
+    }
+  ]
+}

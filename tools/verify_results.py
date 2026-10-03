@@ -1,7 +1,7 @@
 """Check archive integrity without running benchmarks."""
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import tarfile
 
 root = Path(__file__).resolve().parents[1]
@@ -65,3 +65,24 @@ for manifest_path in sorted((root / "results").glob("*/manifest.json")):
         if found != expected_inputs:
             raise SystemExit("Frozen fixture bytes changed: " + run.name)
         print("Verified", len(found), "unchanged frozen fixtures")
+    protocol_path = run / "protocol.json"
+    if protocol_path.exists():
+        protocol = json.loads(protocol_path.read_text())
+        if protocol.get("schema") == "mousa.chronology_publication.v1":
+            for filename, expected_members in protocol["archives"].items():
+                if Path(filename).name != filename or not expected_members:
+                    raise SystemExit("Invalid chronology archive reference")
+                found = {}
+                with tarfile.open(run / filename) as archive:
+                    for member in archive:
+                        name = PurePosixPath(member.name)
+                        if (not member.isfile() or name.is_absolute()
+                                or ".." in name.parts or str(name) != member.name
+                                or member.name not in expected_members
+                                or member.name in found or member.size > 32 << 20):
+                            raise SystemExit("Invalid chronology member: " + member.name)
+                        data = archive.extractfile(member).read()
+                        found[member.name] = {"bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()}
+                if found != expected_members:
+                    raise SystemExit("Chronology archive membership or hashes changed")
+                print("Verified", len(found), "chronology archive members:", filename)

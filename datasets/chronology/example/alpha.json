@@ -1,0 +1,253 @@
+{
+  "schema": "mousa-project-history-v2",
+  "source": "chronicle-alpha",
+  "revisions": [
+    {
+      "revision": "original",
+      "id": "shared",
+      "text": "beacon route uses copper.\n",
+      "sha256": "22146ef3cb482e2da1f2bce84d99bfa4d84ced0bb641a0e8f4795c609df83fc8",
+      "author": "Ada",
+      "date": "synthetic-original",
+      "uri": "synthetic://chronology/original"
+    },
+    {
+      "revision": "correction-one",
+      "id": "shared",
+      "text": "beacon route uses silver.\n",
+      "sha256": "39f44986fd13c2d0bd91b89d5f4f91cd7397e9e4174f1620790c94971183a1bf",
+      "author": "Bea",
+      "date": "synthetic-correction-one",
+      "uri": "synthetic://chronology/correction-one"
+    },
+    {
+      "revision": "correction-two",
+      "id": "shared",
+      "text": "beacon route uses cobalt.\n",
+      "sha256": "be0ef4b068fd19e2a007deedd56661bed4faac01285539d5be766aab0ed24ab7",
+      "author": "Cy",
+      "date": "synthetic-correction-two",
+      "uri": "synthetic://chronology/correction-two"
+    },
+    {
+      "revision": "restored",
+      "id": "shared",
+      "text": "beacon route uses jade.\n",
+      "sha256": "ad5e99253ebdb9a59126ac74ff395f590947cda338bc1ffc19a3cd7cd1d31622",
+      "author": "Dee",
+      "date": "synthetic-restored",
+      "uri": "synthetic://chronology/restored"
+    },
+    {
+      "revision": "keeper",
+      "id": "keeper",
+      "text": "anchor omitted items remain active.\n",
+      "sha256": "9a9749096877b44017ee747c6375dbd8c6f0bd78de4a348064effc979836457b",
+      "author": "Eli",
+      "date": "synthetic-keeper",
+      "uri": "synthetic://chronology/keeper"
+    },
+    {
+      "revision": "unicode",
+      "id": "unicode",
+      "text": "﻿rune café 雪 🐚\r\nsecond line\r",
+      "sha256": "4bb240d9e5bfd91bdd8666b5ffdd8713be89d2db3fd0d212a1b43fa4b7d5b872",
+      "author": "Fay",
+      "date": "synthetic-unicode",
+      "uri": "synthetic://chronology/unicode"
+    },
+    {
+      "revision": "empty",
+      "id": "empty",
+      "text": "",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "author": "Gus",
+      "date": "synthetic-empty",
+      "uri": "synthetic://chronology/empty"
+    },
+    {
+      "revision": "prefix",
+      "id": "prefix",
+      "text": "prefix committed before invalid item.\n",
+      "sha256": "1bdb08954a4ada06852551bba5259946ec5f09f7098bed4c524958dfe41636cb",
+      "author": "Hal",
+      "date": "synthetic-prefix",
+      "uri": "synthetic://chronology/prefix"
+    },
+    {
+      "revision": "repair",
+      "id": "repair",
+      "text": "repair explicitly supplied later.\n",
+      "sha256": "4e702e573b032ac1bd40f7e4d712348d5ce627ece0ccacd4a7ca8e224866b921",
+      "author": "Ivy",
+      "date": "synthetic-repair",
+      "uri": "synthetic://chronology/repair"
+    },
+    {
+      "revision": "copy-a",
+      "id": "copy-a",
+      "text": "amber amber",
+      "sha256": "ac230dc638a16f96dd3492a00840e3e923b39731c115b0dc2c79344ea015636a",
+      "author": "Jay",
+      "date": "synthetic-copy-a",
+      "uri": "synthetic://chronology/copy-a"
+    },
+    {
+      "revision": "copy-b",
+      "id": "copy-b",
+      "text": "amber amber",
+      "sha256": "ac230dc638a16f96dd3492a00840e3e923b39731c115b0dc2c79344ea015636a",
+      "author": "Kay",
+      "date": "synthetic-copy-b",
+      "uri": "synthetic://chronology/copy-b"
+    },
+    {
+      "revision": "required",
+      "id": "required",
+      "text": "amber repair code ZX17",
+      "sha256": "1b58e0b7a9b1ebf366542969c53b116f44e21bcb351f267d24e73e25627de6dc",
+      "author": "Lou",
+      "date": "synthetic-required",
+      "uri": "synthetic://chronology/required"
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": "01-create",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "original"
+        },
+        {
+          "id": "keeper",
+          "revision": "keeper"
+        }
+      ]
+    },
+    {
+      "epoch": "03-exact-replay",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "original"
+        },
+        {
+          "id": "keeper",
+          "revision": "keeper"
+        }
+      ]
+    },
+    {
+      "epoch": "04-first-correction",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "correction-one"
+        }
+      ]
+    },
+    {
+      "epoch": "05-second-correction",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "correction-two"
+        }
+      ]
+    },
+    {
+      "epoch": "06-omission",
+      "operations": [
+        {
+          "id": "unicode",
+          "revision": "unicode"
+        }
+      ]
+    },
+    {
+      "epoch": "07-delete",
+      "operations": [
+        {
+          "id": "shared",
+          "deleted": true
+        }
+      ]
+    },
+    {
+      "epoch": "08-repeat-delete",
+      "operations": [
+        {
+          "id": "shared",
+          "deleted": true
+        }
+      ]
+    },
+    {
+      "epoch": "09-restore",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "restored"
+        }
+      ]
+    },
+    {
+      "epoch": "10-explicit-revert",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "original"
+        }
+      ]
+    },
+    {
+      "epoch": "11-empty-content",
+      "operations": [
+        {
+          "id": "empty",
+          "revision": "empty"
+        }
+      ]
+    },
+    {
+      "epoch": "14-explicit-repair",
+      "operations": [
+        {
+          "id": "prefix",
+          "revision": "prefix"
+        },
+        {
+          "id": "repair",
+          "revision": "repair"
+        }
+      ]
+    },
+    {
+      "epoch": "15-duplicate-packing",
+      "operations": [
+        {
+          "id": "copy-a",
+          "revision": "copy-a"
+        },
+        {
+          "id": "copy-b",
+          "revision": "copy-b"
+        },
+        {
+          "id": "required",
+          "revision": "required"
+        }
+      ]
+    },
+    {
+      "epoch": "16-final-replay",
+      "operations": [
+        {
+          "id": "shared",
+          "revision": "original"
+        }
+      ]
+    }
+  ]
+}

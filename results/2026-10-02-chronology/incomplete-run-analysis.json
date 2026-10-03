@@ -1,0 +1,20 @@
+{
+  "schema": "mousa.chronology_analysis.v1",
+  "run_status": "INCOMPLETE",
+  "assertion_status": "INCOMPLETE",
+  "operations_observed": 1,
+  "operations_expected": 84,
+  "failures": [],
+  "missing_evidence": [
+    {
+      "operation": 0,
+      "id": "01-create",
+      "reason": "incomplete request capture"
+    }
+  ],
+  "lifecycle": [],
+  "comparisons": [],
+  "agent_acceptance": "NOT RUN",
+  "semantic_support": "NOT RUN",
+  "timing_claim": "NOT RUN"
+}
