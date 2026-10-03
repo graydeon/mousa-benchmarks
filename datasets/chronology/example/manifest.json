@@ -1,0 +1,17 @@
+{
+  "schema": "mousa.chronology_scenario.v1",
+  "files": {
+    "alpha.json": {
+      "bytes": 6097,
+      "sha256": "9a72823f33e1544443daa8565884ed8dac33fcb95ac592fed3aa4af1c4ddd0c3"
+    },
+    "beta.json": {
+      "bytes": 1067,
+      "sha256": "dd699cb00c282aa1817d7a1f27d9784973fe4a641ca7bbdae403252e8bd4194a"
+    },
+    "scenario.json": {
+      "bytes": 12046,
+      "sha256": "977e660e0c415b32ae170d33d1ae7933b1ee622e2d8fba36e6b405f07ba402f7"
+    }
+  }
+}

@@ -23,6 +23,8 @@ These are development measurements, including failed experiments and limitations
 - [datasets/long-horizon](datasets/long-horizon): chronological persistent-memory fixtures with larger corpus profiles, revisions, withdrawal and process-restart checks.
 - [results/2026-09-30-long-horizon](results/2026-09-30-long-horizon): known-key retention measurements; generated scale is distinct from tested database capacity.
 - [results/2026-09-30-agent-memory](results/2026-09-30-agent-memory): native-MCP project-history passage coverage, correction/tombstone/restart checks, irrelevant evidence and exact measured receipts; no generated-answer or agent-acceptance result.
+- [datasets/chronology](datasets/chronology): two named sources, explicit revision epochs, native prefix failures and receipt-bound query/packing comparisons.
+- [results/2026-10-02-chronology](results/2026-10-02-chronology): frozen lifecycle acceptance, exact-span accounting, omissions and preserved negative observations; no model-quality or timing claim.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

@@ -1,0 +1,42 @@
+{
+  "product_base": "40b7802ff5d6bb016c5f2c8d2c50c9360fe0ef20",
+  "benchmark_base": "891eb77498f7b30533731a148519c522d893b9d7",
+  "files": {
+    "README.md": {
+      "bytes": 7496,
+      "sha256": "17d3c379b14620f88624a6e87f1a442d5fb953ef6c432431285e0466dc3e0bb0"
+    },
+    "analysis.json": {
+      "bytes": 25780,
+      "sha256": "ecb96bb4245bb9e8b20bd71c159105039ed2c31758eb43e8cfdd019f9abc83ce"
+    },
+    "failed-smoke-analysis.json": {
+      "bytes": 21332,
+      "sha256": "a3e218503d302a3741af7c6235378583b6e6839028e32a8b45c0ea7a17f14354"
+    },
+    "failed-smoke.tar.xz": {
+      "bytes": 45144,
+      "sha256": "e2879c024b6a6fc4e6a76f7783be1d3b229785fa1c40d32a91e91c14103f6e59"
+    },
+    "incomplete-run-analysis.json": {
+      "bytes": 456,
+      "sha256": "8c8ba2c8317cf80e63613fedc16b136e7facb14e9edbbc5dd9cd552a2459ae34"
+    },
+    "incomplete-run.tar.xz": {
+      "bytes": 9276,
+      "sha256": "b7f75d9f26c0d417434b2cdd2787b83b9cf23567c69637a8a97e8c8afbdd0cbe"
+    },
+    "protocol.json": {
+      "bytes": 101447,
+      "sha256": "6618ee4ea6c8d5d48b40d675fdd7f2458e60a616f688cd99c9b82d9fe359b997"
+    },
+    "release.tar.xz": {
+      "bytes": 51908,
+      "sha256": "d3dc9922284202a9c8a3c1a988a72955dff7189292796ed65c70afcbba93080a"
+    },
+    "source.tar.xz": {
+      "bytes": 214080,
+      "sha256": "dbe9273e8654c563f4970d097833b7f976f5f401b7ef99606d1ac9daa8260263"
+    }
+  }
+}
