@@ -1,0 +1,13 @@
+Corrupt projection before replacement:
+--- FAIL: TestSupersessionActivationRejectsCorruptStateBeforeReplacement (0.09s)
+    supersession_activation_test.go:974: replacement over corrupt current projection = <nil>, want integrity
+FAIL
+FAIL	github.com/graydeon/mousa/internal/sqlite	0.096s
+FAIL
+
+Missing current projection:
+--- FAIL: TestSupersessionActivationMissingStateIsIntegrityFailure (0.19s)
+    supersession_activation_test.go:996: state read with orphan activation history = sqlite not_found: get supersession activation state: sql: no rows in result set, want integrity
+FAIL
+FAIL	github.com/graydeon/mousa/internal/sqlite	0.206s
+FAIL

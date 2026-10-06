@@ -25,6 +25,7 @@ These are development measurements, including failed experiments and limitations
 - [results/2026-09-30-agent-memory](results/2026-09-30-agent-memory): native-MCP project-history passage coverage, correction/tombstone/restart checks, irrelevant evidence and exact measured receipts; no generated-answer or agent-acceptance result.
 - [datasets/chronology](datasets/chronology): two named sources, explicit revision epochs, native prefix failures and receipt-bound query/packing comparisons.
 - [results/2026-10-02-chronology](results/2026-10-02-chronology): frozen lifecycle acceptance, exact-span accounting, omissions and preserved negative observations; no model-quality or timing claim.
+- [results/2026-10-06-supersession-core](results/2026-10-06-supersession-core): pinned declaration/persistence/activation contract tests and preserved integrity failures; no enforcement or semantic-quality claim.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.
