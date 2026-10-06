@@ -18,6 +18,24 @@ Use runtime versions supported by the selected harness revision. QMD is exercise
 
 The runner hashes the explicitly supplied dependency lockfile. Record this repository's commit alongside the report: the product source manifest no longer includes relocated dependency files. New observations can differ with source revision, hardware, cache state, contention and runtime versions.
 
+## Supersession contract checks
+
+The [supersession archive](results/2026-10-06-supersession-core) freezes an earlier
+Mousa commit/tree and expected test names. Check out the exact public commit in
+its `protocol.json`, not current main, then run:
+
+```sh
+python3 results/2026-10-06-supersession-core/reproduce.py --mousa /path/to/pinned-mousa --output /path/to/new-capture
+```
+
+The checkout must be clean and the output directory must not exist. The runner
+sets `GOWORK=off`, records that setting in new observations, and rejects failed,
+skipped or missing expected tests. It does not isolate every Go environment
+setting. The original archive's events, observation and protocol remain unchanged;
+they do not certify later product fixes or prove historical workspace isolation.
+The run README also explains how to reproduce the two preserved negative cases
+in a disposable checkout. No live user store or model is needed.
+
 ## Product correctness gate
 
 This remains entirely inside Mousa and requires no companion checkout, Node, QMD, downloaded datasets or inference services:
