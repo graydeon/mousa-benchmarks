@@ -1,0 +1,16 @@
+diff --git a/internal/sqlite/supersession_activation.go b/internal/sqlite/supersession_activation.go
+index 827647a..6d07783 100644
+--- a/internal/sqlite/supersession_activation.go
++++ b/internal/sqlite/supersession_activation.go
+@@ -113 +113 @@ func applySupersessionActivation(ctx context.Context, conn *sql.Conn, activation
+-		if err := verifySupersessionStateAgainstTip(ctx, conn, activation.SourceID, state, tip, map[mousa.SupersessionActivationID]bool{}); err != nil {
++		if err := walkSupersessionActivationChain(ctx, conn, map[mousa.SupersessionActivationID]bool{}, tip); err != nil {
+@@ -158,8 +157,0 @@ func (store *Store) GetSupersessionActivationState(ctx context.Context, sourceID
+-		if IsCode(err, CodeNotFound) {
+-			var exists int
+-			if checkErr := tx.QueryRowContext(ctx, `SELECT 1 FROM supersession_activations WHERE source_id = ? LIMIT 1`, sourceID[:]).Scan(&exists); checkErr == nil {
+-				return mousa.SupersessionActivationState{}, integrity("get supersession activation state", "activation history has no current projection")
+-			} else if !errors.Is(checkErr, sql.ErrNoRows) {
+-				return mousa.SupersessionActivationState{}, classify("get supersession activation history", checkErr)
+-			}
+-		}
