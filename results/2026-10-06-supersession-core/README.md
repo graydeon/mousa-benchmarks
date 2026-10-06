@@ -31,3 +31,7 @@ Expected exit: 1, with both named tests failing. Discard that disposable checkou
 Retrieval enforcement and CLI/MCP administration are absent. This record does not demonstrate client-origin activation, semantic contradiction resolution, authorization of actor labels, native-host acceptance, startup scan cost or full-window memory quality. Codec authorship labels remain untrusted. Passing product tests are not independent quality samples.
 
 `manifest.json` binds every archive member by size and SHA-256. Existing historical archives are unchanged.
+
+## Reproduction environment correction — 2026-10-06
+
+The runner now sets `GOWORK=off` for Go subprocesses and records that setting in new observations, so parent `go.work` files and an inherited `GOWORK` cannot override the pinned module's dependencies. The original captured events, observation and frozen protocol are unchanged; the original observation did not record a workspace setting and must not be read as proof of environment isolation. This correction applies to new reproduction runs. It does not isolate every possible Go environment override or replace dependency verification.
