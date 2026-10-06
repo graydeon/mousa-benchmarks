@@ -4,6 +4,19 @@ Public benchmark results, comparison dependencies, and reproduction guidance for
 
 These are development measurements, including failed experiments and limitations. They do not establish general superiority over other retrieval systems.
 
+## Current evidence boundary
+
+The latest supersession archive contains pinned product contract checks for
+revision-bound declarations, immutable storage and activation history. It is not
+a semantic-memory, query-enforcement or performance benchmark. Mousa's current
+[capability matrix](https://github.com/graydeon/mousa/blob/main/docs/CAPABILITIES.md#supersession-core-boundary)
+distinguishes these internal APIs from the available CLI/MCP interfaces.
+
+Later product fixes do not change historical result identities or test counts.
+Use each run's recorded source and protocol. The supersession runner now forces
+`GOWORK=off` for new reproductions; its original archived observation did not
+record workspace configuration. See the run README's dated correction.
+
 ## Contents
 
 - [results/2026-09-16](results/2026-09-16): seven unchanged historical JSON reports. The directory date records migration, not collection.
