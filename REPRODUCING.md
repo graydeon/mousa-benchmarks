@@ -36,6 +36,27 @@ they do not certify later product fixes or prove historical workspace isolation.
 The run README also explains how to reproduce the two preserved negative cases
 in a disposable checkout. No live user store or model is needed.
 
+## Native supersession administration capture
+
+The [administration archive](results/2026-10-07-native-supersession-administration)
+freezes one source revision, the synthetic JSONL/declaration/activation inputs and
+the expected CLI behavior, then drives only the native CLI against a fresh synthetic
+store. Check out the public commit in its `protocol.json`, not current main, then run:
+
+```sh
+python3 results/2026-10-07-native-supersession-administration/reproduce.py \
+  --mousa /path/to/pinned-mousa --output /path/to/new-capture
+```
+
+The checkout must be clean and at the pinned commit and tree, the frozen input hashes
+must match, and the output directory must not exist. Add `--work <new-directory>` to
+keep the throwaway binary and synthetic stores. The runner sets `GOWORK=off` and
+`CGO_ENABLED=0`, hashes the executable without publishing it, writes only
+`observed.json` and `assertions.json`, and exits 2 when a precondition fails and 1 when
+an assertion fails. It opens no accepted or live store and needs no network, model or
+inference service. Its README explains the frozen-input provenance, the exact
+assertions and the disposable negative controls.
+
 ## Product correctness gate
 
 This remains entirely inside Mousa and requires no companion checkout, Node, QMD, downloaded datasets or inference services:

@@ -1,0 +1,58 @@
+{
+  "product_base": "18c26c7ae3f083bc62af489addefa9e5e042b476",
+  "benchmark_base": "41b23f2b54da32cc18795aa9f1878daa22948c03",
+  "files": {
+    "README.md": {
+      "bytes": 12375,
+      "sha256": "77c3ebb99d4d4af87039d7ac78662fe9d51be09dfc82a00b7c2c5badeebed6f4"
+    },
+    "assertions.json": {
+      "bytes": 110357,
+      "sha256": "37e8918b3c2bea56a805dc4133d23419b421ecc8fd44daa2b53ac350385361d5"
+    },
+    "inputs/activation-deactivation.json": {
+      "bytes": 446,
+      "sha256": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff"
+    },
+    "inputs/activation-initial.json": {
+      "bytes": 445,
+      "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9"
+    },
+    "inputs/activation-reactivation.json": {
+      "bytes": 507,
+      "sha256": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9"
+    },
+    "inputs/activation-replacement.json": {
+      "bytes": 492,
+      "sha256": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df"
+    },
+    "inputs/declaration-first.json": {
+      "bytes": 529,
+      "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34"
+    },
+    "inputs/declaration-second.json": {
+      "bytes": 534,
+      "sha256": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30"
+    },
+    "inputs/items.jsonl": {
+      "bytes": 159,
+      "sha256": "626631303edca712f9992f8c81d10952d84aea87fb82b49aeddd888b14780793"
+    },
+    "negative-controls.json": {
+      "bytes": 5427,
+      "sha256": "b13753e6515e1933a55bca7c155bce8dcded82212b140819c9623e4ce63c1ec3"
+    },
+    "observed.json": {
+      "bytes": 107840,
+      "sha256": "a0ec7f1e249104d65376cb0f5ece8dc5447b810477a446672068a14599248b8f"
+    },
+    "protocol.json": {
+      "bytes": 5662,
+      "sha256": "77d5b01d7b466a0cc48ff610b2eba1acfa32b186f7b19384f8645522641dff1f"
+    },
+    "reproduce.py": {
+      "bytes": 42649,
+      "sha256": "b682c6c1be9f4af7f788a5af4f8efdb9d0e755f8c464e1c1bbf46faebc6e02b0"
+    }
+  }
+}

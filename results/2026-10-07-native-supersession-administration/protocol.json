@@ -1,0 +1,75 @@
+{
+  "schema": "mousa.native_supersession_cli_capture.v1",
+  "collected": "2026-10-07",
+  "repository": "https://github.com/graydeon/mousa",
+  "commit": "18c26c7ae3f083bc62af489addefa9e5e042b476",
+  "tree": "741aa7b6e47f32274fa0a5de1b6fcced1e9f6826",
+  "source_status": "published public main",
+  "artifact_scope": "native supersession declaration and activation administration through the public CLI",
+  "command": "python3 reproduce.py --mousa /path/to/pinned-mousa --output /path/to/new-capture",
+  "build": {
+    "command": ["go", "build", "-trimpath", "-buildvcs=false", "-o", "<work>/mousa", "./cmd/mousa"],
+    "cwd": "<mousa>",
+    "environment": {
+      "CGO_ENABLED": "0",
+      "GOWORK": "off"
+    },
+    "binary_archived": false,
+    "binary_hashed": true
+  },
+  "fixture_origin": "The frozen synthetic bytes were prepared earlier through the product codecs at product tree 8e0099ae8745fa26d3f20ed2fa7b025b90c4c396, the native current activation-state administration slice published as public head 72ab31578b63f6757527e62241fea5f0cb080824, and are frozen here unchanged. That earlier preparation is distinct from this capture: this record observes the same bytes afresh through the public CLI at commit 18c26c7ae3f083bc62af489addefa9e5e042b476 (tree 741aa7b6e47f32274fa0a5de1b6fcced1e9f6826), checks the revision pins the declarations carry against the query output of that pinned CLI, and compares every stored readback with the frozen canonical records. No product codec, internal Go payload harness or identity implementation is part of this capture.",
+  "fixture_prepared": {
+    "product_tree": "8e0099ae8745fa26d3f20ed2fa7b025b90c4c396",
+    "public_head": "72ab31578b63f6757527e62241fea5f0cb080824",
+    "slice": "native current supersession activation-state administration"
+  },
+  "inputs": {
+    "items.jsonl": "626631303edca712f9992f8c81d10952d84aea87fb82b49aeddd888b14780793",
+    "declaration-first.json": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+    "declaration-second.json": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+    "activation-initial.json": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+    "activation-replacement.json": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df",
+    "activation-deactivation.json": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff",
+    "activation-reactivation.json": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9"
+  },
+  "source_external_id": "fixture/state",
+  "pin_queries": [
+    {"query": "oldterm", "item": "doc"},
+    {"query": "newterm", "item": "corrected"},
+    {"query": "amended", "item": "amended"}
+  ],
+  "baseline_query": {
+    "text": "oldterm newterm",
+    "budget_bytes": 8192,
+    "items": ["corrected", "doc"],
+    "purpose": "one query matching both the predecessor and the successor revision, repeated before the initial activation and after every transition"
+  },
+  "expectations": {
+    "store_schema_version": 14,
+    "source_namespace": "mousa-jsonl",
+    "usage_exit": 2,
+    "storage_error_exit": 1,
+    "rejection_exit": 1,
+    "usage_command_spellings": [
+      "supersession declaration put",
+      "supersession declaration get <declaration-id>",
+      "supersession activation put",
+      "supersession activation get <activation-id>",
+      "supersession activation state <source-id>"
+    ],
+    "stderr": {
+      "state_no_history": "sqlite not_found: get supersession activation state: sql: no rows in result set",
+      "absent_store": "sqlite internal: open sqlite database: unable to open database file",
+      "pre_history_expectation": "sqlite conflict: apply supersession activation: expected previous activation does not exist",
+      "historical_retry": "sqlite conflict: apply supersession activation: identical activation is no longer current"
+    }
+  },
+  "scope": "Native CLI lifecycle evidence for one synthetic JSONL source: declaration put/get/retry, activation put/get/state through initial selection, replacement, deactivation and reactivation, historical reads, stale and historical rejections, read-only store behavior and an unchanged query baseline. Every declaration get, activation get and state read, and every expected rejected administration write, is individually bracketed by a store fingerprint taken immediately before and after that command; query commands are not bracketed because they legitimately write policy decisions and trails. Deliberately an uncurated baseline: activation administration records a selection and enforces no suppression yet.",
+  "limitations": [
+    "Not a retrieval-quality, semantic or performance measurement: the query observations only show which evidence identities and bytes the pinned revision still releases, and shared-host timings are not recorded.",
+    "The single synthetic source, three items and four transitions are a fixed fixture, not a sample of real curation workloads.",
+    "The actor, time and reason fields in the frozen events are recorded evidence, not authenticated authorship.",
+    "Storage checks are bounded: each administration read and expected rejection compares the canonical record tables, the supersession declaration, event and projection rows and the bytes of the main database file immediately before and after that one command. A WAL sidecar may hold committed transactions before a checkpoint, so this is evidence about those compared values, not a general integrity proof.",
+    "Accepted or live stores, MCP administration, older-store migration, damaged-store handling and enforcement are out of scope and were not exercised."
+  ]
+}

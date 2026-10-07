@@ -1,0 +1,2460 @@
+{
+  "schema": "mousa.native_supersession_cli_assertions.v1",
+  "captured_at_utc": "2026-10-07T18:57:10Z",
+  "protocol": {
+    "file": "protocol.json",
+    "sha256": "77d5b01d7b466a0cc48ff610b2eba1acfa32b186f7b19384f8645522641dff1f",
+    "collected": "2026-10-07"
+  },
+  "runner": {
+    "file": "reproduce.py",
+    "sha256": "b682c6c1be9f4af7f788a5af4f8efdb9d0e755f8c464e1c1bbf46faebc6e02b0"
+  },
+  "scope": "Native CLI lifecycle evidence for one synthetic JSONL source: declaration put/get/retry, activation put/get/state through initial selection, replacement, deactivation and reactivation, historical reads, stale and historical rejections, read-only store behavior and an unchanged query baseline. Every declaration get, activation get and state read, and every expected rejected administration write, is individually bracketed by a store fingerprint taken immediately before and after that command; query commands are not bracketed because they legitimately write policy decisions and trails. Deliberately an uncurated baseline: activation administration records a selection and enforces no suppression yet.",
+  "limitations": [
+    "Not a retrieval-quality, semantic or performance measurement: the query observations only show which evidence identities and bytes the pinned revision still releases, and shared-host timings are not recorded.",
+    "The single synthetic source, three items and four transitions are a fixed fixture, not a sample of real curation workloads.",
+    "The actor, time and reason fields in the frozen events are recorded evidence, not authenticated authorship.",
+    "Storage checks are bounded: each administration read and expected rejection compares the canonical record tables, the supersession declaration, event and projection rows and the bytes of the main database file immediately before and after that one command. A WAL sidecar may hold committed transactions before a checkpoint, so this is evidence about those compared values, not a general integrity proof.",
+    "Accepted or live stores, MCP administration, older-store migration, damaged-store handling and enforcement are out of scope and were not exercised."
+  ],
+  "assertions": [
+    {
+      "id": "cli-usage-exit",
+      "check": "a missing command is an invalid invocation",
+      "expected": 2,
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "id": "cli-usage-lists-supersession-declaration-put",
+      "check": "the pinned usage text still documents 'supersession declaration put'",
+      "expected": "supersession declaration put",
+      "observed": "usage: mousa -store <path> <command> [args]\n\ncommands:\n  sync <dir>                  import or re-sync a UTF-8/Markdown directory (JSON result)\n  sync --source <id>          import or re-sync JSONL item records from stdin (JSON result)\n  query <dir> <text>          query a synced directory, returns bounded evidence (JSON)\n  query --source <id> <text>  query a JSONL-synced source, returns bounded evidence (JSON)\n  status <dir>                report the source's ingest state (JSON)\n  status --source <id>        report a JSONL-synced source's ingest state (JSON)\n  trail <dir> <trail-id>      inspect authorized historical metadata, never text (JSON)\n  trail --source <id> <id>    inspect a JSONL source's trail (JSON)\n  access <dir> allow|deny     set this CLI caller's source-scoped access policy (JSON)\n  access --source <id> allow|deny\n  withdraw <dir>             withdraw a directory source from retrieval (JSON)\n  withdraw --source <id>     withdraw a JSONL source from retrieval (JSON)\n  supersession declaration put\n                            append one strict revision-pinned declaration read from stdin (JSON)\n  supersession declaration get <declaration-id>\n                            read one stored declaration; read-only, never creates a store (JSON)\n  supersession activation put\n                            apply one strict single-declaration activation transition read from\n                            stdin (JSON); the caller states the expected predecessor and selection\n  supersession activation get <activation-id>\n                            read one stored activation event; read-only, never creates a store (JSON)\n  supersession activation state <source-id>\n                            report the verified current activation event and selected declaration\n                            for one source; read-only, never creates a store (JSON)\n  mcp --caller <id> --source <id>\n                            serve configured JSONL sources over stdio MCP\n                            --openai-extensions enables evidence mentions/resources\n                            --http-config <file> selects OAuth-protected loopback HTTP\n                            repeat --source; add --ingest-source <id> to permit writes\n  plugin --out <new-dir> --source <id> --consent-to-share\n                            create a consent-bound local desktop/Codex marketplace\n\nquery options (before positional arguments):\n  --policy original|dedup    query-term policy; default original retains repetition\n  --budget-bytes <positive>  released UTF-8 text bytes; default 8192, not model tokens\n  --packing-policy original|exact-v1\n                            exact-v1 omits byte-equal copies of selected passages\n  --associations <file>      opt-in declared-association JSON file\n                            (schema mousa.association_declarations.v1); honors author-declared\n                            item relationships within the queried source; depth 1, at most 4\n                            applied targets; associated passages share the byte budget and carry\n                            their own identity plus the declaration that included them\n\nsync options (before positional arguments):\n  --segment-policy fixed-v1|passage-v1\n                            ingestion boundaries; default fixed-v1, repeat on resync\n\ndirectory sync options (before the root argument):\n  --preview                 list selection without opening or changing the store\n  --include <glob>           replace extension selection; repeatable\n  --exclude <glob>           exclude files/directories; repeatable, always wins\n  --all-text                override hidden/generated and extension defaults\n  --max-file-bytes <N>       positive per-file limit; default 1048576\n  --max-bytes <N>            positive total selected bytes; default 67108864\n  --max-entries <N>          positive visited-entry limit; default 10000\n\nDirectory defaults select .md, .markdown, .txt, .rst and skip hidden/generated entries.\nObserved symlinks and .git entries beneath the root are always skipped.\nUTF-8 validity is not secret filtering; scope exclusions deactivate old selected items.\n",
+      "passed": true
+    },
+    {
+      "id": "cli-usage-lists-supersession-declaration-get-declaration-id",
+      "check": "the pinned usage text still documents 'supersession declaration get <declaration-id>'",
+      "expected": "supersession declaration get <declaration-id>",
+      "observed": "usage: mousa -store <path> <command> [args]\n\ncommands:\n  sync <dir>                  import or re-sync a UTF-8/Markdown directory (JSON result)\n  sync --source <id>          import or re-sync JSONL item records from stdin (JSON result)\n  query <dir> <text>          query a synced directory, returns bounded evidence (JSON)\n  query --source <id> <text>  query a JSONL-synced source, returns bounded evidence (JSON)\n  status <dir>                report the source's ingest state (JSON)\n  status --source <id>        report a JSONL-synced source's ingest state (JSON)\n  trail <dir> <trail-id>      inspect authorized historical metadata, never text (JSON)\n  trail --source <id> <id>    inspect a JSONL source's trail (JSON)\n  access <dir> allow|deny     set this CLI caller's source-scoped access policy (JSON)\n  access --source <id> allow|deny\n  withdraw <dir>             withdraw a directory source from retrieval (JSON)\n  withdraw --source <id>     withdraw a JSONL source from retrieval (JSON)\n  supersession declaration put\n                            append one strict revision-pinned declaration read from stdin (JSON)\n  supersession declaration get <declaration-id>\n                            read one stored declaration; read-only, never creates a store (JSON)\n  supersession activation put\n                            apply one strict single-declaration activation transition read from\n                            stdin (JSON); the caller states the expected predecessor and selection\n  supersession activation get <activation-id>\n                            read one stored activation event; read-only, never creates a store (JSON)\n  supersession activation state <source-id>\n                            report the verified current activation event and selected declaration\n                            for one source; read-only, never creates a store (JSON)\n  mcp --caller <id> --source <id>\n                            serve configured JSONL sources over stdio MCP\n                            --openai-extensions enables evidence mentions/resources\n                            --http-config <file> selects OAuth-protected loopback HTTP\n                            repeat --source; add --ingest-source <id> to permit writes\n  plugin --out <new-dir> --source <id> --consent-to-share\n                            create a consent-bound local desktop/Codex marketplace\n\nquery options (before positional arguments):\n  --policy original|dedup    query-term policy; default original retains repetition\n  --budget-bytes <positive>  released UTF-8 text bytes; default 8192, not model tokens\n  --packing-policy original|exact-v1\n                            exact-v1 omits byte-equal copies of selected passages\n  --associations <file>      opt-in declared-association JSON file\n                            (schema mousa.association_declarations.v1); honors author-declared\n                            item relationships within the queried source; depth 1, at most 4\n                            applied targets; associated passages share the byte budget and carry\n                            their own identity plus the declaration that included them\n\nsync options (before positional arguments):\n  --segment-policy fixed-v1|passage-v1\n                            ingestion boundaries; default fixed-v1, repeat on resync\n\ndirectory sync options (before the root argument):\n  --preview                 list selection without opening or changing the store\n  --include <glob>           replace extension selection; repeatable\n  --exclude <glob>           exclude files/directories; repeatable, always wins\n  --all-text                override hidden/generated and extension defaults\n  --max-file-bytes <N>       positive per-file limit; default 1048576\n  --max-bytes <N>            positive total selected bytes; default 67108864\n  --max-entries <N>          positive visited-entry limit; default 10000\n\nDirectory defaults select .md, .markdown, .txt, .rst and skip hidden/generated entries.\nObserved symlinks and .git entries beneath the root are always skipped.\nUTF-8 validity is not secret filtering; scope exclusions deactivate old selected items.\n",
+      "passed": true
+    },
+    {
+      "id": "cli-usage-lists-supersession-activation-put",
+      "check": "the pinned usage text still documents 'supersession activation put'",
+      "expected": "supersession activation put",
+      "observed": "usage: mousa -store <path> <command> [args]\n\ncommands:\n  sync <dir>                  import or re-sync a UTF-8/Markdown directory (JSON result)\n  sync --source <id>          import or re-sync JSONL item records from stdin (JSON result)\n  query <dir> <text>          query a synced directory, returns bounded evidence (JSON)\n  query --source <id> <text>  query a JSONL-synced source, returns bounded evidence (JSON)\n  status <dir>                report the source's ingest state (JSON)\n  status --source <id>        report a JSONL-synced source's ingest state (JSON)\n  trail <dir> <trail-id>      inspect authorized historical metadata, never text (JSON)\n  trail --source <id> <id>    inspect a JSONL source's trail (JSON)\n  access <dir> allow|deny     set this CLI caller's source-scoped access policy (JSON)\n  access --source <id> allow|deny\n  withdraw <dir>             withdraw a directory source from retrieval (JSON)\n  withdraw --source <id>     withdraw a JSONL source from retrieval (JSON)\n  supersession declaration put\n                            append one strict revision-pinned declaration read from stdin (JSON)\n  supersession declaration get <declaration-id>\n                            read one stored declaration; read-only, never creates a store (JSON)\n  supersession activation put\n                            apply one strict single-declaration activation transition read from\n                            stdin (JSON); the caller states the expected predecessor and selection\n  supersession activation get <activation-id>\n                            read one stored activation event; read-only, never creates a store (JSON)\n  supersession activation state <source-id>\n                            report the verified current activation event and selected declaration\n                            for one source; read-only, never creates a store (JSON)\n  mcp --caller <id> --source <id>\n                            serve configured JSONL sources over stdio MCP\n                            --openai-extensions enables evidence mentions/resources\n                            --http-config <file> selects OAuth-protected loopback HTTP\n                            repeat --source; add --ingest-source <id> to permit writes\n  plugin --out <new-dir> --source <id> --consent-to-share\n                            create a consent-bound local desktop/Codex marketplace\n\nquery options (before positional arguments):\n  --policy original|dedup    query-term policy; default original retains repetition\n  --budget-bytes <positive>  released UTF-8 text bytes; default 8192, not model tokens\n  --packing-policy original|exact-v1\n                            exact-v1 omits byte-equal copies of selected passages\n  --associations <file>      opt-in declared-association JSON file\n                            (schema mousa.association_declarations.v1); honors author-declared\n                            item relationships within the queried source; depth 1, at most 4\n                            applied targets; associated passages share the byte budget and carry\n                            their own identity plus the declaration that included them\n\nsync options (before positional arguments):\n  --segment-policy fixed-v1|passage-v1\n                            ingestion boundaries; default fixed-v1, repeat on resync\n\ndirectory sync options (before the root argument):\n  --preview                 list selection without opening or changing the store\n  --include <glob>           replace extension selection; repeatable\n  --exclude <glob>           exclude files/directories; repeatable, always wins\n  --all-text                override hidden/generated and extension defaults\n  --max-file-bytes <N>       positive per-file limit; default 1048576\n  --max-bytes <N>            positive total selected bytes; default 67108864\n  --max-entries <N>          positive visited-entry limit; default 10000\n\nDirectory defaults select .md, .markdown, .txt, .rst and skip hidden/generated entries.\nObserved symlinks and .git entries beneath the root are always skipped.\nUTF-8 validity is not secret filtering; scope exclusions deactivate old selected items.\n",
+      "passed": true
+    },
+    {
+      "id": "cli-usage-lists-supersession-activation-get-activation-id",
+      "check": "the pinned usage text still documents 'supersession activation get <activation-id>'",
+      "expected": "supersession activation get <activation-id>",
+      "observed": "usage: mousa -store <path> <command> [args]\n\ncommands:\n  sync <dir>                  import or re-sync a UTF-8/Markdown directory (JSON result)\n  sync --source <id>          import or re-sync JSONL item records from stdin (JSON result)\n  query <dir> <text>          query a synced directory, returns bounded evidence (JSON)\n  query --source <id> <text>  query a JSONL-synced source, returns bounded evidence (JSON)\n  status <dir>                report the source's ingest state (JSON)\n  status --source <id>        report a JSONL-synced source's ingest state (JSON)\n  trail <dir> <trail-id>      inspect authorized historical metadata, never text (JSON)\n  trail --source <id> <id>    inspect a JSONL source's trail (JSON)\n  access <dir> allow|deny     set this CLI caller's source-scoped access policy (JSON)\n  access --source <id> allow|deny\n  withdraw <dir>             withdraw a directory source from retrieval (JSON)\n  withdraw --source <id>     withdraw a JSONL source from retrieval (JSON)\n  supersession declaration put\n                            append one strict revision-pinned declaration read from stdin (JSON)\n  supersession declaration get <declaration-id>\n                            read one stored declaration; read-only, never creates a store (JSON)\n  supersession activation put\n                            apply one strict single-declaration activation transition read from\n                            stdin (JSON); the caller states the expected predecessor and selection\n  supersession activation get <activation-id>\n                            read one stored activation event; read-only, never creates a store (JSON)\n  supersession activation state <source-id>\n                            report the verified current activation event and selected declaration\n                            for one source; read-only, never creates a store (JSON)\n  mcp --caller <id> --source <id>\n                            serve configured JSONL sources over stdio MCP\n                            --openai-extensions enables evidence mentions/resources\n                            --http-config <file> selects OAuth-protected loopback HTTP\n                            repeat --source; add --ingest-source <id> to permit writes\n  plugin --out <new-dir> --source <id> --consent-to-share\n                            create a consent-bound local desktop/Codex marketplace\n\nquery options (before positional arguments):\n  --policy original|dedup    query-term policy; default original retains repetition\n  --budget-bytes <positive>  released UTF-8 text bytes; default 8192, not model tokens\n  --packing-policy original|exact-v1\n                            exact-v1 omits byte-equal copies of selected passages\n  --associations <file>      opt-in declared-association JSON file\n                            (schema mousa.association_declarations.v1); honors author-declared\n                            item relationships within the queried source; depth 1, at most 4\n                            applied targets; associated passages share the byte budget and carry\n                            their own identity plus the declaration that included them\n\nsync options (before positional arguments):\n  --segment-policy fixed-v1|passage-v1\n                            ingestion boundaries; default fixed-v1, repeat on resync\n\ndirectory sync options (before the root argument):\n  --preview                 list selection without opening or changing the store\n  --include <glob>           replace extension selection; repeatable\n  --exclude <glob>           exclude files/directories; repeatable, always wins\n  --all-text                override hidden/generated and extension defaults\n  --max-file-bytes <N>       positive per-file limit; default 1048576\n  --max-bytes <N>            positive total selected bytes; default 67108864\n  --max-entries <N>          positive visited-entry limit; default 10000\n\nDirectory defaults select .md, .markdown, .txt, .rst and skip hidden/generated entries.\nObserved symlinks and .git entries beneath the root are always skipped.\nUTF-8 validity is not secret filtering; scope exclusions deactivate old selected items.\n",
+      "passed": true
+    },
+    {
+      "id": "cli-usage-lists-supersession-activation-state-source-id",
+      "check": "the pinned usage text still documents 'supersession activation state <source-id>'",
+      "expected": "supersession activation state <source-id>",
+      "observed": "usage: mousa -store <path> <command> [args]\n\ncommands:\n  sync <dir>                  import or re-sync a UTF-8/Markdown directory (JSON result)\n  sync --source <id>          import or re-sync JSONL item records from stdin (JSON result)\n  query <dir> <text>          query a synced directory, returns bounded evidence (JSON)\n  query --source <id> <text>  query a JSONL-synced source, returns bounded evidence (JSON)\n  status <dir>                report the source's ingest state (JSON)\n  status --source <id>        report a JSONL-synced source's ingest state (JSON)\n  trail <dir> <trail-id>      inspect authorized historical metadata, never text (JSON)\n  trail --source <id> <id>    inspect a JSONL source's trail (JSON)\n  access <dir> allow|deny     set this CLI caller's source-scoped access policy (JSON)\n  access --source <id> allow|deny\n  withdraw <dir>             withdraw a directory source from retrieval (JSON)\n  withdraw --source <id>     withdraw a JSONL source from retrieval (JSON)\n  supersession declaration put\n                            append one strict revision-pinned declaration read from stdin (JSON)\n  supersession declaration get <declaration-id>\n                            read one stored declaration; read-only, never creates a store (JSON)\n  supersession activation put\n                            apply one strict single-declaration activation transition read from\n                            stdin (JSON); the caller states the expected predecessor and selection\n  supersession activation get <activation-id>\n                            read one stored activation event; read-only, never creates a store (JSON)\n  supersession activation state <source-id>\n                            report the verified current activation event and selected declaration\n                            for one source; read-only, never creates a store (JSON)\n  mcp --caller <id> --source <id>\n                            serve configured JSONL sources over stdio MCP\n                            --openai-extensions enables evidence mentions/resources\n                            --http-config <file> selects OAuth-protected loopback HTTP\n                            repeat --source; add --ingest-source <id> to permit writes\n  plugin --out <new-dir> --source <id> --consent-to-share\n                            create a consent-bound local desktop/Codex marketplace\n\nquery options (before positional arguments):\n  --policy original|dedup    query-term policy; default original retains repetition\n  --budget-bytes <positive>  released UTF-8 text bytes; default 8192, not model tokens\n  --packing-policy original|exact-v1\n                            exact-v1 omits byte-equal copies of selected passages\n  --associations <file>      opt-in declared-association JSON file\n                            (schema mousa.association_declarations.v1); honors author-declared\n                            item relationships within the queried source; depth 1, at most 4\n                            applied targets; associated passages share the byte budget and carry\n                            their own identity plus the declaration that included them\n\nsync options (before positional arguments):\n  --segment-policy fixed-v1|passage-v1\n                            ingestion boundaries; default fixed-v1, repeat on resync\n\ndirectory sync options (before the root argument):\n  --preview                 list selection without opening or changing the store\n  --include <glob>           replace extension selection; repeatable\n  --exclude <glob>           exclude files/directories; repeatable, always wins\n  --all-text                override hidden/generated and extension defaults\n  --max-file-bytes <N>       positive per-file limit; default 1048576\n  --max-bytes <N>            positive total selected bytes; default 67108864\n  --max-entries <N>          positive visited-entry limit; default 10000\n\nDirectory defaults select .md, .markdown, .txt, .rst and skip hidden/generated entries.\nObserved symlinks and .git entries beneath the root are always skipped.\nUTF-8 validity is not secret filtering; scope exclusions deactivate old selected items.\n",
+      "passed": true
+    },
+    {
+      "id": "store-absent-before-sync",
+      "check": "the synthetic store does not exist before the first write",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "sync-exit",
+      "check": "JSONL sync of the frozen items succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "store-schema-version",
+      "check": "the store ends at the pinned schema version",
+      "expected": 14,
+      "observed": 14,
+      "passed": true
+    },
+    {
+      "id": "store-source-record",
+      "check": "the store's own source record carries the frozen canonical identity and namespace",
+      "expected": {
+        "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "namespace": "mousa-jsonl"
+      },
+      "observed": {
+        "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "namespace": "mousa-jsonl"
+      },
+      "passed": true
+    },
+    {
+      "id": "pin-query-oldterm-exit",
+      "check": "querying one frozen item succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "pin-query-oldterm-hits",
+      "check": "the frozen item is the single lexical hit",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "pin-query-oldterm-item",
+      "check": "the hit is the frozen item",
+      "expected": "doc",
+      "observed": "doc",
+      "passed": true
+    },
+    {
+      "id": "pin-query-oldterm-representation",
+      "check": "the reported revision equals the pin frozen in the declaration inputs",
+      "expected": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+      "observed": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+      "passed": true
+    },
+    {
+      "id": "pin-query-oldterm-content",
+      "check": "the reported content digest is the digest of the frozen item text",
+      "expected": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+      "observed": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+      "passed": true
+    },
+    {
+      "id": "pin-query-oldterm-text",
+      "check": "the released text is the frozen item text",
+      "expected": "oldterm predecessor evidence",
+      "observed": "oldterm predecessor evidence",
+      "passed": true
+    },
+    {
+      "id": "pin-query-newterm-exit",
+      "check": "querying one frozen item succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "pin-query-newterm-hits",
+      "check": "the frozen item is the single lexical hit",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "pin-query-newterm-item",
+      "check": "the hit is the frozen item",
+      "expected": "corrected",
+      "observed": "corrected",
+      "passed": true
+    },
+    {
+      "id": "pin-query-newterm-representation",
+      "check": "the reported revision equals the pin frozen in the declaration inputs",
+      "expected": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+      "observed": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+      "passed": true
+    },
+    {
+      "id": "pin-query-newterm-content",
+      "check": "the reported content digest is the digest of the frozen item text",
+      "expected": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+      "observed": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+      "passed": true
+    },
+    {
+      "id": "pin-query-newterm-text",
+      "check": "the released text is the frozen item text",
+      "expected": "newterm successor evidence",
+      "observed": "newterm successor evidence",
+      "passed": true
+    },
+    {
+      "id": "pin-query-amended-exit",
+      "check": "querying one frozen item succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "pin-query-amended-hits",
+      "check": "the frozen item is the single lexical hit",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "pin-query-amended-item",
+      "check": "the hit is the frozen item",
+      "expected": "amended",
+      "observed": "amended",
+      "passed": true
+    },
+    {
+      "id": "pin-query-amended-representation",
+      "check": "the reported revision equals the pin frozen in the declaration inputs",
+      "expected": "60e19975d7128f1e9ea2e134104c745b1e6910ff54ef75826ea3ab2d422e31db",
+      "observed": "60e19975d7128f1e9ea2e134104c745b1e6910ff54ef75826ea3ab2d422e31db",
+      "passed": true
+    },
+    {
+      "id": "pin-query-amended-content",
+      "check": "the reported content digest is the digest of the frozen item text",
+      "expected": "7556cf343edc8f9b8195eba535dbcc0a677f7fd24f3d7030ffc28f0adc911b68",
+      "observed": "7556cf343edc8f9b8195eba535dbcc0a677f7fd24f3d7030ffc28f0adc911b68",
+      "passed": true
+    },
+    {
+      "id": "pin-query-amended-text",
+      "check": "the released text is the frozen item text",
+      "expected": "amended successor evidence",
+      "observed": "amended successor evidence",
+      "passed": true
+    },
+    {
+      "id": "baseline-0-exit",
+      "check": "the synthetic query succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "baseline-0-outcome",
+      "check": "the query releases evidence",
+      "expected": "evidence",
+      "observed": "evidence",
+      "passed": true
+    },
+    {
+      "id": "baseline-0-matches",
+      "check": "both synthetic current items match",
+      "expected": 2,
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "id": "baseline-0-bytes",
+      "check": "released bytes equal the frozen item text bytes",
+      "expected": 54,
+      "observed": 54,
+      "passed": true
+    },
+    {
+      "id": "baseline-0-evidence",
+      "check": "the released evidence is the frozen predecessor and successor revisions",
+      "expected": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "observed": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "put-declaration-first-exit",
+      "check": "the declaration is accepted",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "put-declaration-first-canonical-bytes",
+      "check": "put prints exactly the frozen canonical declaration bytes",
+      "expected": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "observed": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "passed": true
+    },
+    {
+      "id": "get-declaration-first-store-unchanged",
+      "check": "the declaration read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 1,
+          "sha256": "590dd4cfed891b1699a5e9605a120a4f71861b4d5fa5a0fd1fac60fc6b0ee1d9"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "6847a63508657ef7715d5b0d371887ee266f219966b395ab1c9cbaf06502ab2e"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 1,
+          "sha256": "590dd4cfed891b1699a5e9605a120a4f71861b4d5fa5a0fd1fac60fc6b0ee1d9"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "6847a63508657ef7715d5b0d371887ee266f219966b395ab1c9cbaf06502ab2e"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-declaration-first-exit",
+      "check": "the stored declaration is readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-declaration-first-canonical-bytes",
+      "check": "a get returns the frozen canonical bytes",
+      "expected": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "observed": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "passed": true
+    },
+    {
+      "id": "put-declaration-second-exit",
+      "check": "the declaration is accepted",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "put-declaration-second-canonical-bytes",
+      "check": "put prints exactly the frozen canonical declaration bytes",
+      "expected": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+      "observed": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+      "passed": true
+    },
+    {
+      "id": "get-declaration-second-store-unchanged",
+      "check": "the declaration read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-declaration-second-exit",
+      "check": "the stored declaration is readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-declaration-second-canonical-bytes",
+      "check": "a get returns the frozen canonical bytes",
+      "expected": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+      "observed": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+      "passed": true
+    },
+    {
+      "id": "declarations-stored",
+      "check": "both frozen declarations are stored",
+      "expected": 2,
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "id": "retry-declaration-first-exit",
+      "check": "an exact retry is idempotent",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "retry-declaration-first-canonical-bytes",
+      "check": "the retry prints the same canonical bytes",
+      "expected": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "observed": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "passed": true
+    },
+    {
+      "id": "retry-declaration-first-no-new-row",
+      "check": "the retry appends no declaration row",
+      "expected": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "observed": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "passed": true
+    },
+    {
+      "id": "state-no-history-store-unchanged",
+      "check": "the not-found read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-no-history-exit",
+      "check": "a source without activation history reports a storage error",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "state-no-history-empty-stdout",
+      "check": "the read fabricates no null state object",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "state-no-history-classification",
+      "check": "the documented not-found classification is reported",
+      "expected": "sqlite not_found: get supersession activation state: sql: no rows in result set",
+      "observed": "mousa: sqlite not_found: get supersession activation state: sql: no rows in result set\n",
+      "passed": true
+    },
+    {
+      "id": "stale-predecessor-no-history-store-unchanged",
+      "check": "the rejected transition appends no event and changes no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "stale-predecessor-no-history-exit",
+      "check": "a missing expected predecessor is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "stale-predecessor-no-history-empty-stdout",
+      "check": "the rejected transition prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "stale-predecessor-no-history-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: expected previous activation does not exist",
+      "observed": "mousa: sqlite conflict: apply supersession activation: expected previous activation does not exist\n",
+      "passed": true
+    },
+    {
+      "id": "state-still-absent-store-unchanged",
+      "check": "the read after the rejected transition changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-still-absent-classification",
+      "check": "the rejected transition created no history",
+      "expected": "sqlite not_found: get supersession activation state: sql: no rows in result set",
+      "observed": "mousa: sqlite not_found: get supersession activation state: sql: no rows in result set\n",
+      "passed": true
+    },
+    {
+      "id": "put-initial-exit",
+      "check": "the initial selection transition is accepted",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "put-initial-canonical-bytes",
+      "check": "the applied event prints the frozen canonical bytes",
+      "expected": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "observed": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "passed": true
+    },
+    {
+      "id": "state-initial-store-unchanged",
+      "check": "the state read after the initial selection changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-initial-exit",
+      "check": "current state is readable after the transition",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "state-initial-view",
+      "check": "the verified state matches the submitted current event",
+      "expected": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3",
+        "active_declaration_id": "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      },
+      "observed": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3",
+        "active_declaration_id": "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      },
+      "passed": true
+    },
+    {
+      "id": "get-initial-store-unchanged",
+      "check": "the event read after the initial selection changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-initial-exit",
+      "check": "the stored event is readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-initial-canonical-bytes",
+      "check": "a get returns the frozen canonical bytes",
+      "expected": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "observed": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "passed": true
+    },
+    {
+      "id": "retry-initial-current-exit",
+      "check": "an exact retry of the current event succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "retry-initial-current-canonical-bytes",
+      "check": "the retry prints the same canonical event bytes",
+      "expected": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "observed": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "passed": true
+    },
+    {
+      "id": "retry-initial-current-no-new-row",
+      "check": "the retry appends no activation event",
+      "expected": {
+        "rows": 1,
+        "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+      },
+      "observed": {
+        "rows": 1,
+        "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+      },
+      "passed": true
+    },
+    {
+      "id": "baseline-1-exit",
+      "check": "the synthetic query succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "baseline-1-outcome",
+      "check": "the query releases evidence",
+      "expected": "evidence",
+      "observed": "evidence",
+      "passed": true
+    },
+    {
+      "id": "baseline-1-matches",
+      "check": "both synthetic current items match",
+      "expected": 2,
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "id": "baseline-1-bytes",
+      "check": "released bytes equal the frozen item text bytes",
+      "expected": 54,
+      "observed": 54,
+      "passed": true
+    },
+    {
+      "id": "baseline-1-evidence",
+      "check": "the released evidence is the frozen predecessor and successor revisions",
+      "expected": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "observed": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "put-replacement-exit",
+      "check": "the replacement transition is accepted",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "put-replacement-canonical-bytes",
+      "check": "the applied event prints the frozen canonical bytes",
+      "expected": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df",
+      "observed": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df",
+      "passed": true
+    },
+    {
+      "id": "state-replacement-store-unchanged",
+      "check": "the state read after the replacement changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-replacement-exit",
+      "check": "current state is readable after the transition",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "state-replacement-view",
+      "check": "the verified state matches the submitted current event",
+      "expected": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e",
+        "active_declaration_id": "cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812"
+      },
+      "observed": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e",
+        "active_declaration_id": "cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812"
+      },
+      "passed": true
+    },
+    {
+      "id": "get-replacement-store-unchanged",
+      "check": "the event read after the replacement changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-replacement-exit",
+      "check": "the stored event is readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-replacement-canonical-bytes",
+      "check": "a get returns the frozen canonical bytes",
+      "expected": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df",
+      "observed": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df",
+      "passed": true
+    },
+    {
+      "id": "baseline-2-exit",
+      "check": "the synthetic query succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "baseline-2-outcome",
+      "check": "the query releases evidence",
+      "expected": "evidence",
+      "observed": "evidence",
+      "passed": true
+    },
+    {
+      "id": "baseline-2-matches",
+      "check": "both synthetic current items match",
+      "expected": 2,
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "id": "baseline-2-bytes",
+      "check": "released bytes equal the frozen item text bytes",
+      "expected": 54,
+      "observed": 54,
+      "passed": true
+    },
+    {
+      "id": "baseline-2-evidence",
+      "check": "the released evidence is the frozen predecessor and successor revisions",
+      "expected": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "observed": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "put-deactivation-exit",
+      "check": "the deactivation with an explicit null declaration transition is accepted",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "put-deactivation-canonical-bytes",
+      "check": "the applied event prints the frozen canonical bytes",
+      "expected": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff",
+      "observed": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff",
+      "passed": true
+    },
+    {
+      "id": "state-deactivation-store-unchanged",
+      "check": "the state read after the deactivation with an explicit null declaration changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-deactivation-exit",
+      "check": "current state is readable after the transition",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "state-deactivation-view",
+      "check": "the verified state matches the submitted current event",
+      "expected": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90",
+        "active_declaration_id": null
+      },
+      "observed": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90",
+        "active_declaration_id": null
+      },
+      "passed": true
+    },
+    {
+      "id": "state-deactivation-explicit-null",
+      "check": "a deactivated source prints an explicit JSON null declaration",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "get-deactivation-store-unchanged",
+      "check": "the event read after the deactivation with an explicit null declaration changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-deactivation-exit",
+      "check": "the stored event is readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-deactivation-canonical-bytes",
+      "check": "a get returns the frozen canonical bytes",
+      "expected": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff",
+      "observed": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff",
+      "passed": true
+    },
+    {
+      "id": "baseline-3-exit",
+      "check": "the synthetic query succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "baseline-3-outcome",
+      "check": "the query releases evidence",
+      "expected": "evidence",
+      "observed": "evidence",
+      "passed": true
+    },
+    {
+      "id": "baseline-3-matches",
+      "check": "both synthetic current items match",
+      "expected": 2,
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "id": "baseline-3-bytes",
+      "check": "released bytes equal the frozen item text bytes",
+      "expected": 54,
+      "observed": 54,
+      "passed": true
+    },
+    {
+      "id": "baseline-3-evidence",
+      "check": "the released evidence is the frozen predecessor and successor revisions",
+      "expected": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "observed": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "put-reactivation-exit",
+      "check": "the reactivation transition is accepted",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "put-reactivation-canonical-bytes",
+      "check": "the applied event prints the frozen canonical bytes",
+      "expected": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9",
+      "observed": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9",
+      "passed": true
+    },
+    {
+      "id": "state-reactivation-store-unchanged",
+      "check": "the state read after the reactivation changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-reactivation-exit",
+      "check": "current state is readable after the transition",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "state-reactivation-view",
+      "check": "the verified state matches the submitted current event",
+      "expected": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76",
+        "active_declaration_id": "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      },
+      "observed": {
+        "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+        "current_activation_id": "b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76",
+        "active_declaration_id": "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      },
+      "passed": true
+    },
+    {
+      "id": "get-reactivation-store-unchanged",
+      "check": "the event read after the reactivation changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-reactivation-exit",
+      "check": "the stored event is readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-reactivation-canonical-bytes",
+      "check": "a get returns the frozen canonical bytes",
+      "expected": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9",
+      "observed": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9",
+      "passed": true
+    },
+    {
+      "id": "baseline-4-exit",
+      "check": "the synthetic query succeeds",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "baseline-4-outcome",
+      "check": "the query releases evidence",
+      "expected": "evidence",
+      "observed": "evidence",
+      "passed": true
+    },
+    {
+      "id": "baseline-4-matches",
+      "check": "both synthetic current items match",
+      "expected": 2,
+      "observed": 2,
+      "passed": true
+    },
+    {
+      "id": "baseline-4-bytes",
+      "check": "released bytes equal the frozen item text bytes",
+      "expected": 54,
+      "observed": 54,
+      "passed": true
+    },
+    {
+      "id": "baseline-4-evidence",
+      "check": "the released evidence is the frozen predecessor and successor revisions",
+      "expected": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "observed": {
+        "corrected": {
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "text": "newterm successor evidence"
+        },
+        "doc": {
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "text": "oldterm predecessor evidence"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "activations-stored",
+      "check": "all four transitions are stored as immutable events",
+      "expected": 4,
+      "observed": 4,
+      "passed": true
+    },
+    {
+      "id": "current-state-rows",
+      "check": "one source carries one verified current projection",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "baseline-runs-complete",
+      "check": "every scheduled baseline query produced a readable report",
+      "expected": [
+        "baseline-query-0",
+        "baseline-query-1",
+        "baseline-query-2",
+        "baseline-query-3",
+        "baseline-query-4"
+      ],
+      "observed": [
+        "baseline-query-0",
+        "baseline-query-1",
+        "baseline-query-2",
+        "baseline-query-3",
+        "baseline-query-4"
+      ],
+      "passed": true
+    },
+    {
+      "id": "baseline-1-packet-unchanged",
+      "check": "the packet identity of unchanged released bytes is unchanged",
+      "expected": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "observed": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "passed": true
+    },
+    {
+      "id": "baseline-1-evidence-unchanged",
+      "check": "the same evidence identities and bytes are still released",
+      "expected": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "observed": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "baseline-1-predecessor-released",
+      "check": "activation administration does not yet withhold the declared predecessor revision",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "baseline-2-packet-unchanged",
+      "check": "the packet identity of unchanged released bytes is unchanged",
+      "expected": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "observed": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "passed": true
+    },
+    {
+      "id": "baseline-2-evidence-unchanged",
+      "check": "the same evidence identities and bytes are still released",
+      "expected": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "observed": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "baseline-2-predecessor-released",
+      "check": "activation administration does not yet withhold the declared predecessor revision",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "baseline-3-packet-unchanged",
+      "check": "the packet identity of unchanged released bytes is unchanged",
+      "expected": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "observed": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "passed": true
+    },
+    {
+      "id": "baseline-3-evidence-unchanged",
+      "check": "the same evidence identities and bytes are still released",
+      "expected": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "observed": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "baseline-3-predecessor-released",
+      "check": "activation administration does not yet withhold the declared predecessor revision",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "baseline-4-packet-unchanged",
+      "check": "the packet identity of unchanged released bytes is unchanged",
+      "expected": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "observed": "5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9",
+      "passed": true
+    },
+    {
+      "id": "baseline-4-evidence-unchanged",
+      "check": "the same evidence identities and bytes are still released",
+      "expected": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "observed": [
+        {
+          "item": "corrected",
+          "representation_id": "b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3",
+          "content_sha256": "f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0",
+          "byte_length": 26,
+          "rank": 1,
+          "text": "newterm successor evidence"
+        },
+        {
+          "item": "doc",
+          "representation_id": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165",
+          "content_sha256": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1",
+          "byte_length": 28,
+          "rank": 2,
+          "text": "oldterm predecessor evidence"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "baseline-4-predecessor-released",
+      "check": "activation administration does not yet withhold the declared predecessor revision",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "get-historical-initial-store-unchanged",
+      "check": "the historical event read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-historical-initial-exit",
+      "check": "a historical event stays readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-historical-initial-canonical-bytes",
+      "check": "the historical event still reads its own canonical bytes",
+      "expected": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "observed": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "passed": true
+    },
+    {
+      "id": "state-repeat-store-unchanged",
+      "check": "the repeated state read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-repeat-declaration-store-unchanged",
+      "check": "the repeated declaration read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-repeat-identical-bytes",
+      "check": "the repeated current-state read emits identical bytes",
+      "expected": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
+      "observed": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
+      "passed": true
+    },
+    {
+      "id": "get-repeat-declaration-identical-bytes",
+      "check": "the repeated declaration read emits identical bytes",
+      "expected": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "observed": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "passed": true
+    },
+    {
+      "id": "replay-initial-store-unchanged",
+      "check": "the rejected replay appends no event and changes no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "replay-initial-exit",
+      "check": "a superseded event is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "replay-initial-empty-stdout",
+      "check": "the rejected replay prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "replay-initial-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
+      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-store-unchanged",
+      "check": "the rejected replay appends no event and changes no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-exit",
+      "check": "a superseded event is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-empty-stdout",
+      "check": "the rejected replay prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
+      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-store-unchanged",
+      "check": "the rejected replay appends no event and changes no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-exit",
+      "check": "a superseded event is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-empty-stdout",
+      "check": "the rejected replay prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
+      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
+      "passed": true
+    },
+    {
+      "id": "state-after-rejections-store-unchanged",
+      "check": "the read after the rejected replays changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-after-rejections-unchanged",
+      "check": "the rejected replays left the current activation unchanged",
+      "expected": "b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76",
+      "observed": "b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76",
+      "passed": true
+    },
+    {
+      "id": "absent-store-state-exit",
+      "check": "an absent store is a storage error",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "absent-store-state-empty-stdout",
+      "check": "the read prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "absent-store-state-classification",
+      "check": "the read reports the storage open failure",
+      "expected": "sqlite internal: open sqlite database: unable to open database file",
+      "observed": "mousa: sqlite internal: open sqlite database: unable to open database file (14)\n",
+      "passed": true
+    },
+    {
+      "id": "absent-store-state-not-created",
+      "check": "the read did not create the store file",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "absent-store-get-exit",
+      "check": "an absent store is a storage error",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "absent-store-get-empty-stdout",
+      "check": "the read prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "absent-store-get-classification",
+      "check": "the read reports the storage open failure",
+      "expected": "sqlite internal: open sqlite database: unable to open database file",
+      "observed": "mousa: sqlite internal: open sqlite database: unable to open database file (14)\n",
+      "passed": true
+    },
+    {
+      "id": "absent-store-get-not-created",
+      "check": "the read did not create the store file",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "output-directory-untouched",
+      "check": "the capture wrote nothing outside its work directory before these records",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    }
+  ],
+  "total": 158,
+  "failed": 0,
+  "passed": true
+}

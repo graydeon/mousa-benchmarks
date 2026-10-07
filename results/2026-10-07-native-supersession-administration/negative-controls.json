@@ -1,0 +1,101 @@
+{
+  "schema": "mousa.native_supersession_cli_negative_controls.v1",
+  "collected": "2026-10-07",
+  "purpose": "Demonstrate that the corrected runner's expectations are load-bearing: a damaged frozen input stops the capture before it runs, incorrect expected values fail named assertions, a false boolean check records the value it actually observed, and a valid write placed between an administration read and its after-fingerprint fails that read's unchanged assertion. Every control ran on a disposable copy of this result directory; the published protocol, inputs and capture are unchanged.",
+  "recipe": [
+    "cp -r results/2026-10-07-native-supersession-administration <scratch-dir>",
+    "rm <scratch-dir>/manifest.json",
+    "apply one change: a byte of one frozen input, one expected value in protocol.json, or one injected line in reproduce.py",
+    "python3 <scratch-dir>/reproduce.py --mousa /path/to/pinned-mousa --output <scratch-output>",
+    "discard the disposable copy afterwards"
+  ],
+  "controls": [
+    {
+      "id": "damaged-frozen-input",
+      "change": "one byte of inputs/declaration-first.json (example.operations became example.operationz, same file size)",
+      "expected": "the capture refuses to start and writes no output directory",
+      "exit": 2,
+      "observed": "error: frozen input differs from the protocol: inputs/declaration-first.json",
+      "output_directory_created": false
+    },
+    {
+      "id": "incorrect-expected-output",
+      "change": "protocol.json expectations.store_schema_version 14 became 99, and the first pin query expected item doc became amended",
+      "expected": "the capture runs and fails the assertions that depend on those expectations",
+      "exit": 1,
+      "assertions_total": 158,
+      "assertions_failed": 5,
+      "failed_assertions": [
+        {
+          "id": "store-schema-version",
+          "expected": 99,
+          "observed": 14
+        },
+        {
+          "id": "pin-query-oldterm-item",
+          "expected": "amended",
+          "observed": "doc"
+        },
+        {
+          "id": "pin-query-oldterm-representation",
+          "expected": "60e19975d7128f1e9ea2e134104c745b1e6910ff54ef75826ea3ab2d422e31db",
+          "observed": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165"
+        },
+        {
+          "id": "pin-query-oldterm-content",
+          "expected": "7556cf343edc8f9b8195eba535dbcc0a677f7fd24f3d7030ffc28f0adc911b68",
+          "observed": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1"
+        },
+        {
+          "id": "pin-query-oldterm-text",
+          "expected": "amended successor evidence",
+          "observed": "oldterm predecessor evidence"
+        }
+      ]
+    },
+    {
+      "id": "false-boolean-observation",
+      "change": "one line inserted into main(): capture.expect_true(\"deliberate-false-condition\", False, ...)",
+      "injected_lines": [
+        "        capture.expect_true(\"deliberate-false-condition\", False,",
+        "                            \"control: a false condition must be recorded as the value the run saw\")"
+      ],
+      "expected": "the false condition is recorded as observed false and fails the run",
+      "exit": 1,
+      "assertions_total": 159,
+      "assertions_failed": 1,
+      "recorded_assertion": {
+        "id": "deliberate-false-condition",
+        "check": "control: a false condition must be recorded as the value the run saw",
+        "expected": true,
+        "observed": false,
+        "passed": false
+      }
+    },
+    {
+      "id": "injected-write-after-administration-read",
+      "change": "a valid query command inserted into the bracket helper between the get-declaration-first read and its after-fingerprint",
+      "injected_lines": [
+        "        if step == \"get-declaration-first\":",
+        "            # Control-only: a valid product write placed between the read and its after-fingerprint.",
+        "            self.cli(\"injected-write-after-get-declaration-first\",",
+        "                     \"control: valid query write inserted between the read and its after-fingerprint\",",
+        "                     [BINARY_PLACEHOLDER, *self.store_argv, \"query\", \"--source\", \"fixture/state\", \"oldterm\"])"
+      ],
+      "expected": "the per-read unchanged assertion for get-declaration-first fails",
+      "exit": 1,
+      "assertions_total": 158,
+      "assertions_failed": 1,
+      "failed_assertions": [
+        "get-declaration-first-store-unchanged"
+      ],
+      "differing_fingerprint_fields": [
+        "file"
+      ]
+    }
+  ],
+  "notes": {
+    "false-boolean-observation": "Before the correction the runner recorded the expectation twice (expected true, observed true) and only the pass flag was false, so a failing boolean check could not be read back as an observation. The recorded assertion now carries expected true, observed false, passed false.",
+    "injected-write-after-administration-read": "The injected write is a valid query command that stores policy decision and trail rows, the same shape of write the reviewer injected. It changed the compared database file bytes, so the bracket failed. The canonical and administration row digests did not change, because those rows are outside the tables this bounded fingerprint covers; the check is evidence about the compared rows and file bytes, not a general write detector or integrity proof."
+  }
+}
