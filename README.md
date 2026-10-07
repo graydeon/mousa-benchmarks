@@ -6,16 +6,25 @@ These are development measurements, including failed experiments and limitations
 
 ## Current evidence boundary
 
-The latest supersession archive contains pinned product contract checks for
-revision-bound declarations, immutable storage and activation history. It is not
-a semantic-memory, query-enforcement or performance benchmark. Mousa's current
+The latest supersession archive records the native CLI lifecycle for revision-pinned
+declarations and activations: declaration put/get/retry, activation put/get/state
+through an initial selection, a replacement, a deactivation and a reactivation,
+historical reads, rejected stale or superseded expectations, read-only store behavior
+and a repeated query baseline that still releases the declared predecessor revision.
+It is contract and behavior evidence for that pinned revision only, not a
+semantic-memory, retrieval-quality, query-enforcement or performance result. Mousa's
+current
 [capability matrix](https://github.com/graydeon/mousa/blob/main/docs/CAPABILITIES.md#supersession-core-boundary)
-distinguishes these internal APIs from the available CLI/MCP interfaces.
+distinguishes the available CLI administration commands from the internal APIs and
+from unimplemented query enforcement.
+
+The earlier supersession archive contains pinned product contract checks for
+revision-bound declarations, immutable storage and activation history.
 
 Later product fixes do not change historical result identities or test counts.
-Use each run's recorded source and protocol. The supersession runner now forces
-`GOWORK=off` for new reproductions; its original archived observation did not
-record workspace configuration. See the run README's dated correction.
+Use each run's recorded source and protocol. The supersession runners force
+`GOWORK=off` for new reproductions; the older archived observation did not
+record workspace configuration. See that run README's dated correction.
 
 ## Contents
 
@@ -39,6 +48,7 @@ record workspace configuration. See the run README's dated correction.
 - [datasets/chronology](datasets/chronology): two named sources, explicit revision epochs, native prefix failures and receipt-bound query/packing comparisons.
 - [results/2026-10-02-chronology](results/2026-10-02-chronology): frozen lifecycle acceptance, exact-span accounting, omissions and preserved negative observations; no model-quality or timing claim.
 - [results/2026-10-06-supersession-core](results/2026-10-06-supersession-core): pinned declaration/persistence/activation contract tests and preserved integrity failures; no enforcement or semantic-quality claim.
+- [results/2026-10-07-native-supersession-administration](results/2026-10-07-native-supersession-administration): native CLI capture of the declaration/activation lifecycle, rejections, read-only store behavior and an unchanged query baseline; no suppression, quality or timing claim.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

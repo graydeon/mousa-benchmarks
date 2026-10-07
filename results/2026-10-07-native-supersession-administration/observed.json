@@ -1,0 +1,1534 @@
+{
+  "schema": "mousa.native_supersession_cli_observation.v1",
+  "collected": "2026-10-07",
+  "mousa": {
+    "repository": "https://github.com/graydeon/mousa",
+    "commit": "18c26c7ae3f083bc62af489addefa9e5e042b476",
+    "tree": "741aa7b6e47f32274fa0a5de1b6fcced1e9f6826",
+    "clean_before_capture": true
+  },
+  "build": {
+    "command": [
+      "go",
+      "build",
+      "-trimpath",
+      "-buildvcs=false",
+      "-o",
+      "<work>/mousa",
+      "./cmd/mousa"
+    ],
+    "environment": {
+      "CGO_ENABLED": "0",
+      "GOWORK": "off"
+    },
+    "go_version": "go version go1.27.1 linux/amd64",
+    "go_platform": {
+      "GOOS": "linux",
+      "GOARCH": "amd64",
+      "GOAMD64": "v1",
+      "GOTOOLCHAIN": "auto"
+    },
+    "binary": {
+      "sha256": "9a7881d5bd0e048e802a0a555ec922e15a5ddaa2b2129c2c286055b5a88cd209",
+      "bytes": 21675099,
+      "archived": false
+    }
+  },
+  "store_fingerprints": {
+    "after-sync": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "activations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_state": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "file": {
+        "bytes": 471040,
+        "sha256": "0c806f08c625b88b49ea87cfdddeca54ce690034c943b8ee169b07ee5cfb74e0"
+      }
+    },
+    "after-declarations": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_state": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+      }
+    },
+    "after-declaration-retry": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_state": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+      }
+    },
+    "before-no-history-read": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_state": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+      }
+    },
+    "after-no-history-read": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_state": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+      }
+    },
+    "before-pre-history-expectation": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_state": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+      }
+    },
+    "after-pre-history-expectation": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "current_state": {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+      }
+    },
+    "before-initial-retry": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 1,
+        "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+      },
+      "current_state": {
+        "rows": 1,
+        "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "2105704bdc386da93173093654185e12910531c43ed99776e8a6c070163fe387"
+      }
+    },
+    "after-initial-retry": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 1,
+        "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+      },
+      "current_state": {
+        "rows": 1,
+        "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+      },
+      "file": {
+        "bytes": 479232,
+        "sha256": "2105704bdc386da93173093654185e12910531c43ed99776e8a6c070163fe387"
+      }
+    },
+    "after-transitions": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 4,
+        "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+      },
+      "current_state": {
+        "rows": 1,
+        "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+      },
+      "file": {
+        "bytes": 495616,
+        "sha256": "ca7ab0954e090a27b93a3a20203340bb016c321a5a6e28dcb58f6419609e8e6b"
+      }
+    },
+    "before-historical-retries": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 4,
+        "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+      },
+      "current_state": {
+        "rows": 1,
+        "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+      },
+      "file": {
+        "bytes": 495616,
+        "sha256": "ca7ab0954e090a27b93a3a20203340bb016c321a5a6e28dcb58f6419609e8e6b"
+      }
+    },
+    "after-historical-retries": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 4,
+        "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+      },
+      "current_state": {
+        "rows": 1,
+        "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+      },
+      "file": {
+        "bytes": 495616,
+        "sha256": "ca7ab0954e090a27b93a3a20203340bb016c321a5a6e28dcb58f6419609e8e6b"
+      }
+    },
+    "final": {
+      "schema_version": 14,
+      "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+      "sources": {
+        "fixture/state": {
+          "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+          "namespace": "mousa-jsonl"
+        }
+      },
+      "declarations": {
+        "rows": 2,
+        "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+      },
+      "activations": {
+        "rows": 4,
+        "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+      },
+      "current_state": {
+        "rows": 1,
+        "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+      },
+      "file": {
+        "bytes": 495616,
+        "sha256": "ca7ab0954e090a27b93a3a20203340bb016c321a5a6e28dcb58f6419609e8e6b"
+      }
+    }
+  },
+  "observations": [
+    {
+      "step": "cli-usage",
+      "purpose": "confirm the pinned CLI exposes the supersession administration commands",
+      "argv": [
+        "<binary>"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 2,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 4148,
+        "sha256": "45f76da21f5b63e84e5881a9439f7d050516e940c6ecea6ec6b97ce19c321908",
+        "text": "usage: mousa -store <path> <command> [args]\n\ncommands:\n  sync <dir>                  import or re-sync a UTF-8/Markdown directory (JSON result)\n  sync --source <id>          import or re-sync JSONL item records from stdin (JSON result)\n  query <dir> <text>          query a synced directory, returns bounded evidence (JSON)\n  query --source <id> <text>  query a JSONL-synced source, returns bounded evidence (JSON)\n  status <dir>                report the source's ingest state (JSON)\n  status --source <id>        report a JSONL-synced source's ingest state (JSON)\n  trail <dir> <trail-id>      inspect authorized historical metadata, never text (JSON)\n  trail --source <id> <id>    inspect a JSONL source's trail (JSON)\n  access <dir> allow|deny     set this CLI caller's source-scoped access policy (JSON)\n  access --source <id> allow|deny\n  withdraw <dir>             withdraw a directory source from retrieval (JSON)\n  withdraw --source <id>     withdraw a JSONL source from retrieval (JSON)\n  supersession declaration put\n                            append one strict revision-pinned declaration read from stdin (JSON)\n  supersession declaration get <declaration-id>\n                            read one stored declaration; read-only, never creates a store (JSON)\n  supersession activation put\n                            apply one strict single-declaration activation transition read from\n                            stdin (JSON); the caller states the expected predecessor and selection\n  supersession activation get <activation-id>\n                            read one stored activation event; read-only, never creates a store (JSON)\n  supersession activation state <source-id>\n                            report the verified current activation event and selected declaration\n                            for one source; read-only, never creates a store (JSON)\n  mcp --caller <id> --source <id>\n                            serve configured JSONL sources over stdio MCP\n                            --openai-extensions enables evidence mentions/resources\n                            --http-config <file> selects OAuth-protected loopback HTTP\n                            repeat --source; add --ingest-source <id> to permit writes\n  plugin --out <new-dir> --source <id> --consent-to-share\n                            create a consent-bound local desktop/Codex marketplace\n\nquery options (before positional arguments):\n  --policy original|dedup    query-term policy; default original retains repetition\n  --budget-bytes <positive>  released UTF-8 text bytes; default 8192, not model tokens\n  --packing-policy original|exact-v1\n                            exact-v1 omits byte-equal copies of selected passages\n  --associations <file>      opt-in declared-association JSON file\n                            (schema mousa.association_declarations.v1); honors author-declared\n                            item relationships within the queried source; depth 1, at most 4\n                            applied targets; associated passages share the byte budget and carry\n                            their own identity plus the declaration that included them\n\nsync options (before positional arguments):\n  --segment-policy fixed-v1|passage-v1\n                            ingestion boundaries; default fixed-v1, repeat on resync\n\ndirectory sync options (before the root argument):\n  --preview                 list selection without opening or changing the store\n  --include <glob>           replace extension selection; repeatable\n  --exclude <glob>           exclude files/directories; repeatable, always wins\n  --all-text                override hidden/generated and extension defaults\n  --max-file-bytes <N>       positive per-file limit; default 1048576\n  --max-bytes <N>            positive total selected bytes; default 67108864\n  --max-entries <N>          positive visited-entry limit; default 10000\n\nDirectory defaults select .md, .markdown, .txt, .rst and skip hidden/generated entries.\nObserved symlinks and .git entries beneath the root are always skipped.\nUTF-8 validity is not secret filtering; scope exclusions deactivate old selected items.\n"
+      }
+    },
+    {
+      "step": "sync",
+      "purpose": "populate the fresh synthetic store from the frozen JSONL items",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "sync",
+        "--source",
+        "fixture/state"
+      ],
+      "stdin": {
+        "source": "inputs/items.jsonl",
+        "bytes": 159,
+        "sha256": "626631303edca712f9992f8c81d10952d84aea87fb82b49aeddd888b14780793"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 221,
+        "sha256": "12d5ee65e431cbd90f1e88844a89e6d3b96193e66836578539ff2b41961ecc92",
+        "text": "{\n  \"source\": \"fixture/state\",\n  \"input\": \"jsonl\",\n  \"segment_policy\": \"fixed-v1\",\n  \"added\": [\n    \"doc\",\n    \"corrected\",\n    \"amended\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 4096,\n  \"elapsed_seconds\": 2.534309159\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "pin-query-oldterm",
+      "purpose": "read the revision pin the pinned CLI reports for one frozen item",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "oldterm"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 1426,
+        "sha256": "e4843b3940f3157206e4e90834c5ee398b78842dc545da5b15a3663380f44ae1",
+        "text": "{\n  \"query\": \"oldterm\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"oldterm\\\"\",\n  \"request_id\": \"f79c5fd172aed2b5e4f261248aa9a1068c50ef636fdb9d411d40a73bf3ef1291\",\n  \"decision_id\": \"547a45d83c7cf8046777a85ad961a07240540fcc6a39c48d11e1d69cee3c0c5a\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358687639169,\n  \"trail_id\": \"c0199f61fd918909a22d9542dc5537f5b254f1ccfe52e96522d5d34849248436\",\n  \"packet_id\": \"f3ee8c6d491b3504d9ea66e31d26f1081a21d9b4927f6a89d44fc5d02810a145\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 1,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 28,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"doc\",\n      \"segment_id\": \"2f538ac592f1689f9ab9aaeb480ef5d8563f6db7345e8393a8eeba4a39278716\",\n      \"content_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"representation_id\": \"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\n      \"representation_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"byte_start\": 0,\n      \"byte_end\": 28,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 28,\n      \"text\": \"oldterm predecessor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 177734\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "pin-query-newterm",
+      "purpose": "read the revision pin the pinned CLI reports for one frozen item",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "newterm"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 1430,
+        "sha256": "ca96820160d93a81fed94d7bd704dbccfe39e3c42b5e396c7846932baf93e904",
+        "text": "{\n  \"query\": \"newterm\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"newterm\\\"\",\n  \"request_id\": \"6a6db0e53c0384394f7d14b26791165db3c8047af49556174f6fc9eeb1bc2038\",\n  \"decision_id\": \"5d49fb991ee1f7a0f61c03958b8bc20e8fc7d2a6b3ef6324dda8aa93a7f2cbb3\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358687925563,\n  \"trail_id\": \"3d0e680d5a92515e6f15849c762d2f77b8bb8047f21abefb46ec302deac00f89\",\n  \"packet_id\": \"5ba837712acdd71b9660b0980a9b2f445695e50c431bd38dbeaaf76de565b345\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 1,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 26,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"corrected\",\n      \"segment_id\": \"2198468fab628a5a0f4f4b090705c5c7a1c4e45c28ea2796412caa83edb9c4ec\",\n      \"content_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"representation_id\": \"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\n      \"representation_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 26,\n      \"text\": \"newterm successor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 278184\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "pin-query-amended",
+      "purpose": "read the revision pin the pinned CLI reports for one frozen item",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "amended"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 1428,
+        "sha256": "5553ceade3055ca7bef2530f6918a22f89644d5bb7d4b83dd7e18c0572aea8ca",
+        "text": "{\n  \"query\": \"amended\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"amended\\\"\",\n  \"request_id\": \"c303fc3a7c9444ba55990478bc3aef349df1bb89d9321aa4e8b0b5b2a5bba9c8\",\n  \"decision_id\": \"ac0eed146e3da0dbe1f4efd05ae9c0d73b463201298b95cd2319cc063d73076b\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358688271934,\n  \"trail_id\": \"8b02e2017b1e231ecfb8f1b0c8a40f9591845c05925362f8eb657442e8f7db1b\",\n  \"packet_id\": \"fefa57117af5fba505a33ae7ea5e467d57dbe18f34ef739afc542c2bb930b2c8\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 1,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 26,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"amended\",\n      \"segment_id\": \"ea2ca093c4e1fb4842f4aacb2863a1c5bc902e7304350022725aad2697613a21\",\n      \"content_sha256\": \"7556cf343edc8f9b8195eba535dbcc0a677f7fd24f3d7030ffc28f0adc911b68\",\n      \"representation_id\": \"60e19975d7128f1e9ea2e134104c745b1e6910ff54ef75826ea3ab2d422e31db\",\n      \"representation_sha256\": \"7556cf343edc8f9b8195eba535dbcc0a677f7fd24f3d7030ffc28f0adc911b68\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 26,\n      \"text\": \"amended successor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 139183\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "baseline-query-0",
+      "purpose": "same synthetic query before the initial activation",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "--budget-bytes",
+        "8192",
+        "oldterm newterm"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 2097,
+        "sha256": "287f47741e874878c28a14c7e973c11de79ef1e41675eb0bf478ce7ed2fdbfbb",
+        "text": "{\n  \"query\": \"oldterm newterm\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"oldterm\\\" OR \\\"newterm\\\"\",\n  \"request_id\": \"040d52eb3396dfe8a3c5a60e179ba7e17455cf340ba633b83321bd75e17983da\",\n  \"decision_id\": \"9ce47fa425da167305387b776b886083e2250d1cfb17a5bef10a044d16ce6e9a\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358688448160,\n  \"trail_id\": \"f911edffb3b1a0c8a24c4cdc88655f9cbed8aaa3d0770843de118e195d685980\",\n  \"packet_id\": \"5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 2,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 54,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"corrected\",\n      \"segment_id\": \"2198468fab628a5a0f4f4b090705c5c7a1c4e45c28ea2796412caa83edb9c4ec\",\n      \"content_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"representation_id\": \"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\n      \"representation_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 26,\n      \"text\": \"newterm successor evidence\",\n      \"origin\": \"lexical\"\n    },\n    {\n      \"item\": \"doc\",\n      \"segment_id\": \"2f538ac592f1689f9ab9aaeb480ef5d8563f6db7345e8393a8eeba4a39278716\",\n      \"content_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"representation_id\": \"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\n      \"representation_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"byte_start\": 0,\n      \"byte_end\": 28,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 2,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 28,\n      \"text\": \"oldterm predecessor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 164968\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "put-declaration-first",
+      "purpose": "append one frozen canonical declaration",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "declaration",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/declaration-first.json",
+        "bytes": 529,
+        "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 529,
+        "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+        "text": "{\"schema\":\"mousa.supersession_declaration.v1\",\"id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"predecessor_item_id\":\"doc\",\"predecessor_representation_id\":\"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\"successor_item_id\":\"corrected\",\"successor_representation_id\":\"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\"author\":\"example.operations\",\"basis\":\"successor replaces the predecessor\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-declaration-first",
+      "purpose": "read the stored declaration by identity",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "declaration",
+        "get",
+        "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 529,
+        "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+        "text": "{\"schema\":\"mousa.supersession_declaration.v1\",\"id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"predecessor_item_id\":\"doc\",\"predecessor_representation_id\":\"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\"successor_item_id\":\"corrected\",\"successor_representation_id\":\"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\"author\":\"example.operations\",\"basis\":\"successor replaces the predecessor\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "put-declaration-second",
+      "purpose": "append one frozen canonical declaration",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "declaration",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/declaration-second.json",
+        "bytes": 534,
+        "sha256": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 534,
+        "sha256": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+        "text": "{\"schema\":\"mousa.supersession_declaration.v1\",\"id\":\"cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"predecessor_item_id\":\"doc\",\"predecessor_representation_id\":\"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\"successor_item_id\":\"amended\",\"successor_representation_id\":\"60e19975d7128f1e9ea2e134104c745b1e6910ff54ef75826ea3ab2d422e31db\",\"author\":\"example.operations\",\"basis\":\"amended revision replaces the predecessor\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-declaration-second",
+      "purpose": "read the stored declaration by identity",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "declaration",
+        "get",
+        "cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 534,
+        "sha256": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+        "text": "{\"schema\":\"mousa.supersession_declaration.v1\",\"id\":\"cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"predecessor_item_id\":\"doc\",\"predecessor_representation_id\":\"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\"successor_item_id\":\"amended\",\"successor_representation_id\":\"60e19975d7128f1e9ea2e134104c745b1e6910ff54ef75826ea3ab2d422e31db\",\"author\":\"example.operations\",\"basis\":\"amended revision replaces the predecessor\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "retry-declaration-first",
+      "purpose": "exact retry of one stored declaration",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "declaration",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/declaration-first.json",
+        "bytes": 529,
+        "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 529,
+        "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+        "text": "{\"schema\":\"mousa.supersession_declaration.v1\",\"id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"predecessor_item_id\":\"doc\",\"predecessor_representation_id\":\"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\"successor_item_id\":\"corrected\",\"successor_representation_id\":\"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\"author\":\"example.operations\",\"basis\":\"successor replaces the predecessor\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "state-no-history",
+      "purpose": "read current state for a source that has stored declarations but no activation history",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 87,
+        "sha256": "d1d05ebe44a28e6fc9590ad1308a8e7e992e51fcca9b710e941d6dafb02b3eb8",
+        "text": "mousa: sqlite not_found: get supersession activation state: sql: no rows in result set\n"
+      }
+    },
+    {
+      "step": "stale-predecessor-no-history",
+      "purpose": "submit a replacement whose expected predecessor does not exist, with both declarations stored",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-replacement.json",
+        "bytes": 492,
+        "sha256": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 99,
+        "sha256": "4e0598df13f53fdb5dc65f44ab3ad22dffd926d3c2701d3dded49aece978c223",
+        "text": "mousa: sqlite conflict: apply supersession activation: expected previous activation does not exist\n"
+      }
+    },
+    {
+      "step": "state-still-absent",
+      "purpose": "re-read current state after the rejected transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 87,
+        "sha256": "d1d05ebe44a28e6fc9590ad1308a8e7e992e51fcca9b710e941d6dafb02b3eb8",
+        "text": "mousa: sqlite not_found: get supersession activation state: sql: no rows in result set\n"
+      }
+    },
+    {
+      "step": "put-initial",
+      "purpose": "apply the frozen initial selection transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-initial.json",
+        "bytes": 445,
+        "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 445,
+        "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":null,\"declaration_id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000000,\"reason\":\"initial selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "state-initial",
+      "purpose": "read current state after the initial selection transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 276,
+        "sha256": "17ada84acd5c5c6585b84e6608d9ec4e3fc38e0fe175c5ae8bac22f7502781cb",
+        "text": "{\n  \"source_id\": \"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\n  \"current_activation_id\": \"bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3\",\n  \"active_declaration_id\": \"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\"\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-initial",
+      "purpose": "read the stored event by identity",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "get",
+        "bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 445,
+        "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":null,\"declaration_id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000000,\"reason\":\"initial selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "retry-initial-current",
+      "purpose": "exact retry of the initial event while it is still current",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-initial.json",
+        "bytes": 445,
+        "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 445,
+        "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":null,\"declaration_id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000000,\"reason\":\"initial selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "baseline-query-1",
+      "purpose": "same synthetic query after the initial selection transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "--budget-bytes",
+        "8192",
+        "oldterm newterm"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 2097,
+        "sha256": "2a17d55dac02dead25fe2b0477147a28c5831bf15be2bc878e1040f753416438",
+        "text": "{\n  \"query\": \"oldterm newterm\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"oldterm\\\" OR \\\"newterm\\\"\",\n  \"request_id\": \"f36ba6672dba2c2b4103d12ecdeab808b948ccb3500c784b61a259b38c284e22\",\n  \"decision_id\": \"b0b8bf75d0cd9782cf62b3da2812f6b5645d4844451ba6a826ac02ca88bdfe82\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358689824976,\n  \"trail_id\": \"abac674f016cc7943cc72fdb148ad5058a5cb63f8e1bdabe637de0d302a19701\",\n  \"packet_id\": \"5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 2,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 54,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"corrected\",\n      \"segment_id\": \"2198468fab628a5a0f4f4b090705c5c7a1c4e45c28ea2796412caa83edb9c4ec\",\n      \"content_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"representation_id\": \"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\n      \"representation_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 26,\n      \"text\": \"newterm successor evidence\",\n      \"origin\": \"lexical\"\n    },\n    {\n      \"item\": \"doc\",\n      \"segment_id\": \"2f538ac592f1689f9ab9aaeb480ef5d8563f6db7345e8393a8eeba4a39278716\",\n      \"content_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"representation_id\": \"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\n      \"representation_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"byte_start\": 0,\n      \"byte_end\": 28,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 2,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 28,\n      \"text\": \"oldterm predecessor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 171689\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "put-replacement",
+      "purpose": "apply the frozen replacement transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-replacement.json",
+        "bytes": 492,
+        "sha256": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 492,
+        "sha256": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":\"bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3\",\"declaration_id\":\"cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000001,\"reason\":null}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "state-replacement",
+      "purpose": "read current state after the replacement transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 276,
+        "sha256": "7b58b11430179449c03efa6060b38ec2642a2a60a773db376d83d12ec4fe8d7a",
+        "text": "{\n  \"source_id\": \"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\n  \"current_activation_id\": \"a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e\",\n  \"active_declaration_id\": \"cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812\"\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-replacement",
+      "purpose": "read the stored event by identity",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "get",
+        "a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 492,
+        "sha256": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":\"bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3\",\"declaration_id\":\"cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000001,\"reason\":null}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "baseline-query-2",
+      "purpose": "same synthetic query after the replacement transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "--budget-bytes",
+        "8192",
+        "oldterm newterm"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 2097,
+        "sha256": "527e0c65cf2d6d2821d66757a3fea861efa5c0016793cf1be50a164a84b643ba",
+        "text": "{\n  \"query\": \"oldterm newterm\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"oldterm\\\" OR \\\"newterm\\\"\",\n  \"request_id\": \"72f86f66234fdba1964f67f979d3945705d75135b52358c1004d21ac93302890\",\n  \"decision_id\": \"d79a7f0b367d346b72e89688df51b0e691de3538aa5fd4c88b9871555288136f\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358690383489,\n  \"trail_id\": \"7181bd151cb3c80226cd6ea2016ad9c0cef26a9da7fbe5bdf828508b284aec7c\",\n  \"packet_id\": \"5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 2,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 54,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"corrected\",\n      \"segment_id\": \"2198468fab628a5a0f4f4b090705c5c7a1c4e45c28ea2796412caa83edb9c4ec\",\n      \"content_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"representation_id\": \"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\n      \"representation_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 26,\n      \"text\": \"newterm successor evidence\",\n      \"origin\": \"lexical\"\n    },\n    {\n      \"item\": \"doc\",\n      \"segment_id\": \"2f538ac592f1689f9ab9aaeb480ef5d8563f6db7345e8393a8eeba4a39278716\",\n      \"content_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"representation_id\": \"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\n      \"representation_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"byte_start\": 0,\n      \"byte_end\": 28,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 2,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 28,\n      \"text\": \"oldterm predecessor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 217200\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "put-deactivation",
+      "purpose": "apply the frozen deactivation with an explicit null declaration transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-deactivation.json",
+        "bytes": 446,
+        "sha256": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 446,
+        "sha256": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":\"a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e\",\"declaration_id\":null,\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000002,\"reason\":\"withdraw selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "state-deactivation",
+      "purpose": "read current state after the deactivation with an explicit null declaration transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 214,
+        "sha256": "5a29247ff9afa33c3654ac493646aa62588330b8a9c34e97d9d572d9f3eec309",
+        "text": "{\n  \"source_id\": \"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\n  \"current_activation_id\": \"2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90\",\n  \"active_declaration_id\": null\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-deactivation",
+      "purpose": "read the stored event by identity",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "get",
+        "2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 446,
+        "sha256": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":\"a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e\",\"declaration_id\":null,\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000002,\"reason\":\"withdraw selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "baseline-query-3",
+      "purpose": "same synthetic query after the deactivation with an explicit null declaration transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "--budget-bytes",
+        "8192",
+        "oldterm newterm"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 2097,
+        "sha256": "2c9ce090d24dac0525db53cd7fc098131bcae6482019c0ddb344f0128201317b",
+        "text": "{\n  \"query\": \"oldterm newterm\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"oldterm\\\" OR \\\"newterm\\\"\",\n  \"request_id\": \"f7c42e1ade3f19c6dfdafd956b00dadd191f30aa65261a148ecb36b46a1c2ac4\",\n  \"decision_id\": \"d164818ff4f5e1cecd7a0c94d34d1740b00f2b186f38493fe30e49e7e9f16099\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358690961252,\n  \"trail_id\": \"9d3f956eaf8737db835ab94bebe7ac485636f129520905f193325d72d9d4a027\",\n  \"packet_id\": \"5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 2,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 54,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"corrected\",\n      \"segment_id\": \"2198468fab628a5a0f4f4b090705c5c7a1c4e45c28ea2796412caa83edb9c4ec\",\n      \"content_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"representation_id\": \"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\n      \"representation_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 26,\n      \"text\": \"newterm successor evidence\",\n      \"origin\": \"lexical\"\n    },\n    {\n      \"item\": \"doc\",\n      \"segment_id\": \"2f538ac592f1689f9ab9aaeb480ef5d8563f6db7345e8393a8eeba4a39278716\",\n      \"content_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"representation_id\": \"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\n      \"representation_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"byte_start\": 0,\n      \"byte_end\": 28,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 2,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 28,\n      \"text\": \"oldterm predecessor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 193896\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "put-reactivation",
+      "purpose": "apply the frozen reactivation transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-reactivation.json",
+        "bytes": 507,
+        "sha256": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 507,
+        "sha256": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":\"2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90\",\"declaration_id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000003,\"reason\":\"restore selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "state-reactivation",
+      "purpose": "read current state after the reactivation transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 276,
+        "sha256": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
+        "text": "{\n  \"source_id\": \"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\n  \"current_activation_id\": \"b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76\",\n  \"active_declaration_id\": \"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\"\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-reactivation",
+      "purpose": "read the stored event by identity",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "get",
+        "b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 507,
+        "sha256": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":\"2637b748ccd6c05eef3abf8b80d1d8e18d7c09ab9764e804146a0e156514eb90\",\"declaration_id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000003,\"reason\":\"restore selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "baseline-query-4",
+      "purpose": "same synthetic query after the reactivation transition",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "query",
+        "--source",
+        "fixture/state",
+        "--budget-bytes",
+        "8192",
+        "oldterm newterm"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 2097,
+        "sha256": "10bce502670cdd5d034d65aca5f7a30524d949661176155e792c29f0d5ab1953",
+        "text": "{\n  \"query\": \"oldterm newterm\",\n  \"source\": \"fixture/state\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"oldterm\\\" OR \\\"newterm\\\"\",\n  \"request_id\": \"19d55ecf2a4a9cfd1e11ee78cebaf35413ce966b3b91cc54feddab0566ec4e3e\",\n  \"decision_id\": \"0aede8e1229d8ff7aba889ea69b47b0b479d4fb9118c178a128dfb2b84876317\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1791358691520101,\n  \"trail_id\": \"3e4c81d7f657de00281a470c8fcd3c8ccb11388aabac2a943bffb57f04d3588e\",\n  \"packet_id\": \"5bfaf39601fb1fb3c8c4af1ae7d8d62af4348f16e7202c3b28a9620daf11fce9\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 2,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 54,\n  \"budget_bytes\": 8192,\n  \"evidence\": [\n    {\n      \"item\": \"corrected\",\n      \"segment_id\": \"2198468fab628a5a0f4f4b090705c5c7a1c4e45c28ea2796412caa83edb9c4ec\",\n      \"content_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"representation_id\": \"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\n      \"representation_sha256\": \"f72da6668b8f4c999d98b5d143e1addc30d56d4ae32e4ebb0dde12dac71f31c0\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 26,\n      \"text\": \"newterm successor evidence\",\n      \"origin\": \"lexical\"\n    },\n    {\n      \"item\": \"doc\",\n      \"segment_id\": \"2f538ac592f1689f9ab9aaeb480ef5d8563f6db7345e8393a8eeba4a39278716\",\n      \"content_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"representation_id\": \"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\n      \"representation_sha256\": \"32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1\",\n      \"byte_start\": 0,\n      \"byte_end\": 28,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 2,\n      \"bm25_score\": -0.5108256237659907,\n      \"byte_length\": 28,\n      \"text\": \"oldterm predecessor evidence\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 221634\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-historical-initial",
+      "purpose": "read the initial event after later transitions advanced the current state",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "get",
+        "bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 445,
+        "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+        "text": "{\"schema\":\"mousa.supersession_activation.v1\",\"id\":\"bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"expected_previous_activation_id\":null,\"declaration_id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"actor_id\":\"example.operator\",\"actor_version\":\"console/1.0\",\"occurred_at_usec\":1759622400000000,\"reason\":\"initial selection\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "state-repeat",
+      "purpose": "repeat the current-state readback in another process",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 276,
+        "sha256": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
+        "text": "{\n  \"source_id\": \"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\n  \"current_activation_id\": \"b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76\",\n  \"active_declaration_id\": \"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\"\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "get-repeat-declaration",
+      "purpose": "repeat a stored declaration readback in another process",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "declaration",
+        "get",
+        "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 529,
+        "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+        "text": "{\"schema\":\"mousa.supersession_declaration.v1\",\"id\":\"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\",\"source_id\":\"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\"predecessor_item_id\":\"doc\",\"predecessor_representation_id\":\"446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165\",\"successor_item_id\":\"corrected\",\"successor_representation_id\":\"b5198ea9c329b5ebb8ac4fc86d4583ae5eebf1b68bc97fc45574a739bf27a4b3\",\"author\":\"example.operations\",\"basis\":\"successor replaces the predecessor\"}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "replay-initial",
+      "purpose": "replay a superseded event after the current state advanced",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-initial.json",
+        "bytes": 445,
+        "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 97,
+        "sha256": "a4e3d51e8eb48fd54caa69a170530d7f5f9ac00f79c73faeea3918f1d01f7ad2",
+        "text": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n"
+      }
+    },
+    {
+      "step": "replay-replacement",
+      "purpose": "replay a superseded event after the current state advanced",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-replacement.json",
+        "bytes": 492,
+        "sha256": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 97,
+        "sha256": "a4e3d51e8eb48fd54caa69a170530d7f5f9ac00f79c73faeea3918f1d01f7ad2",
+        "text": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n"
+      }
+    },
+    {
+      "step": "replay-deactivation",
+      "purpose": "replay a superseded event after the current state advanced",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "put"
+      ],
+      "stdin": {
+        "source": "inputs/activation-deactivation.json",
+        "bytes": 446,
+        "sha256": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 97,
+        "sha256": "a4e3d51e8eb48fd54caa69a170530d7f5f9ac00f79c73faeea3918f1d01f7ad2",
+        "text": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n"
+      }
+    },
+    {
+      "step": "state-after-rejections",
+      "purpose": "confirm current state is unchanged after the rejected replays",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/local.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 0,
+      "stdout": {
+        "bytes": 276,
+        "sha256": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
+        "text": "{\n  \"source_id\": \"b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463\",\n  \"current_activation_id\": \"b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76\",\n  \"active_declaration_id\": \"75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79\"\n}\n"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      }
+    },
+    {
+      "step": "absent-store-state",
+      "purpose": "read against a store path that does not exist",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/absent-state.sqlite",
+        "supersession",
+        "activation",
+        "state",
+        "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 80,
+        "sha256": "72ff61a5a50a4e2a5a464b8f8ac700d40db0da916010b5cbd39989912f562ac6",
+        "text": "mousa: sqlite internal: open sqlite database: unable to open database file (14)\n"
+      }
+    },
+    {
+      "step": "absent-store-get",
+      "purpose": "read against a store path that does not exist",
+      "argv": [
+        "<binary>",
+        "-store",
+        "<work>/store/absent-get.sqlite",
+        "supersession",
+        "activation",
+        "get",
+        "bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3"
+      ],
+      "stdin": {
+        "source": "empty",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exit": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": ""
+      },
+      "stderr": {
+        "bytes": 80,
+        "sha256": "72ff61a5a50a4e2a5a464b8f8ac700d40db0da916010b5cbd39989912f562ac6",
+        "text": "mousa: sqlite internal: open sqlite database: unable to open database file (14)\n"
+      }
+    }
+  ],
+  "assertions": {
+    "total": 141,
+    "failed": 0
+  }
+}

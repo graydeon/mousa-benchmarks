@@ -1,0 +1,58 @@
+{
+  "product_base": "18c26c7ae3f083bc62af489addefa9e5e042b476",
+  "benchmark_base": "45721998de07dc0bad183b47ada072cd2420440c",
+  "files": {
+    "README.md": {
+      "bytes": 9367,
+      "sha256": "d5aac23a80b3d482ef63fc542d7c7d17c9aa65b7a2d2be66c3ef30e76f37652d"
+    },
+    "assertions.json": {
+      "bytes": 74426,
+      "sha256": "b0474a0988df9406e4bd7228a2c090af8fce8fd16f922d9dbace678974fe3d8d"
+    },
+    "inputs/activation-deactivation.json": {
+      "bytes": 446,
+      "sha256": "a9b97284599d45ce90814a3f0be7ffc4c962777a7085bb455c3deb7551d7aeff"
+    },
+    "inputs/activation-initial.json": {
+      "bytes": 445,
+      "sha256": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9"
+    },
+    "inputs/activation-reactivation.json": {
+      "bytes": 507,
+      "sha256": "b0bdaede5817bfb68fdda4b131a50d14deac1d830c01356709ea03399cc04fa9"
+    },
+    "inputs/activation-replacement.json": {
+      "bytes": 492,
+      "sha256": "dcf698a3313ea6df310a9dec6a63c00ed0e8a054462aded6c7b0b44dacc1a5df"
+    },
+    "inputs/declaration-first.json": {
+      "bytes": 529,
+      "sha256": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34"
+    },
+    "inputs/declaration-second.json": {
+      "bytes": 534,
+      "sha256": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30"
+    },
+    "inputs/items.jsonl": {
+      "bytes": 159,
+      "sha256": "626631303edca712f9992f8c81d10952d84aea87fb82b49aeddd888b14780793"
+    },
+    "negative-controls.json": {
+      "bytes": 2374,
+      "sha256": "344355460dae2cf6f357b31c1b98b1a8eef955b5fabf0fd0678fa1c0bc9de595"
+    },
+    "observed.json": {
+      "bytes": 76857,
+      "sha256": "21a97e24a1e0da10b512f0425412095da54d34f4a1dae843432e69ac6e496e92"
+    },
+    "protocol.json": {
+      "bytes": 4645,
+      "sha256": "d9545f8b543eb1332c4428f4d8d311583e31d547bf3069b554bcc50e4cc4e870"
+    },
+    "reproduce.py": {
+      "bytes": 40240,
+      "sha256": "5419d345e9e49b3dcbdef2c1c60148ef0cc5c3c97ad5054f7036bc1fe1f0a482"
+    }
+  }
+}

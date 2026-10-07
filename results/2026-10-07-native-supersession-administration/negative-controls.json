@@ -1,0 +1,41 @@
+{
+  "schema": "mousa.native_supersession_cli_negative_controls.v1",
+  "collected": "2026-10-07",
+  "purpose": "Demonstrate that this runner's expectations are load-bearing: a damaged frozen input stops the capture before it runs, and an incorrect expected value fails named assertions instead of passing. Both demonstrations used disposable copies of this run directory; the published protocol, inputs and capture are unchanged.",
+  "recipe": [
+    "cp -r results/2026-10-07-native-supersession-administration <scratch-dir>",
+    "rm <scratch-dir>/manifest.json",
+    "edit one byte of the copied inputs or one expected value in the copied protocol.json",
+    "python3 <scratch-dir>/reproduce.py --mousa /path/to/pinned-mousa --output <scratch-output>",
+    "discard the disposable copy afterwards"
+  ],
+  "controls": [
+    {
+      "id": "damaged-frozen-input",
+      "change": "one byte of inputs/declaration-first.json (example.operations became example.operationz, same file size)",
+      "expected": "the capture refuses to start and writes no output directory",
+      "exit": 2,
+      "observed": "error: frozen input differs from the protocol: inputs/declaration-first.json",
+      "output_directory_created": false
+    },
+    {
+      "id": "incorrect-expected-output",
+      "change": "protocol.json expectations.store_schema_version 14 became 99, and the first pin query expected item doc became amended",
+      "expected": "the capture runs and fails the assertions that depend on those expectations",
+      "exit": 1,
+      "assertions_total": 141,
+      "assertions_failed": 5,
+      "failed_assertions": [
+        {"id": "store-schema-version", "expected": 99, "observed": 14},
+        {"id": "pin-query-oldterm-item", "expected": "amended", "observed": "doc"},
+        {"id": "pin-query-oldterm-representation",
+         "expected": "60e19975d7128f1e9ea2e134104c745b1e6910ff54ef75826ea3ab2d422e31db",
+         "observed": "446eefbd434ae2de1b36fca7b3489bb264ccd45606ceee97fbb4dc0deeb90165"},
+        {"id": "pin-query-oldterm-content",
+         "expected": "7556cf343edc8f9b8195eba535dbcc0a677f7fd24f3d7030ffc28f0adc911b68",
+         "observed": "32bcae6b510cf173348005d5c4301ab9a49af91a39f11cb0106ee209e6d7e0f1"},
+        {"id": "pin-query-oldterm-text", "expected": "amended successor evidence", "observed": "oldterm predecessor evidence"}
+      ]
+    }
+  ]
+}
