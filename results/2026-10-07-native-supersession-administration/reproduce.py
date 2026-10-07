@@ -10,8 +10,11 @@ never opens an accepted or live store.
 Usage:
     python3 reproduce.py --mousa /path/to/pinned-mousa --output /path/to/new-capture
 
-The output directory must not exist. It receives observed.json (every argv, stdin identity, exit,
-stdout and stderr) and assertions.json (each expectation and its outcome). --work keeps the
+The output directory must not exist. It receives observed.json (the UTC capture time, the executed
+runner and protocol hashes, every argv, stdin identity, exit, stdout and stderr) and assertions.json
+(each expectation with the value the run actually observed). Administration reads and expected
+rejections are bracketed by store fingerprints taken immediately before and after the command; query
+commands are excluded because they legitimately write policy decisions and trails. --work keeps the
 throwaway build and stores in a named new directory instead of a temporary one, which makes a
 failing run inspectable.
 
@@ -21,6 +24,7 @@ existing output directory).
 """
 
 import argparse
+from datetime import datetime, timezone
 import hashlib
 import json
 import os
@@ -271,7 +275,13 @@ class Capture:
         self.check(ident, expected == observed, expected, observed, note)
 
     def expect_true(self, ident, condition, note):
-        self.check(ident, bool(condition), True, True, note)
+        """Record a boolean check as the observation it actually made.
+
+        A false condition is recorded as observed false and fails; recording the expectation twice
+        would hide which value the run saw.
+        """
+        observed = bool(condition)
+        self.check(ident, observed is True, True, observed, note)
 
     def expect_stderr(self, ident, expected, observation, note):
         self.check(ident, expected in observation["stderr"]["text"], expected, observation["stderr"]["text"], note)
@@ -329,16 +339,35 @@ class Capture:
         return current
 
     def expect_unchanged(self, ident, before, after, note):
-        """A read-only or rejected command must leave the stored rows and the file bytes alone.
+        """A read-only or rejected command must leave the stored state unchanged.
 
-        Only the database file is compared: a writable open may create or remove the SQLite WAL
-        sidecar files, which carry no committed record of their own.
+        The compared fingerprint covers the schema version, the canonical record tables
+        (sources, observations, artifacts, representations, segments), the supersession
+        declaration, activation-event and current-projection rows, and the bytes of the main
+        database file. The row digest is read through SQLite, so it includes committed
+        transactions wherever they currently live; the database file hash is a bounded addition
+        and does not by itself prove that nothing was written, because a WAL sidecar may hold
+        committed transactions before a checkpoint.
         """
         keys = ("schema_version", "canonical_records_sha256", "sources", "declarations",
                 "activations", "current_state", "file")
         expected = {key: before[key] for key in keys} if before else None
         observed = {key: after[key] for key in keys} if after else None
         self.check(ident, expected == observed, expected, observed, note)
+
+    def bracket(self, step, purpose, argv, note, stdin_path=None):
+        """Run one command that must not change stored state and bracket it with fingerprints.
+
+        Used for administration reads and for expected rejections. The fingerprints are taken
+        immediately before and after the command with nothing in between, so any committed write
+        by the command or by an injected step changes the compared values. Query commands are
+        excluded: they legitimately write policy decisions and trails.
+        """
+        before = self.fingerprint("%s:before" % step)
+        observation = self.cli(step, purpose, argv, stdin_path=stdin_path)
+        after = self.fingerprint("%s:after" % step)
+        self.expect_unchanged("%s-store-unchanged" % step, before, after, note)
+        return observation
 
 
 def read_pins_and_baseline(capture, protocol):
@@ -433,9 +462,10 @@ def run_capture(capture, protocol):
         capture.expect("put-%s-exit" % token, 0, put["exit"], "the declaration is accepted")
         capture.expect_bytes("put-%s-canonical-bytes" % token, protocol["frozen"][name], put,
                              "put prints exactly the frozen canonical declaration bytes")
-        get = capture.cli(
+        get = capture.bracket(
             "get-%s" % token, "read the stored declaration by identity",
             [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "declaration", "get", capture.declarations[name]["id"]],
+            "the declaration read changes no stored row and no database file byte",
         )
         capture.expect("get-%s-exit" % token, 0, get["exit"], "the stored declaration is readable")
         capture.expect_bytes("get-%s-canonical-bytes" % token, protocol["frozen"][name], get,
@@ -460,10 +490,10 @@ def run_capture(capture, protocol):
 
     # A source with stored declarations but no activation history is a not-found error, not
     # fabricated null state.
-    before = capture.fingerprint("before-no-history-read")
-    no_history = capture.cli(
+    no_history = capture.bracket(
         "state-no-history", "read current state for a source that has stored declarations but no activation history",
         [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "state", capture.source_id],
+        "the not-found read changes no stored row and no database file byte",
     )
     capture.expect("state-no-history-exit", capture.expectations["storage_error_exit"], no_history["exit"],
                    "a source without activation history reports a storage error")
@@ -471,16 +501,13 @@ def run_capture(capture, protocol):
                    "the read fabricates no null state object")
     capture.expect_stderr("state-no-history-classification", capture.expectations["stderr"]["state_no_history"],
                           no_history, "the documented not-found classification is reported")
-    after = capture.fingerprint("after-no-history-read")
-    capture.expect_unchanged("state-no-history-store-unchanged", before, after,
-                             "the not-found read changes no stored row and no database file byte")
 
     # A named expected predecessor that does not exist is rejected, and creates no history.
-    before = capture.fingerprint("before-pre-history-expectation")
-    pre_history = capture.cli(
+    pre_history = capture.bracket(
         "stale-predecessor-no-history",
         "submit a replacement whose expected predecessor does not exist, with both declarations stored",
         [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "put"],
+        "the rejected transition appends no event and changes no database file byte",
         stdin_path=RUN_DIR / "inputs" / "activation-replacement.json",
     )
     capture.expect("stale-predecessor-no-history-exit", capture.expectations["rejection_exit"], pre_history["exit"],
@@ -490,12 +517,10 @@ def run_capture(capture, protocol):
     capture.expect_stderr("stale-predecessor-no-history-classification",
                           capture.expectations["stderr"]["pre_history_expectation"], pre_history,
                           "the documented conflict classification is reported")
-    after = capture.fingerprint("after-pre-history-expectation")
-    capture.expect_unchanged("stale-predecessor-no-history-store-unchanged", before, after,
-                             "the rejected transition appends no event and changes no database file byte")
-    still_absent = capture.cli(
+    still_absent = capture.bracket(
         "state-still-absent", "re-read current state after the rejected transition",
         [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "state", capture.source_id],
+        "the read after the rejected transition changes no stored row and no database file byte",
     )
     capture.expect_stderr("state-still-absent-classification", capture.expectations["stderr"]["state_no_history"],
                           still_absent, "the rejected transition created no history")
@@ -514,9 +539,10 @@ def run_capture(capture, protocol):
         capture.expect("put-%s-exit" % label, 0, put["exit"], "the %s transition is accepted" % purpose)
         capture.expect_bytes("put-%s-canonical-bytes" % label, frozen_bytes, put,
                              "the applied event prints the frozen canonical bytes")
-        state = capture.cli(
+        state = capture.bracket(
             "state-%s" % label, "read current state after the %s transition" % purpose,
             [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "state", capture.source_id],
+            "the state read after the %s changes no stored row and no database file byte" % purpose,
         )
         capture.expect("state-%s-exit" % label, 0, state["exit"], "current state is readable after the transition")
         view = capture.parsed(state)
@@ -528,9 +554,10 @@ def run_capture(capture, protocol):
             capture.expect_true("state-%s-explicit-null" % label,
                                 '"active_declaration_id": null' in state["stdout"]["text"],
                                 "a deactivated source prints an explicit JSON null declaration")
-        get = capture.cli(
+        get = capture.bracket(
             "get-%s" % label, "read the stored event by identity",
             [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "get", event["id"]],
+            "the event read after the %s changes no stored row and no database file byte" % purpose,
         )
         capture.expect("get-%s-exit" % label, 0, get["exit"], "the stored event is readable")
         capture.expect_bytes("get-%s-canonical-bytes" % label, frozen_bytes, get,
@@ -585,23 +612,26 @@ def run_capture(capture, protocol):
                             "activation administration does not yet withhold the declared predecessor revision")
 
     # Historical reads stay byte-identical, and repeated readbacks in another process agree.
-    historical = capture.cli(
+    historical = capture.bracket(
         "get-historical-initial", "read the initial event after later transitions advanced the current state",
         [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "get",
          capture.activations["activation-initial.json"]["id"]],
+        "the historical event read changes no stored row and no database file byte",
     )
     capture.expect("get-historical-initial-exit", 0, historical["exit"], "a historical event stays readable")
     capture.expect_bytes("get-historical-initial-canonical-bytes",
                          protocol["frozen"]["activation-initial.json"], historical,
                          "the historical event still reads its own canonical bytes")
-    repeat_state = capture.cli(
+    repeat_state = capture.bracket(
         "state-repeat", "repeat the current-state readback in another process",
         [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "state", capture.source_id],
+        "the repeated state read changes no stored row and no database file byte",
     )
-    repeat_declaration = capture.cli(
+    repeat_declaration = capture.bracket(
         "get-repeat-declaration", "repeat a stored declaration readback in another process",
         [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "declaration", "get",
          capture.declarations["declaration-first.json"]["id"]],
+        "the repeated declaration read changes no stored row and no database file byte",
     )
     capture.expect("state-repeat-identical-bytes", state_read_sha, repeat_state["stdout"]["sha256"],
                    "the repeated current-state read emits identical bytes")
@@ -610,12 +640,12 @@ def run_capture(capture, protocol):
                    "the repeated declaration read emits identical bytes")
 
     # Replaying a superseded event, including a stale expectation, is a conflict that changes nothing.
-    before = capture.fingerprint("before-historical-retries")
     for name in ("activation-initial.json", "activation-replacement.json", "activation-deactivation.json"):
         label = name[len("activation-"):-len(".json")]
-        replay = capture.cli(
+        replay = capture.bracket(
             "replay-%s" % label, "replay a superseded event after the current state advanced",
             [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "put"],
+            "the rejected replay appends no event and changes no database file byte",
             stdin_path=RUN_DIR / "inputs" / name,
         )
         capture.expect("replay-%s-exit" % label, capture.expectations["rejection_exit"], replay["exit"],
@@ -624,12 +654,10 @@ def run_capture(capture, protocol):
                        "the rejected replay prints nothing")
         capture.expect_stderr("replay-%s-classification" % label, capture.expectations["stderr"]["historical_retry"],
                               replay, "the documented conflict classification is reported")
-    after = capture.fingerprint("after-historical-retries")
-    capture.expect_unchanged("replay-store-unchanged", before, after,
-                             "rejected replays append no event and change no database file byte")
-    state_after = capture.cli(
+    state_after = capture.bracket(
         "state-after-rejections", "confirm current state is unchanged after the rejected replays",
         [BINARY_PLACEHOLDER, *capture.store_argv, "supersession", "activation", "state", capture.source_id],
+        "the read after the rejected replays changes no stored row and no database file byte",
     )
     capture.expect("state-after-rejections-unchanged", previous_view.get("current_activation_id"),
                    (capture.parsed(state_after) or {}).get("current_activation_id"),
@@ -696,9 +724,21 @@ def main(argv=None):
         run_capture(capture, protocol)
         capture.expect_true("output-directory-untouched", not args.output.exists(),
                             "the capture wrote nothing outside its work directory before these records")
+        source_binding = {
+            "captured_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "protocol": {
+                "file": "protocol.json",
+                "sha256": sha256((RUN_DIR / "protocol.json").read_bytes()),
+                "collected": protocol["collected"],
+            },
+            "runner": {
+                "file": "reproduce.py",
+                "sha256": sha256(Path(__file__).read_bytes()),
+            },
+        }
         observed = {
             "schema": "mousa.native_supersession_cli_observation.v1",
-            "collected": protocol["collected"],
+            **source_binding,
             "mousa": {"repository": protocol["repository"], "commit": commit, "tree": tree,
                       "clean_before_capture": True},
             "build": {
@@ -714,7 +754,7 @@ def main(argv=None):
         }
         report = {
             "schema": "mousa.native_supersession_cli_assertions.v1",
-            "collected": protocol["collected"],
+            **source_binding,
             "scope": protocol["scope"],
             "limitations": protocol["limitations"],
             "assertions": capture.assertions,

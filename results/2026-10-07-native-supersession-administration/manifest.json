@@ -1,14 +1,14 @@
 {
   "product_base": "18c26c7ae3f083bc62af489addefa9e5e042b476",
-  "benchmark_base": "45721998de07dc0bad183b47ada072cd2420440c",
+  "benchmark_base": "41b23f2b54da32cc18795aa9f1878daa22948c03",
   "files": {
     "README.md": {
-      "bytes": 9367,
-      "sha256": "d5aac23a80b3d482ef63fc542d7c7d17c9aa65b7a2d2be66c3ef30e76f37652d"
+      "bytes": 12375,
+      "sha256": "77c3ebb99d4d4af87039d7ac78662fe9d51be09dfc82a00b7c2c5badeebed6f4"
     },
     "assertions.json": {
-      "bytes": 74426,
-      "sha256": "b0474a0988df9406e4bd7228a2c090af8fce8fd16f922d9dbace678974fe3d8d"
+      "bytes": 110357,
+      "sha256": "37e8918b3c2bea56a805dc4133d23419b421ecc8fd44daa2b53ac350385361d5"
     },
     "inputs/activation-deactivation.json": {
       "bytes": 446,
@@ -39,20 +39,20 @@
       "sha256": "626631303edca712f9992f8c81d10952d84aea87fb82b49aeddd888b14780793"
     },
     "negative-controls.json": {
-      "bytes": 2374,
-      "sha256": "344355460dae2cf6f357b31c1b98b1a8eef955b5fabf0fd0678fa1c0bc9de595"
+      "bytes": 5427,
+      "sha256": "b13753e6515e1933a55bca7c155bce8dcded82212b140819c9623e4ce63c1ec3"
     },
     "observed.json": {
-      "bytes": 76857,
-      "sha256": "21a97e24a1e0da10b512f0425412095da54d34f4a1dae843432e69ac6e496e92"
+      "bytes": 107840,
+      "sha256": "a0ec7f1e249104d65376cb0f5ece8dc5447b810477a446672068a14599248b8f"
     },
     "protocol.json": {
-      "bytes": 4645,
-      "sha256": "d9545f8b543eb1332c4428f4d8d311583e31d547bf3069b554bcc50e4cc4e870"
+      "bytes": 5662,
+      "sha256": "77d5b01d7b466a0cc48ff610b2eba1acfa32b186f7b19384f8645522641dff1f"
     },
     "reproduce.py": {
-      "bytes": 40240,
-      "sha256": "5419d345e9e49b3dcbdef2c1c60148ef0cc5c3c97ad5054f7036bc1fe1f0a482"
+      "bytes": 42649,
+      "sha256": "b682c6c1be9f4af7f788a5af4f8efdb9d0e755f8c464e1c1bbf46faebc6e02b0"
     }
   }
 }

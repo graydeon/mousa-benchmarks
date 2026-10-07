@@ -1,12 +1,21 @@
 {
   "schema": "mousa.native_supersession_cli_assertions.v1",
-  "collected": "2026-10-07",
-  "scope": "Native CLI lifecycle evidence for one synthetic JSONL source: declaration put/get/retry, activation put/get/state through initial selection, replacement, deactivation and reactivation, historical reads, stale and historical rejections, read-only store behavior and an unchanged query baseline. Deliberately an uncurated baseline: activation administration records a selection and enforces no suppression yet.",
+  "captured_at_utc": "2026-10-07T18:57:10Z",
+  "protocol": {
+    "file": "protocol.json",
+    "sha256": "77d5b01d7b466a0cc48ff610b2eba1acfa32b186f7b19384f8645522641dff1f",
+    "collected": "2026-10-07"
+  },
+  "runner": {
+    "file": "reproduce.py",
+    "sha256": "b682c6c1be9f4af7f788a5af4f8efdb9d0e755f8c464e1c1bbf46faebc6e02b0"
+  },
+  "scope": "Native CLI lifecycle evidence for one synthetic JSONL source: declaration put/get/retry, activation put/get/state through initial selection, replacement, deactivation and reactivation, historical reads, stale and historical rejections, read-only store behavior and an unchanged query baseline. Every declaration get, activation get and state read, and every expected rejected administration write, is individually bracketed by a store fingerprint taken immediately before and after that command; query commands are not bracketed because they legitimately write policy decisions and trails. Deliberately an uncurated baseline: activation administration records a selection and enforces no suppression yet.",
   "limitations": [
     "Not a retrieval-quality, semantic or performance measurement: the query observations only show which evidence identities and bytes the pinned revision still releases, and shared-host timings are not recorded.",
     "The single synthetic source, three items and four transitions are a fixed fixture, not a sample of real curation workloads.",
     "The actor, time and reason fields in the frozen events are recorded evidence, not authenticated authorship.",
-    "Storage invariants are read from the store with the SQLite library; they describe this store's rows and file bytes, not a general integrity proof.",
+    "Storage checks are bounded: each administration read and expected rejection compares the canonical record tables, the supersession declaration, event and projection rows and the bytes of the main database file immediately before and after that one command. A WAL sidecar may hold committed transactions before a checkpoint, so this is evidence about those compared values, not a general integrity proof.",
     "Accepted or live stores, MCP administration, older-store migration, damaged-store handling and enforcement are out of scope and were not exercised."
   ],
   "assertions": [
@@ -288,6 +297,63 @@
       "passed": true
     },
     {
+      "id": "get-declaration-first-store-unchanged",
+      "check": "the declaration read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 1,
+          "sha256": "590dd4cfed891b1699a5e9605a120a4f71861b4d5fa5a0fd1fac60fc6b0ee1d9"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "6847a63508657ef7715d5b0d371887ee266f219966b395ab1c9cbaf06502ab2e"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 1,
+          "sha256": "590dd4cfed891b1699a5e9605a120a4f71861b4d5fa5a0fd1fac60fc6b0ee1d9"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "6847a63508657ef7715d5b0d371887ee266f219966b395ab1c9cbaf06502ab2e"
+        }
+      },
+      "passed": true
+    },
+    {
       "id": "get-declaration-first-exit",
       "check": "the stored declaration is readable",
       "expected": 0,
@@ -313,6 +379,63 @@
       "check": "put prints exactly the frozen canonical declaration bytes",
       "expected": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
       "observed": "1d4cb9e4bec739e0db3a99243d19ca30a8bc24c75a0610c3e3b17a8acf9d3a30",
+      "passed": true
+    },
+    {
+      "id": "get-declaration-second-store-unchanged",
+      "check": "the declaration read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
       "passed": true
     },
     {
@@ -364,27 +487,6 @@
       "passed": true
     },
     {
-      "id": "state-no-history-exit",
-      "check": "a source without activation history reports a storage error",
-      "expected": 1,
-      "observed": 1,
-      "passed": true
-    },
-    {
-      "id": "state-no-history-empty-stdout",
-      "check": "the read fabricates no null state object",
-      "expected": "",
-      "observed": "",
-      "passed": true
-    },
-    {
-      "id": "state-no-history-classification",
-      "check": "the documented not-found classification is reported",
-      "expected": "sqlite not_found: get supersession activation state: sql: no rows in result set",
-      "observed": "mousa: sqlite not_found: get supersession activation state: sql: no rows in result set\n",
-      "passed": true
-    },
-    {
       "id": "state-no-history-store-unchanged",
       "check": "the not-found read changes no stored row and no database file byte",
       "expected": {
@@ -410,7 +512,7 @@
         },
         "file": {
           "bytes": 479232,
-          "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
         }
       },
       "observed": {
@@ -436,30 +538,30 @@
         },
         "file": {
           "bytes": 479232,
-          "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
         }
       },
       "passed": true
     },
     {
-      "id": "stale-predecessor-no-history-exit",
-      "check": "a missing expected predecessor is rejected",
+      "id": "state-no-history-exit",
+      "check": "a source without activation history reports a storage error",
       "expected": 1,
       "observed": 1,
       "passed": true
     },
     {
-      "id": "stale-predecessor-no-history-empty-stdout",
-      "check": "the rejected transition prints nothing",
+      "id": "state-no-history-empty-stdout",
+      "check": "the read fabricates no null state object",
       "expected": "",
       "observed": "",
       "passed": true
     },
     {
-      "id": "stale-predecessor-no-history-classification",
-      "check": "the documented conflict classification is reported",
-      "expected": "sqlite conflict: apply supersession activation: expected previous activation does not exist",
-      "observed": "mousa: sqlite conflict: apply supersession activation: expected previous activation does not exist\n",
+      "id": "state-no-history-classification",
+      "check": "the documented not-found classification is reported",
+      "expected": "sqlite not_found: get supersession activation state: sql: no rows in result set",
+      "observed": "mousa: sqlite not_found: get supersession activation state: sql: no rows in result set\n",
       "passed": true
     },
     {
@@ -488,7 +590,7 @@
         },
         "file": {
           "bytes": 479232,
-          "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
         }
       },
       "observed": {
@@ -514,7 +616,85 @@
         },
         "file": {
           "bytes": 479232,
-          "sha256": "7d4f5a64a5711055288a42baead3ab5f4b88581c3d85155d7157efafee1a1a62"
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "stale-predecessor-no-history-exit",
+      "check": "a missing expected predecessor is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "stale-predecessor-no-history-empty-stdout",
+      "check": "the rejected transition prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "stale-predecessor-no-history-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: expected previous activation does not exist",
+      "observed": "mousa: sqlite conflict: apply supersession activation: expected previous activation does not exist\n",
+      "passed": true
+    },
+    {
+      "id": "state-still-absent-store-unchanged",
+      "check": "the read after the rejected transition changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "current_state": {
+          "rows": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "c39536febd700ba9db22a93a78e3d98149c41ae8de3110b92bc9cff4e1e152e9"
         }
       },
       "passed": true
@@ -541,6 +721,63 @@
       "passed": true
     },
     {
+      "id": "state-initial-store-unchanged",
+      "check": "the state read after the initial selection changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
+      },
+      "passed": true
+    },
+    {
       "id": "state-initial-exit",
       "check": "current state is readable after the transition",
       "expected": 0,
@@ -559,6 +796,63 @@
         "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
         "current_activation_id": "bcdb055a6ef1111bf973d19a4afe7dbd3ae341a5774df35fd80c852d4b8a63c3",
         "active_declaration_id": "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      },
+      "passed": true
+    },
+    {
+      "id": "get-initial-store-unchanged",
+      "check": "the event read after the initial selection changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 1,
+          "sha256": "8e12349178851d01ea2a375cfb6703b8bd518e13321ca60e16542f63713cd5cd"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "0b314e5672c532dbfb72c4c60edf3ebbaeac314017118f73a9206a2a3c4faba0"
+        },
+        "file": {
+          "bytes": 479232,
+          "sha256": "64249a4ace3e89f6c6f27b10e63c06c490db0489ed434671699500272bbf5508"
+        }
       },
       "passed": true
     },
@@ -679,6 +973,63 @@
       "passed": true
     },
     {
+      "id": "state-replacement-store-unchanged",
+      "check": "the state read after the replacement changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
+      },
+      "passed": true
+    },
+    {
       "id": "state-replacement-exit",
       "check": "current state is readable after the transition",
       "expected": 0,
@@ -697,6 +1048,63 @@
         "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
         "current_activation_id": "a87e9356c003a98ba7ecac3b475a6aa96f2b336a75b3ab8d795967f8fae5fe0e",
         "active_declaration_id": "cad044737b2e0b6e8fe42a7ce9639e39f5b999f0f06767abd6a07bdbbf337812"
+      },
+      "passed": true
+    },
+    {
+      "id": "get-replacement-store-unchanged",
+      "check": "the event read after the replacement changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 2,
+          "sha256": "c448e9c58b33c9547890a914154ed3e3b058b7cff815a293cc0fe4ea8d0680bf"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "7518d526e7b89e66b34b49185db31caad34483f0f159d568beaeeb525769259f"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "3a88c68bff8d5c2b72757eb14deef461228a18a1110ca40ff3e1f25fdcb52900"
+        }
       },
       "passed": true
     },
@@ -790,6 +1198,63 @@
       "passed": true
     },
     {
+      "id": "state-deactivation-store-unchanged",
+      "check": "the state read after the deactivation with an explicit null declaration changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
+      "passed": true
+    },
+    {
       "id": "state-deactivation-exit",
       "check": "current state is readable after the transition",
       "expected": 0,
@@ -816,6 +1281,63 @@
       "check": "a deactivated source prints an explicit JSON null declaration",
       "expected": true,
       "observed": true,
+      "passed": true
+    },
+    {
+      "id": "get-deactivation-store-unchanged",
+      "check": "the event read after the deactivation with an explicit null declaration changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 3,
+          "sha256": "00a4f797a48b1dff3b1ffa17cd517852662bc8393f12a1ea8225a82441d8d14f"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "dc804db4a26a572fdabe63eeadd3edd7f48b4b0b307b5caa106cd6e028d27b6d"
+        },
+        "file": {
+          "bytes": 487424,
+          "sha256": "b7ab9cd379495c8d004ac00a83e3f4c92f0334a7ee05023f3550d1b217a12ea9"
+        }
+      },
       "passed": true
     },
     {
@@ -908,6 +1430,63 @@
       "passed": true
     },
     {
+      "id": "state-reactivation-store-unchanged",
+      "check": "the state read after the reactivation changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
+      },
+      "passed": true
+    },
+    {
       "id": "state-reactivation-exit",
       "check": "current state is readable after the transition",
       "expected": 0,
@@ -926,6 +1505,63 @@
         "source_id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
         "current_activation_id": "b11aeb41b3ac946d3339d7e9e26ac50ace5d457174a94c3dd36e9fe8cb866a76",
         "active_declaration_id": "75471ea805c888a83d759aabc1241c3e2400396eec72dff07bb4ec50eca9fb79"
+      },
+      "passed": true
+    },
+    {
+      "id": "get-reactivation-store-unchanged",
+      "check": "the event read after the reactivation changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 491520,
+          "sha256": "3b35030b444a45682f946c280a35673b19aaf1efe10d4e1107166afb3c45db4e"
+        }
       },
       "passed": true
     },
@@ -1258,99 +1894,8 @@
       "passed": true
     },
     {
-      "id": "get-historical-initial-exit",
-      "check": "a historical event stays readable",
-      "expected": 0,
-      "observed": 0,
-      "passed": true
-    },
-    {
-      "id": "get-historical-initial-canonical-bytes",
-      "check": "the historical event still reads its own canonical bytes",
-      "expected": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
-      "observed": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
-      "passed": true
-    },
-    {
-      "id": "state-repeat-identical-bytes",
-      "check": "the repeated current-state read emits identical bytes",
-      "expected": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
-      "observed": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
-      "passed": true
-    },
-    {
-      "id": "get-repeat-declaration-identical-bytes",
-      "check": "the repeated declaration read emits identical bytes",
-      "expected": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
-      "observed": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
-      "passed": true
-    },
-    {
-      "id": "replay-initial-exit",
-      "check": "a superseded event is rejected",
-      "expected": 1,
-      "observed": 1,
-      "passed": true
-    },
-    {
-      "id": "replay-initial-empty-stdout",
-      "check": "the rejected replay prints nothing",
-      "expected": "",
-      "observed": "",
-      "passed": true
-    },
-    {
-      "id": "replay-initial-classification",
-      "check": "the documented conflict classification is reported",
-      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
-      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
-      "passed": true
-    },
-    {
-      "id": "replay-replacement-exit",
-      "check": "a superseded event is rejected",
-      "expected": 1,
-      "observed": 1,
-      "passed": true
-    },
-    {
-      "id": "replay-replacement-empty-stdout",
-      "check": "the rejected replay prints nothing",
-      "expected": "",
-      "observed": "",
-      "passed": true
-    },
-    {
-      "id": "replay-replacement-classification",
-      "check": "the documented conflict classification is reported",
-      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
-      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
-      "passed": true
-    },
-    {
-      "id": "replay-deactivation-exit",
-      "check": "a superseded event is rejected",
-      "expected": 1,
-      "observed": 1,
-      "passed": true
-    },
-    {
-      "id": "replay-deactivation-empty-stdout",
-      "check": "the rejected replay prints nothing",
-      "expected": "",
-      "observed": "",
-      "passed": true
-    },
-    {
-      "id": "replay-deactivation-classification",
-      "check": "the documented conflict classification is reported",
-      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
-      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
-      "passed": true
-    },
-    {
-      "id": "replay-store-unchanged",
-      "check": "rejected replays append no event and change no database file byte",
+      "id": "get-historical-initial-store-unchanged",
+      "check": "the historical event read changes no stored row and no database file byte",
       "expected": {
         "schema_version": 14,
         "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
@@ -1374,7 +1919,7 @@
         },
         "file": {
           "bytes": 495616,
-          "sha256": "ca7ab0954e090a27b93a3a20203340bb016c321a5a6e28dcb58f6419609e8e6b"
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
         }
       },
       "observed": {
@@ -1400,7 +1945,440 @@
         },
         "file": {
           "bytes": 495616,
-          "sha256": "ca7ab0954e090a27b93a3a20203340bb016c321a5a6e28dcb58f6419609e8e6b"
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-historical-initial-exit",
+      "check": "a historical event stays readable",
+      "expected": 0,
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "id": "get-historical-initial-canonical-bytes",
+      "check": "the historical event still reads its own canonical bytes",
+      "expected": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "observed": "2f9b3034c7dab5af94060bd2dd8db9a248487576d411b63fa394bd32598aa1a9",
+      "passed": true
+    },
+    {
+      "id": "state-repeat-store-unchanged",
+      "check": "the repeated state read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "get-repeat-declaration-store-unchanged",
+      "check": "the repeated declaration read changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "state-repeat-identical-bytes",
+      "check": "the repeated current-state read emits identical bytes",
+      "expected": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
+      "observed": "e394db175ca0bd64c849144184dd1750e9a10b58d33459b33b62820fab0747de",
+      "passed": true
+    },
+    {
+      "id": "get-repeat-declaration-identical-bytes",
+      "check": "the repeated declaration read emits identical bytes",
+      "expected": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "observed": "9cdf02236a1e2331541d546fb4bd1f74e663c040574e0949f132ad775c6d7b34",
+      "passed": true
+    },
+    {
+      "id": "replay-initial-store-unchanged",
+      "check": "the rejected replay appends no event and changes no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "replay-initial-exit",
+      "check": "a superseded event is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "replay-initial-empty-stdout",
+      "check": "the rejected replay prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "replay-initial-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
+      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-store-unchanged",
+      "check": "the rejected replay appends no event and changes no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-exit",
+      "check": "a superseded event is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-empty-stdout",
+      "check": "the rejected replay prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "replay-replacement-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
+      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-store-unchanged",
+      "check": "the rejected replay appends no event and changes no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-exit",
+      "check": "a superseded event is rejected",
+      "expected": 1,
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-empty-stdout",
+      "check": "the rejected replay prints nothing",
+      "expected": "",
+      "observed": "",
+      "passed": true
+    },
+    {
+      "id": "replay-deactivation-classification",
+      "check": "the documented conflict classification is reported",
+      "expected": "sqlite conflict: apply supersession activation: identical activation is no longer current",
+      "observed": "mousa: sqlite conflict: apply supersession activation: identical activation is no longer current\n",
+      "passed": true
+    },
+    {
+      "id": "state-after-rejections-store-unchanged",
+      "check": "the read after the rejected replays changes no stored row and no database file byte",
+      "expected": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
+        }
+      },
+      "observed": {
+        "schema_version": 14,
+        "canonical_records_sha256": "d5c01cb627646f96dadd75c641dc19cb805d6635854e0a2f09b4454678aa5055",
+        "sources": {
+          "fixture/state": {
+            "id": "b29a7c5546218ecbd4d0c9e03eb2fb8a5c6759a6bfffd4f5d3b64e62a243a463",
+            "namespace": "mousa-jsonl"
+          }
+        },
+        "declarations": {
+          "rows": 2,
+          "sha256": "900bc99839cef653766a1c11ca2eabbe430f7c84f1870cf1e23c63abd602c5c6"
+        },
+        "activations": {
+          "rows": 4,
+          "sha256": "0e0ca632d5bc7b267b5594eb7f6b1f40345c1dd1c4449e244527b2f8223b988c"
+        },
+        "current_state": {
+          "rows": 1,
+          "sha256": "f41efa7c2eb4b993dfeb6f5b0f742b0e01d11c7d2e68060e92377a4373a91b5b"
+        },
+        "file": {
+          "bytes": 495616,
+          "sha256": "b9c70d9534029cbe4bfe412c96aa57244e9bf97e71a2b27588887091f8a9d4ed"
         }
       },
       "passed": true
@@ -1476,7 +2454,7 @@
       "passed": true
     }
   ],
-  "total": 141,
+  "total": 158,
   "failed": 0,
   "passed": true
 }
