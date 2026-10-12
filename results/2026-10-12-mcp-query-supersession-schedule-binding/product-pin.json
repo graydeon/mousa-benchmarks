@@ -1,0 +1,77 @@
+{
+  "build_command": [
+    "go",
+    "build",
+    "-trimpath",
+    "-buildvcs=false",
+    "-o",
+    "<binary>",
+    "./cmd/mousa"
+  ],
+  "build_environment": {
+    "CGO_ENABLED": "0",
+    "GOWORK": "off"
+  },
+  "build_receipt": {
+    "argv": [
+      "go",
+      "build",
+      "-trimpath",
+      "-buildvcs=false",
+      "-o",
+      "<binary>",
+      "./cmd/mousa"
+    ],
+    "cwd": "<product>",
+    "exit": 0,
+    "stderr": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "stdin": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "stdout": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    }
+  },
+  "built_at_utc": "2026-10-11T23:41:33.463623+00:00",
+  "executable_sha256": "d41954a65181189df0bdc1bf6e906823e966dd9f309f429d9f964fecbe748235",
+  "method": "Anonymous public checkout at the recorded commit; documented release build in this sandbox. The runner verifies the checkout pin and the executable digest; a matching source and binary pin does not prove a reproducible build on another toolchain.",
+  "public_head": "7ae0d8768e7cd203c48478412b493e1255c97b11",
+  "public_tree": "2b8b14f76e0907f3ca3fd5dc8c33934567e61d14",
+  "toolchain": "go version go1.27.1 linux/amd64",
+  "toolchain_receipt": {
+    "argv": [
+      "go",
+      "version"
+    ],
+    "exit": 0,
+    "stderr": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "stdin": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "stdout": {
+      "base64": "Z28gdmVyc2lvbiBnbzEuMjcuMSBsaW51eC9hbWQ2NAo=",
+      "bytes": 32,
+      "sha256": "f554cfdb85411c2bb1d503df3f53dfbad1f753eb8271938833166a5d26a7547c",
+      "text": "go version go1.27.1 linux/amd64\n"
+    }
+  }
+}

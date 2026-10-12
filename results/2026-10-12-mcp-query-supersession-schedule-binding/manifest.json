@@ -1,0 +1,78 @@
+{
+  "product_base": "7ae0d8768e7cd203c48478412b493e1255c97b11",
+  "benchmark_base": "7dc1e85abe2c9cffce17415301eadcf00d3d1e7c",
+  "files": {
+    "README.md": {
+      "bytes": 2966,
+      "sha256": "73fd7e5839f60eabe56db97b966a423267460777fd7d341bbb341c96e87c7700"
+    },
+    "archive-members.json": {
+      "bytes": 5926,
+      "sha256": "7c9aaa73018b6ff3afc348ed7b588e309f51e49ae7a423a92e4a1613b007311f"
+    },
+    "baseline-discovery.json": {
+      "bytes": 44073,
+      "sha256": "c61b199fadd801c72a365f85d5232f585a145bcab88d310ca7afab7072812e08"
+    },
+    "capture.tar.gz": {
+      "bytes": 302006,
+      "sha256": "260780d4bdbf106f9b00fb2e9e5150dc6d83b52e427af95dc85a9df3944d7dd4"
+    },
+    "commands.json": {
+      "bytes": 3836,
+      "sha256": "4c0730ea81b9a3f17d2c42edcfb43e915681d899e86093500d7354c880d5231e"
+    },
+    "expectations.json": {
+      "bytes": 40800,
+      "sha256": "0745b5fc905dcece7fd841995f96cec763f4e1e36796a8062a1c2177d011bdfe"
+    },
+    "forbidden-write.tar.gz": {
+      "bytes": 298183,
+      "sha256": "96d3cf631e9cb3d3d10262a5763e6407ec7a4c9708e0f85df05f624fec6ca45a"
+    },
+    "fresh-reproduction.tar.gz": {
+      "bytes": 302109,
+      "sha256": "f6baa191a28c9899afe9785f630624b10a227841f1e019d3e9f97e18afaa9596"
+    },
+    "negative-controls.json": {
+      "bytes": 4828,
+      "sha256": "41e1435f966cc617357bdcea192102be0b0b17ca01721c58fc79166ffab6835d"
+    },
+    "pilot.tar.gz": {
+      "bytes": 297975,
+      "sha256": "76f7f595b0101f95ef871228e35dbaa0b9fcb984e51728494ba4e6a02cacc037"
+    },
+    "preparation-verification.json": {
+      "bytes": 9033,
+      "sha256": "787ae412854f29d753a0b61decc1fd92bed0fb6223f741e89f99c96740f23f8f"
+    },
+    "product-pin.json": {
+      "bytes": 2136,
+      "sha256": "309361ac42e6df590e398a7044af74cf97f7ef8244f9129243858e311564f124"
+    },
+    "protocol.json": {
+      "bytes": 42436,
+      "sha256": "ab59640df705a0bb76f2e2897d3135f98150db8121d044e10121cba2747383df"
+    },
+    "run.py": {
+      "bytes": 113863,
+      "sha256": "5ea0d320f9ec129e234f28919c0eacf7729d3cb4542ae6eeedbf0d18af4d503e"
+    },
+    "schedule-regression.json": {
+      "bytes": 478,
+      "sha256": "11a73f571ce5fc327725d93ae0ce97373db8ecd82bb3fa0ea6c0053d0970a1ae"
+    },
+    "self-check.json": {
+      "bytes": 1580,
+      "sha256": "86e1235bda9634a7ae8d3638d148da2fbc8f7b389f95b3145cee9feb5803ca44"
+    },
+    "summary.json": {
+      "bytes": 3018,
+      "sha256": "c62b99394672f16049b9957caf80e6cc1ff4fcdb49a81da229f5dea36f50e356"
+    },
+    "test_request_schedule.py": {
+      "bytes": 1703,
+      "sha256": "e2fb6a8701c7d595f61c031909b8cc31a813168ffa5e6a443dbbcc6fc899461c"
+    }
+  }
+}

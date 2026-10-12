@@ -1,0 +1,156 @@
+[
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/test_request_schedule.py"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "fe008aab760eb03ccac7578e2b84665b1b50b0d7f855b17a0c7a8d039435b658"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "self-check",
+      "--output",
+      "<output>/self-check.json"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "6f60b5a4d12c3ae9c8ede98e18e061dfb7d57b026f70f78097e27b17d291e0ae"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "pilot",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "results/2026-10-12-mcp-query-supersession-strict-binding/product-pin.json",
+      "--output",
+      "<output>/pilot"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "verify",
+      "<output>/pilot"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "7adcabeaabb08d2c367f2edb1f59adb83b273bae499f1af23a93ff0f9bbc16b5"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "results/2026-10-12-mcp-query-supersession-strict-binding/product-pin.json",
+      "--output",
+      "<output>/capture",
+      "--expectations",
+      "mcp-query-supersession/expectations.json"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "verify",
+      "<output>/capture"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "7adcabeaabb08d2c367f2edb1f59adb83b273bae499f1af23a93ff0f9bbc16b5"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "capture",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "results/2026-10-12-mcp-query-supersession-strict-binding/product-pin.json",
+      "--output",
+      "<output>/fresh",
+      "--expectations",
+      "mcp-query-supersession/expectations.json"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "verify",
+      "<output>/fresh"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "7adcabeaabb08d2c367f2edb1f59adb83b273bae499f1af23a93ff0f9bbc16b5"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "negative-controls",
+      "<output>/capture",
+      "--output",
+      "<output>/negatives"
+    ],
+    "exit": 0,
+    "expected_exit": 0,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "forbidden-write",
+      "--source",
+      "<product>",
+      "--binary",
+      "<binary>",
+      "--pin",
+      "results/2026-10-12-mcp-query-supersession-strict-binding/product-pin.json",
+      "--output",
+      "<output>/forbidden"
+    ],
+    "exit": 1,
+    "expected_exit": 1,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "/usr/bin/python3",
+      "mcp-query-supersession/run.py",
+      "verify",
+      "<output>/forbidden"
+    ],
+    "exit": 2,
+    "expected_exit": 2,
+    "log_sha256": "58db0a3f2e01731d35f033f1f90de8a73f62356118e860ef8b493bc899e0e173"
+  }
+]
