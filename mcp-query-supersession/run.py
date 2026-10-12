@@ -476,7 +476,8 @@ class Session:
                 raise ValueError('omitted step: ' + name)
             record = self.replay[self.index]
             self.index += 1
-            if (record['kind'], record['name'], record['match']) != (kind, name, key):
+            if (record['kind'] != kind or record['name'] != name
+                    or not same_json(record['match'], key)):
                 raise ValueError('changed step: ' + name)
         else:
             record = produce()
