@@ -6,7 +6,8 @@ The final runner compares recorded metadata with the frozen schedule using canon
 
 | Evidence | Observed result |
 |---|---|
-| Pilot, capture and fresh independent-store reproduction | 129 steps, 2847 assertions, no failures each |
+| Pilot | 129 steps, 2846 assertions, no failures |
+| Capture and fresh independent-store reproduction | 129 steps, 2847 assertions, no failures each |
 | Stable selection cases | 39; identical between capture and reproduction |
 | Archived replays | All accepted observations verify successfully |
 | Generated negative controls | All 21 reject, with their expected detectors |
