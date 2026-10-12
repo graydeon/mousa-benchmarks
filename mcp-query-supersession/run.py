@@ -16,6 +16,7 @@ Modes:
     verify     re-check an extracted capture: membership, wire integrity, provenance and
                regenerated assertions
     negative-controls  mutate copies of a capture; every copy must be rejected
+    self-check  focused stdlib regression for the runner's own comparison helpers
     forbidden-write    the same schedule with one injected write inside a read bracket
     manifest   rewrite one archive directory's member manifest
     package    assemble the published result directory from the capture directories
@@ -222,7 +223,8 @@ def schema_violations(schema, value, path='$'):
 
     Supported: type, const, enum, pattern, minLength/maxLength, minimum/maximum,
     minItems/maxItems, properties, required, additionalProperties (false or schema),
-    items and oneOf. Not implemented: formats, $ref/$defs, allOf/anyOf/not,
+    items and oneOf (exactly one matching branch). Not implemented: formats, $ref/$defs,
+    allOf/anyOf/not,
     unevaluatedProperties, patternProperties, dependencies, exclusive bounds and
     $schema-driven dialect selection. Every schema Mousa discovers over stdio is
     inline and needs only the supported subset; this is not a general JSON Schema
@@ -272,8 +274,11 @@ def schema_violations(schema, value, path='$'):
             elif isinstance(additional, dict):
                 problems += schema_violations(additional, item, child)
     branches = schema.get('oneOf', [])
-    if branches and not any(not schema_violations(branch, value, path) for branch in branches):
-        problems.append('%s: no oneOf branch matches' % path)
+    if branches:
+        matched = sum(1 for branch in branches if not schema_violations(branch, value, path))
+        if matched != 1:
+            problems.append('%s: oneOf requires exactly one matching branch, %d matched'
+                            % (path, matched))
     return problems
 
 
@@ -409,11 +414,80 @@ class Session:
             self.index += 1
             if (record['kind'], record['name'], record['match']) != (kind, name, key):
                 raise ValueError('changed step: ' + name)
-            self.steps.append(record)
-            return record
-        record = produce()
+        else:
+            record = produce()
         self.steps.append(record)
+        self.bind(record)
         return record
+
+    # -- request binding ----------------------------------------------------------
+    def bind(self, record):
+        """Assert each receipt is the operation the schedule asked for.
+
+        `record['match']` is the schedule; the receipts beside it are what the run
+        actually produced. Comparing them keeps a rewritten receipt from staying
+        consistent with unchanged match metadata, and proves the observed response was
+        produced by the scheduled operation rather than by a neighbouring one.
+        """
+        name, match, kind = record['name'], record['match'], record['kind']
+        if kind == 'native':
+            self.expect(name + ':scheduled-stdin', match['stdin'], record['stdin'])
+            self.expect(name + ':scheduled-argv', match['argv'], record['argv'][3:])
+        elif kind == 'damage':
+            self.expect(name + ':scheduled-sql', match['sql'], record['sql'])
+            self.expect(name + ':scheduled-store', match['store'], record['store'])
+        elif kind == 'start':
+            self.expect(name + ':scheduled-store', match['store'], record['store'])
+            self.expect(name + ':scheduled-argv',
+                        ['mcp', '--caller', match['caller'], '--source', match['label']],
+                        record['argv'][3:])
+        elif kind in ('protocol', 'notify', 'call'):
+            self.bind_frame(name, record, match, kind)
+
+    def bind_frame(self, name, record, match, kind):
+        """Bind one recorded JSON-RPC frame to the scheduled method and parameters.
+
+        A frame the schedule spelled out as raw bytes is compared as those exact bytes:
+        a duplicate key or trailing data is the boundary under test, and reparsing would
+        erase it. A generated frame is parsed and compared field by field, so a scheduled
+        method, tool name or argument object cannot be replaced by a neighbouring one.
+        """
+        text = record['request']['text']
+        if match.get('raw') is not None:
+            self.expect(name + ':request-scheduled-bytes', match['raw'] + '\n', text)
+            return
+        try:
+            frame = json.loads(text)
+        except ValueError:
+            frame = None
+        self.yes(name + ':request-json-object', isinstance(frame, dict))
+        if not isinstance(frame, dict):
+            return
+        self.expect(name + ':request-protocol', '2.0', frame.get('jsonrpc'))
+        if kind == 'notify':
+            self.expect(name + ':request-method', match['method'], frame.get('method'))
+            self.yes(name + ':request-is-notification', 'id' not in frame)
+            return
+        self.yes(name + ':request-id-is-integer', isinstance(frame.get('id'), int)
+                 and not isinstance(frame.get('id'), bool))
+        if kind == 'call':
+            self.expect(name + ':request-method', 'tools/call', frame.get('method'))
+            self.expect(name + ':request-params',
+                        {'name': match['tool'], 'arguments': match['arguments']},
+                        frame.get('params'))
+            return
+        self.expect(name + ':request-method', match['method'], frame.get('method'))
+        self.expect(name + ':request-params', match['params'], frame.get('params'))
+        if match['method'] == 'initialize':
+            self.expect(name + ':request-protocol-version', self.p['protocol_version'],
+                        (frame.get('params') or {}).get('protocolVersion'))
+        if record['response']['bytes']:
+            try:
+                response = json.loads(record['response']['text'])
+            except ValueError:
+                response = None
+            self.expect(name + ':response-id-matches-request', frame.get('id'),
+                        response.get('id') if isinstance(response, dict) else None)
 
     def bracket(self, name, record):
         """A read-only protocol step: unchanged tables, or the store opening itself."""
@@ -1456,6 +1530,24 @@ def discovery(args):
     return 0
 
 
+def mutate_call_request(observations, name, change):
+    """Rewrite one recorded call frame, leaving its scheduled match and response intact."""
+    step = next(item for item in observations['steps'] if item['name'] == name)
+    frame = json.loads(base64.b64decode(step['request']['base64']).decode())
+    change(frame)
+    step['request'] = stream(
+        (json.dumps(frame, ensure_ascii=False, separators=(',', ':')) + '\n').encode())
+
+
+def mutate_raw_request(observations, name, before, after):
+    """Rewrite the exact bytes of one scheduled raw frame, keeping its match metadata."""
+    step = next(item for item in observations['steps'] if item['name'] == name)
+    data = base64.b64decode(step['request']['base64'])
+    if before not in data:
+        raise ValueError('raw mutation target is absent: ' + name)
+    step['request'] = stream(data.replace(before, after, 1))
+
+
 def negative_controls(args):
     verify(args.capture)
     if args.output.exists():
@@ -1470,10 +1562,20 @@ def negative_controls(args):
                     'reason': 'the assertion API recorded observed False with passed False',
                     'rejected': actual_false['observed'] is False
                     and actual_false['passed'] is False})
+    # Each request mutation rewrites the recorded wire bytes only: the scheduled match
+    # metadata, the observed response and every other receipt stay as captured, so the
+    # archive can only be rejected by the assertion that binds the wire to the schedule.
+    request_mutations = {
+        'mutated-request-boolean': 'active-original:query-opted:request-params',
+        'mutated-request-query': 'no-history:query-omitted:request-params',
+        'mutated-request-tool': 'no-history:status:request-params',
+        'mutated-request-method': 'no-history:query-false:request-method',
+        'mutated-raw-frame': 'no-history:boundary-duplicate:request-scheduled-bytes',
+    }
     kinds = ('damaged-input', 'wrong-count-expectation', 'wrong-default-property-set',
              'false-assertion', 'omitted-assertion', 'undeclared-response-field',
              'forbidden-write-fingerprint', 'fabricated-success-after-damage', 'failed-build',
-             'damaged-build-stream')
+             'damaged-build-stream', *request_mutations)
     for kind in kinds:
         directory = args.output / kind
         shutil.copytree(args.capture, directory)
@@ -1482,6 +1584,28 @@ def negative_controls(args):
         if kind == 'damaged-input':
             path = directory / 'inputs' / 'items.jsonl'
             path.write_bytes(path.read_bytes() + b'\n')
+        elif kind == 'mutated-request-boolean':
+            mutate_call_request(observations, 'active-original:query-opted',
+                                lambda frame: frame['params']['arguments'].update(
+                                    {'supersession': False}))
+            save(observation_path, observations)
+        elif kind == 'mutated-request-query':
+            mutate_call_request(observations, 'no-history:query-omitted',
+                                lambda frame: frame['params']['arguments'].update(
+                                    {'query': 'replacedterm'}))
+            save(observation_path, observations)
+        elif kind == 'mutated-request-tool':
+            mutate_call_request(observations, 'no-history:status',
+                                lambda frame: frame['params'].update({'name': 'mousa_query'}))
+            save(observation_path, observations)
+        elif kind == 'mutated-request-method':
+            mutate_call_request(observations, 'no-history:query-false',
+                                lambda frame: frame.update({'method': 'tools/list'}))
+            save(observation_path, observations)
+        elif kind == 'mutated-raw-frame':
+            mutate_raw_request(observations, 'no-history:boundary-duplicate',
+                               b'"query":"oldterm"', b'"query":"newterm"')
+            save(observation_path, observations)
         elif kind in ('wrong-count-expectation', 'wrong-default-property-set', 'false-assertion',
                       'omitted-assertion'):
             path = directory / 'assertions.json'
@@ -1538,18 +1662,65 @@ def negative_controls(args):
         # Recompute the manifest so verification must detect the semantic fault rather than
         # relying only on a stale file checksum.
         make_manifest(directory)
+        detector = request_mutations.get(kind)
         try:
             verify(directory)
         except (ValueError, KeyError, TypeError, IndexError, OSError,
                 sqlite3.Error) as error:
-            results.append({'control': kind, 'rejected': True,
-                            'reason': type(error).__name__ + ': ' + str(error)})
+            reason = type(error).__name__ + ': ' + str(error)
+            record = {'control': kind, 'reason': reason,
+                      'rejected': detector is None or 'changed:' + detector in reason}
+            if detector is not None:
+                record['expected_detector'] = detector
+            results.append(record)
         else:
-            results.append({'control': kind, 'rejected': False})
+            results.append({'control': kind, 'rejected': False,
+                            'reason': 'verification accepted the mutated archive'})
     save(args.output / 'negative-controls.json', results)
     if not all(row['rejected'] for row in results):
         raise ValueError('negative control was accepted')
     return 0
+
+
+def self_check(args):
+    """Focused stdlib regression for the runner's own comparison helpers.
+
+    One matching branch is accepted; zero and two matching branches are rejected for the
+    oneOf reason, and strict type matching and closed-object enforcement stay in force.
+    This is the runner's own boundary, separate from the archive negative controls that
+    exercise the same code end to end.
+    """
+    overlapping = {'oneOf': [{'type': 'integer'}, {'type': 'number'}]}
+    cases = [
+        ('oneof-single-branch-matches',
+         {'oneOf': [{'type': 'string'}, {'type': 'integer'}]}, 1,
+         lambda problems: problems == []),
+        ('oneof-no-branch-matches',
+         {'oneOf': [{'type': 'string'}]}, 1,
+         lambda problems: len(problems) == 1 and 'oneOf' in problems[0]
+         and '0 matched' in problems[0]),
+        ('oneof-overlapping-branches-rejected', overlapping, 1,
+         lambda problems: len(problems) == 1 and 'oneOf' in problems[0]
+         and '2 matched' in problems[0]),
+        ('oneof-boolean-is-not-a-number',
+         {'oneOf': [{'type': 'number'}]}, True,
+         lambda problems: len(problems) == 1 and 'oneOf' in problems[0]
+         and '0 matched' in problems[0]),
+        ('closed-object-still-enforced',
+         {'type': 'object', 'properties': {'a': {'type': 'integer'}},
+          'additionalProperties': False}, {'a': 1, 'b': 2},
+         lambda problems: problems == ['$.b: undeclared property']),
+    ]
+    records = []
+    for ident, schema, value, check in cases:
+        problems = schema_violations(schema, value)
+        records.append({'id': ident, 'observed': problems, 'passed': bool(check(problems))})
+    save(args.output, {'schema': 'mousa.mcp_query_supersession_self_check.v1',
+                       'cases': records})
+    for record in records:
+        print(('PASS ' if record['passed'] else 'FAIL ') + record['id'] + ' '
+              + json.dumps(record['observed']))
+    return 0 if all(record['passed'] for record in records) else 2
 
 
 def deep_selections(directory):
@@ -1608,7 +1779,8 @@ def package(args):
     for name, source in (('expectations.json', args.expectations),
                          ('product-pin.json', args.pin),
                          ('preparation-verification.json', args.preparation),
-                         ('baseline-discovery.json', args.baseline)):
+                         ('baseline-discovery.json', args.baseline),
+                         ('self-check.json', args.self_check)):
         shutil.copyfile(source, args.output / name)
     save(args.output / 'archive-members.json',
          {'schema': 'mousa.archive_members.v1', 'archives': members})
@@ -1645,6 +1817,8 @@ def main():
     sub = modes.add_parser('negative-controls')
     sub.add_argument('capture', type=Path)
     sub.add_argument('--output', type=Path, required=True)
+    sub = modes.add_parser('self-check')
+    sub.add_argument('--output', type=Path, required=True)
     sub = modes.add_parser('discovery')
     sub.add_argument('--binary', type=Path, required=True)
     sub.add_argument('--label', required=True)
@@ -1662,6 +1836,7 @@ def main():
     sub.add_argument('--preparation', type=Path, required=True)
     sub.add_argument('--baseline', type=Path, required=True)
     sub.add_argument('--commands', type=Path, required=True)
+    sub.add_argument('--self-check', type=Path, required=True)
     args = parser.parse_args()
     try:
         if args.mode in ('pilot', 'capture', 'forbidden-write'):
@@ -1686,6 +1861,8 @@ def main():
                                'selections': session.selections})
         elif args.mode == 'negative-controls':
             return negative_controls(args)
+        elif args.mode == 'self-check':
+            return self_check(args)
         elif args.mode == 'discovery':
             return discovery(args)
         else:

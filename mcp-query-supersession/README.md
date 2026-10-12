@@ -2,8 +2,12 @@
 
 Status: pilot, capture and fresh-store reproduction pass against the public product pin
 recorded in the result directory
-[`results/2026-10-11-mcp-query-supersession`](../results/2026-10-11-mcp-query-supersession).
-That pin is the head of product PR 69 and is not claimed merged or available on main.
+[`results/2026-10-12-mcp-query-supersession`](../results/2026-10-12-mcp-query-supersession).
+That pin is the head of product PR 69 and is not claimed merged or available on main. The
+earlier [`results/2026-10-11-mcp-query-supersession`](../results/2026-10-11-mcp-query-supersession)
+directory is the first revision of this capture, retained unchanged with a dated note: its
+runner compared recorded requests with their own match metadata only, so it is replayed with
+the runner copy inside that archive.
 
 `run.py` uses Python 3.9 or later and the standard library only. It speaks
 newline-delimited JSON-RPC 2.0 over stdio to an explicitly supplied Mousa executable -
@@ -50,13 +54,17 @@ difference rather than claiming the decoder case.
 
 ## Discovery and the pre-query baseline
 
-Every session records `tools/list`. The runner compares the three other tool definitions
-byte for byte with the frozen pre-query baseline in `protocol.json`, which was captured
-from a second binary built at the accepted pre-query public commit, and it compares the
-`mousa_query` definition against the same baseline through a structural delta that must
-equal the frozen delta (one added input property `supersession` and one added declared
-result property `supersession_excluded`, nothing removed or changed). The raw baseline
-receipt is published separately in the result directory as `baseline-discovery.json`.
+Every session records `tools/list`. The runner compares the `mousa_sync`, `mousa_status`
+and `mousa_trail` definitions, as complete parsed JSON definitions, with the frozen
+pre-query baseline in `protocol.json`, which was captured from a second binary built at the
+accepted pre-query public commit, and it compares the `mousa_query` definition against the
+same baseline through a structural delta that must equal the frozen delta (one added input
+property `supersession` and one added declared result property `supersession_excluded`,
+nothing removed or changed). Equality here is over the parsed definitions, not over the raw
+response bytes: each session's exact `tools/list` request and response bytes are recorded
+and retained as receipts, and they differ from the separate baseline session's bytes. The
+raw baseline receipt is published separately in the result directory as
+`baseline-discovery.json`.
 
 ## Fixture preparation and identity construction
 
@@ -87,15 +95,22 @@ main-file hash or a physical sidecar-integrity claim, and it does not detect a t
 write rolled back before the after snapshot.
 
 Each step records symbolic argv, complete request and response bytes with SHA-256,
-base64 and text, the actual exit and the step's own fingerprints. `verify` re-checks
-membership, digests, the committed runner and protocol bytes, the input hashes, the
-product pin, the recorded companion head and tree, stream integrity and the regenerated
-assertions: it replays the recorded step stream offline and requires the regenerated
-assertions and selections to equal the recorded ones and, for a capture, all assertions
-to pass. Assertions record the observed value, the expected value and the outcome; a
-false boolean stays false and fails. Omitting or editing an assertion, changing a
-command, damaging the build receipt or forging a successful response is rejected even
-when a negative control recomputes the member manifest.
+base64 and text, the actual exit and the step's own fingerprints. Every step also carries
+the schedule it was produced from, and each recorded receipt is asserted back against that
+schedule: a prepared command's argv and stdin, a protocol or notification frame's JSON-RPC
+version, method and parameters, a tool call's `tools/call` method, tool name and argument
+object, and the response identity against the request that produced it. A frame the schedule
+spelled out as raw bytes, including the duplicate-key and trailing-data boundaries, is
+compared as those exact bytes rather than reparsed, so parsing cannot erase the boundary
+under test. `verify` re-checks membership, digests, the committed runner and protocol bytes,
+the input hashes, the product pin, the recorded companion head and tree, stream integrity
+and the regenerated assertions: it replays the recorded step stream offline and requires the
+regenerated assertions and selections to equal the recorded ones and, for a capture, all
+assertions to pass. Assertions record the observed value, the expected value and the
+outcome; a false boolean stays false and fails. Omitting or editing an assertion, changing a
+command, rewriting a recorded request into a neighbouring operation, damaging the build
+receipt or forging a successful response is rejected even when a negative control recomputes
+the member manifest.
 
 This is integrity and internal-consistency checking. It is not a signature, and it does
 not stop a party from fabricating an entire coherent capture and replacing its trusted
@@ -119,21 +134,27 @@ python3 "$RUNNER" capture --source "$PRODUCT" --binary "$BINARY" --pin "$PIN" \
   --expectations mcp-query-supersession/expectations.json --output /tmp/mcp-reproduction
 python3 "$RUNNER" verify /tmp/mcp-reproduction
 python3 "$RUNNER" negative-controls /tmp/mcp-capture --output /tmp/mcp-negatives
+python3 "$RUNNER" self-check --output /tmp/mcp-self-check.json
 python3 "$RUNNER" forbidden-write --source "$PRODUCT" --binary "$BINARY" --pin "$PIN" \
   --output /tmp/mcp-forbidden
 ```
 
-Expected exits are 0 for a passing pilot, capture, reproduction, verify, freeze and
-negative-controls run, 1 for the injected forbidden-write capture, and 2 when verifying
-that failed capture or violating a precondition. `forbidden-write` runs the same schedule
-with one external table injection inside one read-only bracket, so the bracket's
+Expected exits are 0 for a passing pilot, capture, reproduction, verify, freeze,
+negative-controls and self-check run, 1 for the injected forbidden-write capture, and 2 when
+verifying that failed capture or violating a precondition. `forbidden-write` runs the same
+schedule with one external table injection inside one read-only bracket, so the bracket's
 `unchanged-all-tables` assertion is false; the injected table is dropped again afterwards
 so a later startup failure cannot become the detector's failure cause. `negative-controls`
 produces deliberately mutated copies - a damaged frozen input, a wrong count expectation,
 a wrong default property set, an inverted assertion, an omitted assertion, an undeclared
 response field, a forged fingerprint, a fabricated success after damage, a failed build
-receipt and a damaged build stream - and requires `verify` to reject each one for its named
-reason.
+receipt, a damaged build stream and five request rewrites (a flipped boolean, a replaced
+query, a replaced tool name, a replaced method and a rewritten raw boundary frame) - and
+requires `verify` to reject each one for its named reason. Each request rewrite leaves the
+scheduled match metadata, the observed response and every other receipt as captured and must
+be rejected by the request-binding assertion recorded as its expected detector.
+`self-check` runs the runner's own focused standard-library regressions, including exactly
+one matching `oneOf` branch, and exits 2 on a failure.
 
 `package` assembles the published result directory from the capture directories plus the
 preparation, baseline and controller-command receipts; `manifest` rewrites one archive

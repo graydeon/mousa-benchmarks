@@ -1,5 +1,19 @@
 # MCP query supersession acceptance
 
+Superseded 2026-10-12 by
+[`results/2026-10-12-mcp-query-supersession`](../2026-10-12-mcp-query-supersession), which
+binds each recorded request to the scheduled operation and rejects an overlapping `oneOf`.
+This directory is the first revision of the same capture: its archives, counts and receipts
+are retained unchanged as that revision's observation. Its runner compared a recorded
+request only with its own match metadata, so a request rewritten to the opposite value was
+accepted after the stream and manifest were recomputed; it did not detect that defect, and
+its `oneOf` check accepted value `1` against overlapping `integer` and `number` branches.
+This archive's own `run.py` and `protocol.json` members are therefore the bytes to replay it
+with — the committed runner has changed since — for example
+`python3 <extract>/capture/run.py verify <extract>/capture`. Two discovery-comparison
+sentences below are corrected to state what that runner actually compared, parsed JSON
+definitions rather than raw bytes; the rest describes that revision as it was captured.
+
 Synthetic stdio MCP client acceptance against [Mousa PR 69](https://github.com/graydeon/mousa/pull/69),
 not a main-branch, native-CLI or performance result. Product public commit
 `7ae0d8768e7cd203c48478412b493e1255c97b11`, tree `2b8b14f76e0907f3ca3fd5dc8c33934567e61d14`.
@@ -20,9 +34,9 @@ relabeled as the later publication commit.
 | Check | Actual result |
 |---|---|
 | Passing pilot, complete replay and freeze | Exit 0; only actual observed packet/evidence/candidate selections frozen (39 cases) |
-| Capture and fresh independent-store reproduction | Both exit 0; each contains 129 recorded steps - 40 `tools/call`, 21 protocol requests, 11 notifications, 11 server starts and stops, 23 native preparation commands and one external damage statement - 2307 2307 assertions, 0 failed assertions |
+| Capture and fresh independent-store reproduction | Both exit 0; each contains 129 recorded steps - 40 `tools/call`, 21 protocol requests, 11 notifications, 11 server starts and stops, 23 native preparation commands and one external damage statement - 2307 assertions, 0 failed assertions |
 | Complete replay of both captures | Both exit 0 |
-| Discovery | In every one of the 11 sessions the four tools are discovered, `mousa_sync`, `mousa_status` and `mousa_trail` are byte-identical to the frozen pre-query baseline, and the `mousa_query` definition delta is exactly the two frozen additions with nothing removed or changed |
+| Discovery | In every one of the 11 sessions the four tools are discovered, `mousa_sync`, `mousa_status` and `mousa_trail` are equal, as complete parsed JSON definitions, to the frozen pre-query baseline, and the `mousa_query` definition delta is exactly the two frozen additions with nothing removed or changed |
 | Omitted versus explicit false | Stable-equal in every scenario: same result property set (20 keys), same packet, same released evidence, no `supersession_excluded`, no `packing_policy` |
 | Opted-in with no activation history | `supersession_excluded` is `0`, `packing_policy` is `original`, all three items are released, and the packet identity equals the default query's |
 | Active declaration, `original` packing | Withheld candidate is exactly the pinned predecessor, count `1`, only the other two items released; the same call under a 28-byte budget releases the byte-equal survivor and reports `budget_omitted: 0`, so the withheld text consumed no budget |
@@ -67,7 +81,9 @@ the accepted pre-query public commit `015dc1aa9f054b4b809a5d893b023afc4e378ba1` 
 `63a1dd4156644e29904365870b4568c4847e9478`, executable
 `19f122f9ca29e3cb0de29bc87a3f7ebca89668b0cd8a456328eaa60858618cf4`) answering
 `initialize` and `tools/list` on the same fixture, with its own sync, request and response
-bytes. Its three unchanged tool definitions are compared byte for byte; the `mousa_query`
+bytes. Its three unchanged tool definitions are compared as complete parsed JSON definitions;
+the raw baseline bytes and each session's own `tools/list` bytes are retained in their
+receipts. The `mousa_query`
 delta is frozen in the protocol and asserted in every session rather than presented as an
 observation of the tested binary.
 
