@@ -1,0 +1,16 @@
+{
+  "schema": "mousa.request_schedule_regression.v1",
+  "test_sha256": "e2fb6a8701c7d595f61c031909b8cc31a813168ffa5e6a443dbbcc6fc899461c",
+  "before_commit": "d38d3edc6c1e5327fef134ef0926878bb2dfe8d5",
+  "after_commit": "7dc1e85abe2c9cffce17415301eadcf00d3d1e7c",
+  "before_exit": 1,
+  "before_failed_subtests": 3,
+  "after_exit": 0,
+  "tests": 2,
+  "substitutions": [
+    "true -> 1",
+    "false -> 0",
+    "4096 -> 4096.0"
+  ],
+  "positive_control": "object property order"
+}

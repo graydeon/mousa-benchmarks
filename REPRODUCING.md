@@ -100,7 +100,7 @@ Historical result bytes and the shared archive verifier remain unchanged.
 ## MCP query supersession protocol
 
 The [MCP query supersession protocol](mcp-query-supersession/README.md) and its
-[archive](results/2026-10-12-mcp-query-supersession-strict-binding) pin stdio MCP client
+[archive](results/2026-10-12-mcp-query-supersession-schedule-binding) pin stdio MCP client
 observations against [Mousa PR69](https://github.com/graydeon/mousa/pull/69) public head
 `7ae0d8768e7cd203c48478412b493e1255c97b11` (tree
 `2b8b14f76e0907f3ca3fd5dc8c33934567e61d14`), not main.
@@ -111,7 +111,7 @@ baseline are committed. Keep new output paths outside clean product and companio
 ```sh
 python3 mcp-query-supersession/run.py capture \
   --source "$PRODUCT" --binary "$BINARY" \
-  --pin results/2026-10-12-mcp-query-supersession-strict-binding/product-pin.json \
+  --pin results/2026-10-12-mcp-query-supersession-schedule-binding/product-pin.json \
   --expectations mcp-query-supersession/expectations.json \
   --output /tmp/mcp-query-new
 python3 mcp-query-supersession/run.py verify /tmp/mcp-query-new
