@@ -1,14 +1,16 @@
 # MCP query supersession acceptance
 
 Superseded 2026-10-12 by
-[`results/2026-10-12-mcp-query-supersession`](../2026-10-12-mcp-query-supersession), which
-binds each recorded request to the scheduled operation and rejects an overlapping `oneOf`.
-This directory is the first revision of the same capture: its archives, counts and receipts
-are retained unchanged as that revision's observation. Its runner compared a recorded
-request only with its own match metadata, so a request rewritten to the opposite value was
-accepted after the stream and manifest were recomputed; it did not detect that defect, and
-its `oneOf` check accepted value `1` against overlapping `integer` and `number` branches.
-This archive's own `run.py` and `protocol.json` members are therefore the bytes to replay it
+[`results/2026-10-12-mcp-query-supersession-strict-binding`](../2026-10-12-mcp-query-supersession-strict-binding),
+which parses every generated frame strictly and compares values with their JSON types preserved.
+This directory is the first revision of the same capture: its archives, counts and receipts are
+retained unchanged as that revision's observation. Its runner compared a recorded request only
+with its own match metadata, so a request rewritten to the opposite value was accepted after the
+stream and manifest were recomputed; it compared values with Python object equality, so a nested
+`true` rewritten as `1` compared equal; and it parsed generated frames with the standard decoder,
+so a repeated object key kept its last value. It detected none of those, and its `oneOf` check
+accepted value `1` against overlapping `integer` and `number` branches. This archive's own
+`run.py` and `protocol.json` members are therefore the bytes to replay it
 with — the committed runner has changed since — for example
 `python3 <extract>/capture/run.py verify <extract>/capture`. Two discovery-comparison
 sentences below are corrected to state what that runner actually compared, parsed JSON

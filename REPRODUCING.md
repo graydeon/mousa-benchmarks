@@ -100,8 +100,8 @@ Historical result bytes and the shared archive verifier remain unchanged.
 ## MCP query supersession protocol
 
 The [MCP query supersession protocol](mcp-query-supersession/README.md) and its
-[archive](results/2026-10-12-mcp-query-supersession) pin stdio MCP client observations
-against [Mousa PR69](https://github.com/graydeon/mousa/pull/69) public head
+[archive](results/2026-10-12-mcp-query-supersession-strict-binding) pin stdio MCP client
+observations against [Mousa PR69](https://github.com/graydeon/mousa/pull/69) public head
 `7ae0d8768e7cd203c48478412b493e1255c97b11` (tree
 `2b8b14f76e0907f3ca3fd5dc8c33934567e61d14`), not main.
 Use its exact public head/tree and the executable/build receipt in `product-pin.json`.
@@ -111,7 +111,7 @@ baseline are committed. Keep new output paths outside clean product and companio
 ```sh
 python3 mcp-query-supersession/run.py capture \
   --source "$PRODUCT" --binary "$BINARY" \
-  --pin results/2026-10-12-mcp-query-supersession/product-pin.json \
+  --pin results/2026-10-12-mcp-query-supersession-strict-binding/product-pin.json \
   --expectations mcp-query-supersession/expectations.json \
   --output /tmp/mcp-query-new
 python3 mcp-query-supersession/run.py verify /tmp/mcp-query-new
@@ -130,9 +130,15 @@ values, not over raw bytes: every session's exact request and response bytes are
 as its own receipt. Each receipt is asserted back against the schedule that produced it, so
 a recorded request must be the scheduled method, tool name and argument object, a raw
 boundary frame must be its exact scheduled bytes, and a prepared command must carry its
-scheduled argv and stdin. The [first revision
-archive](results/2026-10-11-mcp-query-supersession) predates that binding and is replayed
-with the runner copy inside it.
+scheduled argv and stdin. A generated frame is parsed with a decoder that reports a repeated
+object key at any depth, and the comparisons that decide whether a replay is accepted are
+made over canonical JSON, so a nested boolean is not a number, an integer is not a float and a
+repeated key cannot hide behind the last of its values. The [second
+revision](results/2026-10-12-mcp-query-supersession) and the [first
+revision](results/2026-10-11-mcp-query-supersession) archives predate parts of that binding and
+are replayed with the runner copy inside each of them; the accepted directory stores its four
+observations as complete archives and the control receipt list, and regenerates each mutated
+copy from the stored capture.
 
 Expected packet, evidence and candidate values were frozen only after a verified actual
 pilot. Fresh request, decision and trail identities and the recorded trail's own identities

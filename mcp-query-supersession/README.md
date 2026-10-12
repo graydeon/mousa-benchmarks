@@ -2,12 +2,15 @@
 
 Status: pilot, capture and fresh-store reproduction pass against the public product pin
 recorded in the result directory
-[`results/2026-10-12-mcp-query-supersession`](../results/2026-10-12-mcp-query-supersession).
-That pin is the head of product PR 69 and is not claimed merged or available on main. The
-earlier [`results/2026-10-11-mcp-query-supersession`](../results/2026-10-11-mcp-query-supersession)
-directory is the first revision of this capture, retained unchanged with a dated note: its
-runner compared recorded requests with their own match metadata only, so it is replayed with
-the runner copy inside that archive.
+[`results/2026-10-12-mcp-query-supersession-strict-binding`](../results/2026-10-12-mcp-query-supersession-strict-binding).
+That pin is the head of product PR 69 and is not claimed merged or available on main. The two
+earlier directories, [`results/2026-10-12-mcp-query-supersession`](../results/2026-10-12-mcp-query-supersession)
+and [`results/2026-10-11-mcp-query-supersession`](../results/2026-10-11-mcp-query-supersession),
+are retained unchanged with dated notes: the first compared recorded requests with their own
+match metadata only, and both compared values with Python object equality and parsed generated
+frames with the standard decoder, so a nested `true` rewritten as `1` compared equal and a
+repeated object key kept its last value. Each of those archives is replayed with the runner copy
+inside it.
 
 `run.py` uses Python 3.9 or later and the standard library only. It speaks
 newline-delimited JSON-RPC 2.0 over stdio to an explicitly supplied Mousa executable -
@@ -99,18 +102,25 @@ base64 and text, the actual exit and the step's own fingerprints. Every step als
 the schedule it was produced from, and each recorded receipt is asserted back against that
 schedule: a prepared command's argv and stdin, a protocol or notification frame's JSON-RPC
 version, method and parameters, a tool call's `tools/call` method, tool name and argument
-object, and the response identity against the request that produced it. A frame the schedule
-spelled out as raw bytes, including the duplicate-key and trailing-data boundaries, is
-compared as those exact bytes rather than reparsed, so parsing cannot erase the boundary
-under test. `verify` re-checks membership, digests, the committed runner and protocol bytes,
-the input hashes, the product pin, the recorded companion head and tree, stream integrity
-and the regenerated assertions: it replays the recorded step stream offline and requires the
-regenerated assertions and selections to equal the recorded ones and, for a capture, all
-assertions to pass. Assertions record the observed value, the expected value and the
-outcome; a false boolean stays false and fails. Omitting or editing an assertion, changing a
-command, rewriting a recorded request into a neighbouring operation, damaging the build
-receipt or forging a successful response is rejected even when a negative control recomputes
-the member manifest.
+object, and the response identity against the request that produced it. A generated frame is
+parsed with a strict decoder whose object hook reports a repeated key at any depth, so a
+duplicated argument, tool name or top-level key cannot disappear into the last of its values,
+and its top-level keys must be exactly `jsonrpc`, `id`, `method` and `params` while its
+per-call integer identity stays an integer. A frame the schedule spelled out as raw bytes,
+including the duplicate-key and trailing-data boundaries, is compared as those exact bytes
+rather than reparsed, so parsing cannot erase the boundary under test. Comparisons that decide
+whether a replay is accepted - every reconstructed assertion, the assertion list and the
+selections - are made over canonical JSON, so a nested `true` is not `1`, `false` is not `0`,
+`4096` is not `4096.0`, `null` is not `"null"`, a container type is not another, and object
+property order stays irrelevant. `verify` re-checks membership, digests, the committed runner
+and protocol bytes, the input hashes, the product pin, the recorded companion head and tree,
+stream integrity and the regenerated assertions: it replays the recorded step stream offline
+and requires the regenerated assertions and selections to equal the recorded ones and, for a
+capture, all assertions to pass. Assertions record the observed value, the expected value and
+the outcome; a false boolean stays false and fails. Omitting or editing an assertion, changing a
+command, rewriting a recorded request into a neighbouring operation, changing a recorded JSON
+type, repeating a key inside a generated frame, damaging the build receipt or forging a
+successful response is rejected even when a negative control recomputes the member manifest.
 
 This is integrity and internal-consistency checking. It is not a signature, and it does
 not stop a party from fabricating an entire coherent capture and replacing its trusted
@@ -148,18 +158,28 @@ so a later startup failure cannot become the detector's failure cause. `negative
 produces deliberately mutated copies - a damaged frozen input, a wrong count expectation,
 a wrong default property set, an inverted assertion, an omitted assertion, an undeclared
 response field, a forged fingerprint, a fabricated success after damage, a failed build
-receipt, a damaged build stream and five request rewrites (a flipped boolean, a replaced
-query, a replaced tool name, a replaced method and a rewritten raw boundary frame) - and
-requires `verify` to reject each one for its named reason. Each request rewrite leaves the
-scheduled match metadata, the observed response and every other receipt as captured and must
-be rejected by the request-binding assertion recorded as its expected detector.
-`self-check` runs the runner's own focused standard-library regressions, including exactly
-one matching `oneOf` branch, and exits 2 on a failure.
+receipt, a damaged build stream and ten request rewrites - and requires `verify` to reject
+each one for its named reason. The ten rewrites are a flipped boolean, `true` as `1`, `false`
+as `0`, `4096` as `4096.0`, a repeated `supersession` key inside `params.arguments`, a
+repeated top-level `method` key, a replaced query, a replaced tool name, a replaced method
+and a rewritten raw boundary frame. Each request rewrite leaves the scheduled match metadata,
+the observed response and every other receipt as captured and must be rejected by the
+binding assertion recorded as its expected detector, which is checked as an exact entry of
+the reported difference list rather than as a substring.
+`self-check` runs the runner's own focused standard-library regressions - exactly one
+matching `oneOf` branch, the closed-object and type rules, the canonical-JSON type cases and
+a repeated key reported at the top level and inside a nested argument object - and exits 2 on
+a failure.
 
 `package` assembles the published result directory from the capture directories plus the
-preparation, baseline and controller-command receipts; `manifest` rewrites one archive
-directory's member manifest. The result directory's `archive-members.json` identifies
-every compressed member and `manifest.json` every outer file.
+preparation, baseline, controller-command and self-check receipts; it stores the four
+observations as complete archives and the control receipt list, and refuses a control list
+that does not name every control exactly once or records any of them as accepted. The mutated
+copies themselves are not stored: each is a full copy of one capture, twenty-four of them
+measure above the publication bound, and `negative-controls` regenerates every copy from the
+stored capture deterministically. `manifest` rewrites one archive directory's member manifest.
+The result directory's `archive-members.json` identifies every compressed member and
+`manifest.json` every outer file.
 
 For offline replay of a published archive, extract it into a new directory and pass the
 extracted capture directory to `verify`.

@@ -1,5 +1,15 @@
 # MCP query supersession acceptance
 
+Superseded 2026-10-12 by
+[`results/2026-10-12-mcp-query-supersession-strict-binding`](../2026-10-12-mcp-query-supersession-strict-binding).
+This directory is the second revision of the same capture: its archives, counts and receipts are
+retained unchanged as that revision's observation. Its runner bound every recorded receipt to the
+scheduled operation and rejected overlapping `oneOf` branches, but it compared values with Python
+object equality, so a nested `true` rewritten as `1` compared equal, and it parsed generated frames
+with the standard decoder, so a repeated object key kept its last value: it detected neither. This
+archive's own `run.py` and `protocol.json` members are the bytes to replay it with, for example
+`python3 <extract>/capture/run.py verify <extract>/capture`.
+
 Synthetic stdio MCP client acceptance against [Mousa PR 69](https://github.com/graydeon/mousa/pull/69),
 not a main-branch, native-CLI or performance result. Product public commit
 `7ae0d8768e7cd203c48478412b493e1255c97b11`, tree `2b8b14f76e0907f3ca3fd5dc8c33934567e61d14`.

@@ -13,9 +13,10 @@ Modes:
     pilot      run the schedule without frozen expectations; only a passing pilot freezes
     freeze     verify a passing pilot and write its observed selections as expectations
     capture    run the schedule against frozen expectations; exit 1 on a false assertion
-    verify     re-check an extracted capture: membership, wire integrity, provenance and
-               regenerated assertions
-    negative-controls  mutate copies of a capture; every copy must be rejected
+    verify     re-check an extracted capture: membership, wire integrity, provenance, the
+               strict frame binding and the regenerated assertions
+    negative-controls  mutate copies of a capture; every copy must be rejected for its
+               named detector or its own recorded reason
     self-check  focused stdlib regression for the runner's own comparison helpers
     forbidden-write    the same schedule with one injected write inside a read bracket
     manifest   rewrite one archive directory's member manifest
@@ -60,6 +61,27 @@ VOLATILE_QUERY = ('request_id', 'decision_id', 'trail_id', 'evaluated_at_usec', 
 VOLATILE_TRAIL = ('authorization_decision_id', 'trail_id')
 RECORDED_TRAIL_IDENTITIES = ('id', 'request_id', 'decision_id')
 
+# Every deliberate mutation of an accepted capture, in control order. Each request rewrite
+# names the binding assertion that must be the one to reject it; the other controls are
+# rejected for their own recorded reason instead.
+REQUEST_MUTATIONS = {
+    'mutated-request-boolean': 'active-original:query-opted:request-params',
+    'mutated-request-numeric-boolean': 'active-original:query-opted:request-params',
+    'mutated-request-zero-for-false': 'no-history:query-false:request-params',
+    'mutated-request-integer-as-float': 'active-original:query-opted:request-params',
+    'mutated-request-duplicate-argument': 'active-original:query-opted:request-no-repeated-keys',
+    'mutated-request-duplicate-toplevel': 'no-history:query-omitted:request-no-repeated-keys',
+    'mutated-request-query': 'no-history:query-omitted:request-params',
+    'mutated-request-tool': 'no-history:status:request-params',
+    'mutated-request-method': 'no-history:query-false:request-method',
+    'mutated-raw-frame': 'no-history:boundary-duplicate:request-scheduled-bytes',
+}
+CONTROL_KINDS = ('damaged-input', 'wrong-count-expectation', 'wrong-default-property-set',
+                 'false-assertion', 'omitted-assertion', 'undeclared-response-field',
+                 'forbidden-write-fingerprint', 'fabricated-success-after-damage', 'failed-build',
+                 'damaged-build-stream', *REQUEST_MUTATIONS)
+CONTROL_NAMES = ('actual-false-condition', *CONTROL_KINDS)
+
 
 def sha(data):
     return hashlib.sha256(data).hexdigest()
@@ -76,6 +98,48 @@ def save(path, value):
 def stream(data):
     return {'bytes': len(data), 'sha256': sha(data), 'base64': base64.b64encode(data).decode(),
             'text': data.decode('utf-8', 'replace')}
+
+
+def canonical(value):
+    """Canonical JSON text for one value: sorted object keys, no whitespace."""
+    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+
+
+def same_json(left, right):
+    """JSON equality that keeps types distinct at every depth.
+
+    Python's `==` treats `True` and `1` (and `1` and `1.0`) as equal, so a nested boolean
+    rewritten as a number, or an integer rewritten as a float, would compare equal and the
+    difference would disappear from an assertion. Comparing canonical encodings keeps
+    boolean, number, string, null, array and object distinct at every depth; sorting object
+    keys keeps property order irrelevant, the way the JSON definitions compared here are
+    defined.
+    """
+    return canonical(left) == canonical(right)
+
+
+def strict_json(text):
+    """Parse one JSON text, reporting every object that repeats a key at any depth.
+
+    `json.loads` keeps the last of two identical object keys without reporting it, so a
+    duplicated tool name or argument would disappear before any comparison. The object hook
+    runs for every object the frame contains, so a repeated key inside `params.arguments` is
+    reported exactly like one at the frame's top level.
+    """
+    repeated = []
+
+    def hook(pairs):
+        seen = set()
+        for name, _ in pairs:
+            if name in seen:
+                repeated.append(name)
+            seen.add(name)
+        return dict(pairs)
+
+    try:
+        return json.loads(text, object_pairs_hook=hook), repeated
+    except ValueError:
+        return None, repeated
 
 
 def load_protocol(root=ROOT):
@@ -181,7 +245,7 @@ def json_delta(before, after, path=''):
                 added += a
                 removed += r
                 changed += c
-    elif before != after:
+    elif not same_json(before, after):
         changed.append(path)
     return added, removed, changed
 
@@ -394,7 +458,7 @@ class Session:
     # -- assertions ---------------------------------------------------------------
     def expect(self, ident, expected, observed):
         record = {'id': ident, 'expected': expected, 'observed': observed,
-                  'passed': type(expected) is type(observed) and expected == observed}
+                  'passed': same_json(expected, observed)}
         self.assertions.append(record)
         return record
 
@@ -447,27 +511,32 @@ class Session:
     def bind_frame(self, name, record, match, kind):
         """Bind one recorded JSON-RPC frame to the scheduled method and parameters.
 
-        A frame the schedule spelled out as raw bytes is compared as those exact bytes:
-        a duplicate key or trailing data is the boundary under test, and reparsing would
-        erase it. A generated frame is parsed and compared field by field, so a scheduled
-        method, tool name or argument object cannot be replaced by a neighbouring one.
+        A frame the schedule spelled out as raw bytes is compared as those exact bytes: a
+        duplicate key or trailing data is the boundary under test, and reparsing would erase
+        it. A generated frame is parsed strictly and compared field by field, so a scheduled
+        method, tool name or argument object cannot be replaced by a neighbouring one, and a
+        repeated key cannot disappear into the last of its values.
         """
         text = record['request']['text']
         if match.get('raw') is not None:
             self.expect(name + ':request-scheduled-bytes', match['raw'] + '\n', text)
             return
-        try:
-            frame = json.loads(text)
-        except ValueError:
-            frame = None
+        frame, repeated = strict_json(text)
+        self.expect(name + ':request-no-repeated-keys', [], repeated)
         self.yes(name + ':request-json-object', isinstance(frame, dict))
         if not isinstance(frame, dict):
             return
         self.expect(name + ':request-protocol', '2.0', frame.get('jsonrpc'))
+        keys = {'jsonrpc', 'method'}
         if kind == 'notify':
+            self.expect(name + ':request-keys', sorted(keys), sorted(frame))
             self.expect(name + ':request-method', match['method'], frame.get('method'))
             self.yes(name + ':request-is-notification', 'id' not in frame)
             return
+        keys.add('id')
+        self.expect(name + ':request-keys', sorted(keys | ({'params'} if kind == 'call'
+                                                          or match['params'] is not None
+                                                          else set())), sorted(frame))
         self.yes(name + ':request-id-is-integer', isinstance(frame.get('id'), int)
                  and not isinstance(frame.get('id'), bool))
         if kind == 'call':
@@ -1391,10 +1460,10 @@ def verify(directory, require_pass=True):
     elif expected_path.exists():
         raise ValueError('unexpected frozen expectations')
     assertions = json.loads((directory / 'assertions.json').read_bytes())
-    if assertions != regenerated.assertions:
+    if not same_json(assertions, regenerated.assertions):
         raise ValueError('omitted or tampered assertion: '
                          + ', '.join(assertion_differences(assertions, regenerated.assertions)))
-    if observed['selections'] != regenerated.selections:
+    if not same_json(observed['selections'], regenerated.selections):
         raise ValueError('omitted or tampered selection')
     if require_pass:
         failed = [record['id'] for record in assertions if not record['passed']]
@@ -1404,7 +1473,12 @@ def verify(directory, require_pass=True):
 
 
 def assertion_differences(recorded, regenerated):
-    """Name the exact assertions a mutated archive trips."""
+    """Name the exact assertions a mutated archive trips.
+
+    A recorded and a regenerated record differ when either side changed any JSON value,
+    including a nested value whose Python `==` would treat `True` as `1`; comparing the
+    records as canonical JSON keeps that difference visible here as well.
+    """
     before = {record['id']: record for record in recorded}
     after = {record['id']: record for record in regenerated}
     differences = []
@@ -1413,7 +1487,7 @@ def assertion_differences(recorded, regenerated):
             differences.append('unrecorded:' + ident)
         elif ident not in after:
             differences.append('omitted:' + ident)
-        elif before[ident] != after[ident]:
+        elif not same_json(before[ident], after[ident]):
             differences.append('changed:' + ident)
     return differences
 
@@ -1540,7 +1614,12 @@ def mutate_call_request(observations, name, change):
 
 
 def mutate_raw_request(observations, name, before, after):
-    """Rewrite the exact bytes of one scheduled raw frame, keeping its match metadata."""
+    """Rewrite the exact bytes of one recorded request, keeping its scheduled match metadata.
+
+    A repeated object key has to survive into the stream verification reads, so a control
+    that duplicates a key edits the recorded bytes rather than reparsing and re-encoding
+    them.
+    """
     step = next(item for item in observations['steps'] if item['name'] == name)
     data = base64.b64decode(step['request']['base64'])
     if before not in data:
@@ -1548,7 +1627,21 @@ def mutate_raw_request(observations, name, before, after):
     step['request'] = stream(data.replace(before, after, 1))
 
 
+def names_detector(reason, detector):
+    """Whether a verification reason names exactly the assertion a control must trip."""
+    _, _, differences = reason.partition('omitted or tampered assertion: ')
+    return ('changed:' + detector) in [part.strip() for part in differences.split(',')]
+
+
 def negative_controls(args):
+    """Mutate one accepted capture twenty times; every copy must be rejected for its reason.
+
+    The result list is the published record of the controls: each entry names the control,
+    its verification reason and, for a request rewrite, the binding assertion that must be
+    the one to reject it. `package` stores that list rather than twenty nearly identical
+    copies of one capture, because the copies measure above the publication bound and this
+    mode regenerates each of them from the stored capture deterministically.
+    """
     verify(args.capture)
     if args.output.exists():
         raise ValueError('negative-control output exists')
@@ -1565,18 +1658,7 @@ def negative_controls(args):
     # Each request mutation rewrites the recorded wire bytes only: the scheduled match
     # metadata, the observed response and every other receipt stay as captured, so the
     # archive can only be rejected by the assertion that binds the wire to the schedule.
-    request_mutations = {
-        'mutated-request-boolean': 'active-original:query-opted:request-params',
-        'mutated-request-query': 'no-history:query-omitted:request-params',
-        'mutated-request-tool': 'no-history:status:request-params',
-        'mutated-request-method': 'no-history:query-false:request-method',
-        'mutated-raw-frame': 'no-history:boundary-duplicate:request-scheduled-bytes',
-    }
-    kinds = ('damaged-input', 'wrong-count-expectation', 'wrong-default-property-set',
-             'false-assertion', 'omitted-assertion', 'undeclared-response-field',
-             'forbidden-write-fingerprint', 'fabricated-success-after-damage', 'failed-build',
-             'damaged-build-stream', *request_mutations)
-    for kind in kinds:
+    for kind in CONTROL_KINDS:
         directory = args.output / kind
         shutil.copytree(args.capture, directory)
         observation_path = directory / 'observed.json'
@@ -1588,6 +1670,31 @@ def negative_controls(args):
             mutate_call_request(observations, 'active-original:query-opted',
                                 lambda frame: frame['params']['arguments'].update(
                                     {'supersession': False}))
+            save(observation_path, observations)
+        elif kind == 'mutated-request-numeric-boolean':
+            mutate_call_request(observations, 'active-original:query-opted',
+                                lambda frame: frame['params']['arguments'].update(
+                                    {'supersession': 1}))
+            save(observation_path, observations)
+        elif kind == 'mutated-request-zero-for-false':
+            mutate_call_request(observations, 'no-history:query-false',
+                                lambda frame: frame['params']['arguments'].update(
+                                    {'supersession': 0}))
+            save(observation_path, observations)
+        elif kind == 'mutated-request-integer-as-float':
+            mutate_call_request(observations, 'active-original:query-opted',
+                                lambda frame: frame['params']['arguments'].update(
+                                    {'budget_bytes': 4096.0}))
+            save(observation_path, observations)
+        elif kind == 'mutated-request-duplicate-argument':
+            mutate_raw_request(observations, 'active-original:query-opted',
+                               b'"supersession":true',
+                               b'"supersession":false,"supersession":true')
+            save(observation_path, observations)
+        elif kind == 'mutated-request-duplicate-toplevel':
+            mutate_raw_request(observations, 'no-history:query-omitted',
+                               b'"method":"tools/call"',
+                               b'"method":"tools/call","method":"tools/call"')
             save(observation_path, observations)
         elif kind == 'mutated-request-query':
             mutate_call_request(observations, 'no-history:query-omitted',
@@ -1662,14 +1769,14 @@ def negative_controls(args):
         # Recompute the manifest so verification must detect the semantic fault rather than
         # relying only on a stale file checksum.
         make_manifest(directory)
-        detector = request_mutations.get(kind)
+        detector = REQUEST_MUTATIONS.get(kind)
         try:
             verify(directory)
         except (ValueError, KeyError, TypeError, IndexError, OSError,
                 sqlite3.Error) as error:
             reason = type(error).__name__ + ': ' + str(error)
             record = {'control': kind, 'reason': reason,
-                      'rejected': detector is None or 'changed:' + detector in reason}
+                      'rejected': detector is None or names_detector(reason, detector)}
             if detector is not None:
                 record['expected_detector'] = detector
             results.append(record)
@@ -1686,9 +1793,12 @@ def self_check(args):
     """Focused stdlib regression for the runner's own comparison helpers.
 
     One matching branch is accepted; zero and two matching branches are rejected for the
-    oneOf reason, and strict type matching and closed-object enforcement stay in force.
-    This is the runner's own boundary, separate from the archive negative controls that
-    exercise the same code end to end.
+    oneOf reason, and strict type matching and closed-object enforcement stay in force. The
+    JSON cases pin what the archive comparisons rely on: a nested boolean is not a number, an
+    integer is not a float, a null and a container type are distinct, object property order is
+    irrelevant, and a repeated key is reported at the frame's top level and inside a nested
+    argument object. This is the runner's own boundary, separate from the archive negative
+    controls that exercise the same code end to end.
     """
     overlapping = {'oneOf': [{'type': 'integer'}, {'type': 'number'}]}
     cases = [
@@ -1711,10 +1821,38 @@ def self_check(args):
           'additionalProperties': False}, {'a': 1, 'b': 2},
          lambda problems: problems == ['$.b: undeclared property']),
     ]
+    types = [
+        ('json-true-is-not-one', True, 1, False),
+        ('json-false-is-not-zero', False, 0, False),
+        ('json-integer-is-not-a-float', 4096, 4096.0, False),
+        ('json-null-is-not-a-string', None, 'null', False),
+        ('json-array-is-not-an-object', [], {}, False),
+        ('json-object-order-is-irrelevant', {'a': 1, 'b': [True, None]},
+         {'b': [True, None], 'a': 1}, True),
+        ('json-nested-type-difference-is-visible', {'arguments': {'supersession': True}},
+         {'arguments': {'supersession': 1}}, False),
+    ]
+    frames = [
+        ('strict-json-accepts-a-clean-frame', '{"jsonrpc":"2.0","id":1}',
+         {'jsonrpc': '2.0', 'id': 1}, []),
+        ('strict-json-reports-a-repeated-toplevel-key', '{"jsonrpc":"2.0","jsonrpc":"2.0"}',
+         {'jsonrpc': '2.0'}, ['jsonrpc']),
+        ('strict-json-reports-a-repeated-nested-key',
+         '{"params":{"arguments":{"supersession":false,"supersession":true}}}',
+         {'params': {'arguments': {'supersession': True}}}, ['supersession']),
+        ('strict-json-reports-a-damaged-frame', '{', None, []),
+    ]
     records = []
     for ident, schema, value, check in cases:
         problems = schema_violations(schema, value)
         records.append({'id': ident, 'observed': problems, 'passed': bool(check(problems))})
+    for ident, left, right, same in types:
+        observed = same_json(left, right)
+        records.append({'id': ident, 'observed': observed, 'passed': observed is same})
+    for ident, text, expected, repeated in frames:
+        value, found = strict_json(text)
+        records.append({'id': ident, 'observed': {'value': value, 'repeated': found},
+                        'passed': same_json(value, expected) and found == repeated})
     save(args.output, {'schema': 'mousa.mcp_query_supersession_self_check.v1',
                        'cases': records})
     for record in records:
@@ -1747,6 +1885,15 @@ def archive(directory, archive_path):
 
 
 def package(args):
+    """Assemble the published result directory from the accepted capture directories.
+
+    The four observations are stored as complete archives. The mutated copies are not: each
+    control is a full copy of one capture, so storing all of them measures above the
+    repository's fixed publication bound, and verification regenerates every copy from the
+    stored capture deterministically. The published record of the controls is therefore the
+    receipt list `negative-controls.json`; this function refuses a receipt list that does not
+    name every control exactly once and does not record every one of them as rejected.
+    """
     if args.output.exists():
         raise ValueError('package output exists')
     args.output.mkdir(parents=True)
@@ -1768,9 +1915,10 @@ def package(args):
             'assertions': len(assertions),
             'failed_assertions': [record['id'] for record in assertions if not record['passed']],
             'sessions': [(entry['session'], entry['exit']) for entry in observed['sessions']]}
-    for directory in sorted(path for path in args.negatives.iterdir() if path.is_dir()):
-        archive_path = args.output / ('negative-' + directory.name + '.tar.gz')
-        members[archive_path.name] = archive(directory, archive_path)
+    controls = json.loads((args.negatives / 'negative-controls.json').read_bytes())
+    if ([record['control'] for record in controls] != list(CONTROL_NAMES)
+            or not all(record['rejected'] for record in controls)):
+        raise ValueError('negative-control receipts do not cover every rejected control')
     shutil.copyfile(args.negatives / 'negative-controls.json',
                     args.output / 'negative-controls.json')
     shutil.copyfile(args.commands, args.output / 'commands.json')
@@ -1789,7 +1937,7 @@ def package(args):
     save(args.output / 'summary.json', {'schema': 'mousa.mcp_query_supersession_summary.v1',
                                         'collections': collections,
                                         'capture_and_reproduction_share_stable_selections':
-                                            capture_selections == fresh_selections,
+                                            same_json(capture_selections, fresh_selections),
                                         'stable_selection_cases': len(capture_selections)})
     make_manifest(args.output)
     print('Packaged', len(members), 'archives into', args.output)

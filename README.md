@@ -19,7 +19,7 @@ retrieval-quality or authentication result. The earlier
 PR61's previous head `bbf73a91788aac3aeb29ac0e6c74153d32363f14` is retained unchanged as
 that observation; its 44 frozen selection cases are identical to the corrected pin's.
 
-The [MCP query supersession archive](results/2026-10-12-mcp-query-supersession)
+The [MCP query supersession archive](results/2026-10-12-mcp-query-supersession-strict-binding)
 records independent stdio MCP client acceptance of the query opt-in against
 [Mousa PR69](https://github.com/graydeon/mousa/pull/69) public commit
 `7ae0d8768e7cd203c48478412b493e1255c97b11`, tree `2b8b14f76e0907f3ca3fd5dc8c33934567e61d14`.
@@ -30,9 +30,11 @@ the declared count under both packing policies, budget and duplicate accounting,
 history, deactivation, a withdrawn successor, source denial, damaged activation
 events, restart stability, the strict input boundary and the still-filtered
 `mousa_trail` response. Every recorded receipt is asserted back against the schedule
-that produced it, including each request's method, tool name and argument object and
-the raw bytes of the deliberately unparseable frames, and `oneOf` requires exactly one
-matching branch. That PR is not claimed merged or available on main. It is
+that produced it, including each request's method, tool name and argument object,
+the raw bytes of the deliberately unparseable frames, the absence of any repeated
+object key in a generated frame and the JSON type of every compared value, and
+`oneOf` requires exactly one matching branch. That PR is not claimed merged or
+available on main. It is
 synthetic client-boundary evidence, not semantic, retrieval-quality, performance or
 authentication acceptance, and opted-in trail inspection remains unimplemented.
 
@@ -84,8 +86,9 @@ record workspace configuration. See that run README's dated correction.
 - [results/2026-10-11-native-supersession-enforcement-corrected](results/2026-10-11-native-supersession-enforcement-corrected): paired native acceptance at PR61's corrected public tree, complete bounded captures, the invalid-expression boundary matrix, retained failures and negative controls; no performance claim.
 - [results/2026-10-11-native-supersession-enforcement](results/2026-10-11-native-supersession-enforcement): the earlier pre-correction capture at PR61's previous head, retained unchanged as that observation.
 - [mcp-query-supersession](mcp-query-supersession): independent stdio MCP client runner, frozen protocol, synthetic fixture and pre-query discovery baseline for the query supersession opt-in.
-- [results/2026-10-12-mcp-query-supersession](results/2026-10-12-mcp-query-supersession): stdio MCP client acceptance of the query opt-in at PR69's public tree, with two independent captures, every recorded request bound to its scheduled operation, exactly-one `oneOf` checking, the strict input boundary, restart, damaged-state refusal, forbidden-write and fifteen mutated-archive controls; no performance or semantic claim.
-- [results/2026-10-11-mcp-query-supersession](results/2026-10-11-mcp-query-supersession): the first revision of that capture, retained with a dated note; its runner compared recorded requests with their own match metadata only and its `oneOf` check accepted overlapping branches.
+- [results/2026-10-12-mcp-query-supersession-strict-binding](results/2026-10-12-mcp-query-supersession-strict-binding): stdio MCP client acceptance of the query opt-in at PR69's public tree, with two independent captures, every recorded request bound to its scheduled operation, strict generated-frame parsing that rejects a repeated key at any depth, JSON-type-preserving comparisons, exactly-one `oneOf` checking, the strict input boundary, restart, damaged-state refusal, forbidden-write and twenty mutated-capture controls with the directly recorded false condition; no performance or semantic claim.
+- [results/2026-10-12-mcp-query-supersession](results/2026-10-12-mcp-query-supersession): the second revision of that capture, retained with a dated note; its runner bound requests to the schedule and rejected overlapping branches, but nested `true` compared equal to `1` and a repeated generated key kept its last value.
+- [results/2026-10-11-mcp-query-supersession](results/2026-10-11-mcp-query-supersession): the first revision of that capture, retained with a dated note; its runner compared recorded requests with their own match metadata only, its `oneOf` check accepted overlapping branches, and it shared both later comparison holes.
 - [comparisons/qmd](comparisons/qmd): pinned optional QMD comparison dependencies.
 - [migration.json](migration.json): original Mousa commit, original paths, SHA-256 digests and sizes.
 - [REPRODUCING.md](REPRODUCING.md): execution and provenance requirements.

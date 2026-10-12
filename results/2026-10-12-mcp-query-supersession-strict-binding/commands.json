@@ -1,0 +1,232 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "verify",
+        "<work>/mcp-pilot"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 65,
+      "stdout_sha256": "7adcabeaabb08d2c367f2edb1f59adb83b273bae499f1af23a93ff0f9bbc16b5",
+      "stdout_text": "Verified complete MCP assertions, wire bytes and archive members\n",
+      "step": "verify-pilot"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "freeze",
+        "<work>/mcp-pilot",
+        "--output",
+        "<work>/refreeze.json"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_text": "",
+      "step": "freeze-pilot"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "capture",
+        "--binary",
+        "<binary>",
+        "--source",
+        "<product>",
+        "--pin",
+        "<pin>",
+        "--expectations",
+        "<companion>/mcp-query-supersession/expectations.json",
+        "--output",
+        "<work>/mcp-capture"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_text": "",
+      "step": "capture"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "verify",
+        "<work>/mcp-capture"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 65,
+      "stdout_sha256": "7adcabeaabb08d2c367f2edb1f59adb83b273bae499f1af23a93ff0f9bbc16b5",
+      "stdout_text": "Verified complete MCP assertions, wire bytes and archive members\n",
+      "step": "verify-capture"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "capture",
+        "--binary",
+        "<binary>",
+        "--source",
+        "<product>",
+        "--pin",
+        "<pin>",
+        "--expectations",
+        "<companion>/mcp-query-supersession/expectations.json",
+        "--output",
+        "<work>/mcp-reproduction"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_text": "",
+      "step": "reproduction"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "verify",
+        "<work>/mcp-reproduction"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 65,
+      "stdout_sha256": "7adcabeaabb08d2c367f2edb1f59adb83b273bae499f1af23a93ff0f9bbc16b5",
+      "stdout_text": "Verified complete MCP assertions, wire bytes and archive members\n",
+      "step": "verify-reproduction"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "negative-controls",
+        "<work>/mcp-capture",
+        "--output",
+        "<work>/mcp-negatives"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_text": "",
+      "step": "negative-controls"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "self-check",
+        "--output",
+        "<work>/self-check.json"
+      ],
+      "cwd": "<companion>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 1069,
+      "stdout_sha256": "6f60b5a4d12c3ae9c8ede98e18e061dfb7d57b026f70f78097e27b17d291e0ae",
+      "stdout_text": "PASS oneof-single-branch-matches []\nPASS oneof-no-branch-matches [\"$: oneOf requires exactly one matching branch, 0 matched\"]\nPASS oneof-overlapping-branches-rejected [\"$: oneOf requires exactly one matching branch, 2 matched\"]\nPASS oneof-boolean-is-not-a-number [\"$: oneOf requires exactly one matching branch, 0 matched\"]\nPASS closed-object-still-enforced [\"$.b: undeclared property\"]\nPASS json-true-is-not-one false\nPASS json-false-is-not-zero false\nPASS json-integer-is-not-a-float false\nPASS json-null-is-not-a-string false\nPASS json-array-is-not-an-object false\nPASS json-object-order-is-irrelevant true\nPASS json-nested-type-difference-is-visible false\nPASS strict-json-accepts-a-clean-frame {\"value\": {\"jsonrpc\": \"2.0\", \"id\": 1}, \"repeated\": []}\nPASS strict-json-reports-a-repeated-toplevel-key {\"value\": {\"jsonrpc\": \"2.0\"}, \"repeated\": [\"jsonrpc\"]}\nPASS strict-json-reports-a-repeated-nested-key {\"value\": {\"params\": {\"arguments\": {\"supersession\": true}}}, \"repeated\": [\"supersession\"]}\nPASS strict-json-reports-a-damaged-frame {\"value\": null, \"repeated\": []}\n",
+      "step": "self-check"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "forbidden-write",
+        "--binary",
+        "<binary>",
+        "--source",
+        "<product>",
+        "--pin",
+        "<pin>",
+        "--output",
+        "<work>/mcp-forbidden"
+      ],
+      "cwd": "<companion>",
+      "exit": 1,
+      "expected_exit": 1,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_text": "",
+      "step": "forbidden-write"
+    },
+    {
+      "argv": [
+        "python3",
+        "<runner>",
+        "verify",
+        "<work>/mcp-forbidden"
+      ],
+      "cwd": "<companion>",
+      "exit": 2,
+      "expected_exit": 2,
+      "stderr_bytes": 56,
+      "stderr_sha256": "58db0a3f2e01731d35f033f1f90de8a73f62356118e860ef8b493bc899e0e173",
+      "stderr_text": "false assertion: no-history:status:unchanged-all-tables\n",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_text": "",
+      "step": "verify-forbidden-write"
+    },
+    {
+      "argv": [
+        "python3",
+        "tools/verify_results.py"
+      ],
+      "cwd": "<repo>",
+      "exit": 0,
+      "expected_exit": 0,
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_text": "",
+      "stdout_bytes": 1662,
+      "stdout_sha256": "96de3e5b2a7b2071354d7e0906e9836d065475966bebbd62b1d83810f6e6aaef",
+      "stdout_text": "Verified 9 unchanged migrated JSON files\nVerified 10 run files: 2026-09-16-exact-packing\nVerified 10 unchanged frozen fixtures\nVerified 13 run files: 2026-09-16-history-diversity\nVerified 15 run files: 2026-09-16-packing-scalability\nVerified 10 unchanged frozen fixtures\nVerified 9 run files: 2026-09-17-associated-bounds\nVerified 30 run files: 2026-09-17-associated-context\nVerified 8 run files: 2026-09-17-backup-decision\nVerified 6 run files: 2026-09-17-corpus-boundaries\nVerified 9 run files: 2026-09-17-diagnostic-consumer\nVerified 7 run files: 2026-09-17-history-free-diagnosis\nVerified 5 run files: 2026-09-29-context-512\nVerified 3 run files: 2026-09-29-switch-citation-layout\nVerified 4 run files: 2026-09-29-switch-default-remote\nVerified 3 run files: 2026-09-29-switch-parent-followup\nVerified 8 run files: 2026-09-30-agent-memory\nVerified 5 run files: 2026-09-30-long-horizon\nVerified 4 run files: 2026-09-30-synthetic-fleet\nVerified 9 run files: 2026-10-02-chronology\nVerified 257 chronology archive members: release.tar.xz\nVerified 209 chronology archive members: failed-smoke.tar.xz\nVerified 9 chronology archive members: incomplete-run.tar.xz\nVerified 112 chronology archive members: source.tar.xz\nVerified 9 run files: 2026-10-06-supersession-core\nVerified 13 run files: 2026-10-07-native-supersession-administration\nVerified 25 run files: 2026-10-11-mcp-query-supersession\nVerified 21 run files: 2026-10-11-native-supersession-enforcement\nVerified 21 run files: 2026-10-11-native-supersession-enforcement-corrected\nVerified 31 run files: 2026-10-12-mcp-query-supersession\nVerified 16 run files: 2026-10-12-mcp-query-supersession-strict-binding\n",
+      "step": "archive-verifier"
+    }
+  ],
+  "note": "Controller commands for the accepted capture. Symbolic paths keep machine-specific locations out of the archive; full private logs are retained separately.",
+  "schema": "mousa.mcp_query_supersession_commands.v1"
+}
