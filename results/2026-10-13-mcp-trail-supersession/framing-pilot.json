@@ -1,0 +1,18 @@
+[
+  {
+    "frame": "{\n",
+    "ready_before_stdin_close": false,
+    "exit_before_close": null,
+    "stdout": "",
+    "stderr": "mousa: unexpected EOF\n",
+    "exit": 1
+  },
+  {
+    "frame": "}\n",
+    "ready_before_stdin_close": true,
+    "exit_before_close": null,
+    "stdout": "",
+    "stderr": "mousa: invalid character '}' looking for beginning of value\n",
+    "exit": 1
+  }
+]

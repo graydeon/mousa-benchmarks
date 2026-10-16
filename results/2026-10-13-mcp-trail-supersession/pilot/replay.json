@@ -1,0 +1,1 @@
+{"argv":["python3","pilot/run.py","replay","--output","pilot/observation.json.gz"],"exit":0,"stderr":"","stdout":"{\"status\": \"PASS\", \"steps\": 268, \"assertions\": 5314, \"selections\": 60}\n"}

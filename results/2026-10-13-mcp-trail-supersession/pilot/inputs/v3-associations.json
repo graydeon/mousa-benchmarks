@@ -1,0 +1,1 @@
+{"schema":"mousa.association_declarations.v1","associations":[{"from_item":"release","to_item":"freeze","basis":"tag caveat","author":"example.operations"}]}

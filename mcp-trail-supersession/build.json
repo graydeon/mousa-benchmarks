@@ -1,0 +1,27 @@
+{
+  "public_head": "5ffa0286b35ecf84b36abe53d029a78075c02b86",
+  "public_tree": "c73fb12a9ccdc6df65ad998a3039255a43dc6ad1",
+  "clean_checkout": true,
+  "toolchain": "go version go1.27.1 linux/amd64",
+  "build_argv": [
+    "go",
+    "build",
+    "-trimpath",
+    "-o",
+    "<binary>",
+    "./cmd/mousa"
+  ],
+  "build_environment": {
+    "GOWORK": "off",
+    "CGO_ENABLED": "0"
+  },
+  "exit": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "",
+  "stderr": "",
+  "executable_sha256": "0bae5af810a4b6a6821724f6e7b49441e8f016a71df385581d827a4398455988",
+  "companion_capture_head": "2f419c47be796f6e647997e120fe5a364351e9ce",
+  "companion_capture_tree": "422fe7106535c6646dfea2eb69db3adea9b52fbd",
+  "captured_at": "2026-10-13T03:52:38.051835+00:00"
+}
