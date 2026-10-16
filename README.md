@@ -4,6 +4,10 @@ Public benchmark results, comparison dependencies, and reproduction guidance for
 
 These are development measurements, including failed experiments and limitations. They do not establish general superiority over other retrieval systems.
 
+The [supersession startup measurement protocol](startup-verification) is
+**proposed; not executed; requires review before collection**. It defines a
+CPU-only fresh-process native command study, not a runner or performance result.
+
 ## Current evidence boundary
 
 The [native enforcement archive](results/2026-10-11-native-supersession-enforcement-corrected)

@@ -1,0 +1,160 @@
+{
+  "status": "proposed; not executed; requires review before collection",
+  "kind": "benchmark protocol; not a product/domain schema or implemented runner",
+  "case_status": "All preparation, behavior, timing, replay and negative controls: NOT RUN",
+  "product": {
+    "commit": "ff80838c607ab8cde5b89376b9a9f44c1deb13cf",
+    "tree": "5c18c9d14248c693759f20c93d47d84da98b691f",
+    "platform": "linux/amd64 with pidfd support",
+    "required_apis": ["os.pidfd_open", "select.poll", "os.wait4"],
+    "go": "1.27.1",
+    "python_minimum": "3.9",
+    "build": "GOWORK=off CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v1 go build -trimpath -buildvcs=false -o BINARY ./cmd/mousa",
+    "execution_environment": {"GOMAXPROCS": "1"}
+  },
+  "question": "Whole fresh-process native command cost including runtime startup, verification, command work, output and exit; not isolated verification time",
+  "workload": {
+    "sources": [1, 8],
+    "events_per_source": [0, 1, 17, 65, 257],
+    "v4_trails_per_source": [0, 1],
+    "fixtures": 20,
+    "fixture_key": "s{S}-e{E}-t{T}",
+    "source_labels": "fixture/startup/00 through first S zero-padded indices",
+    "items": [
+      {"id": "predecessor", "text": "amber predecessor evidence"},
+      {"id": "successor", "text": "amber successor evidence"}
+    ],
+    "segment_policy": "fixed-v1",
+    "declarations_per_source": 1,
+    "declaration": {"author": "fixture-author", "basis": "synthetic startup fixture", "pins": "exact predecessor and successor native-created item representations"},
+    "events": {
+      "construction": "root selects declaration; even events deactivate; later odd events reactivate; exact previous event required",
+      "zero": "no events or current-state projection, not deactivation",
+      "positive_final": "same selected declaration",
+      "actor_id": "fixture-actor",
+      "actor_version": "1",
+      "reason": "synthetic startup transition",
+      "occurred_at_usec": "1700000000000000 + one-based event_index"
+    },
+    "trail_preparation_argv": ["mousa", "-store", "STORE", "query", "--source", "LABEL", "--policy", "original", "--packing-policy", "original", "--budget-bytes", "8192", "--supersession", "amber"],
+    "trail_gate": "After all events: allow, two matched candidates, v4, consulted=true; E=0 selects both with null administration; E>0 selects successor and withholds predecessor with final tip/declaration and excluded=1",
+    "fixed_within_source_block": ["source identities", "content", "revisions", "declarations"],
+    "variable_bytes": "Report actual store and sidecar bytes; history/index pages and v4 references confound isolated verification attribution",
+    "preparation": "Native sync and administration only; reviewed preparation codec derivation checked against native records; no SQL fabrication of valid history; native random request identities retained, not cross-capture byte-equality goldens",
+    "snapshot": "Quiescent SQLite backup API, destination truncating checkpoint and close, integrity/logical equivalence checks; fresh byte-verified closed snapshot copy for every invocation"
+  },
+  "operations": [
+    {
+      "name": "declaration-get",
+      "argv": ["mousa", "-store", "STORE", "supersession", "declaration", "get", "DECLARATION_00"],
+      "open": "read-only",
+      "stdin": "empty",
+      "exit": 0,
+      "stdout": "exact prepared canonical declaration bytes",
+      "stderr": "empty",
+      "effects": "Main database bytes and all logical/canonical records unchanged; record WAL/SHM and other sidecar lifecycle separately, without immutable-mode substitution"
+    },
+    {
+      "name": "status",
+      "argv": ["mousa", "-store", "STORE", "status", "--source", "fixture/startup/00"],
+      "open": "writable; preflight then current-schema verification and FTS integrity check",
+      "stdin": "empty",
+      "exit": 0,
+      "stdout": {"source": "fixture/startup/00", "collection_state": "active", "observations": 2, "active_items": 2, "needs_recovery": false},
+      "comparison": "strict JSON, duplicate-key rejection, type-preserving canonical equality",
+      "stderr": "empty",
+      "effects": "No logical changes or audit appends; record physical WAL/SHM/FTS effects explicitly"
+    }
+  ],
+  "invocation_paths": "From scratch root: ./bin/mousa -store trial/store.sqlite; replace trial directory per call; exact relative argv/cwd and explicit public-safe effective environment, no stream rewriting",
+  "schedule": {
+    "cells": 40,
+    "untimed_warmups_per_cell": 2,
+    "recorded_repetitions_per_cell": 10,
+    "total_warmups": 80,
+    "total_recorded_trials": 400,
+    "seed": "mousa-startup-v1",
+    "order": "warmup rounds 0,1 then measured rounds 0..9; each round contains all cells sorted by ascending SHA256 UTF-8(seed|PHASE|ROUND|S|E|T|OP), decimal unpadded integers, PHASE warmup or measured, OP declaration-get or status; full string byte-order tie break",
+    "freeze": "Expanded schedule with ordinals, argv/stdin/fixture/output identities and SHA256 before warmups",
+    "cache": "process-cold; ordinary OS cache, not cold-page-cache; no privileged eviction or global tuning",
+    "idle_prerequisite": {"seconds": 60, "sample_interval_seconds": 1, "aggregate_cpu_busy_percent_below": 10, "cpu_steal_percent_below": 1, "available_memory_bytes_at_least": 2147483648},
+    "host_sampling_seconds": 1,
+    "contention": "Retain and flag all observations; interruption, suspension, sampler failure or concurrent workload stops attempt; no favorable replacements"
+  },
+  "metrics": {
+    "wall": "monotonic_ns immediately before child creation through wait4 reaping, ns; stdout/stderr regular-file output included",
+    "cpu": "wait4 for exact direct child PID: ru_utime and ru_stime seconds",
+    "rss": "Linux wait4 ru_maxrss KiB (1024 bytes), not wrapper historic maximum, cumulative child counters, Go allocations or simultaneous tree sum",
+    "storage": "main, WAL, SHM, journal sizes/hashes and pre/post logical snapshots for both operations; read-only get preserves main-file bytes, not every sidecar byte",
+    "wait": {
+      "mechanism": "pidfd exit readiness via select.poll then exactly one blocking wait4(pid,0); no WNOHANG/sleep loop or fallback",
+      "poll_timeout_max_milliseconds": 1,
+      "deadlines": "check immediately before and after every poll return; zero wait when due",
+      "storage_check_interval_milliseconds": 100,
+      "reap_priority": "ready child is reaped before a due storage check",
+      "receipts": "poll start/end/requested timeout, readiness observation, wait4 return, deadline/storage checks, actual detection/termination delay and resource-bound overshoot",
+      "support": "missing or denied APIs fail preflight before preparation/collection",
+      "scheduling": "event wakes poll without waiting for timeout; requested cadences do not guarantee hard real-time scheduling; monitoring overhead remains included"
+    },
+    "cardinalities": "Actual source/item/representation/declaration/event/state/v4-trail/candidate/decision counts and per-source chains",
+    "summaries": "Successful per-cell n, median (even n: arithmetic mean central pair), minimum and maximum; incomplete cells labeled; no tail percentiles"
+  },
+  "bounds": {
+    "timed_command_seconds": 10,
+    "termination_grace_seconds": 1,
+    "measured_phase_seconds": 1800,
+    "measured_phase_includes": ["trial copies", "checks", "host sampling", "commands"],
+    "measured_phase_excludes": ["preparation", "warmups"],
+    "workspace_artifact_bytes": 2147483648,
+    "failure_receipt_reserve_bytes": 16777216,
+    "storage_accounting": "Combined workspace including preparation, failed attempts and packaging; log phase totals separately; one trial copy at a time; fixed bytes accounted before spawn plus live trial/output checks every100ms; actual detection overshoot retained",
+    "completion": "400 deadlines can exceed phase cap; full coverage not guaranteed",
+    "failure": "Stop first failed gate/timeout/infrastructure error/cancellation; SIGTERM group, SIGKILL after grace, reap; retain raw failure and remaining NOT RUN entries; no retries, trimming, imputation or outcome-driven limit changes",
+    "classification": ["startup-schema refusal", "correctness failure", "timeout right-censored at 10s", "phase/storage/interruption cancellation with own threshold", "successful performance observation", "NOT RUN"],
+    "preparation_failure": "Stop before collection and mark whole unstarted schedule NOT RUN"
+  },
+  "required_receipts": [
+    "clean product/companion commits and trees; accepted protocol commit/hash",
+    "build command, toolchain, verified modules, complete effective environment, binary SHA256",
+    "exact runner/helper/analyzer/control/sampler source bytes",
+    "fixture inputs, native preparation invocations, canonical identities, hashes and coherent snapshot identities",
+    "frozen expanded schedule and SHA256; each raw invocation bound to its ordinal",
+    "every invocation exact relative argv/cwd, stdin bytes/hash, exit/signal, lossless stdout/stderr bytes/hashes, phase and UTC times",
+    "trial monotonic endpoints, wall ns, per-child user/system CPU seconds, RSS KiB and censor/termination reason",
+    "event-driven wait and monitor receipts: requested poll intervals, actual start/end/readiness/reap/deadline/storage times, delays and overshoot",
+    "pre/post all-table typed logical snapshots, schema, counts, canonical digests and database/sidecar sizes/hashes; immutable seed before/after checks",
+    "host CPU/features, RAM, kernel, filesystem/storage, cgroups/limits, load, readable governors, pressure/throttling and missing-counter records",
+    "failure/NOT RUN coverage, negative mutation specifications/false conditions/detectors and real forbidden-write receipts",
+    "archive member names/sizes/SHA256, compressed package and whole patch/blob sizes; capture/publication/merge identities separate"
+  ],
+  "negative_controls": [
+    "wrong product commit", "wrong tree", "wrong binary", "wrong protocol",
+    "missing sample", "duplicate sample", "skipped sample", "reordered sample",
+    "mislabeled history cardinality", "failure exit rewritten to success with passed=true",
+    "broken declaration bytes or status JSON type", "real wrapper extra-table-and-row write",
+    "foreign application_id startup refusal", "deadline cancellation", "phase cap cancellation",
+    "storage cancellation", "interruption cancellation",
+    "wrong wait mechanism/cadence or missing monitor records", "read-only main-file or logical mutation"
+  ],
+  "ordinary_controls": ["untouched replay passes", "status JSON key order change passes; declaration byte changes reject", "control-only 1000ms pidfd readiness wait wakes on exit; measured waits remain at most1ms; missing support fails preflight", "read-only sidecar lifecycle retained separately while main/logical invariants hold"],
+  "analysis_outputs": ["coverage.csv", "samples.csv", "fixtures.csv", "summary.csv", "observations.svg", "resources.svg"],
+  "publication": {
+    "layout": "One additive results/YYYY-MM-DD-startup-verification directory with README, protocol, pins, schedule, tables/plots, control receipts, manifest, capture.tar.gz and archive-members.json",
+    "archive_member_max_bytes": 33554432,
+    "compressed_capture_max_bytes": 4194304,
+    "new_blob_budget_bytes": 6291456,
+    "patch_and_changed_blobs_each_below_bytes": 8388608,
+    "archive": "Lossless raw receipts/input/preparation/logical snapshots/host records/failures/tool source; regular relative non-traversing members only, no links or duplicates; local DB/binary hashes, not committed stores/binaries",
+    "overflow": "Preserve locally and stop for separate reviewed publication proposal; no evidence deletion or control exceptions",
+    "verifiers": "Shared archive verifier checks bytes/membership, not measured conclusions; future analyzer derives gates and summaries from raw receipts, not passed booleans",
+    "identities": "Capture-time sources distinct from later publication/merge; no self-referential eventual commit requirement"
+  },
+  "exclusions": [
+    "isolated verification timing", "asymptotic complexity inference", "old-versus-new speedup",
+    "optimization/adoption threshold", "schema/index studies or migrations", "Go allocation claims",
+    "query latency", "persistent MCP throughput", "semantic/retrieval quality", "GPU/inference",
+    "authentication", "native-host acceptance", "live user stores", "universal tails/capacity",
+    "pooling historical host measurements", "timed pilots choosing workloads"
+  ],
+  "review": "Independent acceptance pending; proposed choices in README require ratification before later implementation/capture; no silent adaptation to results"
+}
