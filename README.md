@@ -36,7 +36,17 @@ object key in a generated frame and the JSON type of every compared value, and
 `oneOf` requires exactly one matching branch. That PR is not claimed merged or
 available on main. It is
 synthetic client-boundary evidence, not semantic, retrieval-quality, performance or
-authentication acceptance, and opted-in trail inspection remains unimplemented.
+authentication acceptance. Opted-in trail inspection was not implemented at that pin.
+
+The [MCP historical inspection archive](results/2026-10-13-mcp-trail-supersession)
+targets corrected [Mousa PR75](https://github.com/graydeon/mousa/pull/75) public commit
+`5ffa0286b35ecf84b36abe53d029a78075c02b86`, tree `c73fb12a9ccdc6df65ad998a3039255a43dc6ad1`.
+Its [standalone stdlib runner](mcp-trail-supersession) checks recorded v4 members,
+native-created legacy history, fresh authorization audit writes, source-masked
+orphan refusals and per-command logical SQLite state through real native/stdio
+interfaces. It preserves the earlier query and native observations unchanged.
+The inspection archive is synthetic client-boundary evidence, not a semantic,
+performance, authentication or native-host acceptance result.
 
 The prior [administration archive](results/2026-10-07-native-supersession-administration)
 records declaration/activation lifecycle and an unchanged query baseline at its

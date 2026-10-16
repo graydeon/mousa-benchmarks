@@ -1,0 +1,1 @@
+{"schema":"mousa.association_declarations.v1","associations":[{"from_item":"predecessor","to_item":"successor","basis":"synthetic caveat","author":"fixture-author"}]}

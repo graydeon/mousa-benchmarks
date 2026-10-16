@@ -2,6 +2,17 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## MCP historical inspection
+
+The [inspection protocol and instructions](mcp-trail-supersession) describe the
+clean public product checkout, exact Go build, binary pin, two fresh-store captures,
+offline replay and rehashed semantic controls. The
+[observation archive](results/2026-10-13-mcp-trail-supersession) retains raw traffic,
+process exits and complete logical SQLite snapshots in a lossless indexed format.
+Use its corrected PR75 commit, not current main or the older query-only pin.
+Denied inspection legitimately commits a fresh authorization decision; orphaned
+decision parents remain source-masked at an already-open scoped boundary.
+
 ## CLI and warm-path comparison
 
 From a Mousa checkout, with this repository at ../mousa-benchmarks:
