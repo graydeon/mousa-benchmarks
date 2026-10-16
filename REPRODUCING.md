@@ -2,6 +2,15 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Proposed startup measurement
+
+The [supersession startup protocol](startup-verification/README.md) and its
+[machine-readable proposal](startup-verification/protocol.json) are
+**proposed; not executed; requires review before collection**. No runner, timings
+or new result archive is supplied. Later collection must pin the accepted
+immutable protocol; the proposed implementation commands are not available yet.
+
+
 ## MCP historical inspection
 
 The [inspection protocol and instructions](mcp-trail-supersession) describe the
