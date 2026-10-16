@@ -5,7 +5,8 @@
   "product": {
     "commit": "ff80838c607ab8cde5b89376b9a9f44c1deb13cf",
     "tree": "5c18c9d14248c693759f20c93d47d84da98b691f",
-    "platform": "linux/amd64",
+    "platform": "linux/amd64 with pidfd support",
+    "required_apis": ["os.pidfd_open", "select.poll", "os.wait4"],
     "go": "1.27.1",
     "python_minimum": "3.9",
     "build": "GOWORK=off CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v1 go build -trimpath -buildvcs=false -o BINARY ./cmd/mousa",
@@ -51,7 +52,7 @@
       "exit": 0,
       "stdout": "exact prepared canonical declaration bytes",
       "stderr": "empty",
-      "effects": "No logical or database-byte changes"
+      "effects": "Main database bytes and all logical/canonical records unchanged; record WAL/SHM and other sidecar lifecycle separately, without immutable-mode substitution"
     },
     {
       "name": "status",
@@ -84,7 +85,17 @@
     "wall": "monotonic_ns immediately before child creation through wait4 reaping, ns; stdout/stderr regular-file output included",
     "cpu": "wait4 for exact direct child PID: ru_utime and ru_stime seconds",
     "rss": "Linux wait4 ru_maxrss KiB (1024 bytes), not wrapper historic maximum, cumulative child counters, Go allocations or simultaneous tree sum",
-    "storage": "main, WAL, SHM, journal sizes/hashes and pre/post logical snapshots",
+    "storage": "main, WAL, SHM, journal sizes/hashes and pre/post logical snapshots for both operations; read-only get preserves main-file bytes, not every sidecar byte",
+    "wait": {
+      "mechanism": "pidfd exit readiness via select.poll then exactly one blocking wait4(pid,0); no WNOHANG/sleep loop or fallback",
+      "poll_timeout_max_milliseconds": 1,
+      "deadlines": "check immediately before and after every poll return; zero wait when due",
+      "storage_check_interval_milliseconds": 100,
+      "reap_priority": "ready child is reaped before a due storage check",
+      "receipts": "poll start/end/requested timeout, readiness observation, wait4 return, deadline/storage checks, actual detection/termination delay and resource-bound overshoot",
+      "support": "missing or denied APIs fail preflight before preparation/collection",
+      "scheduling": "event wakes poll without waiting for timeout; requested cadences do not guarantee hard real-time scheduling; monitoring overhead remains included"
+    },
     "cardinalities": "Actual source/item/representation/declaration/event/state/v4-trail/candidate/decision counts and per-source chains",
     "summaries": "Successful per-cell n, median (even n: arithmetic mean central pair), minimum and maximum; incomplete cells labeled; no tail percentiles"
   },
@@ -96,7 +107,7 @@
     "measured_phase_excludes": ["preparation", "warmups"],
     "workspace_artifact_bytes": 2147483648,
     "failure_receipt_reserve_bytes": 16777216,
-    "storage_accounting": "Combined workspace including preparation, failed attempts and packaging; log phase totals separately; one trial copy at a time",
+    "storage_accounting": "Combined workspace including preparation, failed attempts and packaging; log phase totals separately; one trial copy at a time; fixed bytes accounted before spawn plus live trial/output checks every100ms; actual detection overshoot retained",
     "completion": "400 deadlines can exceed phase cap; full coverage not guaranteed",
     "failure": "Stop first failed gate/timeout/infrastructure error/cancellation; SIGTERM group, SIGKILL after grace, reap; retain raw failure and remaining NOT RUN entries; no retries, trimming, imputation or outcome-driven limit changes",
     "classification": ["startup-schema refusal", "correctness failure", "timeout right-censored at 10s", "phase/storage/interruption cancellation with own threshold", "successful performance observation", "NOT RUN"],
@@ -110,6 +121,7 @@
     "frozen expanded schedule and SHA256; each raw invocation bound to its ordinal",
     "every invocation exact relative argv/cwd, stdin bytes/hash, exit/signal, lossless stdout/stderr bytes/hashes, phase and UTC times",
     "trial monotonic endpoints, wall ns, per-child user/system CPU seconds, RSS KiB and censor/termination reason",
+    "event-driven wait and monitor receipts: requested poll intervals, actual start/end/readiness/reap/deadline/storage times, delays and overshoot",
     "pre/post all-table typed logical snapshots, schema, counts, canonical digests and database/sidecar sizes/hashes; immutable seed before/after checks",
     "host CPU/features, RAM, kernel, filesystem/storage, cgroups/limits, load, readable governors, pressure/throttling and missing-counter records",
     "failure/NOT RUN coverage, negative mutation specifications/false conditions/detectors and real forbidden-write receipts",
@@ -121,9 +133,10 @@
     "mislabeled history cardinality", "failure exit rewritten to success with passed=true",
     "broken declaration bytes or status JSON type", "real wrapper extra-table-and-row write",
     "foreign application_id startup refusal", "deadline cancellation", "phase cap cancellation",
-    "storage cancellation", "interruption cancellation"
+    "storage cancellation", "interruption cancellation",
+    "wrong wait mechanism/cadence or missing monitor records", "read-only main-file or logical mutation"
   ],
-  "ordinary_controls": ["untouched replay passes", "status JSON key order change passes; declaration byte changes reject"],
+  "ordinary_controls": ["untouched replay passes", "status JSON key order change passes; declaration byte changes reject", "control-only 1000ms pidfd readiness wait wakes on exit; measured waits remain at most1ms; missing support fails preflight", "read-only sidecar lifecycle retained separately while main/logical invariants hold"],
   "analysis_outputs": ["coverage.csv", "samples.csv", "fixtures.csv", "summary.csv", "observations.svg", "resources.svg"],
   "publication": {
     "layout": "One additive results/YYYY-MM-DD-startup-verification directory with README, protocol, pins, schedule, tables/plots, control receipts, manifest, capture.tar.gz and archive-members.json",

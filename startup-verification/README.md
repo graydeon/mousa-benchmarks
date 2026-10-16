@@ -27,7 +27,8 @@ GOWORK=off CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v1 \
   go build -trimpath -buildvcs=false -o "$BINARY" ./cmd/mousa
 ```
 
-Use Linux/amd64, Python 3.9 or later with standard-library SQLite, and no inference,
+Use Linux/amd64 with pidfd support, Python 3.9 or later with `os.pidfd_open`,
+`select.poll` and standard-library SQLite, and no inference,
 GPU or network during preparation or measurement. Set `GOMAXPROCS=1` for every
 native invocation; record the full effective build and execution environments.
 A different product, tree, toolchain or platform requires a reviewed amendment
@@ -176,13 +177,17 @@ decimal string; real uses its IEEE-754 binary64 big-endian hex; text uses UTF-8 
 blob uses raw hex. Sort encoded row bytes lexicographically, retaining duplicates.
 Hash their LF-delimited stream per table; retain schema SQL and column metadata.
 Require no logical change, especially to immutable declarations/events, activation state,
-items, decisions and trails. Get must change no database bytes. For writable status,
-WAL/SHM lifecycle or FTS integrity-check physical effects may change physical bytes;
-log the exact changes, require logical equality and do not normalize unknown
-writes away. No audit-row append is expected from either operation. Compare seed
+items, decisions and trails. Get must preserve the main database file byte for byte. SQLite WAL readers
+may create or update WAL/SHM bookkeeping even with `mode=ro` and query-only
+enforcement; record sidecar presence, sizes and hashes for both operations rather
+than treating reader sidecars as a canonical mutation. No main-file change by get
+or logical/canonical change by either operation is permitted. Writable status may
+also have FTS integrity-check physical effects; record them separately. Preserve
+the product's actual open mode: do not substitute immutable SQLite, suppress
+sidecars, delete them before observation or normalize unknown logical writes away. No audit-row append is expected from either operation. Compare seed
 bytes and baseline counts/digests again after the schedule to detect accidental
-seed mutation. The writable path's legitimate physical effects are outside the
-claim that a read-only command leaves stored bytes unchanged.
+seed mutation. Main-file invariance and logical equality are distinct from observed sidecar lifecycle;
+a read-only open is not a guarantee that every filesystem byte remains unchanged.
 
 ## Frozen schedule and host prerequisites
 
@@ -227,8 +232,28 @@ For each recorded command, use `time.monotonic_ns()` immediately before child
 creation and immediately after its exit is reaped. This includes spawn, execution,
 stdout/stderr writes to regular files and close/exit; it excludes subsequent
 validation, copies and hashing. Record timestamp endpoints and duration in ns.
-Use one direct `fork`/`exec` child and `wait4(pid, ...)` for that exact PID, with
-nonblocking deadline checks. Preserve its `rusage.ru_utime` and `ru_stime` in
+Use one direct `fork`/`exec` child and open its pidfd before waiting. Register
+the pidfd with `select.poll` for exit readiness; pidfd readiness wakes the parent
+immediately, without a fixed sleep or polling interval gating exit notification.
+On readiness call blocking `wait4(pid, 0)` exactly once for that child and take
+the end timestamp immediately after it returns. No `WNOHANG`/sleep reaping loop
+or silent fallback is permitted. Missing or denied pidfd support fails preflight
+before preparation or collection; changing the mechanism requires an amendment.
+
+Request poll waits of at most 1 millisecond, shortened to zero when a command or
+phase deadline has arrived. Recheck both deadlines immediately before and after
+every poll return. Check workspace usage before spawn and every 100 milliseconds
+while running, using accounted fixed workspace bytes plus live trial/output sizes;
+a due storage check must not postpone a ready child's reap. Keep the host sampler
+at its separate one-second cadence. Record poll start/end/requested timeout,
+readiness observation, wait4 return, deadline checks, storage-check times and any
+detection/termination delay. Scheduler delay can exceed requested waits: report
+actual delay and resource-bound overshoot, not a hard real-time guarantee. These
+monitoring cadences are fixed; their overhead remains part of whole-command cost.
+Planned controls must check immediate readiness wakeup with a control-only 1,000-millisecond
+poll timeout (measured commands still use at most 1 millisecond) and bind monitoring/cancellation records to these rules.
+
+Preserve the exact child's `rusage.ru_utime` and `ru_stime` in
 seconds, and Linux `ru_maxrss` in KiB (1024 bytes), including zero/resolution limits.
 Do not use cumulative `getrusage(RUSAGE_CHILDREN)` differences or the wrapper's
 historic maximum RSS. No shell/time subprocess or build participates in the child
@@ -290,7 +315,8 @@ The following unfilled outputs are fixed in advance; no data are supplied here:
 - `coverage.csv`: every cell, expected/attempted/success/failure/censored/NOT RUN
   counts and attempt status, with warmups separate.
 - `samples.csv`: every recorded ordinal, S/E/T/operation, round, timestamps,
-  wall ns, user/system seconds, max RSS KiB, exit, censor reason and contention flags.
+  wall ns, user/system seconds, max RSS KiB, exit, censor reason and contention flags;
+  associated wait/monitor records retain requested intervals and actual delay.
 - `fixtures.csv`: every fixture's actual source/item/representation/declaration/
   event/state/v4-trail/candidate/decision counts, canonical digests, main/WAL/SHM/
   journal bytes and snapshot hash; pre/post differences listed separately.
@@ -320,6 +346,8 @@ Before collection, implement these acceptance cases; every row is **NOT RUN**:
 | Real forbidden write | Disposable wrapper executes the real binary, then commits an extra SQLite table/row while forwarding successful output/exit; capture and replay reject schema/logical-state change |
 | Startup-schema refusal | Disposable copy with foreign application_id: both commands exit nonzero without successful payload or repair; classified outside success timings |
 | Deadline, cap, storage and interruption | Controlled wrapper/harness injections exercise cancellation/reaping, raw retention and NOT RUN remainder, outside measured trials |
+| Exit and monitor mechanics | A controlled child exit wakes a control-only 1,000ms pidfd poll without waiting out that timeout; missing support rejects preflight; replay rejects changed mechanism/cadence or missing wait/deadline/storage records |
+| Read-only physical boundary | Main-file or logical changes fail; any WAL/SHM sidecar lifecycle is retained separately for get and status without switching the product open mode |
 | Ordinary controls | Untouched replay and harmless JSON key-order change for status pass; declaration byte-order changes do not |
 
 Controls never modify the accepted binary or production history. SQL damage/write
