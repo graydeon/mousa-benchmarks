@@ -2,13 +2,15 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
-## Proposed startup measurement
+## Startup runner validation
 
-The [supersession startup protocol](startup-verification/README.md) and its
-[machine-readable proposal](startup-verification/protocol.json) are
-**proposed; not executed; requires review before collection**. No runner, timings
-or new result archive is supplied. Later collection must pin the accepted
-immutable protocol; the proposed implementation commands are not available yet.
+The [supersession startup tools](startup-verification/README.md#tools-and-implementation-review)
+implement the accepted [PR31 protocol](https://github.com/graydeon/mousa-benchmarks/pull/31).
+Use `prepare.py`, `run.py smoke`, `controls.py` and `analyze.py verify` for native
+fixture and receipt checks without collection. Keep outputs outside source
+checkouts and use the exact product/protocol/toolchain pins in that document.
+**Measured collection NOT RUN**. A later capture needs independent final-head
+runner review and separate authorization; unmeasured checks establish no startup-cost result.
 
 
 ## MCP historical inspection

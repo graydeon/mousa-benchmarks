@@ -4,9 +4,10 @@ Public benchmark results, comparison dependencies, and reproduction guidance for
 
 These are development measurements, including failed experiments and limitations. They do not establish general superiority over other retrieval systems.
 
-The [supersession startup measurement protocol](startup-verification) is
-**proposed; not executed; requires review before collection**. It defines a
-CPU-only fresh-process native command study, not a runner or performance result.
+The [supersession startup study tools](startup-verification) implement the accepted
+CPU-only fresh-process protocol, native preparation, unmeasured smoke checks and
+receipt replay. **Measured collection NOT RUN**; implementation review precedes
+any separately authorized capture. Smoke and control timings are not performance results.
 
 ## Current evidence boundary
 
