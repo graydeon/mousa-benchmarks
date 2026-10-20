@@ -22,6 +22,212 @@ def pad_workspace(root, size):
 
 
 class ProtocolTests(unittest.TestCase):
+    def test_sampler_readiness_denial_reaps_child_and_closes_descriptors(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            descriptors = set(Path('/proc/self/fd').iterdir())
+            with patch('os.pidfd_open', side_effect=PermissionError('sampler readiness denial')):
+                with self.assertRaises(PermissionError):
+                    run.start_sampler(root, control_interval_seconds=.01)
+            failure = common.read_json(root / 'host-stop.json')
+            self.assertTrue(failure['reaped'])
+            with self.assertRaises(ChildProcessError):
+                os.waitpid(failure['pid'], os.WNOHANG)
+            self.assertEqual(set(Path('/proc/self/fd').iterdir()), descriptors)
+
+    def test_status_physical_only_change_and_get_or_logical_write_gates(self):
+        import analyze
+        with tempfile.TemporaryDirectory() as tmp:
+            db = Path(tmp) / 'store.sqlite'
+            with closing(sqlite3.connect(db)) as connection, connection:
+                connection.execute('CREATE TABLE records(value)')
+                connection.execute('INSERT INTO records VALUES (1)')
+            before, before_physical = common.snapshot(db), common.physical(db)
+            raw = bytearray(db.read_bytes())
+            counter = (int.from_bytes(raw[24:28], 'big')+1) % 2**32
+            raw[24:28] = raw[92:96] = counter.to_bytes(4, 'big')
+            db.write_bytes(raw)
+            after, after_physical = common.snapshot(db), common.physical(db)
+            self.assertNotEqual(before_physical['main'], after_physical['main'])
+            analyze.check_invariance('status', before, after, before_physical, after_physical)
+            with self.assertRaisesRegex(ValueError, 'read-only main-file mutation'):
+                analyze.check_invariance('declaration-get', before, after, before_physical, after_physical)
+            with closing(sqlite3.connect(db)) as connection, connection:
+                connection.execute('UPDATE records SET value = 2')
+            changed = common.snapshot(db)
+            for operation in ('status', 'declaration-get'):
+                with self.subTest(operation=operation), self.assertRaisesRegex(ValueError, 'logical/schema mutation'):
+                    analyze.check_invariance(operation, before, changed, before_physical, common.physical(db))
+
+    def test_host_coverage_rejects_rehashed_first_middle_last_and_lifetime_truncation(self):
+        import analyze
+        import copy
+        def sample(t):
+            return {'at_ns': t*10**9, 'counters': {'stat': f'cpu 0 0 0 {100*t} 0 0 0 0 0 0\n',
+                    'meminfo': 'MemAvailable: 2097152 kB\n'}, 'boottime_offset_interval_ns': [0, 0],
+                    'cgroups': {}, 'process_inventory': {'owner_pid': 111, 'ancestors': [111, 1],
+                    'processes': [], 'inaccessible': []}}
+        idle = [sample(t) for t in range(61)]
+        samples = []
+        for index, t in enumerate(range(61, 66)):
+            value = sample(t)
+            value.update(kind='host sampling', requested_interval_ns=10**9, sequence=index, terminal=t == 65,
+                         sampling_start_ns=t*10**9, sampling_end_ns=t*10**9, sampling_overhead_ns=0,
+                         contention=False, new_throttling=[], concurrent_workload=[], suspension=False,
+                         collector_stopped=False, window_start_ns=(t-1 if samples else t)*10**9)
+            samples.append(value)
+        with tempfile.TemporaryDirectory() as tmp:
+            objects = common.Objects(Path(tmp))
+            original = {'host': {'idle_samples': idle, 'idle_passed': True, 'samples': samples,
+                        'sampler': {'samples': samples, 'failure': None, 'exit': 0, 'frame_error': None,
+                        'start_ns': 61*10**9, 'shutdown_ns': 65*10**9, 'end_ns': 65*10**9+100}},
+                        'entries': [{'phase': 'measured', 'command': {'start_ns': 62*10**9, 'end_ns': 64*10**9}}],
+                        'stop_reason': None, 'measured_phase_start_ns': 61*10**9,
+                        'measured_phase_end_ns': 65*10**9+100}
+            def rehash(capture):
+                values = capture['host']['samples']
+                capture['host']['sampler']['samples'] = values
+                capture['host']['sampler']['raw'] = objects.put(b''.join(common.canonical(s)+b'\n' for s in values))
+                return capture
+            analyze.check_host(rehash(original), objects)
+            for label, index in (('first', 0), ('middle', 2), ('last', -1)):
+                changed = copy.deepcopy(original)
+                changed['host']['samples'].pop(index)
+                with self.subTest(label=label), self.assertRaises(ValueError):
+                    analyze.check_host(rehash(changed), objects)
+            for field, value in (('start_ns', 62*10**9), ('end_ns', 64*10**9), ('shutdown_ns', 63*10**9)):
+                changed = copy.deepcopy(original)
+                changed['host']['sampler'][field] = value
+                with self.subTest(field=field), self.assertRaises(ValueError):
+                    analyze.check_host(rehash(changed), objects)
+            changed = copy.deepcopy(original)
+            changed['host']['samples'] = changed['host']['samples'][:2]
+            changed['host']['sampler']['failure'] = {'reason': 'sampler forced termination', 'at_ns': 65*10**9}
+            changed['host']['sampler']['exit'] = -9
+            changed['stop_reason'] = 'host'
+            analyze.check_host(rehash(changed), objects)
+
+    def test_sampler_cleanup_cooperative_exited_and_stopped(self):
+        import signal
+        import time
+        def expired(signum, frame):
+            raise TimeoutError('sampler cleanup exceeded supervisor deadline')
+        for state in ('cooperative', 'exited', 'stopped'):
+            with self.subTest(state=state), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                descriptors = set(Path('/proc/self/fd').iterdir())
+                sampler = run.start_sampler(root, control_interval_seconds=.01)
+                try:
+                    deadline = time.monotonic()+2
+                    prefix = b''
+                    while time.monotonic() < deadline:
+                        prefix = sampler['output'].read_bytes() if sampler['output'].exists() else b''
+                        if b'\n' in prefix:
+                            break
+                        time.sleep(.001)
+                    self.assertIn(b'\n', prefix)
+                    if state == 'exited':
+                        os.kill(sampler['pid'], signal.SIGTERM)
+                        self.assertTrue(sampler['poll'].poll(2000))
+                    elif state == 'stopped':
+                        os.kill(sampler['pid'], signal.SIGSTOP)
+                        # Observe the stop without reaping the child.
+                        self.assertEqual(os.waitid(os.P_PID, sampler['pid'], os.WSTOPPED).si_code, os.CLD_STOPPED)
+                    started = time.monotonic()
+                    previous = signal.signal(signal.SIGALRM, expired)
+                    signal.setitimer(signal.ITIMER_REAL, 2)
+                    try:
+                        result = run.finish_sampler(sampler, common.Objects(root))
+                    finally:
+                        signal.setitimer(signal.ITIMER_REAL, 0)
+                        signal.signal(signal.SIGALRM, previous)
+                    self.assertLess(time.monotonic()-started, 2)
+                    self.assertEqual(common.Objects(root).get(result['raw']), sampler['output'].read_bytes())
+                    self.assertTrue(sampler['output'].read_bytes().startswith(prefix))
+                    self.assertEqual(result['wait4_calls'], 1)
+                    self.assertEqual(result['exit'], -9 if state == 'stopped' else 0)
+                    self.assertEqual(result['failure'] is not None, state != 'cooperative')
+                    self.assertEqual([s['signal'] for s in result['signals']],
+                                     ['SIGTERM', 'SIGKILL'] if state == 'stopped' else ([] if state == 'exited' else ['SIGTERM']))
+                    with self.assertRaises(ChildProcessError):
+                        os.waitpid(sampler['pid'], os.WNOHANG)
+                    with self.assertRaises(OSError):
+                        os.fstat(sampler['pidfd'])
+                    self.assertEqual(set(Path('/proc/self/fd').iterdir()), descriptors)
+                    if state == 'cooperative':
+                        self.assertTrue(result['samples'][-1]['terminal'])
+                        self.assertGreaterEqual(result['samples'][-1]['sampling_start_ns'], result['shutdown_ns'])
+                finally:
+                    try:
+                        os.kill(sampler['pid'], signal.SIGKILL)
+                    except ProcessLookupError:
+                        pass
+                    try:
+                        os.waitpid(sampler['pid'], 0)
+                    except ChildProcessError:
+                        pass
+
+    def test_phase_provenance_requires_complete_typed_boundaries(self):
+        import analyze
+        import copy
+        start = 100
+        command = {'start_ns': 101, 'end_ns': 105, 'phase_deadline_ns': start+1800_000_000_000}
+        command['monitor'] = {'storage': [{'at_ns': 100}], 'interruptions': [], 'signals': [],
+                              'deadlines': [{'at_ns': 102}], 'polls': [{'start_ns': 103, 'end_ns': 104}],
+                              'readiness_ns': 104, 'reap_ns': 105}
+        capture = {'entries': [{'phase': 'measured', 'command': command}],
+                   'measured_phase_start_ns': start, 'measured_phase_deadline_ns': start+1800_000_000_000,
+                   'measured_phase_end_ns': 106, 'stop_reason': None}
+        analyze.check_phase(capture)
+        for field in ('measured_phase_start_ns', 'measured_phase_deadline_ns', 'measured_phase_end_ns'):
+            for value in (None, True, 100.0, '100'):
+                changed = copy.deepcopy(capture)
+                changed[field] = value
+                with self.subTest(field=field, value=value), self.assertRaises(ValueError):
+                    analyze.check_phase(changed)
+            changed = copy.deepcopy(capture)
+            del changed[field]
+            with self.assertRaises(ValueError):
+                analyze.check_phase(changed)
+        for field, value in (('measured_phase_start_ns', 102), ('measured_phase_deadline_ns', 105),
+                             ('measured_phase_end_ns', 104)):
+            changed = copy.deepcopy(capture)
+            changed[field] = value
+            with self.assertRaises(ValueError):
+                analyze.check_phase(changed)
+        analyze.check_phase({'entries': [], 'measured_phase_end_ns': None, 'stop_reason': 'host'})
+        changed = copy.deepcopy(capture)
+        changed['stop_reason'] = 'timeout'
+        analyze.check_phase(changed)
+        for field, value in (('storage', [{'at_ns': 99}]), ('interruptions', [107]),
+                             ('polls', [{'start_ns': 103, 'end_ns': 107}])):
+            changed = copy.deepcopy(capture)
+            changed['entries'][0]['command']['monitor'][field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                analyze.check_phase(changed)
+
+    def test_public_export_refuses_unreviewed_raw_provenance_without_rewriting(self):
+        import analyze
+        from unittest.mock import patch
+        markers = {'environment': {'HOME': '/home/private-home-marker', 'TMPDIR': '/tmp/private-temp-marker'},
+                   'build_info': '/private-build-marker', 'mounts': '/private-mount-marker',
+                   'cgroup': '/private-cgroup-marker', 'stderr_hex': b'/private-error-marker'.hex(),
+                   'stdout_hex': b'/private-output-marker'.hex()}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / 'evidence'
+            source.mkdir()
+            original = common.canonical(markers)
+            (source / 'raw.json').write_bytes(original)
+            output = root / 'public.tar.gz'
+            # Isolate export from replay: validity cannot authorize private bytes.
+            with patch.object(analyze, 'verify_evidence', return_value={}):
+                with self.assertRaisesRegex(ValueError, 'public export blocked'):
+                    analyze.pack_evidence(source, output)
+            self.assertFalse(output.exists())
+            self.assertEqual((source / 'raw.json').read_bytes(), original)
+
     def test_synthetic_host_idle_thresholds_exclude_guest_double_counting(self):
         def sample(user, idle, steal=0, guest=0, available=2097152):
             return {'kind': 'synthetic test input', 'counters': {

@@ -373,22 +373,38 @@ def start_sampler(work, control_interval_seconds=None):
     output, failure = work / 'host.jsonl', work / 'host-stop.json'
     require(not output.exists() and not failure.exists(), 'sampler paths already exist')
     started = time.monotonic_ns()
+    wake_read, wake_write = os.pipe2(os.O_NONBLOCK | os.O_CLOEXEC)
     owner = os.getpid()
-    pid = os.fork()
+    try:
+        pid = os.fork()
+    except BaseException:
+        os.close(wake_read)
+        os.close(wake_write)
+        raise
     if pid == 0:
         stopping = []
         def stop(signum, frame):
             stopping.append(True)
+            try:
+                os.write(wake_write, b'x')
+            except BlockingIOError:
+                pass
         try:
             os.setsid()
             signal.signal(signal.SIGTERM, stop)
             signal.signal(signal.SIGINT, stop)
+            wake = select.poll()
+            wake.register(wake_read, select.POLLIN)
             previous = None
             next_sample = time.monotonic_ns()
             with output.open('xb', buffering=0) as stream:
-                while not stopping:
+                sequence = 0
+                while True:
+                    terminal = bool(stopping)
                     sample = host_sample(owner)
                     sample['kind'] = 'host sampling' if control_interval_seconds is None else 'synthetic test input'
+                    sample['sequence'] = sequence
+                    sample['terminal'] = terminal
                     sample['requested_interval_ns'] = int(interval*1e9)
                     sample['contention'] = False if previous is None else not idle_interval(previous, sample)
                     sample['new_throttling'] = [] if previous is None else new_throttling(previous, sample)
@@ -400,6 +416,7 @@ def start_sampler(work, control_interval_seconds=None):
                     while raw:
                         written = stream.write(raw)
                         raw = raw[written:]
+                    sequence += 1
                     if control_interval_seconds is None:
                         reason = None
                         if previous is not None and sample['at_ns']-previous['at_ns'] > 2_000_000_000:
@@ -411,23 +428,41 @@ def start_sampler(work, control_interval_seconds=None):
                         if reason:
                             save(failure, {'reason': reason, 'at_ns': time.monotonic_ns()})
                             break
+                    if sample['terminal']:
+                        break
                     previous = sample
                     next_sample += int(interval*1e9)
-                    time.sleep(max(0, (next_sample-time.monotonic_ns())/1e9))
+                    wake.poll(max(0, (next_sample-time.monotonic_ns()+999999)//1000000))
             os._exit(0)
         except BaseException as error:
             try:
                 save(failure, {'reason': 'sampler failure: '+str(error), 'at_ns': time.monotonic_ns()})
             finally:
                 os._exit(1)
+    os.close(wake_read)
+    os.close(wake_write)
+    fd = None
     try:
         fd = os.pidfd_open(pid)
+        poll = select.poll()
+        poll.register(fd, select.POLLIN)
     except BaseException:
-        os.kill(pid, signal.SIGKILL)
-        os.wait4(pid, 0)
+        try:
+            os.kill(pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        deadline = time.monotonic_ns()+1_000_000_000
+        reaped = False
+        while time.monotonic_ns() < deadline:
+            if os.wait4(pid, os.WNOHANG)[0] == pid:
+                reaped = True
+                break
+            time.sleep(.001)
+        if fd is not None:
+            os.close(fd)
+        save(failure, {'reason': 'sampler readiness setup failed', 'at_ns': time.monotonic_ns(),
+                       'pid': pid, 'reaped': reaped})
         raise
-    poll = select.poll()
-    poll.register(fd, select.POLLIN)
     return {'pid': pid, 'pidfd': fd, 'poll': poll, 'output': output, 'failure': failure, 'start_ns': started}
 
 
@@ -447,19 +482,70 @@ def sampler_cancel_event(sampler):
 
 
 def finish_sampler(sampler, objects):
+    signals = []
+    polls = []
+    def ready(milliseconds):
+        started = time.monotonic_ns()
+        events = sampler['poll'].poll(milliseconds)
+        polls.append({'start_ns': started, 'end_ns': time.monotonic_ns(),
+                      'requested_ms': milliseconds, 'events': events})
+        return bool(events)
+    def terminate(sig):
+        at = time.monotonic_ns()
+        try:
+            os.kill(sampler['pid'], sig)
+            sent = True
+        except ProcessLookupError:
+            sent = False
+        signals.append({'signal': signal.Signals(sig).name, 'at_ns': at, 'sent': sent})
+    interruptions = []
+    def interrupted(signum, frame):
+        interruptions.append({'signal': signum, 'at_ns': time.monotonic_ns()})
+    old_handlers = {sig: signal.signal(sig, interrupted) for sig in (signal.SIGINT, signal.SIGTERM)}
+    already_exited = False
+    shutdown = time.monotonic_ns()
+    forced = False
+    status = usage = None
+    cleanup_failure = None
     try:
-        os.kill(sampler['pid'], signal.SIGTERM)
-    except ProcessLookupError:
-        pass
-    _, status, usage = os.wait4(sampler['pid'], 0)
-    end = time.monotonic_ns()
-    os.close(sampler['pidfd'])
+        already_exited = ready(0)
+        if not already_exited:
+            terminate(signal.SIGTERM)
+            grace = signals[-1]['at_ns']+1_000_000_000
+            while not ready(max(0, min(100, (grace-time.monotonic_ns()+999999)//1000000))):
+                if time.monotonic_ns() >= grace:
+                    forced = True
+                    terminate(signal.SIGKILL)
+                    break
+            # A killed process can still await kernel I/O. Never enter blocking
+            # wait4 without readiness; retain a local failure if the kernel stalls.
+            if forced and not ready(1000):
+                cleanup_failure = {'reason': 'sampler SIGKILL readiness deadline; child not yet reapable',
+                                   'at_ns': time.monotonic_ns()}
+        if cleanup_failure is None:
+            pid, status, usage = os.wait4(sampler['pid'], 0)
+            require(pid == sampler['pid'], 'sampler exact-child reap')
+        end = time.monotonic_ns()
+    finally:
+        sampler['poll'].unregister(sampler['pidfd'])
+        os.close(sampler['pidfd'])
+        for sig, handler in old_handlers.items():
+            signal.signal(sig, handler)
     raw = sampler['output'].read_bytes() if sampler['output'].exists() else b''
     failure = read_json(sampler['failure']) if sampler['failure'].exists() else None
+    failure = failure or cleanup_failure
+    if interruptions:
+        failure = failure or {'reason': 'sampler cleanup interrupted', 'at_ns': interruptions[0]['at_ns']}
+    if forced or already_exited:
+        failure = failure or {'reason': 'sampler forced termination' if forced else 'sampler exited before shutdown',
+                              'at_ns': shutdown}
     report = {'pid': sampler['pid'], 'start_ns': sampler['start_ns'], 'end_ns': end,
-              'exit': os.waitstatus_to_exitcode(status), 'user_seconds': usage.ru_utime, 'system_seconds': usage.ru_stime,
-              'rss_kib': usage.ru_maxrss, 'raw': objects.put(raw), 'failure': failure}
-    save(objects.root / 'sampler-reap.json', report)
+              'shutdown_ns': shutdown, 'signals': signals, 'polls': polls, 'wait4_calls': int(status is not None),
+              'interruptions': interruptions, 'reaped': status is not None,
+              'exit': None if status is None else os.waitstatus_to_exitcode(status),
+              'user_seconds': None if usage is None else usage.ru_utime,
+              'system_seconds': None if usage is None else usage.ru_stime,
+              'rss_kib': None if usage is None else usage.ru_maxrss, 'raw': objects.put(raw), 'failure': failure}
     report['samples'], report['frame_error'] = json_frames(raw)
     if report['frame_error'] is not None:
         report['failure'] = failure or {'reason': 'invalid sampler frame', 'at_ns': time.monotonic_ns()}

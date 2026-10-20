@@ -140,7 +140,7 @@ def replay_mutations(smoke, output, prep):
         'end_ns', float(c['entries'][0]['command']['monitor']['polls'][0]['end_ns'])), 'poll timestamp types')
     mutation('wall metric boundary', command_field('wall_ns', original['entries'][0]['command']['wall_ns']+1), 'wall boundary')
     mutation('read-only main-file mutation', lambda c, o: c['entries'][0]['after_physical']['main'].__setitem__('sha256', '0'*64), 'read-only main-file mutation')
-    mutation('status read-only main-file mutation', lambda c, o: c['entries'][1]['after_physical']['main'].__setitem__('sha256', '0'*64), 'read-only main-file mutation')
+    mutation('status physical-only main-file change', lambda c, o: c['entries'][1]['after_physical']['main'].__setitem__('sha256', '0'*64), '', True)
     def failed_argv(c, o):
         c['failure'] = {'class': 'ValueError', 'message': 'synthetic control claimed failure'}
         c['entries'][-1]['command']['argv'] = ['./bin/mousa', 'wrong-command']

@@ -352,7 +352,7 @@ the latter remain **NOT RUN** until a separately authorized collection:
 | Startup-schema refusal | Disposable copy with foreign application_id: both commands exit nonzero without successful payload or repair; classified outside success timings |
 | Deadline, cap, storage and interruption | Controlled wrapper/harness injections exercise cancellation/reaping, raw retention and NOT RUN remainder, outside measured trials |
 | Exit and monitor mechanics | A controlled child exit wakes a control-only 1,000ms pidfd poll without waiting out that timeout; missing support rejects preflight; replay rejects changed mechanism/cadence or missing wait/deadline/storage records |
-| Read-only physical boundary | Main-file or logical changes fail; any WAL/SHM sidecar lifecycle is retained separately for get and status without switching the product open mode |
+| Operation-specific physical boundary | Main-file changes fail for declaration-get; physical-only status changes pass. Logical/canonical/schema changes fail for both; retain every sidecar observation without switching open mode |
 | Ordinary controls | Untouched replay and harmless JSON key-order change for status pass; declaration byte-order changes do not |
 
 Controls never modify the accepted binary or production history. SQL damage/write
@@ -417,6 +417,107 @@ Replay can validate a retained failed smoke without treating the native attempt
 as successful. Its raw failure and explicit NOT RUN suffix remain intact; replay
 acceptance is evidence validation, not a native correctness or performance pass.
 
+### Revision checks and retained holds
+
+Sampler shutdown requests TERM, waits for pidfd readiness for at most one second,
+then sends KILL if needed and supervises readiness for one further second. Only a
+ready exact child enters blocking `wait4`. Receipts retain signals, polls, raw
+frames, exit, reaping and failures. A kernel task that remains unreapable after
+KILL is reported as such, never as cleaned up or successful. A self-pipe wakes
+the sampler on shutdown so it can record a final observation without sleeping
+through the grace period. Already-exited and forced samplers fail host monitoring.
+
+Measured entries, a sampler, or any non-null measured-phase endpoint require all
+three integer start/deadline/end fields. The deadline is exactly 1,800 seconds
+after start. Command and monitor observations must lie within that phase; warmups
+must end before it. Attempts stopped before measurement remain a separate valid
+partial case. Raw host frames carry consecutive sequence numbers and a terminal
+sample taken after shutdown is requested. Replay binds those frames to sampler
+lifetime, phase edges and measured command intervals. The one-second cadence and
+existing two-second delay failure boundary are unchanged. Missing coverage can
+only survive as explicitly failed host evidence in a stopped attempt.
+
+The corrected controls exercise cooperative, already-exited and SIGSTOPed real
+samplers, exact reap/descriptor cleanup, temporary-SQLite physical-only and logical
+changes, typed/deleted phase provenance, and rehashed first/middle/last host
+truncations and inconsistent lifetime endpoints. They are unmeasured tests, not
+native performance experiments. Offline replay also checks original-source
+native receipts and complete/censored-prefix synthetic captures. Retained receipts
+keep their collection-time source identity; they do not establish full corrected-
+source native acceptance.
+
+The retained native smoke passed 39 of 40 gates. The final `s8-e257-t1` status
+command remains timeout-censored under the unchanged ten-second deadline. Its
+recorded wall interval is 10,003,275,936 ns; readiness followed the deadline by
+3,024,110 ns and reap followed readiness by 251,826 ns. The longest requested
+one-millisecond poll lasted 3,638,868 ns; maximum recorded storage-check delay was
+17,732,895 ns. The receipt reports 10.14152 seconds of per-child user plus system
+CPU. These records do not isolate engine work or establish idle-host performance.
+No favorable repeat was made.
+
+The retained lossless archive is 329,622,720 bytes against the 4,194,304-byte cap.
+Its 31,909 object members total 369,849,510 bytes. Native preparation's conservative
+reference closure accounts for 344,971,872 bytes in 31,682 members. Only one object
+(12,756 bytes) is outside the capture/schedule/preflight closure, so removing
+unreachable members cannot resolve the overflow and is not authorized evidence
+pruning. Gzipped preparation receipts account for 308,367,185 bytes and expand to
+2,949,722,000 bytes, including 2,937,140,016 canonical monitor bytes. A bounded
+12-receipt encoding experiment reconstructed every
+original gzip byte exactly, but joint compression used 1,407,822 bytes plus a
+length index versus 1,407,199 original bytes. It did not demonstrate savings.
+
+### Proposed publication amendment — not accepted
+
+Public export is blocked before creating an archive. Complete effective build
+environments, module/build output and build-info, mount/cgroup records and raw
+errors can contain operational paths. Native relative argv/environment values do
+not make the other provenance public-safe. The export guard refuses even a
+semantically valid capture; it does not redact, normalize, drop fields or rewrite
+historical execution. Local records and byte-level archive utilities remain
+available. This is partial mitigation of #39, not a public-safe capture format.
+
+A proposed versioned format would keep operational originals locally, publish a
+declared derived representation with an explicit field inventory and reasons for
+omissions, and bind it to original member hashes, source, build, environment and
+transformation identities. It must never claim to include omitted raw originals.
+For review, the proposed identifier is `mousa.startup.public_projection.v2`, with
+these explicit rules:
+
+- Keep every original member locally, unchanged. A public inventory lists its
+  name, byte length, SHA-256, public/local-only classification and omission reason.
+- Keep public source/tree, protocol, executable, module-file and original build-
+  receipt hashes. Publish audited toolchain/module versions, target and build
+  flags as derived fields bound to that receipt, not as its raw replacement.
+- Keep original complete environment values local. Publish non-path values only
+  after audit; represent HOME, temporary, cache and tool-directory paths by
+  declared execution roles. Mark the role mapping as derived, not effective
+  execution values.
+- Keep raw mount/cgroup text local. Publish derived filesystem types, resource
+  limits, pressure and throttling observations, omitting path, device and host
+  identifiers. List every omitted raw field in the inventory.
+- Audit raw stdout/stderr and errors, including encoded bytes. Unsafe streams
+  stay local with their hashes and lengths; a public parsed outcome or error
+  category is explicitly derived and cannot certify raw-output equality.
+- Bind the projection to the original inventory and exact transformation source.
+  Refuse export on an unclassified field or unaudited stream. Do not claim the
+  projected archive independently replays assertions requiring local-only bytes.
+
+That last limitation conflicts with the current complete public replay contract;
+accepting this proposal would require an explicit versioned amendment.
+Alternatively, a separately authorized future preparation could use controlled
+public-safe execution paths and audited raw outputs, preserving truthful complete
+provenance. Both choices need independent review against the frozen complete-
+evidence requirement before export is re-enabled; neither is implemented or
+ratified here.
+
+Separately, review a versioned lossless container with byte-identical factoring
+of monitor records, snapshot rows and exact gzip reconstruction metadata. Retain
+every member's name, size and hash and demonstrate complete reconstruction before
+assessing size. The bounded encoding experiment is not proof that the complete
+archive can fit. No cap, protocol byte, raw-retention requirement or collection
+authorization changes with either proposal.
+
+
 Keep all output outside source checkouts. Use one dedicated campaign parent for
 `$PREP`, `$SMOKE` and `$CONTROLS`; the combined budget includes retained failed
 attempts and packaging. Preparation and output directories must be new. `$PRODUCT`
@@ -456,10 +557,16 @@ as separate bound evidence. The live database must still match the selected
 prefix's last state; changed state is refused. This is not measured-capture
 resumption.
 
-Unmeasured evidence uses the same bounded packaging/replay interface:
+The public packaging command currently fails closed:
 
 ```sh
 python3 startup-verification/analyze.py pack "$SMOKE" --output "$SMOKE_ARCHIVE"
+# Refuses: public export blocked; no archive is created.
+```
+
+For an existing eligible archive, the offline extraction interface remains:
+
+```sh
 python3 startup-verification/analyze.py unpack "$SMOKE_ARCHIVE" --output "$SMOKE_REPLAY"
 ```
 

@@ -175,6 +175,12 @@ def _check_failed_entry(entry, fixture, objects):
         validate_physical(entry['after_physical'])
 
 
+def check_invariance(operation, before, after, before_physical, after_physical):
+    require(canonical(before) == canonical(after), 'logical/schema mutation')
+    if operation == 'declaration-get':
+        require(before_physical['main'] == after_physical['main'], 'read-only main-file mutation')
+
+
 def check_entry(entry, fixture, objects):
     from prepare import encode
     command, expected, before = _check_entry_binding(entry, fixture, objects)
@@ -182,8 +188,7 @@ def check_entry(entry, fixture, objects):
     validate_physical(entry['after_physical'])
     after = objects.json(entry['after'])
     validate_snapshot(after)
-    require(canonical(before) == canonical(after), 'logical/schema mutation')
-    require(entry['before_physical']['main'] == entry['after_physical']['main'], 'read-only main-file mutation')
+    check_invariance(entry['operation'], before, after, entry['before_physical'], entry['after_physical'])
     require(command['exit'] == 0 and not command['stderr_hex'] and not command['censor_reason'], 'raw command failure/censor')
     output = bytes.fromhex(command['stdout_hex'])
     if entry['operation'] == 'declaration-get':
@@ -221,7 +226,10 @@ def check_host(capture, objects):
     require(canonical(samples) == canonical(host['samples']) == canonical(sampler['samples']), 'raw host sampling binding')
     require(samples or capture['stop_reason'] == 'host', 'empty host sampler')
     previous = None
-    for sample in samples:
+    for index, sample in enumerate(samples):
+        require(type(sample.get('sequence')) is int and sample['sequence'] == index, 'host sequence coverage')
+        require(type(sample.get('terminal')) is bool and (not sample['terminal'] or index == len(samples)-1),
+                'host terminal sample')
         require(sample['kind'] == 'host sampling' and sample['requested_interval_ns'] == 1_000_000_000, 'host cadence')
         require(sample['sampling_start_ns'] <= sample['at_ns'] <= sample['sampling_end_ns']
                 and sample['sampling_overhead_ns'] == sample['sampling_end_ns']-sample['sampling_start_ns'], 'host overhead')
@@ -238,6 +246,22 @@ def check_host(capture, objects):
         require(not must_stop or capture['stop_reason'] is not None, 'host failure falsely successful')
         previous = sample
     require((sampler['failure'] is None and sampler['exit'] == 0) or capture['stop_reason'] is not None, 'sampler failure falsely successful')
+    fields = ('start_ns', 'shutdown_ns', 'end_ns')
+    require(all(type(sampler.get(field)) is int for field in fields), 'sampler lifetime provenance')
+    start, shutdown, end = (sampler[field] for field in fields)
+    phase_start, phase_end = capture['measured_phase_start_ns'], capture['measured_phase_end_ns']
+    require(phase_start <= start <= shutdown <= end <= phase_end, 'sampler phase lifetime')
+    require(all(start <= s['sampling_start_ns'] <= s['sampling_end_ns'] <= end for s in samples),
+            'sampler sample lifetime')
+    measured = [e['command'] for e in capture['entries'] if e['phase'] == 'measured']
+    require(all(start <= c['start_ns'] <= c['end_ns'] <= shutdown for c in measured), 'command sampler lifetime')
+    complete = (bool(samples) and samples[0]['sampling_start_ns']-phase_start <= 2_000_000_000
+                and samples[-1]['terminal'] and samples[-1]['sampling_start_ns'] >= shutdown
+                and phase_end-samples[-1]['sampling_end_ns'] <= 2_000_000_000
+                and all(b['at_ns']-a['at_ns'] <= 2_000_000_000 for a, b in zip(samples, samples[1:])))
+    if not complete:
+        require(capture['stop_reason'] is not None
+                and sampler['failure'] is not None, 'incomplete host coverage falsely successful')
 
 
 def check_preparation(root):
@@ -360,6 +384,34 @@ def check_preparation(root):
         previous = row['after']
 
 
+def check_phase(capture):
+    fields = ('measured_phase_start_ns', 'measured_phase_deadline_ns', 'measured_phase_end_ns')
+    measured = [e for e in capture['entries'] if e['phase'] == 'measured']
+    started = measured or any(capture.get(field) is not None for field in fields) or 'sampler' in capture.get('host', {})
+    if not started:
+        return
+    require(all(type(capture.get(field)) is int for field in fields), 'measured phase provenance')
+    start, deadline, end = (capture[field] for field in fields)
+    require(0 <= start <= end and deadline == start+1800_000_000_000, 'measured phase cap/endpoints')
+    require(end < deadline or capture['stop_reason'] is not None, 'phase cap falsely successful')
+    for entry in capture['entries']:
+        command = entry['command']
+        if entry['phase'] == 'measured':
+            require(type(command['start_ns']) is int and type(command['end_ns']) is int
+                    and start <= command['start_ns'] <= command['end_ns'] <= end
+                    and type(command['phase_deadline_ns']) is int
+                    and command['phase_deadline_ns'] == deadline, 'measured command phase binding')
+            monitor = command['monitor']
+            timestamps = [s['at_ns'] for s in monitor['storage']] + monitor['interruptions']
+            timestamps += [s['at_ns'] for s in monitor['signals']]
+            timestamps += [d['at_ns'] for d in monitor['deadlines']]
+            timestamps += [p[field] for p in monitor['polls'] for field in ('start_ns', 'end_ns')]
+            timestamps += [monitor['readiness_ns'], monitor['reap_ns']]
+            require(all(type(t) is int and start <= t <= end for t in timestamps), 'monitor phase binding')
+        else:
+            require(command['end_ns'] <= start, 'warmup phase overlap')
+
+
 def verify(root):
     from prepare import fixture_gate
     from run import schedule
@@ -418,6 +470,7 @@ def verify(root):
                 ('timeout', 'phase', 'storage', 'interruption', 'host', 'correctness', 'startup-schema', 'infrastructure')), 'stop reason type/class')
         require(len(entries) == 480 or capture['stop_reason'] is not None, 'incomplete capture falsely successful')
         require(len(entries) <= 480, 'too many entries')
+        check_phase(capture)
         failed = False
         for ordinal, entry in enumerate(entries):
             scheduled = frozen[ordinal]
@@ -437,12 +490,6 @@ def verify(root):
             require(capture['host'] == {'kind': 'synthetic test input; no host sampling performed'}, 'synthetic host label')
         else:
             check_host(capture, objects)
-        if 'measured_phase_start_ns' in capture:
-            require(type(capture['measured_phase_start_ns']) is int and capture['measured_phase_deadline_ns'] == capture['measured_phase_start_ns']+1800_000_000_000, 'measured phase cap')
-            phase_end = capture['measured_phase_end_ns']
-            require(type(phase_end) is int and phase_end >= capture['measured_phase_start_ns']
-                    and all(entry['command']['end_ns'] <= phase_end for entry in entries), 'measured phase endpoints')
-            require(phase_end < capture['measured_phase_deadline_ns'] or capture['stop_reason'] is not None, 'phase cap falsely successful')
     require(set(capture['seed_after']) == set(fixtures), 'seed-after coverage')
     for key, fixture in fixtures.items():
         observed = capture['seed_after'][key]
@@ -739,28 +786,9 @@ def verify_evidence(root):
 
 
 def pack_evidence(root, output):
-    import os
-    import tempfile
-    from common import pack
-    root = Path(root).resolve()
-    output = Path(output).resolve()
-    require(root.parent in output.parents, 'archive must remain in campaign budget root')
-    require(output != root and root not in output.parents, 'archive output inside evidence')
-    verify_evidence(root)
-    with tempfile.TemporaryDirectory(dir=Path(output).parent) as temporary:
-        stage = Path(temporary)
-        for path in sorted(root.rglob('*')):
-            relative = path.relative_to(root)
-            if any(part in ('workspace', 'real-controls') for part in relative.parts):
-                continue
-            require(not path.is_symlink() and (path.is_dir() or path.is_file()), 'evidence link/type')
-            destination = stage / relative
-            if path.is_dir():
-                destination.mkdir(parents=True, exist_ok=True)
-            else:
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                os.link(path, destination)
-        pack(stage, output, budget_root=root.parent)
+    # Complete raw provenance currently has no approved public-safe representation.
+    # Refuse before creating an archive rather than silently rewriting execution.
+    raise ValueError('public export blocked: complete raw provenance requires a reviewed public-safe representation')
 
 
 def main():
