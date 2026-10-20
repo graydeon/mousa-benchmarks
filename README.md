@@ -25,6 +25,13 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [directory supersession example and observations](directory-supersession)
+demonstrate ordinary Markdown/text directory queries with explicit native declaration
+and activation, unchanged default/false selection, both packing policies, producing
+v4 trail pins and a predecessor revision update. One capture and one fresh-store
+reproduction target public Mousa PR80; this is native capability evidence, not
+semantic-quality or performance acceptance.
+
 The [native enforcement archive](results/2026-10-11-native-supersession-enforcement-corrected)
 records independent subprocess acceptance under both packing policies against
 [Mousa PR61](https://github.com/graydeon/mousa/pull/61), corrected public commit

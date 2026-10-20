@@ -1,0 +1,19 @@
+{
+  "head": "f98bcb227075ba716b5b82324bcb19c3266e8007",
+  "tree": "c2dec63f24dfd78b036f43cdd57462313b75c46a",
+  "cwd": "/tmp/mousa-directory-public/source",
+  "argv": [
+    "go",
+    "build",
+    "-o",
+    "/tmp/mousa-directory-public/mousa",
+    "./cmd/mousa"
+  ],
+  "environment": {
+    "GOWORK": "off",
+    "CGO_ENABLED": "0"
+  },
+  "stdout": "",
+  "stderr": "",
+  "exit": 0
+}

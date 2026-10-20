@@ -1,0 +1,41 @@
+{
+  "result": "PASS",
+  "source_id": "9d328fa1b1cedef699a662ea0c640c035e7247d81bad6a77798ed7dd0591cfeb",
+  "declaration_id": "e97e0e68e291ece315cf30966464e54276344f593ba1f45bb3876375f487f769",
+  "activation_id": "ad8362cfef4e720809743d9e7112ed8dcbfd56132b13a8b46dc2be0bc6e1a886",
+  "predecessor": {
+    "item": "new.txt",
+    "segment_id": "32a290e228f724db60d9df5807653156e2506b9fcb084acd4298d83a7407961c",
+    "content_sha256": "6b11f4e45dc9a2d95c76b351d83f092cdceb440e10de3a5ceb80024bf5d4031a",
+    "representation_id": "c43a24b207a8b8413c21a9f073e0c042b7566f11ab66caf06c182c52b36a99cd",
+    "representation_sha256": "6b11f4e45dc9a2d95c76b351d83f092cdceb440e10de3a5ceb80024bf5d4031a",
+    "byte_start": 0,
+    "byte_end": 24,
+    "segment_policy": "fixed-v1",
+    "rank": 1,
+    "bm25_score": -1e-06,
+    "byte_length": 24,
+    "text": "cedar directory evidence",
+    "origin": "lexical"
+  },
+  "successor": {
+    "item": "old.md",
+    "segment_id": "a9c9f2a6cf678d94b31b4d857576338eac05557e5d5a557b824a2a2ba6984965",
+    "content_sha256": "6b11f4e45dc9a2d95c76b351d83f092cdceb440e10de3a5ceb80024bf5d4031a",
+    "representation_id": "319cf44686c5ccd6e7bee5b5989f2a73e336cc13ae1683a2471e0ce1a82c30f2",
+    "representation_sha256": "6b11f4e45dc9a2d95c76b351d83f092cdceb440e10de3a5ceb80024bf5d4031a",
+    "byte_start": 0,
+    "byte_end": 24,
+    "segment_policy": "fixed-v1",
+    "rank": 2,
+    "bm25_score": -1e-06,
+    "byte_length": 24,
+    "text": "cedar directory evidence",
+    "origin": "lexical"
+  },
+  "revised_representations": {
+    "old.md": "319cf44686c5ccd6e7bee5b5989f2a73e336cc13ae1683a2471e0ce1a82c30f2",
+    "new.txt": "b376fc5a4c15da223d293cd3ad3616d2838bb9a51fbc0eb44dedabae48b2a0d8"
+  },
+  "scope": "Synthetic native behavior only; no semantic, quality or performance claim."
+}
