@@ -491,8 +491,8 @@ environments, build-info, mount/cgroup records, inventory names and raw errors
 can contain operational paths. Relative native argv does not make these other
 streams safe. The guard does not redact or rewrite historical evidence.
 
-The [public evidence proposal](PUBLIC_EVIDENCE_PROPOSAL.md) is **PROPOSED /
-NOT IMPLEMENTED / NOT RATIFIED**. It replaces the earlier projection outline
+The full v2 format in the [public evidence proposal](PUBLIC_EVIDENCE_PROPOSAL.md)
+is **PROPOSED / NOT IMPLEMENTED / NOT RATIFIED**. It replaces the earlier projection outline
 with a field/consumer inventory, exact-versus-derived claims, public member layout,
 replay/control plan and explicit compatibility and capacity decisions for #39.
 It recommends controlled future execution with exact public trial/host/build
@@ -503,9 +503,28 @@ public replay claim or make unsafe historical records eligible.
 
 The proposal does not demonstrate compliance with the frozen archive cap.
 The retained 39/40 smoke timeout, oversized archive, unchanged protocol bytes,
-full local originals and collection hold remain. All proposed behavioral cases
-are NOT RUN. Export stays disabled; this documentation does not resolve #39
-or authorize implementation, new native acceptance or collection.
+full local originals and collection hold remain. Full-format, privacy,
+public-replay, native, size-feasibility and performance cases are NOT RUN.
+Export stays disabled; this component does not resolve #39 or authorize further
+implementation, new native acceptance or collection.
+
+The isolated [scoped candidate row contract](PUBLIC_EVIDENCE_PROPOSAL.md#scoped-candidate-row-structural-contract-only)
+is implemented in [scoped_preparation.py](scoped_preparation.py), with
+`validate(row)`, `encode(row)` and `decode(raw)` APIs and synthetic controls in
+[test_scoped_preparation.py](test_scoped_preparation.py).
+Run them with:
+
+```sh
+python3 -m unittest discover -s startup-verification -p test_scoped_preparation.py -v
+```
+
+This CANDIDATE / STRUCTURAL ONLY codec enforces closed fields, reference syntax,
+exact hex/digest bindings, signed exit consistency and a 4,194,304-byte row
+ceiling. Structural validation does not guarantee JSON serializability: encode
+and decode respect the interpreter's integer conversion policy and report
+conversion failures as `RowError`. It does not resolve objects, select historical receipts, audit privacy,
+package evidence, attest execution or replay preparation. Private-looking text
+is preserved, not declared public-safe. No runtime or export caller uses it.
 
 
 Keep all output outside source checkouts. Use one dedicated campaign parent for

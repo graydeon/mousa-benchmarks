@@ -1,9 +1,11 @@
 # Public evidence contract for the startup study
 
-**PROPOSED / NOT IMPLEMENTED / NOT RATIFIED.** This document addresses
+**Full v2: PROPOSED / NOT IMPLEMENTED / NOT RATIFIED.** This document addresses
 [issue #39](https://github.com/graydeon/mousa-benchmarks/issues/39); it does not
 resolve it. Public export remains disabled. No new capture, protocol amendment,
 capacity result or performance acceptance follows from this proposal.
+Only the [scoped candidate row codec](#scoped-candidate-row-structural-contract-only)
+is implemented and synthetically checked; it is CANDIDATE / STRUCTURAL ONLY.
 
 ## Recommendation and review boundary
 
@@ -178,6 +180,70 @@ without those bytes, its authenticity and correct derivation are operator-attest
 A reviewer with local originals can recompute the selection byte for byte. A
 public-only reviewer can recompute public correctness gates, not the withheld-to-
 public transformation. Private marker controls must cover inventory metadata too.
+
+## Scoped candidate row: structural contract only
+
+The isolated candidate codec in `scoped_preparation.py` validates one row, not
+the proposed full format. It has no exporter or historical-receipt selector.
+Full v2 remains PROPOSED / NOT IMPLEMENTED / NOT RATIFIED.
+
+The closed envelope has exactly `schema`, `representation`,
+`monitor_acceptance`, `phase`, `ordinal`, `before`, `after`, `before_physical`,
+`after_physical`, `command`. The literals are respectively
+`mousa.startup.preparation_correctness_row.v2`,
+`derived-preparation-correctness`, `operator-attested-only`, and `preparation`.
+`ordinal` is a nonnegative integer (not a boolean).
+
+`before` and `after` are required `{sha256,bytes}` references: 64 lowercase
+hexadecimal digest characters and an integer byte length from zero through
+`common.BUDGET - common.RESERVE` inclusive. A no-store reset refers to the
+canonical bytes `null`, not a missing field or a null reference. Each physical
+map has exactly `main`, `-wal`, `-shm`, `-journal`, matching `common.physical`
+without path rewriting. Each value is a reference or JSON null for an absent file.
+The codec checks reference syntax, not object existence or SQLite state.
+
+`command` has exactly `argv`, `cwd`, `environment`, `phase`, `stdin_hex`,
+`stdout_hex`, `stderr_hex`, `stdin_sha256`, `stdout_sha256`, `stderr_sha256`,
+`exit`, `exit_code`, `signal`. `argv` is a list of strings, `cwd` a string,
+`environment` a string-to-string map and `phase` the literal `preparation`.
+Strings retain their text without Unicode normalization; they must be encodable
+as UTF-8, consistent with `common.canonical`. No nonempty-string, path-safety,
+environment allowlist or native-command eligibility claim is made.
+Each stream is lowercase even-length hex with the matching SHA-256; empty
+streams are valid. `exit` is a signed integer exit code, not an encoded wait
+status. If nonnegative, `exit_code` equals it and `signal` is null. If negative,
+`exit_code` is null and `signal` is the positive integer `-exit`.
+Booleans are not integers. No additional platform exit/signal range is imposed.
+
+`validate(row)` returns no value and does not mutate or retain input. It checks
+structure, not JSON serializability. `encode(row)` emits `common.canonical(row)`
+plus one LF when conversion succeeds. Both encode and decode respect the
+interpreter's current integer-string conversion policy; no arbitrary-size
+integer round-trip guarantee is made. A structurally valid ordinal or consistent
+exit/exit_code/signal can exceed that policy. Encode reports conversion failure
+as `RowError('json: $: cannot encode JSON')`; decode reports parser conversion
+failure as `RowError('json: $: invalid JSON')`. Neither changes interpreter policy.
+`decode(raw)` accepts bytes only and returns an independently owned row; it
+accepts noncanonical JSON whitespace/key order but rejects duplicate keys at
+every depth, trailing values, nonfinite numbers, non-object roots, unknown
+schemas, wrong types, and missing/extra fields. Re-encoding canonicalizes JSON,
+not embedded stream bytes. `RowError` is a `ValueError` with deterministic
+`category: field: detail` messages. Categories are `type`, `fields`, `value`,
+`hex`, `digest`, `exit`, `size`, `json`, and `text`.
+
+The encoded and decoded byte ceiling is 4,194,304 bytes, including the emitted
+LF. Decode checks this before parsing; encode checks a bounded serialization
+before returning bytes. This structural ceiling does not establish package fit:
+objects, metadata and other rows still need space under the unchanged package
+cap. Callers may use `common.sha` on encoded bytes; there is no new identity
+algorithm or implicit schema fallback.
+
+This is CANDIDATE / STRUCTURAL ONLY. Shape validation grants no public-safe
+eligibility, authenticated provenance, independent execution proof, complete
+preparation replay or native acceptance. Private-looking strings remain exact
+text; they do not receive a privacy pass. Monitor, timing and provenance claims
+are not row fields. The monitoring tag labels a claim boundary, not an
+attestation verified by this codec. Public export remains disabled.
 
 ## Version, member layout and replay
 
