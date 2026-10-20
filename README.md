@@ -10,9 +10,11 @@ receipt replay. **Measured collection NOT RUN**; implementation review precedes
 any separately authorized capture. Smoke and control timings are not performance results.
 Public startup evidence export currently fails closed. The
 [public evidence contract proposal](startup-verification/PUBLIC_EVIDENCE_PROPOSAL.md)
-is **PROPOSED / NOT IMPLEMENTED / NOT RATIFIED**; it does not authorize export
-or collection. The retained native smoke is 39/40 with a ten-second censored
-failure; its complete archive exceeds the frozen 4 MiB cap. The
+for the full v2 format is **PROPOSED / NOT IMPLEMENTED / NOT RATIFIED**.
+An isolated [candidate row codec](startup-verification/PUBLIC_EVIDENCE_PROPOSAL.md#scoped-candidate-row-structural-contract-only)
+implements structural validation only, not public eligibility or replay.
+Neither authorizes export or collection. The retained native smoke is 39/40
+with a ten-second censored failure; its complete archive exceeds the frozen 4 MiB cap. The
 [revision checks and retained holds](startup-verification/README.md#revision-checks-and-retained-holds)
 remain unchanged.
 
