@@ -22,6 +22,180 @@ def pad_workspace(root, size):
 
 
 class ProtocolTests(unittest.TestCase):
+    def capture_final_check_control(self, root, final_check, execution_error=None):
+        """Tiny synthetic inputs; capture and its owned cadence sampler are real."""
+        import time
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        import subprocess
+        check_output = subprocess.check_output
+        import signal
+        samplers = []
+        sleep = time.sleep
+        start_sampler = run.start_sampler
+        def start(work):
+            sampler = start_sampler(work)
+            samplers.append(sampler)
+            deadline = time.monotonic()+2
+            while time.monotonic() < deadline:
+                if sampler['output'].exists() and b'\n' in sampler['output'].read_bytes():
+                    break
+                sleep(.001)
+            else:
+                self.fail('owned sampler did not emit its first raw frame')
+            return sampler
+        def expired(signum, frame):
+            raise TimeoutError('capture control exceeded ten-second supervisor deadline')
+        def cleanup():
+            for sampler in samplers:
+                try:
+                    if os.waitpid(sampler['pid'], os.WNOHANG)[0]:
+                        continue
+                except ChildProcessError:
+                    continue
+                try:
+                    os.kill(sampler['pid'], signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                try:
+                    os.waitpid(sampler['pid'], 0)
+                except ChildProcessError:
+                    pass
+        self.addCleanup(cleanup)
+        prepared, output = root / 'prepared', root / 'control'
+        (prepared / 'bin').mkdir(parents=True)
+        (prepared / 'objects').mkdir()
+        (prepared / 'bin/mousa').write_bytes(b'not executed')
+        for name in ('build.json', 'module-verification.json'):
+            (prepared / name).write_text('{}')
+        seed = prepared / 'seed.sqlite'
+        with closing(sqlite3.connect(seed)) as connection, connection:
+            connection.execute('CREATE TABLE control(value)')
+        fixture = {'key': 'control-only', 'seed_path': 'seed.sqlite',
+                   'seed_identity': common.file_identity(seed), 'declarations': [{'id': 'control-only'}]}
+        prep = {'fixtures': [fixture]}
+        rows = [{'ordinal': 0, 'phase': 'measured', 'fixture': fixture['key'], 'operation': 'status'}]
+        idle_index = 0
+        idle_start = time.monotonic_ns()-61*10**9
+        def synthetic_host(owner=None):
+            nonlocal idle_index
+            at = time.monotonic_ns() if owner is not None else idle_start+idle_index*10**9
+            idle_index += 1
+            return {'at_ns': at, 'sampling_start_ns': at, 'sampling_end_ns': at, 'sampling_overhead_ns': 0,
+                    'counters': {'stat': f'cpu 0 0 0 {at} 0 0 0 0 0 0\n',
+                                 'meminfo': 'MemAvailable: 2097152 kB\n'},
+                    'boottime_offset_interval_ns': [0, 0], 'cgroups': {},
+                    'process_inventory': {'owner_pid': owner or os.getpid(), 'ancestors': [os.getpid(), 1],
+                                          'processes': [], 'inaccessible': []}}
+        original_observe = run.observe_seeds
+        def observe(*args):
+            final_check()
+            return original_observe(*args)
+        # Stop at the synthetic execution boundary, before any native invocation.
+        # This is explicitly partial input, not a successful benchmark capture.
+        with patch('prepare.git', side_effect=lambda path, *args: '' if args[0] == 'status' else 'control-source'), \
+                patch('subprocess.check_output', side_effect=lambda argv, **kwargs:
+                      b'control-source refs/heads/control\n' if argv[:2] == ['git', 'ls-remote']
+                      else check_output(argv, **kwargs)), \
+                patch.object(run, 'preflight_execution', return_value=None), \
+                patch.object(run, 'schedule', return_value=rows), \
+                patch.object(run, 'host_sample', side_effect=synthetic_host), \
+                patch.object(run.time, 'sleep', return_value=None), \
+                patch.object(run, 'start_sampler', side_effect=start), \
+                patch.object(run, 'child', side_effect=execution_error or run.BeforeSpawn('interruption', time.monotonic_ns())), \
+                patch.object(run, 'observe_seeds', side_effect=observe):
+            previous = signal.signal(signal.SIGALRM, expired)
+            signal.setitimer(signal.ITIMER_REAL, 10)
+            try:
+                with self.assertRaises((ValueError, RuntimeError, KeyboardInterrupt)):
+                    run.capture(SimpleNamespace(prepared=prepared, output=output), prep)
+            finally:
+                signal.setitimer(signal.ITIMER_REAL, 0)
+                signal.signal(signal.SIGALRM, previous)
+        for sampler in samplers:
+            with self.assertRaises(ChildProcessError):
+                os.waitpid(sampler['pid'], os.WNOHANG)
+            with self.assertRaises(OSError):
+                os.fstat(sampler['pidfd'])
+        return common.read_json(output / 'capture.json'), common.Objects(output)
+
+    def test_capture_final_checks_retain_host_coverage(self):
+        import analyze
+        import time
+        with tempfile.TemporaryDirectory() as tmp:
+            sleep = time.sleep
+            capture, objects = self.capture_final_check_control(Path(tmp), lambda: sleep(3))
+            analyze.check_host(capture, objects)
+            analyze.check_phase(capture)
+            sampler = capture['host']['sampler']
+            self.assertIsNone(sampler['failure'])
+            self.assertEqual(capture['stop_reason'], 'interruption')
+            self.assertTrue(sampler['samples'][-1]['terminal'])
+            self.assertGreaterEqual(sampler['samples'][-1]['sampling_start_ns'], sampler['shutdown_ns'])
+            self.assertGreaterEqual(sampler['shutdown_ns']-sampler['start_ns'], 3*10**9)
+            self.assertEqual(objects.get(sampler['raw']), (objects.root / 'workspace/host.jsonl').read_bytes())
+            with self.assertRaises(ChildProcessError):
+                os.waitpid(sampler['pid'], os.WNOHANG)
+
+    def test_capture_final_check_failure_and_cancellation_keep_partial_evidence(self):
+        import analyze
+        for error in (RuntimeError('final seed observation failed'), KeyboardInterrupt()):
+            with self.subTest(error=type(error).__name__), tempfile.TemporaryDirectory() as tmp:
+                def fail():
+                    raise error
+                capture, objects = self.capture_final_check_control(Path(tmp), fail)
+                self.assertEqual(capture['stop_reason'], 'interruption')
+                if isinstance(error, RuntimeError):
+                    self.assertEqual(capture['failure'], str(error))
+                sampler = capture['host']['sampler']
+                self.assertTrue(sampler['reaped'])
+                self.assertTrue(sampler['samples'][-1]['terminal'])
+                self.assertEqual(objects.get(sampler['raw']), (objects.root / 'workspace/host.jsonl').read_bytes())
+                self.assertNotIn('seed_after', capture)
+                analyze.check_host(capture, objects)
+                analyze.check_phase(capture)
+
+    def test_capture_final_check_keeps_original_failure(self):
+        import analyze
+        with tempfile.TemporaryDirectory() as tmp:
+            def fail():
+                raise RuntimeError('secondary seed failure')
+            capture, objects = self.capture_final_check_control(
+                Path(tmp), fail, execution_error=RuntimeError('original execution failure'))
+            self.assertEqual(capture['stop_reason'], 'infrastructure')
+            self.assertEqual(capture['failure'], 'original execution failure')
+            self.assertTrue(capture['host']['samples'][-1]['terminal'])
+            analyze.check_host(capture, objects)
+            analyze.check_phase(capture)
+
+    def test_capture_final_checks_cross_synthetic_phase_deadline(self):
+        import analyze
+        import mmap
+        import time
+        from unittest.mock import patch
+        real_clock = time.monotonic_ns
+        # Shared only with this owned sampler: a virtual clock jump, not elapsed
+        # product time. The real sampler must retain its delay failure unchanged.
+        with mmap.mmap(-1, 8) as offset, tempfile.TemporaryDirectory() as tmp:
+            offset[:] = (0).to_bytes(8, 'big')
+            def clock():
+                return real_clock()+int.from_bytes(offset[:], 'big')
+            def cross():
+                offset[:] = (1800*10**9).to_bytes(8, 'big')
+            with patch.object(run.time, 'monotonic_ns', side_effect=clock):
+                capture, objects = self.capture_final_check_control(
+                    Path(tmp), cross, execution_error=run.BeforeSpawn('phase', clock()))
+            self.assertEqual(capture['stop_reason'], 'phase')
+            self.assertGreaterEqual(capture['measured_phase_end_ns'], capture['measured_phase_deadline_ns'])
+            self.assertEqual(capture['measured_phase_deadline_ns']-capture['measured_phase_start_ns'], 1800*10**9)
+            sampler = capture['host']['sampler']
+            self.assertTrue(sampler['reaped'])
+            self.assertIsNotNone(sampler['failure'])
+            self.assertEqual(objects.get(sampler['raw']), (objects.root / 'workspace/host.jsonl').read_bytes())
+            analyze.check_host(capture, objects)
+            analyze.check_phase(capture)
+
+
     def test_sampler_readiness_denial_reaps_child_and_closes_descriptors(self):
         from unittest.mock import patch
         with tempfile.TemporaryDirectory() as tmp:

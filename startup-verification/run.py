@@ -757,20 +757,32 @@ def capture(args, prep):
         receipt['failure'] = str(error)
         raise
     finally:
-        if sampler is not None:
-            receipt['host']['sampler'] = finish_sampler(sampler, objects)
-            receipt['host']['samples'] = receipt['host']['sampler']['samples']
-            if receipt['host']['sampler']['failure'] is not None or receipt['host']['sampler']['exit'] != 0:
-                receipt['stop_reason'] = receipt['stop_reason'] or 'host'
-        receipt['seed_after'] = observe_seeds(args.prepared, prep, objects)
-        completed_phase = 'warmup' if phase_deadline is None else 'measured'
-        storage_observation(completed_phase, 'end')
-        if phase_deadline is None:
-            receipt['warmup_end_ns'] = time.monotonic_ns()
-        receipt['measured_phase_end_ns'] = time.monotonic_ns() if phase_deadline is not None else None
-        if phase_deadline is not None and receipt['measured_phase_end_ns'] >= phase_deadline and receipt['stop_reason'] is None:
-            receipt['stop_reason'] = 'phase'
-        persist()
+        try:
+            receipt['seed_after'] = observe_seeds(args.prepared, prep, objects)
+            completed_phase = 'warmup' if phase_deadline is None else 'measured'
+            if storage_observation(completed_phase, 'end') >= BUDGET-RESERVE:
+                receipt['stop_reason'] = receipt['stop_reason'] or 'storage'
+        except KeyboardInterrupt:
+            receipt['stop_reason'] = receipt['stop_reason'] or 'interruption'
+            raise
+        except BaseException as error:
+            receipt['stop_reason'] = receipt['stop_reason'] or 'infrastructure'
+            receipt.setdefault('failure', str(error))
+            raise
+        finally:
+            # Final seed/accounting checks are phase work. The sampler remains
+            # owned until they finish or fail, including cancellation paths.
+            if sampler is not None:
+                receipt['host']['sampler'] = finish_sampler(sampler, objects)
+                receipt['host']['samples'] = receipt['host']['sampler']['samples']
+                if receipt['host']['sampler']['failure'] is not None or receipt['host']['sampler']['exit'] != 0:
+                    receipt['stop_reason'] = receipt['stop_reason'] or 'host'
+            if phase_deadline is None:
+                receipt['warmup_end_ns'] = time.monotonic_ns()
+            receipt['measured_phase_end_ns'] = time.monotonic_ns() if phase_deadline is not None else None
+            if phase_deadline is not None and receipt['measured_phase_end_ns'] >= phase_deadline and receipt['stop_reason'] is None:
+                receipt['stop_reason'] = 'phase'
+            persist()
     require(receipt['stop_reason'] is None, 'partial capture: '+str(receipt['stop_reason']))
 
 

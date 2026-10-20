@@ -427,6 +427,15 @@ KILL is reported as such, never as cleaned up or successful. A self-pipe wakes
 the sampler on shutdown so it can record a final observation without sleeping
 through the grace period. Already-exited and forced samplers fail host monitoring.
 
+Sampling remains active during final seed observation and storage accounting.
+Shutdown follows those checks, and the measured endpoint follows sampler reaping;
+all of this work remains subject to the unchanged phase cap. A nested cleanup
+path shuts down the owned sampler and persists raw evidence and a partial receipt
+if a final check raises or is interrupted. Earlier failure classifications and
+messages are retained. Final storage exhaustion also stops the attempt.
+If final seed observation fails, the missing seed evidence remains missing; the
+partial receipt does not establish complete replay acceptance.
+
 Measured entries, a sampler, or any non-null measured-phase endpoint require all
 three integer start/deadline/end fields. The deadline is exactly 1,800 seconds
 after start. Command and monitor observations must lie within that phase; warmups
@@ -445,6 +454,15 @@ native performance experiments. Offline replay also checks original-source
 native receipts and complete/censored-prefix synthetic captures. Retained receipts
 keep their collection-time source identity; they do not establish full corrected-
 source native acceptance.
+
+The integrated capture regression uses one tiny synthetic SQLite fixture, synthetic
+host counters and a real one-second sampler. It stops at the synthetic execution
+boundary before any product invocation, delays final seed observation by three
+seconds, and checks the retained frames with the actual host verifier. Separate
+controls raise or interrupt final checks, preserve an earlier failure, and cross
+the exact phase deadline using a shared synthetic clock. The clock-jump control
+retains the sampler's real delay failure and the earlier phase-stop classification.
+These partial receipts do not establish native success or performance.
 
 The retained native smoke passed 39 of 40 gates. The final `s8-e257-t1` status
 command remains timeout-censored under the unchanged ten-second deadline. Its

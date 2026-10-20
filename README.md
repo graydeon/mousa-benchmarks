@@ -14,6 +14,11 @@ failure; its complete archive exceeds the frozen 4 MiB cap. The
 [revision checks and unresolved publication proposals](startup-verification/README.md#revision-checks-and-retained-holds)
 do not authorize a new capture or a performance claim.
 
+Host sampling now includes final seed checks and storage accounting, with owned
+sampler cleanup and partial-receipt persistence when those checks fail or are
+interrupted. Synthetic producer controls check finalization coverage; they do
+not replace native acceptance or the collection/publication holds.
+
 ## Current evidence boundary
 
 The [native enforcement archive](results/2026-10-11-native-supersession-enforcement-corrected)
