@@ -1,12 +1,15 @@
 # Supersession history and fresh-process command cost
 
-**proposed; not executed; requires review before collection**
+**Runner implementation; measured collection NOT RUN.**
 
-This is a benchmark protocol, not a product/domain schema, an implemented runner,
-or a performance result. [protocol.json](protocol.json) records the proposed
-workload, schedule, bounds and receipts. All preparation, behavior, timing,
-replay and negative-control cases below are **NOT RUN** in this proposal.
-Independent review must accept an immutable version before collection.
+[PR31](https://github.com/graydeon/mousa-benchmarks/pull/31) accepted this protocol
+at commit `b45f720f9d0164b9dabfd5714a3cda32fa07073d`. The historical proposal
+fields in [protocol.json](protocol.json) remain byte-identical, with SHA-256
+`72fc39d6e8f46466ff39293f6246a44cd0409ba467b405046d2d23026f0169b2`.
+The stdlib tools below implement native preparation, unmeasured smoke calls,
+receipt replay and disposable controls. Implementation review precedes a separate
+authorized capture at the final reviewed public runner revision. No performance
+archive or startup-cost result is supplied by this implementation.
 
 ## Question and evidence boundary
 
@@ -18,7 +21,7 @@ time, and differences between operations must not be subtracted to estimate it.
 No old-versus-new speedup, complexity class, optimization adoption threshold or
 capacity guarantee is being tested.
 
-The proposed product is commit `ff80838c607ab8cde5b89376b9a9f44c1deb13cf`, tree
+The pinned product is commit `ff80838c607ab8cde5b89376b9a9f44c1deb13cf`, tree
 `5c18c9d14248c693759f20c93d47d84da98b691f`. Build one clean checkout with Go
 1.27.1 and cached, verified module dependencies, using:
 
@@ -262,7 +265,7 @@ invalidate the sample and are terminated with its process group. RSS is peak
 resident memory, not Go allocations, heap size or simultaneous process-tree sum.
 Go allocation counts remain unmeasured and unclaimed.
 
-| Bound | Proposed value | Treatment |
+| Bound | Accepted value | Treatment |
 |---|---|---|
 | Timed command deadline | 10 seconds from pre-spawn monotonic timestamp | At deadline SIGTERM process group, after 1 second SIGKILL if needed, reap; record timeout and actual termination delay |
 | Measured-phase cap | 1,800 seconds | Includes trial resets, checks and host sampling, but not preparation or the 80 warmups; cancel active child as above |
@@ -332,7 +335,9 @@ Each future table/plot is derived from raw samples, never hand-entered conclusio
 Do not pool source counts, trail counts or operations. Descriptive median/range
 and individual observations do not establish asymptotic complexity or causation.
 
-Before collection, implement these acceptance cases; every row is **NOT RUN**:
+The implementation must satisfy these acceptance cases. Native preparation,
+smoke and controls are separate from the 80 warmups and 400 recorded trials;
+the latter remain **NOT RUN** until a separately authorized collection:
 
 | Case | Required detector/acceptance |
 |---|---|
@@ -347,7 +352,7 @@ Before collection, implement these acceptance cases; every row is **NOT RUN**:
 | Startup-schema refusal | Disposable copy with foreign application_id: both commands exit nonzero without successful payload or repair; classified outside success timings |
 | Deadline, cap, storage and interruption | Controlled wrapper/harness injections exercise cancellation/reaping, raw retention and NOT RUN remainder, outside measured trials |
 | Exit and monitor mechanics | A controlled child exit wakes a control-only 1,000ms pidfd poll without waiting out that timeout; missing support rejects preflight; replay rejects changed mechanism/cadence or missing wait/deadline/storage records |
-| Read-only physical boundary | Main-file or logical changes fail; any WAL/SHM sidecar lifecycle is retained separately for get and status without switching the product open mode |
+| Operation-specific physical boundary | Main-file changes fail for declaration-get; physical-only status changes pass. Logical/canonical/schema changes fail for both; retain every sidecar observation without switching open mode |
 | Ordinary controls | Untouched replay and harmless JSON key-order change for status pass; declaration byte-order changes do not |
 
 Controls never modify the accepted binary or production history. SQL damage/write
@@ -393,40 +398,210 @@ membership, not measured conclusions or this proposal's semantics. A later runne
 must verify raw receipts independently and register the dated result manifest
 using existing conventions. This design adds no result directory or archive.
 
-## Implementation handoff and review
+## Tools and implementation review
 
-Proposed later files: `startup-verification/prepare.py`, `run.py`, `analyze.py`,
-`controls.py` and behavioral `test_protocol.py`, plus the one dated result directory
-and concise index links. Use standard-library facilities and existing archive tools;
-no new dependencies or engine changes. The following commands are proposed
-interfaces, **not commands available in this design PR**:
+`prepare.py` builds the pinned clean source and records native fixture creation.
+`run.py smoke` executes both operations once per fixture on fresh copies without
+requiring an idle host or reporting performance summaries. `run.py capture` is
+the separate measured entry point; do not invoke it as part of runner validation.
+`analyze.py verify` reconstructs gates from retained states and streams, rather
+than trusting success flags. `controls.py` regenerates receipt mutations and runs
+disposable write, schema and child-monitor controls. All tools use the standard
+library; `common.py` owns shared identity, serialization and archive rules.
+
+An unmeasured disposable Python child probes owned-child pidfd readiness and
+exact reaping before any product invocation. Missing or denied support fails
+preflight; its receipt is not a product startup observation.
+
+Replay can validate a retained failed smoke without treating the native attempt
+as successful. Its raw failure and explicit NOT RUN suffix remain intact; replay
+acceptance is evidence validation, not a native correctness or performance pass.
+
+### Revision checks and retained holds
+
+Sampler shutdown requests TERM, waits for pidfd readiness for at most one second,
+then sends KILL if needed and supervises readiness for one further second. Only a
+ready exact child enters blocking `wait4`. Receipts retain signals, polls, raw
+frames, exit, reaping and failures. A kernel task that remains unreapable after
+KILL is reported as such, never as cleaned up or successful. A self-pipe wakes
+the sampler on shutdown so it can record a final observation without sleeping
+through the grace period. Already-exited and forced samplers fail host monitoring.
+
+Sampling remains active during final seed observation and storage accounting.
+Shutdown follows those checks, and the measured endpoint follows sampler reaping;
+all of this work remains subject to the unchanged phase cap. A nested cleanup
+path shuts down the owned sampler and persists raw evidence and a partial receipt
+if a final check raises or is interrupted. Earlier failure classifications and
+messages are retained. Final storage exhaustion also stops the attempt.
+If final seed observation fails, the missing seed evidence remains missing; the
+partial receipt does not establish complete replay acceptance.
+
+Measured entries, a sampler, or any non-null measured-phase endpoint require all
+three integer start/deadline/end fields. The deadline is exactly 1,800 seconds
+after start. Command and monitor observations must lie within that phase; warmups
+must end before it. Attempts stopped before measurement remain a separate valid
+partial case. Raw host frames carry consecutive sequence numbers and a terminal
+sample taken after shutdown is requested. Replay binds those frames to sampler
+lifetime, phase edges and measured command intervals. The one-second cadence and
+existing two-second delay failure boundary are unchanged. Missing coverage can
+only survive as explicitly failed host evidence in a stopped attempt.
+
+The corrected controls exercise cooperative, already-exited and SIGSTOPed real
+samplers, exact reap/descriptor cleanup, temporary-SQLite physical-only and logical
+changes, typed/deleted phase provenance, and rehashed first/middle/last host
+truncations and inconsistent lifetime endpoints. They are unmeasured tests, not
+native performance experiments. Offline replay also checks original-source
+native receipts and complete/censored-prefix synthetic captures. Retained receipts
+keep their collection-time source identity; they do not establish full corrected-
+source native acceptance.
+
+The integrated capture regression uses one tiny synthetic SQLite fixture, synthetic
+host counters and a real one-second sampler. It stops at the synthetic execution
+boundary before any product invocation, delays final seed observation by three
+seconds, and checks the retained frames with the actual host verifier. Separate
+controls raise or interrupt final checks, preserve an earlier failure, and cross
+the exact phase deadline using a shared synthetic clock. The clock-jump control
+retains the sampler's real delay failure and the earlier phase-stop classification.
+These partial receipts do not establish native success or performance.
+
+The retained native smoke passed 39 of 40 gates. The final `s8-e257-t1` status
+command remains timeout-censored under the unchanged ten-second deadline. Its
+recorded wall interval is 10,003,275,936 ns; readiness followed the deadline by
+3,024,110 ns and reap followed readiness by 251,826 ns. The longest requested
+one-millisecond poll lasted 3,638,868 ns; maximum recorded storage-check delay was
+17,732,895 ns. The receipt reports 10.14152 seconds of per-child user plus system
+CPU. These records do not isolate engine work or establish idle-host performance.
+No favorable repeat was made.
+
+The retained lossless archive is 329,622,720 bytes against the 4,194,304-byte cap.
+Its 31,909 object members total 369,849,510 bytes. Native preparation's conservative
+reference closure accounts for 344,971,872 bytes in 31,682 members. Only one object
+(12,756 bytes) is outside the capture/schedule/preflight closure, so removing
+unreachable members cannot resolve the overflow and is not authorized evidence
+pruning. Gzipped preparation receipts account for 308,367,185 bytes and expand to
+2,949,722,000 bytes, including 2,937,140,016 canonical monitor bytes. A bounded
+12-receipt encoding experiment reconstructed every
+original gzip byte exactly, but joint compression used 1,407,822 bytes plus a
+length index versus 1,407,199 original bytes. It did not demonstrate savings.
+
+### Proposed publication amendment — not accepted
+
+Public export remains blocked before creating an archive. Complete build
+environments, build-info, mount/cgroup records, inventory names and raw errors
+can contain operational paths. Relative native argv does not make these other
+streams safe. The guard does not redact or rewrite historical evidence.
+
+The [public evidence proposal](PUBLIC_EVIDENCE_PROPOSAL.md) is **PROPOSED /
+NOT IMPLEMENTED / NOT RATIFIED**. It replaces the earlier projection outline
+with a field/consumer inventory, exact-versus-derived claims, public member layout,
+replay/control plan and explicit compatibility and capacity decisions for #39.
+It recommends controlled future execution with exact public trial/host/build
+bytes and a separately scoped preparation correctness record. Omitted preparation
+monitor history would remain operator-attested, not independently replayable.
+That reduction requires explicit ratification; it cannot satisfy v1's complete
+public replay claim or make unsafe historical records eligible.
+
+The proposal does not demonstrate compliance with the frozen archive cap.
+The retained 39/40 smoke timeout, oversized archive, unchanged protocol bytes,
+full local originals and collection hold remain. All proposed behavioral cases
+are NOT RUN. Export stays disabled; this documentation does not resolve #39
+or authorize implementation, new native acceptance or collection.
+
+
+Keep all output outside source checkouts. Use one dedicated campaign parent for
+`$PREP`, `$SMOKE` and `$CONTROLS`; the combined budget includes retained failed
+attempts and packaging. Preparation and output directories must be new. `$PRODUCT`
+must be an isolated clean public checkout at the exact product pin. Preparation
+builds the executable at `$BINARY`; an existing binary must match that build.
+Workspace accounting counts hard-linked file storage once and rejects symlinks.
+For unmeasured validation:
 
 ```sh
 python3 startup-verification/prepare.py --source "$PRODUCT" --binary "$BINARY" --protocol "$PROTOCOL" --output "$PREP"
 python3 startup-verification/run.py smoke --prepared "$PREP" --output "$SMOKE"
-python3 startup-verification/controls.py --prepared "$PREP" --output "$CONTROLS"
-python3 startup-verification/run.py capture --prepared "$PREP" --output "$CAPTURE"
-python3 startup-verification/analyze.py verify "$CAPTURE"
-python3 startup-verification/analyze.py summarize "$CAPTURE" --output "$REPORT"
+python3 startup-verification/controls.py --prepared "$PREP" --smoke "$SMOKE" --output "$CONTROLS"
+python3 startup-verification/analyze.py verify "$SMOKE"
+python3 startup-verification/analyze.py verify "$CONTROLS"
+python3 -m unittest discover -s startup-verification -p test_protocol.py -v
 python3 tools/verify_results.py
 ```
 
-One bounded later implementation/capture slice must:
+Pass `--smoke` to reuse the retained 40-call baseline. Without it, controls create
+their own unmeasured baseline. Controls also create explicitly labeled synthetic
+complete and censored-prefix inputs to exercise analysis. Their invented command
+outcomes and metrics are not native observations. Neither mode runs warmups or
+measured collection.
+Native control receipts are saved before validation so a failed control retains
+the actual attempt. An incomplete control run is not a control-suite pass.
 
-1. Pin the accepted immutable protocol; implement preparation and strict receipts.
-2. Exercise all acceptance rows with unmeasured smoke/control invocations; freeze
-   schedule and complete source/provenance receipts before collection.
-3. Collect once under fixed bounds, retaining failures and incomplete coverage;
-   never alter protocol/workload after outcomes.
-4. Replay from raw receipts, derive all outputs, run rehashed and actual-write
-   controls, measure publication size and publish the additive bounded evidence.
+To reuse a closed, uncensored native preparation prefix, pass
+`--reuse-prefix "$PRIOR_PREP"` to `prepare.py`. Both directories must share the
+same campaign parent, so prior failures remain in the combined storage budget.
+The tool revalidates pins, completed fixture states, exact invocation inputs and
+outputs, monitor records, and the live database against the last retained state.
+It records the original source/receipt identities, copies coherent fixture
+backups, and performs only the missing native suffix. By default a censored final
+invocation is refused. An explicit `--reuse-through ORDINAL` selects an earlier
+successful inclusive prefix and retains every later receipt, including failures,
+as separate bound evidence. The live database must still match the selected
+prefix's last state; changed state is refused. This is not measured-capture
+resumption.
 
-Review must decide whether to accept the proposed product/toolchain pin, final-tip
-v4 reference strategy, whole-process operations, seeded schedule, idle thresholds,
-stop-on-first-failure policy, incomplete-schedule cap and publication bounds.
-These are concrete proposed choices, not runtime options for an implementer to
-resolve after seeing data. Any change requires a reviewed protocol amendment before
-collection. Independent review is pending; self-review of this design is not
-ratification. Query latency, persistent MCP throughput, semantic/retrieval quality,
+The public packaging command currently fails closed:
+
+```sh
+python3 startup-verification/analyze.py pack "$SMOKE" --output "$SMOKE_ARCHIVE"
+# Refuses: public export blocked; no archive is created.
+```
+
+For an existing eligible archive, the offline extraction interface remains:
+
+```sh
+python3 startup-verification/analyze.py unpack "$SMOKE_ARCHIVE" --output "$SMOKE_REPLAY"
+```
+
+Keep each archive beside its `.members.json` file, outside the evidence directory
+but inside the campaign parent. Packaging and extraction account for existing
+campaign bytes as well as new output. A storage-bound partial archive is not
+replayable; original raw members remain complete after any refusal. No receipt
+fields or failures are pruned to fit. Complete logical states resolve through
+lossless row-trie members. Closed immutable receipt files can share local storage
+through hard links; public tar members are regular files, not link entries.
+
+Preparation invocation receipts use lossless `.json.gz` files; their complete
+decoded JSON includes every poll, deadline, storage observation and failure.
+Content references bind the compressed bytes, and semantic replay decodes them
+with the same strict JSON rules. Compression runs outside each child interval;
+it does not change requested monitoring cadences or relax either size bound.
+
+
+The capture and summary interfaces are available for a later, separately
+authorized collection, not for this unmeasured implementation check:
+
+```sh
+python3 startup-verification/run.py capture --prepared "$PREP" --output "$CAPTURE"
+python3 startup-verification/analyze.py verify "$CAPTURE"
+python3 startup-verification/analyze.py summarize "$CAPTURE" --output "$REPORT"
+python3 startup-verification/analyze.py pack "$CAPTURE" --output "$ARCHIVE"
+python3 startup-verification/analyze.py unpack "$ARCHIVE" --output "$REPLAY"
+```
+
+Retain raw receipts, including failures, before packaging. Each logical-state
+reference resolves to recoverable content-addressed bytes; hashes without the
+corresponding members are insufficient. Local seed databases and executables
+remain outside public result archives. Archive replay checks member path, type,
+size and hash separately from semantic receipt verification. The historical
+`tools/verify_results.py` remains an independent byte-integrity gate.
+
+The capture-time source members identify the actual tool bytes used by an
+uncommitted smoke. Later publication commits are separate identities; the runner
+does not predict its eventual commit. A measured capture uses a direct child
+directory of the preparation campaign parent and requires a clean public runner,
+an idle-host prerequisite and the frozen schedule and bounds above.
+Do not promote smoke durations or control-only timing into startup observations.
+
+Review the actual runner before collection. Any protocol change requires a
+reviewed amendment, not changed dimensions or outputs after observing results.
+Query latency, persistent MCP throughput, semantic/retrieval quality,
 GPU/inference, authentication, native-host acceptance, live stores and optimization
-remain out of scope. No behavior, timing or negative-control result is claimed.
+remain out of scope.

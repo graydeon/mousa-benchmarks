@@ -4,9 +4,22 @@ Public benchmark results, comparison dependencies, and reproduction guidance for
 
 These are development measurements, including failed experiments and limitations. They do not establish general superiority over other retrieval systems.
 
-The [supersession startup measurement protocol](startup-verification) is
-**proposed; not executed; requires review before collection**. It defines a
-CPU-only fresh-process native command study, not a runner or performance result.
+The [supersession startup study tools](startup-verification) implement the accepted
+CPU-only fresh-process protocol, native preparation, unmeasured smoke checks and
+receipt replay. **Measured collection NOT RUN**; implementation review precedes
+any separately authorized capture. Smoke and control timings are not performance results.
+Public startup evidence export currently fails closed. The
+[public evidence contract proposal](startup-verification/PUBLIC_EVIDENCE_PROPOSAL.md)
+is **PROPOSED / NOT IMPLEMENTED / NOT RATIFIED**; it does not authorize export
+or collection. The retained native smoke is 39/40 with a ten-second censored
+failure; its complete archive exceeds the frozen 4 MiB cap. The
+[revision checks and retained holds](startup-verification/README.md#revision-checks-and-retained-holds)
+remain unchanged.
+
+Host sampling now includes final seed checks and storage accounting, with owned
+sampler cleanup and partial-receipt persistence when those checks fail or are
+interrupted. Synthetic producer controls check finalization coverage; they do
+not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
