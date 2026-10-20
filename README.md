@@ -8,11 +8,13 @@ The [supersession startup study tools](startup-verification) implement the accep
 CPU-only fresh-process protocol, native preparation, unmeasured smoke checks and
 receipt replay. **Measured collection NOT RUN**; implementation review precedes
 any separately authorized capture. Smoke and control timings are not performance results.
-Public startup evidence export currently fails closed pending a reviewed provenance
-representation. The retained native smoke is 39/40 with a ten-second censored
+Public startup evidence export currently fails closed. The
+[public evidence contract proposal](startup-verification/PUBLIC_EVIDENCE_PROPOSAL.md)
+is **PROPOSED / NOT IMPLEMENTED / NOT RATIFIED**; it does not authorize export
+or collection. The retained native smoke is 39/40 with a ten-second censored
 failure; its complete archive exceeds the frozen 4 MiB cap. The
-[revision checks and unresolved publication proposals](startup-verification/README.md#revision-checks-and-retained-holds)
-do not authorize a new capture or a performance claim.
+[revision checks and retained holds](startup-verification/README.md#revision-checks-and-retained-holds)
+remain unchanged.
 
 Host sampling now includes final seed checks and storage accounting, with owned
 sampler cleanup and partial-receipt persistence when those checks fail or are

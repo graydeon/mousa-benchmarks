@@ -486,54 +486,26 @@ length index versus 1,407,199 original bytes. It did not demonstrate savings.
 
 ### Proposed publication amendment — not accepted
 
-Public export is blocked before creating an archive. Complete effective build
-environments, module/build output and build-info, mount/cgroup records and raw
-errors can contain operational paths. Native relative argv/environment values do
-not make the other provenance public-safe. The export guard refuses even a
-semantically valid capture; it does not redact, normalize, drop fields or rewrite
-historical execution. Local records and byte-level archive utilities remain
-available. This is partial mitigation of #39, not a public-safe capture format.
+Public export remains blocked before creating an archive. Complete build
+environments, build-info, mount/cgroup records, inventory names and raw errors
+can contain operational paths. Relative native argv does not make these other
+streams safe. The guard does not redact or rewrite historical evidence.
 
-A proposed versioned format would keep operational originals locally, publish a
-declared derived representation with an explicit field inventory and reasons for
-omissions, and bind it to original member hashes, source, build, environment and
-transformation identities. It must never claim to include omitted raw originals.
-For review, the proposed identifier is `mousa.startup.public_projection.v2`, with
-these explicit rules:
+The [public evidence proposal](PUBLIC_EVIDENCE_PROPOSAL.md) is **PROPOSED /
+NOT IMPLEMENTED / NOT RATIFIED**. It replaces the earlier projection outline
+with a field/consumer inventory, exact-versus-derived claims, public member layout,
+replay/control plan and explicit compatibility and capacity decisions for #39.
+It recommends controlled future execution with exact public trial/host/build
+bytes and a separately scoped preparation correctness record. Omitted preparation
+monitor history would remain operator-attested, not independently replayable.
+That reduction requires explicit ratification; it cannot satisfy v1's complete
+public replay claim or make unsafe historical records eligible.
 
-- Keep every original member locally, unchanged. A public inventory lists its
-  name, byte length, SHA-256, public/local-only classification and omission reason.
-- Keep public source/tree, protocol, executable, module-file and original build-
-  receipt hashes. Publish audited toolchain/module versions, target and build
-  flags as derived fields bound to that receipt, not as its raw replacement.
-- Keep original complete environment values local. Publish non-path values only
-  after audit; represent HOME, temporary, cache and tool-directory paths by
-  declared execution roles. Mark the role mapping as derived, not effective
-  execution values.
-- Keep raw mount/cgroup text local. Publish derived filesystem types, resource
-  limits, pressure and throttling observations, omitting path, device and host
-  identifiers. List every omitted raw field in the inventory.
-- Audit raw stdout/stderr and errors, including encoded bytes. Unsafe streams
-  stay local with their hashes and lengths; a public parsed outcome or error
-  category is explicitly derived and cannot certify raw-output equality.
-- Bind the projection to the original inventory and exact transformation source.
-  Refuse export on an unclassified field or unaudited stream. Do not claim the
-  projected archive independently replays assertions requiring local-only bytes.
-
-That last limitation conflicts with the current complete public replay contract;
-accepting this proposal would require an explicit versioned amendment.
-Alternatively, a separately authorized future preparation could use controlled
-public-safe execution paths and audited raw outputs, preserving truthful complete
-provenance. Both choices need independent review against the frozen complete-
-evidence requirement before export is re-enabled; neither is implemented or
-ratified here.
-
-Separately, review a versioned lossless container with byte-identical factoring
-of monitor records, snapshot rows and exact gzip reconstruction metadata. Retain
-every member's name, size and hash and demonstrate complete reconstruction before
-assessing size. The bounded encoding experiment is not proof that the complete
-archive can fit. No cap, protocol byte, raw-retention requirement or collection
-authorization changes with either proposal.
+The proposal does not demonstrate compliance with the frozen archive cap.
+The retained 39/40 smoke timeout, oversized archive, unchanged protocol bytes,
+full local originals and collection hold remain. All proposed behavioral cases
+are NOT RUN. Export stays disabled; this documentation does not resolve #39
+or authorize implementation, new native acceptance or collection.
 
 
 Keep all output outside source checkouts. Use one dedicated campaign parent for
