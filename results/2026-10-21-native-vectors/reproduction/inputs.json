@@ -1,0 +1,14 @@
+{
+  "initial": {
+    "cabinet.md": "Shield the specimen cabinet from heat.\n",
+    "copy.md": "Shield the specimen cabinet from heat.\n",
+    "transit.md": "The tram arrives at noon.\n"
+  },
+  "revised": "Move the cabinet to the replacement enclosure.\n",
+  "lexical_label": "frost",
+  "query_values": [
+    1,
+    0
+  ],
+  "scope": "Synthetic vectors; no model execution or retrieval-quality claim."
+}

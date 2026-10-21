@@ -2,6 +2,17 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Native caller-supplied vectors
+
+The [vector example instructions](native-vectors) build the exact public product
+head recorded in [the capture](results/2026-10-21-native-vectors/build.json), then
+run a bounded stdlib driver against fresh directory and JSONL stores. It exercises
+native input export, synthetic vector import, exact cosine queries, both packing
+policies, packet/trail readback, restart and stale-revision exclusion. It neither
+opens SQLite nor runs a model. Use absent output paths and preserve producing-run
+identities; a new directory root has different canonical pins. Archive verification
+checks file hashes separately from the driver's runtime behavior assertions.
+
 ## Startup runner validation
 
 The [supersession startup tools](startup-verification/README.md#tools-and-implementation-review)

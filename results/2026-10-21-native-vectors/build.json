@@ -1,0 +1,19 @@
+{
+  "head": "345127a7f87b8f9f4497725983b73dce072cd669",
+  "tree": "31f47f71c4ce4fd37454b456c8aa7177b338825b",
+  "cwd": "/tmp/mousa-vector-public-ykmvpz64/source",
+  "argv": [
+    "go",
+    "build",
+    "-o",
+    "/tmp/mousa-vector-public-ykmvpz64/mousa",
+    "./cmd/mousa"
+  ],
+  "environment": {
+    "GOWORK": "off",
+    "CGO_ENABLED": "0"
+  },
+  "stdout": "",
+  "stderr": "",
+  "exit": 0
+}
