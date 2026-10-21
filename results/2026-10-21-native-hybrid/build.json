@@ -1,0 +1,19 @@
+{
+  "head": "8abe7272e1adaa623478d0f7bcc950594c6d7fea",
+  "tree": "3f3e439f9a81aa9dffcb7c1ca03b414ac3c8aff6",
+  "cwd": "/tmp/mousa-public-hybrid-product",
+  "argv": [
+    "go",
+    "build",
+    "-o",
+    "/tmp/mousa-public-hybrid",
+    "./cmd/mousa"
+  ],
+  "environment": {
+    "GOWORK": "off",
+    "CGO_ENABLED": "0"
+  },
+  "stdout": "",
+  "stderr": "",
+  "exit": 0
+}
