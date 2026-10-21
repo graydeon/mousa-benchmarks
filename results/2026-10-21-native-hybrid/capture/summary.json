@@ -1,0 +1,39 @@
+{
+  "result": "PASS",
+  "calls": 34,
+  "sources": {
+    "jsonl": {
+      "space_id": "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "query_vector_id": "ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af",
+      "packets": {
+        "original": "2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3",
+        "exact-v1": "2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3"
+      },
+      "trails": {
+        "original": "5648aab5265579bf5e48bf700ea2d58aef9009ae815b03b99a89ad9ceb29d0f3",
+        "exact-v1": "aca8d150b667851f74263f308e68b056dd34ffab36f0a036296d2b0fc0e31626"
+      },
+      "lexical_selected": "lexical.md",
+      "vector_selected": "vector.md",
+      "hybrid_selected": "overlap.md",
+      "overlap_rrf": 0.03225806451612903
+    },
+    "directory": {
+      "space_id": "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "query_vector_id": "ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af",
+      "packets": {
+        "original": "3d4b41e618b96f0932c80b95430a88677f72d51e3350ad6ed2c0b9c671c0df24",
+        "exact-v1": "3d4b41e618b96f0932c80b95430a88677f72d51e3350ad6ed2c0b9c671c0df24"
+      },
+      "trails": {
+        "original": "fa4ec7ca120e7f8a9f82da67fa5571086b7606852e99797fa5d8c618ee9e58f4",
+        "exact-v1": "e5eab05b7e884ddd20614c2fa5691c53230f8fec9356bded136ec816348869ac"
+      },
+      "lexical_selected": "lexical.md",
+      "vector_selected": "vector.md",
+      "hybrid_selected": "overlap.md",
+      "overlap_rrf": 0.03225806451612903
+    }
+  },
+  "limits": "Synthetic native fusion arithmetic/protocol only; no model, quality or timing claim."
+}

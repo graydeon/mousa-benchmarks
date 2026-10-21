@@ -25,6 +25,14 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [native hybrid example](native-hybrid) combines lexical and supplied-vector
+branches with equal-weight RRF(k=60). Its
+[capture and independent fresh-store reproduction](results/2026-10-21-native-hybrid)
+show an overlapping second-ranked passage displacing either branch's first hit,
+both byte packers, explicit coverage and v6 history under fresh access.
+Synthetic vectors establish arithmetic/protocol behavior only; no model or
+retrieval-quality claim follows. The earlier vector-only capture keeps its own pin.
+
 The [native caller-supplied vector example](native-vectors) demonstrates directory
 and JSONL input export/import, exact cosine ordering, both byte-packing policies,
 v5 trail/packet readback and stale-revision exclusion. The

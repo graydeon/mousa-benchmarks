@@ -1,0 +1,631 @@
+[
+  {
+    "name": "jsonl/sync",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "sync",
+      "--source",
+      "synthetic-native-hybrid"
+    ],
+    "stdin": "{\"id\":\"overlap.md\",\"text\":\"Drain sockets before stopping the host.\"}\n{\"id\":\"vector.md\",\"text\":\"Radishes prefer damp soil.\"}\n{\"id\":\"lexical.md\",\"text\":\"Drain sockets.\"}\n",
+    "stdout": "{\n  \"source\": \"synthetic-native-hybrid\",\n  \"input\": \"jsonl\",\n  \"segment_policy\": \"fixed-v1\",\n  \"added\": [\n    \"overlap.md\",\n    \"vector.md\",\n    \"lexical.md\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 4096,\n  \"elapsed_seconds\": 0.067495896\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/inputs",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "vector",
+      "inputs",
+      "--source",
+      "synthetic-native-hybrid"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"schema\": \"mousa.embedding_inputs.v1\",\n  \"decision_id\": \"a3024b87153a80d845a1ce985e4467d40b40642d0f99b8014f7fa1eb666b4b40\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"passages\": [\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n      \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n      \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"item\": \"lexical.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 14,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets.\"\n    },\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n      \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\"\n    },\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n      \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/import",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "vector",
+      "import",
+      "--source",
+      "synthetic-native-hybrid"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_import.v1\",\"space\":{\"schema\":\"mousa.vector_space.v1\",\"provider\":\"synthetic\",\"model\":\"hybrid-arithmetic\",\"version\":\"1\",\"dimensions\":2,\"metric\":\"cosine\"},\"embeddings\":[{\"source_id\":\"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\"segment_id\":\"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\"representation_id\":\"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\"representation_sha256\":\"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\"content_sha256\":\"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\"values\":[0,1]},{\"source_id\":\"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\"segment_id\":\"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\"representation_id\":\"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\"representation_sha256\":\"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\"content_sha256\":\"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\"values\":[1,0]}]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_import_result.v1\",\n  \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n  \"imported\": 2\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/lexical",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid",
+      "Drain"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"query\": \"Drain\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"drain\\\"\",\n  \"request_id\": \"ecdd1cb32e88c9e5856737ccc98809e14022f2a1a41c58ac776d03eb4195d467\",\n  \"decision_id\": \"d5ef05189232e3e05ef69bbac70b25ac9d2dfec6024570e2522db8bd598853e3\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1792620353956386,\n  \"trail_id\": \"c20b412cca090957b849248b2c12b2b3182f8e07e676e1dec192688e843538c3\",\n  \"packet_id\": \"2b55d1ea22e0c6aecc18cc1a91167e36b152d7e7fdc22a12a6c781893dd70315\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 2,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 1,\n  \"used_bytes\": 14,\n  \"budget_bytes\": 40,\n  \"evidence\": [\n    {\n      \"item\": \"lexical.md\",\n      \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n      \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n      \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"byte_start\": 0,\n      \"byte_end\": 14,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.0000012571428571428573,\n      \"byte_length\": 14,\n      \"text\": \"Drain sockets.\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 59458\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/vector",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--vector-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n  \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n  \"decision_id\": \"b9a061af18d99278c466c4b41822b3375f9ef27b1f5e42a94ad7957a8a4a78c8\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"94a7764e6abf4540e5aff02e77e7f7199e94597b5d3ceb2e85077a5b704993dd\",\n  \"packet_id\": \"6a980b2ee774f549fdcbdface6350d2b4ae768209400e577c1f27150fb15541a\",\n  \"eligible\": 3,\n  \"indexed\": 2,\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"original\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 26,\n  \"evidence\": [\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n      \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/original/hybrid",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "original",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"decision_id\": \"3f3c41cc7d9cb324f113ee9afb65846f29faf8623f3ee11c32726ea131bb555b\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"4c9ef84b1af416b6d0f1faa15acb22a7615a74d512772c01729ff939939043cf\",\n  \"packet_id\": \"2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n        \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -8.301886792452831e-7\n        },\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n        },\n        \"rrf\": 0.03225806451612903\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n        \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000012571428571428573\n        },\n        \"rrf\": 0.01639344262295082\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"original\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 39,\n  \"evidence\": [\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n      \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\",\n      \"rank\": 1,\n      \"rrf\": 0.03225806451612903,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -8.301886792452831e-7\n      },\n      \"vector\": {\n        \"rank\": 2,\n        \"cosine\": 0,\n        \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/original/trail",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "trail",
+      "--source",
+      "synthetic-native-hybrid",
+      "4c9ef84b1af416b6d0f1faa15acb22a7615a74d512772c01729ff939939043cf"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-native-hybrid\",\n  \"trail_id\": \"4c9ef84b1af416b6d0f1faa15acb22a7615a74d512772c01729ff939939043cf\",\n  \"authorization_decision_id\": \"39d6970d7fdfd31784e0af953096643a7f8f0eba3b77afa6e460bdb580494b61\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"4c9ef84b1af416b6d0f1faa15acb22a7615a74d512772c01729ff939939043cf\",\n    \"request_id\": \"7ef695c929571f303c5492d1d3a5c7d11e9452236c1b4c0f1c41b6263b8a240a\",\n    \"decision_id\": \"3f3c41cc7d9cb324f113ee9afb65846f29faf8623f3ee11c32726ea131bb555b\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"expression\": \"\\\"drain\\\"\",\n    \"budget_bytes\": 40,\n    \"used_bytes\": 39,\n    \"packet_id\": \"2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"rank\": 2,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"rank\": 3,\n        \"text_bytes\": 14,\n        \"selected\": false,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v6\",\n    \"packing_policy\": \"original\",\n    \"hybrid\": {\n      \"query\": \"Drain Drain\",\n      \"term_policy\": \"dedup\",\n      \"terms\": [\n        \"\\\"drain\\\"\"\n      ],\n      \"fusion_policy\": \"rrf-equal-k60-v1\",\n      \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"hybrid-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 2,\n      \"candidates\": [\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n          \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n          \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"lexical\": {\n            \"rank\": 2,\n            \"bm25\": -8.301886792452831e-7\n          },\n          \"vector\": {\n            \"rank\": 2,\n            \"cosine\": 0,\n            \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n          },\n          \"rrf\": 0.03225806451612903\n        },\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n          \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n          \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"vector\": {\n            \"rank\": 1,\n            \"cosine\": 1,\n            \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n          },\n          \"rrf\": 0.01639344262295082\n        },\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n          \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n          \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"lexical\": {\n            \"rank\": 1,\n            \"bm25\": -0.0000012571428571428573\n          },\n          \"rrf\": 0.01639344262295082\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/exact-v1/hybrid",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"decision_id\": \"21a774227a90dbe94279bafc584d661dfa09109f6efe956d93fa4fa702616de6\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf\",\n  \"packet_id\": \"2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n        \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -8.301886792452831e-7\n        },\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n        },\n        \"rrf\": 0.03225806451612903\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n        \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000012571428571428573\n        },\n        \"rrf\": 0.01639344262295082\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 39,\n  \"evidence\": [\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n      \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\",\n      \"rank\": 1,\n      \"rrf\": 0.03225806451612903,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -8.301886792452831e-7\n      },\n      \"vector\": {\n        \"rank\": 2,\n        \"cosine\": 0,\n        \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/exact-v1/trail",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "trail",
+      "--source",
+      "synthetic-native-hybrid",
+      "b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-native-hybrid\",\n  \"trail_id\": \"b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf\",\n  \"authorization_decision_id\": \"43c6f5a0463cd1ad39f49c858f818f4199055bee490efe141e405754e02f46d0\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf\",\n    \"request_id\": \"91c1b28ac0ee921e1294c1ad46b4acd528b437cc5c5f8ccfb3ae883a65ed3f37\",\n    \"decision_id\": \"21a774227a90dbe94279bafc584d661dfa09109f6efe956d93fa4fa702616de6\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"expression\": \"\\\"drain\\\"\",\n    \"budget_bytes\": 40,\n    \"used_bytes\": 39,\n    \"packet_id\": \"2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"rank\": 2,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      },\n      {\n        \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"rank\": 3,\n        \"text_bytes\": 14,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v6\",\n    \"packing_policy\": \"exact-v1\",\n    \"hybrid\": {\n      \"query\": \"Drain Drain\",\n      \"term_policy\": \"dedup\",\n      \"terms\": [\n        \"\\\"drain\\\"\"\n      ],\n      \"fusion_policy\": \"rrf-equal-k60-v1\",\n      \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"hybrid-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 2,\n      \"candidates\": [\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n          \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n          \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"lexical\": {\n            \"rank\": 2,\n            \"bm25\": -8.301886792452831e-7\n          },\n          \"vector\": {\n            \"rank\": 2,\n            \"cosine\": 0,\n            \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n          },\n          \"rrf\": 0.03225806451612903\n        },\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n          \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n          \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"vector\": {\n            \"rank\": 1,\n            \"cosine\": 1,\n            \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n          },\n          \"rrf\": 0.01639344262295082\n        },\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n          \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n          \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"lexical\": {\n            \"rank\": 1,\n            \"bm25\": -0.0000012571428571428573\n          },\n          \"rrf\": 0.01639344262295082\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/restart",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"decision_id\": \"910704bfdbefbf6c0cbff4457aaea0d85bc16339a76844a303e1a6d7aa367827\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"a9eeab4148445195011806d17bc2644694a47cd43f9282f091f4a726a2ba0a33\",\n  \"packet_id\": \"2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n        \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -8.301886792452831e-7\n        },\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n        },\n        \"rrf\": 0.03225806451612903\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n        \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000012571428571428573\n        },\n        \"rrf\": 0.01639344262295082\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 39,\n  \"evidence\": [\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n      \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\",\n      \"rank\": 1,\n      \"rrf\": 0.03225806451612903,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -8.301886792452831e-7\n      },\n      \"vector\": {\n        \"rank\": 2,\n        \"cosine\": 0,\n        \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/no-lexical-match",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid",
+      "nonmatching"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"decision_id\": \"bd94add8a315b57fcf63794a7003bb07544448609ee38d85e6c605c951743c0c\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"be2428c8f9f144962835766c03a0a8826534cf36b9de77cbd2c05c32a5dd78b5\",\n  \"packet_id\": \"6a980b2ee774f549fdcbdface6350d2b4ae768209400e577c1f27150fb15541a\",\n  \"hybrid\": {\n    \"query\": \"nonmatching\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"nonmatching\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n        \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n        },\n        \"rrf\": 0.016129032258064516\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 26,\n  \"evidence\": [\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n      \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\",\n      \"rank\": 1,\n      \"rrf\": 0.01639344262295082,\n      \"vector\": {\n        \"rank\": 1,\n        \"cosine\": 1,\n        \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/revision",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "sync",
+      "--source",
+      "synthetic-native-hybrid"
+    ],
+    "stdin": "{\"id\":\"overlap.md\",\"text\":\"Drain replacement.\"}\n",
+    "stdout": "{\n  \"source\": \"synthetic-native-hybrid\",\n  \"input\": \"jsonl\",\n  \"segment_policy\": \"fixed-v1\",\n  \"updated\": [\n    \"overlap.md\"\n  ],\n  \"total_items\": 1,\n  \"store_bytes\": 532480,\n  \"elapsed_seconds\": 0.166596426\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/after-revision",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"decision_id\": \"ffaa7d75db1061bd51e3d385bf8701fe344583cc9a7e80b7c559f7b2aed6b3ad\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"9a0f5517a6ae099936c87b18adc5565b5122f6a5dda7f8d39dff5df76e6bf363\",\n  \"packet_id\": \"36de2d78a712aaba843d5b71d07165925a02165786de7bdcaa2d27c70f7bb2d8\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 1,\n    \"candidates\": [\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"df9a5be704515665d9c6eaaeea5bc39f666aa084439e3497af309d8c86f66650\",\n        \"representation_id\": \"71d45c43e30d0c4a5a67ed808616e6901cd2a231e926fb9a6956c9f7fe9ca5d9\",\n        \"representation_sha256\": \"d576c7639b8ce8d53c9a4fbfbec5e6be481d3d7c80afded55af6559321be4e21\",\n        \"content_sha256\": \"d576c7639b8ce8d53c9a4fbfbec5e6be481d3d7c80afded55af6559321be4e21\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000011139240506329113\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n        \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n        \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -0.0000011139240506329113\n        },\n        \"rrf\": 0.016129032258064516\n      }\n    ]\n  },\n  \"missing\": 2,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 40,\n  \"evidence\": [\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n      \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\",\n      \"rank\": 1,\n      \"rrf\": 0.01639344262295082,\n      \"vector\": {\n        \"rank\": 1,\n        \"cosine\": 1,\n        \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n      }\n    },\n    {\n      \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n      \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n      \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n      \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"item\": \"lexical.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 14,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets.\",\n      \"rank\": 3,\n      \"rrf\": 0.016129032258064516,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -0.0000011139240506329113\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/old-history",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "trail",
+      "--source",
+      "synthetic-native-hybrid",
+      "b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-native-hybrid\",\n  \"trail_id\": \"b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf\",\n  \"authorization_decision_id\": \"5cba67e2f58f533e41495f0c939675da644bc728d18322911076ff5626eb078f\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf\",\n    \"request_id\": \"91c1b28ac0ee921e1294c1ad46b4acd528b437cc5c5f8ccfb3ae883a65ed3f37\",\n    \"decision_id\": \"21a774227a90dbe94279bafc584d661dfa09109f6efe956d93fa4fa702616de6\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"expression\": \"\\\"drain\\\"\",\n    \"budget_bytes\": 40,\n    \"used_bytes\": 39,\n    \"packet_id\": \"2f14ad728634b5b33bdcd09209273a6317a5db258029b7a926b39594f6c313b3\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": false\n      },\n      {\n        \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"rank\": 2,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      },\n      {\n        \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"rank\": 3,\n        \"text_bytes\": 14,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v6\",\n    \"packing_policy\": \"exact-v1\",\n    \"hybrid\": {\n      \"query\": \"Drain Drain\",\n      \"term_policy\": \"dedup\",\n      \"terms\": [\n        \"\\\"drain\\\"\"\n      ],\n      \"fusion_policy\": \"rrf-equal-k60-v1\",\n      \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"hybrid-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 2,\n      \"candidates\": [\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"e4afeb20d44a9dde3f2bb3fa074f9330fca9b501d62be39af081289847fa2e75\",\n          \"representation_id\": \"229068c5f14dfbf8952334603f76bc7ab44755789e577787626591fa0d0722bb\",\n          \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"lexical\": {\n            \"rank\": 2,\n            \"bm25\": -8.301886792452831e-7\n          },\n          \"vector\": {\n            \"rank\": 2,\n            \"cosine\": 0,\n            \"embedding_id\": \"d514da1c958c22bed74e6cba12c483a120232a3b076703ee746d71261574c202\"\n          },\n          \"rrf\": 0.03225806451612903\n        },\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"68638397a7bdd87782d3eaca7570fab408174e0ac1b550c72eafc5b333f7e0ad\",\n          \"representation_id\": \"e9458e458d11b5262117cc2ee422486a5e912badf38a239bb045f8974f6bc549\",\n          \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"vector\": {\n            \"rank\": 1,\n            \"cosine\": 1,\n            \"embedding_id\": \"2a3af83fe519ec6188bfd7d6b3ab87625d5ba4040f07d9784ef313c002b28aa6\"\n          },\n          \"rrf\": 0.01639344262295082\n        },\n        {\n          \"source_id\": \"07058856dea78b604660d9c9ee763539a0d9f691334c47e04b371d5bfa7de98a\",\n          \"segment_id\": \"eb5c019c63878dd2049c94ca54a61e0b37413290a1641db0c39b8026b511f384\",\n          \"representation_id\": \"21e4165d5278a5e7dddbe5513f0be4bb19b4e59a72b4f18ec145959ee19d9987\",\n          \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"lexical\": {\n            \"rank\": 1,\n            \"bm25\": -0.0000012571428571428573\n          },\n          \"rrf\": 0.01639344262295082\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/deny",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "access",
+      "--source",
+      "synthetic-native-hybrid",
+      "deny"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-native-hybrid\",\n  \"effect\": \"deny\",\n  \"binding_id\": \"eacd8650f0a3849ad239d8b56d1af4f023703dc7b467d85b3a10b2a5b7b95429\",\n  \"activation_id\": \"9f626ebed897782796f0f58e7d42fa4edced8f4685cdc0f10e32af5b30aae99c\",\n  \"changed\": true\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/denied-query",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "--source",
+      "synthetic-native-hybrid",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"synthetic-native-hybrid\",\n  \"decision_id\": \"1d3604c554fd8dd5337e1d4b0abbff39c7c920945ec73c73b708644c7fe39a05\",\n  \"decision_outcome\": \"deny\",\n  \"decision_reasons\": [\n    \"policy_deny\"\n  ],\n  \"trail_id\": \"a6b6c72b1917c5680e75ead610e366883c9a7e387902d13ddba02e3917bad1e3\",\n  \"packet_id\": \"1accc0cdae6459bab239df81e5daec8addf3289606833ad0544448b0c1f08f70\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 0,\n    \"indexed\": 0,\n    \"candidates\": []\n  },\n  \"missing\": 0,\n  \"outcome\": \"policy_excluded\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 0,\n  \"evidence\": []\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/denied-history",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/jsonl.sqlite",
+      "trail",
+      "--source",
+      "synthetic-native-hybrid",
+      "b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-native-hybrid\",\n  \"trail_id\": \"b2ba0bb997bb70e4dc6ed0ea7db0d69510fb7dc37de7670a6115ebbeb9252dbf\",\n  \"authorization_decision_id\": \"cfa3f43346b92b0f67e048b78f669440a95d67e3871bf4b2d93203446ecdb4e3\",\n  \"authorization_outcome\": \"deny\",\n  \"authorization_reasons\": [\n    \"policy_deny\"\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/sync",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "sync",
+      "/tmp/mousa-public-hybrid-poqomrey/documents"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"input\": \"directory\",\n  \"root\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"segment_policy\": \"fixed-v1\",\n  \"added\": [\n    \"lexical.md\",\n    \"overlap.md\",\n    \"vector.md\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 4096,\n  \"elapsed_seconds\": 0.063453518\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/inputs",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "vector",
+      "inputs",
+      "/tmp/mousa-public-hybrid-poqomrey/documents"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"schema\": \"mousa.embedding_inputs.v1\",\n  \"decision_id\": \"ecef3e28735e1d41a0338d9420d6e441d37c037337b1cd280a155734dcb859f9\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"passages\": [\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n      \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n      \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"item\": \"lexical.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 14,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets.\"\n    },\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n      \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\"\n    },\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n      \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/import",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "vector",
+      "import",
+      "/tmp/mousa-public-hybrid-poqomrey/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_import.v1\",\"space\":{\"schema\":\"mousa.vector_space.v1\",\"provider\":\"synthetic\",\"model\":\"hybrid-arithmetic\",\"version\":\"1\",\"dimensions\":2,\"metric\":\"cosine\"},\"embeddings\":[{\"source_id\":\"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\"segment_id\":\"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\"representation_id\":\"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\"representation_sha256\":\"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\"content_sha256\":\"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\"values\":[0,1]},{\"source_id\":\"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\"segment_id\":\"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\"representation_id\":\"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\"representation_sha256\":\"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\"content_sha256\":\"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\"values\":[1,0]}]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_import_result.v1\",\n  \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n  \"imported\": 2\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/lexical",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "Drain"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"query\": \"Drain\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"drain\\\"\",\n  \"request_id\": \"4155b3e52adcc94079d21d8409bec5bc6a2093a85b240758f141608772ac7a4e\",\n  \"decision_id\": \"0380011d00d913c446bed7f4526ba5106d8119bdff5e2c3749b88d88a6b6a3b9\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1792620356262722,\n  \"trail_id\": \"255c043e7e9980ae317f530658cd0a9b5fea788d692a16a0a192605de3c33631\",\n  \"packet_id\": \"0319a95d7c6bce4c58c4e8e026ceb8c73b656f1213ffceb3ff928ffa09d1a466\",\n  \"outcome\": \"evidence\",\n  \"matched_candidates\": 2,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 1,\n  \"used_bytes\": 14,\n  \"budget_bytes\": 40,\n  \"evidence\": [\n    {\n      \"item\": \"lexical.md\",\n      \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n      \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n      \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"byte_start\": 0,\n      \"byte_end\": 14,\n      \"segment_policy\": \"fixed-v1\",\n      \"rank\": 1,\n      \"bm25_score\": -0.0000012571428571428573,\n      \"byte_length\": 14,\n      \"text\": \"Drain sockets.\",\n      \"origin\": \"lexical\"\n    }\n  ],\n  \"latency_micros\": 58574\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/vector",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--vector-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n  \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n  \"decision_id\": \"bab4505415f292d528a50911aa7713009c9544787916afa7e8025c05dbcf7cb3\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"611604a16160e44464ab3f0ee77a7c19651dc175158821073806e4de067255ec\",\n  \"packet_id\": \"210d75df94ad615d38b1e8eee412e817008d1f1c9ca05529baefb0b990fff2ec\",\n  \"eligible\": 3,\n  \"indexed\": 2,\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"original\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 26,\n  \"evidence\": [\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n      \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/original/hybrid",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "original",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"decision_id\": \"8a299319c175c93b2ea5efcc2d5e096ad16bbe04b796aa4651b319df166a0a14\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"22cafb75c2b0e6b5d4106c59995732e29839e5ef349687d49cd7eb1c0348c80c\",\n  \"packet_id\": \"44bc4de93d030c9794e8305a21663e2d56e115c412f2979750d34fe7bce6baff\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n        \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -8.301886792452831e-7\n        },\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n        },\n        \"rrf\": 0.03225806451612903\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n        \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000012571428571428573\n        },\n        \"rrf\": 0.01639344262295082\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"original\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 39,\n  \"evidence\": [\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n      \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\",\n      \"rank\": 1,\n      \"rrf\": 0.03225806451612903,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -8.301886792452831e-7\n      },\n      \"vector\": {\n        \"rank\": 2,\n        \"cosine\": 0,\n        \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/original/trail",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "trail",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "22cafb75c2b0e6b5d4106c59995732e29839e5ef349687d49cd7eb1c0348c80c"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"trail_id\": \"22cafb75c2b0e6b5d4106c59995732e29839e5ef349687d49cd7eb1c0348c80c\",\n  \"authorization_decision_id\": \"4c4d4273635b082473a3a9c32d2fbda5a17437d0bbeabfb396907eb77ecdf3ba\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"22cafb75c2b0e6b5d4106c59995732e29839e5ef349687d49cd7eb1c0348c80c\",\n    \"request_id\": \"3b73b56e513cb8108fd303e1a4185ba2b17c7758fb7b67b0693798cb5a427a10\",\n    \"decision_id\": \"8a299319c175c93b2ea5efcc2d5e096ad16bbe04b796aa4651b319df166a0a14\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"expression\": \"\\\"drain\\\"\",\n    \"budget_bytes\": 40,\n    \"used_bytes\": 39,\n    \"packet_id\": \"44bc4de93d030c9794e8305a21663e2d56e115c412f2979750d34fe7bce6baff\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"rank\": 2,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"rank\": 3,\n        \"text_bytes\": 14,\n        \"selected\": false,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v6\",\n    \"packing_policy\": \"original\",\n    \"hybrid\": {\n      \"query\": \"Drain Drain\",\n      \"term_policy\": \"dedup\",\n      \"terms\": [\n        \"\\\"drain\\\"\"\n      ],\n      \"fusion_policy\": \"rrf-equal-k60-v1\",\n      \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"hybrid-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 2,\n      \"candidates\": [\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n          \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n          \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"lexical\": {\n            \"rank\": 2,\n            \"bm25\": -8.301886792452831e-7\n          },\n          \"vector\": {\n            \"rank\": 2,\n            \"cosine\": 0,\n            \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n          },\n          \"rrf\": 0.03225806451612903\n        },\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n          \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n          \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"vector\": {\n            \"rank\": 1,\n            \"cosine\": 1,\n            \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n          },\n          \"rrf\": 0.01639344262295082\n        },\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n          \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n          \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"lexical\": {\n            \"rank\": 1,\n            \"bm25\": -0.0000012571428571428573\n          },\n          \"rrf\": 0.01639344262295082\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/exact-v1/hybrid",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"decision_id\": \"0acbd920b14821360df5b59ea9805c29885422746f89332192516724a52fb7cd\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec\",\n  \"packet_id\": \"44bc4de93d030c9794e8305a21663e2d56e115c412f2979750d34fe7bce6baff\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n        \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -8.301886792452831e-7\n        },\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n        },\n        \"rrf\": 0.03225806451612903\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n        \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000012571428571428573\n        },\n        \"rrf\": 0.01639344262295082\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 39,\n  \"evidence\": [\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n      \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\",\n      \"rank\": 1,\n      \"rrf\": 0.03225806451612903,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -8.301886792452831e-7\n      },\n      \"vector\": {\n        \"rank\": 2,\n        \"cosine\": 0,\n        \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/exact-v1/trail",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "trail",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"trail_id\": \"e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec\",\n  \"authorization_decision_id\": \"67ee012c7f61ee460f3800c910fde130c6026fa7ca519ab23767f8ea4a5fe2af\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec\",\n    \"request_id\": \"05700abf23c319ecbb4fa7e540a7c9bc67a319dcda61c4082d2d30ffd37404af\",\n    \"decision_id\": \"0acbd920b14821360df5b59ea9805c29885422746f89332192516724a52fb7cd\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"expression\": \"\\\"drain\\\"\",\n    \"budget_bytes\": 40,\n    \"used_bytes\": 39,\n    \"packet_id\": \"44bc4de93d030c9794e8305a21663e2d56e115c412f2979750d34fe7bce6baff\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"rank\": 2,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      },\n      {\n        \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"rank\": 3,\n        \"text_bytes\": 14,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v6\",\n    \"packing_policy\": \"exact-v1\",\n    \"hybrid\": {\n      \"query\": \"Drain Drain\",\n      \"term_policy\": \"dedup\",\n      \"terms\": [\n        \"\\\"drain\\\"\"\n      ],\n      \"fusion_policy\": \"rrf-equal-k60-v1\",\n      \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"hybrid-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 2,\n      \"candidates\": [\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n          \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n          \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"lexical\": {\n            \"rank\": 2,\n            \"bm25\": -8.301886792452831e-7\n          },\n          \"vector\": {\n            \"rank\": 2,\n            \"cosine\": 0,\n            \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n          },\n          \"rrf\": 0.03225806451612903\n        },\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n          \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n          \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"vector\": {\n            \"rank\": 1,\n            \"cosine\": 1,\n            \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n          },\n          \"rrf\": 0.01639344262295082\n        },\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n          \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n          \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"lexical\": {\n            \"rank\": 1,\n            \"bm25\": -0.0000012571428571428573\n          },\n          \"rrf\": 0.01639344262295082\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/restart",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"decision_id\": \"4075019a9ad181f419a5147643c1a2ebf20cd8a4725b13d6d40e6019ab142c43\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"89849848dc3dd569e4cb199de28d275a11101b5ce73750e06c0868e15fa61955\",\n  \"packet_id\": \"44bc4de93d030c9794e8305a21663e2d56e115c412f2979750d34fe7bce6baff\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n        \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -8.301886792452831e-7\n        },\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n        },\n        \"rrf\": 0.03225806451612903\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n        \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000012571428571428573\n        },\n        \"rrf\": 0.01639344262295082\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 39,\n  \"evidence\": [\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n      \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n      \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n      \"item\": \"overlap.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets before stopping the host.\",\n      \"rank\": 1,\n      \"rrf\": 0.03225806451612903,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -8.301886792452831e-7\n      },\n      \"vector\": {\n        \"rank\": 2,\n        \"cosine\": 0,\n        \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/no-lexical-match",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "nonmatching"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"decision_id\": \"88e3946b5411bd0633f74cf4910a4dfd516a39c48122bbbe868fd1e8e0acb63d\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"1423ff7698e4a846f5d2828bc10e7c336ec285233fa8efbab17a6c85b77c99d7\",\n  \"packet_id\": \"210d75df94ad615d38b1e8eee412e817008d1f1c9ca05529baefb0b990fff2ec\",\n  \"hybrid\": {\n    \"query\": \"nonmatching\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"nonmatching\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 2,\n    \"candidates\": [\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n        \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n        \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"vector\": {\n          \"rank\": 2,\n          \"cosine\": 0,\n          \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n        },\n        \"rrf\": 0.016129032258064516\n      }\n    ]\n  },\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 26,\n  \"evidence\": [\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n      \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\",\n      \"rank\": 1,\n      \"rrf\": 0.01639344262295082,\n      \"vector\": {\n        \"rank\": 1,\n        \"cosine\": 1,\n        \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/revision",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "sync",
+      "/tmp/mousa-public-hybrid-poqomrey/documents"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"input\": \"directory\",\n  \"root\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"segment_policy\": \"fixed-v1\",\n  \"updated\": [\n    \"overlap.md\"\n  ],\n  \"unchanged\": [\n    \"lexical.md\",\n    \"vector.md\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 532480,\n  \"elapsed_seconds\": 0.168124219\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/after-revision",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"decision_id\": \"7ed840aae3d059c0dcc995f3d4b2e114d4f95386293d694e2e796104570becb3\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"ab65c7a7a4535abfad2ef6a3d4511667be0a21553963e8c1360f865ad3c03cf6\",\n  \"packet_id\": \"35edfd33f0620f7d54689e79f24c132a1c7947a08a96f7080c7c0d95d5658eb3\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 3,\n    \"indexed\": 1,\n    \"candidates\": [\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n        \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"vector\": {\n          \"rank\": 1,\n          \"cosine\": 1,\n          \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"695e44a0054033f4192498bb280a046cd159bef47a3c538b94907657478ea822\",\n        \"representation_id\": \"37dd999bc168012e38060928bc41f2330438fc5ef4ab46eea55e15ef41f3ca8f\",\n        \"representation_sha256\": \"d576c7639b8ce8d53c9a4fbfbec5e6be481d3d7c80afded55af6559321be4e21\",\n        \"content_sha256\": \"d576c7639b8ce8d53c9a4fbfbec5e6be481d3d7c80afded55af6559321be4e21\",\n        \"lexical\": {\n          \"rank\": 1,\n          \"bm25\": -0.0000011139240506329113\n        },\n        \"rrf\": 0.01639344262295082\n      },\n      {\n        \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n        \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n        \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n        \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"lexical\": {\n          \"rank\": 2,\n          \"bm25\": -0.0000011139240506329113\n        },\n        \"rrf\": 0.016129032258064516\n      }\n    ]\n  },\n  \"missing\": 2,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 40,\n  \"evidence\": [\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n      \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n      \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n      \"item\": \"vector.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Radishes prefer damp soil.\",\n      \"rank\": 1,\n      \"rrf\": 0.01639344262295082,\n      \"vector\": {\n        \"rank\": 1,\n        \"cosine\": 1,\n        \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n      }\n    },\n    {\n      \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n      \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n      \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n      \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n      \"item\": \"lexical.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 14,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Drain sockets.\",\n      \"rank\": 3,\n      \"rrf\": 0.016129032258064516,\n      \"lexical\": {\n        \"rank\": 2,\n        \"bm25\": -0.0000011139240506329113\n      }\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/old-history",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "trail",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"trail_id\": \"e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec\",\n  \"authorization_decision_id\": \"7c4bca03daa595ba4f01ebacf5d546cccb3611ec3d62c3cc609a3be0fc42585d\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec\",\n    \"request_id\": \"05700abf23c319ecbb4fa7e540a7c9bc67a319dcda61c4082d2d30ffd37404af\",\n    \"decision_id\": \"0acbd920b14821360df5b59ea9805c29885422746f89332192516724a52fb7cd\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"expression\": \"\\\"drain\\\"\",\n    \"budget_bytes\": 40,\n    \"used_bytes\": 39,\n    \"packet_id\": \"44bc4de93d030c9794e8305a21663e2d56e115c412f2979750d34fe7bce6baff\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n        \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": false\n      },\n      {\n        \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n        \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n        \"rank\": 2,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      },\n      {\n        \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n        \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n        \"rank\": 3,\n        \"text_bytes\": 14,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"budget\"\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v6\",\n    \"packing_policy\": \"exact-v1\",\n    \"hybrid\": {\n      \"query\": \"Drain Drain\",\n      \"term_policy\": \"dedup\",\n      \"terms\": [\n        \"\\\"drain\\\"\"\n      ],\n      \"fusion_policy\": \"rrf-equal-k60-v1\",\n      \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"hybrid-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 2,\n      \"candidates\": [\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"6cdf3f6cbd9ba6e6ba7bac006381ec8e2cf8fd7076cbd810c90cb0f540ea7c2a\",\n          \"representation_id\": \"6d592cabeb3c333375de0350dab4fed907e7c7113da282ca2302ff01b1881986\",\n          \"representation_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"content_sha256\": \"28751eb13ec04b256e1a72441686f45dc1fc734fbc25a300f4657189424c9cf4\",\n          \"lexical\": {\n            \"rank\": 2,\n            \"bm25\": -8.301886792452831e-7\n          },\n          \"vector\": {\n            \"rank\": 2,\n            \"cosine\": 0,\n            \"embedding_id\": \"c47b0568e3bb1074852b4564b67964bbd1ce560115987cfc3376cdc0d77f2b8a\"\n          },\n          \"rrf\": 0.03225806451612903\n        },\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"268aba62f29d29157edc3dd7aea980a9fd511bc721e402f6566c308b6005fe81\",\n          \"representation_id\": \"13236b72fdae0ee5b052763e8aacbcdc5a73e545205c9abedd25fd733a592bf1\",\n          \"representation_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"content_sha256\": \"7f05c93f4446c1f91675f7ae08f5dc9ea082590628b3fee0366441a7e866faf8\",\n          \"vector\": {\n            \"rank\": 1,\n            \"cosine\": 1,\n            \"embedding_id\": \"954da30810bc6f6c94b03bdb8cc11f83514307a431089ce465b02889a1567c42\"\n          },\n          \"rrf\": 0.01639344262295082\n        },\n        {\n          \"source_id\": \"857a8056decaa3d364dbdd23059328d0274da5e716b04df3fd4a945f2cad6340\",\n          \"segment_id\": \"6c7539bcb5a760e18bbf86600be3d94d227ea09565cb354f6fc05cbd18f0e715\",\n          \"representation_id\": \"c1eff352299865d75e649a48ae7fbc71703305a012721d530587f13724a0feed\",\n          \"representation_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"content_sha256\": \"2f75d4268510cb07329077b3b969e66bca252632afa70fbce8499efd533e8bcb\",\n          \"lexical\": {\n            \"rank\": 1,\n            \"bm25\": -0.0000012571428571428573\n          },\n          \"rrf\": 0.01639344262295082\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/deny",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "access",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "deny"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"effect\": \"deny\",\n  \"binding_id\": \"fe303003f14b5f9ba3f68251c30ca9bf99c8cda575bab16f2ce640cbb28747f7\",\n  \"activation_id\": \"ec196811ff2e5c5a1083e0582224c186127727ecb5cf772d578be7c9fe16d8ef\",\n  \"changed\": true\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/denied-query",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "query",
+      "--hybrid-space",
+      "a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e",
+      "--policy",
+      "dedup",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "40",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "Drain Drain"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.hybrid_result.v1\",\n  \"mode\": \"hybrid\",\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"decision_id\": \"8ad2433a1dc4ff15cdd1572e0d3d48219c12adff829718a1e72a96e9952afb34\",\n  \"decision_outcome\": \"deny\",\n  \"decision_reasons\": [\n    \"policy_deny\"\n  ],\n  \"trail_id\": \"df52acec648775c4102529022b7039a2b96664e6e35ff40183a5c984bd1c4e8b\",\n  \"packet_id\": \"1accc0cdae6459bab239df81e5daec8addf3289606833ad0544448b0c1f08f70\",\n  \"hybrid\": {\n    \"query\": \"Drain Drain\",\n    \"term_policy\": \"dedup\",\n    \"terms\": [\n      \"\\\"drain\\\"\"\n    ],\n    \"fusion_policy\": \"rrf-equal-k60-v1\",\n    \"space_id\": \"a6055ddd072e41910baced8e5838601fd48f680b5bbe9a3c161cad3d8cdbbe9e\",\n    \"space\": {\n      \"schema\": \"mousa.vector_space.v1\",\n      \"provider\": \"synthetic\",\n      \"model\": \"hybrid-arithmetic\",\n      \"version\": \"1\",\n      \"dimensions\": 2,\n      \"metric\": \"cosine\"\n    },\n    \"query_vector_id\": \"ac82b7c3e96c23e61c7d89601809db619fb46ee52559c0aa24ac5601305a15af\",\n    \"query_values\": [\n      1,\n      0\n    ],\n    \"eligible\": 0,\n    \"indexed\": 0,\n    \"candidates\": []\n  },\n  \"missing\": 0,\n  \"outcome\": \"policy_excluded\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 40,\n  \"used_bytes\": 0,\n  \"evidence\": []\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/denied-history",
+    "argv": [
+      "/tmp/mousa-public-hybrid",
+      "-store",
+      "/tmp/mousa-public-hybrid-poqomrey/directory.sqlite",
+      "trail",
+      "/tmp/mousa-public-hybrid-poqomrey/documents",
+      "e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-hybrid-poqomrey/documents\",\n  \"trail_id\": \"e89a720042d48902b2d1b3553fbd041fdd297e8985b8effe451170582fce03ec\",\n  \"authorization_decision_id\": \"bb7152fa073b361a756dd4905d260a915c723aab2ffb53c71a39f307ce7c3789\",\n  \"authorization_outcome\": \"deny\",\n  \"authorization_reasons\": [\n    \"policy_deny\"\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  }
+]

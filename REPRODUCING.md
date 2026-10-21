@@ -2,6 +2,18 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Native hybrid lexical/vector retrieval
+
+The [hybrid example](native-hybrid) builds the exact public head recorded in
+[the paired capture](results/2026-10-21-native-hybrid/build.json), then runs a
+small stdlib driver against fresh directory and JSONL stores. It compares real
+lexical-only, vector-only and fused selection, independently derives fixed RRF
+values with rational arithmetic, and checks both packers, restart, partial
+coverage, revision exclusion, producing v6 history and fresh denial. Capture and
+reproduction each retain all 34 command inputs/outputs/exits. This is not a model
+or quality study. Run `python3 tools/verify_results.py` separately for archived
+file integrity; hashes do not prove the driver's behavioral claims.
+
 ## Native caller-supplied vectors
 
 The [vector example instructions](native-vectors) build the exact public product

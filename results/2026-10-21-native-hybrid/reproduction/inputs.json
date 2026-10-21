@@ -1,0 +1,25 @@
+{
+  "initial": {
+    "overlap.md": "Drain sockets before stopping the host.",
+    "vector.md": "Radishes prefer damp soil.",
+    "lexical.md": "Drain sockets."
+  },
+  "query_text": "Drain",
+  "query_values": [
+    1,
+    0
+  ],
+  "vectors": {
+    "overlap.md": [
+      0,
+      1
+    ],
+    "vector.md": [
+      1,
+      0
+    ]
+  },
+  "fusion_policy": "rrf-equal-k60-v1",
+  "budget_bytes": 40,
+  "limits": "Synthetic arithmetic/protocol only; no model or quality acceptance."
+}
