@@ -25,6 +25,14 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [native caller-supplied vector example](native-vectors) demonstrates directory
+and JSONL input export/import, exact cosine ordering, both byte-packing policies,
+v5 trail/packet readback and stale-revision exclusion. The
+[capture and fresh-store reproduction](results/2026-10-21-native-vectors) retain
+the exact public product/build pins and raw native command receipts. Constructed
+vectors prove protocol/ranking arithmetic only; no model, semantic-quality,
+performance or model-window claim is made.
+
 The [directory supersession example and observations](directory-supersession)
 demonstrate ordinary Markdown/text directory queries with explicit native declaration
 and activation, unchanged default/false selection, both packing policies, producing

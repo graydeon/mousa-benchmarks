@@ -1,0 +1,472 @@
+[
+  {
+    "name": "jsonl/sync",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "sync",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"id\":\"cabinet.md\",\"text\":\"Shield the specimen cabinet from heat.\\r\\n\"}\n{\"id\":\"copy.md\",\"text\":\"Shield the specimen cabinet from heat.\\r\\n\"}\n{\"id\":\"transit.md\",\"text\":\"The tram arrives at noon.\\r\\n\"}\n",
+    "stdout": "{\n  \"source\": \"synthetic-vector-cabinet\",\n  \"input\": \"jsonl\",\n  \"segment_policy\": \"fixed-v1\",\n  \"added\": [\n    \"cabinet.md\",\n    \"copy.md\",\n    \"transit.md\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 4096,\n  \"elapsed_seconds\": 0.065941144\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/lexical-no-overlap",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "query",
+      "--source",
+      "synthetic-vector-cabinet",
+      "frost"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"query\": \"frost\",\n  \"source\": \"synthetic-vector-cabinet\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"frost\\\"\",\n  \"request_id\": \"a0273b8754b1addbda7b1a035bfa10383911dc666dbddbe75f2939bb69e7105b\",\n  \"decision_id\": \"02ec10e9507ea25501915bf35bbeff709908bcd012683e42ed9b047805754ac1\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1792617051753980,\n  \"trail_id\": \"5d2b557676289ea85ae1012b5360176bd19fd10233aa962f7dbc5a1b9fd9cb98\",\n  \"packet_id\": \"e51de44fc296b0c15677adccc354fac5e67c34456f84498fb0e1d9009c83b582\",\n  \"outcome\": \"no_matches\",\n  \"matched_candidates\": 0,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 0,\n  \"budget_bytes\": 8192,\n  \"evidence\": [],\n  \"latency_micros\": 50113\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/inputs",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "vector",
+      "inputs",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"schema\": \"mousa.embedding_inputs.v1\",\n  \"decision_id\": \"46c838e586af52e27bc0e548fb805f27fe670313a9d14935f45b813c656901a6\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"passages\": [\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n      \"representation_id\": \"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n      \"representation_id\": \"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n      \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/import",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "vector",
+      "import",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_import.v1\",\"space\":{\"schema\":\"mousa.vector_space.v1\",\"provider\":\"synthetic\",\"model\":\"cabinet-arithmetic\",\"version\":\"1\",\"dimensions\":2,\"metric\":\"cosine\"},\"embeddings\":[{\"source_id\":\"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\"segment_id\":\"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\"representation_id\":\"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\"segment_id\":\"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\"representation_id\":\"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\"segment_id\":\"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\"representation_id\":\"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\"representation_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"content_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"values\":[0,1]}]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_import_result.v1\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"imported\": 3\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/original/query",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "original",
+      "--budget-bytes",
+      "78",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"synthetic-vector-cabinet\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"ba0e983bc47492ed1274e0b3eca5f6d7d8ea7a1b295c88211210b520ab4e66ef\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"e9ebe4aa34e31f7ae40ba0d61d748abfa136a3f3292fc4218e1dfb7eda3fc326\",\n  \"packet_id\": \"4f819c85a515a88cc67d41b01d1e42f1036defd9b253f32a02c4d80fb2948ead\",\n  \"eligible\": 3,\n  \"indexed\": 3,\n  \"missing\": 0,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"original\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 78,\n  \"evidence\": [\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n      \"representation_id\": \"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"51f479c105bcaab74bbb5d62023d378579ebcdd685f23dd1d7abbddc10e0b124\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n      \"representation_id\": \"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 2,\n      \"cosine\": 1,\n      \"embedding_id\": \"ee4eba3b1133c42898d6410406a5d0260dc95d6f14ab4b6747e0fa888b78e107\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/original/trail",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "trail",
+      "--source",
+      "synthetic-vector-cabinet",
+      "e9ebe4aa34e31f7ae40ba0d61d748abfa136a3f3292fc4218e1dfb7eda3fc326"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-vector-cabinet\",\n  \"trail_id\": \"e9ebe4aa34e31f7ae40ba0d61d748abfa136a3f3292fc4218e1dfb7eda3fc326\",\n  \"authorization_decision_id\": \"123f7a054fb5e1a9e55642f02c7d90f6669cfc26198f128ff2725b71756a1be6\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"e9ebe4aa34e31f7ae40ba0d61d748abfa136a3f3292fc4218e1dfb7eda3fc326\",\n    \"request_id\": \"b43df10d9927f815e1d3a20bda4805e95f86cf2c4d9937e4feac878b725e8550\",\n    \"decision_id\": \"ba0e983bc47492ed1274e0b3eca5f6d7d8ea7a1b295c88211210b520ab4e66ef\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"budget_bytes\": 78,\n    \"used_bytes\": 78,\n    \"packet_id\": \"4f819c85a515a88cc67d41b01d1e42f1036defd9b253f32a02c4d80fb2948ead\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 2,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n        \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n        \"rank\": 3,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v5\",\n    \"packing_policy\": \"original\",\n    \"vector\": {\n      \"mode\": \"vector\",\n      \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"cabinet-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 3,\n      \"candidates\": [\n        {\n          \"embedding_id\": \"51f479c105bcaab74bbb5d62023d378579ebcdd685f23dd1d7abbddc10e0b124\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n          \"representation_id\": \"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"ee4eba3b1133c42898d6410406a5d0260dc95d6f14ab4b6747e0fa888b78e107\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n          \"representation_id\": \"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"ea70523c50ab79940b75f1037dfdaf726a535c8bb0aaef355c5d3fcb4d0c584f\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n          \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n          \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"cosine\": 0\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/exact-v1/query",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "78",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"synthetic-vector-cabinet\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"001e307c1f677195a4ac19c9475d633d281332402fde30fa53abcfb8dc46c92d\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"aab19ade661c305edce3a1f5550c5282e6a62b565d17c25659654497c74dfdb1\",\n  \"packet_id\": \"0be333619379660cdb69f264dd448da82bc6a3fd4e5f6864b52bf9b3cbff3684\",\n  \"eligible\": 3,\n  \"indexed\": 3,\n  \"missing\": 0,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 65,\n  \"evidence\": [\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n      \"representation_id\": \"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"51f479c105bcaab74bbb5d62023d378579ebcdd685f23dd1d7abbddc10e0b124\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n      \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\",\n      \"rank\": 3,\n      \"cosine\": 0,\n      \"embedding_id\": \"ea70523c50ab79940b75f1037dfdaf726a535c8bb0aaef355c5d3fcb4d0c584f\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/exact-v1/trail",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "trail",
+      "--source",
+      "synthetic-vector-cabinet",
+      "aab19ade661c305edce3a1f5550c5282e6a62b565d17c25659654497c74dfdb1"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-vector-cabinet\",\n  \"trail_id\": \"aab19ade661c305edce3a1f5550c5282e6a62b565d17c25659654497c74dfdb1\",\n  \"authorization_decision_id\": \"491ebacf4f994200cc3b6239b791bd8209f27097e05fca71fbfe386e769994ab\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"aab19ade661c305edce3a1f5550c5282e6a62b565d17c25659654497c74dfdb1\",\n    \"request_id\": \"2f6e9d33b3845b7780fbdd0410409ca33bc29a31490462819a162904145778ab\",\n    \"decision_id\": \"001e307c1f677195a4ac19c9475d633d281332402fde30fa53abcfb8dc46c92d\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"budget_bytes\": 78,\n    \"used_bytes\": 65,\n    \"packet_id\": \"0be333619379660cdb69f264dd448da82bc6a3fd4e5f6864b52bf9b3cbff3684\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 2,\n        \"text_bytes\": 39,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"duplicate\",\n        \"duplicate_of\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\"\n      },\n      {\n        \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n        \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n        \"rank\": 3,\n        \"text_bytes\": 26,\n        \"selected\": true,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v5\",\n    \"packing_policy\": \"exact-v1\",\n    \"vector\": {\n      \"mode\": \"vector\",\n      \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"cabinet-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 3,\n      \"candidates\": [\n        {\n          \"embedding_id\": \"51f479c105bcaab74bbb5d62023d378579ebcdd685f23dd1d7abbddc10e0b124\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n          \"representation_id\": \"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"ee4eba3b1133c42898d6410406a5d0260dc95d6f14ab4b6747e0fa888b78e107\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n          \"representation_id\": \"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"ea70523c50ab79940b75f1037dfdaf726a535c8bb0aaef355c5d3fcb4d0c584f\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n          \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n          \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"cosine\": 0\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/restart",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "78",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"synthetic-vector-cabinet\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"7838f5dc6b0dfe16efd2823c4e877080370954e7ca0bd1dcba9599c7e3ee380f\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"4689680c4ab417c61f1b995941d7389284212304da3b1d7a1ccf0c9f7b25c76f\",\n  \"packet_id\": \"0be333619379660cdb69f264dd448da82bc6a3fd4e5f6864b52bf9b3cbff3684\",\n  \"eligible\": 3,\n  \"indexed\": 3,\n  \"missing\": 0,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 65,\n  \"evidence\": [\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n      \"representation_id\": \"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"51f479c105bcaab74bbb5d62023d378579ebcdd685f23dd1d7abbddc10e0b124\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n      \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\",\n      \"rank\": 3,\n      \"cosine\": 0,\n      \"embedding_id\": \"ea70523c50ab79940b75f1037dfdaf726a535c8bb0aaef355c5d3fcb4d0c584f\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/revision-sync",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "sync",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"id\":\"cabinet.md\",\"text\":\"Move the cabinet to the replacement enclosure.\\n\"}\n",
+    "stdout": "{\n  \"source\": \"synthetic-vector-cabinet\",\n  \"input\": \"jsonl\",\n  \"segment_policy\": \"fixed-v1\",\n  \"updated\": [\n    \"cabinet.md\"\n  ],\n  \"total_items\": 1,\n  \"store_bytes\": 524288,\n  \"elapsed_seconds\": 0.131240478\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/after-revision",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "78",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"synthetic-vector-cabinet\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"31b8ff9be9eed1fe0153162dd3b61a5a2495c9c671cc2663f40d507bb70adbbd\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"ed25d1647cd918e5f016fc370a9d54d921def267630581da732820c62539869d\",\n  \"packet_id\": \"e81a7e65f57f38ff904d7a57f13c8569f486085d90ea88662922f19692ea19fc\",\n  \"eligible\": 3,\n  \"indexed\": 2,\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 65,\n  \"evidence\": [\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n      \"representation_id\": \"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"ee4eba3b1133c42898d6410406a5d0260dc95d6f14ab4b6747e0fa888b78e107\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n      \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\",\n      \"rank\": 2,\n      \"cosine\": 0,\n      \"embedding_id\": \"ea70523c50ab79940b75f1037dfdaf726a535c8bb0aaef355c5d3fcb4d0c584f\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/stale-import",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "vector",
+      "import",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_import.v1\",\"space\":{\"schema\":\"mousa.vector_space.v1\",\"provider\":\"synthetic\",\"model\":\"cabinet-arithmetic\",\"version\":\"1\",\"dimensions\":2,\"metric\":\"cosine\"},\"embeddings\":[{\"source_id\":\"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\"segment_id\":\"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\"representation_id\":\"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\"segment_id\":\"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\"representation_id\":\"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\"segment_id\":\"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\"representation_id\":\"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\"representation_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"content_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"values\":[0,1]}]}\n",
+    "stdout": "",
+    "stderr": "mousa: sqlite invalid_record: import embeddings: embedding source/segment/content pins do not match a current passage\n",
+    "exit": 1
+  },
+  {
+    "name": "jsonl/historical-after-revision",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "trail",
+      "--source",
+      "synthetic-vector-cabinet",
+      "aab19ade661c305edce3a1f5550c5282e6a62b565d17c25659654497c74dfdb1"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"synthetic-vector-cabinet\",\n  \"trail_id\": \"aab19ade661c305edce3a1f5550c5282e6a62b565d17c25659654497c74dfdb1\",\n  \"authorization_decision_id\": \"e709772d5a930857f41d9b7ff1a43f6446e142770b94e955b3bee0f00fa19f13\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"aab19ade661c305edce3a1f5550c5282e6a62b565d17c25659654497c74dfdb1\",\n    \"request_id\": \"2f6e9d33b3845b7780fbdd0410409ca33bc29a31490462819a162904145778ab\",\n    \"decision_id\": \"001e307c1f677195a4ac19c9475d633d281332402fde30fa53abcfb8dc46c92d\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"budget_bytes\": 78,\n    \"used_bytes\": 65,\n    \"packet_id\": \"0be333619379660cdb69f264dd448da82bc6a3fd4e5f6864b52bf9b3cbff3684\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": false\n      },\n      {\n        \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 2,\n        \"text_bytes\": 39,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"duplicate\",\n        \"duplicate_of\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\"\n      },\n      {\n        \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n        \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n        \"rank\": 3,\n        \"text_bytes\": 26,\n        \"selected\": true,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v5\",\n    \"packing_policy\": \"exact-v1\",\n    \"vector\": {\n      \"mode\": \"vector\",\n      \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"cabinet-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 3,\n      \"candidates\": [\n        {\n          \"embedding_id\": \"51f479c105bcaab74bbb5d62023d378579ebcdd685f23dd1d7abbddc10e0b124\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"60929e167be0ecb050f7fb6273ed1a58398308b9549b30ab65a44b868a2f06b2\",\n          \"representation_id\": \"cabfd35a857f89c1ff99d356b5e12c7c1ffbaa2b166388f264370caad79c1d94\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"ee4eba3b1133c42898d6410406a5d0260dc95d6f14ab4b6747e0fa888b78e107\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n          \"representation_id\": \"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"ea70523c50ab79940b75f1037dfdaf726a535c8bb0aaef355c5d3fcb4d0c584f\",\n          \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n          \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n          \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n          \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"cosine\": 0\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "jsonl/new-inputs",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/jsonl.sqlite",
+      "vector",
+      "inputs",
+      "--source",
+      "synthetic-vector-cabinet"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"schema\": \"mousa.embedding_inputs.v1\",\n  \"decision_id\": \"f8ef375096b3db6117c6cac2427054cbfb41ba7e415299fa673e0001bb68b51b\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"passages\": [\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"ae1a2082ef88c323077172fcef0248ebdd425edd428ead1c2d3f0f43dff226cf\",\n      \"representation_id\": \"b36b4936c4686b3788ac4457d1bc074e16403e3ce6cf18556291d230fefebe12\",\n      \"representation_sha256\": \"1c6b2c4f02bb8d3437fc4bb853881e99846dc609ef7e3743c2f8585eb7fe7d0a\",\n      \"content_sha256\": \"1c6b2c4f02bb8d3437fc4bb853881e99846dc609ef7e3743c2f8585eb7fe7d0a\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 47,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Move the cabinet to the replacement enclosure.\\n\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"febe8853d1494114bf4e619b38fa750668988d5a0b239069fed739201c31d76d\",\n      \"representation_id\": \"98ff448e431168e2bb90ba1a56f7888ab7750b2aab0a9a3778b264b3020f2140\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\"\n    },\n    {\n      \"source_id\": \"bca6d7bb22c44ded8381af9f755f7d68358d83f905031c34db6a4e6a02aeeef2\",\n      \"segment_id\": \"ddcd9ec239f25b9bcd7122e96c2a400d61cadeb3e5b186926d92ff6ef4d41912\",\n      \"representation_id\": \"1f5ad97baff579d8a95481fdbd866020756c804d823a08a38b17c2f94bd1db16\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/sync",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "sync",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"input\": \"directory\",\n  \"root\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"segment_policy\": \"fixed-v1\",\n  \"added\": [\n    \"cabinet.md\",\n    \"copy.md\",\n    \"transit.md\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 4096,\n  \"elapsed_seconds\": 0.072097619\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/lexical-no-overlap",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "query",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents",
+      "frost"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"query\": \"frost\",\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"query_policy\": \"original\",\n  \"expression\": \"\\\"frost\\\"\",\n  \"request_id\": \"46108edf80dcba65e8440bc4735f0652fb8e607608fcca568c45d9d6d3750834\",\n  \"decision_id\": \"6db9712a74e889f1bd3c76888169cb0ef765a02d12e742848b5ec30f98b896bd\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"evaluated_at_usec\": 1792617053352575,\n  \"trail_id\": \"dad63e0ea13dba6b0946c09f40c2d155207f645edfac812d23031314fd9cea82\",\n  \"packet_id\": \"e51de44fc296b0c15677adccc354fac5e67c34456f84498fb0e1d9009c83b582\",\n  \"outcome\": \"no_matches\",\n  \"matched_candidates\": 0,\n  \"candidate_limit\": 100,\n  \"lifecycle_excluded\": 0,\n  \"budget_omitted\": 0,\n  \"used_bytes\": 0,\n  \"budget_bytes\": 8192,\n  \"evidence\": [],\n  \"latency_micros\": 54099\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/inputs",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "vector",
+      "inputs",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"schema\": \"mousa.embedding_inputs.v1\",\n  \"decision_id\": \"43a10ebc973ce9ea6244a566b00c43732846fc431e28b67dcdff0c24efcb4a43\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"passages\": [\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n      \"representation_id\": \"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n      \"representation_id\": \"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n      \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/import",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "vector",
+      "import",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_import.v1\",\"space\":{\"schema\":\"mousa.vector_space.v1\",\"provider\":\"synthetic\",\"model\":\"cabinet-arithmetic\",\"version\":\"1\",\"dimensions\":2,\"metric\":\"cosine\"},\"embeddings\":[{\"source_id\":\"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\"segment_id\":\"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\"representation_id\":\"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\"segment_id\":\"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\"representation_id\":\"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\"segment_id\":\"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\"representation_id\":\"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\"representation_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"content_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"values\":[0,1]}]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_import_result.v1\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"imported\": 3\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/original/query",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "original",
+      "--budget-bytes",
+      "78",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"673a70f5e5eaef01500f4125188f2e761021aca60cfa81662065f60c953f00e2\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"e5d0fd5f09bf7cb07a7b8a11b92c5cd69f2095cd1148b520410f8cd0b90a1f55\",\n  \"packet_id\": \"f3332127d718ad2b81559e01a70d367fa8a0d9ce1f7ec434f6b593701d873fbe\",\n  \"eligible\": 3,\n  \"indexed\": 3,\n  \"missing\": 0,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"original\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 78,\n  \"evidence\": [\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n      \"representation_id\": \"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"5ca13f960b72734837bec52bfc47a0be2ecafd66f3cd2a0c4e9f1ae7cc7ed138\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n      \"representation_id\": \"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 2,\n      \"cosine\": 1,\n      \"embedding_id\": \"a9fc38271d6ad68aff44a8bfa9f9b9fa9959d5d9538d14d03d2c16102f1d69ff\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/original/trail",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "trail",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents",
+      "e5d0fd5f09bf7cb07a7b8a11b92c5cd69f2095cd1148b520410f8cd0b90a1f55"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"trail_id\": \"e5d0fd5f09bf7cb07a7b8a11b92c5cd69f2095cd1148b520410f8cd0b90a1f55\",\n  \"authorization_decision_id\": \"a0de82fce850bc6dc185bb9f3eac7f1a575970f7265f2eb1f3a3d5dc03c5107b\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"e5d0fd5f09bf7cb07a7b8a11b92c5cd69f2095cd1148b520410f8cd0b90a1f55\",\n    \"request_id\": \"226e5d9bcc24ae9e32b030753d3b50efd920547c098ce7fad8d6f28808a2a604\",\n    \"decision_id\": \"673a70f5e5eaef01500f4125188f2e761021aca60cfa81662065f60c953f00e2\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"budget_bytes\": 78,\n    \"used_bytes\": 78,\n    \"packet_id\": \"f3332127d718ad2b81559e01a70d367fa8a0d9ce1f7ec434f6b593701d873fbe\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 2,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n        \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n        \"rank\": 3,\n        \"text_bytes\": 26,\n        \"selected\": false,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v5\",\n    \"packing_policy\": \"original\",\n    \"vector\": {\n      \"mode\": \"vector\",\n      \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"cabinet-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 3,\n      \"candidates\": [\n        {\n          \"embedding_id\": \"5ca13f960b72734837bec52bfc47a0be2ecafd66f3cd2a0c4e9f1ae7cc7ed138\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n          \"representation_id\": \"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"a9fc38271d6ad68aff44a8bfa9f9b9fa9959d5d9538d14d03d2c16102f1d69ff\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n          \"representation_id\": \"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"7dda3064d91b158761a3e83720dd1f950163620e8e36d8c9967bc880e268c765\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n          \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n          \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"cosine\": 0\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/exact-v1/query",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "78",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"a4b5cfc1cb8709a9783b51a18c0dddd76456560a52a864ed5388c897b951866f\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"3385274df89c5805e79fd97667d28732f1b498a426af810d6bbb8958149107ab\",\n  \"packet_id\": \"2f840d3ce48a54197e020f793892bb2d6e04fcf1aea0d3f056585d58e164642e\",\n  \"eligible\": 3,\n  \"indexed\": 3,\n  \"missing\": 0,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 65,\n  \"evidence\": [\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n      \"representation_id\": \"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"5ca13f960b72734837bec52bfc47a0be2ecafd66f3cd2a0c4e9f1ae7cc7ed138\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n      \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\",\n      \"rank\": 3,\n      \"cosine\": 0,\n      \"embedding_id\": \"7dda3064d91b158761a3e83720dd1f950163620e8e36d8c9967bc880e268c765\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/exact-v1/trail",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "trail",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents",
+      "3385274df89c5805e79fd97667d28732f1b498a426af810d6bbb8958149107ab"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"trail_id\": \"3385274df89c5805e79fd97667d28732f1b498a426af810d6bbb8958149107ab\",\n  \"authorization_decision_id\": \"9b9fd0630254698a9007aba0194fbfd77cd9acf37226ebf617e0ad1fd6b9beff\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"3385274df89c5805e79fd97667d28732f1b498a426af810d6bbb8958149107ab\",\n    \"request_id\": \"f2d10424419449d4a50305246d89842854de7ae608e1855f29d2b75693bf7455\",\n    \"decision_id\": \"a4b5cfc1cb8709a9783b51a18c0dddd76456560a52a864ed5388c897b951866f\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"budget_bytes\": 78,\n    \"used_bytes\": 65,\n    \"packet_id\": \"2f840d3ce48a54197e020f793892bb2d6e04fcf1aea0d3f056585d58e164642e\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": true\n      },\n      {\n        \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 2,\n        \"text_bytes\": 39,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"duplicate\",\n        \"duplicate_of\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\"\n      },\n      {\n        \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n        \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n        \"rank\": 3,\n        \"text_bytes\": 26,\n        \"selected\": true,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v5\",\n    \"packing_policy\": \"exact-v1\",\n    \"vector\": {\n      \"mode\": \"vector\",\n      \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"cabinet-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 3,\n      \"candidates\": [\n        {\n          \"embedding_id\": \"5ca13f960b72734837bec52bfc47a0be2ecafd66f3cd2a0c4e9f1ae7cc7ed138\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n          \"representation_id\": \"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"a9fc38271d6ad68aff44a8bfa9f9b9fa9959d5d9538d14d03d2c16102f1d69ff\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n          \"representation_id\": \"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"7dda3064d91b158761a3e83720dd1f950163620e8e36d8c9967bc880e268c765\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n          \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n          \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"cosine\": 0\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/restart",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "78",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"9cf13378074a659292e035824f2f31fbd835a366063399795d87be74d65f9af3\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"fabb52b3ab50db56d96af6cdb20e312b0127fe219fa64ecc5a4fa59109f43f1d\",\n  \"packet_id\": \"2f840d3ce48a54197e020f793892bb2d6e04fcf1aea0d3f056585d58e164642e\",\n  \"eligible\": 3,\n  \"indexed\": 3,\n  \"missing\": 0,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 65,\n  \"evidence\": [\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n      \"representation_id\": \"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"5ca13f960b72734837bec52bfc47a0be2ecafd66f3cd2a0c4e9f1ae7cc7ed138\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n      \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\",\n      \"rank\": 3,\n      \"cosine\": 0,\n      \"embedding_id\": \"7dda3064d91b158761a3e83720dd1f950163620e8e36d8c9967bc880e268c765\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/revision-sync",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "sync",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"input\": \"directory\",\n  \"root\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"segment_policy\": \"fixed-v1\",\n  \"updated\": [\n    \"cabinet.md\"\n  ],\n  \"unchanged\": [\n    \"copy.md\",\n    \"transit.md\"\n  ],\n  \"total_items\": 3,\n  \"store_bytes\": 524288,\n  \"elapsed_seconds\": 0.141812541\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/after-revision",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "query",
+      "--vector-space",
+      "9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c",
+      "--packing-policy",
+      "exact-v1",
+      "--budget-bytes",
+      "78",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_query.v1\",\"values\":[1,0]}\n",
+    "stdout": "{\n  \"schema\": \"mousa.vector_result.v1\",\n  \"mode\": \"vector\",\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n  \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n  \"decision_id\": \"2d70739d9b5c95a9bdd880e19b8400b3d8cdbe0e56e368c1d2796245b4880092\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"trail_id\": \"45f042d4e7422108b3508641f35d81bb3ec2f9f172d80dd906b7641ecd620583\",\n  \"packet_id\": \"d2659b97447a41f42ad0a22604c905ede9d4da12a07217565b68d2da2a61197d\",\n  \"eligible\": 3,\n  \"indexed\": 2,\n  \"missing\": 1,\n  \"outcome\": \"evidence\",\n  \"packing_policy\": \"exact-v1\",\n  \"budget_bytes\": 78,\n  \"used_bytes\": 65,\n  \"evidence\": [\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n      \"representation_id\": \"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\",\n      \"rank\": 1,\n      \"cosine\": 1,\n      \"embedding_id\": \"a9fc38271d6ad68aff44a8bfa9f9b9fa9959d5d9538d14d03d2c16102f1d69ff\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n      \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\",\n      \"rank\": 2,\n      \"cosine\": 0,\n      \"embedding_id\": \"7dda3064d91b158761a3e83720dd1f950163620e8e36d8c9967bc880e268c765\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/stale-import",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "vector",
+      "import",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "{\"schema\":\"mousa.vector_import.v1\",\"space\":{\"schema\":\"mousa.vector_space.v1\",\"provider\":\"synthetic\",\"model\":\"cabinet-arithmetic\",\"version\":\"1\",\"dimensions\":2,\"metric\":\"cosine\"},\"embeddings\":[{\"source_id\":\"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\"segment_id\":\"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\"representation_id\":\"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\"segment_id\":\"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\"representation_id\":\"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\"representation_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"content_sha256\":\"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\"values\":[1,0]},{\"source_id\":\"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\"segment_id\":\"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\"representation_id\":\"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\"representation_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"content_sha256\":\"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\"values\":[0,1]}]}\n",
+    "stdout": "",
+    "stderr": "mousa: sqlite invalid_record: import embeddings: embedding source/segment/content pins do not match a current passage\n",
+    "exit": 1
+  },
+  {
+    "name": "directory/historical-after-revision",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "trail",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents",
+      "3385274df89c5805e79fd97667d28732f1b498a426af810d6bbb8958149107ab"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"source\": \"/tmp/mousa-public-native-vectors-s1b42r_c/documents\",\n  \"trail_id\": \"3385274df89c5805e79fd97667d28732f1b498a426af810d6bbb8958149107ab\",\n  \"authorization_decision_id\": \"170b3fdecbcf55f62c10df339e413c28542f2be2396114da0aa750088595e330\",\n  \"authorization_outcome\": \"allow\",\n  \"authorization_reasons\": [\n    \"allow\"\n  ],\n  \"historical\": {\n    \"id\": \"3385274df89c5805e79fd97667d28732f1b498a426af810d6bbb8958149107ab\",\n    \"request_id\": \"f2d10424419449d4a50305246d89842854de7ae608e1855f29d2b75693bf7455\",\n    \"decision_id\": \"a4b5cfc1cb8709a9783b51a18c0dddd76456560a52a864ed5388c897b951866f\",\n    \"decision_outcome\": \"allow\",\n    \"decision_reasons\": [\n      \"allow\"\n    ],\n    \"budget_bytes\": 78,\n    \"used_bytes\": 65,\n    \"packet_id\": \"2f840d3ce48a54197e020f793892bb2d6e04fcf1aea0d3f056585d58e164642e\",\n    \"lifecycle_excluded\": 0,\n    \"candidates\": [\n      {\n        \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 1,\n        \"text_bytes\": 39,\n        \"selected\": true,\n        \"indexed_now\": false\n      },\n      {\n        \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n        \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n        \"rank\": 2,\n        \"text_bytes\": 39,\n        \"selected\": false,\n        \"indexed_now\": true,\n        \"omission\": \"duplicate\",\n        \"duplicate_of\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\"\n      },\n      {\n        \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n        \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n        \"rank\": 3,\n        \"text_bytes\": 26,\n        \"selected\": true,\n        \"indexed_now\": true\n      }\n    ],\n    \"schema\": \"mousa.source_trail.v5\",\n    \"packing_policy\": \"exact-v1\",\n    \"vector\": {\n      \"mode\": \"vector\",\n      \"space_id\": \"9f6c651ba8231294ee029bd5160729975c81b66aba1873e84433fbc606dde60c\",\n      \"space\": {\n        \"schema\": \"mousa.vector_space.v1\",\n        \"provider\": \"synthetic\",\n        \"model\": \"cabinet-arithmetic\",\n        \"version\": \"1\",\n        \"dimensions\": 2,\n        \"metric\": \"cosine\"\n      },\n      \"query_vector_id\": \"8c90aba2d943de56b09d5249972c1d082f23f1eacf7b6fac260a5992a164078c\",\n      \"query_values\": [\n        1,\n        0\n      ],\n      \"eligible\": 3,\n      \"indexed\": 3,\n      \"candidates\": [\n        {\n          \"embedding_id\": \"5ca13f960b72734837bec52bfc47a0be2ecafd66f3cd2a0c4e9f1ae7cc7ed138\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"b9ee76e1b1ccf8913d398ee3d06a77b4f467e7f04b1d991c9ecf37cbcb284c6a\",\n          \"representation_id\": \"b3aa55dff8f2b20e4b79b7a7d3c729be9a78e95d808adb65f5216b586d4350d1\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"a9fc38271d6ad68aff44a8bfa9f9b9fa9959d5d9538d14d03d2c16102f1d69ff\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n          \"representation_id\": \"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\n          \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n          \"cosine\": 1\n        },\n        {\n          \"embedding_id\": \"7dda3064d91b158761a3e83720dd1f950163620e8e36d8c9967bc880e268c765\",\n          \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n          \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n          \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n          \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n          \"cosine\": 0\n        }\n      ]\n    }\n  }\n}\n",
+    "stderr": "",
+    "exit": 0
+  },
+  {
+    "name": "directory/new-inputs",
+    "argv": [
+      "/tmp/mousa-vector-public-ykmvpz64/mousa",
+      "-store",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/directory.sqlite",
+      "vector",
+      "inputs",
+      "/tmp/mousa-public-native-vectors-s1b42r_c/documents"
+    ],
+    "stdin": "",
+    "stdout": "{\n  \"schema\": \"mousa.embedding_inputs.v1\",\n  \"decision_id\": \"5b8a191ca21c74114c1dd9f394d58e498c61aef78f40b4b1ce09d74feae443fa\",\n  \"decision_outcome\": \"allow\",\n  \"decision_reasons\": [\n    \"allow\"\n  ],\n  \"passages\": [\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"38db4f925ef8a6eeb4f85497bdd01102a6e28cbdcf2fa925b5bb1afc6b221775\",\n      \"representation_id\": \"9f7d7378968957d8992896a306ddddc8eec86f8c2f30574a6d27d3f89de818b2\",\n      \"representation_sha256\": \"1c6b2c4f02bb8d3437fc4bb853881e99846dc609ef7e3743c2f8585eb7fe7d0a\",\n      \"content_sha256\": \"1c6b2c4f02bb8d3437fc4bb853881e99846dc609ef7e3743c2f8585eb7fe7d0a\",\n      \"item\": \"cabinet.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 47,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Move the cabinet to the replacement enclosure.\\n\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"d71e0f3cc6a5f78b7b65979bf5016ba1b22b9ba0598cb2f468ab34c0d0758aa6\",\n      \"representation_id\": \"76a51dde0de1e23974b30a01a6ebd44610b032fb54534fb544dd3f911fd6ceba\",\n      \"representation_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"content_sha256\": \"460afd8dcd100ddced7154c76480bf2e1b8c56ea40da8efc35e8be91b1e402f1\",\n      \"item\": \"copy.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 39,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"Shield the specimen cabinet from heat.\\n\"\n    },\n    {\n      \"source_id\": \"8ad4426a271e8302cfa52dc4594ee05c5a4f189be61ebb17acfd2d9b08f1daa8\",\n      \"segment_id\": \"ce63954b62dd783e3b92018d56938400b2a59e7fad7d27ca3ad0a16df2b4b664\",\n      \"representation_id\": \"b6032f3de2b9b339800b0f08423822418c546a00153a6485030f42f14ec6fb92\",\n      \"representation_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"content_sha256\": \"97e0e4c9a1f8b1dfb53d5a16e3e3c9efaa5bbbd2f3ef5345dffb29a85f74b9bf\",\n      \"item\": \"transit.md\",\n      \"byte_start\": 0,\n      \"byte_end\": 26,\n      \"segment_policy\": \"fixed-v1\",\n      \"text\": \"The tram arrives at noon.\\n\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "exit": 0
+  }
+]
