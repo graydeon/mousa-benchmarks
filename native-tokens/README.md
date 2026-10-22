@@ -105,4 +105,8 @@ The product's real SQLite regression establishes that internal mixed-source grap
 case; this driver neither copies that harness nor adds public derivation ingress.
 The [original observations](../results/2026-10-22-native-tokens) retain their
 `50a1b43` pin and all capture bytes; they predate the correction.
+The [final-pin observations](../results/2026-10-22-native-tokens-lifecycle-outcome)
+target the subsequent issue #86 lifecycle-outcome correction while preserving
+issue #85. Single-source captures do not prove the all-rejected ancestry outcome;
+the product's graph and native serializer regressions establish it.
 Startup study holds and failed historical observations are unchanged.

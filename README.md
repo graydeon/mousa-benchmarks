@@ -28,16 +28,18 @@ not replace native acceptance or the collection/publication holds.
 The [native token-packing example](native-tokens) selects whole passages against
 the exact returned rendered context, using an optional prepared official
 `tiktoken==0.12.0`/`o200k_base` backend. Its
-[corrected-public-head capture and fresh-store reproduction](results/2026-10-22-native-tokens-corrected)
+[final-public-head capture and fresh-store reproduction](results/2026-10-22-native-tokens-lifecycle-outcome)
 each record 48 native calls and 20 independent whole-rendering token checks,
 covering directory/JSONL lexical, vector and hybrid modes with both packers,
 token pressure, v7 history/recount and fresh denial. Counts cover returned
 context only, not unknown application/model framing; no quality or performance
 claim follows. Older captures and startup holds remain unchanged.
 The [original capture](results/2026-10-22-native-tokens) retains its `50a1b43`
-pin and bytes as historical observations. Neither single-source fixture proves
-mixed-ancestry lifecycle filtering: issue #85's graph case is covered by product
-regressions, while the corrected capture checks ordinary native compatibility.
+pin and the [projection-corrected capture](results/2026-10-22-native-tokens-corrected)
+retains `0d1768c`; all older result bytes remain historical observations.
+Single-source fixtures do not prove mixed-ancestry lifecycle filtering or the
+all-rejected outcome: issues #85/#86 are covered by product graph/serializer
+regressions. The final-pin capture checks ordinary native compatibility.
 
 The [native hybrid example](native-hybrid) combines lexical and supplied-vector
 branches with equal-weight RRF(k=60). Its
