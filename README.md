@@ -25,6 +25,17 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [MCP vector/hybrid client capture](mcp-retrieval) uses an operator-prepared
+synthetic space and explicit `mousa_vector_query` / `mousa_hybrid_query` tools.
+The [public-head capture and fresh-store reproduction](results/2026-10-22-mcp-retrieval)
+each retain 43 scheduled stdio requests across three sessions, raw responses/exits,
+native fixture preparation, known cosine/RRF selection and producing history
+identities. Recorded history remains unchanged after restart/revision replacement;
+fresh denial withholds evidence and history. Rehashed wrong-response/request controls
+fail their intended assertions. This establishes bounded arithmetic/protocol and
+authorization behavior, not semantic quality, model integration or performance.
+
+
 The [native token-packing example](native-tokens) selects whole passages against
 the exact returned rendered context, using an optional prepared official
 `tiktoken==0.12.0`/`o200k_base` backend. Its

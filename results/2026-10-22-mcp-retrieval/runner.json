@@ -1,0 +1,19 @@
+{
+  "files": {
+    "mcp-retrieval/capture.py": {
+      "bytes": 22753,
+      "sha256": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3"
+    },
+    "mcp-retrieval/baseline-discovery.json": {
+      "bytes": 31127,
+      "sha256": "d788be9e83cb2c919e30db05279ec338896d19246dd884fe5478eeba166c6e65"
+    },
+    "mcp-trail-supersession/run.py": {
+      "bytes": 37723,
+      "sha256": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+    }
+  },
+  "baseline_product_head": "2984a3b33ecc6a6b4bf85aee3a861abc8ce00459",
+  "baseline_product_tree": "215a2d1292f1a5083e650f4d9735252d8b28cff9",
+  "baseline_capture": "Accepted-main-tree actual executable discovery before production edits; original source enum retained; verifier substitutes only configured fixture enum for legacy definition comparison."
+}

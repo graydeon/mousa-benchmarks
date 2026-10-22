@@ -2,6 +2,19 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## MCP supplied-vector and hybrid queries
+
+The [MCP retrieval instructions](mcp-retrieval) build the exact public product head
+in [the paired archive](results/2026-10-22-mcp-retrieval/build.json), prepare embeddings
+with native commands, then negotiate and call stdio MCP without product imports
+or SQLite access. Use fresh output paths for independent stores. Replay `verify`
+checks scheduled request bytes, strict JSON types, discovered closed schemas,
+selected evidence and recorded producing history; `controls` regenerates coherently
+rehashed incorrect response/request cases and requires their intended detector.
+Run the exact archive verifier separately. These synthetic observations do not
+measure semantic retrieval quality, models, latency or token-window safety.
+
+
 ## Native token-aware context packing
 
 The [token example instructions](native-tokens) prepare an isolated official

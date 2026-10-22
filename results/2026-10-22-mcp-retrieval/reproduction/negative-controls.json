@@ -1,0 +1,14 @@
+[
+  {
+    "control": "wrong-selected-evidence",
+    "result": "PASS",
+    "detector": "selected-evidence",
+    "rehashed_capture_sha256": "4397c2fa961457a81a8b25c6d59755bcc81cec4a72bece3ffa91713a128886d2"
+  },
+  {
+    "control": "bool-query-number",
+    "result": "PASS",
+    "detector": "scheduled-request-bytes",
+    "rehashed_capture_sha256": "2e5fbef06065e370b391473416511a1947bf1921afe31267250a987f7413101d"
+  }
+]
