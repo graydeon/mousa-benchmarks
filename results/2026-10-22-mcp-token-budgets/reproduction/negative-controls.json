@@ -1,0 +1,20 @@
+[
+  {
+    "control": "altered-count",
+    "result": "PASS",
+    "detector": "official-whole-context-count",
+    "rehashed_capture_sha256": "bcfe745695879695cc89af2704d85fe4ebc83eb4902bc9a8355407826c0b4ed9"
+  },
+  {
+    "control": "altered-context",
+    "result": "PASS",
+    "detector": "returned-context-rendering",
+    "rehashed_capture_sha256": "8c0b4c30f0eaa2eaaef455b9385fe8443bd9b83ad6b49e4aad7614b7013ba0c7"
+  },
+  {
+    "control": "changed-scheduled-token-budget",
+    "result": "PASS",
+    "detector": "scheduled-request-bytes",
+    "rehashed_capture_sha256": "974f326ad1c88a58b062d840fdd8664195c6b8b97796b9de37f3af21c71c78c5"
+  }
+]

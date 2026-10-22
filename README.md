@@ -25,6 +25,18 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [MCP token-budget client](mcp-tokens) exercises all three query modes and both
+packers with an operator-prepared official offline tokenizer. Its
+[public-head capture and fresh-store reproduction](results/2026-10-22-mcp-token-budgets)
+each retain 107 scheduled requests, 104 raw responses and three process exits,
+with 45 independently counted whole contexts. Exact fit/one-token-short,
+reservations, byte constraints, omitted defaults, recorded token history after
+restart/replacement and fresh denial are checked. Rehashed altered count/context
+and scheduled-budget controls fail their intended assertions. Counts cover
+returned context only, not envelopes or unknown model framing; this is synthetic
+protocol/counting evidence, not semantic quality, model integration or performance.
+
+
 The [MCP vector/hybrid client capture](mcp-retrieval) uses an operator-prepared
 synthetic space and explicit `mousa_vector_query` / `mousa_hybrid_query` tools.
 The [public-head capture and fresh-store reproduction](results/2026-10-22-mcp-retrieval)

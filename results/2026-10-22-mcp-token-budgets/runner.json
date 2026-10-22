@@ -1,0 +1,17 @@
+{
+  "files": {
+    "mcp-tokens/capture.py": {
+      "bytes": 23986,
+      "sha256": "f2f4e7bf784767774c75825aef784f6a260a02e033885b356cc2441d93879af3"
+    },
+    "mcp-retrieval/capture.py": {
+      "bytes": 22753,
+      "sha256": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3"
+    },
+    "mcp-trail-supersession/run.py": {
+      "bytes": 37723,
+      "sha256": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+    }
+  },
+  "reference": "Official tiktoken==0.12.0, o200k_base, encode_ordinary with prepared offline cache; no product imports or SQLite access."
+}
