@@ -1,0 +1,42 @@
+{
+  "product_base": "c452b63bc57d9b3e557472f4a248c2ba96c38c54",
+  "benchmark_base": "f42bcc80786bb03759867c615283880395639cd4",
+  "files": {
+    "README.md": {
+      "bytes": 4395,
+      "sha256": "57cb22443f69c7d991c105647d2751c9acb01e8938f45e49621e7062b75b65f2"
+    },
+    "build.json": {
+      "bytes": 468,
+      "sha256": "a829a50552f39227757e6bbfd247aa4809e83efd4cfa453d0a6964ac4644933d"
+    },
+    "capture/capture.json": {
+      "bytes": 654063,
+      "sha256": "2a30210bdd9bb8ba30d9870a190fcc74d29dd46d0a4c14ddb60902969ed7ca19"
+    },
+    "capture/negative-controls.json": {
+      "bytes": 419,
+      "sha256": "85a9bfd74aabe9d938e2893813c3c9bc612d2e81e0539a899852837d7131122f"
+    },
+    "capture/summary.json": {
+      "bytes": 224,
+      "sha256": "96af5fdb796c3f90e3a7631f26753818e0d003edb585c47740a63c4db66f25eb"
+    },
+    "reproduction/capture.json": {
+      "bytes": 654065,
+      "sha256": "b45909986247f6d223cfb14d639362e7aff33040f3b59478bbb991e7a6cd7233"
+    },
+    "reproduction/negative-controls.json": {
+      "bytes": 419,
+      "sha256": "4862e9b7c554eb2894d9689edbe05bc84f729b2c627799dda5531227a5651262"
+    },
+    "reproduction/summary.json": {
+      "bytes": 224,
+      "sha256": "96af5fdb796c3f90e3a7631f26753818e0d003edb585c47740a63c4db66f25eb"
+    },
+    "runner.json": {
+      "bytes": 830,
+      "sha256": "554cc37cfbc274dbe1a497e8f7540740d4adc1fadc1eb24db3c7b597a51edf45"
+    }
+  }
+}
