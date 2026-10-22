@@ -69,12 +69,14 @@ fits the cap. This single-passage allowance is not used to sum a multi-passage
 count: every returned multi-passage context is independently encoded as a whole.
 A hybrid exact-boundary query also uses the full rendering's exact count.
 
-Hybrid restart preserves its packet/context. Native history retains v7 producing
-token/retrieval facts and explicit retained-text recount succeeds. Replacing all
-items excludes stale vectors from current hybrid selection without rewriting old
-facts. Normal old history reports retired text unavailable; explicit recount
-refuses rather than inventing original text. Fresh deny releases no context,
-candidates, measured source count or hybrid coverage, and hides history.
+Hybrid restart preserves its packet/context. Native history exposes the accepted
+token release view and explicit retained-text recount succeeds. The corrected
+view aligns `candidate_ids` with compact proposed-count facts (and lexical facts
+in lexical mode); it is not the canonical v7 record. Replacing all items excludes
+stale vectors from current hybrid selection without rewriting recorded facts.
+Normal old history reports retired text unavailable; explicit recount refuses
+rather than inventing original text. Fresh deny releases no context, candidates,
+measured source count or hybrid coverage, and hides history.
 
 Each run contains 48 native calls and 20 independently counted contexts. The
 paired capture/reproduction use different fresh stores and directory roots;
@@ -97,4 +99,10 @@ evidence on ordinary reads; independent recount requires original retained bytes
 Mixed-ancestry lifecycle-rejected candidates are outside this fixture; it does
 not establish that their aligned token-history facts are filtered.
 Earlier consumer/vector/hybrid archives retain their exact producing pins.
+The [corrected-head observations](../results/2026-10-22-native-tokens-corrected)
+validate ordinary native compatibility after issue #85's projection correction.
+The product's real SQLite regression establishes that internal mixed-source graph
+case; this driver neither copies that harness nor adds public derivation ingress.
+The [original observations](../results/2026-10-22-native-tokens) retain their
+`50a1b43` pin and all capture bytes; they predate the correction.
 Startup study holds and failed historical observations are unchanged.
