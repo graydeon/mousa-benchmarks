@@ -2,6 +2,20 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Native token-aware context packing
+
+The [token example instructions](native-tokens) prepare an isolated official
+Python tokenizer/cache explicitly, then build the exact public product head in
+[the paired capture](results/2026-10-22-native-tokens/build.json). The driver
+executes native directory/JSONL lexical/vector/hybrid queries under both packers,
+reconstructs the selected rendering from exported pins and fixture bytes, and
+independently counts the entire context with `encode_ordinary`. It records raw
+reference token IDs, digests, released bytes and 48 native command receipts per
+run. Capture and reproduction use fresh stores; volatile directory pins and
+header token costs are not cross-run goldens. The driver calls no model and does
+not open SQLite itself. Run the existing archive verifier separately; hashes
+are integrity evidence, not proof a tokenizer or build ran.
+
 ## Native hybrid lexical/vector retrieval
 
 The [hybrid example](native-hybrid) builds the exact public head recorded in

@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/graydeon/mousa",
+  "head": "50a1b43267177b8ea0fa690d4fae8a3c06c032d8",
+  "tree": "bb768111ad3fb4a153f4219c9bf98dd0c53977db",
+  "binary_sha256": "3549d1e7942aad8ad1c8fbb2353e8541165d63f0637938290836b119b64ae194",
+  "go_version": "go version go1.27.1 linux/amd64",
+  "build": "GOWORK=off CGO_ENABLED=0 go build -o BINARY ./cmd/mousa"
+}

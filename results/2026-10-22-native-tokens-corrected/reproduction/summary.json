@@ -1,0 +1,27 @@
+{
+  "native_calls": 48,
+  "counted_contexts": 20,
+  "source_forms": {
+    "jsonl": {
+      "full_hybrid_exact_tokens": 250,
+      "exact_boundary": true,
+      "both_packers_all_modes": true,
+      "pressure_changes_selection": true,
+      "restart_history_recount": true,
+      "retired_recount_refused": true,
+      "current_stale_vectors_excluded": true,
+      "denial_hides_facts": true
+    },
+    "directory": {
+      "full_hybrid_exact_tokens": 260,
+      "exact_boundary": true,
+      "both_packers_all_modes": true,
+      "pressure_changes_selection": true,
+      "restart_history_recount": true,
+      "retired_recount_refused": true,
+      "current_stale_vectors_excluded": true,
+      "denial_hides_facts": true
+    }
+  },
+  "scope": "Native protocol/counting only; no performance or model-quality claim."
+}

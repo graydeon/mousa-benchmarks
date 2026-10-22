@@ -1,0 +1,15 @@
+{
+  "initial": {
+    "unicode.md": "amber 你好 مرحبا café é <|endoftext|>\t\n",
+    "short.md": "amber concise",
+    "copy.md": "amber concise"
+  },
+  "query_text": "amber",
+  "query_values": [
+    1,
+    0
+  ],
+  "cap_policy": "full=10000; pressure=max independent single-passage rendering count",
+  "budget_bytes": 8192,
+  "limits": "Synthetic counting/protocol only; no model or quality claim."
+}

@@ -1,0 +1,66 @@
+{
+  "product_base": "50a1b43267177b8ea0fa690d4fae8a3c06c032d8",
+  "benchmark_base": "ab73e736eca5561ebfb7f6c8f5e433b40421717a",
+  "files": {
+    "README.md": {
+      "bytes": 5172,
+      "sha256": "23143a70192f9e207c0afe5dcb99256384d0193774218346d1ca8be909d7f170"
+    },
+    "build.json": {
+      "bytes": 438,
+      "sha256": "da61af69d0d88d7dccedff56f9ef887a30800e71f39a4ebeb481de705513cb7c"
+    },
+    "capture/backend.json": {
+      "bytes": 474,
+      "sha256": "b053c327c49592e76f8fa24acc7fdd47e13ba79209fa1b8e10d029ef754d173f"
+    },
+    "capture/commands.json": {
+      "bytes": 209957,
+      "sha256": "0cfcabc6270695a5721152b08bcf98ee7f96efacd5e2b8ced0a8e81a287acf6c"
+    },
+    "capture/counts.json": {
+      "bytes": 61499,
+      "sha256": "0b190f1f2c476c35d93a7db5fcfef6ca85a39d65dcac8a8e3384b45ae725084c"
+    },
+    "capture/inputs.json": {
+      "bytes": 411,
+      "sha256": "28e3236f1a0247cc8c02d535df288a0c2dbf5bfd42ded64858946dad3576870c"
+    },
+    "capture/product.json": {
+      "bytes": 372,
+      "sha256": "1b45e89bca08216e99aed9c91cd5a0030622a28249a388fd571b88c61939ba6c"
+    },
+    "capture/summary.json": {
+      "bytes": 819,
+      "sha256": "0285e83a987607705e3d545fab87c5980390a37bb6f650b98c19501e7bd97f09"
+    },
+    "reproduction/backend.json": {
+      "bytes": 474,
+      "sha256": "b053c327c49592e76f8fa24acc7fdd47e13ba79209fa1b8e10d029ef754d173f"
+    },
+    "reproduction/commands.json": {
+      "bytes": 210068,
+      "sha256": "85f24218cbc17f7629e671f94ea0c9bdd1c7e30819b892bec68f4259a6f23d55"
+    },
+    "reproduction/counts.json": {
+      "bytes": 62154,
+      "sha256": "da71e58795e081991db2833b67b004cfa9b511c8541e93ce04c69f89e8207a14"
+    },
+    "reproduction/inputs.json": {
+      "bytes": 411,
+      "sha256": "28e3236f1a0247cc8c02d535df288a0c2dbf5bfd42ded64858946dad3576870c"
+    },
+    "reproduction/product.json": {
+      "bytes": 372,
+      "sha256": "1b45e89bca08216e99aed9c91cd5a0030622a28249a388fd571b88c61939ba6c"
+    },
+    "reproduction/summary.json": {
+      "bytes": 819,
+      "sha256": "f8dab9e3f092b5c18005a18ee27293582bbf84a38af83c097b372b276086ef3c"
+    },
+    "runner.json": {
+      "bytes": 168,
+      "sha256": "9fb69a5871540d36fbb12ad8e900b3d98627636a9110cb0cc49c93b82963dcc0"
+    }
+  }
+}
