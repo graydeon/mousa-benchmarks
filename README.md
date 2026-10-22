@@ -25,6 +25,16 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [native token-packing example](native-tokens) selects whole passages against
+the exact returned rendered context, using an optional prepared official
+`tiktoken==0.12.0`/`o200k_base` backend. Its
+[public-head capture and fresh-store reproduction](results/2026-10-22-native-tokens)
+each record 48 native calls and 20 independent whole-rendering token checks,
+covering directory/JSONL lexical, vector and hybrid modes with both packers,
+token pressure, v7 history/recount and fresh denial. Counts cover returned
+context only, not unknown application/model framing; no quality or performance
+claim follows. Older captures and startup holds remain unchanged.
+
 The [native hybrid example](native-hybrid) combines lexical and supplied-vector
 branches with equal-weight RRF(k=60). Its
 [capture and independent fresh-store reproduction](results/2026-10-21-native-hybrid)
