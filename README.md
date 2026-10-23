@@ -25,6 +25,16 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [MCP external-embedding client](mcp-embeddings) completes source sync, passage
+export, arithmetic-only embedding import, vector/hybrid queries and historical
+inspection through MCP, without native vector preparation or database access.
+Its [public-head capture and separate fresh-store reproduction](results/2026-10-23-mcp-embedding-workflow)
+each retain 35 requests, 32 raw responses and three process exits. Exact retry,
+immutable conflict, stale-pin refusal/recovery and read-only write refusal are
+checked alongside known cosine/RRF order and producing history. Changed import
+and fabricated-success controls are coherently rehashed and rejected. This is
+protocol/arithmetic evidence, not a model, quality or performance measurement.
+
 The [MCP token-budget client](mcp-tokens) exercises all three query modes and both
 packers with an operator-prepared official offline tokenizer. Its
 [public-head capture and fresh-store reproduction](results/2026-10-22-mcp-token-budgets)
