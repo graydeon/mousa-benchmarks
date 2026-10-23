@@ -1,0 +1,6 @@
+{
+  "binary_sha256": "9786226f1629904d707f0e9a6d4b445281340ff7ff5e0fc127e428168e7da4c3",
+  "build": "GOWORK=off CGO_ENABLED=0 go build -o BINARY ./cmd/mousa",
+  "head": "e8829151bc1e57619c1b09a9414e29d7c6729efa",
+  "tree": "22e23931fbab87830e6871c9ee6e22602beafd40"
+}

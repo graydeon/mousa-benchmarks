@@ -2,6 +2,18 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## MCP measured whole-context token budgets
+
+The [MCP token client instructions](mcp-tokens) build the exact public product head
+in [the paired archive](results/2026-10-22-mcp-token-budgets/build.json) and prepare
+official `tiktoken==0.12.0` / `o200k_base` explicitly. Run the driver with that
+venv interpreter and prepared cache. Capture and fresh-store reproduction retain
+raw stdio streams/exits, native preparation and independent whole-context
+reference token IDs. Replay validates selected rendering/count/digest, budget
+binding, omitted defaults and producing history; three coherently rehashed
+controls check altered count/context and changed scheduled token cap. Run the
+existing archive verifier separately. No model, quality or window-safety claim.
+
 ## MCP supplied-vector and hybrid queries
 
 The [MCP retrieval instructions](mcp-retrieval) build the exact public product head
