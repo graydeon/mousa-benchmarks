@@ -1,0 +1,18 @@
+{
+  "files": {
+    "mcp-embeddings/capture.py": {
+      "sha256": "6effbb05da7cff24fda79c0c893ceb16c0e3d232064311c31c555d6b66625aa5",
+      "bytes": 19146
+    },
+    "mcp-retrieval/capture.py": {
+      "sha256": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+      "bytes": 22753
+    },
+    "mcp-trail-supersession/run.py": {
+      "sha256": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1",
+      "bytes": 37723
+    }
+  },
+  "unchanged_helper_base": "5f0d47f6a7032cdd66d06517fa566d74aa0801d3",
+  "python_version": "Python 3.13.5"
+}

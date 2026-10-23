@@ -2,6 +2,19 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## MCP external embedding export/import
+
+The [MCP embedding client instructions](mcp-embeddings) build the exact public
+product head in [the paired archive](results/2026-10-23-mcp-embedding-workflow/build.json).
+Run the standard-library driver twice with distinct absent output paths for
+separate fresh stores. The measured workflow syncs/exports/imports/queries through
+MCP; native vector preparation and SQLite access are not used. Replay binds raw
+request bytes to the regenerated schedule, checks discovered output schemas and
+known cosine/RRF/history identities, and verifies retry/stale/write-permission
+outcomes. `controls` must reject changed import values and a fabricated read-only
+success after stream hashes/envelopes are repaired. Run the archive verifier
+separately. No model, semantic quality, performance or token-window claim follows.
+
 ## MCP measured whole-context token budgets
 
 The [MCP token client instructions](mcp-tokens) build the exact public product head

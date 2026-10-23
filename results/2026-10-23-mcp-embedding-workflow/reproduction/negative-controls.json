@@ -1,0 +1,1 @@
+[{"control": "changed-import-values", "result": "PASS", "detector": "scheduled-request-bytes", "rehashed_capture_sha256": "0493071f32282c08751212a8d23f7286436990715aed68f1c7ea8f4148c0ec8f"}, {"control": "fabricated-readonly-success", "result": "PASS", "detector": "expected-tool-error", "rehashed_capture_sha256": "7d009b56262a246651aba7e3612e42d752c618057c9383ac5b0973b6d0891fc9"}]

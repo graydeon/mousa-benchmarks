@@ -1,0 +1,1 @@
+{"limits":"Arithmetic/protocol only; no semantic/model/performance/window claim. Wire replay is internal consistency, not proof against a malicious producer.","process_exits":3,"product_head":"62cb1eb8e1e947894447b338c75f467977560943","product_tree":"1718bf3b6380637108d8cc92de4fab606efa755c","requests":35,"responses":32,"result":"PASS"}
