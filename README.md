@@ -25,6 +25,20 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [lexical token/supersession client](token-supersession) composes exact
+predecessor withholding and measured whole-context budgets for native directory/
+JSONL and configured stdio MCP sources. Its
+[public-head capture and separate fresh-store reproduction](results/2026-10-24-lexical-token-supersession)
+each retain 40 native calls (including two expected aggregate-limit failures),
+37 MCP requests, 33 raw responses, four clean exits and 24 independent context
+counts. Both packers, retained twins, exact/short/reservation boundaries,
+65 full-size withheld predecessors above 256 KiB with empty/survivor context,
+deactivation and producing v8 history are checked. Rehashed changed-request,
+withheld-count and historical
+selection controls fail their intended detectors. Product-local graph,
+corruption, concurrency and worker-fault regressions are separate, not claimed
+client capture coverage. No semantic-quality, performance or full-window claim.
+
 The [MCP external-embedding client](mcp-embeddings) completes source sync, passage
 export, arithmetic-only embedding import, vector/hybrid queries and historical
 inspection through MCP, without native vector preparation or database access.

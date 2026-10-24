@@ -1,0 +1,61 @@
+{
+  "schema": "mousa.lexical_token_supersession_capture.v1",
+  "runner_sha256": "19cf7ed1b2d5300ffc003e4878cbb56b1cf2381b7227c80b1f75a562fc522684",
+  "fixture": {
+    "old.md": "Drain legacy",
+    "twin.md": "Drain legacy",
+    "new.md": "Drain correction",
+    "boundary": {
+      "old.md": {
+        "bytes": 266240,
+        "sha256": "c2ad3d71479ef8d12ba57d29c908ee31af94b6cba0a6d2ef9eeba364d8eb3168"
+      },
+      "new.md": {
+        "bytes": 21,
+        "sha256": "ae041727c53d2844d1bfe9fc48189121d27c3eb4179af7cab8540294d1634cd3"
+      },
+      "twin.md": {
+        "bytes": 22,
+        "sha256": "55135f791eedb215e1b178ee0c7f2b382a047aaa31160ac2b65178ea96946326"
+      }
+    }
+  },
+  "schedule": "token-supersession/capture.py:schedule",
+  "runs": [
+    "capture",
+    "reproduction"
+  ],
+  "commands": {
+    "capture": "TOKEN_PY token-supersession/capture.py capture --mousa BINARY --product-source PRODUCT --product-head 2d13d9f0ef708e7dec89d6a28b5213d96b229c8e --python TOKEN_PY --cache TOKEN_CACHE --output OUTPUT",
+    "verify": "TOKEN_PY token-supersession/capture.py verify --cache TOKEN_CACHE --output OUTPUT",
+    "controls": "TOKEN_PY token-supersession/capture.py controls --cache TOKEN_CACHE --output OUTPUT"
+  },
+  "exits": {
+    "capture": 0,
+    "reproduction": 0,
+    "capture_verify": 0,
+    "reproduction_verify": 0,
+    "capture_controls": 0,
+    "reproduction_controls": 0
+  },
+  "limits": "Single-source client/counting evidence. Graph/corruption/concurrency/process-fault tests remain product-local. No model, quality, latency or full-window claim.",
+  "raw_archive": "raw-captures.tar.gz",
+  "raw_archive_members": "raw-members.json",
+  "attempts": {
+    "passing_capture": 0,
+    "passing_reproduction": 0,
+    "earlier_runner_assertion": 1,
+    "failed_attempt": "raw-captures.tar.gz:failed-attempt/"
+  },
+  "producing_pin_history": [
+    {
+      "product_head": "346a37944faa3e84adf565f9cb5ece46bebea47a",
+      "companion_commit": "a4ce09715a55a12a87a683daeda4660b0040c765",
+      "status": "Unpublished earlier candidate; preserved in Git ancestry and superseded, never relabeled"
+    },
+    {
+      "product_head": "2d13d9f0ef708e7dec89d6a28b5213d96b229c8e",
+      "status": "Fresh anonymous exact-public-head build and new observations"
+    }
+  ]
+}
