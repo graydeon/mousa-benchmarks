@@ -1,0 +1,30 @@
+{
+  "capture/capture.json": {
+    "bytes": 2766487,
+    "sha256": "11897161fdf6fb8db7bc69ae2b752dd5058728e9421721e3aaf01b390cb19f9c"
+  },
+  "capture/summary.json": {
+    "bytes": 20490,
+    "sha256": "0285a995a2c0d9c1f6f134ce8f6c0ec9bd76fbff6f803b75991b557094ce7f90"
+  },
+  "failed-attempt/attempt.json": {
+    "bytes": 552,
+    "sha256": "bc938a3c7f16867100ce79dcf282d7261da17cb8a7008ba895eae2d17400a20f"
+  },
+  "failed-attempt/capture.json": {
+    "bytes": 2766482,
+    "sha256": "f8be3be08bdf947bdb690d84b975bb0c30a571015ecd9873e292cff76cbf00ea"
+  },
+  "failed-attempt/capture.py": {
+    "bytes": 34176,
+    "sha256": "03f2a1e92e3015d5761fcfab26b275b496de1eb9e012cc67c25dd3754bedc0d6"
+  },
+  "reproduction/capture.json": {
+    "bytes": 2766487,
+    "sha256": "b9dedaf1a2fc313adfc164c817a1cee830bd6d190778ccc015aeadf71552ec7e"
+  },
+  "reproduction/summary.json": {
+    "bytes": 20598,
+    "sha256": "2450abc5e620a2b70dabe7b1a7ab05e24e4bb9a84ff88be34f8f3a9fe50c63e3"
+  }
+}

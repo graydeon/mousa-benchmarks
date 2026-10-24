@@ -1,0 +1,42 @@
+{
+  "product_base": "2d13d9f0ef708e7dec89d6a28b5213d96b229c8e",
+  "benchmark_base": "91c67b0191d3d9b4ed61f94336636d2f92da5c11",
+  "files": {
+    "README.md": {
+      "bytes": 7218,
+      "sha256": "13dc6d1f1169f902bc1e7c6ddb63c17eb7f913d54601976a793a939a1285f26e"
+    },
+    "backend.json": {
+      "bytes": 343,
+      "sha256": "fdcc77f398e0b10659b7e7f32743e3f5a3a38019a2630232fb4b2ddcfc6dbbcb"
+    },
+    "build.json": {
+      "bytes": 391,
+      "sha256": "849707177d5d71628756fb6790eaa937b49ab9abdd97d1fcaed47c746e0507bc"
+    },
+    "capture-controls.json": {
+      "bytes": 554,
+      "sha256": "1b7b22a7b4c9c9a6e296e01eea1d11c5c70f3be11892317aab41cd12dd5c18f1"
+    },
+    "comparison.json": {
+      "bytes": 1001,
+      "sha256": "4754dd7ee7fb8f78882f626d91b3b3d6415b299587211508f1aa10379b8840c7"
+    },
+    "protocol.json": {
+      "bytes": 2287,
+      "sha256": "92316c09664beab4868b3e5a2c63d2c1b4d97657c9c8a5c3309f0d097e30cacd"
+    },
+    "raw-captures.tar.gz": {
+      "bytes": 1105745,
+      "sha256": "71c3faf1751403e92234379c0d192994570da7cbe823a6bbc77df5d7a64db8ba"
+    },
+    "raw-members.json": {
+      "bytes": 974,
+      "sha256": "a471038f06299178cc0fe4fcb04bedb498acac51dfc26849e5762ac21738a2e4"
+    },
+    "reproduction-controls.json": {
+      "bytes": 554,
+      "sha256": "548cbc88cc1c681d4fe6e0eeac319eadce076a2029ba037e0b226dbcbbcff715"
+    }
+  }
+}

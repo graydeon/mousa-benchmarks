@@ -2,6 +2,27 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Lexical supersession with whole-context token budgets
+
+Use the [combined client instructions](token-supersession) and exact public head/
+tree in [the paired archive](results/2026-10-24-lexical-token-supersession/build.json).
+Prepare the external official tokenizer/cache, build the clean public product
+checkout, and run `capture` twice against separate fresh stores. Replay binds
+native arguments/inputs and raw JSON-RPC requests to the regenerated schedule,
+reconstructs survivor rendering from actual retained pins, independently counts
+it, and checks recorded history after withdrawal/deactivation. `controls` must
+reject the rehashed changed request, wrong withheld count and wrong historical
+selection. Run the exact archive verifier separately. Directory header identities
+vary with the temporary absolute path; fixed-alias JSONL rendering observations
+are compared across the two runs. This is synthetic client/counting evidence,
+not graph/corruption/concurrency coverage, model integration or quality/performance.
+The schedule also replaces a predecessor with 65 full-size segments (266240 bytes)
+through native JSONL sync, prepares pins through ordinary queries, and checks
+native/MCP empty and small-survivor context under both packers. Equivalent
+nonsuppressed requests retain the aggregate-limit failure. No embedding export
+is used for the oversized source. One earlier runner assertion failure and its
+raw client events remain recorded separately from the two passing captures.
+
 ## MCP external embedding export/import
 
 The [MCP embedding client instructions](mcp-embeddings) build the exact public
