@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "compared_observations": 21,
+  "comparison": "Exact canonical JSON equality of fixed-alias label/count/token IDs/digest; path-bound directory rows excluded",
+  "product_head": "2d13d9f0ef708e7dec89d6a28b5213d96b229c8e",
+  "labels": [
+    "jsonl/no-history",
+    "jsonl/original/active",
+    "jsonl/exact-v1/active",
+    "mcp/original/full",
+    "mcp/original/exact",
+    "mcp/original/short",
+    "mcp/original/reserved",
+    "mcp/exact-v1/full",
+    "mcp/exact-v1/exact",
+    "mcp/exact-v1/short",
+    "mcp/exact-v1/reserved",
+    "mcp/all-withheld",
+    "mcp/deactivated",
+    "boundary/native/original/empty",
+    "boundary/native/original/survivor",
+    "boundary/native/exact-v1/empty",
+    "boundary/native/exact-v1/survivor",
+    "boundary/mcp/original/empty",
+    "boundary/mcp/original/survivor",
+    "boundary/mcp/exact-v1/empty",
+    "boundary/mcp/exact-v1/survivor"
+  ],
+  "observations_sha256": "a6fa972e788576c838d4248c2d81123b00d86c51250f88b89981a40c599ab5ef"
+}
