@@ -1,0 +1,43 @@
+{
+  "schema": "mousa.vector_hybrid_token_supersession_capture.v1",
+  "runner_sha256": "01402157f341e7db7e652d00d3656cfe748449c2cf691679bf6a63ea0af49ef9",
+  "comparator_sha256": "04315dce567b4889802edd9c6fe7108f0bb13cedf2bf0edd14cdbb23078bfffe",
+  "fixture": {
+    "old.md": "Drain legacy",
+    "twin.md": "Drain legacy",
+    "new.md": "Separate correction",
+    "peer.md": "Radishes prefer damp soil."
+  },
+  "values": {
+    "old.md": [
+      1,
+      0
+    ],
+    "twin.md": [
+      0,
+      1
+    ],
+    "peer.md": [
+      0.8,
+      0.6
+    ]
+  },
+  "schedule": "vector-token-supersession/capture.py:schedule",
+  "counts_per_run": {
+    "events": 115,
+    "native_commands": 49,
+    "mcp_requests": 62,
+    "mcp_responses": 60,
+    "clean_mcp_exits": 2
+  },
+  "freeze_after": "Successful unmeasured local-source pilot and four intended negative-control detectors; public captures use a separately built exact anonymous public head.",
+  "runs": [
+    "capture",
+    "reproduction"
+  ],
+  "limits": "Synthetic protocol/arithmetic/complete-rendering counts only; no SQLite access, models, semantic quality, performance or universal window guarantee.",
+  "raw_archive": "raw-captures.tar.xz",
+  "raw_archive_members": "raw-members.json",
+  "final_capture_failures": 0,
+  "preparation_failures": "Four earlier pilot invocations failed before the final protocol was frozen; none are final-public-head observations."
+}

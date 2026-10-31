@@ -1,0 +1,46 @@
+{
+  "product_base": "27235e85984b2e2f222c31f0c090aa85de844ce7",
+  "benchmark_base": "09234a6b7281833041703c435aababc0fbb1bd33",
+  "files": {
+    "README.md": {
+      "bytes": 5007,
+      "sha256": "d3cf4e85f0e520f737c22cb1c63781b101368e7c2cb8e36decdf16835a21be21"
+    },
+    "archive-verification.json": {
+      "bytes": 33942,
+      "sha256": "e15752a001dcb64343b3da825696c659c5cc0c24cb13b7022215cdf02e74f4f3"
+    },
+    "build.json": {
+      "bytes": 524,
+      "sha256": "e34348fe1f930c11ca38ffe8c37fd8e36a0bd10b9871599e26e723722bd91940"
+    },
+    "commands.json": {
+      "bytes": 3507,
+      "sha256": "44e588cd3bb1a76ad1da72f97e98e3b4c1d2a451f029ef8a92d6296e3247ed2c"
+    },
+    "comparison.json": {
+      "bytes": 438,
+      "sha256": "30a2c90febda9a8bbe56f5a214389ceb0ca29c4f96f1460cf0c9d257e2d7b710"
+    },
+    "controls.json": {
+      "bytes": 1692,
+      "sha256": "99cd0f63c0c1dd9dde08fc4629e97bcb909731ea9eb8c977591e2ac03af73100"
+    },
+    "protocol.json": {
+      "bytes": 1415,
+      "sha256": "859fe2f6aa1400ec654d56e350ab0aea6279cbf53589062cbbfa9c3bda56e480"
+    },
+    "raw-captures.tar.xz": {
+      "bytes": 109448,
+      "sha256": "b3132bd20a388e00efd6f8cfd4b8d173d81e4c20cd9a18f3a105afa71f6fdeb8"
+    },
+    "raw-members.json": {
+      "bytes": 2559,
+      "sha256": "a981c799a036ad7904d674e8bd19a48b83e42ba6aa23ab060f7210f2ffae8ac8"
+    },
+    "summary.json": {
+      "bytes": 12919,
+      "sha256": "d03bf78d099b5d6647cff5929f676e64fd0652c0f3ed15159c77bf2913be3e87"
+    }
+  }
+}

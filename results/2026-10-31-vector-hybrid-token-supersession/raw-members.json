@@ -1,0 +1,74 @@
+{
+  "capture/capture.json": {
+    "bytes": 1932140,
+    "sha256": "d2512dab51bfeb33f1b89a29c4540e9db5fb035d7cc4f88ce956f9ddd6e5bb88"
+  },
+  "capture/summary.json": {
+    "bytes": 10012,
+    "sha256": "a4ed3e7df961cac9069e47731221edb6f463843749de157c235a3ee80047c03d"
+  },
+  "reproduction/capture.json": {
+    "bytes": 1932140,
+    "sha256": "7eb3f00fa709b17ffea208fe5cdaffc845ac93dc016a15cdb9d7d78662e1c6a9"
+  },
+  "reproduction/summary.json": {
+    "bytes": 10012,
+    "sha256": "a4ed3e7df961cac9069e47731221edb6f463843749de157c235a3ee80047c03d"
+  },
+  "controller/capture.stdout": {
+    "bytes": 10571,
+    "sha256": "d57cf6ac38dc53180a295f6eb194f20e0e62308c2e4d127700216300069f96be"
+  },
+  "controller/capture.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "controller/reproduction.stdout": {
+    "bytes": 10571,
+    "sha256": "d57cf6ac38dc53180a295f6eb194f20e0e62308c2e4d127700216300069f96be"
+  },
+  "controller/reproduction.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "controller/capture-verify.stdout": {
+    "bytes": 10571,
+    "sha256": "6980ec19eb9603db58c899eb0fb4b326a4d85e959dd304d11cc125a3a84fead9"
+  },
+  "controller/capture-verify.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "controller/reproduction-verify.stdout": {
+    "bytes": 10571,
+    "sha256": "6980ec19eb9603db58c899eb0fb4b326a4d85e959dd304d11cc125a3a84fead9"
+  },
+  "controller/reproduction-verify.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "controller/capture-controls.stdout": {
+    "bytes": 688,
+    "sha256": "fafc73287799802cc9c69f747ffc5df8dc35abd63df339afd7d6ec142570f43d"
+  },
+  "controller/capture-controls.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "controller/reproduction-controls.stdout": {
+    "bytes": 688,
+    "sha256": "ba7e797cc75d9003f9056a148dc7d9f2c429e17992dedbca06d338d8029ad9a8"
+  },
+  "controller/reproduction-controls.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "controller/compare.stdout": {
+    "bytes": 380,
+    "sha256": "c7a775dfecef458d53eee6da57d96a36a068b0dfdbb27a6d13a5495dd4fce0eb"
+  },
+  "controller/compare.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
