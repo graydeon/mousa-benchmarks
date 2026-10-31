@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "compared_result_rows": 65,
+  "normalized_top_level_fields": [
+    "decision_id",
+    "trail_id",
+    "request_id",
+    "authorization_decision_id",
+    "evaluated_at_usec",
+    "elapsed_seconds"
+  ],
+  "normalized_historical_fields": [
+    "id",
+    "decision_id",
+    "request_id"
+  ],
+  "all_other_properties_equal": true,
+  "within_run_identity_bindings": "Independently checked against each producing request/query by replay; raw values retained."
+}

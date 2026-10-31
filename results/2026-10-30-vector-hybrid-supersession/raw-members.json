@@ -1,0 +1,18 @@
+{
+  "capture/capture.json": {
+    "bytes": 1098394,
+    "sha256": "1eb9b71834d3c305c316d5176a5111fcd798090efed1363957e06da4ed898014"
+  },
+  "capture/summary.json": {
+    "bytes": 452,
+    "sha256": "b29f0a07e05fc5c7f917fd100db114d831062e4329ebf61faa91cd38148fcb8e"
+  },
+  "reproduction/capture.json": {
+    "bytes": 1098394,
+    "sha256": "4835145b089139e8035133e0bfad62b6c13f064691cd77680e5ecea8b7ca92c8"
+  },
+  "reproduction/summary.json": {
+    "bytes": 452,
+    "sha256": "b29f0a07e05fc5c7f917fd100db114d831062e4329ebf61faa91cd38148fcb8e"
+  }
+}

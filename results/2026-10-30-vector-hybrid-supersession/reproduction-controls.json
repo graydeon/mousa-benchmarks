@@ -1,0 +1,26 @@
+[
+  {
+    "control": "changed-request",
+    "result": "PASS",
+    "detector": "scheduled-request-bytes",
+    "rehashed_capture_sha256": "594ab2d72a1d296f2ed5707b9c6a8742fa5bacb7b08cf3dcf17fe1733924c941"
+  },
+  {
+    "control": "wrong-count",
+    "result": "PASS",
+    "detector": "withheld-count",
+    "rehashed_capture_sha256": "38e629b06fee1c4746354bb6ef85aed50003d849e678e547ac64b115108a7b90"
+  },
+  {
+    "control": "wrong-selection",
+    "result": "PASS",
+    "detector": "selected-evidence",
+    "rehashed_capture_sha256": "f5378a816e72771bc3b656dd5b03e7c2d1b9fe0e539e0b4b4a08178be8902a6a"
+  },
+  {
+    "control": "wrong-history",
+    "result": "PASS",
+    "detector": "withheld-historical-facts",
+    "rehashed_capture_sha256": "7a175e1ef40d9970f6834e3f7eb8c5f9d06c772bf3a03a632fdca9b4241da4f2"
+  }
+]

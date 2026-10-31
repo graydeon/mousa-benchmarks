@@ -2,6 +2,24 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Byte-packed vector/hybrid supersession
+
+Follow the [standard-library client instructions](vector-supersession) using the
+exact public product head/tree in [the paired archive](results/2026-10-30-vector-hybrid-supersession/build.json).
+Build a clean anonymous product checkout, then capture twice against separate
+fresh stores. Native JSONL preparation, both query modes/packers, MCP independent
+history flags, successor withdrawal and old recorded history are scheduled.
+Replay binds every argument/input and raw JSON-RPC request to the regenerated
+schedule, verifies discovered closed output schemas, producing ranks/coverage,
+exact released pins/text and recorded consultation. Four coherently rehashed
+request/count/selection/history controls must fail their intended detectors.
+The archive retains both complete runs, their summaries and the first failed
+cross-run comparison receipt. Normalize only the ID/time fields listed in
+`comparison.json`; preserve all remaining properties and raw observations.
+Run `python3 tools/verify_results.py` separately. No tokenizer, model, semantic
+quality, performance or old-text reconstruction claim is part of this byte slice.
+
+
 ## Lexical supersession with whole-context token budgets
 
 Use the [combined client instructions](token-supersession) and exact public head/
