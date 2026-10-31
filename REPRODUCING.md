@@ -2,6 +2,26 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Vector/hybrid supersession with measured token budgets
+
+Use the [token-composition client instructions](vector-token-supersession) and
+the [paired archive's exact public head/tree](results/2026-10-31-vector-hybrid-token-supersession/build.json).
+Build a clean anonymous product checkout and run two separate fresh stores with
+the prepared official offline encoder/cache. Each fixed schedule includes both
+modes/packers, omitted/false/enforced changed context, complete-rendering exact
+fit/pressure, reservations/zero allowance, byte pressure, withheld twins,
+all-withheld outcomes and producing history/recount.
+
+Replay each archived capture with the bound driver, regenerate four rehashed
+request/count/selection/history controls per run, and compare complete results
+using only the explicit fresh-ID/time exclusions. Verify bounded regular archive
+membership and every member hash before extraction; run the repository verifier
+separately. No canonical database/binary is exported. Directory, denial,
+source-admission/import, internal graph/corruption/concurrency and worker-fault
+acceptance remain product-local, not client-capture claims. No semantic quality,
+performance or universal model-window guarantee follows.
+
+
 ## Byte-packed vector/hybrid supersession
 
 Follow the [standard-library client instructions](vector-supersession) using the

@@ -1,0 +1,10 @@
+{
+  "binary_sha256": "daf8b05099a6c8765b3d5bec912897d34293865d7b81bd07fbec30d95b02beea",
+  "build": "GOWORK=off CGO_ENABLED=0 go build -o BINARY ./cmd/mousa",
+  "head": "27235e85984b2e2f222c31f0c090aa85de844ce7",
+  "tree": "046280c0ceea69947d0cfc0e72386b2949104903",
+  "anonymous_source_url": "https://github.com/graydeon/mousa.git",
+  "local_tested_product_head": "ce0229a585bb57a81f8c0b0046eb8ecf89d9710e",
+  "local_tested_product_tree": "046280c0ceea69947d0cfc0e72386b2949104903",
+  "public_tested_tree_equality": true
+}

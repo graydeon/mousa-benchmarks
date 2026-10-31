@@ -1,0 +1,54 @@
+{
+  "capture": [
+    {
+      "control": "request",
+      "result": "PASS",
+      "detector": "scheduled-request-bytes",
+      "rehashed_capture_sha256": "cb97df770e806eeeff14fb8afc553b7596a4ad751f3c5dee181b0bdbb9e4aa04"
+    },
+    {
+      "control": "count",
+      "result": "PASS",
+      "detector": "whole-context-count",
+      "rehashed_capture_sha256": "eafce4bd5f9d31d04ccd5b5b4dbcecc8c7e092bc53a1954e067b5e0c7e4f494b"
+    },
+    {
+      "control": "selection",
+      "result": "PASS",
+      "detector": "selected-evidence",
+      "rehashed_capture_sha256": "2c645e56026ab13a032127d6f19dcaaef9f513004ee3a6c73f402d163872fd94"
+    },
+    {
+      "control": "history",
+      "result": "PASS",
+      "detector": "withheld-history",
+      "rehashed_capture_sha256": "58996c2f785e9fac9ec9e3e8916a6ae4ad7e6406b1c1a37239b72b6d17059f54"
+    }
+  ],
+  "reproduction": [
+    {
+      "control": "request",
+      "result": "PASS",
+      "detector": "scheduled-request-bytes",
+      "rehashed_capture_sha256": "d0e26817eff3d9e2591b094def091e1da644417e3f081a416d59d06fd4a6d06e"
+    },
+    {
+      "control": "count",
+      "result": "PASS",
+      "detector": "whole-context-count",
+      "rehashed_capture_sha256": "da80e9300eda61a859cde314be3dcdf197f21b3cfa37f2aed28e5efad6542639"
+    },
+    {
+      "control": "selection",
+      "result": "PASS",
+      "detector": "selected-evidence",
+      "rehashed_capture_sha256": "437fd45d9064f1dda839e9730c17ded8a9df628214eb4b249a7d7ccf84c9bf3a"
+    },
+    {
+      "control": "history",
+      "result": "PASS",
+      "detector": "withheld-history",
+      "rehashed_capture_sha256": "918dd64429d58b1728c17e4b20e337d8935ded7d047d8a9a374a850575c903fc"
+    }
+  ]
+}

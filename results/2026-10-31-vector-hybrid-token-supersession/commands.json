@@ -1,0 +1,129 @@
+[
+  {
+    "name": "capture",
+    "argv": [
+      "TOKEN_PY",
+      "vector-token-supersession/capture.py",
+      "capture",
+      "--mousa",
+      "BINARY",
+      "--product-source",
+      "PRODUCT",
+      "--product-head",
+      "27235e85984b2e2f222c31f0c090aa85de844ce7",
+      "--python",
+      "TOKEN_PY",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "OUTPUT/capture"
+    ],
+    "exit": 0,
+    "seconds": 135.7093202942051,
+    "stdout_sha256": "d57cf6ac38dc53180a295f6eb194f20e0e62308c2e4d127700216300069f96be",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "capture-verify",
+    "argv": [
+      "TOKEN_PY",
+      "vector-token-supersession/capture.py",
+      "verify",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "OUTPUT/capture"
+    ],
+    "exit": 0,
+    "seconds": 1.2993914019316435,
+    "stdout_sha256": "6980ec19eb9603db58c899eb0fb4b326a4d85e959dd304d11cc125a3a84fead9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "capture-controls",
+    "argv": [
+      "TOKEN_PY",
+      "vector-token-supersession/capture.py",
+      "controls",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "OUTPUT/capture"
+    ],
+    "exit": 0,
+    "seconds": 2.2865649247542024,
+    "stdout_sha256": "fafc73287799802cc9c69f747ffc5df8dc35abd63df339afd7d6ec142570f43d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reproduction",
+    "argv": [
+      "TOKEN_PY",
+      "vector-token-supersession/capture.py",
+      "capture",
+      "--mousa",
+      "BINARY",
+      "--product-source",
+      "PRODUCT",
+      "--product-head",
+      "27235e85984b2e2f222c31f0c090aa85de844ce7",
+      "--python",
+      "TOKEN_PY",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "OUTPUT/reproduction"
+    ],
+    "exit": 0,
+    "seconds": 177.6617381721735,
+    "stdout_sha256": "d57cf6ac38dc53180a295f6eb194f20e0e62308c2e4d127700216300069f96be",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reproduction-verify",
+    "argv": [
+      "TOKEN_PY",
+      "vector-token-supersession/capture.py",
+      "verify",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "OUTPUT/reproduction"
+    ],
+    "exit": 0,
+    "seconds": 1.335590329952538,
+    "stdout_sha256": "6980ec19eb9603db58c899eb0fb4b326a4d85e959dd304d11cc125a3a84fead9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reproduction-controls",
+    "argv": [
+      "TOKEN_PY",
+      "vector-token-supersession/capture.py",
+      "controls",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "OUTPUT/reproduction"
+    ],
+    "exit": 0,
+    "seconds": 2.216356670949608,
+    "stdout_sha256": "ba7e797cc75d9003f9056a148dc7d9f2c429e17992dedbca06d338d8029ad9a8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "compare",
+    "argv": [
+      "TOKEN_PY",
+      "vector-token-supersession/compare.py",
+      "OUTPUT/capture",
+      "OUTPUT/reproduction",
+      "--cache",
+      "TOKEN_CACHE"
+    ],
+    "exit": 0,
+    "seconds": 1.7243692828342319,
+    "stdout_sha256": "c7a775dfecef458d53eee6da57d96a36a068b0dfdbb27a6d13a5495dd4fce0eb",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
