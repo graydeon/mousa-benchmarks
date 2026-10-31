@@ -1,0 +1,24 @@
+{
+  "schema": "mousa.mcp_association_capture.v1",
+  "runner_sha256": "72ef0117d8fa98487210979d0b79c8107b0124a47e4deb815f41a91d1294e087",
+  "fixture": {
+    "backup": "Run the backup inside the connection context manager.",
+    "closure": "The context manager does not close the connection; close it explicitly.",
+    "duplicate": "The context manager does not close the connection; close it explicitly.",
+    "next": "A further note is not followed transitively."
+  },
+  "declaration": {
+    "from_item": "backup",
+    "to_item": "closure",
+    "basis": "connection cleanup qualification",
+    "author": "example.maintainer"
+  },
+  "schedule": "capture.py:schedule; generated frames compared byte-for-byte with producing identities substituted",
+  "request_response_counts": [
+    39,
+    36
+  ],
+  "limits": "Synthetic caller-declared alternative evidence path, not semantic sufficiency, recall, completeness, truth, authenticated authorship, performance or memory reliability. No models/generation/judging.",
+  "freeze_after": "Successful unmeasured local-source pilot, two intended mutation controls and separate fresh-store comparison; final captures use an anonymously fetched exact public product head.",
+  "baseline_discovery_sha256": "c5ae3498e6fcfb5627c5120e921a401598528fd66f38e45398dd09d5d60514d0"
+}

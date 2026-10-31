@@ -1,0 +1,100 @@
+[
+  {
+    "label": "capture",
+    "argv": [
+      "python3",
+      "mcp-associations/capture.py",
+      "capture",
+      "--mousa",
+      "OUTPUT/public-mousa",
+      "--product-source",
+      "PRODUCT_SOURCE",
+      "--product-head",
+      "aa91c50ef362b8864ff15c678fc64e5a727a9d8b",
+      "--output",
+      "OUTPUT/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "274b735264af8e8021d33aba80e7a0b41a2c3289aec7d6cdb258386d2892c614"
+  },
+  {
+    "label": "capture-verify",
+    "argv": [
+      "python3",
+      "mcp-associations/capture.py",
+      "verify",
+      "--output",
+      "OUTPUT/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "274b735264af8e8021d33aba80e7a0b41a2c3289aec7d6cdb258386d2892c614"
+  },
+  {
+    "label": "capture-controls",
+    "argv": [
+      "python3",
+      "mcp-associations/capture.py",
+      "controls",
+      "--output",
+      "OUTPUT/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "a343c101f7d266dae52e6583033cff9d67b8947f703eb2b558dbbede677839a1"
+  },
+  {
+    "label": "reproduction",
+    "argv": [
+      "python3",
+      "mcp-associations/capture.py",
+      "capture",
+      "--mousa",
+      "OUTPUT/public-mousa",
+      "--product-source",
+      "PRODUCT_SOURCE",
+      "--product-head",
+      "aa91c50ef362b8864ff15c678fc64e5a727a9d8b",
+      "--output",
+      "OUTPUT/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "274b735264af8e8021d33aba80e7a0b41a2c3289aec7d6cdb258386d2892c614"
+  },
+  {
+    "label": "reproduction-verify",
+    "argv": [
+      "python3",
+      "mcp-associations/capture.py",
+      "verify",
+      "--output",
+      "OUTPUT/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "274b735264af8e8021d33aba80e7a0b41a2c3289aec7d6cdb258386d2892c614"
+  },
+  {
+    "label": "reproduction-controls",
+    "argv": [
+      "python3",
+      "mcp-associations/capture.py",
+      "controls",
+      "--output",
+      "OUTPUT/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "ddfded03c3ce2ffe4b30ce2749a8e36cb9cc9fab202c613c09b0276b1d2f03c7"
+  },
+  {
+    "label": "comparison",
+    "argv": [
+      "python3",
+      "mcp-associations/capture.py",
+      "compare",
+      "--output",
+      "OUTPUT/capture",
+      "--other",
+      "OUTPUT/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "dbb6520ac46bc2fb78645dea34a567b52389ab959a39bbc94dcfd9382cfc9ba7"
+  }
+]

@@ -2,6 +2,23 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## MCP declared supporting context
+
+Follow the [standard-library client instructions](mcp-associations) using the
+exact public product head/tree in [the paired archive](results/2026-10-31-mcp-associations/build.json).
+Build from that clean anonymous source, then capture twice on separate fresh
+stores. Replay regenerates the fixed stdio schedule and binds producing
+identities, closed schemas, primary/supporting provenance and v3 history under
+fresh authorization. Both packers/term policies, default/unfired declarations,
+omissions and validation refusals are included. Rehashed declaration-request
+and associated-content-digest controls must fail their intended assertions,
+not just archive hashes. Compare only after each run's independent replay;
+enumerated fresh-ID/timing exclusions are retained in the comparison receipt.
+Normal authorization may write audit evidence; this client opens no SQLite
+tables and makes no all-table-unchanged assertion. Run the archive verifier
+separately. This is protocol/selection evidence, not an answer-quality, recall,
+completeness, truth, long-horizon reliability or performance experiment.
+
 ## Vector/hybrid supersession with measured token budgets
 
 Use the [token-composition client instructions](vector-token-supersession) and
