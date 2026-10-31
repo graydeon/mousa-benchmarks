@@ -25,6 +25,17 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [MCP declared-context client](mcp-associations) exercises inline declarations
+for lexical byte packing. Its [public-head capture and separate fresh-store
+reproduction](results/2026-10-31-mcp-associations) each retain 39 requests,
+36 responses and three clean process exits. Both term policies and packers,
+ordinary/unfired compatibility, supporting provenance, v3 history, omissions,
+validation refusal and fresh denial are checked. Rehashed changed-declaration
+and associated-provenance controls fail intended assertions. These are submitted
+protocol/selection observations, not independent acceptance, semantic sufficiency,
+recall, completeness, truth, authenticated authorship or performance evidence.
+No generation or judging runs; historical pins and startup/export holds remain.
+
 The [vector/hybrid token-supersession client](vector-token-supersession) adds
 measured whole-context budgets to the accepted byte-only enforcement boundary.
 Its [exact-public-head capture and fresh-store reproduction](results/2026-10-31-vector-hybrid-token-supersession)

@@ -1,0 +1,38 @@
+{
+  "schema": "mousa.chronology_publication.v1",
+  "archives": {
+    "raw-captures.tar.gz": {
+      "capture/capture.json": {
+        "bytes": 562094,
+        "sha256": "caaaf502ccf0d220b53b26e716beb18ca00ccf8fb738d8229f294ba92beb4d8e"
+      },
+      "capture/negative-controls.json": {
+        "bytes": 395,
+        "sha256": "a343c101f7d266dae52e6583033cff9d67b8947f703eb2b558dbbede677839a1"
+      },
+      "capture/summary.json": {
+        "bytes": 337,
+        "sha256": "85f717bb32b75cebdf9f4b51c8bdba4eec374e10c0258d40c4291cde95fa19cd"
+      },
+      "comparison.json": {
+        "bytes": 262,
+        "sha256": "dbb6520ac46bc2fb78645dea34a567b52389ab959a39bbc94dcfd9382cfc9ba7"
+      },
+      "reproduction/capture.json": {
+        "bytes": 562094,
+        "sha256": "5752e6a627f3b64fad622030a5a45404aaa760277356fd5e830c03e646e34ed7"
+      },
+      "reproduction/negative-controls.json": {
+        "bytes": 395,
+        "sha256": "ddfded03c3ce2ffe4b30ce2749a8e36cb9cc9fab202c613c09b0276b1d2f03c7"
+      },
+      "reproduction/summary.json": {
+        "bytes": 337,
+        "sha256": "85f717bb32b75cebdf9f4b51c8bdba4eec374e10c0258d40c4291cde95fa19cd"
+      }
+    }
+  },
+  "capture_protocol": "../../mcp-associations/protocol.json",
+  "final_capture_failures": 0,
+  "preparation_failures": "One pre-freeze local-source pilot assertion failed by incorrectly freezing BM25 across target deletion. Corrected before final public captures. A transient edit syntax error was corrected before execution. Neither is a product failure."
+}

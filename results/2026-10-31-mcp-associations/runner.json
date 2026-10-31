@@ -1,0 +1,12 @@
+{
+  "files": {
+    "mcp-associations/capture.py": "72ef0117d8fa98487210979d0b79c8107b0124a47e4deb815f41a91d1294e087",
+    "mcp-associations/protocol.json": "a3cc79ff2519fff2ee19fe816f4609e4090cee19a2124e10e8fec7542918ed16",
+    "mcp-associations/baseline-discovery.json": "c5ae3498e6fcfb5627c5120e921a401598528fd66f38e45398dd09d5d60514d0",
+    "mcp-retrieval/capture.py": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+    "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+  },
+  "baseline_product": "4691df9d87e25a07e5fe8b41c7ecd56dab0e08b9",
+  "baseline_tree": "046280c0ceea69947d0cfc0e72386b2949104903",
+  "baseline_observation": "Actual accepted-tree stdio tools/list; only the new query input property is excluded from comparison."
+}
