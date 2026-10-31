@@ -25,6 +25,21 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [byte-packed vector/hybrid supersession client](vector-supersession) extends
+the separately accepted lexical token/supersession milestone without changing
+earlier archives. Its [exact-public-head capture and fresh-store reproduction](results/2026-10-30-vector-hybrid-supersession)
+each retain 25 native commands, 42 MCP requests, 40 raw responses and two clean
+process exits. Both packers and retrieval modes compare omitted/false with true,
+changing selection from an exact predecessor to a byte-equal survivor without
+reranking or changing producing coverage. A successor with no vector and later
+withdrawal does not restore the predecessor; recorded v9 history remains bound
+after withdrawal/deactivation. Both replays and four rehashed controls per run
+pass. All 65 result rows match after explicit fresh-ID/timing exclusions; one
+initial comparison failure is retained. This is a submitted synthetic
+protocol/arithmetic proposal, not independent final-head acceptance, a model or
+quality/performance result. Vector/hybrid token-plus-supersession remains outside
+this byte-only slice.
+
 The [lexical token/supersession client](token-supersession) composes exact
 predecessor withholding and measured whole-context budgets for native directory/
 JSONL and configured stdio MCP sources. Its

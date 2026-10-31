@@ -1,0 +1,48 @@
+{
+  "schema": "mousa.vector_hybrid_supersession_capture.v1",
+  "runner_sha256": "024de3fae0dc444a3c21028a69f01bf9862d4ed26afe7ad22be7e5a96cafd675",
+  "comparator_sha256": "e3f491b3a852f89f54033378f5ba23837e30515f19324b7e0f74df28feab68d8",
+  "fixture": {
+    "old.md": "Drain legacy",
+    "twin.md": "Drain legacy",
+    "new.md": "Separate correction",
+    "peer.md": "Radishes prefer damp soil."
+  },
+  "values": {
+    "old.md": [
+      1,
+      0
+    ],
+    "twin.md": [
+      0,
+      1
+    ],
+    "peer.md": [
+      0.8,
+      0.6
+    ]
+  },
+  "schedule": "vector-supersession/capture.py:schedule",
+  "runs": [
+    "capture",
+    "reproduction"
+  ],
+  "events_per_run": 71,
+  "native_commands_per_run": 25,
+  "mcp_requests_per_run": 42,
+  "mcp_responses_per_run": 40,
+  "clean_mcp_exits_per_run": 2,
+  "exits": {
+    "capture": 0,
+    "reproduction": 0,
+    "capture_verify": 0,
+    "reproduction_verify": 0,
+    "capture_controls": 0,
+    "reproduction_controls": 0
+  },
+  "failed_capture_attempts": 0,
+  "failed_comparison_attempts": 1,
+  "raw_archive": "raw-captures.tar.xz",
+  "raw_archive_members": "raw-members.json",
+  "limits": "Synthetic public-client evidence only. No product packages, SQLite access, model inference, semantic quality, performance or old-text reconstruction."
+}
