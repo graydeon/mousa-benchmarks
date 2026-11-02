@@ -1,0 +1,24 @@
+{
+  "schema": "mousa.token_association_capture.v1",
+  "product_head": "56783cc8e5d64315bf7527bfe423ef69330a74f5",
+  "product_tree": "e059f03874153d43d0bbea7342cd5e394353e2bb",
+  "product_pr": "https://github.com/graydeon/mousa/pull/98",
+  "runner_sha256": "be377571ee8958a0494c12436ec8557e2f0f0cac439b763930211b7da1b9bd7a",
+  "helpers": {
+    "mcp-tokens/capture.py": "f2f4e7bf784767774c75825aef784f6a260a02e033885b356cc2441d93879af3",
+    "mcp-retrieval/capture.py": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+    "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+  },
+  "fixture": {
+    "backup.md": "Run the backup inside the connection context manager.",
+    "closure.md": "The context manager does not close the connection; close it explicitly.",
+    "copy.md": "The context manager does not close the connection; close it explicitly."
+  },
+  "declaration": {
+    "from_item": "backup.md",
+    "to_item": "closure.md",
+    "basis": "connection cleanup qualification",
+    "author": "example.maintainer"
+  },
+  "scope": "Synthetic public-client protocol, attributed provenance and official whole-rendering count checks; no semantic/authorship/performance/model-window claim."
+}

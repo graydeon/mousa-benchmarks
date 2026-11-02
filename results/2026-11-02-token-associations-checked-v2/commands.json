@@ -1,0 +1,190 @@
+[
+  {
+    "label": "capture",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "capture",
+      "--mousa",
+      "BINARY",
+      "--product-source",
+      "PRODUCT_SOURCE",
+      "--product-head",
+      "56783cc8e5d64315bf7527bfe423ef69330a74f5",
+      "--python",
+      "TOKEN_PY",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "LIVE/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "ac20655749a08b1fda1a04e168cba3f80e5d103e92a5a58d22167a16b5d5b5ee"
+  },
+  {
+    "label": "capture-verify",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "verify",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "LIVE/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "a201e4014b004565061f6f1f52dca4e7e7d4e71538c77a7a27781f39be9c6565"
+  },
+  {
+    "label": "capture-controls",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "controls",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "LIVE/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "718626af4489927623d1372ab8d431010a28e50db45e254dce60cdfb3214a42b"
+  },
+  {
+    "label": "reproduction",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "capture",
+      "--mousa",
+      "BINARY",
+      "--product-source",
+      "PRODUCT_SOURCE",
+      "--product-head",
+      "56783cc8e5d64315bf7527bfe423ef69330a74f5",
+      "--python",
+      "TOKEN_PY",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "LIVE/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "ac20655749a08b1fda1a04e168cba3f80e5d103e92a5a58d22167a16b5d5b5ee"
+  },
+  {
+    "label": "reproduction-verify",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "verify",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "LIVE/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "a201e4014b004565061f6f1f52dca4e7e7d4e71538c77a7a27781f39be9c6565"
+  },
+  {
+    "label": "reproduction-controls",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "controls",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "LIVE/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "5e63739a1fe9a8f0f8d7ced35d364f7a76705e89a407a6a9d0c36bda6e19f6d7"
+  },
+  {
+    "label": "compare",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "compare",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "LIVE/capture",
+      "--other",
+      "LIVE/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "1f8203a0db50476a88a5b1c7206552d720a9944a0c1b8686ea86d08cd3bda8d3"
+  },
+  {
+    "label": "archive-capture-verify",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "verify",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "ARCHIVE/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "a201e4014b004565061f6f1f52dca4e7e7d4e71538c77a7a27781f39be9c6565"
+  },
+  {
+    "label": "archive-capture-controls",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "controls",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "ARCHIVE/capture"
+    ],
+    "exit": 0,
+    "output_sha256": "718626af4489927623d1372ab8d431010a28e50db45e254dce60cdfb3214a42b"
+  },
+  {
+    "label": "archive-reproduction-verify",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "verify",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "ARCHIVE/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "a201e4014b004565061f6f1f52dca4e7e7d4e71538c77a7a27781f39be9c6565"
+  },
+  {
+    "label": "archive-reproduction-controls",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "controls",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "ARCHIVE/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "5e63739a1fe9a8f0f8d7ced35d364f7a76705e89a407a6a9d0c36bda6e19f6d7"
+  },
+  {
+    "label": "archive-compare",
+    "argv": [
+      "TOKEN_PY",
+      "token-associations-checked-v2/capture.py",
+      "compare",
+      "--cache",
+      "TOKEN_CACHE",
+      "--output",
+      "ARCHIVE/capture",
+      "--other",
+      "ARCHIVE/reproduction"
+    ],
+    "exit": 0,
+    "output_sha256": "1f8203a0db50476a88a5b1c7206552d720a9944a0c1b8686ea86d08cd3bda8d3"
+  }
+]

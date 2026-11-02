@@ -1,0 +1,38 @@
+{
+  "schema": "mousa.chronology_publication.v1",
+  "archives": {
+    "raw-captures.tar.gz": {
+      "capture/capture.json": {
+        "bytes": 786134,
+        "sha256": "8c6fbf2f75d39e5858fcc27187640ef5d59e32a0af94bb58e061f30b4178185c"
+      },
+      "capture/summary.json": {
+        "bytes": 5808,
+        "sha256": "aabeafd625a8aae4ceae1cf4b2389440061614273ed6e7bc66d637597789e7ea"
+      },
+      "capture/negative-controls.json": {
+        "bytes": 540,
+        "sha256": "0fcf87f6a1c5127d12d0f15402a549c66bd5c825fb7f1c84d5a28d2cb562ee90"
+      },
+      "reproduction/capture.json": {
+        "bytes": 786134,
+        "sha256": "de265cf4e5c6a5283636c59b3e3e1b4b6d84e493d0b1e2be96492c5158c5255f"
+      },
+      "reproduction/summary.json": {
+        "bytes": 5808,
+        "sha256": "aabeafd625a8aae4ceae1cf4b2389440061614273ed6e7bc66d637597789e7ea"
+      },
+      "reproduction/negative-controls.json": {
+        "bytes": 540,
+        "sha256": "9b0e9d0007e94c5e9fbd9283fc4d0ba3b3f0e2904d6f8ae0d5f329e535969a22"
+      },
+      "comparison.json": {
+        "bytes": 314,
+        "sha256": "1f8203a0db50476a88a5b1c7206552d720a9944a0c1b8686ea86d08cd3bda8d3"
+      }
+    }
+  },
+  "capture_protocol": "../../token-associations/protocol.json",
+  "final_capture_failures": 0,
+  "preparation_failures": "One pre-freeze pilot assertion incorrectly required semantic closed-input errors to name associations. It was corrected to validate the unsupported property and validity of the remaining arguments, without pinning error wording. Pilot comparison diagnosed varying per-call access activation IDs; they are now explicitly excluded after validating denial while preserving access binding IDs. Raw pilot receipts are retained separately. No product runtime defect was established."
+}
