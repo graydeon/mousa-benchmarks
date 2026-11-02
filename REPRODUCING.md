@@ -2,6 +2,25 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Measured declared supporting context after checked admission
+
+Use the [versioned corrected-pin client](token-associations-checked-v2) and
+the [corrected archive's exact public head/tree](results/2026-11-02-token-associations-checked-v2/build.json).
+Build from that clean anonymous source. With the prepared official offline
+tokenizer/cache, capture twice on fresh stores using the fixed directory root,
+then replay each run, regenerate its three rehashed controls and compare the
+63 stable rows. Each run independently checks 39 complete rendering counts/hashes,
+native directory/JSONL and configured MCP, both packers, documented term-policy
+coverage, exact/short notes, producing history/recount, refusal and fresh denial.
+Verify outer and archive-member hashes before replaying extracted observations.
+
+The [original client](token-associations) and
+[original archive](results/2026-11-02-token-associations) retain their own product
+pin and frozen bytes. Replay each version with its own protocol; the corrected
+comparison covers only its two runs. Normal captures do not establish hostile
+canonical overflow rejection, semantic sufficiency, authenticated authorship,
+performance or universal model-window safety.
+
 ## MCP declared supporting context
 
 Follow the [standard-library client instructions](mcp-associations) using the

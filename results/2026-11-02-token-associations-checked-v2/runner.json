@@ -1,0 +1,10 @@
+{
+  "producer": "../../token-associations-checked-v2/capture.py",
+  "runner_sha256": "be377571ee8958a0494c12436ec8557e2f0f0cac439b763930211b7da1b9bd7a",
+  "protocol_sha256": "5f026d5e547034bcf1f633a59b5b375c9b70733d1f4f3ad751c7fa2920d359a1",
+  "helpers": {
+    "mcp-tokens/capture.py": "f2f4e7bf784767774c75825aef784f6a260a02e033885b356cc2441d93879af3",
+    "mcp-retrieval/capture.py": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+    "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+  }
+}

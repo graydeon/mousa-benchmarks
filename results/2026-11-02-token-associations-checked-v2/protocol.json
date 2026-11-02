@@ -1,0 +1,38 @@
+{
+  "schema": "mousa.chronology_publication.v1",
+  "archives": {
+    "raw-captures.tar.gz": {
+      "capture/capture.json": {
+        "bytes": 786134,
+        "sha256": "d5e0d41668eb4080b4cfe5a3879bf9fb714c7563da692d3437fdc7266b51075c"
+      },
+      "capture/summary.json": {
+        "bytes": 5808,
+        "sha256": "c6b55bb4bf86a7f68994d1e8b36565936b66b28f8b65517c477db8ab6cc4fe4f"
+      },
+      "capture/negative-controls.json": {
+        "bytes": 540,
+        "sha256": "718626af4489927623d1372ab8d431010a28e50db45e254dce60cdfb3214a42b"
+      },
+      "reproduction/capture.json": {
+        "bytes": 786133,
+        "sha256": "2f47ecddaf8dd2418bb709a735bc13e7d132813e4855cd5002226de51b8a3293"
+      },
+      "reproduction/summary.json": {
+        "bytes": 5808,
+        "sha256": "c6b55bb4bf86a7f68994d1e8b36565936b66b28f8b65517c477db8ab6cc4fe4f"
+      },
+      "reproduction/negative-controls.json": {
+        "bytes": 540,
+        "sha256": "5e63739a1fe9a8f0f8d7ced35d364f7a76705e89a407a6a9d0c36bda6e19f6d7"
+      },
+      "comparison.json": {
+        "bytes": 314,
+        "sha256": "1f8203a0db50476a88a5b1c7206552d720a9944a0c1b8686ea86d08cd3bda8d3"
+      }
+    }
+  },
+  "capture_protocol": "../../token-associations-checked-v2/protocol.json",
+  "final_capture_failures": 0,
+  "historical_evidence": "The original 4ef4c7c archive and frozen producer/protocol remain unchanged; comparison is restricted to these two corrected-public-pin runs."
+}

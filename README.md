@@ -25,9 +25,9 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
-The [measured declared-context client](token-associations) combines primary
-lexical evidence and declared supporting notes under one whole-rendering token
-budget. Its [public-head capture and independent fresh-store reproduction](results/2026-11-02-token-associations)
+The [corrected-pin measured declared-context client](token-associations-checked-v2)
+combines primary lexical evidence and declared supporting notes under one
+whole-rendering token budget. Its [public-head capture and fresh-store reproduction](results/2026-11-02-token-associations-checked-v2)
 each retain 39 native commands, 27 MCP requests, 25 responses, two clean exits and 39
 official independent context counts. Native directory/JSONL and configured MCP
 exercise both packers, exact/short notes, primary-trigger ordering, duplicate
@@ -36,6 +36,12 @@ archived replays, three rehashed controls per run and the 63-row stable comparis
 pass. These are submitted protocol/counting observations, not independent
 acceptance, semantic sufficiency, authenticated authorship, performance or
 universal model-window safety. Earlier archives and pins remain unchanged.
+
+The corrected-pin capture uses public product `56783cc8` after checked v11
+aggregate byte admission. The [original capture](results/2026-11-02-token-associations)
+and [original producer/protocol](token-associations) remain unchanged at `4ef4c7c`;
+no cross-pin equality is claimed. Routine captures do not prove hostile canonical
+overflow rejection, which remains covered by product-local boundary regressions.
 
 The [MCP declared-context client](mcp-associations) exercises inline declarations
 for lexical byte packing. Its [public-head capture and separate fresh-store
