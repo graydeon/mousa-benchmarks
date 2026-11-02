@@ -2,6 +2,24 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Native attributed classification administration
+
+Use the [bounded client instructions](classification-admin) and exact public
+head/tree in its protocol. Capture twice on separate temporary JSONL stores, replay
+the saved streams, regenerate the rehashed returned-label mutation and compare the
+canonical assertions and fixed evidence pins exactly. Query request/decision/trail
+identities and timing are invocation-specific and are excluded from that comparison.
+The [paired archive](results/2026-11-02-classification-admin) retains each producing
+record and the intended `assertion-facts-binding` rejection.
+
+Only segment subjects and representation basis are exercised publicly here.
+Product tests establish all typed forms, strict draft input, row/link idempotence,
+atomic rollback and canonical damage/startup behavior. Repeated matching client
+output is not a database invariance proof. No product imports, SQL reads, binary or
+database export, inference, secret scanning, classification-based authorization,
+semantic/performance campaign or historical archive rewrite is involved.
+
+
 ## Measured declared supporting context after checked admission
 
 Use the [versioned corrected-pin client](token-associations-checked-v2) and

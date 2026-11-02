@@ -25,6 +25,17 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [native classification client](classification-admin) records attributed labels
+against existing evidence through put/get, exact retry and conflicting assertions.
+Its [capture and separate fresh-store reproduction](results/2026-11-02-classification-admin)
+retain canonical readback, unchanged retrieval and retired-revision pins. It exercises
+segment subjects with representation basis only. Product-local tests separately
+cover row/link idempotence, rollback, all typed forms and damaged-store refusal.
+The client does not classify automatically, authenticate attribution or make labels
+affect serving permission/ranking. This is protocol/identity evidence, not label
+truth, semantic quality or performance.
+
+
 The [corrected-pin measured declared-context client](token-associations-checked-v2)
 combines primary lexical evidence and declared supporting notes under one
 whole-rendering token budget. Its [public-head capture and fresh-store reproduction](results/2026-11-02-token-associations-checked-v2)

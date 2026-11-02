@@ -1,0 +1,12 @@
+{
+  "schema": "mousa.classification_admin_capture.v1",
+  "product_repository": "https://github.com/graydeon/mousa",
+  "product_head": "6d7a4c11ba44f2d5bf49c01a647762641e318f7a",
+  "product_tree": "51c1cc58493492c960820e88a1123708f6528e05",
+  "runner_sha256": "dc5bf864f121d0a96e5711ac43c3aeb89335cbe23f8496847e1e5e60c58b8b2a",
+  "helpers": {
+    "mcp-retrieval/capture.py": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+    "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+  },
+  "scope": "Synthetic native attributed assertions: segment subject and representation basis; no classifier, database inspection or retrieval enforcement."
+}

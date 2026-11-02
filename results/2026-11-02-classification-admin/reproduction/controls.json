@@ -1,0 +1,1 @@
+{"detector":"assertion-facts-binding","mutation":"returned label with recomputed stream/member/archive hashes","result":"PASS","scope":"Mutation is intentionally invalid protocol evidence."}

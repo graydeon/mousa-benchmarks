@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/graydeon/mousa",
+  "head": "6d7a4c11ba44f2d5bf49c01a647762641e318f7a",
+  "tree": "51c1cc58493492c960820e88a1123708f6528e05",
+  "binary_sha256": "55ca7797b107e9b486b24930c1d99acc6973447f9e7941cec49857e4c9ca2ed8",
+  "build": "GOWORK=off CGO_ENABLED=0 GOAMD64=v1 go build -o /tmp/mousa-public-classification-admin ./cmd/mousa",
+  "source": "Clean anonymously fetched exact public head; tree equals tested source-bound product tree."
+}
