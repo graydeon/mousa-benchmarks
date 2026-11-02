@@ -25,6 +25,18 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [measured declared-context client](token-associations) combines primary
+lexical evidence and declared supporting notes under one whole-rendering token
+budget. Its [public-head capture and independent fresh-store reproduction](results/2026-11-02-token-associations)
+each retain 39 native commands, 27 MCP requests, 25 responses, two clean exits and 39
+official independent context counts. Native directory/JSONL and configured MCP
+exercise both packers, exact/short notes, primary-trigger ordering, duplicate
+handling, producing v11 history/recount, refusal and fresh denial. Live and
+archived replays, three rehashed controls per run and the 63-row stable comparison
+pass. These are submitted protocol/counting observations, not independent
+acceptance, semantic sufficiency, authenticated authorship, performance or
+universal model-window safety. Earlier archives and pins remain unchanged.
+
 The [MCP declared-context client](mcp-associations) exercises inline declarations
 for lexical byte packing. Its [public-head capture and separate fresh-store
 reproduction](results/2026-10-31-mcp-associations) each retain 39 requests,

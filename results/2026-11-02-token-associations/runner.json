@@ -1,0 +1,11 @@
+{
+  "files": {
+    "token-associations/capture.py": "be377571ee8958a0494c12436ec8557e2f0f0cac439b763930211b7da1b9bd7a",
+    "token-associations/protocol.json": "bfc2bc0b62b46e522b158d4a8119be16db53fb06091c2dfbb3d1f30c22d9c9e6",
+    "mcp-tokens/capture.py": "f2f4e7bf784767774c75825aef784f6a260a02e033885b356cc2441d93879af3",
+    "mcp-retrieval/capture.py": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+    "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+  },
+  "tokenizer": "tiktoken/0.12.0/o200k_base/ordinary",
+  "calls": "No model, provider, embedding or evaluator calls; product and independent reference counters use prepared offline official tiktoken."
+}
