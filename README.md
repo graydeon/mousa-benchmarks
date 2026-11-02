@@ -25,6 +25,17 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [supersession-safe supporting-context client](association-supersession) checks
+byte-only lexical composition through native directory/JSONL and configured MCP.
+It binds complete request populations, exact revision pins, primary/associated
+suppression, surviving nonmatching support, both packers and producing v12 history.
+Rehashed request, suppression-fact and selected-support controls target semantic
+binding rather than outer hashes. Snapshot/rollback/integrity claims remain
+product-local; supporting attribution is not semantic sufficiency or truth.
+The [paired public-head observations](results/2026-11-02-association-supersession)
+each passed 24 native commands and 13 MCP frames, stored replay and three
+rehashed semantic controls. Exact comparison passed 17 stable producing rows.
+
 The [native classification client](classification-admin) records attributed labels
 against existing evidence through put/get, exact retry and conflicting assertions.
 Its [capture and separate fresh-store reproduction](results/2026-11-02-classification-admin)

@@ -1,0 +1,22 @@
+{
+  "schema": "mousa.association_supersession_observations.v1",
+  "product_head": "360026649d73810115a604f36f9b6df6b251a657",
+  "product_tree": "57d9fea395720173818195e09da31b0dae5d4faf",
+  "runner_sha256": "824de1556391025820d1e66c293c7dc00870fe76a92c1e28361fa333e35e55f8",
+  "helpers": {
+    "mcp-retrieval/capture.py": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+    "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1",
+    "directory-supersession/capture.py": "ab75b395491c0463b4b4f12151f753f0b5d9303220fe3f81c72a91973e20342a"
+  },
+  "fixture": {
+    "old": "needle obsolete qualification",
+    "primary": "needle retained instruction",
+    "twin": "needle obsolete qualification",
+    "support": "Nonmatching caller-declared qualification.",
+    "new": "Explicit replacement attribution."
+  },
+  "scope": "Frozen synthetic byte-only lexical composition. Two fresh stores; native directory/JSONL and configured MCP. No model, SQL or performance inference.",
+  "native_commands": 24,
+  "mcp_frames": 13,
+  "mcp_responses": 12
+}

@@ -365,6 +365,23 @@ Startup refusal on an absent path is store creation, not transaction rollback ev
 The protocol does not claim semantic correctness, authentication, latency, concurrency or
 performance, and opted-in trail inspection remains unimplemented.
 
+## Supersession-safe lexical supporting context
+
+The [bounded client schedule](association-supersession) uses public native
+directory/JSONL commands and configured stdio MCP with explicit byte-only
+supersession plus caller-declared associations. Its frozen protocol binds the
+exact clean public product head/tree and existing strict stream/archive helpers.
+Reproduction uses two fresh stores, offline replay and exact stable producing-fact
+comparison; three rehashed controls reject changed requests, suppression facts
+and selected support at named semantic detectors. Raw argv, stdin/stdout/stderr,
+process exits, complete request populations and actual responses are retained.
+
+Follow the linked instructions for sequential captures: the synthetic directory
+path is fixed to preserve exact source/revision identity, created exclusively and
+removed only by its owner. No SQL, product-package imports, tokenizer backend,
+model calls, database/binary export or startup-study collection is involved.
+Internal snapshot/rollback/canonical-damage properties are not public-client claims.
+
 ## Product correctness gate
 
 This remains entirely inside Mousa and requires no companion checkout, Node, QMD, downloaded datasets or inference services:
