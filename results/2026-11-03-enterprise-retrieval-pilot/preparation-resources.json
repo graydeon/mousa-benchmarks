@@ -1,0 +1,20 @@
+{
+  "argv_note": "Portable equivalent; deployment paths omitted. Original exact invocation is retained outside the public archive.",
+  "cpu_system_seconds": 0.136025,
+  "cpu_user_seconds": 2.8628929999999997,
+  "endpoint": "cold preparation process; archive reads/decompression, enrollment, rendering and bound check; no index or retrieval",
+  "exit": 2,
+  "peak_rss_kib": 50480,
+  "portable_argv": [
+    "timeout",
+    "1800s",
+    "python3",
+    "prepare.py",
+    "prepare",
+    "--cache",
+    "source",
+    "--out",
+    "preparation.json.gz"
+  ],
+  "wall_seconds": 3.0006688749417663
+}

@@ -1,0 +1,50 @@
+{
+  "preparation.json.gz": {
+    "compressed": {
+      "bytes": 277150,
+      "sha256": "a646dd67795c958aae150d0b638988e9711a84f3041de2591f9300f51bd132d8"
+    },
+    "expanded": {
+      "bytes": 962559,
+      "sha256": "125c4b0f5e49601dd7c70ec66415702bfb78c80a9d5b3aa836dbe540113ce740"
+    },
+    "limits": {
+      "compressed_bytes": 1048576,
+      "expanded_bytes": 8388608
+    },
+    "member_hashes": "embedded member_sha256; validated by shared load_capture",
+    "object_members": 2915
+  },
+  "reproduction.json.gz": {
+    "compressed": {
+      "bytes": 277154,
+      "sha256": "962d74fba5f3865fec174b1ba704fe9b46e03925aa9bddbbfac448d8feb01b70"
+    },
+    "expanded": {
+      "bytes": 962559,
+      "sha256": "d4ff4b93fd8e84e7fcbaa75c5909b758d217273a7b3fef1f23548b6010c668b9"
+    },
+    "limits": {
+      "compressed_bytes": 1048576,
+      "expanded_bytes": 8388608
+    },
+    "member_hashes": "embedded member_sha256; validated by shared load_capture",
+    "object_members": 2915
+  },
+  "synthetic-sanity.json.gz": {
+    "compressed": {
+      "bytes": 34295,
+      "sha256": "56bb7ad03840c5b65a6498bbb0cc84045e99bdd126308759ed7b001da32cd422"
+    },
+    "expanded": {
+      "bytes": 182782,
+      "sha256": "5bfc109cd80b1b76be57c7400e5f8f65be83b345b6d2d91c6363928ac2c0decf"
+    },
+    "limits": {
+      "compressed_bytes": 1048576,
+      "expanded_bytes": 8388608
+    },
+    "member_hashes": "embedded member_sha256; validated by shared load_capture",
+    "object_members": 43
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "controls": [
+    {
+      "archive_integrity_passed": true,
+      "control": "changed-enrollment-equal-count",
+      "detector": "enrollment-identity",
+      "rehashed_archive": {
+        "bytes": 277163,
+        "sha256": "7bd718e7e5e3ba0793b9fd528a1e6332fc0999946489596c7b58769780bfa795"
+      },
+      "scope": "enterprise preparation",
+      "semantic_rejection": true
+    },
+    {
+      "archive_integrity_passed": true,
+      "control": "wrong-physical-mapping",
+      "detector": "logical-physical-mapping",
+      "rehashed_archive": {
+        "bytes": 277158,
+        "sha256": "9e67ce8ac86209b01a2008bd9e08f54d8edf88c84a39f07eeafe83fae6c643de"
+      },
+      "scope": "enterprise preparation",
+      "semantic_rejection": true
+    },
+    {
+      "archive_integrity_passed": true,
+      "control": "changed-ranking",
+      "detector": "ranking-binding",
+      "rehashed_archive": {
+        "bytes": 1101,
+        "sha256": "aaf776f6145080bd7a52603f89bbd789028928fe3f55b6cca3391058d62fbbcd"
+      },
+      "scope": "synthetic sanity only",
+      "semantic_rejection": true
+    },
+    {
+      "archive_integrity_passed": true,
+      "control": "changed-packed-evidence",
+      "detector": "packed-binding",
+      "rehashed_archive": {
+        "bytes": 1098,
+        "sha256": "bdad16041614e3e81f4240bfb275d9770e805b37ed4ca6d75124e57dd72fcd6b"
+      },
+      "scope": "synthetic sanity only",
+      "semantic_rejection": true
+    }
+  ],
+  "metric_fixture_tests": 4
+}

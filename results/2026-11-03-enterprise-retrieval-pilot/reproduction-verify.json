@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "prepare.py",
+    "verify",
+    "--cache",
+    "source-reproduction",
+    "--capture",
+    "preparation.json.gz"
+  ],
+  "exit": 0
+}
