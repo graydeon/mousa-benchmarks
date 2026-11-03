@@ -1,0 +1,77 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 8159,
+      "sha256": "62fcf19edf5881938410b8d09caca515e745c403e036a90888c47f071bc47737"
+    },
+    "archive-inventory.json": {
+      "bytes": 1488,
+      "sha256": "5313d8a97c75b2ea51a470c84be79486c35d595b411ef51b5c75fa85230c0495"
+    },
+    "build.json": {
+      "bytes": 1798,
+      "sha256": "26dcb8098805b6d9bd50fa930bb16b7810e8240ce5622795d00aa0ee6d7ebd51"
+    },
+    "controls.json": {
+      "bytes": 1476,
+      "sha256": "c61702d4293dcc324095ad8f4a2e264d73527366a1104b65b3e2d8969ab266de"
+    },
+    "environment.json": {
+      "bytes": 625,
+      "sha256": "958138e4fe08861000ce4c2ce1cbf0a981c4ac746a4101042abf5af47a33dbc2"
+    },
+    "execution.json": {
+      "bytes": 5736,
+      "sha256": "4c99b701ac5ca075ffc3ce34ba13dcba7a1c9d9643d3738e50a726a20835dc99"
+    },
+    "freeze-receipt.json": {
+      "bytes": 217,
+      "sha256": "e879063270ba66bb202f21c11b4ea904bb30dd66a54495b09f4a52b838904756"
+    },
+    "per-question.json": {
+      "bytes": 42333,
+      "sha256": "413a7d80e55a066fc1f4752ca9ad78a10944764f07710ce30fdc896f9996f884"
+    },
+    "preparation-resources.json": {
+      "bytes": 589,
+      "sha256": "684793eb1d3803d2fd70af817cfaf24469bcc64679b031877b8059a6dbbd60d6"
+    },
+    "preparation.json.gz": {
+      "bytes": 277150,
+      "sha256": "a646dd67795c958aae150d0b638988e9711a84f3041de2591f9300f51bd132d8"
+    },
+    "protocol.json": {
+      "bytes": 4753,
+      "sha256": "2465faa7631bf6f37cd747344043b5b5729533d163c3bda6e3632a873f45e8fa"
+    },
+    "reproduction-resources.json": {
+      "bytes": 592,
+      "sha256": "3eafd8a9a26e2affb82f4180cbc5450e343fd265e252d828ab86799339c65cbd"
+    },
+    "reproduction-verify.json": {
+      "bytes": 165,
+      "sha256": "803583a55ad984eef8c4fc68ee93dab76eaa8700e118a23164423de843833e3f"
+    },
+    "reproduction.json.gz": {
+      "bytes": 277154,
+      "sha256": "962d74fba5f3865fec174b1ba704fe9b46e03925aa9bddbbfac448d8feb01b70"
+    },
+    "source-license.txt": {
+      "bytes": 1072,
+      "sha256": "9eab95dae84867fa8ba1450e4bf34addf74e841923f4b6877f4d2df82bed3508"
+    },
+    "source-metadata.json": {
+      "bytes": 3753,
+      "sha256": "76b5e864a2229ce2344545c928ed0369ab3e89185827498cebc6272c3c0c0222"
+    },
+    "summary.json": {
+      "bytes": 1109,
+      "sha256": "963cc8f670292c2b12ba21bed01d59a50338dd663602f88e271bb52d1381fe48"
+    },
+    "synthetic-sanity.json.gz": {
+      "bytes": 34295,
+      "sha256": "56bb7ad03840c5b65a6498bbb0cc84045e99bdd126308759ed7b001da32cd422"
+    }
+  },
+  "schema": "mousa.enterprise_pilot_result_files.v1"
+}

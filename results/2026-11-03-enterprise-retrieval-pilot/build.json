@@ -1,0 +1,12 @@
+{
+  "binary_sha256": "520112f4f2ba4822c5171b059748691906c57c16d60495abb6930e6b959a509c",
+  "build_cpu_rss": "not captured; build excluded from pilot/query timing",
+  "exit": 0,
+  "metadata": "beir: go1.27.1\n\tpath\tgithub.com/graydeon/mousa/cmd/beir\n\tmod\tgithub.com/graydeon/mousa\tv0.0.0-20261103025146-db03c841c049\t\n\tdep\tgithub.com/dustin/go-humanize\tv1.0.1\th1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=\n\tdep\tgithub.com/google/uuid\tv1.6.0\th1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=\n\tdep\tgithub.com/remyoudompheng/bigfft\tv0.0.0-20230129092748-24d4a6f8daec\th1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=\n\tdep\tgolang.org/x/sys\tv0.47.0\th1:o7XGOvZQCADBQQ4Y7VNq2dRWQR7JmOUW8Kxx4ZsNgWs=\n\tdep\tmodernc.org/libc\tv1.74.4\th1:fX1Omw4o2/1C2iRkkIsrQTasJQldLhRmuPreXLoWs9k=\n\tdep\tmodernc.org/mathutil\tv1.7.1\th1:GCZVGXdaN8gTqB1Mf/usp1Y/hSqgI2vAGGP4jZMCxOU=\n\tdep\tmodernc.org/memory\tv1.11.0\th1:o4QC8aMQzmcwCK3t3Ux/ZHmwFPzE6hf2Y5LbkRs+hbI=\n\tdep\tmodernc.org/sqlite\tv1.57.0\th1:qNQP6xnx5M0ISNtlnxoOX0+cD5bJ0/gr9aMmndFczzg=\n\tbuild\t-buildmode=exe\n\tbuild\t-compiler=gc\n\tbuild\tDefaultGODEBUG=cryptocustomrand=1,tlssecpmlkem=0,tracebacklabels=0,urlstrictcolons=0,x509sslcertoverrideplatform=0\n\tbuild\tCGO_ENABLED=0\n\tbuild\tGOARCH=amd64\n\tbuild\tGOOS=linux\n\tbuild\tGOAMD64=v1\n\tbuild\tvcs=git\n\tbuild\tvcs.revision=db03c841c0491ac505be8289e08fa60f78eae738\n\tbuild\tvcs.time=2026-11-03T02:51:46Z\n\tbuild\tvcs.modified=false\n",
+  "recipe": "CGO_ENABLED=0 GOAMD64=v1 go build -o beir ./cmd/beir",
+  "repository": "https://github.com/graydeon/mousa",
+  "revision": "db03c841c0491ac505be8289e08fa60f78eae738",
+  "source_checkout": "anonymous clean exact detached revision",
+  "tool_wall_seconds": 4.45,
+  "tree": "05966cd8d06a619dc1d4198a41863f8bb77a9320"
+}

@@ -25,6 +25,15 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [EnterpriseRAG lexical pilot](enterprise-retrieval-pilot) has an executed
+[preparation failure and per-question outcomes](results/2026-11-03-enterprise-retrieval-pilot),
+**not a completed quality comparison**. Its fixed 20-question, gold-enriched
+500-document selection totals 4,970,133 normalized bytes, exceeding the 4 MiB cap.
+Both preparation passes refused before ingestion; all enterprise retrieval arms
+are NOT RUN, with no zero scores imputed. Separate synthetic adapter checks are
+not enterprise quality results. This generated/simulated-company dataset is not
+private production data; no answer generation, judge or paid API was executed.
+
 The [corrected empty-association client](association-supersession-v2) adds the
 native omitted/false/true empty-flag boundary to the composition workflow.
 Its [paired corrected-public-pin observations](results/2026-11-03-association-supersession-v2)

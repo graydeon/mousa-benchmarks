@@ -1,0 +1,18 @@
+{
+  "avx": false,
+  "avx2": false,
+  "cpu": "Intel(R) Xeon(R) CPU L5640 @2.27GHz",
+  "endpoint_caveat": "No enterprise query latency measured. Synthetic warm native harness, cold launcher and raw SQLite endpoints are not comparable performance measurements.",
+  "go": "go1.27.1",
+  "logical_cpus": 8,
+  "os": {
+    "machine": "x86_64",
+    "release": "6.12.111+deb13-amd64",
+    "system": "Linux"
+  },
+  "python": "3.13.5",
+  "selected_rendered_bytes": 4970133,
+  "source_cache_regular_file_bytes": 72606390,
+  "source_decompression": "read bounded regular archive members in memory, never extracted",
+  "sqlite": "3.46.1"
+}

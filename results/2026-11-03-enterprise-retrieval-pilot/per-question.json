@@ -1,0 +1,1602 @@
+[
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_e044274a9d184700bb8cdf9ddb6d9d02"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_e044274a9d184700bb8cdf9ddb6d9d02": [
+        "p_070ac3441f3f43c984043eddef4fd1f4241cb995bcf4830445277c6f549fb461"
+      ]
+    },
+    "question_id": "qst_0102",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_04b24bf957c047f4b7d8ceefdfde8290"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_04b24bf957c047f4b7d8ceefdfde8290": [
+        "p_b673ed372408affc2c6ea33589035880824f31fc7dd7e673fe7864159fb4d48d"
+      ]
+    },
+    "question_id": "qst_0174",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_005f7a937cad4b3cbb30d9d93199e22a"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_005f7a937cad4b3cbb30d9d93199e22a": [
+        "p_730706d416a2b483345e7d2665a98d3d323b21fbd2288175480469f429f280d7"
+      ]
+    },
+    "question_id": "qst_0104",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_d7f0edbaa28147da807b5b85ea495bd1"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_d7f0edbaa28147da807b5b85ea495bd1": [
+        "p_588c23d8c172269d4822bc72b1df421110a49b0eed1d936e576d5861447bbcba"
+      ]
+    },
+    "question_id": "qst_0021",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_46a4cb87db414e769f2df86f01626948"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_46a4cb87db414e769f2df86f01626948": [
+        "p_629b34f246f48be6c1dac6427954fd1d13bb8a8e2b8e9866c9002920d46feff5"
+      ]
+    },
+    "question_id": "qst_0011",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_f2f019c122154edc8b21f56879661043"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_f2f019c122154edc8b21f56879661043": [
+        "p_7835079c7d378c44f7db3802d6a52f3a587a8093d3cc093e8bda4c20b2e8bdc6"
+      ]
+    },
+    "question_id": "qst_0022",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_43ecb807903f46848e8d099b6c8beb04"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_43ecb807903f46848e8d099b6c8beb04": [
+        "p_541b73ece0a71fe315c27c3d4bc27a0f71660fc6cc5aad827290c7f3b1ce51e2"
+      ]
+    },
+    "question_id": "qst_0040",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_9a0982d498384adeb435a2b3938bfd76"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_9a0982d498384adeb435a2b3938bfd76": [
+        "p_7f84ac1d5f42a71af8a73af3938da23bce0f6f17feccad5affe381a9031e33e7"
+      ]
+    },
+    "question_id": "qst_0118",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_06464e95b7cc44de8a9677f3260c336e"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_06464e95b7cc44de8a9677f3260c336e": [
+        "p_6067b171ba0dab9db1e4432fce4cf0d4446f8c8381c4766acaff1dca2da10fc6"
+      ]
+    },
+    "question_id": "qst_0142",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "basic",
+    "expected_doc_ids": [
+      "dsid_40e1a761f7644c388c1bccb73d6bd427"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_40e1a761f7644c388c1bccb73d6bd427": [
+        "p_e1160be3a31afe499cd6ca6aff6ca3512136b7dcff94d8534f5039900d13e8d4"
+      ]
+    },
+    "question_id": "qst_0117",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_189583d1a5ed4513a4d709a037098a24"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_189583d1a5ed4513a4d709a037098a24": [
+        "p_ddeb6510dd17da31d610e34f16d612f6557f362a089e715079e83de4bc8abea3"
+      ]
+    },
+    "question_id": "qst_0236",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_ad58457891774bd7ba480e0bcd13df3a"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_ad58457891774bd7ba480e0bcd13df3a": [
+        "p_2e3a7db4c931a962081be5cef8c98c466335652e5fee15773bf21265ebb2ebf4"
+      ]
+    },
+    "question_id": "qst_0234",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_693c023c88264795a7e98c7737e6459e"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_693c023c88264795a7e98c7737e6459e": [
+        "p_8a26bdf1fbe01fd77709f1991ff2a03eaf73e9f6db4804b9cef68c8f8060d3a9"
+      ]
+    },
+    "question_id": "qst_0183",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_25b0de9bfa854d3c9acfa961555c9d45"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_25b0de9bfa854d3c9acfa961555c9d45": [
+        "p_2d144de28e93def8c291a989c51d1c55112faf60c8de0e382b54d2400f0691fb"
+      ]
+    },
+    "question_id": "qst_0197",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_fc009de77554459b89e6b4340e8eca82"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_fc009de77554459b89e6b4340e8eca82": [
+        "p_3cd70f0d7a357971be539e9f493595dc5f6794ca4824313130c8213fefacb1ac"
+      ]
+    },
+    "question_id": "qst_0259",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_b02e6ce0d9814b35af846c309c25e551"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_b02e6ce0d9814b35af846c309c25e551": [
+        "p_772942857d11221a11deb514bc396245a26c16960a31cc00a3ef2cf941f2d7f1"
+      ]
+    },
+    "question_id": "qst_0190",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_77351104a57140ac8e065d0a6bcf2046"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_77351104a57140ac8e065d0a6bcf2046": [
+        "p_e016edd606c3aa7d45e3e5c8ab4dcbc297c4792296e812bdefac4ad4a1281e6e"
+      ]
+    },
+    "question_id": "qst_0294",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_01eaeaf6045941beaeaf74e6170aceea"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_01eaeaf6045941beaeaf74e6170aceea": [
+        "p_c22f5a663f57ea99c98e76c018793003ca6145372aea37d8f1910fee1e5a72a5"
+      ]
+    },
+    "question_id": "qst_0252",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_0a2cd37d53ff47d4aced289cd9a76fe8"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_0a2cd37d53ff47d4aced289cd9a76fe8": [
+        "p_79f2767db2819a01399ea568e204e5fa6448907cccc76edf367a1c697dfbcf00"
+      ]
+    },
+    "question_id": "qst_0248",
+    "terminal_outcome": "preparation_bound_failure"
+  },
+  {
+    "arms": [
+      {
+        "arm": "mousa-original-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-original-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-verified",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-1024",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "mousa-dedup-traced-4096",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "sqlite-fts5",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      },
+      {
+        "arm": "qmd-search",
+        "attempts": [],
+        "metrics": null,
+        "packed_coverage": null,
+        "reason": "preparation_bound_failure",
+        "status": "NOT_RUN"
+      }
+    ],
+    "category": "semantic",
+    "expected_doc_ids": [
+      "dsid_5323aeb9f89042c9a62505d409c4d94a"
+    ],
+    "identity_status": "resolved",
+    "mapping": {
+      "dsid_5323aeb9f89042c9a62505d409c4d94a": [
+        "p_8462a53e0494636c9a89720c658ddc61b443be4194ba29571ed6d670920086b4"
+      ]
+    },
+    "question_id": "qst_0221",
+    "terminal_outcome": "preparation_bound_failure"
+  }
+]

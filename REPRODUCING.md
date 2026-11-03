@@ -2,6 +2,21 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## EnterpriseRAG pilot preparation failure
+
+Follow the [pinned source and reproduction commands](enterprise-retrieval-pilot).
+The [executed archive](results/2026-11-03-enterprise-retrieval-pilot) preserves all
+20 enrolled question IDs, original labels, physical mappings, the complete
+500-document membership and per-arm NOT RUN outcomes. Reproduce the bound failure,
+not a smaller substitute corpus: 4,970,133 normalized text bytes exceed 4,194,304.
+No enterprise index or retrieval store was created. The independent-cache
+reproduction compares exact stable preparation facts; it is not a fresh-store
+retrieval reproduction. The separate two-document synthetic sanity exercises the
+existing binary and SQLite FTS5 without being counted as benchmark evidence.
+Root archive verification checks file hashes; source-bound semantic replay and
+rehashed controls use the commands in the pilot instructions.
+
+
 ## Native attributed classification administration
 
 Use the [bounded client instructions](classification-admin) and exact public
