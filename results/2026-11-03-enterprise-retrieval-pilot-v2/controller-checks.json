@@ -1,0 +1,47 @@
+{
+  "enterprise_queries_in_smoke": 0,
+  "metric_fixtures": {
+    "helper": "85b44b911187417703d300b73878bb959215904fdc7a443ec6ee5b8813c61887",
+    "status": "PASS",
+    "tests": 4
+  },
+  "synthetic_semantic_controls": [
+    {
+      "archive_integrity_passed": true,
+      "control": "wrong-question-same-count",
+      "detector": "enrollment-identity",
+      "rehashed_archive": {
+        "bytes": 44261,
+        "sha256": "13f2a29c0ddfdc6834bf9929e7520e18aa536423231022b2be4f997a231b6c47"
+      }
+    },
+    {
+      "archive_integrity_passed": true,
+      "control": "wrong-physical-mapping",
+      "detector": "logical-physical-mapping",
+      "rehashed_archive": {
+        "bytes": 44260,
+        "sha256": "1f28fc1de31015b8317328fced83cc7f3609b532e38796aaafb8911c377b201c"
+      }
+    },
+    {
+      "archive_integrity_passed": true,
+      "control": "changed-ranking",
+      "detector": "ranking-binding",
+      "rehashed_archive": {
+        "bytes": 44335,
+        "sha256": "8782f10ff63c2663586efe98166bac01cef64309e2c9777438e717954f10b0bf"
+      }
+    },
+    {
+      "archive_integrity_passed": true,
+      "control": "changed-packed-membership",
+      "detector": "packed-binding",
+      "rehashed_archive": {
+        "bytes": 44327,
+        "sha256": "29bcc7bb803c538d4617cd49b903d7fc1ed12bfc354e71ca94ccb8eb2bb6d8cd"
+      }
+    }
+  ],
+  "unmeasured_synthetic_controller": "PASS; two documents/20 synthetic questions,140scored and160terminal rows/pass, two fresh stores/native curves"
+}

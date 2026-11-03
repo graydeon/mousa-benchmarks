@@ -1,0 +1,3022 @@
+[
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0102",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0174",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0104",
+    "ranking_count": 68,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0021",
+    "ranking_count": 66,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0011",
+    "ranking_count": 84,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0022",
+    "ranking_count": 63,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0040",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0118",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0142",
+    "ranking_count": 67,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0117",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0236",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0234",
+    "ranking_count": 87,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0183",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0197",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0259",
+    "ranking_count": 69,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0190",
+    "ranking_count": 88,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0294",
+    "ranking_count": 80,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3562071871080222,
+      "mrr_at_10": 0.16666666666666666,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0252",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0248",
+    "ranking_count": 73,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0221",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0102",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_dde223113d991e34a0ccf8e6b1375b63c27b685b73cc46ba2fde66f51ff2e5a5"
+    ],
+    "status": "SCORED",
+    "used_bytes": 683
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0174",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b673ed372408affc2c6ea33589035880824f31fc7dd7e673fe7864159fb4d48d"
+    ],
+    "status": "SCORED",
+    "used_bytes": 998
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0104",
+    "ranking_count": 68,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_603e1d336ff54d000cdda6e513ff47a6ab5b0eba7cd03d1442e67583600c1e92"
+    ],
+    "status": "SCORED",
+    "used_bytes": 617
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0021",
+    "ranking_count": 66,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b3cae728aea54f1e6ce35d6a4a3ab391b5a89546731f621e4b4755d615a89742"
+    ],
+    "status": "SCORED",
+    "used_bytes": 813
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0011",
+    "ranking_count": 84,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_be5efdbca6a8ada008fd4c33555be6791e80f3feba878b5dc5708dca4c33f94e"
+    ],
+    "status": "SCORED",
+    "used_bytes": 634
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0022",
+    "ranking_count": 63,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_728abffbea519ad27656fc63b02bffd2cadaa74ab46d3fa724c6610c52911f63"
+    ],
+    "status": "SCORED",
+    "used_bytes": 981
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0040",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0118",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0142",
+    "ranking_count": 67,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_16fd3acd3620a98465a913f85d49b1900c647feade85f23a4d466d4550174fc0"
+    ],
+    "status": "SCORED",
+    "used_bytes": 735
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0117",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0236",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0234",
+    "ranking_count": 87,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0183",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0197",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0259",
+    "ranking_count": 69,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0190",
+    "ranking_count": 88,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0294",
+    "ranking_count": 80,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_bd556fb47ca4f76475bb04407f55c0ff1d42876ad333f39eb361cb5340a247cb"
+    ],
+    "status": "SCORED",
+    "used_bytes": 625
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3562071871080222,
+      "mrr_at_10": 0.16666666666666666,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0252",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0248",
+    "ranking_count": 73,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-original-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0221",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_8462a53e0494636c9a89720c658ddc61b443be4194ba29571ed6d670920086b4"
+    ],
+    "status": "SCORED",
+    "used_bytes": 831
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0102",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_070ac3441f3f43c984043eddef4fd1f4241cb995bcf4830445277c6f549fb461"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0174",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b673ed372408affc2c6ea33589035880824f31fc7dd7e673fe7864159fb4d48d"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0104",
+    "ranking_count": 68,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_730706d416a2b483345e7d2665a98d3d323b21fbd2288175480469f429f280d7"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0021",
+    "ranking_count": 66,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_588c23d8c172269d4822bc72b1df421110a49b0eed1d936e576d5861447bbcba"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0011",
+    "ranking_count": 84,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_629b34f246f48be6c1dac6427954fd1d13bb8a8e2b8e9866c9002920d46feff5"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0022",
+    "ranking_count": 63,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_7835079c7d378c44f7db3802d6a52f3a587a8093d3cc093e8bda4c20b2e8bdc6"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0040",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_541b73ece0a71fe315c27c3d4bc27a0f71660fc6cc5aad827290c7f3b1ce51e2"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0118",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_7f84ac1d5f42a71af8a73af3938da23bce0f6f17feccad5affe381a9031e33e7"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0142",
+    "ranking_count": 67,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_6067b171ba0dab9db1e4432fce4cf0d4446f8c8381c4766acaff1dca2da10fc6"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0117",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_e1160be3a31afe499cd6ca6aff6ca3512136b7dcff94d8534f5039900d13e8d4"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0236",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_ddeb6510dd17da31d610e34f16d612f6557f362a089e715079e83de4bc8abea3"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0234",
+    "ranking_count": 87,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_95b77bd25c0484f47b8e8ece7cbf39b5dae8d9debaec2e701e8d899f70e7fa1a"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0183",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_8a26bdf1fbe01fd77709f1991ff2a03eaf73e9f6db4804b9cef68c8f8060d3a9"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0197",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_d42b9516d11e2becfecd1ca7d8e6ac8c8db17fda8dfb07245f899a6fd17c72bd"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0259",
+    "ranking_count": 69,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_3cd70f0d7a357971be539e9f493595dc5f6794ca4824313130c8213fefacb1ac"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0190",
+    "ranking_count": 88,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_efa8967a7cd4af6dd7303cefc546e4655d09873d449537d56e4e507aa00935e1"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0294",
+    "ranking_count": 80,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_e016edd606c3aa7d45e3e5c8ab4dcbc297c4792296e812bdefac4ad4a1281e6e"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3562071871080222,
+      "mrr_at_10": 0.16666666666666666,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0252",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_7eeecad287582768dc8adab9f1a7dd73b09b07f530e40437e2058f41a7476940"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0248",
+    "ranking_count": 73,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_ac144d6c22c8b5fee968f77e1a017c4bbb6291e4090c6af38ee7d1388fde4038"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-original-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0221",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b5428f552b732f486317d8a65d392f6fce555fcc3a8fa96f9ca539a330c082d4"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0102",
+    "ranking_count": 81,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0174",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0104",
+    "ranking_count": 68,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0021",
+    "ranking_count": 70,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0011",
+    "ranking_count": 84,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0022",
+    "ranking_count": 60,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0040",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0118",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0142",
+    "ranking_count": 67,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0117",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0236",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0234",
+    "ranking_count": 87,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0183",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0197",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0259",
+    "ranking_count": 72,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0190",
+    "ranking_count": 91,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0294",
+    "ranking_count": 80,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3562071871080222,
+      "mrr_at_10": 0.16666666666666666,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0252",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0248",
+    "ranking_count": 73,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-verified",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0221",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0102",
+    "ranking_count": 81,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_dde223113d991e34a0ccf8e6b1375b63c27b685b73cc46ba2fde66f51ff2e5a5"
+    ],
+    "status": "SCORED",
+    "used_bytes": 683
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0174",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b673ed372408affc2c6ea33589035880824f31fc7dd7e673fe7864159fb4d48d"
+    ],
+    "status": "SCORED",
+    "used_bytes": 998
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0104",
+    "ranking_count": 68,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_603e1d336ff54d000cdda6e513ff47a6ab5b0eba7cd03d1442e67583600c1e92"
+    ],
+    "status": "SCORED",
+    "used_bytes": 617
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0021",
+    "ranking_count": 70,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b3cae728aea54f1e6ce35d6a4a3ab391b5a89546731f621e4b4755d615a89742"
+    ],
+    "status": "SCORED",
+    "used_bytes": 813
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0011",
+    "ranking_count": 84,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_be5efdbca6a8ada008fd4c33555be6791e80f3feba878b5dc5708dca4c33f94e"
+    ],
+    "status": "SCORED",
+    "used_bytes": 634
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0022",
+    "ranking_count": 60,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_728abffbea519ad27656fc63b02bffd2cadaa74ab46d3fa724c6610c52911f63"
+    ],
+    "status": "SCORED",
+    "used_bytes": 981
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0040",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0118",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0142",
+    "ranking_count": 67,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_16fd3acd3620a98465a913f85d49b1900c647feade85f23a4d466d4550174fc0"
+    ],
+    "status": "SCORED",
+    "used_bytes": 735
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0117",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0236",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0234",
+    "ranking_count": 87,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0183",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0197",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0259",
+    "ranking_count": 72,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_acf97ce1e0ee4ed122493b734853f1dc1aaaaf915189e77014de0b9db519f1fe"
+    ],
+    "status": "SCORED",
+    "used_bytes": 1021
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0190",
+    "ranking_count": 91,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_7eeecad287582768dc8adab9f1a7dd73b09b07f530e40437e2058f41a7476940"
+    ],
+    "status": "SCORED",
+    "used_bytes": 939
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0294",
+    "ranking_count": 80,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_bd556fb47ca4f76475bb04407f55c0ff1d42876ad333f39eb361cb5340a247cb"
+    ],
+    "status": "SCORED",
+    "used_bytes": 625
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3562071871080222,
+      "mrr_at_10": 0.16666666666666666,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0252",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0248",
+    "ranking_count": 73,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [],
+    "status": "SCORED",
+    "used_bytes": 0
+  },
+  {
+    "arm": "mousa-dedup-traced-1024",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0221",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_8462a53e0494636c9a89720c658ddc61b443be4194ba29571ed6d670920086b4"
+    ],
+    "status": "SCORED",
+    "used_bytes": 831
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0102",
+    "ranking_count": 81,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_070ac3441f3f43c984043eddef4fd1f4241cb995bcf4830445277c6f549fb461"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0174",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b673ed372408affc2c6ea33589035880824f31fc7dd7e673fe7864159fb4d48d"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0104",
+    "ranking_count": 68,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_730706d416a2b483345e7d2665a98d3d323b21fbd2288175480469f429f280d7"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0021",
+    "ranking_count": 70,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_588c23d8c172269d4822bc72b1df421110a49b0eed1d936e576d5861447bbcba"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0011",
+    "ranking_count": 84,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_629b34f246f48be6c1dac6427954fd1d13bb8a8e2b8e9866c9002920d46feff5"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0022",
+    "ranking_count": 60,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_7835079c7d378c44f7db3802d6a52f3a587a8093d3cc093e8bda4c20b2e8bdc6"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0040",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_541b73ece0a71fe315c27c3d4bc27a0f71660fc6cc5aad827290c7f3b1ce51e2"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0118",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_7f84ac1d5f42a71af8a73af3938da23bce0f6f17feccad5affe381a9031e33e7"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0142",
+    "ranking_count": 67,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_6067b171ba0dab9db1e4432fce4cf0d4446f8c8381c4766acaff1dca2da10fc6"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0117",
+    "ranking_count": 76,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_e1160be3a31afe499cd6ca6aff6ca3512136b7dcff94d8534f5039900d13e8d4"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0236",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_ddeb6510dd17da31d610e34f16d612f6557f362a089e715079e83de4bc8abea3"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0234",
+    "ranking_count": 87,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_95b77bd25c0484f47b8e8ece7cbf39b5dae8d9debaec2e701e8d899f70e7fa1a"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0183",
+    "ranking_count": 82,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_8a26bdf1fbe01fd77709f1991ff2a03eaf73e9f6db4804b9cef68c8f8060d3a9"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0197",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_d42b9516d11e2becfecd1ca7d8e6ac8c8db17fda8dfb07245f899a6fd17c72bd"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0259",
+    "ranking_count": 72,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_3cd70f0d7a357971be539e9f493595dc5f6794ca4824313130c8213fefacb1ac"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0190",
+    "ranking_count": 91,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_efa8967a7cd4af6dd7303cefc546e4655d09873d449537d56e4e507aa00935e1"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 1.0,
+    "question_id": "qst_0294",
+    "ranking_count": 80,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_e016edd606c3aa7d45e3e5c8ab4dcbc297c4792296e812bdefac4ad4a1281e6e"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3562071871080222,
+      "mrr_at_10": 0.16666666666666666,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0252",
+    "ranking_count": 79,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_7eeecad287582768dc8adab9f1a7dd73b09b07f530e40437e2058f41a7476940"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0248",
+    "ranking_count": 73,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_ac144d6c22c8b5fee968f77e1a017c4bbb6291e4090c6af38ee7d1388fde4038"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "mousa-dedup-traced-4096",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": 0.0,
+    "question_id": "qst_0221",
+    "ranking_count": 85,
+    "score_endpoint": "not exposed by cmd/beir journal",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": [
+      "p_b5428f552b732f486317d8a65d392f6fce555fcc3a8fa96f9ca539a330c082d4"
+    ],
+    "status": "SCORED",
+    "used_bytes": 4096
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0102",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0174",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0104",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0021",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0011",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0022",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0040",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0118",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.6309297535714575,
+      "mrr_at_10": 0.5,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0142",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0117",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0236",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3010299956639812,
+      "mrr_at_10": 0.1111111111111111,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0234",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0183",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0197",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0259",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.5,
+      "mrr_at_10": 0.3333333333333333,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0190",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 1.0,
+      "mrr_at_10": 1.0,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0294",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3333333333333333,
+      "mrr_at_10": 0.14285714285714285,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0252",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.3562071871080222,
+      "mrr_at_10": 0.16666666666666666,
+      "recall_at_10": 1.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0248",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "sqlite-fts5",
+    "attempts": 1,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": {
+      "binary_ndcg_at_10": 0.0,
+      "mrr_at_10": 0,
+      "recall_at_10": 0.0,
+      "recall_at_100": 1.0
+    },
+    "packed_coverage": null,
+    "question_id": "qst_0221",
+    "ranking_count": 100,
+    "score_endpoint": "native SQLite BM25",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "selected": null,
+    "status": "SCORED",
+    "used_bytes": null
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0102",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0174",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0104",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0021",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0011",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0022",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0040",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0118",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0142",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0117",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0236",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0234",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0183",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0197",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0259",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0190",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0294",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0252",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0248",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  },
+  {
+    "arm": "qmd-search",
+    "attempts": 0,
+    "complete_ranking_location": "capture.first.outcomes",
+    "metrics": null,
+    "packed_coverage": null,
+    "question_id": "qst_0221",
+    "ranking_count": null,
+    "reason": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry",
+    "score_location": "capture.first.outcomes; native numeric scores not exposed",
+    "status": "NOT_RUN"
+  }
+]

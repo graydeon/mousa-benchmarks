@@ -1,0 +1,38 @@
+[
+  {
+    "archive_integrity_passed": true,
+    "control": "wrong-question-same-count",
+    "detector": "enrollment-identity",
+    "rehashed_archive": {
+      "bytes": 588889,
+      "sha256": "452286a622416f0c48d16823ef0431a1919e7a431d155c69a7052be10ae06c96"
+    }
+  },
+  {
+    "archive_integrity_passed": true,
+    "control": "wrong-physical-mapping",
+    "detector": "logical-physical-mapping",
+    "rehashed_archive": {
+      "bytes": 588946,
+      "sha256": "0484ab4bc260966251a13e16c8eb78111a9bf845d14d8113057588d0e55aa5c2"
+    }
+  },
+  {
+    "archive_integrity_passed": true,
+    "control": "changed-ranking",
+    "detector": "ranking-binding",
+    "rehashed_archive": {
+      "bytes": 592676,
+      "sha256": "9a959a5e02e7c5af5d501510280d8ce60a2bd784c1aea3e7a5e76cef0ba6b3e6"
+    }
+  },
+  {
+    "archive_integrity_passed": true,
+    "control": "changed-packed-membership",
+    "detector": "packed-binding",
+    "rehashed_archive": {
+      "bytes": 589039,
+      "sha256": "a98ba714b15f30ec6db726d55aeb73b24b4a79b597817eb867cee8ecc75d7e47"
+    }
+  }
+]

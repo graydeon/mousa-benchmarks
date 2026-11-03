@@ -1,0 +1,92 @@
+{
+  "acquisition_receipt_origin": "Unchanged v1 source acquisition facts; copied for attribution/pins only, not v2 downloads or timings",
+  "additional_sources": [
+    {
+      "bytes": 1072,
+      "name": "LICENSE",
+      "sha256": "9eab95dae84867fa8ba1450e4bf34addf74e841923f4b6877f4d2df82bed3508",
+      "url": "https://raw.githubusercontent.com/onyx-dot-app/EnterpriseRAG-Bench/d36685e273713975ee20299bbf1ab64165575b3c/LICENSE"
+    },
+    {
+      "bytes": 764927,
+      "name": "git-questions.jsonl",
+      "sha256": "f9524b9157cd43aae36b99333a124738804306ea6d07f332d49faa6d3d147905",
+      "url": "https://raw.githubusercontent.com/onyx-dot-app/EnterpriseRAG-Bench/d36685e273713975ee20299bbf1ab64165575b3c/questions.jsonl"
+    },
+    {
+      "bytes": 6932,
+      "sha256": "946d5c5c06ea3a2ddd0064ed2296498b15ed0d9721dac94ea605918959f25932",
+      "url": "https://huggingface.co/datasets/onyx-dot-app/EnterpriseRAG-Bench/raw/69916e31c68aa5963c00248fd7f0bc12d04fd235/README.md"
+    },
+    {
+      "bytes": 8302,
+      "sha256": "f38f53da1ce310a60ac6a6e49657d4815b006e9e967fdf6cbd7915d328c62bb7",
+      "url": "https://raw.githubusercontent.com/onyx-dot-app/EnterpriseRAG-Bench/d36685e273713975ee20299bbf1ab64165575b3c/README.md"
+    }
+  ],
+  "all_dataset_http_body_bytes_recorded": 49361018,
+  "asset_fetches": 2,
+  "assets": [
+    {
+      "browser_download_url": "https://github.com/onyx-dot-app/EnterpriseRAG-Bench/releases/download/v1.0.0/confluence_slice_0001.zip",
+      "digest": "sha256:a79320d9c11b58c904ddc444f4b5c374ea1d9e6e3075974bcaea294c2a7e2eb5",
+      "id": 402971211,
+      "name": "confluence_slice_0001.zip",
+      "sha256": "a79320d9c11b58c904ddc444f4b5c374ea1d9e6e3075974bcaea294c2a7e2eb5",
+      "size": 22553881,
+      "updated_at": "2026-04-23T00:58:10Z",
+      "wall_seconds": 2.331826106645167
+    },
+    {
+      "browser_download_url": "https://github.com/onyx-dot-app/EnterpriseRAG-Bench/releases/download/v1.0.0/confluence_slice_0002.zip",
+      "digest": "sha256:ecb4e395f710f0eef8332b1e27182c00223da847945a010c10078b3e0c693024",
+      "id": 402971213,
+      "name": "confluence_slice_0002.zip",
+      "sha256": "ecb4e395f710f0eef8332b1e27182c00223da847945a010c10078b3e0c693024",
+      "size": 883322,
+      "updated_at": "2026-04-23T00:58:10Z",
+      "wall_seconds": 0.5064160549081862
+    },
+    {
+      "browser_download_url": "https://github.com/onyx-dot-app/EnterpriseRAG-Bench/releases/download/v1.0.0/questions.jsonl",
+      "digest": "sha256:f9524b9157cd43aae36b99333a124738804306ea6d07f332d49faa6d3d147905",
+      "id": 396560378,
+      "name": "questions.jsonl",
+      "sha256": "f9524b9157cd43aae36b99333a124738804306ea6d07f332d49faa6d3d147905",
+      "size": 764927,
+      "updated_at": "2026-04-14T23:20:32Z",
+      "wall_seconds": 0.615553324110806
+    }
+  ],
+  "compressed_asset_bytes_per_fetch": 24202130,
+  "download_check": [
+    {
+      "bytes": 22553881,
+      "name": "confluence_slice_0001.zip",
+      "sha256": "a79320d9c11b58c904ddc444f4b5c374ea1d9e6e3075974bcaea294c2a7e2eb5",
+      "wall_seconds": 2.2726709241978824
+    },
+    {
+      "bytes": 883322,
+      "name": "confluence_slice_0002.zip",
+      "sha256": "ecb4e395f710f0eef8332b1e27182c00223da847945a010c10078b3e0c693024",
+      "wall_seconds": 0.5455854889005423
+    },
+    {
+      "bytes": 764927,
+      "name": "questions.jsonl",
+      "sha256": "f9524b9157cd43aae36b99333a124738804306ea6d07f332d49faa6d3d147905",
+      "wall_seconds": 0.41292564012110233
+    }
+  ],
+  "git_release_questions_byte_identical": true,
+  "immutable": false,
+  "license": "MIT; copyright2026 DanswerAI, Inc.; HF card declares MIT",
+  "release_id": 302811162,
+  "release_metadata": {
+    "bytes": 175525,
+    "sha256": "a281f05e23aff130c63ac497bff5d9f609a7aaa0c89c2254b6d34de4ecb59689"
+  },
+  "release_url": "https://api.github.com/repos/onyx-dot-app/EnterpriseRAG-Bench/releases/tags/v1.0.0",
+  "v2_source_download_bytes": 0
+}

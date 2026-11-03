@@ -1,0 +1,29 @@
+{
+  "argument_paths": "logical labels for external owned paths; all actual native child argv are relative and preserved unmodified in capture/native-raw.tar.gz",
+  "build_setup_archive_finalization_replay": "separate from measured query/ingestion/reproduction clock; controller end timestamp taken before lossless capture encoding",
+  "command": [
+    "python3",
+    "enterprise-retrieval-pilot-v2/run.py",
+    "execute",
+    "--cache",
+    "<verified-source-cache>",
+    "--beir",
+    "<corrected-public-binary>",
+    "--out",
+    "<owned-output>"
+  ],
+  "exit": 0,
+  "independent_fresh_stores": true,
+  "measured_cap_seconds": 1800,
+  "measured_wall_seconds": 428.8557892893441,
+  "no_query_retries": true,
+  "no_retrieval_during_replay": true,
+  "not_run_rows_per_pass": 20,
+  "query_timeout_seconds": 30,
+  "replay_and_controls_command_group_exit": 0,
+  "replay_and_controls_tool_wall_seconds": 11.73,
+  "scored_rows_per_pass": 140,
+  "terminal_rows_per_pass": 160,
+  "tool_wall_seconds": 429.8,
+  "whole_pilot_including_capture_encoding_tool_wall_seconds": 429.8
+}

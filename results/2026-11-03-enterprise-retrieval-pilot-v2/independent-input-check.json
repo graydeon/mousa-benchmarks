@@ -1,0 +1,13 @@
+{
+  "bytes": 4970133,
+  "documents": 500,
+  "input_identity": {
+    "bytes": 841510,
+    "sha256": "15283db546c9208f7ba4ce6b2e597dc6d106762528751d9b5c5d39b2aa9aa8ff"
+  },
+  "queries_executed": 0,
+  "questions": 20,
+  "same_mappings": true,
+  "same_prospective_stable": true,
+  "same_v1_input": true
+}

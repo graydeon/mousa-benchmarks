@@ -1,0 +1,14 @@
+{
+  "controller_identity": {
+    "bytes": 23613,
+    "sha256": "9ce452bfddf03e82d67e4415a564ac95c201a4a055670e95da3da490000d30da"
+  },
+  "enterprise_queries_executed": 0,
+  "protocol_identity": {
+    "bytes": 6485,
+    "sha256": "783e8666d91b4707f64c1816d1ffc2a4f5665cfe268fb52aaca64e74c21b8f47"
+  },
+  "scored": 0,
+  "unix": 1793680281.272384,
+  "utc": "2026-11-03T04:31:21.272406+00:00"
+}

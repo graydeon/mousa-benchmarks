@@ -1,0 +1,29 @@
+{
+  "anonymous_public_tree_equal": true,
+  "argv": [
+    "go",
+    "build",
+    "-o",
+    "../beir",
+    "./cmd/beir"
+  ],
+  "binary_identity": {
+    "bytes": 13178190,
+    "sha256": "244ef4f90858c8aeb90db3a0e09b62df78026e64560d6cedd8cabb6805d76ca1"
+  },
+  "environment": {
+    "CGO_ENABLED": "0",
+    "GOAMD64": "v1"
+  },
+  "exit": 0,
+  "go_version": "go version go1.27.1 linux/amd64",
+  "local_tested_revision": "e9e8cb198ab643678318c33bede0719dc69f68e1",
+  "local_tested_tree": "0851d56512ceab1546ab4c2b502391073b81c5a9",
+  "peak_rss_kib": 185172,
+  "source_clean": true,
+  "source_revision": "d226394319955f36f52d0414ff446f0f5e63c8b0",
+  "source_tree": "0851d56512ceab1546ab4c2b502391073b81c5a9",
+  "system_seconds": 1.166411,
+  "user_seconds": 12.966833,
+  "wall_seconds": 4.3835658589378
+}

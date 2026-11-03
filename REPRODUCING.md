@@ -2,6 +2,22 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## EnterpriseRAG pilot v2: measured retrieval and packing
+
+Use the [separate frozen 8 MiB controller](enterprise-retrieval-pilot-v2) and
+[actual result archive](results/2026-11-03-enterprise-retrieval-pilot-v2).
+Build its exact corrected public product head and run the execute command once:
+it includes the first pass and an independent fresh-store reproduction under
+one 30-minute measured cap. Both use the same 20 questions and full 500-document
+rendering as v1. Replay verifies pinned source bytes and recalculates metrics
+without querying; controls regenerate four valid rehashed semantic mutations.
+Seven required arms scored all 20 questions; optional QMD is NOT_RUN after the
+retained bounded setup failure. V1 below keeps its original cap and failure.
+Numeric native candidate scores are not exposed by the BEIR journal; raw ordered
+rankings and selected identities/bytes are preserved separately. SQLite returned
+scores are retained. No generation, embeddings, judges or paid APIs are used.
+
+
 ## EnterpriseRAG pilot preparation failure
 
 Follow the [pinned source and reproduction commands](enterprise-retrieval-pilot).
