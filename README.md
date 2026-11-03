@@ -25,6 +25,26 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [corrected empty-association client](association-supersession-v2) adds the
+native omitted/false/true empty-flag boundary to the composition workflow.
+Its [paired corrected-public-pin observations](results/2026-11-03-association-supersession-v2)
+use product `b5730d6b311985b730765598baf24b972430bc10`. Each fresh store passed
+72 native commands and 13 configured MCP frames. Both offline replays, five
+rehashed semantic controls per run and the 29-row producing-aware comparison pass.
+The earlier captures below retain product `3600266`; they do not establish the
+corrected empty-flag boundary. No cross-pin result equality is claimed.
+
+The [supersession-safe supporting-context client](association-supersession) checks
+byte-only lexical composition through native directory/JSONL and configured MCP.
+It binds complete request populations, exact revision pins, primary/associated
+suppression, surviving nonmatching support, both packers and producing v12 history.
+Rehashed request, suppression-fact and selected-support controls target semantic
+binding rather than outer hashes. Snapshot/rollback/integrity claims remain
+product-local; supporting attribution is not semantic sufficiency or truth.
+The [paired public-head observations](results/2026-11-02-association-supersession)
+each passed 24 native commands and 13 MCP frames, stored replay and three
+rehashed semantic controls. Exact comparison passed 17 stable producing rows.
+
 The [native classification client](classification-admin) records attributed labels
 against existing evidence through put/get, exact retry and conflicting assertions.
 Its [capture and separate fresh-store reproduction](results/2026-11-02-classification-admin)

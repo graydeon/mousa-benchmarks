@@ -1,0 +1,25 @@
+{
+  "repository": "https://github.com/graydeon/mousa",
+  "head": "b5730d6b311985b730765598baf24b972430bc10",
+  "tree": "05966cd8d06a619dc1d4198a41863f8bb77a9320",
+  "tested_local_commit": "fe7fc6843973ab11681dc622c44ed45c1bba955a",
+  "tested_tree": "05966cd8d06a619dc1d4198a41863f8bb77a9320",
+  "source_clean": true,
+  "public_tested_tree_equal": true,
+  "build_argv": [
+    "go",
+    "build",
+    "-o",
+    "/tmp/mousa-composed-public-b5730d6b3119",
+    "./cmd/mousa"
+  ],
+  "build_environment": {
+    "CGO_ENABLED": "0",
+    "GOAMD64": "v1"
+  },
+  "build_exit": 0,
+  "binary_path": "/tmp/mousa-composed-public-b5730d6b3119",
+  "binary_sha256": "908d26b32d4ac3c41d0052d358cb76bf4079db650f3d4e0733e8e76ee3dde3bc",
+  "build_metadata": "/tmp/mousa-composed-public-b5730d6b3119: go1.27.1\n\tpath\tgithub.com/graydeon/mousa/cmd/mousa\n\tmod\tgithub.com/graydeon/mousa\tv0.0.0-20261103010535-b5730d6b3119\t\n\tdep\tgithub.com/dustin/go-humanize\tv1.0.1\th1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=\n\tdep\tgithub.com/google/jsonschema-go\tv0.4.3\th1:/DBOLZTfDow7pe2GmaJNhltueGTtDKICi8V8p+DQPd0=\n\tdep\tgithub.com/google/uuid\tv1.6.0\th1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=\n\tdep\tgithub.com/modelcontextprotocol/go-sdk\tv1.8.0\th1:KIvahhYqwtbeniWVPs3TcXEA7b8jEtwfBpOTAI+Urx4=\n\tdep\tgithub.com/remyoudompheng/bigfft\tv0.0.0-20230129092748-24d4a6f8daec\th1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=\n\tdep\tgithub.com/segmentio/asm\tv1.1.3\th1:WM03sfUOENvvKexOLp+pCqgb/WDjsi7EK8gIsICtzhc=\n\tdep\tgithub.com/segmentio/encoding\tv0.5.4\th1:OW1VRern8Nw6ITAtwSZ7Idrl3MXCFwXHPgqESYfvNt0=\n\tdep\tgithub.com/yosida95/uritemplate/v3\tv3.0.2\th1:Ed3Oyj9yrmi9087+NczuL5BwkIc4wvTb5zIM+UJPGz4=\n\tdep\tgolang.org/x/oauth2\tv0.35.0\th1:Mv2mzuHuZuY2+bkyWXIHMfhNdJAdwW3FuWeCPYN5GVQ=\n\tdep\tgolang.org/x/sync\tv0.21.0\th1:HLII4xRRTtCRkxYp4HNFF0Js/Og6q2i++KXbg0gHCwM=\n\tdep\tgolang.org/x/sys\tv0.47.0\th1:o7XGOvZQCADBQQ4Y7VNq2dRWQR7JmOUW8Kxx4ZsNgWs=\n\tdep\tgolang.org/x/time\tv0.15.0\th1:bbrp8t3bGUeFOx08pvsMYRTCVSMk89u4tKbNOZbp88U=\n\tdep\tmodernc.org/libc\tv1.74.4\th1:fX1Omw4o2/1C2iRkkIsrQTasJQldLhRmuPreXLoWs9k=\n\tdep\tmodernc.org/mathutil\tv1.7.1\th1:GCZVGXdaN8gTqB1Mf/usp1Y/hSqgI2vAGGP4jZMCxOU=\n\tdep\tmodernc.org/memory\tv1.11.0\th1:o4QC8aMQzmcwCK3t3Ux/ZHmwFPzE6hf2Y5LbkRs+hbI=\n\tdep\tmodernc.org/sqlite\tv1.57.0\th1:qNQP6xnx5M0ISNtlnxoOX0+cD5bJ0/gr9aMmndFczzg=\n\tbuild\t-buildmode=exe\n\tbuild\t-compiler=gc\n\tbuild\tDefaultGODEBUG=cryptocustomrand=1,tlssecpmlkem=0,tracebacklabels=0,urlstrictcolons=0,x509sslcertoverrideplatform=0\n\tbuild\tCGO_ENABLED=0\n\tbuild\tGOARCH=amd64\n\tbuild\tGOOS=linux\n\tbuild\tGOAMD64=v1\n\tbuild\tvcs=git\n\tbuild\tvcs.revision=b5730d6b311985b730765598baf24b972430bc10\n\tbuild\tvcs.time=2026-11-03T01:05:35Z\n\tbuild\tvcs.modified=false\n",
+  "export": "No executable or database included."
+}

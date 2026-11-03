@@ -1,0 +1,5 @@
+{
+  "result": "PASS",
+  "stable_rows": 17,
+  "excluded": "Only per-call identities and evaluation/latency timing; packet and evidence/administration pins retained."
+}

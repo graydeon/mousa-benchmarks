@@ -1,0 +1,24 @@
+{
+  "schema": "mousa.association_supersession_observations.v2",
+  "publication_state": "public-corrected",
+  "product_head": "b5730d6b311985b730765598baf24b972430bc10",
+  "product_tree": "05966cd8d06a619dc1d4198a41863f8bb77a9320",
+  "runner_sha256": "6131e38444f2e5c44689bb4fbab0ab3f68dc76bdeb10f2b172d30c7177236f4e",
+  "helpers": {
+    "association-supersession/capture.py": "824de1556391025820d1e66c293c7dc00870fe76a92c1e28361fa333e35e55f8",
+    "association-supersession/protocol.json": "91a6ca76394426c8642cfd5ce3033ad6c669faa05334a3b8ec1104d16f83f284",
+    "mcp-retrieval/capture.py": "dd88d1f4d5bd35fb8813bff94330ac7a59450da844ab8005629ac42c5e26dab3",
+    "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1",
+    "directory-supersession/capture.py": "ab75b395491c0463b4b4f12151f753f0b5d9303220fe3f81c72a91973e20342a"
+  },
+  "fixture": {
+    "old": "needle obsolete qualification",
+    "primary": "needle retained instruction",
+    "twin": "needle obsolete qualification",
+    "support": "Nonmatching caller-declared qualification.",
+    "new": "Explicit replacement attribution."
+  },
+  "native_commands": 72,
+  "mcp_frames": 13,
+  "scope": "Corrected public-pin empty-association compatibility and retained byte-only lexical supporting-context/supersession workflow; bounded synthetic public native/MCP observations, not semantic quality or internal transaction evidence."
+}
