@@ -1,0 +1,4 @@
+{
+  "scope": "source-bound preparation, deterministic fresh stores and per-question summary replay; no retrieval",
+  "status": "PASS"
+}

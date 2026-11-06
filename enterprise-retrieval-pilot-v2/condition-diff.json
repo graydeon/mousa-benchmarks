@@ -1,0 +1,89 @@
+{
+  "changes": {
+    "binary_identity": {
+      "reason": "Corrected public reporting implementation identity",
+      "v1": null,
+      "v2": {
+        "bytes": 13178190,
+        "sha256": "244ef4f90858c8aeb90db3a0e09b62df78026e64560d6cedd8cabb6805d76ca1"
+      }
+    },
+    "clock_definition": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": null,
+      "v2": "One1800s monotonic cap starts before first-pass preparation/materialization and includes all ingestion, query arms, native reporting and independent fresh-store reproduction; build, optional setup and offline replay separate. Each query30s. No retries."
+    },
+    "controller_sha256": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": null,
+      "v2": "9ce452bfddf03e82d67e4415a564ac95c201a4a055670e95da3da490000d30da"
+    },
+    "execution_conditions": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": null,
+      "v2": "Same v1 membership, salt, physical mapping, complete rendered text, source assets, original labels, candidate limit100 and original engine packing. verified budgets1024; traced1024/4096. QMD optional unavailable after setup threshold stop; no model-backed route."
+    },
+    "helper_companion_revision": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": null,
+      "v2": "4aeba5e65fefeb29644b64bf55d47c19a7960fe9"
+    },
+    "helper_sha256": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": null,
+      "v2": {
+        "enterprise-retrieval-pilot/checks.py": "85b44b911187417703d300b73878bb959215904fdc7a443ec6ee5b8813c61887",
+        "enterprise-retrieval-pilot/prepare.py": "d1406afbdabfd4e7f2a82d0b4386247dc7e79ecf4b857f44e4eae648ba79ae1f",
+        "enterprise-retrieval-pilot/sanity.py": "0f99259a7fb8dc5b9202211aedf2cbddc50f1dda18b0f68d70057d999e02458f",
+        "mcp-trail-supersession/run.py": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+      }
+    },
+    "input_identity": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": null,
+      "v2": {
+        "bytes": 841510,
+        "sha256": "15283db546c9208f7ba4ce6b2e597dc6d106762528751d9b5c5d39b2aa9aa8ff"
+      }
+    },
+    "product_revision": {
+      "reason": "Corrected public reporting implementation identity",
+      "v1": "db03c841c0491ac505be8289e08fa60f78eae738",
+      "v2": "d226394319955f36f52d0414ff446f0f5e63c8b0"
+    },
+    "product_tree": {
+      "reason": "Corrected public reporting implementation identity",
+      "v1": null,
+      "v2": "0851d56512ceab1546ab4c2b502391073b81c5a9"
+    },
+    "qmd_status": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": null,
+      "v2": "NOT_RUN: locked npm ci --ignore-scripts stopped at 256MiB disk threshold after10.021522s; observed275718864bytes with sampling overshoot; exit-9; no lexical query or model call; no retry"
+    },
+    "schema": {
+      "reason": "Additive experiment/controller/helper identity and explicit execution/clock/optional-route conditions; no input or retrieval-policy change",
+      "v1": "mousa.enterprise_retrieval_pilot.v1",
+      "v2": "mousa.enterprise_retrieval_pilot.v2"
+    },
+    "text_cap_bytes": {
+      "reason": "8MiB planning-budget reconciliation before enterprise scores",
+      "v1": 4194304,
+      "v2": 8388608
+    }
+  },
+  "enterprise_queries_before_freeze": 0,
+  "same_v1_and_prospective_input": true,
+  "unchanged_input_identity": {
+    "bytes": 841510,
+    "sha256": "15283db546c9208f7ba4ce6b2e597dc6d106762528751d9b5c5d39b2aa9aa8ff"
+  },
+  "v1_protocol_identity": {
+    "bytes": 4753,
+    "sha256": "2465faa7631bf6f37cd747344043b5b5729533d163c3bda6e3632a873f45e8fa"
+  },
+  "v2_protocol_identity": {
+    "bytes": 6485,
+    "sha256": "783e8666d91b4707f64c1816d1ffc2a4f5665cfe268fb52aaca64e74c21b8f47"
+  }
+}

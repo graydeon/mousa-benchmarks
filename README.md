@@ -25,6 +25,15 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The separate [EnterpriseRAG lexical pilot v2](enterprise-retrieval-pilot-v2)
+completed the required retrieval/packing arms and a fresh-store reproduction
+under a pre-query 8 MiB protocol. Its [actual results](results/2026-11-03-enterprise-retrieval-pilot-v2)
+retain 20 questions, 500 documents, 140 scored and 20 optional QMD NOT_RUN arm
+rows per pass, with native coverage curves, per-question metrics and loss-stage
+analysis. This is a reduced gold-enriched development corpus, not an official,
+held-out, answer-quality or general-superiority result. V1 below remains a
+separate immutable failed preparation observation.
+
 The [EnterpriseRAG lexical pilot](enterprise-retrieval-pilot) has an executed
 [preparation failure and per-question outcomes](results/2026-11-03-enterprise-retrieval-pilot),
 **not a completed quality comparison**. Its fixed 20-question, gold-enriched

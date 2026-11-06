@@ -1,0 +1,258 @@
+{
+  "capture.json.gz": {
+    "codec_helper": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1",
+    "decoded_top_level_keys": [
+      "billing_usd",
+      "environment",
+      "first",
+      "measured_wall_seconds",
+      "model_calls",
+      "paid_api_calls",
+      "protocol",
+      "protocol_identity",
+      "reproduction",
+      "schema",
+      "started_unix",
+      "status",
+      "summary"
+    ],
+    "outer_identity": {
+      "bytes": 625942,
+      "sha256": "3471823f4ff72d447454378f47eeec745b16bf7e6b2be583dc5c7341f341f451"
+    },
+    "scope": "all native argv/DEVNULL input/stdout/stderr/exits/resources, raw JSON reports/journals/manifests, both preparations and160terminal outcomes per pass; complete rankings/SQLite scores/engine-selected IDs/bytes. No source bodies, store files or binaries."
+  },
+  "native-raw.tar.gz": {
+    "members": {
+      "first/commands.json": {
+        "bytes": 32114,
+        "sha256": "2dfd1958f6e4eb958d0d4921c7e937c72d8e1eb5564afd32aedce8892ae61188"
+      },
+      "first/dedup-budget.json": {
+        "bytes": 6464,
+        "sha256": "ed76532d72eaabc98efa3cbf881d4b50ba2c55efbe13545c83a0738a1c922f22"
+      },
+      "first/dedup-coverage.json": {
+        "bytes": 590,
+        "sha256": "b32b852634056f5190480ad57df05fd855983cd5eb306ad20a8d1a37cca3233e"
+      },
+      "first/dedup-mode.json": {
+        "bytes": 6296,
+        "sha256": "592e9751c621476a740b3decf7dd3aedcf8ea86bdf50385f1ca044c90b7e5e71"
+      },
+      "first/dedup-traced-1024.json": {
+        "bytes": 131003,
+        "sha256": "57330f8969b50b8b0c23cae3ef4253cca82d1ec38bd395711647653213149185"
+      },
+      "first/dedup-traced-1024.json.jsonl": {
+        "bytes": 112694,
+        "sha256": "1de099f86d28b2a2ffe6b05758447e853227f66e85a473b22184b725c8ac8d81"
+      },
+      "first/dedup-traced-1024.json.manifest.json": {
+        "bytes": 600,
+        "sha256": "f7b3ba4453a456f3f7ce497c0fc60238d59cfa92006a890fa67e4167db8eabc2"
+      },
+      "first/dedup-traced-4096.json": {
+        "bytes": 131029,
+        "sha256": "a6f994a728affe1064bfb04b6963919a1ba301c8c1f6ffafa71c89be0886a7a5"
+      },
+      "first/dedup-traced-4096.json.jsonl": {
+        "bytes": 113324,
+        "sha256": "59fdc9a6683d632dd28c5cdb086fe2f7763822eda33c2887dc7151a5bc9534b5"
+      },
+      "first/dedup-traced-4096.json.manifest.json": {
+        "bytes": 600,
+        "sha256": "660108f531187c1a3f0d1f4b3bc67cff08b36f8476f6b75a8661bba47657184e"
+      },
+      "first/dedup-verified-1024.json": {
+        "bytes": 128537,
+        "sha256": "f5fe4a923675bed2654ff12afc58e832e803eb059d72419d7814ab97892f2fc8"
+      },
+      "first/dedup-verified-1024.json.jsonl": {
+        "bytes": 111944,
+        "sha256": "88022c1c4e8a5bb51b8e4cebffd01d902b39b2039c43c817d85f5affd6833cce"
+      },
+      "first/dedup-verified-1024.json.manifest.json": {
+        "bytes": 602,
+        "sha256": "c57533e14f1a1711fb9e71cd0b2f3634ef2e82fda39b7cb348bbe15ecb53dadd"
+      },
+      "first/original-budget.json": {
+        "bytes": 6466,
+        "sha256": "6295994ad3ea25ad60196a09d3997c71a1ff014cc4a601a14990e6362cd739a4"
+      },
+      "first/original-coverage.json": {
+        "bytes": 599,
+        "sha256": "58d0cfacb04df8d589125bf71369efd6e625952cbcb58f8da61967ad13e95d8c"
+      },
+      "first/original-mode.json": {
+        "bytes": 6304,
+        "sha256": "45c0692eb2529757a98ba34ffed93b389f5ba466acc170dfe70e37f0e9d8fd5d"
+      },
+      "first/original-traced-1024.json": {
+        "bytes": 130532,
+        "sha256": "7c514e10a79008f818ea67a4b2050f7121a45d68199e38049125b1e05b36618d"
+      },
+      "first/original-traced-1024.json.jsonl": {
+        "bytes": 112142,
+        "sha256": "6e52d781279d42543fc990ceee2ed47ca2e5b393bd3880ee4a933f877b2aab24"
+      },
+      "first/original-traced-1024.json.manifest.json": {
+        "bytes": 603,
+        "sha256": "ef619ee42b41e40a981d9d780bb4a8827b92d5b422df63ea6b3b7933b9d1c89a"
+      },
+      "first/original-traced-4096.json": {
+        "bytes": 130564,
+        "sha256": "478e39c0af8943166ed25fe5a0cf5014a532404db35e741d7d76590334a58cb8"
+      },
+      "first/original-traced-4096.json.jsonl": {
+        "bytes": 112910,
+        "sha256": "e4c7b89f9f5c0020c18ac86780399646e9e954c845831828cc8811c38de25e00"
+      },
+      "first/original-traced-4096.json.manifest.json": {
+        "bytes": 603,
+        "sha256": "a39b8f425989e4945a3b04f5fffeb48a8620a05fe39a65fd914209abb840a40f"
+      },
+      "first/original-verified-1024.json": {
+        "bytes": 128091,
+        "sha256": "521b2fdd3ceb507a0631e3f935693ee912c8e1ce5b42f81fea74d197bd03cba8"
+      },
+      "first/original-verified-1024.json.jsonl": {
+        "bytes": 111530,
+        "sha256": "17fb22a5406dd6acbb9073c6e1559d83e79ccd57103fff1e04dd7295718e4004"
+      },
+      "first/original-verified-1024.json.manifest.json": {
+        "bytes": 605,
+        "sha256": "dd02bbd88fbab028375bd6f37960dde8fda6a8855bd1d01f369c6b4678b26460"
+      },
+      "first/policy.json": {
+        "bytes": 6297,
+        "sha256": "165b52ed0b37a700fceba8d7a5c7d3be2a7b28eda2f085d75bac7a21efe68244"
+      },
+      "reproduction/commands.json": {
+        "bytes": 32152,
+        "sha256": "280ba49fb2286125f722ab2032c6f50e3aa1280402516abc268f629dabb534d8"
+      },
+      "reproduction/dedup-budget.json": {
+        "bytes": 6464,
+        "sha256": "8cdb4e92f1d2eb3717e96bcafb7cafe1c0cd4b0ccacac6fd24d39b15031724f7"
+      },
+      "reproduction/dedup-coverage.json": {
+        "bytes": 590,
+        "sha256": "b32b852634056f5190480ad57df05fd855983cd5eb306ad20a8d1a37cca3233e"
+      },
+      "reproduction/dedup-mode.json": {
+        "bytes": 6296,
+        "sha256": "e1fef5e94314deea17eed42dee74bddb32145717c708ad9aea9012e5b620fd4f"
+      },
+      "reproduction/dedup-traced-1024.json": {
+        "bytes": 131003,
+        "sha256": "716fbd62dd747f09413d6fc867d09366d741389b1474feb15431f9e23543f244"
+      },
+      "reproduction/dedup-traced-1024.json.jsonl": {
+        "bytes": 112694,
+        "sha256": "6f46c5a585b3263506b852b5f4064ee06184e136676386210870b6948707c6fe"
+      },
+      "reproduction/dedup-traced-1024.json.manifest.json": {
+        "bytes": 600,
+        "sha256": "f7b3ba4453a456f3f7ce497c0fc60238d59cfa92006a890fa67e4167db8eabc2"
+      },
+      "reproduction/dedup-traced-4096.json": {
+        "bytes": 131029,
+        "sha256": "a72f7294b500b84cf4820481464428d1f0d4567833ec588a787ac6a45bb6fed6"
+      },
+      "reproduction/dedup-traced-4096.json.jsonl": {
+        "bytes": 113324,
+        "sha256": "c4f63795e8e44288da951f6bc751a388bf26052cd431130a42c90c8f862934c6"
+      },
+      "reproduction/dedup-traced-4096.json.manifest.json": {
+        "bytes": 600,
+        "sha256": "660108f531187c1a3f0d1f4b3bc67cff08b36f8476f6b75a8661bba47657184e"
+      },
+      "reproduction/dedup-verified-1024.json": {
+        "bytes": 128538,
+        "sha256": "23b29fad00df32cfffabdc2acdb505d9b8f87eba28f2fcd27aed0419197c3ab5"
+      },
+      "reproduction/dedup-verified-1024.json.jsonl": {
+        "bytes": 111945,
+        "sha256": "d4083d7638e379353c76090b77e5125a98a33aebc9f19092d39d11493fd077af"
+      },
+      "reproduction/dedup-verified-1024.json.manifest.json": {
+        "bytes": 602,
+        "sha256": "c57533e14f1a1711fb9e71cd0b2f3634ef2e82fda39b7cb348bbe15ecb53dadd"
+      },
+      "reproduction/original-budget.json": {
+        "bytes": 6471,
+        "sha256": "afa20e738084bb7a3940f4dbcbff27ec83a2e7bba06e0092231189e7c5705880"
+      },
+      "reproduction/original-coverage.json": {
+        "bytes": 599,
+        "sha256": "58d0cfacb04df8d589125bf71369efd6e625952cbcb58f8da61967ad13e95d8c"
+      },
+      "reproduction/original-mode.json": {
+        "bytes": 6302,
+        "sha256": "a0f16630e82ef157214ec61a9909f2d054065eee4ad2d165493f7d5045f7f614"
+      },
+      "reproduction/original-traced-1024.json": {
+        "bytes": 130532,
+        "sha256": "2bb1077a65335c1f753834c134afb9a37729e834bf571a9984e88c6f1e846dc5"
+      },
+      "reproduction/original-traced-1024.json.jsonl": {
+        "bytes": 112142,
+        "sha256": "828275e903a27c867f0591b19d45762eb6528230d95975860f7891d426753a6b"
+      },
+      "reproduction/original-traced-1024.json.manifest.json": {
+        "bytes": 603,
+        "sha256": "ef619ee42b41e40a981d9d780bb4a8827b92d5b422df63ea6b3b7933b9d1c89a"
+      },
+      "reproduction/original-traced-4096.json": {
+        "bytes": 130564,
+        "sha256": "7680aa140018e600e7fb3cf14d9782f7ba31ea8171a79cc1af53d4b6c9a46b6a"
+      },
+      "reproduction/original-traced-4096.json.jsonl": {
+        "bytes": 112910,
+        "sha256": "3565c860ffe2cab981254ffc7893fc6d1dcca52caf442a158534429ab8e29cfd"
+      },
+      "reproduction/original-traced-4096.json.manifest.json": {
+        "bytes": 603,
+        "sha256": "a39b8f425989e4945a3b04f5fffeb48a8620a05fe39a65fd914209abb840a40f"
+      },
+      "reproduction/original-verified-1024.json": {
+        "bytes": 128090,
+        "sha256": "2ac89ce5678286547b5d69b8b9426fce0fc1784e15dc61c9d489eba23ebb47b3"
+      },
+      "reproduction/original-verified-1024.json.jsonl": {
+        "bytes": 111530,
+        "sha256": "92a87e1e59034e3924212a87bdd3b5c0cadc304bf55be603018a5caf2ba1694c"
+      },
+      "reproduction/original-verified-1024.json.manifest.json": {
+        "bytes": 605,
+        "sha256": "dd02bbd88fbab028375bd6f37960dde8fda6a8855bd1d01f369c6b4678b26460"
+      },
+      "reproduction/policy.json": {
+        "bytes": 6296,
+        "sha256": "67c4616bb42107adba27752cad900b1f0f04497003bc8cd9e113fd184ec50d9a"
+      }
+    },
+    "outer_identity": {
+      "bytes": 728781,
+      "sha256": "3d6040d8254b90350663b86cd8e8fbd5fa0c4cb54013e956b041aac995bbdea5"
+    },
+    "scope": "exact bytes, original file formatting and paths relative to each independent pass; no corpus bodies/stores/binaries"
+  },
+  "raw_text": {
+    "beir-help.txt.gz": {
+      "purpose": "raw executable output; gzip preserves original Go tabs/trailing whitespace",
+      "uncompressed": {
+        "bytes": 1728,
+        "sha256": "cc10197372cf764d233ced0fdc6075673d905a9b54bbab721ba86e4c19c59f51"
+      }
+    },
+    "binary-metadata.txt.gz": {
+      "purpose": "raw executable output; gzip preserves original Go tabs/trailing whitespace",
+      "uncompressed": {
+        "bytes": 1194,
+        "sha256": "dab3a00a9e5c23e9a571b07ba66ef84b212d69609c5879c30cc64f6b49730a21"
+      }
+    }
+  }
+}

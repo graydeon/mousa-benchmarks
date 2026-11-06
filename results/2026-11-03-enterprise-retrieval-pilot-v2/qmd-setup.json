@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "--cache",
+    "cache"
+  ],
+  "cpu_seconds": null,
+  "cwd": "qmd-setup",
+  "exit": -9,
+  "lifecycle_scripts": false,
+  "lock_identity": {
+    "bytes": 82457,
+    "sha256": "7b9d53c6d2cb51e692991eef2db0e7bd3cf5bf6c00b37a6a91be4625727b7f4a"
+  },
+  "observed_peak_bytes": 275718864,
+  "package_identity": {
+    "bytes": 171,
+    "sha256": "67ffe6547eddc0a49bd89cd4a3936a645f77f4337f8090bcb3d9aa9950e28d26"
+  },
+  "peak_rss_kib": null,
+  "resource_limit": "disk sampled; threshold overshoot retained as setup failure, not a feasible setup",
+  "stderr": {
+    "base64": "",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": ""
+  },
+  "stdout": {
+    "base64": "",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": ""
+  },
+  "terminal_reason": "setup_disk_cap",
+  "wall_seconds": 10.021522369701415
+}

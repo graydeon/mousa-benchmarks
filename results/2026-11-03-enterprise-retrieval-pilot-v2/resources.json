@@ -1,0 +1,128 @@
+{
+  "api_calls": 0,
+  "billing_usd": 0,
+  "build": {
+    "anonymous_public_tree_equal": true,
+    "argv": [
+      "go",
+      "build",
+      "-o",
+      "../beir",
+      "./cmd/beir"
+    ],
+    "binary_identity": {
+      "bytes": 13178190,
+      "sha256": "244ef4f90858c8aeb90db3a0e09b62df78026e64560d6cedd8cabb6805d76ca1"
+    },
+    "environment": {
+      "CGO_ENABLED": "0",
+      "GOAMD64": "v1"
+    },
+    "exit": 0,
+    "go_version": "go version go1.27.1 linux/amd64",
+    "local_tested_revision": "e9e8cb198ab643678318c33bede0719dc69f68e1",
+    "local_tested_tree": "0851d56512ceab1546ab4c2b502391073b81c5a9",
+    "peak_rss_kib": 185172,
+    "source_clean": true,
+    "source_revision": "d226394319955f36f52d0414ff446f0f5e63c8b0",
+    "source_tree": "0851d56512ceab1546ab4c2b502391073b81c5a9",
+    "system_seconds": 1.166411,
+    "user_seconds": 12.966833,
+    "wall_seconds": 4.3835658589378
+  },
+  "cpu_model": "Intel Xeon L5640 @2.27GHz",
+  "limits": "native process peaks and controller lifetime peak are separate, not summed simultaneous tree RSS. Full controller CPU and setup CPU/RSS were not captured; native child CPU and SQLite CPU are measured endpoint subtotals, not whole-pilot total.",
+  "logical_cpus": 8,
+  "measured_wall_seconds": 428.8557892893441,
+  "passes": {
+    "first": {
+      "materialized_dataset_bytes": 5124446,
+      "native_ingestion_seconds": 144.936989192,
+      "native_max_process_peak_rss_kib": 58692,
+      "native_process_wall_seconds": 208.27357397973537,
+      "native_system_seconds": 9.421454,
+      "native_user_seconds": 62.529965000000004,
+      "post_close_store_bytes": {
+        "enterprise-v2.sqlite": 14307328,
+        "reference.sqlite": 8450048
+      },
+      "preparation_wall_seconds": 2.4535405258648098,
+      "sqlite": {
+        "endpoint": "in-process stdlib SQLite FTS5; query only, no process startup",
+        "ingestion_seconds": 1.3334557469934225,
+        "process_peak_rss_kib": 488888,
+        "system_seconds": 0.203446,
+        "total_seconds": 2.672121092211455,
+        "user_seconds": 1.3450670000000002,
+        "version": "3.46.1"
+      },
+      "sqlite_query_median_seconds": 0.025790615938603878
+    },
+    "reproduction": {
+      "materialized_dataset_bytes": 5124446,
+      "native_ingestion_seconds": 130.61949609,
+      "native_max_process_peak_rss_kib": 82692,
+      "native_process_wall_seconds": 208.83764941990376,
+      "native_system_seconds": 9.845081,
+      "native_user_seconds": 61.591033,
+      "post_close_store_bytes": {
+        "enterprise-v2.sqlite": 14299136,
+        "reference.sqlite": 8450048
+      },
+      "preparation_wall_seconds": 2.545384814031422,
+      "sqlite": {
+        "endpoint": "in-process stdlib SQLite FTS5; query only, no process startup",
+        "ingestion_seconds": 0.8929137010127306,
+        "process_peak_rss_kib": 488888,
+        "system_seconds": 0.148447,
+        "total_seconds": 2.207455644849688,
+        "user_seconds": 1.381639999999999,
+        "version": "3.46.1"
+      },
+      "sqlite_query_median_seconds": 0.024860456818714738
+    }
+  },
+  "qmd_setup": {
+    "argv": [
+      "npm",
+      "ci",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund",
+      "--cache",
+      "cache"
+    ],
+    "cpu_seconds": null,
+    "cwd": "qmd-setup",
+    "exit": -9,
+    "lifecycle_scripts": false,
+    "lock_identity": {
+      "bytes": 82457,
+      "sha256": "7b9d53c6d2cb51e692991eef2db0e7bd3cf5bf6c00b37a6a91be4625727b7f4a"
+    },
+    "observed_peak_bytes": 275718864,
+    "package_identity": {
+      "bytes": 171,
+      "sha256": "67ffe6547eddc0a49bd89cd4a3936a645f77f4337f8090bcb3d9aa9950e28d26"
+    },
+    "peak_rss_kib": null,
+    "resource_limit": "disk sampled; threshold overshoot retained as setup failure, not a feasible setup",
+    "stderr": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "stdout": {
+      "base64": "",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "text": ""
+    },
+    "terminal_reason": "setup_disk_cap",
+    "wall_seconds": 10.021522369701415
+  },
+  "shared_source_cache_bytes": 24202130,
+  "source_cache_pin_verification": "asset size/SHA256 checked independently before both materializations",
+  "source_download_bytes_v2": 0
+}

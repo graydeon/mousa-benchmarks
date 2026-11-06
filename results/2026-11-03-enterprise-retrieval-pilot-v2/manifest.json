@@ -1,0 +1,93 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 12383,
+      "sha256": "0e366913523d7acb3a43155b4f09c9b892d9247785e1f6dd18b4d9bbd84a3b1f"
+    },
+    "archive-inventory.json": {
+      "bytes": 10331,
+      "sha256": "b8f339f7bf7a882ec8973aacd8baa00207c767de39c9a57caceb5d2b5aad846a"
+    },
+    "beir-help.txt.gz": {
+      "bytes": 880,
+      "sha256": "9562de4e9f71ffdfc1763f1862b66aa360f97c0ea1be8f354649e7119ca63ddb"
+    },
+    "binary-metadata.txt.gz": {
+      "bytes": 783,
+      "sha256": "6d0982d6d77eeb1a27765bdfbbe3aca6bdb49c954edf6fd24ef47a083450b976"
+    },
+    "build.json": {
+      "bytes": 796,
+      "sha256": "2ffd862202fc36544de7848ff52d35c7e0cdf73be40b743541aea596e63fec1f"
+    },
+    "capture.json.gz": {
+      "bytes": 625942,
+      "sha256": "3471823f4ff72d447454378f47eeec745b16bf7e6b2be583dc5c7341f341f451"
+    },
+    "condition-diff.json": {
+      "bytes": 4539,
+      "sha256": "f9aaa41f1cd29debc017eb877041de3a22ee37c99955f83dd04490bc823ba922"
+    },
+    "controller-checks.json": {
+      "bytes": 1498,
+      "sha256": "47c816407ff0a17a57c6cd2c06fe5cf2eefd1303868c023ffbc1e5716a42cae3"
+    },
+    "controls.json": {
+      "bytes": 1058,
+      "sha256": "9d94a96be9c01f524794bcd7f0fe7abfe98976feee3d2705cba614ed2e308c7c"
+    },
+    "execution.json": {
+      "bytes": 1070,
+      "sha256": "bfcd4b7bb0b27e08a7d8843213ab9f3379f8a4406a75c7580fb717f4fc2d6ba8"
+    },
+    "freeze-receipt.json": {
+      "bytes": 391,
+      "sha256": "8db1388b8ad100efbd69cdf33ecd19a042c01cab431a697c7d32cdb9510de7c1"
+    },
+    "independent-input-check.json": {
+      "bytes": 301,
+      "sha256": "2551e760d20d3ecd877ce96ea62fa27052094b3c8187a7d813f42cfda91559a4"
+    },
+    "native-raw.tar.gz": {
+      "bytes": 728781,
+      "sha256": "3d6040d8254b90350663b86cd8e8fbd5fa0c4cb54013e956b041aac995bbdea5"
+    },
+    "per-question.json": {
+      "bytes": 92669,
+      "sha256": "7d72036ab8f2b8e379b29449d5e8c405d7183ba626c2014e4934dcc513590e6b"
+    },
+    "population-and-inputs.json": {
+      "bytes": 8628,
+      "sha256": "b84d9194ebd10f528b3cdf228da907d5e7be6133a5ba2e9366d424c1364e1e95"
+    },
+    "protocol.json": {
+      "bytes": 6485,
+      "sha256": "783e8666d91b4707f64c1816d1ffc2a4f5665cfe268fb52aaca64e74c21b8f47"
+    },
+    "qmd-setup.json": {
+      "bytes": 1013,
+      "sha256": "befc58c13dcbd7a939df1c55e5049e6ffeb6171ebf722e4781bf8b0217e4ef48"
+    },
+    "replay.json": {
+      "bytes": 136,
+      "sha256": "e8aac5ce9784f7e7e91b083181cc24086e0cee77b76a68ba889df88ceb931fa4"
+    },
+    "resources.json": {
+      "bytes": 4369,
+      "sha256": "c6a6ec6eea7eca4ce4608865d6c650c8d3628500b596c30b16a6bcb88f5bc068"
+    },
+    "source-license.txt": {
+      "bytes": 1072,
+      "sha256": "9eab95dae84867fa8ba1450e4bf34addf74e841923f4b6877f4d2df82bed3508"
+    },
+    "source-metadata.json": {
+      "bytes": 3922,
+      "sha256": "da8864a971f15c0ae8a9deecab5a7e8dbd6d69d8aac73af18b252f8de8dfc0fd"
+    },
+    "summary.json": {
+      "bytes": 2614,
+      "sha256": "f2c0e47f86dd591237b0f92962e32f84e662502104ff82b4e020f0aa2362b341"
+    }
+  },
+  "schema": "mousa.enterprise_pilot_result_files.v2"
+}

@@ -1,0 +1,104 @@
+{
+  "api_calls": 0,
+  "arms": {
+    "mousa-dedup-traced-1024": {
+      "enrolled": 20,
+      "executed": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.1,
+      "scored": 20
+    },
+    "mousa-dedup-traced-4096": {
+      "enrolled": 20,
+      "executed": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.7,
+      "scored": 20
+    },
+    "mousa-dedup-verified": {
+      "enrolled": 20,
+      "executed": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": null,
+      "scored": 20
+    },
+    "mousa-original-traced-1024": {
+      "enrolled": 20,
+      "executed": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.1,
+      "scored": 20
+    },
+    "mousa-original-traced-4096": {
+      "enrolled": 20,
+      "executed": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.7,
+      "scored": 20
+    },
+    "mousa-original-verified": {
+      "enrolled": 20,
+      "executed": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": null,
+      "scored": 20
+    },
+    "qmd-search": {
+      "enrolled": 20,
+      "executed": 0,
+      "metrics": null,
+      "packed_coverage": null,
+      "scored": 0
+    },
+    "sqlite-fts5": {
+      "enrolled": 20,
+      "executed": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.7376215011624125,
+        "mrr_at_10": 0.6876984126984127,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": null,
+      "scored": 20
+    }
+  },
+  "billing_usd": 0,
+  "enrolled_arms": 8,
+  "enrolled_questions": 20,
+  "executed_scored_rows_per_pass": 140,
+  "measured_wall_seconds": 428.8557892893441,
+  "optional_not_run_rows_per_pass": 20,
+  "status": "COMPLETE_REQUIRED_ARMS_OPTIONAL_NOT_RUN",
+  "terminal_rows_per_pass": 160
+}
