@@ -35,6 +35,15 @@ history/recount, byte-pair compatibility and refusals; they make no quality clai
 Historical producers/protocols/results remain unchanged.
 See [replay and new capture commands](REPRODUCING.md#lexical-token-association-supersession).
 
+The additive [vector/hybrid declared-support producer](retrieval-associations/capture.py)
+completed [paired exact-public-head observations](results/2026-11-06-vector-hybrid-associations)
+against product `62b725213ce8613a1b824d2e07a305721531fb76`. Each fresh store retained
+149 events, 120 stable comparison rows and 48 independent whole-context counts.
+Both replays, the two-store comparison and five controls per capture passed.
+Named assertions cover primary ranks/coverage, unembedded support, both packers,
+v14/v15 history and explicit suppression. Historical observations keep their
+original pins. See [capture and replay commands](REPRODUCING.md#vectorhybrid-declared-support).
+
 
 The separate [EnterpriseRAG lexical pilot v2](enterprise-retrieval-pilot-v2)
 completed the required retrieval/packing arms and a fresh-store reproduction
