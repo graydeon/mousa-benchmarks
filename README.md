@@ -25,6 +25,17 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The additive [token/association/supersession client](token-association-supersession/capture.py)
+completed [paired exact-public-head observations](results/2026-11-06-token-association-supersession)
+against product `889fe11f54798e8b1409bbcdd40a67e5f5dd4d42`. Each fresh store passed
+76 native commands,29 MCP frames and46 independent complete-context counts.
+Both replays, four rehashed controls per pass and68 stable producing rows passed.
+The captures cover native directory/JSONL and configured MCP lexical triples,
+history/recount, byte-pair compatibility and refusals; they make no quality claim.
+Historical producers/protocols/results remain unchanged.
+See [replay and new capture commands](REPRODUCING.md#lexical-token-association-supersession).
+
+
 The separate [EnterpriseRAG lexical pilot v2](enterprise-retrieval-pilot-v2)
 completed the required retrieval/packing arms and a fresh-store reproduction
 under a pre-query 8 MiB protocol. Its [actual results](results/2026-11-03-enterprise-retrieval-pilot-v2)

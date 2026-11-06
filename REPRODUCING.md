@@ -2,6 +2,61 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Lexical token association supersession
+
+The [paired public-head observations](results/2026-11-06-token-association-supersession)
+passed both captures, replay, controls and stable comparison. Their result guide
+contains offline replay commands. Historical producers, protocols and results
+remain unchanged. For new collection, select an exact public product commit and
+build from a clean anonymous checkout, not an unpublished working tree:
+
+```sh
+export PUBLIC_HEAD=EXACT_PUBLIC_PRODUCT_COMMIT
+work=$(mktemp -d /tmp/mousa-token-triple-public.XXXXXX)
+git -c credential.helper= clone https://github.com/graydeon/mousa.git "$work/product"
+git -C "$work/product" checkout --detach "$PUBLIC_HEAD"
+(cd "$work/product" && GOWORK=off CGO_ENABLED=0 GOAMD64=v1 go build -o "$work/mousa" ./cmd/mousa)
+export PUBLIC_SOURCE="$work/product" BINARY="$work/mousa"
+export PY=/path/to/prepared/venv/bin/python CACHE=/path/to/prepared/tokenizer-cache
+export RESULT=results/NEW-token-association-supersession
+sh token-association-supersession/run-public.sh
+```
+
+Run from this companion repository root, sequentially and separately from product
+verification. Keep the virtualenv interpreter path; do not resolve its symlink to
+a system Python. It must provide official tiktoken 0.12.0 and the prepared
+o200k_base cache. Reference counting forbids vocabulary downloads.
+The fixed `/tmp/mousa-public-token-triple-notes` fixture must not already exist;
+the producer refuses a collision rather than deleting another owner's directory.
+The runner creates the new result directory and frozen exact-head protocol only
+when invoked; it records no fabricated pre-publication product pin.
+
+Each pass creates its own writable store. Native directory/JSONL byte-pair checks
+reuse the historical composition fixture; native directory/JSONL and configured MCP token
+triples exercise both packers, primary and target suppression, exact fit, one-token
+and one-byte misses, omitted/false compatibility, no-declaration v8, v13 history
+and native recount. Empty CLI association flags retain omitted/false no-op behavior;
+true rejects in byte/token modes before creating an absent store. Vector/hybrid
+associations remain precise MCP invalid-argument refusals.
+
+Raw native argv/stdin/stdout/stderr/exits, MCP request/response frames and shutdown,
+exact producing identities and independent whole-render counts are retained.
+Stable comparison excludes only the reused helper's per-call query/authorization
+identities and evaluation/latency times; packet/content/administration identities
+remain compared. Replay regenerates the schedule and validates source-bound fixture,
+history and count facts. Rehashed request/count/suppression and embedded-text
+duplicate-key controls must fail their named detector, not a stale stream hash.
+
+The runner writes replay/control/comparison receipts and registers the new run
+with `tools/make_manifest.py`, then calls `python3 tools/verify_results.py`.
+On failure, preserve `partial.json`, logs and the incomplete run; do not overwrite
+it or count it as a passed capture. Register retained failure artifacts separately
+before the archive gate. No executable or SQLite store is exported.
+These synthetic client observations do not establish semantic sufficiency,
+authenticated authorship, model-window fit, performance or internal transaction
+race/cancellation behavior. No enterprise campaign, generation or judging runs.
+
+
 ## EnterpriseRAG pilot v2: measured retrieval and packing
 
 Use the [separate frozen 8 MiB controller](enterprise-retrieval-pilot-v2) and
