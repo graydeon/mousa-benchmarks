@@ -2,6 +2,50 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## MCP source-scoped supersession administration
+
+The additive `mcp-supersession-admin/capture.py` producer reuses the prior strict
+outer/embedded JSON and scheduled-request replay infrastructure without changing
+historical producers, protocols or results. Freeze and capture only after product
+publication, against a clean anonymous checkout of its exact public commit:
+
+```sh
+export PUBLIC_HEAD=EXACT_PUBLIC_PRODUCT_COMMIT
+work=$(mktemp -d /tmp/mousa-admin-public.XXXXXX)
+git -c credential.helper= clone https://github.com/graydeon/mousa.git "$work/product"
+git -C "$work/product" checkout --detach "$PUBLIC_HEAD"
+(cd "$work/product" && GOWORK=off CGO_ENABLED=0 GOAMD64=v1 go build -o "$work/mousa" ./cmd/mousa)
+export PUBLIC_SOURCE="$work/product" BINARY="$work/mousa"
+export PY=/path/to/prepared/venv/bin/python CACHE=/path/to/prepared/tokenizer-cache
+export RESULT=results/NEW-mcp-supersession-admin
+sh mcp-supersession-admin/run-public.sh
+```
+
+Run from this repository root. Preserve the virtualenv interpreter path and
+prepare official `tiktoken==0.12.0` with the offline `o200k_base` cache. The reused
+driver reserves `/tmp/mousa-public-admin-unused-notes` and refuses a collision.
+The new runner performs two fresh-store captures, strict replay, stable comparison,
+rehashed semantic controls and manifest registration. It retains actual raw frames,
+native policy argv/stdin/outputs/exits, MCP shutdown and producing identities.
+Failure preserves the partial capture; use a new result directory for another run.
+Preparation alone is not capture evidence or a passed result.
+
+All replacement operations use MCP: sync/export/import, exact declaration pins,
+declare/retry, activate/current retry, status, stale/metadata/foreign-source refusal,
+deactivate and reactivate. Reader, ingestion-only and admin-only sessions distinguish
+the startup permissions. Native `access` supplies the separate denied-read policy
+fixture; it does not administer replacement records. Status denial must disclose
+only decision metadata despite a successful authorized write. Lexical/vector/hybrid
+support uses both packers and byte/token budgets, including unembedded byte-equal
+old/twin support, independent full-render counts and retained history after
+deactivation. Controls alter expectations, source binding, unauthorized refusals,
+hidden status state and query suppression with refreshed stream hashes.
+
+This stdio capture does not exercise HTTP authentication, concurrent writers or
+damaged hidden storage; those product tests remain separate evidence. It makes no
+semantic, authorship, performance or model-window claim. Historical capture limits
+below describe their own pinned versions, not current source capabilities.
+
 ## Lexical token association supersession
 
 The [paired public-head observations](results/2026-11-06-token-association-supersession)
