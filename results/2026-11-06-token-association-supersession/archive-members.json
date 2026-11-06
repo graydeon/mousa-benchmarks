@@ -1,0 +1,50 @@
+{
+  "first/capture.json": {
+    "bytes": 1626955,
+    "sha256": "859b003a6e49f71838f2e251a7b0f4795f07e8f8861657a47e24cab705108341"
+  },
+  "first/controls/count.json": {
+    "bytes": 1626955,
+    "sha256": "7de00928e0e2d787b2c8197a85be1e8b69fb610dd07987942da853854bdae75f"
+  },
+  "first/controls/request.json": {
+    "bytes": 1626960,
+    "sha256": "6a97b2913db42374af602b3ff09ae601cb2c4d63131ac540b2480c2243e54fe3"
+  },
+  "first/controls/suppression.json": {
+    "bytes": 1626949,
+    "sha256": "01a48e6111ebfd0af3f6ecbaf29adbce4572282bd72793d7ec20a679ab4be150"
+  },
+  "first/controls/text-duplicate.json": {
+    "bytes": 1627048,
+    "sha256": "bf3d45b9d1139e3655cb489006e8c9b1f42d2128dedfe92c39655c4172020dd6"
+  },
+  "first/summary.json": {
+    "bytes": 239941,
+    "sha256": "d45a193bbdb0418ad95bad670ebc316d410a9115a948ba2dad18956acaa41183"
+  },
+  "second/capture.json": {
+    "bytes": 1626956,
+    "sha256": "0bead1ca44c9a2303f6af94e868ba58c462348ded9bdab06332a5b21b81a916a"
+  },
+  "second/controls/count.json": {
+    "bytes": 1626956,
+    "sha256": "deb6d6021ea7cf0b1b4d855b81b0a9939508edf09fb8d5ee6fb1f8bd24473294"
+  },
+  "second/controls/request.json": {
+    "bytes": 1626961,
+    "sha256": "40299d2c9dd26f7a000fc7c95dbaa833c1fe58bb64078f4c2044d8bcf627f691"
+  },
+  "second/controls/suppression.json": {
+    "bytes": 1626950,
+    "sha256": "b628e4bd1574e912484104fc24e7997003e6d85f7c5c5a9732142e47670cd136"
+  },
+  "second/controls/text-duplicate.json": {
+    "bytes": 1627049,
+    "sha256": "a3b9778cdba3d483b5c7cd94b96f69bd4827612914467433d636f5f8d94f4ab2"
+  },
+  "second/summary.json": {
+    "bytes": 239941,
+    "sha256": "d45a193bbdb0418ad95bad670ebc316d410a9115a948ba2dad18956acaa41183"
+  }
+}
