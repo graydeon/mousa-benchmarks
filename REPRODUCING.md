@@ -2,6 +2,49 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## MCP source-scoped classifications
+
+Run the additive producer only against the exact published product commit from a
+clean anonymous checkout. These commands are instructions, not capture results:
+
+```sh
+export PUBLIC_HEAD=EXACT_PUBLIC_PRODUCT_COMMIT
+work=$(mktemp -d /tmp/mousa-classifications-public.XXXXXX)
+git -c credential.helper= clone https://github.com/graydeon/mousa.git "$work/product"
+git -C "$work/product" checkout --detach "$PUBLIC_HEAD"
+(cd "$work/product" && GOWORK=off CGO_ENABLED=0 GOAMD64=v1 go build -o "$work/mousa" ./cmd/mousa)
+export PUBLIC_SOURCE="$work/product" BINARY="$work/mousa"
+export RESULT=results/NEW-mcp-classifications
+python3 -m unittest discover -s mcp-classifications -p 'test_*.py'
+sh mcp-classifications/run-public.sh
+```
+
+Run from this repository root. No tokenizer or optional inference backend is needed:
+the workflow makes byte-budget queries and reports zero independent token counts.
+The runner freezes implementation hashes and the public head/tree, retains exact
+scheduled request/response frames and native policy setup outputs/exits, captures
+two fresh stores, replays both, compares stable producing facts and regenerates
+ten rehashed controls. Controls alter scheduled input, source binding,
+authorization, label, confidence, ordered basis, returned identity, query pins,
+boolean coercion and duplicate embedded JSON. Pure regression tests distinguish
+explicit integer confidence 0 from omission, null, boolean, string and float.
+
+The main workflow uses only MCP sync/export/put/retry/get/query for classification.
+Native `access` is separately recorded policy setup, not classification support.
+It exercises segment subjects, ordered representation/source basis, exact retries,
+separately versioned assertions, reader/ingestion-only/admin-only permissions,
+foreign scoped reads, denial with no payload and unchanged retrieval. It does not
+claim all-subject, HTTP principal/scope, concurrency or damaged-store coverage;
+those require product tests. Native cross-source storage is not MCP cross-source
+support. No semantic correctness, factual truth or calibration is measured.
+
+Failure preserves partial capture bytes; use a new result path rather than
+overwriting evidence. After successful captures, the runner creates `manifest.json`
+with `tools/make_manifest.py` and checks all registered results. Review the actual
+receipts and add their public identities/results to the evidence overview only
+after capture. Do not register an empty or prospective result directory.
+
+
 ## MCP source-scoped supersession administration
 
 The additive `mcp-supersession-admin/capture.py` producer reuses the prior strict

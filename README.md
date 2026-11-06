@@ -25,6 +25,18 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The additive [MCP classification producer](mcp-classifications/capture.py) completed
+[paired exact-public-head observations](results/2026-11-06-mcp-classifications)
+against product `a942fed6e12db051324ddac96ecdbf5f4c51d788`. Both fresh stores passed
+41 scheduled events, strict replay, ten rehashed controls and stable comparison.
+Byte queries produced zero independent token counts. The archive retains all28
+regular raw members with hashes. Follow the
+[reproduction commands](REPRODUCING.md#mcp-source-scoped-classifications).
+Historical classification observations and other producer/protocol/result bytes are unchanged.
+The workflow uses MCP for sync/export/put/retry/get and separately labels native
+policy setup. Labels and confidence establish no factual truth, calibrated
+probability, authenticated authorship or retrieval quality.
+
 The additive [token/association/supersession client](token-association-supersession/capture.py)
 completed [paired exact-public-head observations](results/2026-11-06-token-association-supersession)
 against product `889fe11f54798e8b1409bbcdd40a67e5f5dd4d42`. Each fresh store passed
