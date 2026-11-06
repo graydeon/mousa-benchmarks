@@ -482,3 +482,61 @@ python3 eval/local/workflow_test.py --mousa ./mousa
 Run cmd/beir, eval/beir and eval/local/lifecycle.py from the Mousa checkout using its revision-specific instructions. These tools share internal product contracts or acceptance helpers. Store suitable comparative results here with both repository revisions and input hashes.
 
 Research summaries stay in Mousa; links to migrated observations are pinned to immutable commits here. Small compatibility golden files stay beside product tests.
+
+## Vector/hybrid declared support
+
+The additive `retrieval-associations/capture.py` producer completed
+[paired observations](results/2026-11-06-vector-hybrid-associations) against public
+product `62b725213ce8613a1b824d2e07a305721531fb76`. New captures require the exact
+anonymous public head and a clean CGo-free binary built from it. A local working
+tree or historical lexical capture pin is not a substitute.
+
+From this repository root, with the prepared offline tiktoken 0.12.0 environment:
+
+```sh
+export PUBLIC_HEAD=62b725213ce8613a1b824d2e07a305721531fb76
+export PUBLIC_SOURCE=/path/to/clean/anonymous/product-checkout
+export BINARY=/path/to/binary-built-from-that-checkout
+export PY=/path/to/prepared/venv/bin/python
+export CACHE=/path/to/prepared/tokenizer-cache
+export RESULT=results/NEW-vector-hybrid-associations
+sh retrieval-associations/run-public.sh
+```
+
+The launcher freezes a new protocol, runs two sequential fresh-store captures,
+replays both, runs rehashed count/support/history/strict-JSON controls, compares
+stable observations while retaining packet IDs, and registers every result
+member using the existing manifest helper. Capture retains raw native argv,
+stdin/stdout/stderr/exits and MCP frames, including actual producing IDs.
+Do not run captures concurrently: the fixed directory fixture preserves source
+identity between independent runs. Failed attempts retain `partial.json`; choose
+a new result directory for a new attempt rather than replacing failed evidence.
+
+The matrix covers native directory and JSONL plus configured MCP export/import,
+vector/hybrid queries, original/exact-v1, byte/token budgets and omitted/false/true
+supersession. Named checks compare primary evidence and retrieval ranks/coverage
+against association-free queries and verify authorized unembedded support.
+Independent counts reconstruct and count the entire returned context; native
+retained-text recount is separate from MCP's recorded detail projection.
+
+For the published losslessly packaged capture, extract into a temporary directory
+and replay without modifying the registered result:
+
+```sh
+RESULT=results/2026-11-06-vector-hybrid-associations
+REPLAY=$(mktemp -d)
+tar -xJf "$RESULT/raw-captures.tar.xz" -C "$REPLAY"
+"$PY" retrieval-associations/capture.py verify --protocol "$RESULT/protocol.json" \
+  --cache "$CACHE" --output "$REPLAY/first"
+"$PY" retrieval-associations/capture.py verify --protocol "$RESULT/protocol.json" \
+  --cache "$CACHE" --output "$REPLAY/second"
+"$PY" retrieval-associations/capture.py compare --protocol "$RESULT/protocol.json" \
+  --cache "$CACHE" --output "$REPLAY/first" --other "$REPLAY/second"
+python3 tools/verify_results.py
+```
+
+These synthetic values establish protocol and arithmetic, not semantic sufficiency,
+retrieval quality, authenticated authorship or model-window safety. Replay checks
+stored consistency, not authenticated historical execution or universal tamper
+proof. Existing producers, protocols, pins, failed attempts and research results
+remain unchanged; this capture does not repeat or supersede the development pilot.

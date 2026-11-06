@@ -1,0 +1,74 @@
+{
+  "first/capture.json": {
+    "bytes": 3473928,
+    "sha256": "85ad98f7906b2cc429959ac4fa51cf9463068d5b175c59b4b19c0eee39dc7632"
+  },
+  "first/controls/count.json": {
+    "bytes": 3473928,
+    "sha256": "1bbeaf7ea732ffd4b8c02d93d8c1043fd89ab4e4800e588b46b097008ab4f9fa"
+  },
+  "first/controls/duplicate.json": {
+    "bytes": 3473993,
+    "sha256": "3014912e8aa14202ab8ed2353bfcf3cc9c45974d5cc1e069ffd6d752277cbde1"
+  },
+  "first/controls/history.json": {
+    "bytes": 3473926,
+    "sha256": "47b11280bb7d2a6373b582c6982ed01d0d84391e94ccd316031dc7036b623cef"
+  },
+  "first/controls/outer-duplicate.json": {
+    "bytes": 1581,
+    "sha256": "9a1c4937e2397e53ae7bd4d563cd0245bf2681fcbb58658d01629b1f7d585208"
+  },
+  "first/controls/support.json": {
+    "bytes": 3473944,
+    "sha256": "2a2369f0877d02929c79157e164a57a7d1f51e49caa770fefef6c67371cb7561"
+  },
+  "first/controls.json": {
+    "bytes": 727,
+    "sha256": "0d8124f54067e16d2cce567ea01ac4041cf59a7483b68f373626dc3e48ba47a0"
+  },
+  "first/replay.json": {
+    "bytes": 7178,
+    "sha256": "116d7020ddb01dad541deb42b8a5f1ce63e7ec06fc7ebefaf8683c353b283371"
+  },
+  "first/summary.json": {
+    "bytes": 598838,
+    "sha256": "79b60cc5912b65b954794d56e5e9cbdf1666a0001df2ee12377dba2eb2a64e05"
+  },
+  "second/capture.json": {
+    "bytes": 3473934,
+    "sha256": "d7b9fb4e54c6e2dd241c92a15585beb3fe088715d3d49cceff3d1ed78b772adc"
+  },
+  "second/controls/count.json": {
+    "bytes": 3473934,
+    "sha256": "5af11996c5aceda0c8df7aa19d7d641da7fd9b3cd5b8b1c5e3c132c35f0feca2"
+  },
+  "second/controls/duplicate.json": {
+    "bytes": 3473999,
+    "sha256": "1453cb91ec4cb47befb0dd5bd03d01efe56fbcb0540d3225a8bf1d771fdcd191"
+  },
+  "second/controls/history.json": {
+    "bytes": 3473932,
+    "sha256": "5e2f4ced8f127285c01f2f2dd56f9f27c99d704d366eacba6f6c432e5eebd0cb"
+  },
+  "second/controls/outer-duplicate.json": {
+    "bytes": 1581,
+    "sha256": "9a1c4937e2397e53ae7bd4d563cd0245bf2681fcbb58658d01629b1f7d585208"
+  },
+  "second/controls/support.json": {
+    "bytes": 3473950,
+    "sha256": "fc46434de40ee5b4793411e0461929f732ae6fa74598b2a4a226bb84a27e43d0"
+  },
+  "second/controls.json": {
+    "bytes": 727,
+    "sha256": "d4d49d296873943a2b1f9e237120914159f98967621219bffd6a199171ca1ade"
+  },
+  "second/replay.json": {
+    "bytes": 7178,
+    "sha256": "116d7020ddb01dad541deb42b8a5f1ce63e7ec06fc7ebefaf8683c353b283371"
+  },
+  "second/summary.json": {
+    "bytes": 598838,
+    "sha256": "79b60cc5912b65b954794d56e5e9cbdf1666a0001df2ee12377dba2eb2a64e05"
+  }
+}
