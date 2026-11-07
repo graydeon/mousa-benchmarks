@@ -1,0 +1,26 @@
+[
+  {
+    "control": "wrong-population",
+    "detector": "native-content-binding",
+    "rehashed_archive": {
+      "bytes": 6282661,
+      "sha256": "251c88474d251257085aa1d41c48977e9312efb67280c8d6f2ab7aa9f84c64a8"
+    }
+  },
+  {
+    "control": "wrong-segmentation",
+    "detector": "segmentation-policy-binding",
+    "rehashed_archive": {
+      "bytes": 6282741,
+      "sha256": "2f4c70856acb0b1e3cc30f186a51473a6973a23f5b4ad4b009a56b605f5844be"
+    }
+  },
+  {
+    "control": "altered-packed-selection",
+    "detector": "canonical-candidate-projection",
+    "rehashed_archive": {
+      "bytes": 6282996,
+      "sha256": "30e59b21e1c87b4059cacd0d267d4a40effad118f2ff797b809d32f5aaf08d3c"
+    }
+  }
+]

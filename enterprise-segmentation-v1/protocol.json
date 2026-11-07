@@ -1,0 +1,77 @@
+{
+  "analysis_contract": "Candidate document Recall@10/100, binary nDCG@10 and MRR@10 separately from packed gold-document coverage. Exact candidate selections/omissions and segment offsets/sizes; typed complete populations and raw attempt streams. Report per-arm process user/system CPU and peak RSS, native indexing_seconds and journal request microseconds; no unsupported query CPU attribution. Reproduction is not new questions.",
+  "budgets": [
+    1024,
+    4096
+  ],
+  "candidate_limit": 100,
+  "collection_cap_seconds": 1800,
+  "commands": [
+    "python3 enterprise-segmentation-v1/prepare.py --cache CACHE --out FRESH_ENROLLMENT.json",
+    "python3 enterprise-segmentation-v1/run.py --cache CACHE --beir BEIR --publication PUBLICATION.json --out FRESH_COLLECTION",
+    "python3 enterprise-segmentation-v1/analyze.py replay --cache CACHE --capture FRESH_COLLECTION/capture.json.gz --out FRESH_ANALYSIS.json",
+    "python3 enterprise-segmentation-v1/analyze.py controls --cache CACHE --capture FRESH_COLLECTION/capture.json.gz --out FRESH_CONTROLS.json",
+    "python3 tools/verify_results.py"
+  ],
+  "confirmation": "UNMET_ELIGIBLE20: zero additional questions meet source/category/unambiguous full-gold-in-frozen500 eligibility. No smaller confirmation cohort.",
+  "document_count": 500,
+  "enrollment_identity": {
+    "bytes": 731510,
+    "sha256": "2d7e44ab0cfb2065b736e7744ff3410eb55743876a0ac18a0aa3956bdb5db165"
+  },
+  "expression_policy": "original",
+  "helpers": {
+    "enterprise-retrieval-pilot-v2/protocol.json": {
+      "bytes": 6485,
+      "sha256": "783e8666d91b4707f64c1816d1ffc2a4f5665cfe268fb52aaca64e74c21b8f47"
+    },
+    "enterprise-retrieval-pilot-v2/run.py": {
+      "bytes": 23613,
+      "sha256": "9ce452bfddf03e82d67e4415a564ac95c201a4a055670e95da3da490000d30da"
+    },
+    "enterprise-retrieval-pilot/prepare.py": {
+      "bytes": 12446,
+      "sha256": "d1406afbdabfd4e7f2a82d0b4386247dc7e79ecf4b857f44e4eae648ba79ae1f"
+    },
+    "enterprise-retrieval-pilot/sanity.py": {
+      "bytes": 7970,
+      "sha256": "0f99259a7fb8dc5b9202211aedf2cbddc50f1dda18b0f68d70057d999e02458f"
+    },
+    "enterprise-segmentation-v1/analyze.py": {
+      "bytes": 18172,
+      "sha256": "0d0da8bf2fdeae6c501536c75d01da5967a1f9de5799457f9966b9000882ed99"
+    },
+    "enterprise-segmentation-v1/prepare.py": {
+      "bytes": 4869,
+      "sha256": "2f1c527ff7ee912a429a3a6174aa9f401d7d93534ae18b9cabdc6daec306396f"
+    },
+    "enterprise-segmentation-v1/run.py": {
+      "bytes": 23845,
+      "sha256": "fce2fc6111f7f44cefe49dad7e7df3b1864eb196d2cc85563ed49e73d969d80f"
+    },
+    "mcp-trail-supersession/run.py": {
+      "bytes": 37723,
+      "sha256": "f6fb4f5d3ab2857f900fb5b200c2df548cdfc5be5c185e876eb495aedbeb3aa1"
+    }
+  },
+  "mode": "traced",
+  "normalized_text_bytes": 4970133,
+  "packer": "original",
+  "passes": [
+    "first",
+    "reproduction"
+  ],
+  "publication_contract": "Before querying provide --publication JSON with public_head, public_tree (40 hex), binary_identity {sha256,bytes}. Parent obtains clean anonymous exact-public-head binary after product publication and retains build provenance. This receipt is provenance input, not authentication.",
+  "query_timeout_seconds": 30,
+  "recommendation_gate": "No default changes. Recommend for this reduced corpus only with net packed coverage gain, ranking loss/failures/work disclosed. Heldout unmet prevents confirmation claims. No semantic sufficiency, official leaderboard, independent-company or monotonicity claim.",
+  "resource_contract": "One elapsed 1800s collection deadline includes materialization, ingest/rebuild, queries and capture work; process group killed at remaining deadline. Each query 30s. Asset and corpus preparation inherits v2 compressed/cache/member bounds. No model, QMD, embedding, network or setup. Capture finalization may finish after collection deadline; disclose measured wall.",
+  "retries": 0,
+  "schedule": "Pass, segmentation, budget, then original20 and eligible heldout20; fresh store per pass and segmentation, reuse only for second budget. All rows initialized before collection. A failing arm stops only its store; unfinished rows remain NOT_RUN. No retries or replacements.",
+  "schema": "mousa.enterprise_segmentation.protocol.v1",
+  "segmentation_policies": [
+    "fixed-v1",
+    "passage-v1"
+  ],
+  "status": "PREPARED_NOT_MEASURED",
+  "text_cap_bytes": 8388608
+}

@@ -1,0 +1,699 @@
+{
+  "capture_identity": {
+    "bytes": 6276811,
+    "sha256": "d85e92ba5f647f0425a0f4f8643f2cd8c9e094a1b5ef7590e7557db0c8202d05"
+  },
+  "collection_status": "COMPLETE",
+  "collection_wall_seconds": 1382.2033718456514,
+  "confirmation": "UNMET_ELIGIBLE20",
+  "effective_inputs": {
+    "corpus.jsonl": {
+      "bytes": 5118387,
+      "sha256": "be62e68a460e4dbf5a753cae1c47a6ad4c012767d11c2181034aade33d8ea4b0"
+    },
+    "qrels/test.tsv": {
+      "bytes": 1585,
+      "sha256": "886ca53a40ed1ec50116ee685ceaabc0d9e578b4fdea4988702bca539e6b78c7"
+    },
+    "queries.jsonl": {
+      "bytes": 4534,
+      "sha256": "2b0ac2b7854c0272f7325d1a4bce390131d157b98f855674ec36d87c26dc815b"
+    }
+  },
+  "eligible_counts": {
+    "gold-not-wholly-in-frozen-corpus": 14,
+    "ineligible-source-category-labels": 466,
+    "original20": 20
+  },
+  "limitations": [
+    "Independent recorded-consistency audit, not execution authentication.",
+    "Canonical identities require the separate frozen source-bound replay; this checker independently validates source slices, metrics, population, effective inputs and original packing.",
+    "Fresh-store execution and wall cap enforcement require retained collection/build provenance; distinct pass names are not proof.",
+    "No eligible heldout cohort; doc-ID coverage is not semantic sufficiency."
+  ],
+  "process_resources": [
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 65592,
+      "system_seconds": 3.259943,
+      "user_seconds": 13.925313,
+      "wall_seconds": 161.15395552106202
+    },
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 99040,
+      "system_seconds": 1.428075,
+      "user_seconds": 10.152756,
+      "wall_seconds": 12.044372471049428
+    },
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 129120,
+      "system_seconds": 7.121075,
+      "user_seconds": 27.965446,
+      "wall_seconds": 437.6583219082095
+    },
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 242028,
+      "system_seconds": 1.804765,
+      "user_seconds": 16.633814,
+      "wall_seconds": 19.24958001729101
+    },
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 292152,
+      "system_seconds": 2.9052439999999997,
+      "user_seconds": 13.561287,
+      "wall_seconds": 167.57092408509925
+    },
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 305984,
+      "system_seconds": 1.354983,
+      "user_seconds": 9.397042,
+      "wall_seconds": 14.483220351859927
+    },
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 320508,
+      "system_seconds": 7.320726,
+      "user_seconds": 28.120602,
+      "wall_seconds": 433.3068878292106
+    },
+    {
+      "exit": 0,
+      "experiment_timeout": false,
+      "peak_rss_kib": 363872,
+      "system_seconds": 1.693149,
+      "user_seconds": 16.528364,
+      "wall_seconds": 18.542077202815562
+    }
+  ],
+  "reproduction": [
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    }
+  ],
+  "scored_rows": 160,
+  "status": "INDEPENDENT_CHECK_VALID",
+  "summaries": [
+    {
+      "arm": "first/fixed-v1/1024",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.1,
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "arm": "first/fixed-v1/4096",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.7,
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "arm": "first/passage-v1/1024",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.8,
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "arm": "first/passage-v1/4096",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.85,
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "arm": "reproduction/fixed-v1/1024",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.1,
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "arm": "reproduction/fixed-v1/4096",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.7,
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "arm": "reproduction/passage-v1/1024",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.8,
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "arm": "reproduction/passage-v1/4096",
+      "enrolled": 20,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.85,
+      "statuses": {
+        "SCORED": 20
+      }
+    }
+  ],
+  "terminal_rows": 160
+}

@@ -2,6 +2,97 @@
 
 Use separate checkouts of Mousa and this repository. Record explicit revisions for both. Historical result metadata must not be relabeled after migration.
 
+## Segmentation comparison
+
+The [measured result](results/2026-11-07-enterprise-segmentation-v1) contains
+160 scored rows: the original 20 questions × two segment policies × two byte
+budgets × two passes. Collection completed in 1,382.203 seconds; source-bound
+replay and a separate recorded-consistency audit passed. The original 500
+physical documents and all 4,970,133 normalized bytes are unchanged. Expression
+policy and packing remain `original`, with candidate limit 100. Passage-v1
+improved packed gold-document coverage but lost rank on two questions and
+coverage on one question at 1,024 bytes; see the result's per-question and
+resource tables. No default changes.
+
+### Replay the segmentation evidence
+
+From the companion repository root, set `CACHE` to the enterprise pilot's
+existing source cache. It must contain the pinned assets required by
+`enterprise-segmentation-v1/prepare.py`; replay materializes the same inputs
+without downloading assets or running retrieval. Extract the lossless archive
+into a new directory, then use the existing analyzer:
+
+```sh
+mkdir segmentation-evidence
+cat results/2026-11-07-enterprise-segmentation-v1/evidence.tar.xz.part00 results/2026-11-07-enterprise-segmentation-v1/evidence.tar.xz.part01 results/2026-11-07-enterprise-segmentation-v1/evidence.tar.xz.part02 | tar -xJf - -C segmentation-evidence
+python3 results/2026-11-07-enterprise-segmentation-v1/restore_capture.py segmentation-evidence
+python3 enterprise-segmentation-v1/analyze.py replay --cache "$CACHE" --capture segmentation-evidence/capture.json.gz --out segmentation-replay.json
+python3 enterprise-segmentation-v1/analyze.py controls --cache "$CACHE" --capture segmentation-evidence/capture.json.gz --out segmentation-controls.json
+```
+
+The archive contains `capture.codec.json`, `raw/` and build/execution provenance;
+the inventory records every member identity. The restore step recompresses the
+exact object-table payload and requires the original measured gzip SHA-256.
+It was exercised with Python 3.13.5; incompatible gzip encoders fail closed.
+No capture content is changed. Use the analyzer to decode the restored capture.
+Output paths must be new. Replay should report `REPLAY_VALID`; inspect typed
+populations and reproduction rows, not just the process exit. Extraction and
+byte-exact restoration were verified separately from the original collection.
+The three ordered archive parts are each below 2 MiB. Their concatenation and
+every regular member have recorded sizes and SHA-256 hashes in the inventory.
+
+### Collect the segmentation comparison
+
+Build `cmd/beir` from a clean anonymous checkout of public product commit
+`a65d9fea1ce5d903e0c672d4cea62e6ce6272654`, tree
+`7cae64f2eb975b9beb2edaadc7923a40547eae60`. The recorded build used
+`go build -o beir ./cmd/beir`, Go 1.27.1, linux/amd64 and `CGO_ENABLED=0`;
+binary metadata reports `vcs.modified=false`. The measured binary was
+13,227,595 bytes, SHA-256
+`56d8c58d71e42badb57f95c74d00c3a0bf4a0c71fd1822fa85b665ef72865408`.
+A rebuild's byte identity can depend on its build environment.
+
+Set `BEIR` to the absolute path of the built binary. Supply a JSON publication
+receipt with `public_head`, `public_tree`, and `binary_identity` containing
+`sha256` and `bytes` for that binary. This receipt records provenance; it does
+not authenticate execution. From the companion repository root:
+
+```sh
+python3 enterprise-segmentation-v1/prepare.py --cache "$CACHE" --out enrollment-check.json
+cmp enterprise-segmentation-v1/enrollment.json enrollment-check.json
+python3 enterprise-segmentation-v1/run.py --cache "$CACHE" --beir "$BEIR" --publication publication.json --out collection
+python3 enterprise-segmentation-v1/analyze.py replay --cache "$CACHE" --capture collection/capture.json.gz --out analysis.json
+python3 enterprise-segmentation-v1/analyze.py controls --cache "$CACHE" --capture collection/capture.json.gz --out controls.json
+```
+
+Use a new collection directory and preserve every attempt and partial capture.
+The schedule creates a fresh store per pass and segment policy, then reuses
+that store only for the 4,096-byte budget. Reproduction repeats the same
+questions; it is not a held-out population. Zero additional questions meet the
+frozen full-gold, source/category and unambiguous-version criteria.
+Confirmation remains `UNMET_ELIGIBLE20`; do not shrink the required 20.
+
+One 1,800-second collection cap covers materialization, ingest/rebuild, queries
+and capture work. Query timeout is 30 seconds; normalized text is bounded by
+8 MiB, with inherited source/cache/member bounds. There are no retries, model
+calls, downloads or QMD setup. Final capture serialization may finish after the
+deadline. Preparation failures remain arm-level failures; unattempted questions
+remain `NOT_RUN`. A journal prefix survives a truncated report, and an unknown
+interruption is not relabeled as a query timeout.
+
+Replay binds native content/configuration, canonical source slices, trail
+selections and document metrics. Controls mutate input identity, segmentation
+identity and packed selections. These checks establish recorded consistency,
+not historical execution authenticity or an independent implementation of the
+segmentation algorithm. Compare candidate rank/recall separately from packed
+gold-document coverage. CPU and RSS cover whole child-process endpoints, not
+isolated query costs. Gold-document identity is not semantic sufficiency;
+unknown relevance is not negative. No monotonicity, answer-quality,
+independent-company or leaderboard claim follows. Historical failed 4 MiB
+preparation, measured 8 MiB v2, QMD failure/overshoot and source pins remain
+unchanged.
+
+
 ## MCP source-scoped classifications
 
 Run the additive producer only against the exact published product commit from a

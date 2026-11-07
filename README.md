@@ -25,6 +25,19 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [segmentation comparison](results/2026-11-07-enterprise-segmentation-v1)
+completed 160 scored rows in 1,382.203 seconds on public product
+`a65d9fea1ce5d903e0c672d4cea62e6ce6272654`. Across the unchanged original
+20 questions, 500 documents and 4,970,133 normalized bytes, passage-v1 increased
+packed gold-document coverage from 10% to 80% at 1,024 bytes and from 70% to 85%
+at 4,096 bytes. Two questions lost candidate rank, one lost packed coverage at
+1,024 bytes, and passage-v1 required more segments and ingest work. Both passes
+matched; replay and independent recorded-consistency audit passed. Passage-v1
+is recommended only for this frozen corpus when those coverage gains justify
+the ranking losses and extra work; no default changes. Zero additional questions
+were eligible, so confirmation remains **UNMET_ELIGIBLE20**. See the
+[reproduction procedure](REPRODUCING.md#segmentation-comparison).
+
 The additive [MCP classification producer](mcp-classifications/capture.py) completed
 [paired exact-public-head observations](results/2026-11-06-mcp-classifications)
 against product `a942fed6e12db051324ddac96ecdbf5f4c51d788`. Both fresh stores passed
