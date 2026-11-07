@@ -25,6 +25,15 @@ not replace native acceptance or the collection/publication holds.
 
 ## Current evidence boundary
 
+The [current-source manifest observations](results/2026-11-07-source-manifests)
+use public product `09bc71f5c278014587ef7f63d6eab54d996f0495`. Two fresh stores
+each passed 38 native/stdio events, nine stable manifest rows, independent
+identity/inventory replay and four rehashed controls. The fingerprint describes
+current indexed JSONL content under fresh authorization, not unsynced files,
+completed work or a lease on a later query. See the
+[producer and reproduction instructions](source-manifests). No performance or
+semantic-quality claim follows; previous observation bytes and pins are unchanged.
+
 The [segmentation comparison](results/2026-11-07-enterprise-segmentation-v1)
 completed 160 scored rows in 1,382.203 seconds on public product
 `a65d9fea1ce5d903e0c672d4cea62e6ce6272654`. Across the unchanged original

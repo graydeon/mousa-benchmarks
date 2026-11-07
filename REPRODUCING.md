@@ -718,3 +718,20 @@ retrieval quality, authenticated authorship or model-window safety. Replay check
 stored consistency, not authenticated historical execution or universal tamper
 proof. Existing producers, protocols, pins, failed attempts and research results
 remain unchanged; this capture does not repeat or supersede the development pilot.
+
+## Current-source manifests
+
+The [manifest client producer](source-manifests) exercises native JSONL selectors
+and configured stdio MCP aliases against an exact public product binary. Follow
+its new-capture commands for two fresh stores, or replay a recorded result with
+the retained protocol. Independent Python recipes recompute current provenance,
+ordered segment-inventory digests and manifest identities; four rehashed controls
+check current pins, inventory digests, expected-ID binding and denied disclosure.
+
+The fixed alias preserves source identity across stores. Different directory
+roots would have different identities even with identical content. This small
+fixture has at most one short segment per nonempty item and does not independently
+implement general segmentation. Native/stdio observations do not establish HTTP,
+hostile storage, concurrency, performance or semantic quality. A content match is
+not a work-completion record or a lease on a later query. Earlier result bytes,
+source pins, failed attempts and research populations remain unchanged.

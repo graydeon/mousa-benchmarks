@@ -1,0 +1,50 @@
+{
+  "product_base": "09bc71f5c278014587ef7f63d6eab54d996f0495",
+  "benchmark_base": "89fade92f7ad01073d950b76d74cde0bb67e7411",
+  "files": {
+    "README.md": {
+      "bytes": 3686,
+      "sha256": "8b207879eceb34fab332ec1093a5f98a7f49f134053590699a9accd3bc458f8b"
+    },
+    "comparison.json": {
+      "bytes": 44,
+      "sha256": "ec62a2c9d698846f400e58e4ca49a65f5e3ee1a8a9a470e8de3db1d7fbf72c9d"
+    },
+    "first/capture.json": {
+      "bytes": 710557,
+      "sha256": "c687f703a70be5aa1740867082d94a3e492b2aa83f79a507a84d4b4a7d6728a2"
+    },
+    "first/controls.json": {
+      "bytes": 632,
+      "sha256": "47a203b8f42d290b235f1896cbb1a0d467bd6e733ba10f3c09647ecc7e7a12da"
+    },
+    "first/replay.json": {
+      "bytes": 33,
+      "sha256": "057fee235e6adbd68a62afbf5d9449ec7ea0abae284cf7f533303bcde0ae8bc6"
+    },
+    "first/summary.json": {
+      "bytes": 17756,
+      "sha256": "dc13e5287aa2141346f40c3ac272c5940b303d05cee087d074a672cd173ec07f"
+    },
+    "protocol.json": {
+      "bytes": 3536,
+      "sha256": "4599b5498796133fc2e620ed4d6649ca8ab449e9b8577dc05355c919ce3d681d"
+    },
+    "second/capture.json": {
+      "bytes": 710561,
+      "sha256": "a844664f50a41f068ade39b2da7266fc9e1d7e03f4700962f98b345da02ce7df"
+    },
+    "second/controls.json": {
+      "bytes": 632,
+      "sha256": "d296a30c67d95bc264ab7af0b123fab1b733a30af62d6d6b1eb02b0a93998628"
+    },
+    "second/replay.json": {
+      "bytes": 33,
+      "sha256": "057fee235e6adbd68a62afbf5d9449ec7ea0abae284cf7f533303bcde0ae8bc6"
+    },
+    "second/summary.json": {
+      "bytes": 17756,
+      "sha256": "dc13e5287aa2141346f40c3ac272c5940b303d05cee087d074a672cd173ec07f"
+    }
+  }
+}
