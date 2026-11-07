@@ -1,0 +1,1151 @@
+{
+  "arm_work": {
+    "first/fixed-v1/1024": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 152.644087777,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "1024.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "fixed-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "1024",
+          "-query-timeout",
+          "30s"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 65592,
+        "stderr": {
+          "base64": "DWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMS81MDAgZG9jcyAoMC4xcykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAyNi81MDAgZG9jcyAoNS41cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCA1MS81MDAgZG9jcyAoMTEuMnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNzYvNTAwIGRvY3MgKDE3LjBzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDEwMS81MDAgZG9jcyAoMjYuNXMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMTI2LzUwMCBkb2NzICgzMy4zcykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAxNTEvNTAwIGRvY3MgKDQxLjNzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDE3Ni81MDAgZG9jcyAoNDcuMnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjAxLzUwMCBkb2NzICg1Ni41cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAyMjYvNTAwIGRvY3MgKDYyLjdzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDI1MS81MDAgZG9jcyAoNzIuN3MpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjc2LzUwMCBkb2NzICg4My4ycykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAzMDEvNTAwIGRvY3MgKDkyLjJzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDMyNi81MDAgZG9jcyAoMTAxLjZzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDM1MS81MDAgZG9jcyAoMTA4LjFzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDM3Ni81MDAgZG9jcyAoMTE1LjdzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQwMS81MDAgZG9jcyAoMTIyLjJzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQyNi81MDAgZG9jcyAoMTI5LjJzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQ1MS81MDAgZG9jcyAoMTM2LjhzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQ3Ni81MDAgZG9jcyAoMTQzLjRzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDUwMC81MDAgZG9jcyAoMTUyLjZzKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5kZXhlZCA1MDAgZG9jcyBpbiAxNTIuNnMsIDMuMyBkb2NzL3MKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxLzIwIChsYXN0IHFzdF8wMTAyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDIvMjAgKGxhc3QgcXN0XzAxNzQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMy8yMCAobGFzdCBxc3RfMDEwNCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA0LzIwIChsYXN0IHFzdF8wMDIxKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDUvMjAgKGxhc3QgcXN0XzAwMTEpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNi8yMCAobGFzdCBxc3RfMDAyMikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA3LzIwIChsYXN0IHFzdF8wMDQwKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDgvMjAgKGxhc3QgcXN0XzAxMTgpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggOS8yMCAobGFzdCBxc3RfMDE0MikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMC8yMCAobGFzdCBxc3RfMDExNykKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMS8yMCAobGFzdCBxc3RfMDIzNikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMi8yMCAobGFzdCBxc3RfMDIzNCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMy8yMCAobGFzdCBxc3RfMDE4MykKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNC8yMCAobGFzdCBxc3RfMDE5NykKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNS8yMCAobGFzdCBxc3RfMDI1OSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNi8yMCAobGFzdCBxc3RfMDE5MCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNy8yMCAobGFzdCBxc3RfMDI5NCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxOC8yMCAobGFzdCBxc3RfMDI1MikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxOS8yMCAobGFzdCBxc3RfMDI0OCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAyMC8yMCAobGFzdCBxc3RfMDIyMSkK",
+          "bytes": 2376,
+          "sha256": "f5faedc531495b88fb92a3e91e387db3db8dc493ea05262adaeb94cc4a94f155",
+          "text": "\renterprise-segmentation-v1: ingest 1/500 docs (0.1s)\renterprise-segmentation-v1: ingest 26/500 docs (5.5s)\renterprise-segmentation-v1: ingest 51/500 docs (11.2s)\renterprise-segmentation-v1: ingest 76/500 docs (17.0s)\renterprise-segmentation-v1: ingest 101/500 docs (26.5s)\renterprise-segmentation-v1: ingest 126/500 docs (33.3s)\renterprise-segmentation-v1: ingest 151/500 docs (41.3s)\renterprise-segmentation-v1: ingest 176/500 docs (47.2s)\renterprise-segmentation-v1: ingest 201/500 docs (56.5s)\renterprise-segmentation-v1: ingest 226/500 docs (62.7s)\renterprise-segmentation-v1: ingest 251/500 docs (72.7s)\renterprise-segmentation-v1: ingest 276/500 docs (83.2s)\renterprise-segmentation-v1: ingest 301/500 docs (92.2s)\renterprise-segmentation-v1: ingest 326/500 docs (101.6s)\renterprise-segmentation-v1: ingest 351/500 docs (108.1s)\renterprise-segmentation-v1: ingest 376/500 docs (115.7s)\renterprise-segmentation-v1: ingest 401/500 docs (122.2s)\renterprise-segmentation-v1: ingest 426/500 docs (129.2s)\renterprise-segmentation-v1: ingest 451/500 docs (136.8s)\renterprise-segmentation-v1: ingest 476/500 docs (143.4s)\renterprise-segmentation-v1: ingest 500/500 docs (152.6s)\nenterprise-segmentation-v1: indexed 500 docs in 152.6s, 3.3 docs/s\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD0xMDI0IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjc5OTQgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuNzY2NyBnb2xkLWNvdmVyYWdlPTAuMTAwMCB1c2VkLWJ5dGVzPTM0NSB1dGlsaXNhdGlvbj0zMy43JQo=",
+          "bytes": 173,
+          "sha256": "924d8ecde1bac948c5922c72de01e7f850513314a0318ed41f67b3ffef778e4e",
+          "text": "enterprise-segmentation-v1: mode=traced budget=1024 docs=500 queries=20 ndcg@10=0.7994 recall@100=1.0000 mrr@10=0.7667 gold-coverage=0.1000 used-bytes=345 utilisation=33.7%\n"
+        },
+        "system_seconds": 3.259943,
+        "user_seconds": 13.925313,
+        "wall_seconds": 161.15395552106202
+      }
+    },
+    "first/fixed-v1/4096": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 0,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "4096.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "fixed-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "4096",
+          "-query-timeout",
+          "30s",
+          "-reuse"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 99040,
+        "stderr": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHJldXNpbmcgZXhpc3Rpbmcgc3RvcmUgZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjEuc3FsaXRlIChvcGVuZWQrbWFwcGVkIGluIDQuNnMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMS8yMCAobGFzdCBxc3RfMDEwMikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAyLzIwIChsYXN0IHFzdF8wMTc0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDMvMjAgKGxhc3QgcXN0XzAxMDQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNC8yMCAobGFzdCBxc3RfMDAyMSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA1LzIwIChsYXN0IHFzdF8wMDExKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDYvMjAgKGxhc3QgcXN0XzAwMjIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNy8yMCAobGFzdCBxc3RfMDA0MCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA4LzIwIChsYXN0IHFzdF8wMTE4KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDkvMjAgKGxhc3QgcXN0XzAxNDIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTAvMjAgKGxhc3QgcXN0XzAxMTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTEvMjAgKGxhc3QgcXN0XzAyMzYpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTIvMjAgKGxhc3QgcXN0XzAyMzQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTMvMjAgKGxhc3QgcXN0XzAxODMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTQvMjAgKGxhc3QgcXN0XzAxOTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTUvMjAgKGxhc3QgcXN0XzAyNTkpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTYvMjAgKGxhc3QgcXN0XzAxOTApCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTcvMjAgKGxhc3QgcXN0XzAyOTQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTgvMjAgKGxhc3QgcXN0XzAyNTIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTkvMjAgKGxhc3QgcXN0XzAyNDgpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMjAvMjAgKGxhc3QgcXN0XzAyMjEpCg==",
+          "bytes": 1240,
+          "sha256": "5e1319a9e6e311f3ebbb219c9879429df481889887c369a8ad3fdecc33b9b8f0",
+          "text": "enterprise-segmentation-v1: reusing existing store enterprise-segmentation-v1.sqlite (opened+mapped in 4.6s)\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD00MDk2IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjc5OTQgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuNzY2NyBnb2xkLWNvdmVyYWdlPTAuNzAwMCB1c2VkLWJ5dGVzPTQwOTYgdXRpbGlzYXRpb249MTAwLjAlCg==",
+          "bytes": 175,
+          "sha256": "3a992f0fa807b1d2637fe8ca48a6912db8c6cfa81a8db495c02a7433b62e6e92",
+          "text": "enterprise-segmentation-v1: mode=traced budget=4096 docs=500 queries=20 ndcg@10=0.7994 recall@100=1.0000 mrr@10=0.7667 gold-coverage=0.7000 used-bytes=4096 utilisation=100.0%\n"
+        },
+        "system_seconds": 1.428075,
+        "user_seconds": 10.152756,
+        "wall_seconds": 12.044372471049428
+      }
+    },
+    "first/passage-v1/1024": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 426.812093566,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "1024.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "passage-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "1024",
+          "-query-timeout",
+          "30s"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 129120,
+        "stderr": {
+          "base64": "DWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMS81MDAgZG9jcyAoMC44cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAyNi81MDAgZG9jcyAoMTYuNHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNTEvNTAwIGRvY3MgKDM1LjJzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDc2LzUwMCBkb2NzICg1MS44cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAxMDEvNTAwIGRvY3MgKDcwLjlzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDEyNi81MDAgZG9jcyAoOTcuNXMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMTUxLzUwMCBkb2NzICgxMTkuOHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMTc2LzUwMCBkb2NzICgxMzcuNHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjAxLzUwMCBkb2NzICgxNjAuNHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjI2LzUwMCBkb2NzICgxODEuNHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjUxLzUwMCBkb2NzICgyMDIuMnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjc2LzUwMCBkb2NzICgyMjIuNnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMzAxLzUwMCBkb2NzICgyNDEuN3MpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMzI2LzUwMCBkb2NzICgyNjcuOHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMzUxLzUwMCBkb2NzICgyODkuNnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMzc2LzUwMCBkb2NzICgzMTQuNHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDAxLzUwMCBkb2NzICgzMzQuNHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDI2LzUwMCBkb2NzICgzNTguMnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDUxLzUwMCBkb2NzICgzNzkuMnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDc2LzUwMCBkb2NzICg0MDUuOHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNTAwLzUwMCBkb2NzICg0MjYuOHMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmRleGVkIDUwMCBkb2NzIGluIDQyNi44cywgMS4yIGRvY3MvcwplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEvMjAgKGxhc3QgcXN0XzAxMDIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMi8yMCAobGFzdCBxc3RfMDE3NCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAzLzIwIChsYXN0IHFzdF8wMTA0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDQvMjAgKGxhc3QgcXN0XzAwMjEpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNS8yMCAobGFzdCBxc3RfMDAxMSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA2LzIwIChsYXN0IHFzdF8wMDIyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDcvMjAgKGxhc3QgcXN0XzAwNDApCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggOC8yMCAobGFzdCBxc3RfMDExOCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA5LzIwIChsYXN0IHFzdF8wMTQyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEwLzIwIChsYXN0IHFzdF8wMTE3KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDExLzIwIChsYXN0IHFzdF8wMjM2KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEyLzIwIChsYXN0IHFzdF8wMjM0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEzLzIwIChsYXN0IHFzdF8wMTgzKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE0LzIwIChsYXN0IHFzdF8wMTk3KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE1LzIwIChsYXN0IHFzdF8wMjU5KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE2LzIwIChsYXN0IHFzdF8wMTkwKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE3LzIwIChsYXN0IHFzdF8wMjk0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE4LzIwIChsYXN0IHFzdF8wMjUyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE5LzIwIChsYXN0IHFzdF8wMjQ4KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDIwLzIwIChsYXN0IHFzdF8wMjIxKQo=",
+          "bytes": 2384,
+          "sha256": "42c13062f2361597eba140207aeaa1a5030bcddb6c10da13b60dbe836e62236b",
+          "text": "\renterprise-segmentation-v1: ingest 1/500 docs (0.8s)\renterprise-segmentation-v1: ingest 26/500 docs (16.4s)\renterprise-segmentation-v1: ingest 51/500 docs (35.2s)\renterprise-segmentation-v1: ingest 76/500 docs (51.8s)\renterprise-segmentation-v1: ingest 101/500 docs (70.9s)\renterprise-segmentation-v1: ingest 126/500 docs (97.5s)\renterprise-segmentation-v1: ingest 151/500 docs (119.8s)\renterprise-segmentation-v1: ingest 176/500 docs (137.4s)\renterprise-segmentation-v1: ingest 201/500 docs (160.4s)\renterprise-segmentation-v1: ingest 226/500 docs (181.4s)\renterprise-segmentation-v1: ingest 251/500 docs (202.2s)\renterprise-segmentation-v1: ingest 276/500 docs (222.6s)\renterprise-segmentation-v1: ingest 301/500 docs (241.7s)\renterprise-segmentation-v1: ingest 326/500 docs (267.8s)\renterprise-segmentation-v1: ingest 351/500 docs (289.6s)\renterprise-segmentation-v1: ingest 376/500 docs (314.4s)\renterprise-segmentation-v1: ingest 401/500 docs (334.4s)\renterprise-segmentation-v1: ingest 426/500 docs (358.2s)\renterprise-segmentation-v1: ingest 451/500 docs (379.2s)\renterprise-segmentation-v1: ingest 476/500 docs (405.8s)\renterprise-segmentation-v1: ingest 500/500 docs (426.8s)\nenterprise-segmentation-v1: indexed 500 docs in 426.8s, 1.2 docs/s\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD0xMDI0IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjg1NDkgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuODI2OCBnb2xkLWNvdmVyYWdlPTAuODAwMCB1c2VkLWJ5dGVzPTk2MyB1dGlsaXNhdGlvbj05NC4wJQo=",
+          "bytes": 173,
+          "sha256": "6778896dbd9a750d6402db9b5658ad72a82e5a0d9a41ce1af7175387be680619",
+          "text": "enterprise-segmentation-v1: mode=traced budget=1024 docs=500 queries=20 ndcg@10=0.8549 recall@100=1.0000 mrr@10=0.8268 gold-coverage=0.8000 used-bytes=963 utilisation=94.0%\n"
+        },
+        "system_seconds": 7.121075,
+        "user_seconds": 27.965446,
+        "wall_seconds": 437.6583219082095
+      }
+    },
+    "first/passage-v1/4096": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 0,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "4096.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "passage-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "4096",
+          "-query-timeout",
+          "30s",
+          "-reuse"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 242028,
+        "stderr": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHJldXNpbmcgZXhpc3Rpbmcgc3RvcmUgZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjEuc3FsaXRlIChvcGVuZWQrbWFwcGVkIGluIDkuOHMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMS8yMCAobGFzdCBxc3RfMDEwMikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAyLzIwIChsYXN0IHFzdF8wMTc0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDMvMjAgKGxhc3QgcXN0XzAxMDQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNC8yMCAobGFzdCBxc3RfMDAyMSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA1LzIwIChsYXN0IHFzdF8wMDExKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDYvMjAgKGxhc3QgcXN0XzAwMjIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNy8yMCAobGFzdCBxc3RfMDA0MCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA4LzIwIChsYXN0IHFzdF8wMTE4KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDkvMjAgKGxhc3QgcXN0XzAxNDIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTAvMjAgKGxhc3QgcXN0XzAxMTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTEvMjAgKGxhc3QgcXN0XzAyMzYpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTIvMjAgKGxhc3QgcXN0XzAyMzQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTMvMjAgKGxhc3QgcXN0XzAxODMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTQvMjAgKGxhc3QgcXN0XzAxOTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTUvMjAgKGxhc3QgcXN0XzAyNTkpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTYvMjAgKGxhc3QgcXN0XzAxOTApCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTcvMjAgKGxhc3QgcXN0XzAyOTQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTgvMjAgKGxhc3QgcXN0XzAyNTIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTkvMjAgKGxhc3QgcXN0XzAyNDgpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMjAvMjAgKGxhc3QgcXN0XzAyMjEpCg==",
+          "bytes": 1240,
+          "sha256": "34c4a132698085abd3c080f3d049ccb1f872e2f42144711e01eae513a87ad3e1",
+          "text": "enterprise-segmentation-v1: reusing existing store enterprise-segmentation-v1.sqlite (opened+mapped in 9.8s)\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD00MDk2IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjg1NDkgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuODI2OCBnb2xkLWNvdmVyYWdlPTAuODUwMCB1c2VkLWJ5dGVzPTQwMTcgdXRpbGlzYXRpb249OTguMSUK",
+          "bytes": 174,
+          "sha256": "2472a952ac0cc285ec494d4ebb7b56184f76464f0a723e394f61333ce3c15af4",
+          "text": "enterprise-segmentation-v1: mode=traced budget=4096 docs=500 queries=20 ndcg@10=0.8549 recall@100=1.0000 mrr@10=0.8268 gold-coverage=0.8500 used-bytes=4017 utilisation=98.1%\n"
+        },
+        "system_seconds": 1.804765,
+        "user_seconds": 16.633814,
+        "wall_seconds": 19.24958001729101
+      }
+    },
+    "reproduction/fixed-v1/1024": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 156.044469921,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "1024.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "fixed-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "1024",
+          "-query-timeout",
+          "30s"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 292152,
+        "stderr": {
+          "base64": "DWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMS81MDAgZG9jcyAoMC4ycykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAyNi81MDAgZG9jcyAoNS41cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCA1MS81MDAgZG9jcyAoMTIuMHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNzYvNTAwIGRvY3MgKDIwLjNzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDEwMS81MDAgZG9jcyAoMjcuMHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMTI2LzUwMCBkb2NzICgzNS4ycykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAxNTEvNTAwIGRvY3MgKDQxLjRzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDE3Ni81MDAgZG9jcyAoNDkuNXMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjAxLzUwMCBkb2NzICg1NS44cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAyMjYvNTAwIGRvY3MgKDY0LjVzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDI1MS81MDAgZG9jcyAoNzEuMHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMjc2LzUwMCBkb2NzICg3OC40cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAzMDEvNTAwIGRvY3MgKDg2LjRzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDMyNi81MDAgZG9jcyAoOTUuNnMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMzUxLzUwMCBkb2NzICgxMDIuN3MpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMzc2LzUwMCBkb2NzICgxMTEuOHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDAxLzUwMCBkb2NzICgxMjIuMHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDI2LzUwMCBkb2NzICgxMzAuMXMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDUxLzUwMCBkb2NzICgxMzguOHMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNDc2LzUwMCBkb2NzICgxNDcuOXMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNTAwLzUwMCBkb2NzICgxNTYuMHMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmRleGVkIDUwMCBkb2NzIGluIDE1Ni4wcywgMy4yIGRvY3MvcwplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEvMjAgKGxhc3QgcXN0XzAxMDIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMi8yMCAobGFzdCBxc3RfMDE3NCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAzLzIwIChsYXN0IHFzdF8wMTA0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDQvMjAgKGxhc3QgcXN0XzAwMjEpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNS8yMCAobGFzdCBxc3RfMDAxMSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA2LzIwIChsYXN0IHFzdF8wMDIyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDcvMjAgKGxhc3QgcXN0XzAwNDApCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggOC8yMCAobGFzdCBxc3RfMDExOCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA5LzIwIChsYXN0IHFzdF8wMTQyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEwLzIwIChsYXN0IHFzdF8wMTE3KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDExLzIwIChsYXN0IHFzdF8wMjM2KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEyLzIwIChsYXN0IHFzdF8wMjM0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDEzLzIwIChsYXN0IHFzdF8wMTgzKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE0LzIwIChsYXN0IHFzdF8wMTk3KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE1LzIwIChsYXN0IHFzdF8wMjU5KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE2LzIwIChsYXN0IHFzdF8wMTkwKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE3LzIwIChsYXN0IHFzdF8wMjk0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE4LzIwIChsYXN0IHFzdF8wMjUyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDE5LzIwIChsYXN0IHFzdF8wMjQ4KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDIwLzIwIChsYXN0IHFzdF8wMjIxKQo=",
+          "bytes": 2375,
+          "sha256": "abb96916090d6fe7839c98970ed0fc8eeab08c173131a168c73a200b1a777e8e",
+          "text": "\renterprise-segmentation-v1: ingest 1/500 docs (0.2s)\renterprise-segmentation-v1: ingest 26/500 docs (5.5s)\renterprise-segmentation-v1: ingest 51/500 docs (12.0s)\renterprise-segmentation-v1: ingest 76/500 docs (20.3s)\renterprise-segmentation-v1: ingest 101/500 docs (27.0s)\renterprise-segmentation-v1: ingest 126/500 docs (35.2s)\renterprise-segmentation-v1: ingest 151/500 docs (41.4s)\renterprise-segmentation-v1: ingest 176/500 docs (49.5s)\renterprise-segmentation-v1: ingest 201/500 docs (55.8s)\renterprise-segmentation-v1: ingest 226/500 docs (64.5s)\renterprise-segmentation-v1: ingest 251/500 docs (71.0s)\renterprise-segmentation-v1: ingest 276/500 docs (78.4s)\renterprise-segmentation-v1: ingest 301/500 docs (86.4s)\renterprise-segmentation-v1: ingest 326/500 docs (95.6s)\renterprise-segmentation-v1: ingest 351/500 docs (102.7s)\renterprise-segmentation-v1: ingest 376/500 docs (111.8s)\renterprise-segmentation-v1: ingest 401/500 docs (122.0s)\renterprise-segmentation-v1: ingest 426/500 docs (130.1s)\renterprise-segmentation-v1: ingest 451/500 docs (138.8s)\renterprise-segmentation-v1: ingest 476/500 docs (147.9s)\renterprise-segmentation-v1: ingest 500/500 docs (156.0s)\nenterprise-segmentation-v1: indexed 500 docs in 156.0s, 3.2 docs/s\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD0xMDI0IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjc5OTQgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuNzY2NyBnb2xkLWNvdmVyYWdlPTAuMTAwMCB1c2VkLWJ5dGVzPTM0NSB1dGlsaXNhdGlvbj0zMy43JQo=",
+          "bytes": 173,
+          "sha256": "924d8ecde1bac948c5922c72de01e7f850513314a0318ed41f67b3ffef778e4e",
+          "text": "enterprise-segmentation-v1: mode=traced budget=1024 docs=500 queries=20 ndcg@10=0.7994 recall@100=1.0000 mrr@10=0.7667 gold-coverage=0.1000 used-bytes=345 utilisation=33.7%\n"
+        },
+        "system_seconds": 2.9052439999999997,
+        "user_seconds": 13.561287,
+        "wall_seconds": 167.57092408509925
+      }
+    },
+    "reproduction/fixed-v1/4096": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 0,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "4096.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "fixed-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "4096",
+          "-query-timeout",
+          "30s",
+          "-reuse"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 305984,
+        "stderr": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHJldXNpbmcgZXhpc3Rpbmcgc3RvcmUgZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjEuc3FsaXRlIChvcGVuZWQrbWFwcGVkIGluIDQuMXMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMS8yMCAobGFzdCBxc3RfMDEwMikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAyLzIwIChsYXN0IHFzdF8wMTc0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDMvMjAgKGxhc3QgcXN0XzAxMDQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNC8yMCAobGFzdCBxc3RfMDAyMSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA1LzIwIChsYXN0IHFzdF8wMDExKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDYvMjAgKGxhc3QgcXN0XzAwMjIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNy8yMCAobGFzdCBxc3RfMDA0MCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA4LzIwIChsYXN0IHFzdF8wMTE4KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDkvMjAgKGxhc3QgcXN0XzAxNDIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTAvMjAgKGxhc3QgcXN0XzAxMTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTEvMjAgKGxhc3QgcXN0XzAyMzYpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTIvMjAgKGxhc3QgcXN0XzAyMzQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTMvMjAgKGxhc3QgcXN0XzAxODMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTQvMjAgKGxhc3QgcXN0XzAxOTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTUvMjAgKGxhc3QgcXN0XzAyNTkpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTYvMjAgKGxhc3QgcXN0XzAxOTApCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTcvMjAgKGxhc3QgcXN0XzAyOTQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTgvMjAgKGxhc3QgcXN0XzAyNTIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTkvMjAgKGxhc3QgcXN0XzAyNDgpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMjAvMjAgKGxhc3QgcXN0XzAyMjEpCg==",
+          "bytes": 1240,
+          "sha256": "9ecd0fdc52578280ba2b644405daa2a285b02611ace5a2ff82a080cc1c5f3314",
+          "text": "enterprise-segmentation-v1: reusing existing store enterprise-segmentation-v1.sqlite (opened+mapped in 4.1s)\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD00MDk2IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjc5OTQgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuNzY2NyBnb2xkLWNvdmVyYWdlPTAuNzAwMCB1c2VkLWJ5dGVzPTQwOTYgdXRpbGlzYXRpb249MTAwLjAlCg==",
+          "bytes": 175,
+          "sha256": "3a992f0fa807b1d2637fe8ca48a6912db8c6cfa81a8db495c02a7433b62e6e92",
+          "text": "enterprise-segmentation-v1: mode=traced budget=4096 docs=500 queries=20 ndcg@10=0.7994 recall@100=1.0000 mrr@10=0.7667 gold-coverage=0.7000 used-bytes=4096 utilisation=100.0%\n"
+        },
+        "system_seconds": 1.354983,
+        "user_seconds": 9.397042,
+        "wall_seconds": 14.483220351859927
+      }
+    },
+    "reproduction/passage-v1/1024": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 417.01709669,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "1024.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "passage-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "1024",
+          "-query-timeout",
+          "30s"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 320508,
+        "stderr": {
+          "base64": "DWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgMS81MDAgZG9jcyAoMi4xcykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAyNi81MDAgZG9jcyAoMTcuNXMpDWVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBpbmdlc3QgNTEvNTAwIGRvY3MgKDM2LjRzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDc2LzUwMCBkb2NzICg1NC44cykNZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IGluZ2VzdCAxMDEvNTAwIGRvY3MgKDc0LjhzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDEyNi81MDAgZG9jcyAoMTA3LjRzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDE1MS81MDAgZG9jcyAoMTMyLjZzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDE3Ni81MDAgZG9jcyAoMTUwLjRzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDIwMS81MDAgZG9jcyAoMTczLjBzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDIyNi81MDAgZG9jcyAoMTkzLjdzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDI1MS81MDAgZG9jcyAoMjE0LjJzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDI3Ni81MDAgZG9jcyAoMjM0LjdzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDMwMS81MDAgZG9jcyAoMjU0LjZzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDMyNi81MDAgZG9jcyAoMjgxLjRzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDM1MS81MDAgZG9jcyAoMzEwLjdzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDM3Ni81MDAgZG9jcyAoMzMwLjlzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQwMS81MDAgZG9jcyAoMzQ3LjFzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQyNi81MDAgZG9jcyAoMzY2LjNzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQ1MS81MDAgZG9jcyAoMzgyLjBzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDQ3Ni81MDAgZG9jcyAoMzk3LjVzKQ1lbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5nZXN0IDUwMC81MDAgZG9jcyAoNDE3LjBzKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogaW5kZXhlZCA1MDAgZG9jcyBpbiA0MTcuMHMsIDEuMiBkb2NzL3MKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxLzIwIChsYXN0IHFzdF8wMTAyKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDIvMjAgKGxhc3QgcXN0XzAxNzQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMy8yMCAobGFzdCBxc3RfMDEwNCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA0LzIwIChsYXN0IHFzdF8wMDIxKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDUvMjAgKGxhc3QgcXN0XzAwMTEpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNi8yMCAobGFzdCBxc3RfMDAyMikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA3LzIwIChsYXN0IHFzdF8wMDQwKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDgvMjAgKGxhc3QgcXN0XzAxMTgpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggOS8yMCAobGFzdCBxc3RfMDE0MikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMC8yMCAobGFzdCBxc3RfMDExNykKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMS8yMCAobGFzdCBxc3RfMDIzNikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMi8yMCAobGFzdCBxc3RfMDIzNCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxMy8yMCAobGFzdCBxc3RfMDE4MykKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNC8yMCAobGFzdCBxc3RfMDE5NykKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNS8yMCAobGFzdCBxc3RfMDI1OSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNi8yMCAobGFzdCBxc3RfMDE5MCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxNy8yMCAobGFzdCBxc3RfMDI5NCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxOC8yMCAobGFzdCBxc3RfMDI1MikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAxOS8yMCAobGFzdCBxc3RfMDI0OCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAyMC8yMCAobGFzdCBxc3RfMDIyMSkK",
+          "bytes": 2385,
+          "sha256": "f532d9f3205a2304caf7cbfb92daa3c29340c7b1a9b985c5f2a1afd64d66c76a",
+          "text": "\renterprise-segmentation-v1: ingest 1/500 docs (2.1s)\renterprise-segmentation-v1: ingest 26/500 docs (17.5s)\renterprise-segmentation-v1: ingest 51/500 docs (36.4s)\renterprise-segmentation-v1: ingest 76/500 docs (54.8s)\renterprise-segmentation-v1: ingest 101/500 docs (74.8s)\renterprise-segmentation-v1: ingest 126/500 docs (107.4s)\renterprise-segmentation-v1: ingest 151/500 docs (132.6s)\renterprise-segmentation-v1: ingest 176/500 docs (150.4s)\renterprise-segmentation-v1: ingest 201/500 docs (173.0s)\renterprise-segmentation-v1: ingest 226/500 docs (193.7s)\renterprise-segmentation-v1: ingest 251/500 docs (214.2s)\renterprise-segmentation-v1: ingest 276/500 docs (234.7s)\renterprise-segmentation-v1: ingest 301/500 docs (254.6s)\renterprise-segmentation-v1: ingest 326/500 docs (281.4s)\renterprise-segmentation-v1: ingest 351/500 docs (310.7s)\renterprise-segmentation-v1: ingest 376/500 docs (330.9s)\renterprise-segmentation-v1: ingest 401/500 docs (347.1s)\renterprise-segmentation-v1: ingest 426/500 docs (366.3s)\renterprise-segmentation-v1: ingest 451/500 docs (382.0s)\renterprise-segmentation-v1: ingest 476/500 docs (397.5s)\renterprise-segmentation-v1: ingest 500/500 docs (417.0s)\nenterprise-segmentation-v1: indexed 500 docs in 417.0s, 1.2 docs/s\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD0xMDI0IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjg1NDkgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuODI2OCBnb2xkLWNvdmVyYWdlPTAuODAwMCB1c2VkLWJ5dGVzPTk2MyB1dGlsaXNhdGlvbj05NC4wJQo=",
+          "bytes": 173,
+          "sha256": "6778896dbd9a750d6402db9b5658ad72a82e5a0d9a41ce1af7175387be680619",
+          "text": "enterprise-segmentation-v1: mode=traced budget=1024 docs=500 queries=20 ndcg@10=0.8549 recall@100=1.0000 mrr@10=0.8268 gold-coverage=0.8000 used-bytes=963 utilisation=94.0%\n"
+        },
+        "system_seconds": 7.320726,
+        "user_seconds": 28.120602,
+        "wall_seconds": 433.3068878292106
+      }
+    },
+    "reproduction/passage-v1/4096": {
+      "boundary": {
+        "failed_query_id": null,
+        "failed_query_status": null,
+        "reason": null,
+        "status": "COMPLETE"
+      },
+      "indexing_seconds": 0,
+      "process": {
+        "argv": [
+          "/work/artifacts/mousa/segmentation-quality/completion/beir",
+          "-data",
+          "data",
+          "-dataset",
+          "enterprise-segmentation-v1",
+          "-out",
+          "4096.json",
+          "-mode",
+          "traced",
+          "-policy",
+          "original",
+          "-segment-policy",
+          "passage-v1",
+          "-limit",
+          "100",
+          "-budget",
+          "4096",
+          "-query-timeout",
+          "30s",
+          "-reuse"
+        ],
+        "endpoint": "process open/ingest-or-rebuild/query/report/close; child CPU and peak RSS",
+        "exit": 0,
+        "experiment_timeout": false,
+        "peak_rss_kib": 363872,
+        "stderr": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHJldXNpbmcgZXhpc3Rpbmcgc3RvcmUgZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjEuc3FsaXRlIChvcGVuZWQrbWFwcGVkIGluIDkuN3MpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMS8yMCAobGFzdCBxc3RfMDEwMikKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCAyLzIwIChsYXN0IHFzdF8wMTc0KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDMvMjAgKGxhc3QgcXN0XzAxMDQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNC8yMCAobGFzdCBxc3RfMDAyMSkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA1LzIwIChsYXN0IHFzdF8wMDExKQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDYvMjAgKGxhc3QgcXN0XzAwMjIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggNy8yMCAobGFzdCBxc3RfMDA0MCkKZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IHNlYXJjaCA4LzIwIChsYXN0IHFzdF8wMTE4KQplbnRlcnByaXNlLXNlZ21lbnRhdGlvbi12MTogc2VhcmNoIDkvMjAgKGxhc3QgcXN0XzAxNDIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTAvMjAgKGxhc3QgcXN0XzAxMTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTEvMjAgKGxhc3QgcXN0XzAyMzYpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTIvMjAgKGxhc3QgcXN0XzAyMzQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTMvMjAgKGxhc3QgcXN0XzAxODMpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTQvMjAgKGxhc3QgcXN0XzAxOTcpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTUvMjAgKGxhc3QgcXN0XzAyNTkpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTYvMjAgKGxhc3QgcXN0XzAxOTApCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTcvMjAgKGxhc3QgcXN0XzAyOTQpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTgvMjAgKGxhc3QgcXN0XzAyNTIpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMTkvMjAgKGxhc3QgcXN0XzAyNDgpCmVudGVycHJpc2Utc2VnbWVudGF0aW9uLXYxOiBzZWFyY2ggMjAvMjAgKGxhc3QgcXN0XzAyMjEpCg==",
+          "bytes": 1240,
+          "sha256": "0482f2e2ceb79cef9b81d6b722254a3fe2544696147326c4f91fc214a954994e",
+          "text": "enterprise-segmentation-v1: reusing existing store enterprise-segmentation-v1.sqlite (opened+mapped in 9.7s)\nenterprise-segmentation-v1: search 1/20 (last qst_0102)\nenterprise-segmentation-v1: search 2/20 (last qst_0174)\nenterprise-segmentation-v1: search 3/20 (last qst_0104)\nenterprise-segmentation-v1: search 4/20 (last qst_0021)\nenterprise-segmentation-v1: search 5/20 (last qst_0011)\nenterprise-segmentation-v1: search 6/20 (last qst_0022)\nenterprise-segmentation-v1: search 7/20 (last qst_0040)\nenterprise-segmentation-v1: search 8/20 (last qst_0118)\nenterprise-segmentation-v1: search 9/20 (last qst_0142)\nenterprise-segmentation-v1: search 10/20 (last qst_0117)\nenterprise-segmentation-v1: search 11/20 (last qst_0236)\nenterprise-segmentation-v1: search 12/20 (last qst_0234)\nenterprise-segmentation-v1: search 13/20 (last qst_0183)\nenterprise-segmentation-v1: search 14/20 (last qst_0197)\nenterprise-segmentation-v1: search 15/20 (last qst_0259)\nenterprise-segmentation-v1: search 16/20 (last qst_0190)\nenterprise-segmentation-v1: search 17/20 (last qst_0294)\nenterprise-segmentation-v1: search 18/20 (last qst_0252)\nenterprise-segmentation-v1: search 19/20 (last qst_0248)\nenterprise-segmentation-v1: search 20/20 (last qst_0221)\n"
+        },
+        "stdin": "DEVNULL",
+        "stdout": {
+          "base64": "ZW50ZXJwcmlzZS1zZWdtZW50YXRpb24tdjE6IG1vZGU9dHJhY2VkIGJ1ZGdldD00MDk2IGRvY3M9NTAwIHF1ZXJpZXM9MjAgbmRjZ0AxMD0wLjg1NDkgcmVjYWxsQDEwMD0xLjAwMDAgbXJyQDEwPTAuODI2OCBnb2xkLWNvdmVyYWdlPTAuODUwMCB1c2VkLWJ5dGVzPTQwMTcgdXRpbGlzYXRpb249OTguMSUK",
+          "bytes": 174,
+          "sha256": "2472a952ac0cc285ec494d4ebb7b56184f76464f0a723e394f61333ce3c15af4",
+          "text": "enterprise-segmentation-v1: mode=traced budget=4096 docs=500 queries=20 ndcg@10=0.8549 recall@100=1.0000 mrr@10=0.8268 gold-coverage=0.8500 used-bytes=4017 utilisation=98.1%\n"
+        },
+        "system_seconds": 1.693149,
+        "user_seconds": 16.528364,
+        "wall_seconds": 18.542077202815562
+      }
+    }
+  },
+  "collection_wall_seconds": 1382.2033718456514,
+  "confirmation": "UNMET_ELIGIBLE20",
+  "limitations": [
+    "Question-held-out shared gold-enriched corpus, not independent company validation.",
+    "Document gold is a coarse proxy, not semantic sufficiency; unknown relevance is not negative.",
+    "No monotonicity promise. CPU/RSS are process endpoints, not attributed query totals.",
+    "Replay verifies recorded consistency, not historical execution authenticity.",
+    "Publication identities and wall/CPU/RSS measurements are unauthenticated recorded claims.",
+    "Segment partition checks do not independently authenticate the segmentation algorithm."
+  ],
+  "reproduction": [
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "fixed-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "fixed-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 1024,
+      "policy": "passage-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0102",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0174",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0104",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0021",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0011",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0022",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0040",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0118",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0142",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0117",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0236",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0234",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0183",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0197",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0259",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0190",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0294",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0252",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0248",
+      "status": "MATCH"
+    },
+    {
+      "budget": 4096,
+      "policy": "passage-v1",
+      "question_id": "qst_0221",
+      "status": "MATCH"
+    }
+  ],
+  "status": "REPLAY_VALID",
+  "summaries": [
+    {
+      "budget": 1024,
+      "enrolled": 20,
+      "mean_query_micros": 349101.25,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.1,
+      "pass": "first",
+      "policy": "fixed-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 4096,
+      "enrolled": 20,
+      "mean_query_micros": 321599.45,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.7,
+      "pass": "first",
+      "policy": "fixed-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 1024,
+      "enrolled": 20,
+      "mean_query_micros": 456665.8,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.8,
+      "pass": "first",
+      "policy": "passage-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 4096,
+      "enrolled": 20,
+      "mean_query_micros": 425820.2,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.85,
+      "pass": "first",
+      "policy": "passage-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 1024,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "first",
+      "policy": "fixed-v1",
+      "population": "heldout20",
+      "statuses": {}
+    },
+    {
+      "budget": 4096,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "first",
+      "policy": "fixed-v1",
+      "population": "heldout20",
+      "statuses": {}
+    },
+    {
+      "budget": 1024,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "first",
+      "policy": "passage-v1",
+      "population": "heldout20",
+      "statuses": {}
+    },
+    {
+      "budget": 4096,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "first",
+      "policy": "passage-v1",
+      "population": "heldout20",
+      "statuses": {}
+    },
+    {
+      "budget": 1024,
+      "enrolled": 20,
+      "mean_query_micros": 313807.15,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.1,
+      "pass": "reproduction",
+      "policy": "fixed-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 4096,
+      "enrolled": 20,
+      "mean_query_micros": 463021.05,
+      "metrics": {
+        "binary_ndcg_at_10": 0.799356847033974,
+        "mrr_at_10": 0.7666666666666667,
+        "recall_at_10": 0.9,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.7,
+      "pass": "reproduction",
+      "policy": "fixed-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 1024,
+      "enrolled": 20,
+      "mean_query_micros": 428918.45,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.8,
+      "pass": "reproduction",
+      "policy": "passage-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 4096,
+      "enrolled": 20,
+      "mean_query_micros": 403353.0,
+      "metrics": {
+        "binary_ndcg_at_10": 0.8548671612370029,
+        "mrr_at_10": 0.8267857142857142,
+        "recall_at_10": 0.95,
+        "recall_at_100": 1.0
+      },
+      "packed_coverage": 0.85,
+      "pass": "reproduction",
+      "policy": "passage-v1",
+      "population": "original20",
+      "statuses": {
+        "SCORED": 20
+      }
+    },
+    {
+      "budget": 1024,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "reproduction",
+      "policy": "fixed-v1",
+      "population": "heldout20",
+      "statuses": {}
+    },
+    {
+      "budget": 4096,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "reproduction",
+      "policy": "fixed-v1",
+      "population": "heldout20",
+      "statuses": {}
+    },
+    {
+      "budget": 1024,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "reproduction",
+      "policy": "passage-v1",
+      "population": "heldout20",
+      "statuses": {}
+    },
+    {
+      "budget": 4096,
+      "enrolled": 0,
+      "mean_query_micros": null,
+      "metrics": null,
+      "packed_coverage": null,
+      "pass": "reproduction",
+      "policy": "passage-v1",
+      "population": "heldout20",
+      "statuses": {}
+    }
+  ]
+}
